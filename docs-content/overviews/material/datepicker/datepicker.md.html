@@ -1,6 +1,6 @@
 <div class="docs-markdown"><p>The datepicker allows users to enter a date either through text input, or by choosing a date from
 the calendar. It is made up of several components, directives and <a href="#choosing-a-date-implementation-and-date-format-settings">the date implementation</a> that work together.</p>
-<div material-docs-example="datepicker-overview"></div>
+</div><div material-docs-example="datepicker-overview"></div><div class="docs-markdown">
 
 
         <h3 id="connecting-a-datepicker-to-an-input" class="docs-header-link">
@@ -10,19 +10,19 @@ the calendar. It is made up of several components, directives and <a href="#choo
       <p>A datepicker is composed of a text input and a calendar pop-up, connected via the <code>matDatepicker</code>
 property on the text input.</p>
 <p>There is also an optional datepicker toggle button that gives the user an easy way to open the datepicker pop-up.</p>
-<div material-docs-example="datepicker-overview"
+</div><div material-docs-example="datepicker-overview"
                              file="datepicker-overview-example.html"
-                             region="toggle"></div>
+                             region="toggle"></div><div class="docs-markdown">
 
 <p>This works exactly the same with an input that is part of an <code>&lt;mat-form-field&gt;</code> and the toggle
 can easily be used as a prefix or suffix on the Material input:</p>
-<div material-docs-example="datepicker-overview"
+</div><div material-docs-example="datepicker-overview"
                              file="datepicker-overview-example.html"
-                             ></div>
+                             ></div><div class="docs-markdown">
 
 <p>If you want to customize the icon that is rendered inside the <code>mat-datepicker-toggle</code>, you can do so
 by using the <code>matDatepickerToggleIcon</code> directive:</p>
-<div material-docs-example="datepicker-custom-icon"></div>
+</div><div material-docs-example="datepicker-custom-icon"></div><div class="docs-markdown">
 
 
         <h3 id="date-range-selection" class="docs-header-link">
@@ -51,7 +51,7 @@ the same way as <code>mat-datepicker</code>, but allows the user to select multi
 
 <span class="hljs-tag">&lt;<span class="hljs-name">mat-date-range-picker</span> #<span class="hljs-attr">picker</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">mat-date-range-picker</span>&gt;</span>
 </code></pre>
-<div material-docs-example="date-range-picker-overview"></div>
+</div><div material-docs-example="date-range-picker-overview"></div><div class="docs-markdown">
 
 
         <h3 id="date-range-input-forms-integration" class="docs-header-link">
@@ -60,7 +60,7 @@ the same way as <code>mat-datepicker</code>, but allows the user to select multi
         </h3>
       <p>The <code>mat-date-range-input</code> component can be used together with the <code>FormGroup</code> directive from
 <code>@angular/forms</code> to group the start and end values together and to validate them as a group.</p>
-<div material-docs-example="date-range-picker-forms"></div>
+</div><div material-docs-example="date-range-picker-forms"></div><div class="docs-markdown">
 
 
         <h3 id="setting-the-calendar-starting-view" class="docs-header-link">
@@ -75,7 +75,7 @@ date is currently selected, if so it will open to the month or year containing t
 it will open to the month or year containing today&#39;s date. This behavior can be overridden by using
 the <code>startAt</code> property of <code>&lt;mat-datepicker&gt;</code>. In this case the calendar will open to the month or
 year containing the <code>startAt</code> date.</p>
-<div material-docs-example="datepicker-start-view"></div>
+</div><div material-docs-example="datepicker-start-view"></div><div class="docs-markdown">
 
 
         <h4 id="watching-the-views-for-changes-on-selected-years-and-months" class="docs-header-link">
@@ -101,7 +101,7 @@ associated <code>&lt;input&gt;</code>.</p>
 picker (if you&#39;re not familiar with the usage of <code>MomentDateAdapter</code> and <code>MAT_DATE_FORMATS</code>
 you can <a href="#choosing-a-date-implementation-and-date-format-settings">read more about them</a> below in
 this document to fully understand the example).</p>
-<div material-docs-example="datepicker-views-selection"></div>
+</div><div material-docs-example="datepicker-views-selection"></div><div class="docs-markdown">
 
 
         <h3 id="setting-the-selected-date" class="docs-header-link">
@@ -124,7 +124,7 @@ in user format such as <code>&quot;1/2/2017&quot;</code> as this is ambiguous an
 the locale of the browser running the code.</p>
 <p>As with other types of <code>&lt;input&gt;</code>, the datepicker works with <code>@angular/forms</code> directives such as
 <code>formGroup</code>, <code>formControl</code>, <code>ngModel</code>, etc.</p>
-<div material-docs-example="datepicker-value"></div>
+</div><div material-docs-example="datepicker-value"></div><div class="docs-markdown">
 
 
         <h3 id="date-validation" class="docs-header-link">
@@ -136,7 +136,7 @@ the locale of the browser running the code.</p>
 disable all dates on the calendar popup before or after the respective values and prevent the user
 from advancing the calendar past the <code>month</code> or <code>year</code> (depending on current view) containing the
 <code>min</code> or <code>max</code> date.</p>
-<div material-docs-example="datepicker-min-max"></div>
+</div><div material-docs-example="datepicker-min-max"></div><div class="docs-markdown">
 
 <p>The second way to add date validation is using the <code>matDatepickerFilter</code> property of the datepicker
 input. This property accepts a function of <code>&lt;D&gt; =&gt; boolean</code> (where <code>&lt;D&gt;</code> is the date type used by
@@ -147,7 +147,7 @@ not. Again this will also disable the dates on the calendar that are invalid. Ho
 difference between using <code>matDatepickerFilter</code> vs using <code>min</code> or <code>max</code> is that filtering out all
 dates before or after a certain point, will not prevent the user from advancing the calendar past
 that point.</p>
-<div material-docs-example="datepicker-filter"></div>
+</div><div material-docs-example="datepicker-filter"></div><div class="docs-markdown">
 
 <p>In this example the user cannot select any date that falls on a Saturday or Sunday, but all of the
 dates which fall on other days of the week are selectable.</p>
@@ -169,7 +169,7 @@ trigger when the user interacts with either the input or the popup.</p>
 <p>The <code>(dateInput)</code> event will fire whenever the value changes due to the user typing or selecting a
 date from the calendar. The <code>(dateChange)</code> event will fire whenever the user finishes typing input
 (on <code>&lt;input&gt;</code> blur), or when the user chooses a date from the calendar.</p>
-<div material-docs-example="datepicker-events"></div>
+</div><div material-docs-example="datepicker-events"></div><div class="docs-markdown">
 
 
         <h3 id="disabling-parts-of-the-datepicker" class="docs-header-link">
@@ -181,7 +181,7 @@ date from the calendar. The <code>(dateChange)</code> event will fire whenever t
 their disabled state from the <code>&lt;input&gt;</code>, but this can be overridden by setting the <code>disabled</code>
 property on the datepicker or toggle elements. This can be useful if you want to disable text input
 but allow selection via the calendar or vice-versa.</p>
-<div material-docs-example="datepicker-disabled"></div>
+</div><div material-docs-example="datepicker-disabled"></div><div class="docs-markdown">
 
 
         <h3 id="confirmation-action-buttons" class="docs-header-link">
@@ -196,18 +196,18 @@ inside <code>&lt;mat-datepicker&gt;</code> with a &quot;Cancel&quot; and an &quo
 <code>matDatepickerCancel</code> and <code>matDatepickerApply</code> attributes respectively. Doing so will cause the
 datepicker to only assign the value to the data model if the user presses &quot;Apply&quot;, whereas pressing
 &quot;Cancel&quot; will close popup without changing the value.</p>
-<div material-docs-example="datepicker-actions"
+</div><div material-docs-example="datepicker-actions"
                              file="datepicker-actions-example.html"
-                             region="datepicker-actions"></div>
+                             region="datepicker-actions"></div><div class="docs-markdown">
 
 <p>The actions element is also supported for <code>&lt;mat-date-range-picker&gt;</code> where that it is called
 <code>&lt;mat-date-range-picker-actions&gt;</code> and the buttons are called <code>matDateRangePickerCancel</code> and
 <code>matDateRangePickerApply</code> respectively.</p>
-<div material-docs-example="datepicker-actions"
+</div><div material-docs-example="datepicker-actions"
                              file="datepicker-actions-example.html"
-                             region="date-range-picker-actions"></div>
+                             region="date-range-picker-actions"></div><div class="docs-markdown">
 
-<div material-docs-example="datepicker-actions"></div>
+</div><div material-docs-example="datepicker-actions"></div><div class="docs-markdown">
 
 
         <h3 id="comparison-ranges" class="docs-header-link">
@@ -220,7 +220,7 @@ you can provide the comparison range start and end dates to the <code>mat-date-r
 within the calendar, but it will change colors to indicate which dates overlap with the user&#39;s
 selected range. The comparison and overlap colors can be customized using the
 <code>datepicker-date-range-colors</code> mixin.</p>
-<div material-docs-example="date-range-picker-comparison"></div>
+</div><div material-docs-example="date-range-picker-comparison"></div><div class="docs-markdown">
 
 <pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;@angular/material&#x27;</span> as mat;
 
@@ -236,7 +236,7 @@ this, you first create a class that implements <code>MatDateRangeSelectionStrate
 the class via the <code>MAT_DATE_RANGE_SELECTION_STRATEGY</code> injection token. The following example
 uses the range selection strategy to create a custom range picker that limits the user to five-day
 ranges.</p>
-<div material-docs-example="date-range-picker-selection-strategy"></div>
+</div><div material-docs-example="date-range-picker-selection-strategy"></div><div class="docs-markdown">
 
 
         <h3 id="touch-ui-mode" class="docs-header-link">
@@ -247,7 +247,7 @@ ranges.</p>
 devices that don&#39;t have as much screen real estate and need bigger click targets. For this reason
 <code>&lt;mat-datepicker&gt;</code> has a <code>touchUi</code> property that can be set to <code>true</code> in order to enable a more
 touch friendly UI where the calendar opens in a large dialog.</p>
-<div material-docs-example="datepicker-touch"></div>
+</div><div material-docs-example="datepicker-touch"></div><div class="docs-markdown">
 
 
         <h3 id="manually-opening-and-closing-the-calendar" class="docs-header-link">
@@ -256,7 +256,7 @@ touch friendly UI where the calendar opens in a large dialog.</p>
         </h3>
       <p>The calendar popup can be programmatically controlled using the <code>open</code> and <code>close</code> methods on the
 <code>&lt;mat-datepicker&gt;</code>. It also has an <code>opened</code> property that reflects the status of the popup.</p>
-<div material-docs-example="datepicker-api"></div>
+</div><div material-docs-example="datepicker-api"></div><div class="docs-markdown">
 
 
         <h3 id="using-mat-calendar-inline" class="docs-header-link">
@@ -267,7 +267,7 @@ touch friendly UI where the calendar opens in a large dialog.</p>
 than contained in a popup, you can use <code>&lt;mat-calendar&gt;</code> directly. The calendar&#39;s height is
 determined automatically based on the width and the number of dates that need to be shown for a
 month. If you want to make the calendar larger or smaller, adjust the width rather than the height.</p>
-<div material-docs-example="datepicker-inline-calendar"></div>
+</div><div material-docs-example="datepicker-inline-calendar"></div><div class="docs-markdown">
 
 
         <h3 id="internationalization" class="docs-header-link">
@@ -298,7 +298,7 @@ from <code>@angular/core</code>. If you want to override it, you can provide a n
 locale to <code>MAT_DATE_LOCALE</code> instead of the locale code, in addition to providing a configuration
 compatible with <code>date-fns</code> to <code>MAT_DATE_FORMATS</code>. Locale data for <code>date-fns</code> can be imported
 from <code>date-fns/locale</code>.</p>
-<div material-docs-example="datepicker-locale"></div>
+</div><div material-docs-example="datepicker-locale"></div><div class="docs-markdown">
 
 
         <h4 id="choosing-a-date-implementation-and-date-format-settings" class="docs-header-link">
@@ -417,7 +417,7 @@ example:</p>
   <span class="hljs-meta">@ViewChild</span>(MatDatepicker) datepicker: MatDatepicker&lt;<span class="hljs-built_in">Date</span>&gt;;
 }
 </code></pre>
-<div material-docs-example="datepicker-moment"></div>
+</div><div material-docs-example="datepicker-moment"></div><div class="docs-markdown">
 
 <p>By default the <code>MomentDateAdapter</code> creates dates in your time zone specific locale. You can change
 the default behaviour to parse dates as UTC by passing <code>useUtc: true</code> into <code>provideMomentDateAdapter</code>
@@ -465,7 +465,7 @@ sure that the format objects you&#39;re using are compatible with the <code>Date
   <span class="hljs-attr">providers</span>: [provideNativeDateAdapter(MY_NATIVE_DATE_FORMATS)],
 });
 </code></pre>
-<div material-docs-example="datepicker-formats"></div>
+</div><div material-docs-example="datepicker-formats"></div><div class="docs-markdown">
 
 
         <h5 id="momentjs-formats" class="docs-header-link">
@@ -503,7 +503,7 @@ an instance of the component to use as the header.</p>
 <code>MatCalendar</code> in the constructor. To make sure your header stays in sync with the calendar,
 subscribe to the <code>stateChanges</code> observable of the calendar and mark your header component for change
 detection.</p>
-<div material-docs-example="datepicker-custom-header"></div>
+</div><div material-docs-example="datepicker-custom-header"></div><div class="docs-markdown">
 
 
         <h4 id="localizing-labels-and-messages" class="docs-header-link">
@@ -529,7 +529,7 @@ app config.</p>
 holiday), you can do so with the <code>dateClass</code> input. It accepts a function which will be called
 with each of the dates in the calendar and will apply any classes that are returned. The return
 value can be anything that is accepted by <code>ngClass</code>.</p>
-<div material-docs-example="datepicker-date-class"></div>
+</div><div material-docs-example="datepicker-date-class"></div><div class="docs-markdown">
 
 
         <h3 id="accessibility" class="docs-header-link">

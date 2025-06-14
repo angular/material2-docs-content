@@ -125,9 +125,9 @@ menu directives to build your custom menu. A typical menu consists of the follow
 <li><code>cdkMenu</code> - creates the menu content opened by the trigger</li>
 <li><code>cdkMenuItem</code> - added to each item in the menu</li>
 </ul>
-<div material-docs-example="cdk-menu-standalone-menu"
+</div><div material-docs-example="cdk-menu-standalone-menu"
                              file="cdk-menu-standalone-menu-example.html"
-                             ></div>
+                             ></div><div class="docs-markdown">
 
 <p>Most menu interactions consist of two parts: a trigger and a menu panel.</p>
 
@@ -139,14 +139,14 @@ menu directives to build your custom menu. A typical menu consists of the follow
 item to make it a trigger for a submenu. When adding this directive, be sure to pass a reference to
 the template containing the menu it should open. Users can toggle the associated menu using a mouse
 or keyboard.</p>
-<div material-docs-example="cdk-menu-standalone-menu"
+</div><div material-docs-example="cdk-menu-standalone-menu"
                              file="cdk-menu-standalone-menu-example.html"
-                             region="trigger"></div>
+                             region="trigger"></div><div class="docs-markdown">
 
 <p>When creating a submenu trigger, add both <code>cdkMenuItem</code> and <code>cdkMenuTriggerFor</code> like so,</p>
-<div material-docs-example="cdk-menu-menubar"
+</div><div material-docs-example="cdk-menu-menubar"
                              file="cdk-menu-menubar-example.html"
-                             region="file-trigger"></div>
+                             region="file-trigger"></div><div class="docs-markdown">
 
 
         <h4 id="menu-content" class="docs-header-link">
@@ -174,9 +174,9 @@ trigger. You can use an inline menu when you want a persistent menu interaction 
 items within an inline menus are logically grouped together, and you can navigate through them
 using your keyboard. You can create an inline menu by adding the <code>cdkMenu</code> directive to the element
 you want to serve as the menu content.</p>
-<div material-docs-example="cdk-menu-inline"
+</div><div material-docs-example="cdk-menu-inline"
                              file="cdk-menu-inline-example.html"
-                             ></div>
+                             ></div><div class="docs-markdown">
 
 
         <h3 id="pop-up-menus" class="docs-header-link">
@@ -187,9 +187,9 @@ you want to serve as the menu content.</p>
 element you want to serve as the content for your pop-up menu. Then wrap the content element in an
 <code>ng-template</code> and reference the template from the <code>cdkMenuTriggerFor</code> property of the trigger. This
 will allow the trigger to show and hide the menu content as needed.</p>
-<div material-docs-example="cdk-menu-standalone-menu"
+</div><div material-docs-example="cdk-menu-standalone-menu"
                              file="cdk-menu-standalone-menu-example.html"
-                             ></div>
+                             ></div><div class="docs-markdown">
 
 
         <h3 id="menu-bars" class="docs-header-link">
@@ -199,9 +199,9 @@ will allow the trigger to show and hide the menu content as needed.</p>
       <p>Menu bars are a type of inline menu that you can create using the <code>cdkMenuBar</code> directive. They
 follow the <a href="https://www.w3.org/TR/wai-aria-practices-1.1/#menu" title="ARIA Menubar Pattern">ARIA menubar</a> spec and behave similarly to a desktop application menubar. Each
 bar consists of at least one <code>cdkMenuItem</code> that triggers a submenu.</p>
-<div material-docs-example="cdk-menu-menubar"
+</div><div material-docs-example="cdk-menu-menubar"
                              file="cdk-menu-menubar-example.html"
-                             ></div>
+                             ></div><div class="docs-markdown">
 
 
         <h3 id="context-menus" class="docs-header-link">
@@ -213,15 +213,15 @@ it is triggered when a user right-clicks within some container element. You can 
 container element with the <code>cdkContextMenuTriggerFor</code>, which behaves like <code>cdkMenuTriggerFor</code> except
 that it responds to the browser&#39;s native <code>contextmenu</code> event. Custom context menus appear next to
 the cursor, similarly to native context menus.</p>
-<div material-docs-example="cdk-menu-context"
+</div><div material-docs-example="cdk-menu-context"
                              file="cdk-menu-context-example.html"
-                             ></div>
+                             ></div><div class="docs-markdown">
 
 <p>You can nest context menu container elements. Upon right-click, the menu associated with the closest
 container element will open.</p>
-<div material-docs-example="cdk-menu-nested-context"
+</div><div material-docs-example="cdk-menu-nested-context"
                              file="cdk-menu-nested-context-example.html"
-                             region="triggers"></div>
+                             region="triggers"></div><div class="docs-markdown">
 
 <p>In the example above, right-clicking on &quot;Inner context menu&quot; will open up the &quot;inner&quot; menu and
 right-clicking inside &quot;Outer context menu&quot; will open up the &quot;outer&quot; menu.</p>
@@ -232,14 +232,14 @@ right-clicking inside &quot;Outer context menu&quot; will open up the &quot;oute
         </h3>
       <p>The <code>cdkMenuItem</code> directive allows users to navigate menu items via keyboard.
 You can add a custom action to a menu item with the <code>cdkMenuItemTriggered</code> output.</p>
-<div material-docs-example="cdk-menu-standalone-stateful-menu"
+</div><div material-docs-example="cdk-menu-standalone-stateful-menu"
                              file="cdk-menu-standalone-stateful-menu-example.html"
-                             region="reset-item"></div>
+                             region="reset-item"></div><div class="docs-markdown">
 
 <p>You can create nested menus by using a menu item as the trigger for another menu.</p>
-<div material-docs-example="cdk-menu-menubar"
+</div><div material-docs-example="cdk-menu-menubar"
                              file="cdk-menu-menubar-example.html"
-                             region="file-trigger"></div>
+                             region="file-trigger"></div><div class="docs-markdown">
 
 
         <h4 id="menu-item-checkboxes" class="docs-header-link">
@@ -252,9 +252,9 @@ does not need the additional <code>cdkMenuItem</code> directive.</p>
 <p>Checkbox items do not track their own state. You must bind the checked state using the
 <code>cdkMenuItemChecked</code> input and listen to <code>cdkMenuItemTriggered</code> to know when it is toggled. If you
 don&#39;t bind the state it will reset when the menu is closed and re-opened.</p>
-<div material-docs-example="cdk-menu-standalone-stateful-menu"
+</div><div material-docs-example="cdk-menu-standalone-stateful-menu"
                              file="cdk-menu-standalone-stateful-menu-example.html"
-                             region="bold-item"></div>
+                             region="bold-item"></div><div class="docs-markdown">
 
 
         <h4 id="menu-item-radios" class="docs-header-link">
@@ -267,9 +267,9 @@ directive does not need the additional <code>cdkMenuItem</code> directive.</p>
 <p>As with checkbox items, radio items do not track their own state, but you can track it by binding
 <code>cdkMenuItemChecked</code> and listening for <code>cdkMenuItemTriggered</code>. If you do not bind the state the
 selection will reset when the menu is closed and reopened.</p>
-<div material-docs-example="cdk-menu-standalone-stateful-menu"
+</div><div material-docs-example="cdk-menu-standalone-stateful-menu"
                              file="cdk-menu-standalone-stateful-menu-example.html"
-                             region="size-items"></div>
+                             region="size-items"></div><div class="docs-markdown">
 
 
         <h4 id="groups" class="docs-header-link">
@@ -281,9 +281,9 @@ selection will reset when the menu is closed and reopened.</p>
 can have the checked state.</p>
 <p>If you would like to have unrelated groups of radio buttons within a single menu you should use the
 <code>cdkMenuGroup</code> directive.</p>
-<div material-docs-example="cdk-menu-standalone-stateful-menu"
+</div><div material-docs-example="cdk-menu-standalone-stateful-menu"
                              file="cdk-menu-standalone-stateful-menu-example.html"
-                             ></div>
+                             ></div><div class="docs-markdown">
 
 
         <h3 id="smart-menu-aim" class="docs-header-link">
