@@ -10,7 +10,7 @@ the table is implemented, see the
           <span header-link="getting-started"></span>
           Getting Started
         </h3>
-      <div material-docs-example="table-basic"></div>
+      </div><div material-docs-example="table-basic"></div><div class="docs-markdown">
 
 
         <h4 id="1-write-your-mat-table-and-provide-data" class="docs-header-link">
@@ -121,7 +121,7 @@ respect Typescript&#39;s restriction to only implement one base class.</p>
       <p>Each table cell has an automatically generated class based on which column it appears in. The format for this
 generated class is <code>mat-column-NAME</code>. For example, cells in a column named &quot;symbol&quot; can be targeted with the
 selector <code>.mat-column-symbol</code>.</p>
-<div material-docs-example="table-column-styling"></div>
+</div><div material-docs-example="table-column-styling"></div><div class="docs-markdown">
 
 
         <h3 id="row-templates" class="docs-header-link">
@@ -130,7 +130,7 @@ selector <code>.mat-column-symbol</code>.</p>
         </h3>
       <p>Event handlers and property binding on the row templates will be applied to each row rendered by the table. For example,
 adding a <code>(click)</code> handler to the row template will cause each individual row to call the handler when clicked.</p>
-<div material-docs-example="table-row-binding"></div>
+</div><div material-docs-example="table-row-binding"></div><div class="docs-markdown">
 
 
         <h3 id="features" class="docs-header-link">
@@ -163,7 +163,7 @@ paginator&#39;s <code>(page)</code> output and pass the right slice of data to y
 <p>The <code>MatPaginator</code> is one provided solution to paginating your table&#39;s data, but it is not the only
 option. In fact, the table can work with any custom pagination UI or strategy since the <code>MatTable</code>
 and its interface is not tied to any one specific implementation.</p>
-<div material-docs-example="table-pagination"></div>
+</div><div material-docs-example="table-pagination"></div><div class="docs-markdown">
 
 
         <h4 id="sorting" class="docs-header-link">
@@ -192,7 +192,7 @@ default data accessor on the <code>MatTableDataSource</code>.</p>
 data, listen to the sort&#39;s <code>(matSortChange)</code> event and re-order your data according to the sort state.
 If you are providing a data array directly to the table, don&#39;t forget to call <code>renderRows()</code> on the
 table, since it will not automatically check the array for changes.</p>
-<div material-docs-example="table-sorting"></div>
+</div><div material-docs-example="table-sorting"></div><div class="docs-markdown">
 
 <p>For more information on using and configuring the sorting behavior, check out the
 <a href="https://material.angular.dev/components/sort/overview">matSort docs</a>.</p>

@@ -12,7 +12,7 @@ and usability advantages. See <a href="https://material.angular.dev/components/f
 form-field</a> for more information.</p>
 <p>To use a native select inside <code>&lt;mat-form-field&gt;</code>, import <code>MatInputModule</code> and add the
 <code>matNativeControl</code> attribute to the <code>&lt;select&gt;</code> element.</p>
-<div material-docs-example="select-overview"></div>
+</div><div material-docs-example="select-overview"></div><div class="docs-markdown">
 
 
         <h3 id="getting-and-setting-the-select-value" class="docs-header-link">
@@ -21,14 +21,14 @@ form-field</a> for more information.</p>
         </h3>
       <p>The <code>&lt;mat-select&gt;</code> supports 2-way binding to the <code>value</code> property without the need for Angular
 forms.</p>
-<div material-docs-example="select-value-binding"></div>
+</div><div material-docs-example="select-value-binding"></div><div class="docs-markdown">
 
 <p>Both<code>&lt;mat-select&gt;</code> and <code>&lt;select&gt;</code> support all of the form directives from the core <code>FormsModule</code> (<code>NgModel</code>) and
 <code>ReactiveFormsModule</code> (<code>FormControl</code>, <code>FormGroup</code>, etc.) As with native <code>&lt;select&gt;</code>, <code>&lt;mat-select&gt;</code>
 also supports a <code>compareWith</code> function. (Additional information about using a custom <code>compareWith</code>
 function can be found in the
 <a href="https://angular.dev/api/forms/SelectControlValueAccessor#compareWith">Angular forms documentation</a>).</p>
-<div material-docs-example="select-form"></div>
+</div><div material-docs-example="select-form"></div><div class="docs-markdown">
 
 
         <h3 id="form-field-features" class="docs-header-link">
@@ -39,7 +39,7 @@ function can be found in the
 include error messages, hint text, prefix &amp; suffix, and theming. For additional information about
 these features, see the
 <a href="https://material.angular.dev/components/form-field/overview">form field documentation</a>.</p>
-<div material-docs-example="select-hint-error"></div>
+</div><div material-docs-example="select-hint-error"></div><div class="docs-markdown">
 
 
         <h3 id="setting-a-static-placeholder" class="docs-header-link">
@@ -61,7 +61,7 @@ disabled property on the <code>&lt;select&gt;</code> or <code>&lt;mat-select&gt;
 When working with Reactive Forms, the select component can be disabled/enabled via form controls.
 This can be accomplished by creating a <code>FormControl</code> with the disabled property
 <code>FormControl({value: &#39;&#39;, disabled: true})</code> or using <code>FormControl.enable()</code>, <code>FormControl.disable()</code>.</p>
-<div material-docs-example="select-disabled"></div>
+</div><div material-docs-example="select-disabled"></div><div class="docs-markdown">
 
 
         <h3 id="resetting-the-select-value" class="docs-header-link">
@@ -69,7 +69,7 @@ This can be accomplished by creating a <code>FormControl</code> with the disable
           Resetting the select value
         </h3>
       <p>If you want one of your options to reset the select&#39;s value, you can omit specifying its value.</p>
-<div material-docs-example="select-reset"></div>
+</div><div material-docs-example="select-reset"></div><div class="docs-markdown">
 
 
         <h3 id="allowing-nullable-options-to-be-selected" class="docs-header-link">
@@ -80,7 +80,7 @@ This can be accomplished by creating a <code>FormControl</code> with the disable
 you want the nullable options to be selectable, you can enable the <code>canSelectNullableOptions</code> input.
 The default value for the input can be controlled application-wide through the <code>MAT_SELECT_CONFIG</code>
 injection token.</p>
-<div material-docs-example="select-selectable-null"></div>
+</div><div material-docs-example="select-selectable-null"></div><div class="docs-markdown">
 
 
         <h3 id="creating-groups-of-options" class="docs-header-link">
@@ -91,7 +91,7 @@ injection token.</p>
 group can be set using the <code>label</code> property of <code>&lt;mat-optgroup&gt;</code>. Like individual <code>&lt;mat-option&gt;</code>
 elements, an entire <code>&lt;mat-optgroup&gt;</code> can be disabled or enabled by setting the <code>disabled</code> property
 on the group.</p>
-<div material-docs-example="select-optgroup"></div>
+</div><div material-docs-example="select-optgroup"></div><div class="docs-markdown">
 
 
         <h3 id="multiple-selection" class="docs-header-link">
@@ -105,7 +105,7 @@ values rather than a single value.</p>
 <p>Using multiple selection with a native select element (<code>&lt;select multiple&gt;</code>) is discouraged
 inside <code>&lt;mat-form-field&gt;</code>, as the inline listbox appearance is inconsistent with other
 Material Design components.</p>
-<div material-docs-example="select-multiple"></div>
+</div><div material-docs-example="select-multiple"></div><div class="docs-markdown">
 
 
         <h3 id="customizing-the-trigger-label" class="docs-header-link">
@@ -114,7 +114,7 @@ Material Design components.</p>
         </h3>
       <p>If you want to display a custom trigger label inside a <code>&lt;mat-select&gt;</code>, you can use the
 <code>&lt;mat-select-trigger&gt;</code> element.</p>
-<div material-docs-example="select-custom-trigger"></div>
+</div><div material-docs-example="select-custom-trigger"></div><div class="docs-markdown">
 
 
         <h3 id="disabling-the-ripple-effect" class="docs-header-link">
@@ -123,7 +123,7 @@ Material Design components.</p>
         </h3>
       <p>By default, when a user clicks on a <code>&lt;mat-option&gt;</code>, a ripple animation is shown. This can be disabled
 by setting the <code>disableRipple</code> property on <code>&lt;mat-select&gt;</code>.</p>
-<div material-docs-example="select-no-ripple"></div>
+</div><div material-docs-example="select-no-ripple"></div><div class="docs-markdown">
 
 
         <h3 id="adding-custom-styles-to-the-dropdown-panel" class="docs-header-link">
@@ -132,7 +132,7 @@ by setting the <code>disableRipple</code> property on <code>&lt;mat-select&gt;</
         </h3>
       <p>In order to facilitate easily styling the dropdown panel, <code>&lt;mat-select&gt;</code> has a <code>panelClass</code> property
 which can be used to apply additional CSS classes to the dropdown panel.</p>
-<div material-docs-example="select-panel-class"></div>
+</div><div material-docs-example="select-panel-class"></div><div class="docs-markdown">
 
 
         <h3 id="changing-when-error-messages-are-shown" class="docs-header-link">
@@ -150,7 +150,7 @@ or when a parent form group is invalid), you can use the <code>errorStateMatcher
 this <code>&lt;mat-select&gt;</code> as well as the parent form and returns a boolean indicating whether errors
 should be shown. (<code>true</code> indicating that they should be shown, and <code>false</code> indicating that they
 should not.)</p>
-<div material-docs-example="select-error-state-matcher"></div>
+</div><div material-docs-example="select-error-state-matcher"></div><div class="docs-markdown">
 
 <p>A global error state matcher can be specified by setting the <code>ErrorStateMatcher</code> provider. This
 applies to all inputs. For convenience, <code>ShowOnDirtyErrorStateMatcher</code> is available in order to

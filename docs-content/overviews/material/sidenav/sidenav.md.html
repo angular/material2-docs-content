@@ -5,14 +5,14 @@ drawer components.</p>
 use three components: <code>&lt;mat-sidenav-container&gt;</code> which acts as a structural container for our content
 and sidenav, <code>&lt;mat-sidenav-content&gt;</code> which represents the main content, and <code>&lt;mat-sidenav&gt;</code> which
 represents the added side content.</p>
-<div material-docs-example="sidenav-overview"></div>
+</div><div material-docs-example="sidenav-overview"></div><div class="docs-markdown">
 
 <p>The drawer component is designed to add side content to a small section of your app. This is
 accomplished using the <code>&lt;mat-drawer-container&gt;</code>, <code>&lt;mat-drawer-content&gt;</code>, and <code>&lt;mat-drawer&gt;</code>
 components, which are analogous to their sidenav equivalents. Rather than adding side content to the
 app as a whole, these are designed to add side content to a small section of your app. They support
 almost all of the same features, but do not support fixed positioning.</p>
-<div material-docs-example="sidenav-drawer-overview"></div>
+</div><div material-docs-example="sidenav-drawer-overview"></div><div class="docs-markdown">
 
 
         <h3 id="specifying-the-main-and-side-content" class="docs-header-link">
@@ -32,7 +32,7 @@ given side. The <code>&lt;mat-sidenav&gt;</code> must be placed as an immediate 
 specified for a <code>&lt;mat-sidenav-container&gt;</code>, one will be created implicitly and all of the content
 inside the <code>&lt;mat-sidenav-container&gt;</code> other than the <code>&lt;mat-sidenav&gt;</code> elements will be placed inside
 of it.</p>
-<div material-docs-example="sidenav-position"></div>
+</div><div material-docs-example="sidenav-position"></div><div class="docs-markdown">
 
 <p>The following are examples of valid sidenav layouts:</p>
 <pre><code class="language-html"><span class="hljs-comment">&lt;!-- Creates a layout with a left-positioned sidenav and explicit content. --&gt;</span>
@@ -81,7 +81,7 @@ finishes opening or <code>false</code> when it finishes closing.</p>
 The property supports 2-way binding.</p>
 <p><code>&lt;mat-sidenav&gt;</code> also supports output properties for just open and just close events, The <code>(opened)</code>
 and <code>(closed)</code> properties respectively.</p>
-<div material-docs-example="sidenav-open-close"></div>
+</div><div material-docs-example="sidenav-open-close"></div><div class="docs-markdown">
 
 <p>All of these properties and methods work on <code>&lt;mat-drawer&gt;</code> as well.</p>
 
@@ -111,14 +111,14 @@ and <code>(closed)</code> properties respectively.</p>
 </tr>
 </tbody></table>
 <p>If no <code>mode</code> is specified, <code>over</code> is used by default.</p>
-<div material-docs-example="sidenav-mode"></div>
+</div><div material-docs-example="sidenav-mode"></div><div class="docs-markdown">
 
 <p>The <code>over</code> and <code>push</code> sidenav modes show a backdrop by default, while the <code>side</code> mode does not. This
 can be customized by setting the <code>hasBackdrop</code> property on <code>mat-sidenav-container</code>. Explicitly
 setting <code>hasBackdrop</code> to <code>true</code> or <code>false</code> will override the default backdrop visibility setting for
 all sidenavs regardless of mode. Leaving the property unset or setting it to <code>null</code> will use the
 default backdrop visibility for each mode.</p>
-<div material-docs-example="sidenav-backdrop"></div>
+</div><div material-docs-example="sidenav-backdrop"></div><div class="docs-markdown">
 
 <p><code>&lt;mat-drawer&gt;</code> also supports all of these same modes and options.</p>
 
@@ -132,7 +132,7 @@ the <code>&lt;mat-sidenav&gt;</code> or <code>&lt;mat-drawer&gt;</code> that you
 <p>Custom handling for <kbd>Esc</kbd> can be done by adding a keydown listener to the <code>&lt;mat-sidenav&gt;</code>.
 Custom handling for backdrop clicks can be done via the <code>(backdropClick)</code> output property on
 <code>&lt;mat-sidenav-container&gt;</code>.</p>
-<div material-docs-example="sidenav-disable-close"></div>
+</div><div material-docs-example="sidenav-disable-close"></div><div class="docs-markdown">
 
 
         <h3 id="resizing-an-open-sidenav" class="docs-header-link">
@@ -145,7 +145,7 @@ are cases where this can be problematic. If your app requires for a drawer to ch
 while it is open, you can use the <code>autosize</code> option to tell Material to continue measuring it.
 Note that you should use this option <strong>at your own risk</strong>, because it could cause performance
 issues.</p>
-<div material-docs-example="sidenav-autosize"></div>
+</div><div material-docs-example="sidenav-autosize"></div><div class="docs-markdown">
 
 
         <h3 id="setting-the-sidenavs-size" class="docs-header-link">
@@ -168,7 +168,7 @@ be explicitly set via CSS:</p>
 setting the <code>fixedInViewport</code> property. Additionally, top and bottom space can be set via the
 <code>fixedTopGap</code> and <code>fixedBottomGap</code>. These properties accept a pixel value amount of space to add at
 the top or bottom.</p>
-<div material-docs-example="sidenav-fixed"></div>
+</div><div material-docs-example="sidenav-fixed"></div><div class="docs-markdown">
 
 
         <h3 id="creating-a-responsive-layout-for-mobile--desktop" class="docs-header-link">
@@ -179,7 +179,7 @@ the top or bottom.</p>
 make sense to have just the content section scroll. However, on mobile you often want the body to be
 the element that scrolls; this allows the address bar to auto-hide. The sidenav can be styled with
 CSS to adjust to either type of device.</p>
-<div material-docs-example="sidenav-responsive"></div>
+</div><div material-docs-example="sidenav-responsive"></div><div class="docs-markdown">
 
 
         <h3 id="reacting-to-scroll-events-inside-the-sidenav-container" class="docs-header-link">

@@ -11,7 +11,7 @@ in addition to horizontal lists and locking along an axis.</p>
 features. You can now add the <code>cdkDrag</code> directive to elements to make them draggable. When
 outside of a <code>cdkDropList</code> element, draggable elements can be freely moved around the page.
 You can add <code>cdkDropList</code> elements to constrain where elements may be dropped.</p>
-<div material-docs-example="cdk-drag-drop-overview"></div>
+</div><div material-docs-example="cdk-drag-drop-overview"></div><div class="docs-markdown">
 
 
         <h3 id="reordering-lists" class="docs-header-link">
@@ -22,7 +22,7 @@ You can add <code>cdkDropList</code> elements to constrain where elements may be
 reorderable collection. Items will automatically rearrange as an element moves. Note
 that this will <em>not</em> update your data model; you can listen to the <code>cdkDropListDropped</code> event to
 update the data model once the user finishes dragging.</p>
-<div material-docs-example="cdk-drag-drop-sorting"></div>
+</div><div material-docs-example="cdk-drag-drop-sorting"></div><div class="docs-markdown">
 
 
         <h3 id="transferring-items-between-lists" class="docs-header-link">
@@ -32,7 +32,7 @@ update the data model once the user finishes dragging.</p>
       <p>The <code>cdkDropList</code> directive supports transferring dragged items between connected drop zones.
 You can connect one or more <code>cdkDropList</code> instances together by setting the <code>cdkDropListConnectedTo</code>
 property or by wrapping the elements in an element with the <code>cdkDropListGroup</code> attribute.</p>
-<div material-docs-example="cdk-drag-drop-connected-sorting"></div>
+</div><div material-docs-example="cdk-drag-drop-connected-sorting"></div><div class="docs-markdown">
 
 <p>Note that <code>cdkDropListConnectedTo</code> works both with a direct reference to another <code>cdkDropList</code>, or
 by referencing the <code>id</code> of another drop container:</p>
@@ -54,7 +54,7 @@ will be connected to all other lists automatically.</p>
   }
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 </code></pre>
-<div material-docs-example="cdk-drag-drop-connected-sorting-group"></div>
+</div><div material-docs-example="cdk-drag-drop-connected-sorting-group"></div><div class="docs-markdown">
 
 
         <h3 id="attaching-data" class="docs-header-link">
@@ -164,7 +164,7 @@ following classes can be used for animations:</p>
 restrict the user to only be able to do so using a handle element, you can do it by adding the
 <code>cdkDragHandle</code> directive to an element inside of <code>cdkDrag</code>. Note that you can have as many
 <code>cdkDragHandle</code> elements as you want:</p>
-<div material-docs-example="cdk-drag-drop-handle"></div>
+</div><div material-docs-example="cdk-drag-drop-handle"></div><div class="docs-markdown">
 
 
         <h3 id="customizing-the-drag-preview" class="docs-header-link">
@@ -180,7 +180,7 @@ size to be matched, you can pass <code>true</code> to the <code>matchSize</code>
 <p>Note that the cloned element will remove its <code>id</code> attribute in order to avoid having multiple
 elements with the same <code>id</code> on the page. This will cause any CSS that targets that <code>id</code> not
 to be applied.</p>
-<div material-docs-example="cdk-drag-drop-custom-preview"></div>
+</div><div material-docs-example="cdk-drag-drop-custom-preview"></div><div class="docs-markdown">
 
 
         <h3 id="drag-preview-insertion-point" class="docs-header-link">
@@ -228,7 +228,7 @@ using the <code>cdkDragPreviewContainer</code> input on <code>cdkDrag</code>. Th
 show where it will be placed when it&#39;s dropped. By default the placeholder is a clone of the element
 that is being dragged, however you can replace it with a custom one using the <code>*cdkDragPlaceholder</code>
 directive:</p>
-<div material-docs-example="cdk-drag-drop-custom-placeholder"></div>
+</div><div material-docs-example="cdk-drag-drop-custom-placeholder"></div><div class="docs-markdown">
 
 
         <h3 id="list-orientation" class="docs-header-link">
@@ -237,7 +237,7 @@ directive:</p>
         </h3>
       <p>The <code>cdkDropList</code> directive assumes that lists are vertical by default. This can be
 changed by setting the <code>cdkDropListOrientation</code> property to <code>horizontal</code>.</p>
-<div material-docs-example="cdk-drag-drop-horizontal-sorting"></div>
+</div><div material-docs-example="cdk-drag-drop-horizontal-sorting"></div><div class="docs-markdown">
 
 
         <h3 id="list-wrapping" class="docs-header-link">
@@ -251,7 +251,7 @@ drawback that it works only one direction: vertically or horizontally.</p>
 will use a different strategy of sorting the elements that works by moving them in the DOM. It has
 the advantage of allowing the items to wrap to the next line, but it <strong>cannot</strong> animate the
 sorting action.</p>
-<div material-docs-example="cdk-drag-drop-mixed-sorting"></div>
+</div><div material-docs-example="cdk-drag-drop-mixed-sorting"></div><div class="docs-markdown">
 
 
         <h3 id="copying-items-from-one-list-to-another" class="docs-header-link">
@@ -270,7 +270,7 @@ the <code>cdk-drag-anchor</code> CSS class.</p>
 <p>Combining <code>cdkDropListHasAnchor</code> and <code>cdkDropListSortingDisabled</code> makes it possible to construct a
 list that user copies items from, but doesn&#39;t necessarily transfer out of (e.g. a product list and
 a shopping cart).</p>
-<div material-docs-example="cdk-drag-drop-copy-list"></div>
+</div><div material-docs-example="cdk-drag-drop-copy-list"></div><div class="docs-markdown">
 
 
         <h3 id="restricting-movement-within-an-element" class="docs-header-link">
@@ -282,7 +282,7 @@ you can pass a CSS selector to the <code>cdkDragBoundary</code> attribute. The a
 selector and looking up the DOM until it finds an element that matches it. If a match is found,
 it&#39;ll be used as the boundary outside of which the element can&#39;t be dragged. <code>cdkDragBoundary</code> can
 also be used when <code>cdkDrag</code> is placed inside a <code>cdkDropList</code>.</p>
-<div material-docs-example="cdk-drag-drop-boundary"></div>
+</div><div material-docs-example="cdk-drag-drop-boundary"></div><div class="docs-markdown">
 
 
         <h3 id="restricting-movement-along-an-axis" class="docs-header-link">
@@ -292,7 +292,7 @@ also be used when <code>cdkDrag</code> is placed inside a <code>cdkDropList</cod
       <p>By default, <code>cdkDrag</code> allows free movement in all directions. To restrict dragging to a
 specific axis, you can set <code>cdkDragLockAxis</code> on <code>cdkDrag</code> or <code>cdkDropListLockAxis</code> on <code>cdkDropList</code>
 to either <code>&quot;x&quot;</code> or <code>&quot;y&quot;</code>.</p>
-<div material-docs-example="cdk-drag-drop-axis-lock"></div>
+</div><div material-docs-example="cdk-drag-drop-axis-lock"></div><div class="docs-markdown">
 
 
         <h3 id="alternate-drag-root-element" class="docs-header-link">
@@ -304,7 +304,7 @@ can use the <code>cdkDragRootElement</code> attribute. The attribute works by ac
 up the DOM until it finds an element that matches the selector. If an element is found, it&#39;ll become
 the element that is moved as the user is dragging. This is useful for cases like making a dialog
 draggable.</p>
-<div material-docs-example="cdk-drag-drop-root-element"></div>
+</div><div material-docs-example="cdk-drag-drop-root-element"></div><div class="docs-markdown">
 
 
         <h3 id="controlling-which-items-can-be-moved-into-a-container" class="docs-header-link">
@@ -316,7 +316,7 @@ If you want more fine-grained control over which items can be dropped, you can u
 <code>cdkDropListEnterPredicate</code> which will be called whenever an item is about to enter a
 new container. Depending on whether the predicate returns <code>true</code> or <code>false</code>, the item may or may not
 be allowed into the new container.</p>
-<div material-docs-example="cdk-drag-drop-enter-predicate"></div>
+</div><div material-docs-example="cdk-drag-drop-enter-predicate"></div><div class="docs-markdown">
 
 
         <h3 id="disabled-dragging" class="docs-header-link">
@@ -327,7 +327,7 @@ be allowed into the new container.</p>
 <code>cdkDragDisabled</code> input on a <code>cdkDrag</code> item. Furthermore, you can disable an entire list
 using the <code>cdkDropListDisabled</code> input on a <code>cdkDropList</code> or a particular handle via
 <code>cdkDragHandleDisabled</code> on <code>cdkDragHandle</code>.</p>
-<div material-docs-example="cdk-drag-drop-disabled"></div>
+</div><div material-docs-example="cdk-drag-drop-disabled"></div><div class="docs-markdown">
 
 
         <h3 id="disabled-sorting" class="docs-header-link">
@@ -339,7 +339,7 @@ the user shouldn&#39;t be able to sort them within the source list. For these ca
 <code>cdkDropListSortingDisabled</code> input which will prevent the items in a <code>cdkDropList</code> from sorting,
 in addition to preserving the dragged item&#39;s initial position in the source list, if the user
 decides to return the item.</p>
-<div material-docs-example="cdk-drag-drop-disabled-sorting"></div>
+</div><div material-docs-example="cdk-drag-drop-disabled-sorting"></div><div class="docs-markdown">
 
 
         <h3 id="delayed-dragging" class="docs-header-link">
@@ -352,7 +352,7 @@ devices where the user might accidentally trigger a drag as they&#39;re scrollin
 cases like these you can delay the dragging sequence using the <code>cdkDragStartDelay</code> input which
 will wait for the user to hold down their pointer for the specified number of milliseconds before
 moving the element.</p>
-<div material-docs-example="cdk-drag-drop-delay"></div>
+</div><div material-docs-example="cdk-drag-drop-delay"></div><div class="docs-markdown">
 
 
         <h3 id="changing-the-standalone-drag-position" class="docs-header-link">
@@ -363,7 +363,7 @@ moving the element.</p>
 moved by a user. The element&#39;s position can be explicitly set, however, via the
 <code>cdkDragFreeDragPosition</code> input. Applications commonly use this, for example, to restore a
 draggable&#39;s position after a user has navigated away and then returned.</p>
-<div material-docs-example="cdk-drag-drop-free-drag-position"></div>
+</div><div material-docs-example="cdk-drag-drop-free-drag-position"></div><div class="docs-markdown">
 
 
         <h3 id="controlling-whether-an-item-can-be-sorted-into-a-particular-index" class="docs-header-link">
@@ -374,7 +374,7 @@ draggable&#39;s position after a user has navigated away and then returned.</p>
 this behavior by setting a <code>cdkDropListSortPredicate</code>. The predicate function will be called
 whenever an item is about to be moved into a new index. If the predicate returns <code>true</code>, the
 item will be moved into the new index, otherwise it will keep its current position.</p>
-<div material-docs-example="cdk-drag-drop-sort-predicate"></div>
+</div><div material-docs-example="cdk-drag-drop-sort-predicate"></div><div class="docs-markdown">
 
 
         <h3 id="integrations-with-angular-material" class="docs-header-link">
@@ -388,7 +388,7 @@ item will be moved into the new index, otherwise it will keep its current positi
           Sortable table
         </h4>
       <p>This example shows how you can set up a table which supports re-ordering of tabs.</p>
-<div material-docs-example="cdk-drag-drop-table"></div>
+</div><div material-docs-example="cdk-drag-drop-table"></div><div class="docs-markdown">
 
 
         <h4 id="sortable-tabs" class="docs-header-link">
@@ -396,5 +396,5 @@ item will be moved into the new index, otherwise it will keep its current positi
           Sortable tabs
         </h4>
       <p>Example of how to add sorting support to a <code>mat-tab-group</code>.</p>
-<div material-docs-example="cdk-drag-drop-tabs"></div>
+</div><div material-docs-example="cdk-drag-drop-tabs"></div><div class="docs-markdown">
 </div>

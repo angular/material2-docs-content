@@ -37,7 +37,7 @@ rest.</p>
       <p><code>*cdkVirtualFor</code> replaces <code>*ngFor</code> inside of a <code>&lt;cdk-virtual-scroll-viewport&gt;</code>, supporting the exact
 same API as <a href="https://angular.dev/api/common/NgForOf"><code>*ngFor</code></a>. The simplest usage just specifies the
 list of items (note that the <code>itemSize</code> property on the viewport must be set):</p>
-<div material-docs-example="cdk-virtual-scroll-overview"></div>
+</div><div material-docs-example="cdk-virtual-scroll-overview"></div><div class="docs-markdown">
 
 <p><code>*cdkVirtualFor</code> makes the following context variables available to the template:</p>
 <table>
@@ -74,7 +74,7 @@ list of items (note that the <code>itemSize</code> property on the viewport must
 </tbody></table>
 <p>All of these apply to the index of the item in the data source, not the index in the rendered
 portion of the data.</p>
-<div material-docs-example="cdk-virtual-scroll-context"></div>
+</div><div material-docs-example="cdk-virtual-scroll-context"></div><div class="docs-markdown">
 
 <p>A <code>trackBy</code> function can be specified and works the same as the <code>*ngFor</code> <code>trackBy</code>. The <code>index</code>
 passed to the tracking function will be the index in the data source, not the index in the rendered
@@ -89,7 +89,7 @@ they are no longer needed. When a new view would normally be created, a cached v
 is reused instead. The size of the view cache can be adjusted via the <code>templateCacheSize</code>
 property; setting this size to <code>0</code> disables caching. If your templates are expensive in terms of
 memory you may wish to reduce this number to avoid spending too much memory on the template cache.</p>
-<div material-docs-example="cdk-virtual-scroll-template-cache"></div>
+</div><div material-docs-example="cdk-virtual-scroll-template-cache"></div><div class="docs-markdown">
 
 
         <h5 id="specifying-data" class="docs-header-link">
@@ -103,7 +103,7 @@ memory you may wish to reduce this number to avoid spending too much memory on t
 data array that should be rendered. The viewport will call <code>disconnect</code> when the viewport is
 destroyed, which may be the right time to clean up any subscriptions that were registered during the
 connect process.</p>
-<div material-docs-example="cdk-virtual-scroll-data-source"></div>
+</div><div material-docs-example="cdk-virtual-scroll-data-source"></div><div class="docs-markdown">
 
 
         <h4 id="scrolling-over-fixed-size-items" class="docs-header-link">
@@ -125,7 +125,7 @@ the user is scrolling through the content the viewport detects that there is onl
 remaining. Since this is below <code>minBufferPx</code> the viewport must render more buffer. It must render at
 least enough buffer to get back to <code>maxBufferPx</code>. In this case, it renders 4 items (an additional
 <code>200px</code>) to bring the total buffer size to <code>290px</code>, back above <code>maxBufferPx</code>.</p>
-<div material-docs-example="cdk-virtual-scroll-fixed-buffer"></div>
+</div><div material-docs-example="cdk-virtual-scroll-fixed-buffer"></div><div class="docs-markdown">
 
 <p>Other virtual scrolling strategies can be implemented by extending <code>VirtualScrollStrategy</code>. An
 autosize strategy that works on elements of differing sizes is currently being developed in
@@ -140,7 +140,7 @@ autosize strategy that works on elements of differing sizes is currently being d
 out horizontally via CSS. To do this you may want to target CSS at
 <code>.cdk-virtual-scroll-content-wrapper</code> which is the wrapper element that contains the rendered
 content.</p>
-<div material-docs-example="cdk-virtual-scroll-horizontal"></div>
+</div><div material-docs-example="cdk-virtual-scroll-horizontal"></div><div class="docs-markdown">
 
 
         <h3 id="elements-with-parent-tag-requirements" class="docs-header-link">
@@ -152,7 +152,7 @@ can be placed inside. To enable virtual scrolling over these type of elements, p
 their proper parent, and then wrap the whole thing in a <code>cdk-virtual-scroll-viewport</code>. Be careful
 that the parent does not introduce additional space (e.g. via <code>margin</code> or <code>padding</code>) as it will
 interfere with the scrolling.</p>
-<div material-docs-example="cdk-virtual-scroll-dl"></div>
+</div><div material-docs-example="cdk-virtual-scroll-dl"></div><div class="docs-markdown">
 
 
         <h3 id="scrolling-strategies" class="docs-header-link">
@@ -165,7 +165,7 @@ simplest way to provide it is to use the <code>itemSize</code> directive on the 
 (e.g. <code>&lt;cdk-virtual-scroll-viewport itemSize=&quot;50&quot;&gt;</code>). However it is also possible to provide a 
 custom strategy by creating a class that implements the <code>VirtualScrollStrategy</code> interface and
 providing it as the <code>VIRTUAL_SCROLL_STRATEGY</code> on the component containing your viewport.</p>
-<div material-docs-example="cdk-virtual-scroll-custom-strategy"></div>
+</div><div material-docs-example="cdk-virtual-scroll-custom-strategy"></div><div class="docs-markdown">
 
 
         <h3 id="append-only-mode" class="docs-header-link">
@@ -175,7 +175,7 @@ providing it as the <code>VIRTUAL_SCROLL_STRATEGY</code> on the component contai
       <p>Virtual scroll viewports that render nontrivial items may find it more performant to simply append
 to the list as the user scrolls without removing rendered views. The <code>appendOnly</code> input ensures
 views that are already rendered persist in the DOM after they scroll out of view.</p>
-<div material-docs-example="cdk-virtual-scroll-append-only"></div>
+</div><div material-docs-example="cdk-virtual-scroll-append-only"></div><div class="docs-markdown">
 
 
         <h3 id="separate-viewport-and-scrolling-element" class="docs-header-link">
@@ -188,11 +188,11 @@ if you want to have some non-virtualized content that the user can scroll throug
 the virtualized content.</p>
 <p>To configure a <code>cdk-virtual-scroll-viewport</code> to use one of its parent elements as the scrolling
 element, apply <code>cdkVirtualScrollingElement</code> to the scrolling parent element.</p>
-<div material-docs-example="cdk-virtual-scroll-parent-scrolling"></div>
+</div><div material-docs-example="cdk-virtual-scroll-parent-scrolling"></div><div class="docs-markdown">
 
 <p>Another common scenario is using the window itself as the scrolling element. This is often a better
 user experience on mobile devices, as it allows the browser chrome to scroll away. To use the
 window as the scrolling element, add the <code>scrollWindow</code> attribute to the 
 <code>cdk-virtual-scroll-viewport</code>.</p>
-<div material-docs-example="cdk-virtual-scroll-window-scrolling"></div>
+</div><div material-docs-example="cdk-virtual-scroll-window-scrolling"></div><div class="docs-markdown">
 </div>

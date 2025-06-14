@@ -192,14 +192,14 @@ if you <code>markForCheck</code> in the subscription you must put yourself back 
 </code></pre>
 <p>Any element that is monitored by calling <code>monitor</code> should eventually be unmonitored by calling
 <code>stopMonitoring</code> with the same element.</p>
-<div material-docs-example="focus-monitor-overview"></div>
+</div><div material-docs-example="focus-monitor-overview"></div><div class="docs-markdown">
 
 <p>It is possible to falsify the <code>FocusOrigin</code> when setting the focus programmatically by using the
 <code>focusVia</code> method of <code>FocusMonitor</code>. This method accepts an element to focus and the <code>FocusOrigin</code>
 to use. If the element being focused is currently being monitored by the <code>FocusMonitor</code> it will
 report the <code>FocusOrigin</code> that was passed in. If the element is not currently being monitored, it
 will just be focused like normal.</p>
-<div material-docs-example="focus-monitor-focus-via"></div>
+</div><div material-docs-example="focus-monitor-focus-via"></div><div class="docs-markdown">
 
 
         <h4 id="cdkmonitorelementfocus-and-cdkmonitorsubtreefocus" class="docs-header-link">
@@ -211,7 +211,7 @@ will just be focused like normal.</p>
 <code>checkChildren</code> set to <code>false</code>. <code>cdkMonitorSubtreeFocus</code> is the equivalent of calling <code>monitor</code> on
 the host element with <code>checkChildren</code> set to <code>true</code>. Each of these directives has an <code>@Output()</code>
 <code>cdkFocusChange</code> that will emit the new <code>FocusOrigin</code> whenever it changes.</p>
-<div material-docs-example="focus-monitor-directives"></div>
+</div><div material-docs-example="focus-monitor-directives"></div><div class="docs-markdown">
 
 
         <h3 id="styling-utilities" class="docs-header-link">
