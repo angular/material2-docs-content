@@ -48,8 +48,7 @@ tests for a <code>UserProfile</code> component, the code might look like this:</
 
 <span class="hljs-title function_">describe</span>(<span class="hljs-string">&#x27;my-component&#x27;</span>, <span class="hljs-function">() =&gt;</span> {
   <span class="hljs-title function_">beforeEach</span>(<span class="hljs-title function_">async</span> () =&gt; {
-    <span class="hljs-keyword">await</span> <span class="hljs-title class_">TestBed</span>.<span class="hljs-title function_">configureTestingModule</span>({<span class="hljs-attr">imports</span>: [<span class="hljs-title class_">MyModule</span>], <span class="hljs-attr">declarations</span>: [<span class="hljs-title class_">UserProfile</span>]})
-        .<span class="hljs-title function_">compileComponents</span>();
+    <span class="hljs-title class_">TestBed</span>.<span class="hljs-title function_">configureTestingModule</span>({<span class="hljs-attr">imports</span>: [<span class="hljs-title class_">MyModule</span>], <span class="hljs-attr">declarations</span>: [<span class="hljs-title class_">UserProfile</span>]});
     fixture = <span class="hljs-title class_">TestBed</span>.<span class="hljs-title function_">createComponent</span>(<span class="hljs-title class_">UserProfile</span>);
     loader = <span class="hljs-title class_">TestbedHarnessEnvironment</span>.<span class="hljs-title function_">loader</span>(fixture);
   });
@@ -58,10 +57,10 @@ tests for a <code>UserProfile</code> component, the code might look like this:</
 <p>This code creates a fixture for <code>UserProfile</code> and then creates a <code>HarnessLoader</code> for that fixture.
 The <code>HarnessLoader</code> can then locate Angular Material components inside <code>UserProfile</code> and create
 harnesses for them. Note that <code>HarnessLoader</code> and <code>TestbedHarnessEnvironment</code> are loaded from
-different paths. </p>
+different paths.</p>
 <ul>
 <li><code>@angular/cdk/testing</code> contains symbols that are shared regardless of the environment your tests
-are in. </li>
+are in.</li>
 <li><code>@angular/cdk/testing/testbed</code> contains symbols that are used only in Karma tests.</li>
 <li><code>@angular/cdk/testing/selenium-webdriver</code> (not shown above) contains symbols that are used only in
 Selenium WebDriver tests.</li>
@@ -91,7 +90,7 @@ asynchronous and return <code>Promise</code> objects. Because of this, the Angul
 with your tests.</p>
 <p>The example above retrieves all button harnesses and uses an array index to get the harness for a
 specific button. However, if the number or order of buttons changes, this test will break. You can
-write a less brittle test by instead asking for only a subset of harnesses inside <code>UserProfile</code>.  </p>
+write a less brittle test by instead asking for only a subset of harnesses inside <code>UserProfile</code>.</p>
 <p>You can load harnesses for a sub-section of the DOM within <code>UserProfile</code> with the <code>getChildLoader</code>
 method on <code>HarnessLoader</code>. For example, say that we know <code>UserProfile</code> has a div,
 <code>&lt;div class=&quot;footer&quot;&gt;</code>, and we want the button inside that specific <code>&lt;div&gt;</code>. We can accomplish this
@@ -112,7 +111,7 @@ as <code>[mat-button]</code>)</li>
 </ul>
 <p>In addition to these standard options, <code>MatButtonHarness</code> also supports</p>
 <ul>
-<li><code>text</code> - String text or regular expressions that matches the text content of the button </li>
+<li><code>text</code> - String text or regular expressions that matches the text content of the button</li>
 </ul>
 <p>Using this method we could locate buttons as follows in our test:</p>
 <pre><code class="language-ts"><span class="hljs-title function_">it</span>(<span class="hljs-string">&#x27;should work&#x27;</span>, <span class="hljs-title function_">async</span> () =&gt; {
@@ -156,17 +155,17 @@ which will cause the test to wait for <code>setTimeout</code>, <code>Promise</co
           Comparison with and without component harnesses
         </h2>
       <p>Consider an <code>&lt;issue-report-selector&gt;</code> component that you want to test. It allows a user to
-choose an issue type and display the necessary form create report for that issue type. You need a 
+choose an issue type and display the necessary form create report for that issue type. You need a
 test to verify that when the user chooses an issue type the proper report displays. First consider
 what the test might look like without using component harnesses:</p>
 <pre><code class="language-ts"><span class="hljs-title function_">describe</span>(<span class="hljs-string">&#x27;issue-report-selector&#x27;</span>, <span class="hljs-function">() =&gt;</span> {
   <span class="hljs-keyword">let</span> <span class="hljs-attr">fixture</span>: <span class="hljs-title class_">ComponentFixture</span>&lt;<span class="hljs-title class_">IssueReportSelector</span>&gt;;
 
   <span class="hljs-title function_">beforeEach</span>(<span class="hljs-title function_">async</span> () =&gt; {
-    <span class="hljs-keyword">await</span> <span class="hljs-title class_">TestBed</span>.<span class="hljs-title function_">configureTestingModule</span>({
+    <span class="hljs-title class_">TestBed</span>.<span class="hljs-title function_">configureTestingModule</span>({
       <span class="hljs-attr">imports</span>: [<span class="hljs-title class_">IssueReportSelectorModule</span>],
       <span class="hljs-attr">declarations</span>: [<span class="hljs-title class_">IssueReportSelector</span>],
-    }).<span class="hljs-title function_">compileComponents</span>();
+    });
 
     fixture = <span class="hljs-title class_">TestBed</span>.<span class="hljs-title function_">createComponent</span>(<span class="hljs-title class_">IssueReportSelector</span>);
     fixture.<span class="hljs-title function_">detectChanges</span>();
@@ -192,10 +191,10 @@ what the test might look like without using component harnesses:</p>
   <span class="hljs-keyword">let</span> <span class="hljs-attr">loader</span>: <span class="hljs-title class_">HarnessLoader</span>;
 
   <span class="hljs-title function_">beforeEach</span>(<span class="hljs-title function_">async</span> () =&gt; {
-    <span class="hljs-keyword">await</span> <span class="hljs-title class_">TestBed</span>.<span class="hljs-title function_">configureTestingModule</span>({
+    <span class="hljs-title class_">TestBed</span>.<span class="hljs-title function_">configureTestingModule</span>({
       <span class="hljs-attr">imports</span>: [<span class="hljs-title class_">IssueReportSelectorModule</span>],
       <span class="hljs-attr">declarations</span>: [<span class="hljs-title class_">IssueReportSelector</span>],
-    }).<span class="hljs-title function_">compileComponents</span>();
+    });
 
     fixture = <span class="hljs-title class_">TestBed</span>.<span class="hljs-title function_">createComponent</span>(<span class="hljs-title class_">IssueReportSelector</span>);
     fixture.<span class="hljs-title function_">detectChanges</span>();
@@ -236,12 +235,12 @@ concise.</p>
 <code>&lt;mat-select&gt;</code>, such as <code>.mat-select-trigger</code>. If the internal DOM of <code>&lt;mat-select&gt;</code> changes, these
 queries may stop working. While the Angular team tries to minimize this type of change, some
 features and bug fixes ultimately require restructuring the DOM. By using the Angular Material
-harnesses, you avoid depending on internal DOM structure directly. </p>
+harnesses, you avoid depending on internal DOM structure directly.</p>
 <p>In addition to DOM structure, component asynchronicity often offers a challenge when updating
 components. If a component changes between synchronous and asynchronous, downstream unit tests may
 break due to expectations around timing. Tests then require the addition or removal of some
 arcane combination of <code>whenStable</code>, <code>flushMicroTasks</code>, <code>tick</code>, or <code>detectChanges</code>. Component
-harnesses, however, avoid this problem by normalizing the asynchronicity of all component behaviors 
+harnesses, however, avoid this problem by normalizing the asynchronicity of all component behaviors
 with all asynchronous APIs. When a test uses these harnesses, changes to asynchronicity become
 far more manageable.</p>
 <p>Both DOM structure and asynchronicity are <em>implementation details</em> of Angular Material&#39;s components.
