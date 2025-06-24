@@ -63,9 +63,7 @@ just a starting point for us to learn.)</p>
       <span class="hljs-string">&#x27;subscriber&#x27;</span>: <span class="hljs-string">&#x27;&#x27;</span>,
     });
   }
-}
-</code></pre>
-
+}</code></pre>
         <h2 id="providing-our-component-as-a-matformfieldcontrol" class="docs-header-link">
           <span header-link="providing-our-component-as-a-matformfieldcontrol"></span>
           Providing our component as a MatFormFieldControl
@@ -82,9 +80,7 @@ a provider to our component so that the form field will be able to inject it as 
 })
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">MyTelInput</span> <span class="hljs-keyword">implements</span> <span class="hljs-title class_">MatFormFieldControl</span>&lt;<span class="hljs-title class_">MyTel</span>&gt; {
   ...
-}
-</code></pre>
-<p>This sets up our component, so it can work with <code>&lt;mat-form-field&gt;</code>, but now we need to implement the
+}</code></pre><p>This sets up our component, so it can work with <code>&lt;mat-form-field&gt;</code>, but now we need to implement the
 various methods and properties declared by the interface we just implemented. To learn more about
 the <code>MatFormFieldControl</code> interface, see the
 <a href="https://material.angular.dev/components/form-field/api">form field API documentation</a>.</p>
@@ -121,9 +117,7 @@ emit. We should also make sure to complete <code>stateChanges</code> when our co
 
 <span class="hljs-title function_">ngOnDestroy</span>(<span class="hljs-params"></span>) {
   <span class="hljs-variable language_">this</span>.<span class="hljs-property">stateChanges</span>.<span class="hljs-title function_">complete</span>();
-}
-</code></pre>
-
+}</code></pre>
         <h4 id="id" class="docs-header-link">
           <span header-link="id"></span>
           <code>id</code>
@@ -133,9 +127,7 @@ emit. We should also make sure to complete <code>stateChanges</code> when our co
 element and just generate a unique ID for it.</p>
 <pre><code class="language-ts"><span class="hljs-keyword">static</span> nextId = <span class="hljs-number">0</span>;
 
-<span class="hljs-meta">@HostBinding</span>() id = <span class="hljs-string">`example-tel-input-<span class="hljs-subst">${MyTelInput.nextId++}</span>`</span>;
-</code></pre>
-
+<span class="hljs-meta">@HostBinding</span>() id = <span class="hljs-string">`example-tel-input-<span class="hljs-subst">${MyTelInput.nextId++}</span>`</span>;</code></pre>
         <h4 id="placeholder" class="docs-header-link">
           <span header-link="placeholder"></span>
           <code>placeholder</code>
@@ -153,9 +145,7 @@ placeholder changes.</p>
   <span class="hljs-variable language_">this</span>.<span class="hljs-property">_placeholder</span> = plh;
   <span class="hljs-variable language_">this</span>.<span class="hljs-property">stateChanges</span>.<span class="hljs-title function_">next</span>();
 }
-<span class="hljs-keyword">private</span> <span class="hljs-attr">_placeholder</span>: <span class="hljs-built_in">string</span>;
-</code></pre>
-
+<span class="hljs-keyword">private</span> <span class="hljs-attr">_placeholder</span>: <span class="hljs-built_in">string</span>;</code></pre>
         <h4 id="ngcontrol" class="docs-header-link">
           <span header-link="ngcontrol"></span>
           <code>ngControl</code>
@@ -163,9 +153,7 @@ placeholder changes.</p>
       <p>This property allows the form field control to specify the <code>@angular/forms</code> control that is bound
 to this component. Since we haven&#39;t set up our component to act as a <code>ControlValueAccessor</code>, we&#39;ll
 just set this to <code>null</code> in our component.</p>
-<pre><code class="language-ts"><span class="hljs-attr">ngControl</span>: <span class="hljs-title class_">NgControl</span> = <span class="hljs-literal">null</span>;
-</code></pre>
-<p>It is likely you will want to implement <code>ControlValueAccessor</code> so that your component can work with
+<pre><code class="language-ts"><span class="hljs-attr">ngControl</span>: <span class="hljs-title class_">NgControl</span> = <span class="hljs-literal">null</span>;</code></pre><p>It is likely you will want to implement <code>ControlValueAccessor</code> so that your component can work with
 <code>formControl</code> and <code>ngModel</code>. If you do implement <code>ControlValueAccessor</code> you will need to get a
 reference to the <code>NgControl</code> associated with your control and make it publicly available.</p>
 <p>The easy way is to add it as a public property to your constructor and let dependency injection
@@ -174,9 +162,7 @@ handle it:</p>
   ...,
   <span class="hljs-meta">@Optional</span>() <span class="hljs-meta">@Self</span>() <span class="hljs-keyword">public</span> <span class="hljs-attr">ngControl</span>: <span class="hljs-title class_">NgControl</span>,
   ...,
-</span>) { }
-</code></pre>
-<p>Note that if your component implements <code>ControlValueAccessor</code>, it may already be set up to provide
+</span>) { }</code></pre><p>Note that if your component implements <code>ControlValueAccessor</code>, it may already be set up to provide
 <code>NG_VALUE_ACCESSOR</code> (in the <code>providers</code> part of the component&#39;s decorator, or possibly in a module
 declaration). If so, you may get a <em>cannot instantiate cyclic dependency</em> error.</p>
 <p>To resolve this, remove the <code>NG_VALUE_ACCESSOR</code> provider and instead set the value accessor directly:</p>
@@ -206,9 +192,7 @@ declaration). If so, you may get a <em>cannot instantiate cyclic dependency</em>
       <span class="hljs-variable language_">this</span>.<span class="hljs-property">ngControl</span>.<span class="hljs-property">valueAccessor</span> = <span class="hljs-variable language_">this</span>;
     }
   }
-}
-</code></pre>
-<p>For additional information about <code>ControlValueAccessor</code> see the <a href="https://angular.dev/api/forms/ControlValueAccessor">API docs</a>.</p>
+}</code></pre><p>For additional information about <code>ControlValueAccessor</code> see the <a href="https://angular.dev/api/forms/ControlValueAccessor">API docs</a>.</p>
 
         <h4 id="focused" class="docs-header-link">
           <span header-link="focused"></span>
@@ -238,9 +222,7 @@ internal touched state of our component, which we&#39;ll use to determine the er
     <span class="hljs-variable language_">this</span>.<span class="hljs-title function_">onTouched</span>();
     <span class="hljs-variable language_">this</span>.<span class="hljs-property">stateChanges</span>.<span class="hljs-title function_">next</span>();
   }
-}
-</code></pre>
-
+}</code></pre>
         <h4 id="empty" class="docs-header-link">
           <span header-link="empty"></span>
           <code>empty</code>
@@ -250,9 +232,7 @@ empty if all the parts are empty.</p>
 <pre><code class="language-ts"><span class="hljs-keyword">get</span> <span class="hljs-title function_">empty</span>() {
   <span class="hljs-keyword">let</span> n = <span class="hljs-variable language_">this</span>.<span class="hljs-property">parts</span>.<span class="hljs-property">value</span>;
   <span class="hljs-keyword">return</span> !n.<span class="hljs-property">area</span> &amp;&amp; !n.<span class="hljs-property">exchange</span> &amp;&amp; !n.<span class="hljs-property">subscriber</span>;
-}
-</code></pre>
-
+}</code></pre>
         <h4 id="shouldlabelfloat" class="docs-header-link">
           <span header-link="shouldlabelfloat"></span>
           <code>shouldLabelFloat</code>
@@ -264,17 +244,13 @@ the <code>–</code> characters when it&#39;s not floating.</p>
 <pre><code class="language-ts"><span class="hljs-meta">@HostBinding</span>(<span class="hljs-string">&#x27;class.floating&#x27;</span>)
 <span class="hljs-keyword">get</span> <span class="hljs-title function_">shouldLabelFloat</span>() {
   <span class="hljs-keyword">return</span> <span class="hljs-variable language_">this</span>.<span class="hljs-property">focused</span> || !<span class="hljs-variable language_">this</span>.<span class="hljs-property">empty</span>;
-}
-</code></pre>
-<pre><code class="language-css"><span class="hljs-selector-tag">span</span> {
+}</code></pre><pre><code class="language-css"><span class="hljs-selector-tag">span</span> {
   <span class="hljs-attribute">opacity</span>: <span class="hljs-number">0</span>;
   <span class="hljs-attribute">transition</span>: opacity <span class="hljs-number">200ms</span>;
 }
 <span class="hljs-selector-pseudo">:host</span><span class="hljs-selector-class">.floating</span> <span class="hljs-selector-tag">span</span> {
   <span class="hljs-attribute">opacity</span>: <span class="hljs-number">1</span>;
-}
-</code></pre>
-
+}</code></pre>
         <h4 id="required" class="docs-header-link">
           <span header-link="required"></span>
           <code>required</code>
@@ -290,9 +266,7 @@ change detection if the required state changes.</p>
   <span class="hljs-variable language_">this</span>.<span class="hljs-property">_required</span> = <span class="hljs-title function_">coerceBooleanProperty</span>(req);
   <span class="hljs-variable language_">this</span>.<span class="hljs-property">stateChanges</span>.<span class="hljs-title function_">next</span>();
 }
-<span class="hljs-keyword">private</span> _required = <span class="hljs-literal">false</span>;
-</code></pre>
-
+<span class="hljs-keyword">private</span> _required = <span class="hljs-literal">false</span>;</code></pre>
         <h4 id="disabled" class="docs-header-link">
           <span header-link="disabled"></span>
           <code>disabled</code>
@@ -307,9 +281,7 @@ make up our component.</p>
   <span class="hljs-variable language_">this</span>.<span class="hljs-property">_disabled</span> ? <span class="hljs-variable language_">this</span>.<span class="hljs-property">parts</span>.<span class="hljs-title function_">disable</span>() : <span class="hljs-variable language_">this</span>.<span class="hljs-property">parts</span>.<span class="hljs-title function_">enable</span>();
   <span class="hljs-variable language_">this</span>.<span class="hljs-property">stateChanges</span>.<span class="hljs-title function_">next</span>();
 }
-<span class="hljs-keyword">private</span> _disabled = <span class="hljs-literal">false</span>;
-</code></pre>
-
+<span class="hljs-keyword">private</span> _disabled = <span class="hljs-literal">false</span>;</code></pre>
         <h4 id="errorstate" class="docs-header-link">
           <span header-link="errorstate"></span>
           <code>errorState</code>
@@ -318,9 +290,7 @@ make up our component.</p>
 we can show an error if the input is invalid and our component has been touched.</p>
 <pre><code class="language-ts"><span class="hljs-keyword">get</span> <span class="hljs-title function_">errorState</span>(): <span class="hljs-built_in">boolean</span> {
   <span class="hljs-keyword">return</span> <span class="hljs-variable language_">this</span>.<span class="hljs-property">parts</span>.<span class="hljs-property">invalid</span> &amp;&amp; <span class="hljs-variable language_">this</span>.<span class="hljs-property">touched</span>;
-}
-</code></pre>
-<p>However, there are some error triggers that we can&#39;t subscribe to (e.g. parent form submissions),
+}</code></pre><p>However, there are some error triggers that we can&#39;t subscribe to (e.g. parent form submissions),
 to handle such cases we should re-evaluate <code>errorState</code> on every change detection cycle.</p>
 <pre><code class="language-ts"><span class="hljs-comment">/** Whether the component is in an error state. */</span>
 <span class="hljs-attr">errorState</span>: <span class="hljs-built_in">boolean</span> = <span class="hljs-literal">false</span>;
@@ -349,9 +319,7 @@ to handle such cases we should re-evaluate <code>errorState</code> on every chan
     <span class="hljs-variable language_">this</span>.<span class="hljs-property">errorState</span> = newState;
     <span class="hljs-variable language_">this</span>.<span class="hljs-property">stateChanges</span>.<span class="hljs-title function_">next</span>(); <span class="hljs-comment">// Notify listeners of state changes.</span>
   }
-}
-</code></pre>
-<p>Keep in mind that <code>updateErrorState()</code> must have minimal logic to avoid performance issues.</p>
+}</code></pre><p>Keep in mind that <code>updateErrorState()</code> must have minimal logic to avoid performance issues.</p>
 
         <h4 id="controltype" class="docs-header-link">
           <span header-link="controltype"></span>
@@ -362,9 +330,7 @@ to handle such cases we should re-evaluate <code>errorState</code> on every chan
 special styles to a <code>&lt;mat-form-field&gt;</code> that contains a specific type of control. In this example
 we&#39;ll use <code>example-tel-input</code> as our control type which will result in the form field adding the
 class <code>mat-form-field-type-example-tel-input</code>.</p>
-<pre><code class="language-ts">controlType = <span class="hljs-string">&#x27;example-tel-input&#x27;</span>;
-</code></pre>
-
+<pre><code class="language-ts">controlType = <span class="hljs-string">&#x27;example-tel-input&#x27;</span>;</code></pre>
         <h4 id="setdescribedbyidsids-string" class="docs-header-link">
           <span header-link="setdescribedbyidsids-string"></span>
           <code>setDescribedByIds(ids: string[])</code>
@@ -380,17 +346,13 @@ element ids. Below is an example that shows how this can be achieved.</p>
 control element through the <code>aria-describedby</code> attribute. To ensure that your control does not
 accidentally override existing element ids specified by consumers of your control, create an
 input called <code>userAriaDescribedby</code>  like followed:</p>
-<pre><code class="language-ts"><span class="hljs-meta">@Input</span>(<span class="hljs-string">&#x27;aria-describedby&#x27;</span>) <span class="hljs-attr">userAriaDescribedBy</span>: <span class="hljs-built_in">string</span>;
-</code></pre>
-<p>The form field will then pick up the user specified <code>aria-describedby</code> ids and merge
+<pre><code class="language-ts"><span class="hljs-meta">@Input</span>(<span class="hljs-string">&#x27;aria-describedby&#x27;</span>) <span class="hljs-attr">userAriaDescribedBy</span>: <span class="hljs-built_in">string</span>;</code></pre><p>The form field will then pick up the user specified <code>aria-describedby</code> ids and merge
 them with ids for hints or errors whenever <code>setDescribedByIds</code> is invoked.</p>
 <pre><code class="language-ts"><span class="hljs-title function_">setDescribedByIds</span>(<span class="hljs-params"><span class="hljs-attr">ids</span>: <span class="hljs-built_in">string</span>[]</span>) {
   <span class="hljs-keyword">const</span> controlElement = <span class="hljs-variable language_">this</span>.<span class="hljs-property">_elementRef</span>.<span class="hljs-property">nativeElement</span>
     .<span class="hljs-title function_">querySelector</span>(<span class="hljs-string">&#x27;.example-tel-input-container&#x27;</span>)!;
   controlElement.<span class="hljs-title function_">setAttribute</span>(<span class="hljs-string">&#x27;aria-describedby&#x27;</span>, ids.<span class="hljs-title function_">join</span>(<span class="hljs-string">&#x27; &#x27;</span>));
-}
-</code></pre>
-
+}</code></pre>
         <h4 id="oncontainerclickevent-mouseevent" class="docs-header-link">
           <span header-link="oncontainerclickevent-mouseevent"></span>
           <code>onContainerClick(event: MouseEvent)</code>
@@ -403,9 +365,7 @@ click. In our case we&#39;ll just focus the first <code>&lt;input&gt;</code> if 
   <span class="hljs-keyword">if</span> ((event.<span class="hljs-property">target</span> <span class="hljs-keyword">as</span> <span class="hljs-title class_">Element</span>).<span class="hljs-property">tagName</span>.<span class="hljs-title function_">toLowerCase</span>() != <span class="hljs-string">&#x27;input&#x27;</span>) {
     <span class="hljs-variable language_">this</span>.<span class="hljs-property">_elementRef</span>.<span class="hljs-property">nativeElement</span>.<span class="hljs-title function_">querySelector</span>(<span class="hljs-string">&#x27;input&#x27;</span>).<span class="hljs-title function_">focus</span>();
   }
-}
-</code></pre>
-
+}</code></pre>
         <h3 id="improving-accessibility" class="docs-header-link">
           <span header-link="improving-accessibility"></span>
           Improving accessibility
@@ -426,16 +386,12 @@ to the label element id provided by the parent <code>&lt;mat-form-field&gt;</cod
   ...
 
   <span class="hljs-title function_">constructor</span>(<span class="hljs-params">...
-              <span class="hljs-meta">@Optional</span>() <span class="hljs-keyword">public</span> <span class="hljs-attr">parentFormField</span>: <span class="hljs-title class_">MatFormField</span></span>) {
-</code></pre>
-<pre><code class="language-html">@Component({
+              <span class="hljs-meta">@Optional</span>() <span class="hljs-keyword">public</span> <span class="hljs-attr">parentFormField</span>: <span class="hljs-title class_">MatFormField</span></span>) {</code></pre><pre><code class="language-html">@Component({
   selector: &#x27;example-tel-input&#x27;,
   template: `
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;group&quot;</span> [<span class="hljs-attr">formGroup</span>]=<span class="hljs-string">&quot;parts&quot;</span>
          [<span class="hljs-attr">attr.aria-describedby</span>]=<span class="hljs-string">&quot;describedBy&quot;</span>
-         [<span class="hljs-attr">attr.aria-labelledby</span>]=<span class="hljs-string">&quot;parentFormField?.getLabelId()&quot;</span>&gt;</span>
-</code></pre>
-
+         [<span class="hljs-attr">attr.aria-labelledby</span>]=<span class="hljs-string">&quot;parentFormField?.getLabelId()&quot;</span>&gt;</span></code></pre>
         <h3 id="trying-it-out" class="docs-header-link">
           <span header-link="trying-it-out"></span>
           Trying it out
@@ -444,15 +400,11 @@ to the label element id provided by the parent <code>&lt;mat-form-field&gt;</cod
 do is place it inside a <code>&lt;mat-form-field&gt;</code></p>
 <pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">mat-form-field</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">example-tel-input</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">example-tel-input</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">mat-form-field</span>&gt;</span>
-</code></pre>
-<p>We also get all the features that come with <code>&lt;mat-form-field&gt;</code> such as floating placeholder,
+<span class="hljs-tag">&lt;/<span class="hljs-name">mat-form-field</span>&gt;</span></code></pre><p>We also get all the features that come with <code>&lt;mat-form-field&gt;</code> such as floating placeholder,
 prefix, suffix, hints, and errors (if we&#39;ve given the form field an <code>NgControl</code> and correctly report
 the error state).</p>
 <pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">mat-form-field</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">example-tel-input</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">&quot;Phone number&quot;</span> <span class="hljs-attr">required</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">example-tel-input</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">mat-icon</span> <span class="hljs-attr">matPrefix</span>&gt;</span>phone<span class="hljs-tag">&lt;/<span class="hljs-name">mat-icon</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">mat-hint</span>&gt;</span>Include area code<span class="hljs-tag">&lt;/<span class="hljs-name">mat-hint</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">mat-form-field</span>&gt;</span>
-</code></pre>
-</div>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mat-form-field</span>&gt;</span></code></pre></div>

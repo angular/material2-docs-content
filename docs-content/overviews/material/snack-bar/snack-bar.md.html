@@ -14,9 +14,7 @@
 <span class="hljs-keyword">let</span> snackBarRef = snackBar.<span class="hljs-title function_">open</span>(<span class="hljs-string">&#x27;Message archived&#x27;</span>, <span class="hljs-string">&#x27;Undo&#x27;</span>);
 
 <span class="hljs-comment">// Load the given component into the snackbar.</span>
-<span class="hljs-keyword">let</span> snackBarRef = snackBar.<span class="hljs-title function_">openFromComponent</span>(<span class="hljs-title class_">MessageArchivedComponent</span>);
-</code></pre>
-<p>In either case, a <code>MatSnackBarRef</code> is returned. This can be used to dismiss the snackbar or to
+<span class="hljs-keyword">let</span> snackBarRef = snackBar.<span class="hljs-title function_">openFromComponent</span>(<span class="hljs-title class_">MessageArchivedComponent</span>);</code></pre><p>In either case, a <code>MatSnackBarRef</code> is returned. This can be used to dismiss the snackbar or to
 receive notification of when the snackbar is dismissed. For simple messages with an action, the
 <code>MatSnackBarRef</code> exposes an observable for when the action is triggered.
 If you want to close a custom snackbar that was opened via <code>openFromComponent</code>, from within the
@@ -30,9 +28,7 @@ snackBarRef.<span class="hljs-title function_">onAction</span>().<span class="hl
   <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&#x27;The snackbar action was triggered!&#x27;</span>);
 });
 
-snackBarRef.<span class="hljs-title function_">dismiss</span>();
-</code></pre>
-
+snackBarRef.<span class="hljs-title function_">dismiss</span>();</code></pre>
         <h3 id="dismissal" class="docs-header-link">
           <span header-link="dismissal"></span>
           Dismissal
@@ -44,9 +40,7 @@ message is still showing, the older message will be automatically dismissed.</p>
 <p>A snackbar can also be given a duration via the optional configuration object:</p>
 <pre><code class="language-ts">snackBar.<span class="hljs-title function_">open</span>(<span class="hljs-string">&#x27;Message archived&#x27;</span>, <span class="hljs-string">&#x27;Undo&#x27;</span>, {
   <span class="hljs-attr">duration</span>: <span class="hljs-number">3000</span>
-});
-</code></pre>
-
+});</code></pre>
         <h3 id="sharing-data-with-a-custom-snackbar" class="docs-header-link">
           <span header-link="sharing-data-with-a-custom-snackbar"></span>
           Sharing data with a custom snackbar
@@ -55,9 +49,7 @@ message is still showing, the older message will be automatically dismissed.</p>
 by passing it through the <code>data</code> property.</p>
 <pre><code class="language-ts">snackBar.<span class="hljs-title function_">openFromComponent</span>(<span class="hljs-title class_">MessageArchivedComponent</span>, {
   <span class="hljs-attr">data</span>: <span class="hljs-string">&#x27;some data&#x27;</span>
-});
-</code></pre>
-<p>To access the data in your component, you have to use the <code>MAT_SNACK_BAR_DATA</code> injection token:</p>
+});</code></pre><p>To access the data in your component, you have to use the <code>MAT_SNACK_BAR_DATA</code> injection token:</p>
 <pre><code class="language-ts"><span class="hljs-keyword">import</span> {<span class="hljs-title class_">Component</span>, <span class="hljs-title class_">Inject</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
 <span class="hljs-keyword">import</span> {<span class="hljs-variable constant_">MAT_SNACK_BAR_DATA</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;../snack-bar&#x27;</span>;
 
@@ -67,9 +59,7 @@ by passing it through the <code>data</code> property.</p>
 })
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">MessageArchivedComponent</span> {
   <span class="hljs-title function_">constructor</span>(<span class="hljs-params"><span class="hljs-meta">@Inject</span>(MAT_SNACK_BAR_DATA) <span class="hljs-keyword">public</span> <span class="hljs-attr">data</span>: <span class="hljs-built_in">string</span></span>) { }
-}
-</code></pre>
-
+}</code></pre>
         <h3 id="annotating-custom-snackbar-content" class="docs-header-link">
           <span header-link="annotating-custom-snackbar-content"></span>
           Annotating custom snackbar content
@@ -96,9 +86,7 @@ snackbars  opened via <code>snackBar.open</code>.</p>
   <span class="hljs-attr">providers</span>: [
     {<span class="hljs-attr">provide</span>: <span class="hljs-variable constant_">MAT_SNACK_BAR_DEFAULT_OPTIONS</span>, <span class="hljs-attr">useValue</span>: {<span class="hljs-attr">duration</span>: <span class="hljs-number">2500</span>}}
   ]
-})
-</code></pre>
-
+})</code></pre>
         <h3 id="accessibility" class="docs-header-link">
           <span header-link="accessibility"></span>
           Accessibility

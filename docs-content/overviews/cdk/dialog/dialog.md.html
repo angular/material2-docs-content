@@ -9,14 +9,10 @@ services.</p>
 Angular Material, these styles have been included together with the theme, otherwise if you&#39;re
 using the CDK on its own, you&#39;ll have to include the styles yourself. You can do so by importing
 the prebuilt styles in your global stylesheet:</p>
-<pre><code class="language-scss"><span class="hljs-keyword">@import</span> <span class="hljs-string">&#x27;@angular/cdk/overlay-prebuilt.css&#x27;</span>;
-</code></pre>
-<p>Alternatively, you can include the styles using the <code>cdk.overlay</code> mixin in your Sass file. You can import the mixin as follows:</p>
+<pre><code class="language-scss"><span class="hljs-keyword">@import</span> <span class="hljs-string">&#x27;@angular/cdk/overlay-prebuilt.css&#x27;</span>;</code></pre><p>Alternatively, you can include the styles using the <code>cdk.overlay</code> mixin in your Sass file. You can import the mixin as follows:</p>
 <pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;@angular/cdk&#x27;</span> as cdk;
 
-<span class="hljs-keyword">@include</span> cdk.overlay();
-</code></pre>
-</div><div material-docs-example="cdk-dialog-overview"></div><div class="docs-markdown">
+<span class="hljs-keyword">@include</span> cdk.overlay();</code></pre></div><div material-docs-example="cdk-dialog-overview"></div><div class="docs-markdown">
 
 <p>You can open a dialog by calling the <code>open</code> method either with a component or with a <code>TemplateRef</code>
 representing the dialog content. The method additionally accepts an optional configuration object.
@@ -25,18 +21,14 @@ The <code>open</code> method returns a <code>DialogRef</code> instance:</p>
   <span class="hljs-attr">height</span>: <span class="hljs-string">&#x27;400px&#x27;</span>,
   <span class="hljs-attr">width</span>: <span class="hljs-string">&#x27;600px&#x27;</span>,
   <span class="hljs-attr">panelClass</span>: <span class="hljs-string">&#x27;my-dialog&#x27;</span>,
-});
-</code></pre>
-<p>The <code>DialogRef</code> provides a reference to the opened dialog. You can use the <code>DialogRef</code> to close the
+});</code></pre><p>The <code>DialogRef</code> provides a reference to the opened dialog. You can use the <code>DialogRef</code> to close the
 dialog, subscribe to dialog events, and modify dialog state. All <code>Observable</code> instances on the
 <code>DialogRef</code> complete when the dialog closes.</p>
 <pre><code class="language-ts">dialogRef.<span class="hljs-property">closed</span>.<span class="hljs-title function_">subscribe</span>(<span class="hljs-function"><span class="hljs-params">result</span> =&gt;</span> {
   <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">`Dialog result: <span class="hljs-subst">${result}</span>`</span>); <span class="hljs-comment">// Pizza!</span>
 });
 
-dialogRef.<span class="hljs-title function_">close</span>(<span class="hljs-string">&#x27;Pizza!&#x27;</span>);
-</code></pre>
-<p>Components created via <code>Dialog</code> can <em>inject</em> <code>DialogRef</code> and use it to close the dialog
+dialogRef.<span class="hljs-title function_">close</span>(<span class="hljs-string">&#x27;Pizza!&#x27;</span>);</code></pre><p>Components created via <code>Dialog</code> can <em>inject</em> <code>DialogRef</code> and use it to close the dialog
 in which they are contained. When closing, an optional result value can be provided. This result
 value is forwarded as the result of the <code>closed</code> Observable.</p>
 <pre><code class="language-ts"><span class="hljs-meta">@Component</span>({<span class="hljs-comment">/* ... */</span>})
@@ -46,9 +38,7 @@ value is forwarded as the result of the <code>closed</code> Observable.</p>
   <span class="hljs-title function_">closeDialog</span>(<span class="hljs-params"></span>) {
     <span class="hljs-variable language_">this</span>.<span class="hljs-property">dialogRef</span>.<span class="hljs-title function_">close</span>(<span class="hljs-string">&#x27;Pizza!&#x27;</span>);
   }
-}
-</code></pre>
-
+}</code></pre>
         <h3 id="dialog-styling" class="docs-header-link">
           <span header-link="dialog-styling"></span>
           Dialog styling
@@ -81,9 +71,7 @@ must be global styles.</p>
     }
   `</span>]
 })
-<span class="hljs-keyword">class</span> <span class="hljs-title class_">MyDialog</span> {}
-</code></pre>
-</div><div material-docs-example="cdk-dialog-styling"></div><div class="docs-markdown">
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">MyDialog</span> {}</code></pre></div><div material-docs-example="cdk-dialog-styling"></div><div class="docs-markdown">
 
 
         <h4 id="providing-a-custom-dialog-container" class="docs-header-link">
@@ -108,9 +96,7 @@ to inherit standard behaviors, such as accessible focus management.</p>
     }
   `</span>]
 })
-<span class="hljs-keyword">class</span> <span class="hljs-title class_">MyDialogContainer</span> <span class="hljs-keyword">extends</span> <span class="hljs-title class_ inherited__">CdkDialogContainer</span> {}
-</code></pre>
-
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">MyDialogContainer</span> <span class="hljs-keyword">extends</span> <span class="hljs-title class_ inherited__">CdkDialogContainer</span> {}</code></pre>
         <h3 id="specifying-global-configuration-defaults" class="docs-header-link">
           <span header-link="specifying-global-configuration-defaults"></span>
           Specifying global configuration defaults
@@ -121,9 +107,7 @@ to inherit standard behaviors, such as accessible focus management.</p>
   <span class="hljs-attr">providers</span>: [
     {<span class="hljs-attr">provide</span>: <span class="hljs-variable constant_">DEFAULT_DIALOG_CONFIG</span>, <span class="hljs-attr">useValue</span>: {<span class="hljs-attr">hasBackdrop</span>: <span class="hljs-literal">false</span>}}
   ]
-})
-</code></pre>
-
+})</code></pre>
         <h3 id="sharing-data-with-the-dialog-component" class="docs-header-link">
           <span header-link="sharing-data-with-the-dialog-component"></span>
           Sharing data with the Dialog component.
@@ -131,9 +115,7 @@ to inherit standard behaviors, such as accessible focus management.</p>
       <p>You can use the <code>data</code> option to pass information to the dialog component.</p>
 <pre><code class="language-ts"><span class="hljs-keyword">const</span> dialogRef = dialog.<span class="hljs-title function_">open</span>(<span class="hljs-title class_">YourDialog</span>, {
   <span class="hljs-attr">data</span>: {<span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;frodo&#x27;</span>},
-});
-</code></pre>
-<p>Access the data in your dialog component with the <code>DIALOG_DATA</code> injection token:</p>
+});</code></pre><p>Access the data in your dialog component with the <code>DIALOG_DATA</code> injection token:</p>
 <pre><code class="language-ts"><span class="hljs-keyword">import</span> {<span class="hljs-title class_">Component</span>, <span class="hljs-title class_">Inject</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
 <span class="hljs-keyword">import</span> {<span class="hljs-variable constant_">DIALOG_DATA</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/dialog&#x27;</span>;
 
@@ -143,19 +125,13 @@ to inherit standard behaviors, such as accessible focus management.</p>
 })
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">YourDialog</span> {
   <span class="hljs-title function_">constructor</span>(<span class="hljs-params"><span class="hljs-meta">@Inject</span>(DIALOG_DATA) <span class="hljs-keyword">public</span> <span class="hljs-attr">data</span>: {name: <span class="hljs-built_in">string</span>}</span>) { }
-}
-</code></pre>
-<p>If you&#39;re using a <code>TemplateRef</code> for your dialog content, the data is available in the template:</p>
+}</code></pre><p>If you&#39;re using a <code>TemplateRef</code> for your dialog content, the data is available in the template:</p>
 <pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">ng-template</span> <span class="hljs-attr">let-data</span>&gt;</span>
   Hello, {{data.name}}
-<span class="hljs-tag">&lt;/<span class="hljs-name">ng-template</span>&gt;</span>
-</code></pre>
-<p>If you&#39;re using a <code>TemplateRef</code> and need to access the <code>DialogRef</code>, you can use the following:</p>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ng-template</span>&gt;</span></code></pre><p>If you&#39;re using a <code>TemplateRef</code> and need to access the <code>DialogRef</code>, you can use the following:</p>
 <pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">ng-template</span> <span class="hljs-attr">let-data</span> <span class="hljs-attr">let-dialogRef</span>=<span class="hljs-string">&quot;dialogRef&quot;</span>&gt;</span>
     Hello, {{data.name}}
-<span class="hljs-tag">&lt;/<span class="hljs-name">ng-template</span>&gt;</span>
-</code></pre>
-</div><div material-docs-example="cdk-dialog-data"></div><div class="docs-markdown">
+<span class="hljs-tag">&lt;/<span class="hljs-name">ng-template</span>&gt;</span></code></pre></div><div material-docs-example="cdk-dialog-data"></div><div class="docs-markdown">
 
 
         <h3 id="accessibility" class="docs-header-link">

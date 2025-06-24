@@ -14,23 +14,19 @@
           Disabled appearance
         </h4>
       <p>Although <code>&lt;mat-chip&gt;</code> is not interactive, you can set the <code>disabled</code> Input to give it disabled appearance.</p>
-<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">mat-chip</span> <span class="hljs-attr">disabled</span>&gt;</span>Orange<span class="hljs-tag">&lt;/<span class="hljs-name">mat-chip</span>&gt;</span>
-</code></pre>
-
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">mat-chip</span> <span class="hljs-attr">disabled</span>&gt;</span>Orange<span class="hljs-tag">&lt;/<span class="hljs-name">mat-chip</span>&gt;</span></code></pre>
         <h3 id="selection-chips" class="docs-header-link">
           <span header-link="selection-chips"></span>
           Selection Chips
         </h3>
       <p>Use <code>&lt;mat-chip-listbox&gt;</code> and <code>&lt;mat-chip-option&gt;</code> for selecting one or many items from a list. Start with creating a <code>&lt;mat-chip-listbox&gt;</code> element. If the user may select more than one option, add the <code>multiple</code> attribute. Nest a <code>&lt;mat-chip-option&gt;</code> element inside the <code>&lt;mat-chip-listbox&gt;</code> for each available option.</p>
 
-        <h4 id="disabled-mat-chip-option" class="docs-header-link">
-          <span header-link="disabled-mat-chip-option"></span>
+        <h4 id="disabled-lessmat-chip-optiongreater" class="docs-header-link">
+          <span header-link="disabled-lessmat-chip-optiongreater"></span>
           Disabled <code>&lt;mat-chip-option&gt;</code>
         </h4>
       <p>Use the <code>disabled</code> Input to disable a <code>&lt;mat-chip-option&gt;</code>. This gives the <code>&lt;mat-chip-option&gt;</code> a disabled appearance and prevents the user from interacting with it.</p>
-<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">mat-chip-option</span> <span class="hljs-attr">disabled</span>&gt;</span>Orange<span class="hljs-tag">&lt;/<span class="hljs-name">mat-chip-option</span>&gt;</span>
-</code></pre>
-
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">mat-chip-option</span> <span class="hljs-attr">disabled</span>&gt;</span>Orange<span class="hljs-tag">&lt;/<span class="hljs-name">mat-chip-option</span>&gt;</span></code></pre>
         <h4 id="keyboard-interactions" class="docs-header-link">
           <span header-link="keyboard-interactions"></span>
           Keyboard Interactions
@@ -56,16 +52,14 @@ and <code>ReactiveFormsModule</code>.</p>
 </div><div material-docs-example="chips-reactive-form"></div><div class="docs-markdown">
 
 
-        <h4 id="disabled-mat-chip-row" class="docs-header-link">
-          <span header-link="disabled-mat-chip-row"></span>
+        <h4 id="disabled-lessmat-chip-rowgreater" class="docs-header-link">
+          <span header-link="disabled-lessmat-chip-rowgreater"></span>
           Disabled <code>&lt;mat-chip-row&gt;</code>
         </h4>
       <p>Use the <code>disabled</code> Input to disable a <code>&lt;mat-chip-row&gt;</code>. This gives the <code>&lt;mat-chip-row&gt;</code> a disabled appearance and prevents the user from interacting with it.</p>
-<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">mat-chip-row</span> <span class="hljs-attr">disabled</span>&gt;</span>Orange<span class="hljs-tag">&lt;/<span class="hljs-name">mat-chip-row</span>&gt;</span>
-</code></pre>
-
-        <h4 id="keyboard-interactions-1" class="docs-header-link">
-          <span header-link="keyboard-interactions-1"></span>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">mat-chip-row</span> <span class="hljs-attr">disabled</span>&gt;</span>Orange<span class="hljs-tag">&lt;/<span class="hljs-name">mat-chip-row</span>&gt;</span></code></pre>
+        <h4 id="keyboard-interactions" class="docs-header-link">
+          <span header-link="keyboard-interactions"></span>
           Keyboard Interactions
         </h4>
       <p>Users can move through the chips using the arrow keys and select/deselect them with the space. Chips also gain focus when clicked, ensuring keyboard navigation starts at the appropriate chip.</p>
@@ -106,9 +100,7 @@ and <code>ReactiveFormsModule</code>.</p>
   <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">matChipRemove</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">&quot;Remove orange&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">mat-icon</span>&gt;</span>cancel<span class="hljs-tag">&lt;/<span class="hljs-name">mat-icon</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">mat-chip-option</span>&gt;</span>
-</code></pre>
-<p>See the <a href="#accessibility">accessibility</a> section for best practices on implementing the <code>removed</code> Output and creating accessible icons.</p>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mat-chip-option</span>&gt;</span></code></pre><p>See the <a href="#accessibility">accessibility</a> section for best practices on implementing the <code>removed</code> Output and creating accessible icons.</p>
 
         <h3 id="orientation" class="docs-header-link">
           <span header-link="orientation"></span>
@@ -132,9 +124,7 @@ and <code>ReactiveFormsModule</code>.</p>
       }
     }
   ]
-})
-</code></pre>
-
+})</code></pre>
         <h3 id="interaction-patterns" class="docs-header-link">
           <span header-link="interaction-patterns"></span>
           Interaction Patterns
@@ -150,9 +140,7 @@ and <code>ReactiveFormsModule</code>.</p>
   <span class="hljs-tag">&lt;<span class="hljs-name">mat-chip-option</span>&gt;</span> Small <span class="hljs-tag">&lt;/<span class="hljs-name">mat-chip-option</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">mat-chip-option</span>&gt;</span> Medium <span class="hljs-tag">&lt;/<span class="hljs-name">mat-chip-option</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">mat-chip-option</span>&gt;</span> Large <span class="hljs-tag">&lt;/<span class="hljs-name">mat-chip-option</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">mat-chip-listbox</span>&gt;</span>
-</code></pre>
-
+<span class="hljs-tag">&lt;/<span class="hljs-name">mat-chip-listbox</span>&gt;</span></code></pre>
         <h4 id="text-entry" class="docs-header-link">
           <span header-link="text-entry"></span>
           Text Entry
@@ -175,9 +163,7 @@ and <code>ReactiveFormsModule</code>.</p>
           [<span class="hljs-attr">matChipInputSeparatorKeyCodes</span>]=<span class="hljs-string">&quot;separatorKeysCodes&quot;</span>
           (<span class="hljs-attr">matChipInputTokenEnd</span>)=<span class="hljs-string">&quot;add($event)&quot;</span>
           <span class="hljs-attr">aria-label</span>=<span class="hljs-string">&quot;Add sandwich fillings...&quot;</span> /&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">mat-form-field</span>&gt;</span>
-</code></pre>
-
+<span class="hljs-tag">&lt;/<span class="hljs-name">mat-form-field</span>&gt;</span></code></pre>
         <h4 id="static-content" class="docs-header-link">
           <span header-link="static-content"></span>
           Static Content
@@ -187,16 +173,12 @@ and <code>ReactiveFormsModule</code>.</p>
   <span class="hljs-tag">&lt;<span class="hljs-name">mat-chip</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;listitem&quot;</span>&gt;</span> Sugar <span class="hljs-tag">&lt;/<span class="hljs-name">mat-chip</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">mat-chip</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;listitem&quot;</span>&gt;</span> Spice <span class="hljs-tag">&lt;/<span class="hljs-name">mat-chip</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">mat-chip</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;listitem&quot;</span>&gt;</span> Everything Nice <span class="hljs-tag">&lt;/<span class="hljs-name">mat-chip</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">mat-chip-set</span>&gt;</span>
-</code></pre>
-<p><code>&lt;mat-chip-set&gt;</code> and <code>&lt;mat-chip&gt;</code> : These elements do not implement any specific accessibility pattern. Add the appropriate accessibility depending on the context. Note that Angular Material does not intend <code>&lt;mat-chip&gt;</code>, <code>&lt;mat-basic-chip&gt;</code>, and <code>&lt;mat-chip-set&gt;</code> to be interactive.</p>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mat-chip-set</span>&gt;</span></code></pre><p><code>&lt;mat-chip-set&gt;</code> and <code>&lt;mat-chip&gt;</code> : These elements do not implement any specific accessibility pattern. Add the appropriate accessibility depending on the context. Note that Angular Material does not intend <code>&lt;mat-chip&gt;</code>, <code>&lt;mat-basic-chip&gt;</code>, and <code>&lt;mat-chip-set&gt;</code> to be interactive.</p>
 <pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">mat-chip-set</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">mat-chip</span>&gt;</span> John <span class="hljs-tag">&lt;/<span class="hljs-name">mat-chip</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">mat-chip</span>&gt;</span> Paul <span class="hljs-tag">&lt;/<span class="hljs-name">mat-chip</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">mat-chip</span>&gt;</span> James <span class="hljs-tag">&lt;/<span class="hljs-name">mat-chip</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">mat-chip-set</span>&gt;</span>
-</code></pre>
-
+<span class="hljs-tag">&lt;/<span class="hljs-name">mat-chip-set</span>&gt;</span></code></pre>
         <h3 id="accessibility" class="docs-header-link">
           <span header-link="accessibility"></span>
           Accessibility
