@@ -29,7 +29,7 @@ targets the <code>html</code> selector to ensure the CSS variables are applied a
 entire application. The <code>color-scheme</code> is explicitly set to <code>light dark</code> so that
 the end user&#39;s system preferences are used to determine whether the application
 appears in light or dark mode.</p>
-<pre><code>@use &#39;@angular/material&#39; as mat;
+<pre><code>@use '@angular/material' as mat;
 
 html {
   color-scheme: light dark;
@@ -38,16 +38,12 @@ html {
     typography: Roboto,
     density: 0
   ));
-}
-</code></pre>
-<p>You can use the following styles to apply the theme’s surface background and
+}</code></pre><p>You can use the following styles to apply the theme’s surface background and
 on-surface text colors as a default across your application:</p>
 <pre><code>body {
   background: var(--mat-sys-surface);
   color: var(--mat-sys-on-surface);
-}
-</code></pre>
-<p>The <code>mat.theme</code> mixin will only declare CSS variables for the categories
+}</code></pre><p>The <code>mat.theme</code> mixin will only declare CSS variables for the categories
 included in the input. For example, if <code>typography</code> is not defined, then
 typography CSS variables will not be included in the output.</p>
 
@@ -83,9 +79,9 @@ distinct accent color to some components.</p>
 <p>You can also set the <code>theme-type</code> to determine the color values are defined:</p>
 <ul>
 <li><code>color-scheme</code> - include both light and dark colors using the <code>light-dark</code>
-  CSS color function</li>
-<li>  <code>light</code> - only define the light color values</li>
-<li>  <code>dark</code> - only define the dark color values</li>
+CSS color function</li>
+<li><code>light</code> - only define the light color values</li>
+<li><code>dark</code> - only define the dark color values</li>
 </ul>
 <p>The <code>light-dark</code> CSS color function is
 <a href="https://caniuse.com/?search=light-dark">widely available</a> for all major
@@ -96,7 +92,7 @@ or <code>dark</code>.</p>
 tertiary color. The theme-type is set to <code>light</code> which means that only the light
 color values will be set for the application. The typography is set to Roboto
 with a standard density setting.</p>
-<pre><code>@use &#39;@angular/material&#39; as mat;
+<pre><code>@use '@angular/material' as mat;
 
 html {
   @include mat.theme((
@@ -108,9 +104,7 @@ html {
     typography: Roboto,
     density: 0
   ));
-}
-</code></pre>
-
+}</code></pre>
         <h3 id="typography" class="docs-header-link">
           <span header-link="typography"></span>
           <strong>Typography</strong>
@@ -142,7 +136,7 @@ text.</p>
 and the Open Sans font family to brand text. It specifies that bold weight is
 900, medium weight is 500, and regular weight is 300. The color scheme uses the
 violet color palette with a standard density.</p>
-<pre><code>@use &#39;@angular/material&#39; as mat;
+<pre><code>@use '@angular/material' as mat;
 
 html {
   @include mat.theme((
@@ -156,9 +150,7 @@ html {
     ),
     density: 0,
   ));
-}
-</code></pre>
-
+}</code></pre>
         <h3 id="density" class="docs-header-link">
           <span header-link="density"></span>
           <strong>Density</strong>
@@ -172,7 +164,7 @@ for a component to render itself coherently.</p>
 <p>The following example theme file has a density setting of -2 which causes most
 components to include less whitespace in their layout. The color scheme uses the
 violet color palette and applies Roboto as the font-family.</p>
-<pre><code>@use &#39;@angular/material&#39; as mat;
+<pre><code>@use '@angular/material' as mat;
 
 html {
   @include mat.theme((
@@ -180,9 +172,7 @@ html {
     typography: Roboto,
     density: -2,
   ));
-}
-</code></pre>
-<p>Setting the density below 0 can reduce accessibility and make navigation harder
+}</code></pre><p>Setting the density below 0 can reduce accessibility and make navigation harder
 for users of assistive technology.</p>
 <p>Density customizations do not affect components that appear in task-based or
 pop-up contexts, such as the date picker. The Material Design density guidance
@@ -204,18 +194,18 @@ scheme to communicate an application’s hierarchy, state, and brand.</p>
       <p>Angular Material provides twelve prebuilt color palettes that can be used for
 your application’s theme:</p>
 <ul>
-<li>  <code>$red-palette</code></li>
-<li>  <code>$green-palette</code></li>
-<li>  <code>$blue-palette</code></li>
-<li>  <code>$yellow-palette</code></li>
-<li>  <code>$cyan-palette</code></li>
-<li>  <code>$magenta-palette</code></li>
-<li>  <code>$orange-palette</code></li>
-<li>  <code>$chartreuse-palette</code></li>
-<li>  <code>$spring-green-palette</code></li>
-<li>  <code>$azure-palette</code></li>
-<li>  <code>$violet-palette</code></li>
-<li>  <code>$rose-palette</code></li>
+<li><code>$red-palette</code></li>
+<li><code>$green-palette</code></li>
+<li><code>$blue-palette</code></li>
+<li><code>$yellow-palette</code></li>
+<li><code>$cyan-palette</code></li>
+<li><code>$magenta-palette</code></li>
+<li><code>$orange-palette</code></li>
+<li><code>$chartreuse-palette</code></li>
+<li><code>$spring-green-palette</code></li>
+<li><code>$azure-palette</code></li>
+<li><code>$violet-palette</code></li>
+<li><code>$rose-palette</code></li>
 </ul>
 
         <h3 id="custom-color-palettes" class="docs-header-link">
@@ -227,9 +217,7 @@ your application’s theme:</p>
 builds custom color palettes based on a single color input for the primary
 color, and optionally color inputs to further customize secondary, tertiary, and
 neutral palettes:</p>
-<pre><code>ng generate @angular/material:theme-color
-</code></pre>
-
+<pre><code>ng generate @angular/material:theme-color</code></pre>
         <h2 id="loading-fonts" class="docs-header-link">
           <span header-link="loading-fonts"></span>
           <strong>Loading Fonts</strong>
@@ -237,11 +225,9 @@ neutral palettes:</p>
       <p>You can use Google Fonts as one option to load fonts in your application. For
 example, the following code in an application’s <code>&lt;head&gt;</code> loads the font family
 Roboto with the font weights 700, 500, and 400:</p>
-<pre><code>&lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.googleapis.com&quot;&gt;
-&lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.gstatic.com&quot; crossorigin&gt;
-&lt;link href=&quot;https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&amp;family=Roboto:wght@400;500;700&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;
-</code></pre>
-<p>Learn more about using fonts with
+<pre><code><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"></code></pre><p>Learn more about using fonts with
 <a href="https://developers.google.com/fonts/docs/getting_started">Google Fonts</a>. By
 default, projects created with the Angular CLI are
 <a href="https://angular.dev/reference/configs/workspace-config#fonts-optimization-options">configured</a>
@@ -259,7 +245,7 @@ define a value for <code>color-scheme</code>, then the light colors will always 
 <p>You can define <code>color-scheme: light</code> or <code>color-scheme: dark</code> to explicitly
 define your application’s mode. To set the mode depending on the user’s system
 preferences, use <code>color-scheme: light-dark</code> as shown in the following example:</p>
-<pre><code>@use &#39;@angular/material&#39; as mat;
+<pre><code>@use '@angular/material' as mat;
 
 html {
   color-scheme: light dark;
@@ -268,13 +254,11 @@ html {
     typography: Roboto,
     density: 0
   ));
-}
-</code></pre>
-<p>You can also use the strategy of defining <code>color-scheme</code> under a CSS selector so
+}</code></pre><p>You can also use the strategy of defining <code>color-scheme</code> under a CSS selector so
 that the mode depends on whether that class has been applied. In the following
 example, the application always displays the light mode theme unless the class
 “dark-mode” is added to the HTML body.</p>
-<pre><code>@use &#39;@angular/material&#39; as mat;
+<pre><code>@use '@angular/material' as mat;
 
 html {
   color-scheme: light;
@@ -287,9 +271,7 @@ html {
 
 body.dark-mode {
   color-scheme: dark;
-}
-</code></pre>
-<p>Angular Material does not automatically apply different styles or themes based
+}</code></pre><p>Angular Material does not automatically apply different styles or themes based
 on user preference media queries, such as <code>color-scheme</code>, <code>prefers-color-scheme</code>
 or <code>prefers-contrast</code>. Instead, Angular Material gives you the flexibility to
 define your own queries to apply the styles that make sense for your users. This
@@ -311,7 +293,7 @@ color schemes in your application.</p>
 different contexts. In this case, a cyan-based palette is applied to a container
 of information about deleting data, causing buttons and other components to have
 a unique and attention-grabbing style applied:</p>
-<pre><code>@use &#39;@angular/material&#39; as mat;
+<pre><code>@use '@angular/material' as mat;
 
 html {
   @include mat.theme((
@@ -325,9 +307,7 @@ html {
   @include mat.theme((
     color: mat.$cyan-palette,
   ));
-}
-</code></pre>
-
+}</code></pre>
         <h2 id="using-theme-styles" class="docs-header-link">
           <span header-link="using-theme-styles"></span>
           <strong>Using Theme Styles</strong>
@@ -347,9 +327,7 @@ information to the user:</p>
   color: var(--mat-sys-on-primary-container);
   border: 1px solid var(--mat-sys-outline-variant);
   font: var(--mat-sys-body-large);
-}
-</code></pre>
-<p>See the <a href="https://material.angular.dev/guide/system-variables">Theme Variables</a> guide for a
+}</code></pre><p>See the <a href="https://material.angular.dev/guide/system-variables">Theme Variables</a> guide for a
 comprehensive list of these variables, examples of where they are used, and how
 components can depend on them.</p>
 
@@ -374,7 +352,7 @@ renamed in future versions.</p>
 the application.</p>
 <p>The following example applies a violet color palette for the application, but
 alters the <code>primary-container</code> token to a specific shade of blue.</p>
-<pre><code>@use &#39;@angular/material&#39; as mat;
+<pre><code>@use '@angular/material' as mat;
 
 html {
   color-scheme: light dark;
@@ -389,11 +367,9 @@ html {
       primary-container: #84ffff
     ));
   }
-}
-</code></pre>
-<p>Alternatively, an optional override map can be provided in the <code>mat.theme</code> mixin
+}</code></pre><p>Alternatively, an optional override map can be provided in the <code>mat.theme</code> mixin
 to replace values applied by the mixin:</p>
-<pre><code>@use &#39;@angular/material&#39; as mat;
+<pre><code>@use '@angular/material' as mat;
 
 html {
   color-scheme: light dark;
@@ -404,9 +380,7 @@ html {
   ), $overrides: (
     primary-container: orange,
   ));
-}
-</code></pre>
-
+}</code></pre>
         <h3 id="component-tokens" class="docs-header-link">
           <span header-link="component-tokens"></span>
           <strong>Component Tokens</strong>
@@ -425,9 +399,7 @@ title font size.</p>
     elevated-container-shape: 32px,
     title-text-size: 2rem,
   ));
-}
-</code></pre>
-
+}</code></pre>
         <h3 id="direct-style-overrides" class="docs-header-link">
           <span header-link="direct-style-overrides"></span>
           <strong>Direct Style Overrides</strong>

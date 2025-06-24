@@ -22,9 +22,7 @@ the table is implemented, see the
 input. The table will take the array and render a row for each object in the data array.</p>
 <pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">table</span> <span class="hljs-attr">mat-table</span> [<span class="hljs-attr">dataSource</span>]=<span class="hljs-string">&quot;myDataArray&quot;</span>&gt;</span>
   ...
-<span class="hljs-tag">&lt;/<span class="hljs-name">table</span>&gt;</span>
-</code></pre>
-<p>Since the table optimizes for performance, it will not automatically check for changes to the data
+<span class="hljs-tag">&lt;/<span class="hljs-name">table</span>&gt;</span></code></pre><p>Since the table optimizes for performance, it will not automatically check for changes to the data
 array. Instead, when objects are added, removed, or moved on the data array, you can trigger an
 update to the table&#39;s rendered rows by calling its <code>renderRows()</code> method.</p>
 <p>While an array is the <em>simplest</em> way to bind data into the data source, it is also
@@ -43,16 +41,12 @@ cells.</p>
 <pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">ng-container</span> <span class="hljs-attr">matColumnDef</span>=<span class="hljs-string">&quot;score&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">mat-header-cell</span> *<span class="hljs-attr">matHeaderCellDef</span>&gt;</span> Score <span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">mat-cell</span> *<span class="hljs-attr">matCellDef</span>=<span class="hljs-string">&quot;let user&quot;</span>&gt;</span> {{user.score}} <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">ng-container</span>&gt;</span>
-</code></pre>
-<p>Note that the cell templates are not restricted to only showing simple string values, but are
+<span class="hljs-tag">&lt;/<span class="hljs-name">ng-container</span>&gt;</span></code></pre><p>Note that the cell templates are not restricted to only showing simple string values, but are
 flexible and allow you to provide any template.</p>
 <p>If your column is only responsible for rendering a single string value for the header and cells,
 you can instead define your column using the <code>mat-text-column</code>. The following column definition is
 equivalent to the one above.</p>
-<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">mat-text-column</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;score&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">mat-text-column</span>&gt;</span>
-</code></pre>
-<p>Check out the API docs and examples of the <code>mat-text-column</code> to see how you can customize the header
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">mat-text-column</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;score&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">mat-text-column</span>&gt;</span></code></pre><p>Check out the API docs and examples of the <code>mat-text-column</code> to see how you can customize the header
 text, text alignment, and cell data accessor.  Note that this is not compatible with the flex-layout
 table. Also, a data accessor should be provided if your data may have its properties minified
 since the string name will no longer match after minification.</p>
@@ -65,14 +59,10 @@ since the string name will no longer match after minification.</p>
 rendered in the header and data rows.</p>
 <p>To start, create a variable in your component that contains the list of the columns you want to
 render.</p>
-<pre><code class="language-ts">columnsToDisplay = [<span class="hljs-string">&#x27;userName&#x27;</span>, <span class="hljs-string">&#x27;age&#x27;</span>];
-</code></pre>
-<p>Then add <code>mat-header-row</code> and <code>mat-row</code> to the content of your <code>mat-table</code> and provide your
+<pre><code class="language-ts">columnsToDisplay = [<span class="hljs-string">&#x27;userName&#x27;</span>, <span class="hljs-string">&#x27;age&#x27;</span>];</code></pre><p>Then add <code>mat-header-row</code> and <code>mat-row</code> to the content of your <code>mat-table</code> and provide your
 column list as inputs.</p>
 <pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">mat-header-row</span> *<span class="hljs-attr">matHeaderRowDef</span>=<span class="hljs-string">&quot;columnsToDisplay&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">mat-row</span> *<span class="hljs-attr">matRowDef</span>=<span class="hljs-string">&quot;let myRowData; columns: columnsToDisplay&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
-</code></pre>
-<p>Note that this list of columns provided to the rows can be in any order, not necessarily the order in
+<span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">mat-row</span> *<span class="hljs-attr">matRowDef</span>=<span class="hljs-string">&quot;let myRowData; columns: columnsToDisplay&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span></code></pre><p>Note that this list of columns provided to the rows can be in any order, not necessarily the order in
 which you wrote the column definitions. Also, you do not necessarily have to include every column
 that was defined in your template.</p>
 <p>This means that by changing your column list provided to the rows, you can easily re-order and
@@ -176,9 +166,7 @@ and its interface is not tied to any one specific implementation.</p>
 <span class="hljs-tag">&lt;<span class="hljs-name">ng-container</span> <span class="hljs-attr">matColumnDef</span>=<span class="hljs-string">&quot;position&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">mat-header-cell</span> *<span class="hljs-attr">matHeaderCellDef</span> <span class="hljs-attr">mat-sort-header</span>&gt;</span> Name <span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">mat-cell</span> *<span class="hljs-attr">matCellDef</span>=<span class="hljs-string">&quot;let element&quot;</span>&gt;</span> {{element.position}} <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">ng-container</span>&gt;</span>
-</code></pre>
-<p>If you are using the <code>MatTableDataSource</code> for your table&#39;s data source, provide the <code>MatSort</code>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ng-container</span>&gt;</span></code></pre><p>If you are using the <code>MatTableDataSource</code> for your table&#39;s data source, provide the <code>MatSort</code>
 directive to the data source and it will automatically listen for sorting changes and change the
 order of data rendered by the table.</p>
 <p>By default, the <code>MatTableDataSource</code> sorts with the assumption that the sorted column&#39;s name
@@ -238,9 +226,7 @@ it is not the only way to incorporate row selection in your table.</p>
 selection state.</p>
 <pre><code class="language-js"><span class="hljs-keyword">const</span> initialSelection = [];
 <span class="hljs-keyword">const</span> allowMultiSelect = <span class="hljs-literal">true</span>;
-<span class="hljs-built_in">this</span>.selection = <span class="hljs-keyword">new</span> SelectionModel&lt;MyDataType&gt;(allowMultiSelect, initialSelection);
-</code></pre>
-
+<span class="hljs-built_in">this</span>.selection = <span class="hljs-keyword">new</span> SelectionModel&lt;MyDataType&gt;(allowMultiSelect, initialSelection);</code></pre>
         <h5 id="2-define-a-selection-column" class="docs-header-link">
           <span header-link="2-define-a-selection-column"></span>
           2. Define a selection column
@@ -261,9 +247,7 @@ header and data row.</p>
                   [<span class="hljs-attr">checked</span>]=<span class="hljs-string">&quot;selection.isSelected(row)&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">mat-checkbox</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">ng-container</span>&gt;</span>
-</code></pre>
-
+<span class="hljs-tag">&lt;/<span class="hljs-name">ng-container</span>&gt;</span></code></pre>
         <h5 id="3-add-event-handling-logic" class="docs-header-link">
           <span header-link="3-add-event-handling-logic"></span>
           3. Add event handling logic
@@ -282,9 +266,7 @@ if all rows are selected.</p>
   <span class="hljs-built_in">this</span>.isAllSelected() ?
       <span class="hljs-built_in">this</span>.selection.clear() :
       <span class="hljs-built_in">this</span>.dataSource.data.forEach(<span class="hljs-function"><span class="hljs-params">row</span> =&gt;</span> <span class="hljs-built_in">this</span>.selection.select(row));
-}
-</code></pre>
-
+}</code></pre>
         <h5 id="4-include-overflow-styling" class="docs-header-link">
           <span header-link="4-include-overflow-styling"></span>
           4. Include overflow styling
@@ -293,9 +275,7 @@ if all rows are selected.</p>
 the ripple effect to extend beyond the cell.</p>
 <pre><code class="language-css"><span class="hljs-selector-class">.mat-column-select</span> {
   <span class="hljs-attribute">overflow</span>: initial;
-}
-</code></pre>
-<!--- example(table-selection) -->
+}</code></pre><!--- example(table-selection) -->
 
 
         <h4 id="footer-row" class="docs-header-link">
@@ -315,9 +295,7 @@ data rows.</p>
 
 <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">mat-header-row</span> *<span class="hljs-attr">matHeaderRowDef</span>=<span class="hljs-string">&quot;columnsToDisplay&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">mat-row</span> *<span class="hljs-attr">matRowDef</span>=<span class="hljs-string">&quot;let myRowData; columns: columnsToDisplay&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">mat-footer-row</span> *<span class="hljs-attr">matFooterRowDef</span>=<span class="hljs-string">&quot;columnsToDisplay&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
-</code></pre>
-<!--- example(table-footer-row) -->
+<span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">mat-footer-row</span> *<span class="hljs-attr">matFooterRowDef</span>=<span class="hljs-string">&quot;columnsToDisplay&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span></code></pre><!--- example(table-footer-row) -->
 
 
         <h4 id="sticky-rows-and-columns" class="docs-header-link">
@@ -400,9 +378,7 @@ selectors. For example, <code>&lt;table mat-table&gt;</code> becomes <code>&lt;m
   <span class="hljs-comment">&lt;!-- Header and Row Declarations --&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">mat-header-row</span> *<span class="hljs-attr">matHeaderRowDef</span>=<span class="hljs-string">&quot;[&#x27;username&#x27;, &#x27;age&#x27;, &#x27;title&#x27;]&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">mat-header-row</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">mat-row</span> *<span class="hljs-attr">matRowDef</span>=<span class="hljs-string">&quot;let row; columns: [&#x27;username&#x27;, &#x27;age&#x27;, &#x27;title&#x27;]&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">mat-row</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">mat-table</span>&gt;</span>
-</code></pre>
-<p>Note that this approach means you cannot include certain native-table features such colspan/rowspan
+<span class="hljs-tag">&lt;/<span class="hljs-name">mat-table</span>&gt;</span></code></pre><p>Note that this approach means you cannot include certain native-table features such colspan/rowspan
 or have columns that resize themselves based on their content.</p>
 
         <h3 id="tables-with-matripple" class="docs-header-link">

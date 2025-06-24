@@ -37,21 +37,15 @@ respectively:</p>
 <pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">mat-date-range-input</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">matStartDate</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">&quot;Start date&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">matEndDate</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">&quot;End date&quot;</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">mat-date-range-input</span>&gt;</span>
-</code></pre>
-<p>The <code>mat-date-range-picker</code> component acts as the pop-up panel for selecting dates. This works in
+<span class="hljs-tag">&lt;/<span class="hljs-name">mat-date-range-input</span>&gt;</span></code></pre><p>The <code>mat-date-range-picker</code> component acts as the pop-up panel for selecting dates. This works in
 the same way as <code>mat-datepicker</code>, but allows the user to select multiple times:</p>
-<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">mat-date-range-picker</span> #<span class="hljs-attr">picker</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">mat-date-range-picker</span>&gt;</span>
-</code></pre>
-<p>Connect the range picker and range input using the <code>rangePicker</code> property:</p>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">mat-date-range-picker</span> #<span class="hljs-attr">picker</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">mat-date-range-picker</span>&gt;</span></code></pre><p>Connect the range picker and range input using the <code>rangePicker</code> property:</p>
 <pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">mat-date-range-input</span> [<span class="hljs-attr">rangePicker</span>]=<span class="hljs-string">&quot;picker&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">matStartDate</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">&quot;Start date&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">matEndDate</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">&quot;End date&quot;</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">mat-date-range-input</span>&gt;</span>
 
-<span class="hljs-tag">&lt;<span class="hljs-name">mat-date-range-picker</span> #<span class="hljs-attr">picker</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">mat-date-range-picker</span>&gt;</span>
-</code></pre>
-</div><div material-docs-example="date-range-picker-overview"></div><div class="docs-markdown">
+<span class="hljs-tag">&lt;<span class="hljs-name">mat-date-range-picker</span> #<span class="hljs-attr">picker</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">mat-date-range-picker</span>&gt;</span></code></pre></div><div material-docs-example="date-range-picker-overview"></div><div class="docs-markdown">
 
 
         <h3 id="date-range-input-forms-integration" class="docs-header-link">
@@ -224,9 +218,7 @@ selected range. The comparison and overlap colors can be customized using the
 
 <pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;@angular/material&#x27;</span> as mat;
 
-<span class="hljs-keyword">@include</span> mat.datepicker-date-range-colors(hotpink, teal, yellow, purple);
-</code></pre>
-
+<span class="hljs-keyword">@include</span> mat.datepicker-date-range-colors(hotpink, teal, yellow, purple);</code></pre>
         <h3 id="customizing-the-date-selection-logic" class="docs-header-link">
           <span header-link="customizing-the-date-selection-logic"></span>
           Customizing the date selection logic
@@ -276,10 +268,10 @@ month. If you want to make the calendar larger or smaller, adjust the width rath
         </h3>
       <p>Internationalization of the datepicker is configured via four aspects:</p>
 <ol>
-<li> The date locale.</li>
-<li> The date implementation that the datepicker accepts.</li>
-<li> The display and parse formats used by the datepicker.</li>
-<li> The message strings used in the datepicker&#39;s UI.</li>
+<li>The date locale.</li>
+<li>The date implementation that the datepicker accepts.</li>
+<li>The display and parse formats used by the datepicker.</li>
+<li>The message strings used in the datepicker&#39;s UI.</li>
 </ol>
 
         <h4 id="setting-the-locale-code" class="docs-header-link">
@@ -291,9 +283,7 @@ from <code>@angular/core</code>. If you want to override it, you can provide a n
 <code>MAT_DATE_LOCALE</code> token:</p>
 <pre><code class="language-ts">bootstapApplication(MyApp, {
   <span class="hljs-attr">providers</span>: [{<span class="hljs-attr">provide</span>: MAT_DATE_LOCALE, <span class="hljs-attr">useValue</span>: <span class="hljs-string">&#x27;en-GB&#x27;</span>}],
-});
-</code></pre>
-<p>It&#39;s also possible to set the locale at runtime using the <code>setLocale</code> method of the <code>DateAdapter</code>.</p>
+});</code></pre><p>It&#39;s also possible to set the locale at runtime using the <code>setLocale</code> method of the <code>DateAdapter</code>.</p>
 <p><strong>Note:</strong> if you&#39;re using the <code>provideDateFnsAdapter</code>, you have to provide the data object for your
 locale to <code>MAT_DATE_LOCALE</code> instead of the locale code, in addition to providing a configuration
 compatible with <code>date-fns</code> to <code>MAT_DATE_FORMATS</code>. Locale data for <code>date-fns</code> can be imported
@@ -406,36 +396,28 @@ or a custom <code>DateAdapter</code> that works with the library of your choice.
 <p>These APIs include providers for <code>DateAdapter</code> and <code>MAT_DATE_FORMATS</code>.</p>
 <pre><code class="language-ts">bootstrapApplication(MyApp, {
   <span class="hljs-attr">providers</span>: [provideNativeDateAdapter()]
-});
-</code></pre>
-<p>Because <code>DateAdapter</code> is a generic class, <code>MatDatepicker</code> and <code>MatDatepickerInput</code> also need to be
+});</code></pre><p>Because <code>DateAdapter</code> is a generic class, <code>MatDatepicker</code> and <code>MatDatepickerInput</code> also need to be
 made generic. When working with these classes (for example as a <code>ViewChild</code>) you should include the
 appropriate generic type that corresponds to the <code>DateAdapter</code> implementation you are using. For
 example:</p>
 <pre><code class="language-ts"><span class="hljs-meta">@Component</span>({...})
 <span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyComponent</span> </span>{
   <span class="hljs-meta">@ViewChild</span>(MatDatepicker) datepicker: MatDatepicker&lt;<span class="hljs-built_in">Date</span>&gt;;
-}
-</code></pre>
-</div><div material-docs-example="datepicker-moment"></div><div class="docs-markdown">
+}</code></pre></div><div material-docs-example="datepicker-moment"></div><div class="docs-markdown">
 
 <p>By default the <code>MomentDateAdapter</code> creates dates in your time zone specific locale. You can change
 the default behaviour to parse dates as UTC by passing <code>useUtc: true</code> into <code>provideMomentDateAdapter</code>
 or by providing the <code>MAT_MOMENT_DATE_ADAPTER_OPTIONS</code> injection token.</p>
 <pre><code class="language-ts">bootstrapApplication(MyApp, {
   <span class="hljs-attr">providers</span>: [provideMomentDateAdapter(<span class="hljs-literal">undefined</span>, {<span class="hljs-attr">useUtc</span>: <span class="hljs-literal">true</span>})]
-});
-</code></pre>
-<p>By default the <code>MomentDateAdapter</code> will parse dates in a
+});</code></pre><p>By default the <code>MomentDateAdapter</code> will parse dates in a
 <a href="https://momentjs.com/guides/#/parsing/forgiving-mode/">forgiving way</a>. This may result in dates
 being parsed incorrectly. You can change the default behaviour to
 <a href="https://momentjs.com/guides/#/parsing/strict-mode/">parse dates strictly</a> by <code>strict: true</code> to
 <code>provideMomentDateAdapter</code> or by providing the <code>MAT_MOMENT_DATE_ADAPTER_OPTIONS</code> injection token.</p>
 <pre><code class="language-ts">bootstrapApplication(MyApp, {
   <span class="hljs-attr">providers</span>: [provideMomentDateAdapter(<span class="hljs-literal">undefined</span>, {<span class="hljs-attr">strict</span>: <span class="hljs-literal">true</span>})]
-});
-</code></pre>
-<p>It is also possible to create your own <code>DateAdapter</code> that works with any date format your app
+});</code></pre><p>It is also possible to create your own <code>DateAdapter</code> that works with any date format your app
 requires. This is accomplished by subclassing <code>DateAdapter</code> and providing your subclass as the
 <code>DateAdapter</code> implementation. You will also want to make sure that the <code>MAT_DATE_FORMATS</code> provided
 in your app are formats that can be understood by your date implementation. See
@@ -446,9 +428,7 @@ information about <code>MAT_DATE_FORMATS</code>.</p>
     {<span class="hljs-attr">provide</span>: DateAdapter, <span class="hljs-attr">useClass</span>: MyDateAdapter},
     {<span class="hljs-attr">provide</span>: MAT_DATE_FORMATS, <span class="hljs-attr">useValue</span>: MY_DATE_FORMATS},
   ]
-});
-</code></pre>
-<p>If you need to work with native <code>Date</code> objects, but need custom behavior (for example custom date
+});</code></pre><p>If you need to work with native <code>Date</code> objects, but need custom behavior (for example custom date
 parsing), you can consider subclassing <code>NativeDateAdapter</code>.</p>
 
         <h4 id="customizing-the-parse-and-display-formats" class="docs-header-link">
@@ -463,9 +443,7 @@ sure that the format objects you&#39;re using are compatible with the <code>Date
 <code>MAT_DATE_FORMATS</code> token yourself. For example:</p>
 <pre><code class="language-ts">bootstrapApplication(MyApp, {
   <span class="hljs-attr">providers</span>: [provideNativeDateAdapter(MY_NATIVE_DATE_FORMATS)],
-});
-</code></pre>
-</div><div material-docs-example="datepicker-formats"></div><div class="docs-markdown">
+});</code></pre></div><div material-docs-example="datepicker-formats"></div><div class="docs-markdown">
 
 
         <h5 id="momentjs-formats" class="docs-header-link">
@@ -488,9 +466,7 @@ documented <a href="https://momentjs.com/docs/#/displaying/format/">here</a>.</p
       <span class="hljs-attr">monthYearA11yLabel</span>: <span class="hljs-string">&#x27;MMMM YYYY&#x27;</span>,
     },
   })]
-});
-</code></pre>
-
+});</code></pre>
         <h4 id="customizing-the-calendar-header" class="docs-header-link">
           <span header-link="customizing-the-calendar-header"></span>
           Customizing the calendar header
@@ -518,9 +494,7 @@ app config.</p>
     {<span class="hljs-attr">provide</span>: MatDatepickerIntl, <span class="hljs-attr">useClass</span>: MyIntl},
     provideNativeDateAdapter(),
   ],
-});
-</code></pre>
-
+});</code></pre>
         <h4 id="highlighting-specific-dates" class="docs-header-link">
           <span header-link="highlighting-specific-dates"></span>
           Highlighting specific dates
@@ -742,8 +716,8 @@ dialog without the icon button present.</p>
           Troubleshooting
         </h3>
       
-        <h4 id="error-matdatepicker-no-provider-found-for-dateadaptermat_date_formats" class="docs-header-link">
-          <span header-link="error-matdatepicker-no-provider-found-for-dateadaptermat_date_formats"></span>
+        <h4 id="error-matdatepicker-no-provider-found-for-dateadaptermatdateformats" class="docs-header-link">
+          <span header-link="error-matdatepicker-no-provider-found-for-dateadaptermatdateformats"></span>
           Error: MatDatepicker: No provider found for DateAdapter/MAT_DATE_FORMATS
         </h4>
       <p>This error is thrown if you have not provided all of the injectables the datepicker needs to work.
@@ -768,6 +742,4 @@ associated with a single input.</p>
 input with your datepicker, create a template reference for the datepicker and assign it to the
 <code>matDatepicker</code> attribute on the input:</p>
 <pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">input</span> [<span class="hljs-attr">matDatepicker</span>]=<span class="hljs-string">&quot;picker&quot;</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">mat-datepicker</span> #<span class="hljs-attr">picker</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">mat-datepicker</span>&gt;</span>
-</code></pre>
-</div>
+<span class="hljs-tag">&lt;<span class="hljs-name">mat-datepicker</span> #<span class="hljs-attr">picker</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">mat-datepicker</span>&gt;</span></code></pre></div>

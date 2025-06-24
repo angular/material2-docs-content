@@ -49,9 +49,7 @@ structure of a palette. <a href="https://m2.material.io/design/color/the-color-s
    <span class="hljs-number">300</span>: white,
    // ... continues to <span class="hljs-number">900</span>
  )
-);
-</code></pre>
-
+);</code></pre>
         <h3 id="create-your-own-palette" class="docs-header-link">
           <span header-link="create-your-own-palette"></span>
           Create your own palette
@@ -74,9 +72,7 @@ require these hues, but you can use these hues when defining a theme as describe
 <a href="#defining-a-theme">Defining a theme</a> below.</p>
 <pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;@angular/material&#x27;</span> as mat;
 
-<span class="hljs-variable">$my-palette</span>: mat.<span class="hljs-variable">$m2-indigo-palette</span>;
-</code></pre>
-
+<span class="hljs-variable">$my-palette</span>: mat.<span class="hljs-variable">$m2-indigo-palette</span>;</code></pre>
         <h2 id="themes" class="docs-header-link">
           <span header-link="themes"></span>
           Themes
@@ -118,9 +114,7 @@ themselves.</p>
 <span class="hljs-variable">$my-accent</span>: mat.m2-define-palette(mat.<span class="hljs-variable">$m2-pink-palette</span>, A200, A100, A400);
 
 <span class="hljs-comment">// The &quot;warn&quot; palette is optional and defaults to red if not specified.</span>
-<span class="hljs-variable">$my-warn</span>: mat.m2-define-palette(mat.<span class="hljs-variable">$m2-red-palette</span>);
-</code></pre>
-<p>You can construct a theme by calling either <code>m2-define-light-theme</code> or <code>m2-define-dark-theme</code> with
+<span class="hljs-variable">$my-warn</span>: mat.m2-define-palette(mat.<span class="hljs-variable">$m2-red-palette</span>);</code></pre><p>You can construct a theme by calling either <code>m2-define-light-theme</code> or <code>m2-define-dark-theme</code> with
 the result from <code>m2-define-palette</code>. The choice of a light versus a dark theme determines the
 background and foreground colors used throughout the components.</p>
 <pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;@angular/material&#x27;</span> as mat;
@@ -139,9 +133,7 @@ background and foreground colors used throughout the components.</p>
  ),
  typography: mat.m2-define-typography-config(),
  density: <span class="hljs-number">0</span>,
-));
-</code></pre>
-
+));</code></pre>
         <h4 id="applying-a-theme-to-components" class="docs-header-link">
           <span header-link="applying-a-theme-to-components"></span>
           Applying a theme to components
@@ -180,9 +172,7 @@ theme Sass mixins.</p>
 <span class="hljs-comment">// emit any typography styles.</span>
 <span class="hljs-keyword">@include</span> mat.button-theme(<span class="hljs-variable">$my-theme</span>);
 
-<span class="hljs-comment">// Include the theme mixins for other components you use here.</span>
-</code></pre>
-<p>As an alternative to listing every component that your application uses, Angular Material offers
+<span class="hljs-comment">// Include the theme mixins for other components you use here.</span></code></pre><p>As an alternative to listing every component that your application uses, Angular Material offers
 Sass mixins that includes styles for all components in the library: <code>all-component-bases</code>,
 <code>all-component-colors</code>, <code>all-component-typographies</code>, <code>all-component-densities</code>, and
 <code>all-component-themes</code>. These mixins behave the same as individual component mixins, except they
@@ -202,9 +192,7 @@ uses every single component, this will produce unnecessary CSS.</p>
  density: <span class="hljs-number">0</span>,
 ));
 
-<span class="hljs-keyword">@include</span> mat.all-component-themes(<span class="hljs-variable">$my-theme</span>);
-</code></pre>
-<p>To include the emitted styles in your application, <a href="https://angular.dev/reference/configs/workspace-config#styles-and-scripts-configuration">add your theme file to the <code>styles</code> array of
+<span class="hljs-keyword">@include</span> mat.all-component-themes(<span class="hljs-variable">$my-theme</span>);</code></pre><p>To include the emitted styles in your application, <a href="https://angular.dev/reference/configs/workspace-config#styles-and-scripts-configuration">add your theme file to the <code>styles</code> array of
 your project&#39;s <code>angular.json</code> file</a>.</p>
 
         <h4 id="theming-dimensions" class="docs-header-link">
@@ -356,9 +344,7 @@ CSS rule declaration. See the <a href="https://sass-lang.com/documentation/at-ru
  <span class="hljs-comment">// typography and density styles.</span>
  <span class="hljs-keyword">@include</span> mat.core-color(<span class="hljs-variable">$light-theme</span>);
  <span class="hljs-keyword">@include</span> mat.button-color(<span class="hljs-variable">$light-theme</span>);
-}
-</code></pre>
-
+}</code></pre>
         <h4 id="multiple-themes-across-separate-files" class="docs-header-link">
           <span header-link="multiple-themes-across-separate-files"></span>
           Multiple themes across separate files
@@ -401,9 +387,7 @@ The example below shows how to customize the color of all buttons inside element
  ));
 
  <span class="hljs-keyword">@include</span> mat.button-color(<span class="hljs-variable">$special-theme</span>);
-}
-</code></pre>
-
+}</code></pre>
         <h2 id="customizing-density" class="docs-header-link">
           <span header-link="customizing-density"></span>
           Customizing density
@@ -432,9 +416,7 @@ density Sass mixins.</p>
 <span class="hljs-comment">// Or you can selectively apply the Sass mixin to affect only specific parts of your application.</span>
 <span class="hljs-selector-class">.the-dense-zone</span> {
   <span class="hljs-keyword">@include</span> mat.button-density(-<span class="hljs-number">1</span>);
-}
-</code></pre>
-
+}</code></pre>
         <h2 id="strong-focus-indicators" class="docs-header-link">
           <span header-link="strong-focus-indicators"></span>
           Strong focus indicators
@@ -468,9 +450,7 @@ the custom theme API.</p>
 ));
 
 <span class="hljs-keyword">@include</span> mat.all-component-themes(<span class="hljs-variable">$my-theme</span>);
-<span class="hljs-keyword">@include</span> mat.strong-focus-indicators-theme(<span class="hljs-variable">$my-theme</span>);
-</code></pre>
-
+<span class="hljs-keyword">@include</span> mat.strong-focus-indicators-theme(<span class="hljs-variable">$my-theme</span>);</code></pre>
         <h3 id="customizing-strong-focus-indicators" class="docs-header-link">
           <span header-link="customizing-strong-focus-indicators"></span>
           Customizing strong focus indicators
@@ -501,9 +481,7 @@ of the custom theme API.</p>
 ));
 
 <span class="hljs-keyword">@include</span> mat.all-component-themes(<span class="hljs-variable">$my-theme</span>);
-<span class="hljs-keyword">@include</span> mat.strong-focus-indicators-theme(purple);
-</code></pre>
-
+<span class="hljs-keyword">@include</span> mat.strong-focus-indicators-theme(purple);</code></pre>
         <h2 id="theming-and-style-encapsulation" class="docs-header-link">
           <span header-link="theming-and-style-encapsulation"></span>
           Theming and style encapsulation
@@ -734,9 +712,7 @@ theme, and returns either <code>light</code> or <code>dark</code>.</p>
 <span class="hljs-variable">$foreground-text</span>: mat.get-theme-color(<span class="hljs-variable">$theme</span>, foreground, text);
 <span class="hljs-variable">$background-card</span>: mat.get-theme-color(<span class="hljs-variable">$theme</span>, background, card);
 <span class="hljs-variable">$type</span>: mat.get-theme-type(<span class="hljs-variable">$theme</span>);
-<span class="hljs-variable">$custom-background</span>: if(<span class="hljs-variable">$type</span> == dark, <span class="hljs-number">#030</span>, <span class="hljs-number">#dfd</span>);
-</code></pre>
-
+<span class="hljs-variable">$custom-background</span>: if(<span class="hljs-variable">$type</span> == dark, <span class="hljs-number">#030</span>, <span class="hljs-number">#dfd</span>);</code></pre>
         <h4 id="reading-typography-values" class="docs-header-link">
           <span header-link="reading-typography-values"></span>
           Reading typography values
@@ -812,9 +788,7 @@ you want: <code>font-family</code>, <code>font-size</code>, <code>font-weight</c
 <span class="hljs-selector-tag">body</span> {
   <span class="hljs-attribute">font</span>: mat.get-theme-typography(<span class="hljs-variable">$theme</span>, body-<span class="hljs-number">1</span>);
   <span class="hljs-attribute">letter-spacing</span>: mat.get-theme-typography(<span class="hljs-variable">$theme</span>, body-<span class="hljs-number">1</span>, letter-spacing);
-}
-</code></pre>
-
+}</code></pre>
         <h4 id="reading-density-values" class="docs-header-link">
           <span header-link="reading-density-values"></span>
           Reading density values
@@ -824,9 +798,7 @@ function takes a theme and returns the density scale (0, -1, -2, -3, -4, or -5).
 <p>See the below example of reading the density scale from a theme:</p>
 <pre><code class="language-scss"><span class="hljs-variable">$theme</span>: mat.m2-define-dark-theme(...);
 
-<span class="hljs-variable">$density-scale</span>: mat.get-theme-density(<span class="hljs-variable">$theme</span>);
-</code></pre>
-
+<span class="hljs-variable">$density-scale</span>: mat.get-theme-density(<span class="hljs-variable">$theme</span>);</code></pre>
         <h3 id="checking-what-dimensions-are-configured-for-a-theme" class="docs-header-link">
           <span header-link="checking-what-dimensions-are-configured-for-a-theme"></span>
           Checking what dimensions are configured for a theme
@@ -840,9 +812,7 @@ dimension by calling the <code>theme-has</code> Sass function, passing the theme
 <span class="hljs-variable">$has-base</span>: mat.theme-has(<span class="hljs-variable">$theme</span>, base);
 <span class="hljs-variable">$has-color</span>: mat.theme-has(<span class="hljs-variable">$theme</span>, color);
 <span class="hljs-variable">$has-typography</span>: mat.theme-has(<span class="hljs-variable">$theme</span>, typography);
-<span class="hljs-variable">$has-density</span>: mat.theme-has(<span class="hljs-variable">$theme</span>, density);
-</code></pre>
-
+<span class="hljs-variable">$has-density</span>: mat.theme-has(<span class="hljs-variable">$theme</span>, density);</code></pre>
         <h3 id="separating-theme-styles" class="docs-header-link">
           <span header-link="separating-theme-styles"></span>
           Separating theme styles
@@ -870,9 +840,7 @@ Roboto, your application must load the font, which is not included with Angular 
 easiest way to load Roboto, or any other custom font, is by using Google Fonts. The following
 snippet can be placed in your application&#39;s <code>&lt;head&gt;</code> to load Roboto from Google Fonts.</p>
 <pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">&quot;preconnect&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;https://fonts.gstatic.com&quot;</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&amp;display=swap&quot;</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">&quot;stylesheet&quot;</span>&gt;</span>
-</code></pre>
-<p>See <a href="https://developers.google.com/fonts/docs/getting_started">Getting Started with the Google Fonts API</a> for more about using Google Fonts. Also
+<span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&amp;display=swap&quot;</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">&quot;stylesheet&quot;</span>&gt;</span></code></pre><p>See <a href="https://developers.google.com/fonts/docs/getting_started">Getting Started with the Google Fonts API</a> for more about using Google Fonts. Also
 note that, by default, <a href="https://angular.dev/reference/configs/workspace-config#fonts-optimization-options">the Angular CLI inlines assets from Google Fonts to reduce render-blocking
 requests</a>.</p>
 
@@ -957,9 +925,7 @@ accepts, in order, CSS values for <code>font-size</code>, <code>line-height</cod
   <span class="hljs-variable">$font-size</span>: <span class="hljs-number">1rem</span>,
   <span class="hljs-variable">$line-height</span>: <span class="hljs-number">1</span>,
   <span class="hljs-variable">$letter-spacing</span>: normal,
-);
-</code></pre>
-
+);</code></pre>
         <h3 id="typography-config" class="docs-header-link">
           <span header-link="typography-config"></span>
           Typography config
@@ -978,9 +944,7 @@ baseline if unspecified.</p>
   <span class="hljs-variable">$headline-4</span>: mat.m2-define-typography-level(<span class="hljs-number">34px</span>, <span class="hljs-number">40px</span>, <span class="hljs-number">400</span>),
   <span class="hljs-variable">$headline-5</span>: mat.m2-define-typography-level(<span class="hljs-number">24px</span>, <span class="hljs-number">32px</span>, <span class="hljs-number">400</span>),
   // ...
-);
-</code></pre>
-
+);</code></pre>
         <h4 id="typography-configs-and-theming" class="docs-header-link">
           <span header-link="typography-configs-and-theming"></span>
           Typography configs and theming
@@ -1024,9 +988,7 @@ defining multiple themes</a>.</p>
   ));
 
   <span class="hljs-keyword">@include</span> mat.all-component-themes(<span class="hljs-variable">$kids-theme</span>);
-}
-</code></pre>
-<p>Each component also has a <code>typography</code> mixin that emits only the typography styles for that
+}</code></pre><p>Each component also has a <code>typography</code> mixin that emits only the typography styles for that
 component, based on a provided typography config. The following example demonstrates applying
 typography styles only for the button component.</p>
 <pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;@angular/material&#x27;</span> as mat;
@@ -1037,9 +999,7 @@ typography styles only for the button component.</p>
 );
 
 <span class="hljs-comment">// Now we have sweet buttons with Comic Sans.</span>
-<span class="hljs-keyword">@include</span> mat.button-typography(<span class="hljs-variable">$kids-typography</span>);
-</code></pre>
-
+<span class="hljs-keyword">@include</span> mat.button-typography(<span class="hljs-variable">$kids-typography</span>);</code></pre>
         <h3 id="using-typography-styles-in-your-application" class="docs-header-link">
           <span header-link="using-typography-styles-in-your-application"></span>
           Using typography styles in your application
@@ -1052,9 +1012,7 @@ typography config. This mixin also emits styles for native header elements scope
 
 <span class="hljs-comment">// Use the default configuration.</span>
 <span class="hljs-variable">$my-typography</span>: mat.m2-define-typography-config();
-<span class="hljs-keyword">@include</span> mat.typography-hierarchy(<span class="hljs-variable">$my-typography</span>);
-</code></pre>
-<p>The table below lists the CSS classes emitted and the native elements styled.</p>
+<span class="hljs-keyword">@include</span> mat.typography-hierarchy(<span class="hljs-variable">$my-typography</span>);</code></pre><p>The table below lists the CSS classes emitted and the native elements styled.</p>
 <table>
 <thead>
 <tr>
@@ -1151,9 +1109,7 @@ typography level. The <code>.mat-h5</code> style uses the <code>body-2</code> le
     <span class="hljs-comment">&lt;!-- This paragraph will be styled as `body-1` because it is inside `.mat-typography` --&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Some inner text<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
-</code></pre>
-
+<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span></code></pre>
         <h4 id="reading-typography-values-from-a-config" class="docs-header-link">
           <span header-link="reading-typography-values-from-a-config"></span>
           Reading typography values from a config
@@ -1178,9 +1134,7 @@ structural, color, and typography styles. This file is included in the <code>sty
 <span class="hljs-selector-class">.my-carousel-button</span> {
   <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">50%</span>;
   <span class="hljs-attribute">color</span>: blue;
-}
-</code></pre>
-
+}</code></pre>
         <h4 id="step-1-extract-theme-based-styles-to-a-separate-file" class="docs-header-link">
           <span header-link="step-1-extract-theme-based-styles-to-a-separate-file"></span>
           Step 1: Extract theme-based styles to a separate file
@@ -1198,9 +1152,7 @@ partial files.</p>
 
 <span class="hljs-selector-class">.my-carousel-button</span> {
   <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">50%</span>;
-}
-</code></pre>
-<pre><code class="language-scss"><span class="hljs-comment">// _carousel-theme.scss</span>
+}</code></pre><pre><code class="language-scss"><span class="hljs-comment">// _carousel-theme.scss</span>
 
 <span class="hljs-keyword">@mixin</span> <span class="hljs-attribute">color</span>(<span class="hljs-variable">$theme</span>) {
   <span class="hljs-selector-class">.my-carousel-button</span> {
@@ -1212,9 +1164,7 @@ partial files.</p>
   <span class="hljs-selector-class">.my-carousel</span> {
     <span class="hljs-attribute">font-family</span>: serif;
   }
-}
-</code></pre>
-
+}</code></pre>
         <h4 id="step-2-use-values-from-the-theme" class="docs-header-link">
           <span header-link="step-2-use-values-from-the-theme"></span>
           Step 2: Use values from the theme
@@ -1238,9 +1188,7 @@ theme passed into the mixins.</p>
     <span class="hljs-comment">// Get the headline font from the theme.</span>
     <span class="hljs-attribute">font</span>: mat.get-theme-typography(<span class="hljs-variable">$theme</span>, headline-<span class="hljs-number">1</span>);
   }
-}
-</code></pre>
-
+}</code></pre>
         <h4 id="step-3-add-a-theme-mixin" class="docs-header-link">
           <span header-link="step-3-add-a-theme-mixin"></span>
           Step 3: Add a theme mixin
@@ -1275,9 +1223,7 @@ have a config specified.</p>
   <span class="hljs-keyword">@if</span> mat.theme-has(<span class="hljs-variable">$theme</span>, typography) {
     <span class="hljs-keyword">@include</span> typography(<span class="hljs-variable">$theme</span>);
   }
-}
-</code></pre>
-
+}</code></pre>
         <h4 id="step-4-include-the-theme-mixin-in-your-application" class="docs-header-link">
           <span header-link="step-4-include-the-theme-mixin-in-your-application"></span>
           Step 4: Include the theme mixin in your application
@@ -1301,9 +1247,7 @@ the other theme mixins in your application.</p>
 ));
 
 <span class="hljs-keyword">@include</span> mat.all-component-themes(<span class="hljs-variable">$my-theme</span>);
-<span class="hljs-keyword">@include</span> carousel.theme(<span class="hljs-variable">$my-theme</span>);
-</code></pre>
-
+<span class="hljs-keyword">@include</span> carousel.theme(<span class="hljs-variable">$my-theme</span>);</code></pre>
         <h2 id="how-to-migrate-an-app-from-material-2-to-material-3" class="docs-header-link">
           <span header-link="how-to-migrate-an-app-from-material-2-to-material-3"></span>
           How to migrate an app from Material 2 to Material 3
@@ -1332,9 +1276,7 @@ for how to read values from an M3 theme).</p>
   } <span class="hljs-keyword">@else</span> {
     <span class="hljs-comment">// Keep your old M2 styles here.</span>
   }
-}
-</code></pre>
-
+}</code></pre>
         <h3 id="pass-a-new-m3-theme-in-your-global-theme-styles" class="docs-header-link">
           <span header-link="pass-a-new-m3-theme-in-your-global-theme-styles"></span>
           Pass a new M3 theme in your global theme styles
@@ -1387,9 +1329,7 @@ to generate color variant styles for.</p>
 <span class="hljs-selector-tag">html</span> {
   <span class="hljs-keyword">@include</span> mat.all-component-themes(<span class="hljs-variable">$theme</span>);
   <span class="hljs-keyword">@include</span> mat.color-variants-backwards-compatibility(<span class="hljs-variable">$theme</span>);
-}
-</code></pre>
-
+}</code></pre>
         <h3 id="optional-add-backwards-compatibility-styles-for-typography-hierarchy" class="docs-header-link">
           <span header-link="optional-add-backwards-compatibility-styles-for-typography-hierarchy"></span>
           (Optional) add backwards compatibility styles for typography hierarchy
@@ -1407,6 +1347,4 @@ styles, pass an additional argument <code>$back-compat: true</code> to the mixin
 
 <span class="hljs-variable">$theme</span>: mat.define-theme();
 
-<span class="hljs-keyword">@include</span> mat.typography-hierarchy(<span class="hljs-variable">$theme</span>, <span class="hljs-variable">$back-compat</span>: true);
-</code></pre>
-</div>
+<span class="hljs-keyword">@include</span> mat.typography-hierarchy(<span class="hljs-variable">$theme</span>, <span class="hljs-variable">$back-compat</span>: true);</code></pre></div>

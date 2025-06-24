@@ -91,9 +91,7 @@ default all timepickers to a 90 minute interval:</p>
 {
   <span class="hljs-attr">provide</span>: MAT_TIMEPICKER_CONFIG,
   <span class="hljs-attr">useValue</span>: {<span class="hljs-attr">interval</span>: <span class="hljs-string">&#x27;90 minutes&#x27;</span>},
-}
-</code></pre>
-<p>If your app requires more fine-grained control over the options, you can pass in an array of
+}</code></pre><p>If your app requires more fine-grained control over the options, you can pass in an array of
 options into <code>mat-timepicker</code> instead. Note that the options need to match the <code>MatTimepickerOption</code>
 interface.</p>
 </div><div material-docs-example="timepicker-options"></div><div class="docs-markdown">
@@ -116,9 +114,9 @@ element with the <code>matTimepickerToggleIcon</code> attribute into the toggle:
       <p>Internationalization of the timepicker uses the same date adapter as <code>mat-datepicker</code>. It is
 configured via three aspects:</p>
 <ol>
-<li> The date locale.</li>
-<li> The date implementation that the timepicker accepts.</li>
-<li> The display and parse formats used by the timepicker.</li>
+<li>The date locale.</li>
+<li>The date implementation that the timepicker accepts.</li>
+<li>The display and parse formats used by the timepicker.</li>
 </ol>
 
         <h4 id="setting-the-locale-code" class="docs-header-link">
@@ -130,9 +128,7 @@ from <code>@angular/core</code>. If you want to override it, you can provide a n
 <code>MAT_DATE_LOCALE</code> token:</p>
 <pre><code class="language-ts">bootstapApplication(MyApp, {
   <span class="hljs-attr">providers</span>: [{<span class="hljs-attr">provide</span>: MAT_DATE_LOCALE, <span class="hljs-attr">useValue</span>: <span class="hljs-string">&#x27;en-GB&#x27;</span>}],
-});
-</code></pre>
-<p>It&#39;s also possible to set the locale at runtime using the <code>setLocale</code> method of the <code>DateAdapter</code>.</p>
+});</code></pre><p>It&#39;s also possible to set the locale at runtime using the <code>setLocale</code> method of the <code>DateAdapter</code>.</p>
 <p><strong>Note:</strong> if you&#39;re using the <code>provideDateFnsAdapter</code>, you have to provide the data object for your
 locale to <code>MAT_DATE_LOCALE</code> instead of the locale code, in addition to providing a configuration
 compatible with <code>date-fns</code> to <code>MAT_DATE_FORMATS</code>. Locale data for <code>date-fns</code> can be imported
@@ -247,9 +243,7 @@ your <code>bootstrapApplication</code> format to the following:</p>
 
 bootstrapApplication(MyApp, {
   <span class="hljs-attr">providers</span>: [provideDateFnsAdapter()]
-});
-</code></pre>
-
+});</code></pre>
         <h4 id="customizing-the-parse-and-display-formats" class="docs-header-link">
           <span header-link="customizing-the-parse-and-display-formats"></span>
           Customizing the parse and display formats
@@ -266,9 +260,7 @@ configured if your app is using the datepicker, but for the timepicker you need 
 <code>MAT_DATE_FORMATS</code> token yourself. For example:</p>
 <pre><code class="language-ts">bootstrapApplication(MyApp, {
   <span class="hljs-attr">providers</span>: [provideNativeDateAdapter(MY_NATIVE_DATE_FORMATS)],
-});
-</code></pre>
-
+});</code></pre>
         <h3 id="accessibility" class="docs-header-link">
           <span header-link="accessibility"></span>
           Accessibility
@@ -285,8 +277,8 @@ on <code>mat-timepicker</code>.</p>
           Troubleshooting
         </h3>
       
-        <h4 id="error-mattimepicker-no-provider-found-for-dateadaptermat_date_formats" class="docs-header-link">
-          <span header-link="error-mattimepicker-no-provider-found-for-dateadaptermat_date_formats"></span>
+        <h4 id="error-mattimepicker-no-provider-found-for-dateadaptermatdateformats" class="docs-header-link">
+          <span header-link="error-mattimepicker-no-provider-found-for-dateadaptermatdateformats"></span>
           Error: MatTimepicker: No provider found for DateAdapter/MAT_DATE_FORMATS
         </h4>
       <p>This error is thrown if you haven&#39;t provided all of the injectables the timepicker needs in order to
@@ -295,8 +287,8 @@ work correctly. The easiest way to resolve this is to add <code>provideNativeDat
 <a href="#choosing-a-date-implementation-and-format-settings"><em>Choosing a date implementation</em></a> for
 more information.</p>
 
-        <h4 id="error-mattimepicker-incomplete-mat_date_formats-has-been-provided" class="docs-header-link">
-          <span header-link="error-mattimepicker-incomplete-mat_date_formats-has-been-provided"></span>
+        <h4 id="error-mattimepicker-incomplete-matdateformats-has-been-provided" class="docs-header-link">
+          <span header-link="error-mattimepicker-incomplete-matdateformats-has-been-provided"></span>
           Error: MatTimepicker: Incomplete <code>MAT_DATE_FORMATS</code> has been provided
         </h4>
       <p>The timepicker needs the <code>display.timeInput</code>, <code>display.timeOptionLabel</code> and <code>parse.timeInput</code> fields
