@@ -40,4 +40,12 @@ declare class MenuHarnessExample {
     static ɵcmp: i0.ɵɵComponentDeclaration<MenuHarnessExample, "menu-harness-example", never, {}, {}, never, never, true, never>;
 }
 
-export { MenuHarnessExample, MenuIconsExample, MenuNestedExample, MenuOverviewExample, MenuPositionExample };
+/**
+ * @title Context menu
+ */
+declare class ContextMenuExample {
+    static ɵfac: i0.ɵɵFactoryDeclaration<ContextMenuExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<ContextMenuExample, "context-menu-example", never, {}, {}, never, never, true, never>;
+}
+
+export { ContextMenuExample, MenuHarnessExample, MenuIconsExample, MenuNestedExample, MenuOverviewExample, MenuPositionExample };

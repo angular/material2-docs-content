@@ -2855,6 +2855,20 @@ const EXAMPLE_COMPONENTS = {
         "primaryFile": "list-variants-example.ts",
         "importPath": "material/list"
     },
+    "context-menu": {
+        "packagePath": "material/menu/context-menu",
+        "title": "Context menu",
+        "componentName": "ContextMenuExample",
+        "files": [
+            "context-menu-example.ts",
+            "context-menu-example.html",
+            "./context-menu-example.css"
+        ],
+        "selector": "context-menu-example",
+        "additionalComponents": [],
+        "primaryFile": "context-menu-example.ts",
+        "importPath": "material/menu"
+    },
     "menu-harness": {
         "packagePath": "material/menu/menu-harness",
         "title": "Testing with MatMenuHarness",
@@ -5426,6 +5440,8 @@ async function loadExample(id) {
             return import('@angular/components-examples/material/list');
         case 'list-variants':
             return import('@angular/components-examples/material/list');
+        case 'context-menu':
+            return import('@angular/components-examples/material/menu');
         case 'menu-harness':
             return import('@angular/components-examples/material/menu');
         case 'menu-icons':
