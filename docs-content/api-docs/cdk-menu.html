@@ -34,11 +34,11 @@
     
       
 
-<h4 id="ContextMenuTracker" class="docs-header-link docs-api-h4 docs-api-class-name">
-  <span header-link="ContextMenuTracker"></span>
-  <code>ContextMenuTracker</code>
+<h4 id="MenuTracker" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MenuTracker"></span>
+  <code>MenuTracker</code>
   
-</h4><p class="docs-api-class-description"><p>Tracks the last open context menu trigger across the entire application.</p>
+</h4><p class="docs-api-class-description"><p>Tracks the last open menu trigger across the entire application.</p>
 </p>
 
 
@@ -54,7 +54,7 @@
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Close the previous open context menu and set the given one as being open.</p>
+      <p>Close the previous open menu and set the given one as being open.</p>
 
     </td>
   </tr><thead>
@@ -67,11 +67,11 @@
     <td class="docs-api-method-parameter-cell">
       <p class="docs-api-method-parameter-name">
         trigger</p>
-      <code class="docs-api-method-parameter-type">CdkContextMenuTrigger</code>
+      <code class="docs-api-method-parameter-type">CdkMenuTriggerBase</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>The trigger for the currently open Context Menu.</p>
+        <p>The trigger for the currently open Menu.</p>
 
       </p>
     </td>
@@ -3258,6 +3258,23 @@ This class can be extended to create custom menu trigger types.</p>
 
 
 <h5 class="docs-api-h5 docs-api-method-header">Methods</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">close
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Close the opened menu.</p>
+
+    </td>
+  </tr></table>
+
+
   
     
 
