@@ -50,9 +50,9 @@ ways that would be difficult to accomplish with flat nodes.</p>
 <code>&lt;cdk-tree-node&gt;</code> for flat tree and <code>&lt;cdk-nested-tree-node&gt;</code> for nested tree. The tree node
 template defines the look of the tree node, expansion/collapsing control and the structure for
 nested children nodes.</p>
-<p>A node definition is specified via any element with <code>cdkNodeDef</code>. This directive exports the node
+<p>A node definition is specified via any element with <code>cdkTreeNodeDef</code>. This directive exports the node
 data to be used in any bindings in the node template.</p>
-<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">cdk-tree-node</span> *<span class="hljs-attr">cdkNodeDef</span>=<span class="hljs-string">&quot;let node&quot;</span>&gt;</span>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">cdk-tree-node</span> *<span class="hljs-attr">cdkTreeNodeDef</span>=<span class="hljs-string">&quot;let node&quot;</span>&gt;</span>
   {{node.key}}: {{node.value}}
 <span class="hljs-tag">&lt;/<span class="hljs-name">cdk-tree-node</span>&gt;</span></code></pre>
         <h5 id="flat-tree-node-template" class="docs-header-link">
@@ -71,7 +71,7 @@ based on the <code>aria-level</code> attribute.</p>
         </h5>
       <p>When using nested tree nodes, the node template must contain a <code>cdkTreeNodeOutlet</code>, which marks
 where the children of the node will be rendered.</p>
-<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">cdk-nested-tree-node</span> *<span class="hljs-attr">cdkNodeDef</span>=<span class="hljs-string">&quot;let node&quot;</span>&gt;</span>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">cdk-nested-tree-node</span> *<span class="hljs-attr">cdkTreeNodeDef</span>=<span class="hljs-string">&quot;let node&quot;</span>&gt;</span>
   {{node.value}}
   <span class="hljs-tag">&lt;<span class="hljs-name">ng-container</span> <span class="hljs-attr">cdkTreeNodeOutlet</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">ng-container</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">cdk-nested-tree-node</span>&gt;</span></code></pre>
@@ -84,7 +84,7 @@ The toggle calls the expand/collapse functions in the <code>CdkTree</code> and i
 a tree node recursively by setting <code>[cdkTreeNodeToggleRecursive]</code> to true.</p>
 <p><code>cdkTreeNodeToggle</code> should be attached to button elements, and will trigger upon click or keyboard
 activation. For icon buttons, ensure that <code>aria-label</code> is provided.</p>
-<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">cdk-tree-node</span> *<span class="hljs-attr">cdkNodeDef</span>=<span class="hljs-string">&quot;let node&quot;</span>&gt;</span>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">cdk-tree-node</span> *<span class="hljs-attr">cdkTreeNodeDef</span>=<span class="hljs-string">&quot;let node&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">cdkTreeNodeToggle</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">&quot;toggle tree node&quot;</span> [<span class="hljs-attr">cdkTreeNodeToggleRecursive</span>]=<span class="hljs-string">&quot;true&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">mat-icon</span>&gt;</span>expand<span class="hljs-tag">&lt;/<span class="hljs-name">mat-icon</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
@@ -96,7 +96,7 @@ activation. For icon buttons, ensure that <code>aria-label</code> is provided.</
         </h4>
       <p>The <code>cdkTreeNodePadding</code> directive can be placed in a flat tree&#39;s node template to display the level
 information of a flat tree node.</p>
-<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">cdk-tree-node</span> *<span class="hljs-attr">cdkNodeDef</span>=<span class="hljs-string">&quot;let node&quot;</span> <span class="hljs-attr">cdkNodePadding</span>&gt;</span>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">cdk-tree-node</span> *<span class="hljs-attr">cdkTreeNodeDef</span>=<span class="hljs-string">&quot;let node&quot;</span> <span class="hljs-attr">cdkNodePadding</span>&gt;</span>
   {{node.value}}
 <span class="hljs-tag">&lt;/<span class="hljs-name">cdk-tree-node</span>&gt;</span></code></pre><p>This is unnecessary for a nested tree, since the hierarchical structure of the DOM allows for
 padding to be added via CSS.</p>
@@ -107,10 +107,10 @@ padding to be added via CSS.</p>
         </h4>
       <p>The tree may include multiple node templates, where a template is chosen
 for a particular data node via the <code>when</code> predicate of the template.</p>
-<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">cdk-tree-node</span> *<span class="hljs-attr">cdkNodeDef</span>=<span class="hljs-string">&quot;let node&quot;</span> <span class="hljs-attr">cdkTreeNodePadding</span>&gt;</span>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">cdk-tree-node</span> *<span class="hljs-attr">cdkTreeNodeDef</span>=<span class="hljs-string">&quot;let node&quot;</span> <span class="hljs-attr">cdkTreeNodePadding</span>&gt;</span>
   {{node.value}}
 <span class="hljs-tag">&lt;/<span class="hljs-name">cdk-tree-node</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">cdk-tree-node</span> *<span class="hljs-attr">cdkNodeDef</span>=<span class="hljs-string">&quot;let node; when: isSpecial&quot;</span> <span class="hljs-attr">cdkTreeNodePadding</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">cdk-tree-node</span> *<span class="hljs-attr">cdkTreeNodeDef</span>=<span class="hljs-string">&quot;let node; when: isSpecial&quot;</span> <span class="hljs-attr">cdkTreeNodePadding</span>&gt;</span>
   [ A special node {{node.value}} ]
 <span class="hljs-tag">&lt;/<span class="hljs-name">cdk-tree-node</span>&gt;</span></code></pre>
         <h3 id="data-source" class="docs-header-link">
@@ -188,9 +188,9 @@ property must be set on all <code>cdk-tree-node</code> or <code>cdk-tree-nested-
 <code>(activation)</code> events that can be listened to when the user activates a node via keyboard
 interaction.</p>
 <pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">cdk-tree-node</span>
-    *<span class="hljs-attr">cdkNodeDef</span>=<span class="hljs-string">&quot;let node&quot;</span>
+    *<span class="hljs-attr">cdkTreeNodeDef</span>=<span class="hljs-string">&quot;let node&quot;</span>
     (<span class="hljs-attr">click</span>)=<span class="hljs-string">&quot;performAction(node)&quot;</span>
     (<span class="hljs-attr">activation</span>)=<span class="hljs-string">&quot;performAction($event)&quot;</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">cdk-tree-node</span>&gt;</span></code></pre><p>In this example, <code>$event</code> contains the node&#39;s data and is equivalent to the implicit data passed in
-the <code>cdkNodeDef</code> context.</p>
+the <code>cdkTreeNodeDef</code> context.</p>
 </div>
