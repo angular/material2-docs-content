@@ -554,13 +554,13 @@ There are two animation phases with different durations for the ripples.</p>
   <code>RippleConfig</code>
 </h4><div class="docs-markdown">
 <pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">type</span> <span class="hljs-title class_">RippleConfig</span> = {
-    <span class="hljs-attr">color</span>?: <span class="hljs-built_in">string</span>;
-    <span class="hljs-attr">centered</span>?: <span class="hljs-built_in">boolean</span>;
-    <span class="hljs-attr">radius</span>?: <span class="hljs-built_in">number</span>;
-    <span class="hljs-attr">persistent</span>?: <span class="hljs-built_in">boolean</span>;
-    <span class="hljs-attr">animation</span>?: <span class="hljs-title class_">RippleAnimationConfig</span>;
-    <span class="hljs-attr">terminateOnPointerUp</span>?: <span class="hljs-built_in">boolean</span>;
+<code class="docs-markdown-code">type RippleConfig = {
+    color?: string;
+    centered?: boolean;
+    radius?: number;
+    persistent?: boolean;
+    animation?: RippleAnimationConfig;
+    terminateOnPointerUp?: boolean;
 };</code>
 </pre>
 </div>
@@ -580,7 +580,7 @@ There are two animation phases with different durations for the ripples.</p>
 animation config specified.</p>
 </p><div class="docs-markdown">
 <pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">const</span> <span class="hljs-attr">defaultRippleAnimationConfig</span>: { <span class="hljs-attr">enterDuration</span>: <span class="hljs-built_in">number</span>; <span class="hljs-attr">exitDuration</span>: <span class="hljs-built_in">number</span>; };</code>
+<code class="docs-markdown-code">const defaultRippleAnimationConfig: { enterDuration: number; exitDuration: number; };</code>
 </pre>
 </div>
 
@@ -594,7 +594,7 @@ animation config specified.</p>
 </h4><p class="docs-api-constant-description"><p>Injection token that can be used to specify the global ripple options.</p>
 </p><div class="docs-markdown">
 <pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">const</span> <span class="hljs-attr">MAT_RIPPLE_GLOBAL_OPTIONS</span>: <span class="hljs-title class_">InjectionToken</span>&lt;<span class="hljs-title class_">RippleGlobalOptions</span>&gt;;</code>
+<code class="docs-markdown-code">const MAT_RIPPLE_GLOBAL_OPTIONS: InjectionToken<RippleGlobalOptions>;</code>
 </pre>
 </div>
 

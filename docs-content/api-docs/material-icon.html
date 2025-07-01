@@ -1338,7 +1338,7 @@ has no effect in M3 themes. For color customization in M3, see <a href="https://
 URL from which to fetch an icon. The returned URL will be used to make a request for the icon.</p>
 </p><div class="docs-markdown">
 <pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">type</span> <span class="hljs-title class_">IconResolver</span> = <span class="hljs-function">(<span class="hljs-params"><span class="hljs-attr">name</span>: <span class="hljs-built_in">string</span>, <span class="hljs-attr">namespace</span>: <span class="hljs-built_in">string</span></span>) =&gt;</span> <span class="hljs-title class_">SafeResourceUrl</span> | <span class="hljs-title class_">SafeResourceUrlWithIconOptions</span> | <span class="hljs-literal">null</span>;</code>
+<code class="docs-markdown-code">type IconResolver = (name: string, namespace: string) => SafeResourceUrl | SafeResourceUrlWithIconOptions | null;</code>
 </pre>
 </div>
 
@@ -1356,7 +1356,7 @@ URL from which to fetch an icon. The returned URL will be used to make a request
 </h4><p class="docs-api-constant-description"><p>Injection token to be used to override the default options for <code>mat-icon</code>.</p>
 </p><div class="docs-markdown">
 <pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">const</span> <span class="hljs-attr">MAT_ICON_DEFAULT_OPTIONS</span>: <span class="hljs-title class_">InjectionToken</span>&lt;<span class="hljs-title class_">MatIconDefaultOptions</span>&gt;;</code>
+<code class="docs-markdown-code">const MAT_ICON_DEFAULT_OPTIONS: InjectionToken<MatIconDefaultOptions>;</code>
 </pre>
 </div>
 

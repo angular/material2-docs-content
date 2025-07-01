@@ -6939,7 +6939,7 @@ Used for attributes such as aria-labelledby, aria-owns, etc.</p>
 </h4><p class="docs-api-type-alias-description"><p>The input modalities detected by this service. Null is used if the input modality is unknown.</p>
 </p><div class="docs-markdown">
 <pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">type</span> <span class="hljs-title class_">InputModality</span> = <span class="hljs-string">&#x27;keyboard&#x27;</span> | <span class="hljs-string">&#x27;mouse&#x27;</span> | <span class="hljs-string">&#x27;touch&#x27;</span> | <span class="hljs-literal">null</span>;</code>
+<code class="docs-markdown-code">type InputModality = 'keyboard' | 'mouse' | 'touch' | null;</code>
 </pre>
 </div>
 
@@ -6953,7 +6953,7 @@ Used for attributes such as aria-labelledby, aria-owns, etc.</p>
 </h4><p class="docs-api-type-alias-description"><p>Modifier keys handled by the ListKeyManager.</p>
 </p><div class="docs-markdown">
 <pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">type</span> <span class="hljs-title class_">ListKeyManagerModifierKey</span> = <span class="hljs-string">&#x27;altKey&#x27;</span> | <span class="hljs-string">&#x27;ctrlKey&#x27;</span> | <span class="hljs-string">&#x27;metaKey&#x27;</span> | <span class="hljs-string">&#x27;shiftKey&#x27;</span>;</code>
+<code class="docs-markdown-code">type ListKeyManagerModifierKey = 'altKey' | 'ctrlKey' | 'metaKey' | 'shiftKey';</code>
 </pre>
 </div>
 
@@ -6966,7 +6966,7 @@ Used for attributes such as aria-labelledby, aria-owns, etc.</p>
   <code>TreeKeyManagerFactory</code>
 </h4><div class="docs-markdown">
 <pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">type</span> <span class="hljs-title class_">TreeKeyManagerFactory</span> = <span class="hljs-function">(<span class="hljs-params"><span class="hljs-attr">items</span>: <span class="hljs-title class_">Observable</span>&lt;T[]&gt; | <span class="hljs-title class_">QueryList</span>&lt;T&gt; | T[], <span class="hljs-attr">options</span>: <span class="hljs-title class_">TreeKeyManagerOptions</span>&lt;T&gt;</span>) =&gt;</span> <span class="hljs-title class_">TreeKeyManagerStrategy</span>&lt;T&gt;;</code>
+<code class="docs-markdown-code">type TreeKeyManagerFactory = (items: Observable<T[]> | QueryList<T> | T[], options: TreeKeyManagerOptions<T>) => TreeKeyManagerStrategy<T>;</code>
 </pre>
 </div>
 
@@ -6980,7 +6980,7 @@ Used for attributes such as aria-labelledby, aria-owns, etc.</p>
 </h4><p class="docs-api-type-alias-description"><p>Possible politeness levels.</p>
 </p><div class="docs-markdown">
 <pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">type</span> <span class="hljs-title class_">AriaLivePoliteness</span> = <span class="hljs-string">&#x27;off&#x27;</span> | <span class="hljs-string">&#x27;polite&#x27;</span> | <span class="hljs-string">&#x27;assertive&#x27;</span>;</code>
+<code class="docs-markdown-code">type AriaLivePoliteness = 'off' | 'polite' | 'assertive';</code>
 </pre>
 </div>
 
@@ -6993,7 +6993,7 @@ Used for attributes such as aria-labelledby, aria-owns, etc.</p>
   <code>FocusOrigin</code>
 </h4><div class="docs-markdown">
 <pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">type</span> <span class="hljs-title class_">FocusOrigin</span> = <span class="hljs-string">&#x27;touch&#x27;</span> | <span class="hljs-string">&#x27;mouse&#x27;</span> | <span class="hljs-string">&#x27;keyboard&#x27;</span> | <span class="hljs-string">&#x27;program&#x27;</span> | <span class="hljs-literal">null</span>;</code>
+<code class="docs-markdown-code">type FocusOrigin = 'touch' | 'mouse' | 'keyboard' | 'program' | null;</code>
 </pre>
 </div>
 
@@ -7023,7 +7023,7 @@ code as the ContextMenu key on other browsers. When we switch to using event.key
 distinguish between the two.</p>
 </p><div class="docs-markdown">
 <pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">const</span> <span class="hljs-attr">INPUT_MODALITY_DETECTOR_DEFAULT_OPTIONS</span>: <span class="hljs-title class_">InputModalityDetectorOptions</span>;</code>
+<code class="docs-markdown-code">const INPUT_MODALITY_DETECTOR_DEFAULT_OPTIONS: InputModalityDetectorOptions;</code>
 </pre>
 </div>
 
@@ -7038,7 +7038,7 @@ distinguish between the two.</p>
 options.</p>
 </p><div class="docs-markdown">
 <pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">const</span> <span class="hljs-attr">INPUT_MODALITY_DETECTOR_OPTIONS</span>: <span class="hljs-title class_">InjectionToken</span>&lt;<span class="hljs-title class_">InputModalityDetectorOptions</span>&gt;;</code>
+<code class="docs-markdown-code">const INPUT_MODALITY_DETECTOR_OPTIONS: InjectionToken<InputModalityDetectorOptions>;</code>
 </pre>
 </div>
 
@@ -7055,7 +7055,7 @@ options.</p>
 </div><p class="docs-api-constant-description"><p>ID used for the body container where all messages are appended.</p>
 </p><div class="docs-markdown">
 <pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">const</span> <span class="hljs-attr">MESSAGES_CONTAINER_ID</span>: <span class="hljs-string">&quot;cdk-describedby-message-container&quot;</span>;</code>
+<code class="docs-markdown-code">const MESSAGES_CONTAINER_ID: "cdk-describedby-message-container";</code>
 </pre>
 </div>
 
@@ -7072,7 +7072,7 @@ options.</p>
 </div><p class="docs-api-constant-description"><p>ID prefix used for each created message element.</p>
 </p><div class="docs-markdown">
 <pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">const</span> <span class="hljs-attr">CDK_DESCRIBEDBY_ID_PREFIX</span>: <span class="hljs-string">&quot;cdk-describedby-message&quot;</span>;</code>
+<code class="docs-markdown-code">const CDK_DESCRIBEDBY_ID_PREFIX: "cdk-describedby-message";</code>
 </pre>
 </div>
 
@@ -7089,7 +7089,7 @@ options.</p>
 </div><p class="docs-api-constant-description"><p>Attribute given to each host element that is described by a message element.</p>
 </p><div class="docs-markdown">
 <pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">const</span> <span class="hljs-attr">CDK_DESCRIBEDBY_HOST_ATTRIBUTE</span>: <span class="hljs-string">&quot;cdk-describedby-host&quot;</span>;</code>
+<code class="docs-markdown-code">const CDK_DESCRIBEDBY_HOST_ATTRIBUTE: "cdk-describedby-host";</code>
 </pre>
 </div>
 
@@ -7103,7 +7103,7 @@ options.</p>
 </h4><p class="docs-api-constant-description"><p>Injection token that determines the key manager to use.</p>
 </p><div class="docs-markdown">
 <pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">const</span> <span class="hljs-attr">TREE_KEY_MANAGER</span>: <span class="hljs-title class_">InjectionToken</span>&lt;<span class="hljs-title class_">TreeKeyManagerFactory</span>&lt;<span class="hljs-built_in">any</span>&gt;&gt;;</code>
+<code class="docs-markdown-code">const TREE_KEY_MANAGER: InjectionToken<TreeKeyManagerFactory<any>>;</code>
 </pre>
 </div>
 
@@ -7117,7 +7117,7 @@ options.</p>
 </h4><p class="docs-api-constant-description"><p>The injection token used to specify the inert strategy.</p>
 </p><div class="docs-markdown">
 <pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">const</span> <span class="hljs-attr">FOCUS_TRAP_INERT_STRATEGY</span>: <span class="hljs-title class_">InjectionToken</span>&lt;<span class="hljs-title class_">FocusTrapInertStrategy</span>&gt;;</code>
+<code class="docs-markdown-code">const FOCUS_TRAP_INERT_STRATEGY: InjectionToken<FocusTrapInertStrategy>;</code>
 </pre>
 </div>
 
@@ -7130,7 +7130,7 @@ options.</p>
   <code>LIVE_ANNOUNCER_ELEMENT_TOKEN</code>
 </h4><div class="docs-markdown">
 <pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">const</span> <span class="hljs-attr">LIVE_ANNOUNCER_ELEMENT_TOKEN</span>: <span class="hljs-title class_">InjectionToken</span>&lt;<span class="hljs-title class_">HTMLElement</span>&gt;;</code>
+<code class="docs-markdown-code">const LIVE_ANNOUNCER_ELEMENT_TOKEN: InjectionToken<HTMLElement>;</code>
 </pre>
 </div>
 
@@ -7144,7 +7144,7 @@ options.</p>
 </h4><p class="docs-api-constant-description"><p>Injection token that can be used to configure the default options for the LiveAnnouncer.</p>
 </p><div class="docs-markdown">
 <pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">const</span> <span class="hljs-attr">LIVE_ANNOUNCER_DEFAULT_OPTIONS</span>: <span class="hljs-title class_">InjectionToken</span>&lt;<span class="hljs-title class_">LiveAnnouncerDefaultOptions</span>&gt;;</code>
+<code class="docs-markdown-code">const LIVE_ANNOUNCER_DEFAULT_OPTIONS: InjectionToken<LiveAnnouncerDefaultOptions>;</code>
 </pre>
 </div>
 
@@ -7158,7 +7158,7 @@ options.</p>
 </h4><p class="docs-api-constant-description"><p>InjectionToken for FocusMonitorOptions.</p>
 </p><div class="docs-markdown">
 <pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">const</span> <span class="hljs-attr">FOCUS_MONITOR_DEFAULT_OPTIONS</span>: <span class="hljs-title class_">InjectionToken</span>&lt;<span class="hljs-title class_">FocusMonitorOptions</span>&gt;;</code>
+<code class="docs-markdown-code">const FOCUS_MONITOR_DEFAULT_OPTIONS: InjectionToken<FocusMonitorOptions>;</code>
 </pre>
 </div>
 

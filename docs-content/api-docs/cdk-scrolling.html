@@ -3087,7 +3087,7 @@ Please note: the top and bottom properties are mutually exclusive, as are the le
 start, and end properties.</p>
 </p><div class="docs-markdown">
 <pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">type</span> <span class="hljs-title class_">ExtendedScrollToOptions</span> = _XAxis &amp; _YAxis &amp; <span class="hljs-title class_">ScrollOptions</span>;</code>
+<code class="docs-markdown-code">type ExtendedScrollToOptions = _XAxis & _YAxis & ScrollOptions;</code>
 </pre>
 </div>
 
@@ -3101,15 +3101,15 @@ start, and end properties.</p>
 </h4><p class="docs-api-type-alias-description"><p>The context for an item rendered by <code>CdkVirtualForOf</code></p>
 </p><div class="docs-markdown">
 <pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">type</span> <span class="hljs-title class_">CdkVirtualForOfContext</span> = {
-    <span class="hljs-attr">$implicit</span>: T;
-    <span class="hljs-attr">cdkVirtualForOf</span>: <span class="hljs-title class_">DataSource</span>&lt;T&gt; | <span class="hljs-title class_">Observable</span>&lt;T[]&gt; | <span class="hljs-title class_">NgIterable</span>&lt;T&gt;;
-    <span class="hljs-attr">index</span>: <span class="hljs-built_in">number</span>;
-    <span class="hljs-attr">count</span>: <span class="hljs-built_in">number</span>;
-    <span class="hljs-attr">first</span>: <span class="hljs-built_in">boolean</span>;
-    <span class="hljs-attr">last</span>: <span class="hljs-built_in">boolean</span>;
-    <span class="hljs-attr">even</span>: <span class="hljs-built_in">boolean</span>;
-    <span class="hljs-attr">odd</span>: <span class="hljs-built_in">boolean</span>;
+<code class="docs-markdown-code">type CdkVirtualForOfContext = {
+    $implicit: T;
+    cdkVirtualForOf: DataSource<T> | Observable<T[]> | NgIterable<T>;
+    index: number;
+    count: number;
+    first: boolean;
+    last: boolean;
+    even: boolean;
+    odd: boolean;
 };</code>
 </pre>
 </div>
@@ -3128,7 +3128,7 @@ start, and end properties.</p>
 </h4><p class="docs-api-constant-description"><p>Time in ms to throttle the scrolling events by default.</p>
 </p><div class="docs-markdown">
 <pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">const</span> <span class="hljs-attr">DEFAULT_SCROLL_TIME</span>: <span class="hljs-number">20</span>;</code>
+<code class="docs-markdown-code">const DEFAULT_SCROLL_TIME: 20;</code>
 </pre>
 </div>
 
@@ -3142,7 +3142,7 @@ start, and end properties.</p>
 </h4><p class="docs-api-constant-description"><p>Time in ms to throttle the resize events by default.</p>
 </p><div class="docs-markdown">
 <pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">const</span> <span class="hljs-attr">DEFAULT_RESIZE_TIME</span>: <span class="hljs-number">20</span>;</code>
+<code class="docs-markdown-code">const DEFAULT_RESIZE_TIME: 20;</code>
 </pre>
 </div>
 
@@ -3156,7 +3156,7 @@ start, and end properties.</p>
 </h4><p class="docs-api-constant-description"><p>The injection token used to specify the virtual scrolling strategy.</p>
 </p><div class="docs-markdown">
 <pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">const</span> <span class="hljs-attr">VIRTUAL_SCROLL_STRATEGY</span>: <span class="hljs-title class_">InjectionToken</span>&lt;<span class="hljs-title class_">VirtualScrollStrategy</span>&gt;;</code>
+<code class="docs-markdown-code">const VIRTUAL_SCROLL_STRATEGY: InjectionToken<VirtualScrollStrategy>;</code>
 </pre>
 </div>
 
@@ -3169,7 +3169,7 @@ start, and end properties.</p>
   <code>VIRTUAL_SCROLLABLE</code>
 </h4><div class="docs-markdown">
 <pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">const</span> <span class="hljs-attr">VIRTUAL_SCROLLABLE</span>: <span class="hljs-title class_">InjectionToken</span>&lt;<span class="hljs-title class_">CdkVirtualScrollable</span>&gt;;</code>
+<code class="docs-markdown-code">const VIRTUAL_SCROLLABLE: InjectionToken<CdkVirtualScrollable>;</code>
 </pre>
 </div>
 

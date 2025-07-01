@@ -4457,7 +4457,7 @@ Same advantages and disadvantages as <code>parent</code>.</li>
 </ul>
 </p><div class="docs-markdown">
 <pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">type</span> <span class="hljs-title class_">PreviewContainer</span> = <span class="hljs-string">&#x27;global&#x27;</span> | <span class="hljs-string">&#x27;parent&#x27;</span> | <span class="hljs-title class_">ElementRef</span>&lt;<span class="hljs-title class_">HTMLElement</span>&gt; | <span class="hljs-title class_">HTMLElement</span>;</code>
+<code class="docs-markdown-code">type PreviewContainer = 'global' | 'parent' | ElementRef<HTMLElement> | HTMLElement;</code>
 </pre>
 </div>
 
@@ -4471,7 +4471,7 @@ Same advantages and disadvantages as <code>parent</code>.</li>
 </h4><p class="docs-api-type-alias-description"><p>Function that can be used to constrain the position of a dragged element.</p>
 </p><div class="docs-markdown">
 <pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">type</span> <span class="hljs-title class_">DragConstrainPosition</span> = <span class="hljs-function">(<span class="hljs-params"><span class="hljs-attr">userPointerPosition</span>: <span class="hljs-title class_">Point</span>, <span class="hljs-attr">dragRef</span>: <span class="hljs-title class_">DragRef</span>, <span class="hljs-attr">dimensions</span>: <span class="hljs-title class_">DOMRect</span>, <span class="hljs-attr">pickupPositionInElement</span>: <span class="hljs-title class_">Point</span></span>) =&gt;</span> <span class="hljs-title class_">Point</span>;</code>
+<code class="docs-markdown-code">type DragConstrainPosition = (userPointerPosition: Point, dragRef: DragRef, dimensions: DOMRect, pickupPositionInElement: Point) => Point;</code>
 </pre>
 </div>
 
@@ -4485,9 +4485,9 @@ Same advantages and disadvantages as <code>parent</code>.</li>
 </h4><p class="docs-api-type-alias-description"><p>Possible values that can be used to configure the drag start delay.</p>
 </p><div class="docs-markdown">
 <pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">type</span> <span class="hljs-title class_">DragStartDelay</span> = <span class="hljs-built_in">number</span> | {
-    <span class="hljs-attr">touch</span>: <span class="hljs-built_in">number</span>;
-    <span class="hljs-attr">mouse</span>: <span class="hljs-built_in">number</span>;
+<code class="docs-markdown-code">type DragStartDelay = number | {
+    touch: number;
+    mouse: number;
 };</code>
 </pre>
 </div>
@@ -4502,7 +4502,7 @@ Same advantages and disadvantages as <code>parent</code>.</li>
 </h4><p class="docs-api-type-alias-description"><p>Possible axis along which dragging can be locked.</p>
 </p><div class="docs-markdown">
 <pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">type</span> <span class="hljs-title class_">DragAxis</span> = <span class="hljs-string">&#x27;x&#x27;</span> | <span class="hljs-string">&#x27;y&#x27;</span>;</code>
+<code class="docs-markdown-code">type DragAxis = 'x' | 'y';</code>
 </pre>
 </div>
 
@@ -4516,7 +4516,7 @@ Same advantages and disadvantages as <code>parent</code>.</li>
 </h4><p class="docs-api-type-alias-description"><p>Possible orientations for a drop list.</p>
 </p><div class="docs-markdown">
 <pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">type</span> <span class="hljs-title class_">DropListOrientation</span> = <span class="hljs-string">&#x27;horizontal&#x27;</span> | <span class="hljs-string">&#x27;vertical&#x27;</span> | <span class="hljs-string">&#x27;mixed&#x27;</span>;</code>
+<code class="docs-markdown-code">type DropListOrientation = 'horizontal' | 'vertical' | 'mixed';</code>
 </pre>
 </div>
 
@@ -4535,7 +4535,7 @@ Same advantages and disadvantages as <code>parent</code>.</li>
 behavior of the drag&amp;drop-related components.</p>
 </p><div class="docs-markdown">
 <pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">const</span> <span class="hljs-attr">CDK_DRAG_CONFIG</span>: <span class="hljs-title class_">InjectionToken</span>&lt;<span class="hljs-title class_">DragDropConfig</span>&gt;;</code>
+<code class="docs-markdown-code">const CDK_DRAG_CONFIG: InjectionToken<DragDropConfig>;</code>
 </pre>
 </div>
 
@@ -4551,7 +4551,7 @@ alternative token to the actual <code>CdkDropListGroup</code> class which could 
 retention of the class and its directive metadata.</p>
 </p><div class="docs-markdown">
 <pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">const</span> <span class="hljs-attr">CDK_DROP_LIST_GROUP</span>: <span class="hljs-title class_">InjectionToken</span>&lt;<span class="hljs-title class_">CdkDropListGroup</span>&lt;<span class="hljs-built_in">unknown</span>&gt;&gt;;</code>
+<code class="docs-markdown-code">const CDK_DROP_LIST_GROUP: InjectionToken<CdkDropListGroup<unknown>>;</code>
 </pre>
 </div>
 
@@ -4567,7 +4567,7 @@ alternative token to the actual <code>CdkDropList</code> class which could cause
 retention of the class and its directive metadata.</p>
 </p><div class="docs-markdown">
 <pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">const</span> <span class="hljs-attr">CDK_DROP_LIST</span>: <span class="hljs-title class_">InjectionToken</span>&lt;<span class="hljs-title class_">CdkDropList</span>&lt;<span class="hljs-built_in">any</span>&gt;&gt;;</code>
+<code class="docs-markdown-code">const CDK_DROP_LIST: InjectionToken<CdkDropList<any>>;</code>
 </pre>
 </div>
 
@@ -4583,7 +4583,7 @@ alternative token to the actual <code>CdkDragHandle</code> class which could cau
 retention of the class and its directive metadata.</p>
 </p><div class="docs-markdown">
 <pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">const</span> <span class="hljs-attr">CDK_DRAG_HANDLE</span>: <span class="hljs-title class_">InjectionToken</span>&lt;<span class="hljs-title class_">CdkDragHandle</span>&gt;;</code>
+<code class="docs-markdown-code">const CDK_DRAG_HANDLE: InjectionToken<CdkDragHandle>;</code>
 </pre>
 </div>
 
@@ -4599,7 +4599,7 @@ alternative token to the actual <code>CdkDragPreview</code> class which could ca
 retention of the class and its directive metadata.</p>
 </p><div class="docs-markdown">
 <pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">const</span> <span class="hljs-attr">CDK_DRAG_PREVIEW</span>: <span class="hljs-title class_">InjectionToken</span>&lt;<span class="hljs-title class_">CdkDragPreview</span>&lt;<span class="hljs-built_in">any</span>&gt;&gt;;</code>
+<code class="docs-markdown-code">const CDK_DRAG_PREVIEW: InjectionToken<CdkDragPreview<any>>;</code>
 </pre>
 </div>
 
@@ -4615,7 +4615,7 @@ alternative token to the actual <code>CdkDragPlaceholder</code> class which coul
 retention of the class and its directive metadata.</p>
 </p><div class="docs-markdown">
 <pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">const</span> <span class="hljs-attr">CDK_DRAG_PLACEHOLDER</span>: <span class="hljs-title class_">InjectionToken</span>&lt;<span class="hljs-title class_">CdkDragPlaceholder</span>&lt;<span class="hljs-built_in">any</span>&gt;&gt;;</code>
+<code class="docs-markdown-code">const CDK_DRAG_PLACEHOLDER: InjectionToken<CdkDragPlaceholder<any>>;</code>
 </pre>
 </div>
 

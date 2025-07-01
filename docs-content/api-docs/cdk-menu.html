@@ -3944,9 +3944,9 @@ the submenu.</p>
 </h4><p class="docs-api-type-alias-description"><p>The coordinates where the context menu should open.</p>
 </p><div class="docs-markdown">
 <pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">type</span> <span class="hljs-title class_">ContextMenuCoordinates</span> = {
-    <span class="hljs-attr">x</span>: <span class="hljs-built_in">number</span>;
-    <span class="hljs-attr">y</span>: <span class="hljs-built_in">number</span>;
+<code class="docs-markdown-code">type ContextMenuCoordinates = {
+    x: number;
+    y: number;
 };</code>
 </pre>
 </div>
@@ -3965,7 +3965,7 @@ the submenu.</p>
 </h4><p class="docs-api-constant-description"><p>Injection token used for an implementation of MenuStack.</p>
 </p><div class="docs-markdown">
 <pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">const</span> <span class="hljs-attr">MENU_TRIGGER</span>: <span class="hljs-title class_">InjectionToken</span>&lt;<span class="hljs-title class_">CdkMenuTriggerBase</span>&gt;;</code>
+<code class="docs-markdown-code">const MENU_TRIGGER: InjectionToken<CdkMenuTriggerBase>;</code>
 </pre>
 </div>
 
@@ -3979,7 +3979,7 @@ the submenu.</p>
 </h4><p class="docs-api-constant-description"><p>Injection token used to configure the behavior of the menu when the page is scrolled.</p>
 </p><div class="docs-markdown">
 <pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">const</span> <span class="hljs-attr">MENU_SCROLL_STRATEGY</span>: <span class="hljs-title class_">InjectionToken</span>&lt;<span class="hljs-function">() =&gt;</span> <span class="hljs-title class_">ScrollStrategy</span>&gt;;</code>
+<code class="docs-markdown-code">const MENU_SCROLL_STRATEGY: InjectionToken<() => ScrollStrategy>;</code>
 </pre>
 </div>
 
@@ -3993,7 +3993,7 @@ the submenu.</p>
 </h4><p class="docs-api-constant-description"><p>Injection token used for an implementation of MenuStack.</p>
 </p><div class="docs-markdown">
 <pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">const</span> <span class="hljs-attr">MENU_STACK</span>: <span class="hljs-title class_">InjectionToken</span>&lt;<span class="hljs-title class_">MenuStack</span>&gt;;</code>
+<code class="docs-markdown-code">const MENU_STACK: InjectionToken<MenuStack>;</code>
 </pre>
 </div>
 
@@ -4007,7 +4007,7 @@ the submenu.</p>
 </h4><p class="docs-api-constant-description"><p>Provider that provides the parent menu stack, or a new menu stack if there is no parent one.</p>
 </p><div class="docs-markdown">
 <pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">const</span> <span class="hljs-attr">PARENT_OR_NEW_MENU_STACK_PROVIDER</span>: { <span class="hljs-attr">provide</span>: <span class="hljs-title class_">InjectionToken</span>&lt;<span class="hljs-title class_">MenuStack</span>&gt;; <span class="hljs-attr">deps</span>: <span class="hljs-title class_">Optional</span>[][]; <span class="hljs-attr">useFactory</span>: <span class="hljs-function">(<span class="hljs-params"><span class="hljs-attr">parentMenuStack</span>?: <span class="hljs-title class_">MenuStack</span></span>) =&gt;</span> <span class="hljs-title class_">MenuStack</span>; };</code>
+<code class="docs-markdown-code">const PARENT_OR_NEW_MENU_STACK_PROVIDER: { provide: InjectionToken<MenuStack>; deps: Optional[][]; useFactory: (parentMenuStack?: MenuStack) => MenuStack; };</code>
 </pre>
 </div>
 
@@ -4021,7 +4021,7 @@ the submenu.</p>
 </h4><p class="docs-api-constant-description"><p>Provider that provides the parent menu stack, or a new inline menu stack if there is no parent one.</p>
 </p><div class="docs-markdown">
 <pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">const</span> <span class="hljs-attr">PARENT_OR_NEW_INLINE_MENU_STACK_PROVIDER</span>: <span class="hljs-function">(<span class="hljs-params"><span class="hljs-attr">orientation</span>: <span class="hljs-string">&quot;horizontal&quot;</span> | <span class="hljs-string">&quot;vertical&quot;</span></span>) =&gt;</span> { <span class="hljs-attr">provide</span>: <span class="hljs-title class_">InjectionToken</span>&lt;<span class="hljs-title class_">MenuStack</span>&gt;; <span class="hljs-attr">deps</span>: <span class="hljs-title class_">Optional</span>[][]; <span class="hljs-attr">useFactory</span>: <span class="hljs-function">(<span class="hljs-params"><span class="hljs-attr">parentMenuStack</span>?: <span class="hljs-title class_">MenuStack</span></span>) =&gt;</span> <span class="hljs-title class_">MenuStack</span>; };</code>
+<code class="docs-markdown-code">const PARENT_OR_NEW_INLINE_MENU_STACK_PROVIDER: (orientation: "horizontal" | "vertical") => { provide: InjectionToken<MenuStack>; deps: Optional[][]; useFactory: (parentMenuStack?: MenuStack) => MenuStack; };</code>
 </pre>
 </div>
 
@@ -4035,7 +4035,7 @@ the submenu.</p>
 </h4><p class="docs-api-constant-description"><p>Injection token used to return classes implementing the Menu interface</p>
 </p><div class="docs-markdown">
 <pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">const</span> <span class="hljs-attr">CDK_MENU</span>: <span class="hljs-title class_">InjectionToken</span>&lt;<span class="hljs-title class_">Menu</span>&gt;;</code>
+<code class="docs-markdown-code">const CDK_MENU: InjectionToken<Menu>;</code>
 </pre>
 </div>
 
@@ -4049,7 +4049,7 @@ the submenu.</p>
 </h4><p class="docs-api-constant-description"><p>Injection token used for an implementation of MenuAim.</p>
 </p><div class="docs-markdown">
 <pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">const</span> <span class="hljs-attr">MENU_AIM</span>: <span class="hljs-title class_">InjectionToken</span>&lt;<span class="hljs-title class_">MenuAim</span>&gt;;</code>
+<code class="docs-markdown-code">const MENU_AIM: InjectionToken<MenuAim>;</code>
 </pre>
 </div>
 

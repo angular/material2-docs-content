@@ -1545,7 +1545,7 @@ will scroll the header towards the end of the tabs list and &#39;before&#39; wil
 beginning of the list.</p>
 </p><div class="docs-markdown">
 <pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">type</span> <span class="hljs-title class_">ScrollDirection</span> = <span class="hljs-string">&#x27;after&#x27;</span> | <span class="hljs-string">&#x27;before&#x27;</span>;</code>
+<code class="docs-markdown-code">type ScrollDirection = 'after' | 'before';</code>
 </pre>
 </div>
 
@@ -1568,7 +1568,7 @@ then left-origin-center or right-origin-center can be used, which will use left 
 pseudo-prior state.</p>
 </p><div class="docs-markdown">
 <pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">type</span> <span class="hljs-title class_">MatTabBodyPositionState</span> = <span class="hljs-string">&#x27;left&#x27;</span> | <span class="hljs-string">&#x27;center&#x27;</span> | <span class="hljs-string">&#x27;right&#x27;</span>;</code>
+<code class="docs-markdown-code">type MatTabBodyPositionState = 'left' | 'center' | 'right';</code>
 </pre>
 </div>
 
@@ -1588,7 +1588,7 @@ set to 1, and a new tab is created and selected at index 2, then the tab body wo
 origin of right because its index was greater than the prior selected index.</p>
 </p><div class="docs-markdown">
 <pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">type</span> <span class="hljs-title class_">MatTabBodyOriginState</span> = <span class="hljs-string">&#x27;left&#x27;</span> | <span class="hljs-string">&#x27;right&#x27;</span>;</code>
+<code class="docs-markdown-code">type MatTabBodyOriginState = 'left' | 'right';</code>
 </pre>
 </div>
 
@@ -1602,7 +1602,7 @@ origin of right because its index was greater than the prior selected index.</p>
 </h4><p class="docs-api-type-alias-description"><p>Possible positions for the tab header.</p>
 </p><div class="docs-markdown">
 <pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">type</span> <span class="hljs-title class_">MatTabHeaderPosition</span> = <span class="hljs-string">&#x27;above&#x27;</span> | <span class="hljs-string">&#x27;below&#x27;</span>;</code>
+<code class="docs-markdown-code">type MatTabHeaderPosition = 'above' | 'below';</code>
 </pre>
 </div>
 
@@ -1620,7 +1620,7 @@ origin of right because its index was greater than the prior selected index.</p>
 </h4><p class="docs-api-constant-description"><p>Injection token that can be used to provide the default options the tabs module.</p>
 </p><div class="docs-markdown">
 <pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">const</span> <span class="hljs-attr">MAT_TABS_CONFIG</span>: <span class="hljs-title class_">InjectionToken</span>&lt;<span class="hljs-title class_">MatTabsConfig</span>&gt;;</code>
+<code class="docs-markdown-code">const MAT_TABS_CONFIG: InjectionToken<MatTabsConfig>;</code>
 </pre>
 </div>
 
@@ -1636,7 +1636,7 @@ alternative token to the actual <code>MatTabContent</code> class which could cau
 retention of the class and its directive metadata.</p>
 </p><div class="docs-markdown">
 <pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">const</span> <span class="hljs-attr">MAT_TAB_CONTENT</span>: <span class="hljs-title class_">InjectionToken</span>&lt;<span class="hljs-title class_">MatTabContent</span>&gt;;</code>
+<code class="docs-markdown-code">const MAT_TAB_CONTENT: InjectionToken<MatTabContent>;</code>
 </pre>
 </div>
 
@@ -1652,7 +1652,7 @@ alternative token to the actual <code>MatTabLabel</code> class which could cause
 retention of the class and its directive metadata.</p>
 </p><div class="docs-markdown">
 <pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">const</span> <span class="hljs-attr">MAT_TAB_LABEL</span>: <span class="hljs-title class_">InjectionToken</span>&lt;<span class="hljs-title class_">MatTabLabel</span>&gt;;</code>
+<code class="docs-markdown-code">const MAT_TAB_LABEL: InjectionToken<MatTabLabel>;</code>
 </pre>
 </div>
 

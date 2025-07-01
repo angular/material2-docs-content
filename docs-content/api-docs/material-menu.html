@@ -1212,7 +1212,7 @@ and it&#39;s up to you to manage focus, if you decide to turn it off.</p>
 </h4><p class="docs-api-type-alias-description"><p>Reason why the menu was closed.</p>
 </p><div class="docs-markdown">
 <pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">type</span> <span class="hljs-title class_">MenuCloseReason</span> = <span class="hljs-built_in">void</span> | <span class="hljs-string">&#x27;click&#x27;</span> | <span class="hljs-string">&#x27;keydown&#x27;</span> | <span class="hljs-string">&#x27;tab&#x27;</span>;</code>
+<code class="docs-markdown-code">type MenuCloseReason = void | 'click' | 'keydown' | 'tab';</code>
 </pre>
 </div>
 
@@ -1225,7 +1225,7 @@ and it&#39;s up to you to manage focus, if you decide to turn it off.</p>
   <code>MenuPositionX</code>
 </h4><div class="docs-markdown">
 <pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">type</span> <span class="hljs-title class_">MenuPositionX</span> = <span class="hljs-string">&#x27;before&#x27;</span> | <span class="hljs-string">&#x27;after&#x27;</span>;</code>
+<code class="docs-markdown-code">type MenuPositionX = 'before' | 'after';</code>
 </pre>
 </div>
 
@@ -1238,7 +1238,7 @@ and it&#39;s up to you to manage focus, if you decide to turn it off.</p>
   <code>MenuPositionY</code>
 </h4><div class="docs-markdown">
 <pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">type</span> <span class="hljs-title class_">MenuPositionY</span> = <span class="hljs-string">&#x27;above&#x27;</span> | <span class="hljs-string">&#x27;below&#x27;</span>;</code>
+<code class="docs-markdown-code">type MenuPositionY = 'above' | 'below';</code>
 </pre>
 </div>
 
@@ -1256,7 +1256,7 @@ and it&#39;s up to you to manage focus, if you decide to turn it off.</p>
 </h4><p class="docs-api-constant-description"><p>Injection token to be used to override the default options for <code>mat-menu</code>.</p>
 </p><div class="docs-markdown">
 <pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">const</span> <span class="hljs-attr">MAT_MENU_DEFAULT_OPTIONS</span>: <span class="hljs-title class_">InjectionToken</span>&lt;<span class="hljs-title class_">MatMenuDefaultOptions</span>&gt;;</code>
+<code class="docs-markdown-code">const MAT_MENU_DEFAULT_OPTIONS: InjectionToken<MatMenuDefaultOptions>;</code>
 </pre>
 </div>
 
@@ -1270,7 +1270,7 @@ and it&#39;s up to you to manage focus, if you decide to turn it off.</p>
 </h4><p class="docs-api-constant-description"><p>Injection token that determines the scroll handling while the menu is open.</p>
 </p><div class="docs-markdown">
 <pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">const</span> <span class="hljs-attr">MAT_MENU_SCROLL_STRATEGY</span>: <span class="hljs-title class_">InjectionToken</span>&lt;<span class="hljs-function">() =&gt;</span> <span class="hljs-title class_">ScrollStrategy</span>&gt;;</code>
+<code class="docs-markdown-code">const MAT_MENU_SCROLL_STRATEGY: InjectionToken<() => ScrollStrategy>;</code>
 </pre>
 </div>
 
@@ -1287,7 +1287,7 @@ and it&#39;s up to you to manage focus, if you decide to turn it off.</p>
 </div><p class="docs-api-constant-description"><p>Default top padding of the menu panel.</p>
 </p><div class="docs-markdown">
 <pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">const</span> <span class="hljs-attr">MENU_PANEL_TOP_PADDING</span>: <span class="hljs-number">8</span>;</code>
+<code class="docs-markdown-code">const MENU_PANEL_TOP_PADDING: 8;</code>
 </pre>
 </div>
 
@@ -1303,7 +1303,7 @@ as alternative token to the actual <code>MatMenuContent</code> class which could
 retention of the class and its directive metadata.</p>
 </p><div class="docs-markdown">
 <pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">const</span> <span class="hljs-attr">MAT_MENU_CONTENT</span>: <span class="hljs-title class_">InjectionToken</span>&lt;<span class="hljs-title class_">MatMenuContent</span>&gt;;</code>
+<code class="docs-markdown-code">const MAT_MENU_CONTENT: InjectionToken<MatMenuContent>;</code>
 </pre>
 </div>
 

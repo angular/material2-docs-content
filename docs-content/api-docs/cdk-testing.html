@@ -5183,7 +5183,7 @@ resolving the values and once after.</p>
 </h4><p class="docs-api-type-alias-description"><p>An async function that takes an item and returns a boolean promise</p>
 </p><div class="docs-markdown">
 <pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">type</span> <span class="hljs-title class_">AsyncPredicate</span> = <span class="hljs-function">(<span class="hljs-params"><span class="hljs-attr">item</span>: T</span>) =&gt;</span> <span class="hljs-title class_">Promise</span>&lt;<span class="hljs-built_in">boolean</span>&gt;;</code>
+<code class="docs-markdown-code">type AsyncPredicate = (item: T) => Promise<boolean>;</code>
 </pre>
 </div>
 
@@ -5197,7 +5197,7 @@ resolving the values and once after.</p>
 </h4><p class="docs-api-type-alias-description"><p>An async function that takes an item and an option value and returns a boolean promise.</p>
 </p><div class="docs-markdown">
 <pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">type</span> <span class="hljs-title class_">AsyncOptionPredicate</span> = <span class="hljs-function">(<span class="hljs-params"><span class="hljs-attr">item</span>: T, <span class="hljs-attr">option</span>: O</span>) =&gt;</span> <span class="hljs-title class_">Promise</span>&lt;<span class="hljs-built_in">boolean</span>&gt;;</code>
+<code class="docs-markdown-code">type AsyncOptionPredicate = (item: T, option: O) => Promise<boolean>;</code>
 </pre>
 </div>
 
@@ -5212,7 +5212,7 @@ resolving the values and once after.</p>
 a <code>HarnessPredicate</code>.</p>
 </p><div class="docs-markdown">
 <pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">type</span> <span class="hljs-title class_">HarnessQuery</span> = <span class="hljs-title class_">ComponentHarnessConstructor</span>&lt;T&gt; | <span class="hljs-title class_">HarnessPredicate</span>&lt;T&gt;;</code>
+<code class="docs-markdown-code">type HarnessQuery = ComponentHarnessConstructor<T> | HarnessPredicate<T>;</code>
 </pre>
 </div>
 
@@ -5236,11 +5236,11 @@ harness of type <code>C2</code></li>
 for all possible results.</p>
 </p><div class="docs-markdown">
 <pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">type</span> <span class="hljs-title class_">LocatorFnResult</span> = {
-    [I <span class="hljs-keyword">in</span> keyof T]: T[I] <span class="hljs-keyword">extends</span> <span class="hljs-title function_">new</span> (...<span class="hljs-attr">args</span>: <span class="hljs-built_in">any</span>[]) =&gt; infer C ? C : T[I] <span class="hljs-keyword">extends</span> {
-        <span class="hljs-attr">harnessType</span>: <span class="hljs-title function_">new</span> (...<span class="hljs-attr">args</span>: <span class="hljs-built_in">any</span>[]) =&gt; infer C;
-    } ? C : T[I] <span class="hljs-keyword">extends</span> <span class="hljs-built_in">string</span> ? <span class="hljs-title class_">TestElement</span> : <span class="hljs-built_in">never</span>;
-}[<span class="hljs-built_in">number</span>];</code>
+<code class="docs-markdown-code">type LocatorFnResult = {
+    [I in keyof T]: T[I] extends new (...args: any[]) => infer C ? C : T[I] extends {
+        harnessType: new (...args: any[]) => infer C;
+    } ? C : T[I] extends string ? TestElement : never;
+}[number];</code>
 </pre>
 </div>
 
@@ -5254,8 +5254,8 @@ for all possible results.</p>
 </h4><p class="docs-api-type-alias-description"><p>Data that can be attached to a custom event dispatched from a <code>TestElement</code>.</p>
 </p><div class="docs-markdown">
 <pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">type</span> <span class="hljs-title class_">EventData</span> = <span class="hljs-built_in">string</span> | <span class="hljs-built_in">number</span> | <span class="hljs-built_in">boolean</span> | <span class="hljs-title class_">Function</span> | <span class="hljs-literal">undefined</span> | <span class="hljs-literal">null</span> | <span class="hljs-title class_">EventData</span>[] | {
-    [<span class="hljs-attr">key</span>: <span class="hljs-built_in">string</span>]: <span class="hljs-title class_">EventData</span>;
+<code class="docs-markdown-code">type EventData = string | number | boolean | Function | undefined | null | EventData[] | {
+    [key: string]: EventData;
 };</code>
 </pre>
 </div>

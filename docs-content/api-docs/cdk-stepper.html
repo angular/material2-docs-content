@@ -849,7 +849,7 @@ Default behavior is assumed to be false.</p>
 the content into correct position upon step selection change.</p>
 </p><div class="docs-markdown">
 <pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">type</span> <span class="hljs-title class_">StepContentPositionState</span> = <span class="hljs-string">&#x27;previous&#x27;</span> | <span class="hljs-string">&#x27;current&#x27;</span> | <span class="hljs-string">&#x27;next&#x27;</span>;</code>
+<code class="docs-markdown-code">type StepContentPositionState = 'previous' | 'current' | 'next';</code>
 </pre>
 </div>
 
@@ -863,7 +863,7 @@ the content into correct position upon step selection change.</p>
 </h4><p class="docs-api-type-alias-description"><p>Possible orientation of a stepper.</p>
 </p><div class="docs-markdown">
 <pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">type</span> <span class="hljs-title class_">StepperOrientation</span> = <span class="hljs-string">&#x27;horizontal&#x27;</span> | <span class="hljs-string">&#x27;vertical&#x27;</span>;</code>
+<code class="docs-markdown-code">type StepperOrientation = 'horizontal' | 'vertical';</code>
 </pre>
 </div>
 
@@ -877,7 +877,7 @@ the content into correct position upon step selection change.</p>
 </h4><p class="docs-api-type-alias-description"><p>The state of each step.</p>
 </p><div class="docs-markdown">
 <pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">type</span> <span class="hljs-title class_">StepState</span> = <span class="hljs-string">&#x27;number&#x27;</span> | <span class="hljs-string">&#x27;edit&#x27;</span> | <span class="hljs-string">&#x27;done&#x27;</span> | <span class="hljs-string">&#x27;error&#x27;</span> | <span class="hljs-built_in">string</span>;</code>
+<code class="docs-markdown-code">type StepState = 'number' | 'edit' | 'done' | 'error' | string;</code>
 </pre>
 </div>
 
@@ -895,7 +895,7 @@ the content into correct position upon step selection change.</p>
 </h4><p class="docs-api-constant-description"><p>Enum to represent the different states of the steps.</p>
 </p><div class="docs-markdown">
 <pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">const</span> <span class="hljs-attr">STEP_STATE</span>: { <span class="hljs-attr">NUMBER</span>: <span class="hljs-built_in">string</span>; <span class="hljs-attr">EDIT</span>: <span class="hljs-built_in">string</span>; <span class="hljs-attr">DONE</span>: <span class="hljs-built_in">string</span>; <span class="hljs-attr">ERROR</span>: <span class="hljs-built_in">string</span>; };</code>
+<code class="docs-markdown-code">const STEP_STATE: { NUMBER: string; EDIT: string; DONE: string; ERROR: string; };</code>
 </pre>
 </div>
 
@@ -909,7 +909,7 @@ the content into correct position upon step selection change.</p>
 </h4><p class="docs-api-constant-description"><p>InjectionToken that can be used to specify the global stepper options.</p>
 </p><div class="docs-markdown">
 <pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">const</span> <span class="hljs-attr">STEPPER_GLOBAL_OPTIONS</span>: <span class="hljs-title class_">InjectionToken</span>&lt;<span class="hljs-title class_">StepperOptions</span>&gt;;</code>
+<code class="docs-markdown-code">const STEPPER_GLOBAL_OPTIONS: InjectionToken<StepperOptions>;</code>
 </pre>
 </div>
 
