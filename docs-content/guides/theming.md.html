@@ -29,20 +29,20 @@ targets the <code>html</code> selector to ensure the CSS variables are applied a
 entire application. The <code>color-scheme</code> is explicitly set to <code>light dark</code> so that
 the end user&#39;s system preferences are used to determine whether the application
 appears in light or dark mode.</p>
-<pre><code>@use '@angular/material' as mat;
+<pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;@angular/material&#x27;</span> as mat;
 
-html {
-  color-scheme: light dark;
-  @include mat.theme((
-    color: mat.$violet-palette,
-    typography: Roboto,
-    density: 0
+<span class="hljs-selector-tag">html</span> {
+  <span class="hljs-attribute">color-scheme</span>: light dark;
+  <span class="hljs-keyword">@include</span> mat.theme((
+    <span class="hljs-attribute">color</span>: mat.<span class="hljs-variable">$violet-palette</span>,
+    <span class="hljs-attribute">typography</span>: Roboto,
+    <span class="hljs-attribute">density</span>: <span class="hljs-number">0</span>
   ));
 }</code></pre><p>You can use the following styles to apply the theme’s surface background and
 on-surface text colors as a default across your application:</p>
-<pre><code>body {
-  background: var(--mat-sys-surface);
-  color: var(--mat-sys-on-surface);
+<pre><code class="language-scss"><span class="hljs-selector-tag">body</span> {
+  <span class="hljs-attribute">background</span>: <span class="hljs-built_in">var</span>(--mat-sys-surface);
+  <span class="hljs-attribute">color</span>: <span class="hljs-built_in">var</span>(--mat-sys-on-surface);
 }</code></pre><p>The <code>mat.theme</code> mixin will only declare CSS variables for the categories
 included in the input. For example, if <code>typography</code> is not defined, then
 typography CSS variables will not be included in the output.</p>
@@ -92,17 +92,17 @@ or <code>dark</code>.</p>
 tertiary color. The theme-type is set to <code>light</code> which means that only the light
 color values will be set for the application. The typography is set to Roboto
 with a standard density setting.</p>
-<pre><code>@use '@angular/material' as mat;
+<pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;@angular/material&#x27;</span> as mat;
 
-html {
-  @include mat.theme((
-    color: (
-      primary: mat.$violet-palette,
-      tertiary: mat.$orange-palette,
-      theme-type: light,
+<span class="hljs-selector-tag">html</span> {
+  <span class="hljs-keyword">@include</span> mat.theme((
+    <span class="hljs-attribute">color</span>: (
+      <span class="hljs-attribute">primary</span>: mat.<span class="hljs-variable">$violet-palette</span>,
+      <span class="hljs-attribute">tertiary</span>: mat.<span class="hljs-variable">$orange-palette</span>,
+      <span class="hljs-attribute">theme-type</span>: light,
     ),
-    typography: Roboto,
-    density: 0
+    <span class="hljs-attribute">typography</span>: Roboto,
+    <span class="hljs-attribute">density</span>: <span class="hljs-number">0</span>
   ));
 }</code></pre>
         <h3 id="typography" class="docs-header-link">
@@ -136,19 +136,19 @@ text.</p>
 and the Open Sans font family to brand text. It specifies that bold weight is
 900, medium weight is 500, and regular weight is 300. The color scheme uses the
 violet color palette with a standard density.</p>
-<pre><code>@use '@angular/material' as mat;
+<pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;@angular/material&#x27;</span> as mat;
 
-html {
-  @include mat.theme((
-    color: mat.$violet-palette,
-    typography: (
-      plain-family: Roboto,
-      brand-family: Open Sans,
-      bold-weight: 900,
-      medium-weight: 500,
-      regular-weight: 300,
+<span class="hljs-selector-tag">html</span> {
+  <span class="hljs-keyword">@include</span> mat.theme((
+    <span class="hljs-attribute">color</span>: mat.<span class="hljs-variable">$violet-palette</span>,
+    <span class="hljs-attribute">typography</span>: (
+      <span class="hljs-attribute">plain-family</span>: Roboto,
+      <span class="hljs-attribute">brand-family</span>: Open Sans,
+      <span class="hljs-attribute">bold-weight</span>: <span class="hljs-number">900</span>,
+      <span class="hljs-attribute">medium-weight</span>: <span class="hljs-number">500</span>,
+      <span class="hljs-attribute">regular-weight</span>: <span class="hljs-number">300</span>,
     ),
-    density: 0,
+    <span class="hljs-attribute">density</span>: <span class="hljs-number">0</span>,
   ));
 }</code></pre>
         <h3 id="density" class="docs-header-link">
@@ -164,13 +164,13 @@ for a component to render itself coherently.</p>
 <p>The following example theme file has a density setting of -2 which causes most
 components to include less whitespace in their layout. The color scheme uses the
 violet color palette and applies Roboto as the font-family.</p>
-<pre><code>@use '@angular/material' as mat;
+<pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;@angular/material&#x27;</span> as mat;
 
-html {
-  @include mat.theme((
-    color: mat.$violet-palette,
-    typography: Roboto,
-    density: -2,
+<span class="hljs-selector-tag">html</span> {
+  <span class="hljs-keyword">@include</span> mat.theme((
+    <span class="hljs-attribute">color</span>: mat.<span class="hljs-variable">$violet-palette</span>,
+    <span class="hljs-attribute">typography</span>: Roboto,
+    <span class="hljs-attribute">density</span>: -<span class="hljs-number">2</span>,
   ));
 }</code></pre><p>Setting the density below 0 can reduce accessibility and make navigation harder
 for users of assistive technology.</p>
@@ -217,7 +217,7 @@ your application’s theme:</p>
 builds custom color palettes based on a single color input for the primary
 color, and optionally color inputs to further customize secondary, tertiary, and
 neutral palettes:</p>
-<pre><code>ng generate @angular/material:theme-color</code></pre>
+<pre><code class="language-bash">ng generate @angular/material:theme-color</code></pre>
         <h2 id="loading-fonts" class="docs-header-link">
           <span header-link="loading-fonts"></span>
           Loading Fonts
@@ -225,9 +225,9 @@ neutral palettes:</p>
       <p>You can use Google Fonts as one option to load fonts in your application. For
 example, the following code in an application’s <code>&lt;head&gt;</code> loads the font family
 Roboto with the font weights 700, 500, and 400:</p>
-<pre><code><link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"></code></pre><p>Learn more about using fonts with
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">&quot;preconnect&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;https://fonts.googleapis.com&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">&quot;preconnect&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;https://fonts.gstatic.com&quot;</span> <span class="hljs-attr">crossorigin</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&amp;family=Roboto:wght@400;500;700&amp;display=swap&quot;</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">&quot;stylesheet&quot;</span>&gt;</span></code></pre><p>Learn more about using fonts with
 <a href="https://developers.google.com/fonts/docs/getting_started">Google Fonts</a>. By
 default, projects created with the Angular CLI are
 <a href="https://angular.dev/reference/configs/workspace-config#fonts-optimization-options">configured</a>
@@ -245,32 +245,32 @@ define a value for <code>color-scheme</code>, then the light colors will always 
 <p>You can define <code>color-scheme: light</code> or <code>color-scheme: dark</code> to explicitly
 define your application’s mode. To set the mode depending on the user’s system
 preferences, use <code>color-scheme: light-dark</code> as shown in the following example:</p>
-<pre><code>@use '@angular/material' as mat;
+<pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;@angular/material&#x27;</span> as mat;
 
-html {
-  color-scheme: light dark;
-  @include mat.theme((
-    color: mat.$violet-palette,
-    typography: Roboto,
-    density: 0
+<span class="hljs-selector-tag">html</span> {
+  <span class="hljs-attribute">color-scheme</span>: light dark;
+  <span class="hljs-keyword">@include</span> mat.theme((
+    <span class="hljs-attribute">color</span>: mat.<span class="hljs-variable">$violet-palette</span>,
+    <span class="hljs-attribute">typography</span>: Roboto,
+    <span class="hljs-attribute">density</span>: <span class="hljs-number">0</span>
   ));
 }</code></pre><p>You can also use the strategy of defining <code>color-scheme</code> under a CSS selector so
 that the mode depends on whether that class has been applied. In the following
 example, the application always displays the light mode theme unless the class
 “dark-mode” is added to the HTML body.</p>
-<pre><code>@use '@angular/material' as mat;
+<pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;@angular/material&#x27;</span> as mat;
 
-html {
-  color-scheme: light;
-  @include mat.theme((
-    color: mat.$violet-palette,
-    typography: Roboto,
-    density: 0
+<span class="hljs-selector-tag">html</span> {
+  <span class="hljs-attribute">color-scheme</span>: light;
+  <span class="hljs-keyword">@include</span> mat.theme((
+    <span class="hljs-attribute">color</span>: mat.<span class="hljs-variable">$violet-palette</span>,
+    <span class="hljs-attribute">typography</span>: Roboto,
+    <span class="hljs-attribute">density</span>: <span class="hljs-number">0</span>
   ));
 }
 
-body.dark-mode {
-  color-scheme: dark;
+<span class="hljs-selector-tag">body</span><span class="hljs-selector-class">.dark-mode</span> {
+  <span class="hljs-attribute">color-scheme</span>: dark;
 }</code></pre><p>Angular Material does not automatically apply different styles or themes based
 on user preference media queries, such as <code>color-scheme</code>, <code>prefers-color-scheme</code>
 or <code>prefers-contrast</code>. Instead, Angular Material gives you the flexibility to
@@ -293,19 +293,19 @@ color schemes in your application.</p>
 different contexts. In this case, a cyan-based palette is applied to a container
 of information about deleting data, causing buttons and other components to have
 a unique and attention-grabbing style applied:</p>
-<pre><code>@use '@angular/material' as mat;
+<pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;@angular/material&#x27;</span> as mat;
 
-html {
-  @include mat.theme((
-    color: mat.$violet-palette,
-    typography: Roboto,
-    density: 0,
+<span class="hljs-selector-tag">html</span> {
+  <span class="hljs-keyword">@include</span> mat.theme((
+    <span class="hljs-attribute">color</span>: mat.<span class="hljs-variable">$violet-palette</span>,
+    <span class="hljs-attribute">typography</span>: Roboto,
+    <span class="hljs-attribute">density</span>: <span class="hljs-number">0</span>,
   ));
 }
 
-.example-bright-container {
-  @include mat.theme((
-    color: mat.$cyan-palette,
+<span class="hljs-selector-class">.example-bright-container</span> {
+  <span class="hljs-keyword">@include</span> mat.theme((
+    <span class="hljs-attribute">color</span>: mat.<span class="hljs-variable">$cyan-palette</span>,
   ));
 }</code></pre>
         <h2 id="using-theme-styles" class="docs-header-link">
@@ -322,11 +322,11 @@ text consistency through the application.</p>
 <p>The following example styles demonstrate a component using the color and
 typography variables to create an application-wide banner presenting important
 information to the user:</p>
-<pre><code>:host {
-  background: var(--mat-sys-primary-container);
-  color: var(--mat-sys-on-primary-container);
-  border: 1px solid var(--mat-sys-outline-variant);
-  font: var(--mat-sys-body-large);
+<pre><code class="language-scss"><span class="hljs-selector-pseudo">:host</span> {
+  <span class="hljs-attribute">background</span>: <span class="hljs-built_in">var</span>(--mat-sys-primary-container);
+  <span class="hljs-attribute">color</span>: <span class="hljs-built_in">var</span>(--mat-sys-on-primary-container);
+  <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid <span class="hljs-built_in">var</span>(--mat-sys-outline-variant);
+  <span class="hljs-attribute">font</span>: <span class="hljs-built_in">var</span>(--mat-sys-body-large);
 }</code></pre><p>See the <a href="https://material.angular.dev/guide/system-variables">Theme Variables</a> guide for a
 comprehensive list of these variables, examples of where they are used, and how
 components can depend on them.</p>
@@ -352,33 +352,33 @@ renamed in future versions.</p>
 the application.</p>
 <p>The following example applies a violet color palette for the application, but
 alters the <code>primary-container</code> token to a specific shade of blue.</p>
-<pre><code>@use '@angular/material' as mat;
+<pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;@angular/material&#x27;</span> as mat;
 
-html {
-  color-scheme: light dark;
-  @include mat.theme((
-    color: mat.$violet-palette,
-    typography: Roboto,
-    density: 0
+<span class="hljs-selector-tag">html</span> {
+  <span class="hljs-attribute">color-scheme</span>: light dark;
+  <span class="hljs-keyword">@include</span> mat.theme((
+    <span class="hljs-attribute">color</span>: mat.<span class="hljs-variable">$violet-palette</span>,
+    <span class="hljs-attribute">typography</span>: Roboto,
+    <span class="hljs-attribute">density</span>: <span class="hljs-number">0</span>
   ));
 
-  .example-orange-primary-container {
-    @include mat.theme-overrides((
-      primary-container: #84ffff
+  <span class="hljs-selector-class">.example-orange-primary-container</span> {
+    <span class="hljs-keyword">@include</span> mat.theme-overrides((
+      <span class="hljs-attribute">primary-container</span>: <span class="hljs-number">#84ffff</span>
     ));
   }
 }</code></pre><p>Alternatively, an optional override map can be provided in the <code>mat.theme</code> mixin
 to replace values applied by the mixin:</p>
-<pre><code>@use '@angular/material' as mat;
+<pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;@angular/material&#x27;</span> as mat;
 
-html {
-  color-scheme: light dark;
-  @include mat.theme((
-    color: mat.$violet-palette,
-    typography: Roboto,
-    density: 0
-  ), $overrides: (
-    primary-container: orange,
+<span class="hljs-selector-tag">html</span> {
+  <span class="hljs-attribute">color-scheme</span>: light dark;
+  <span class="hljs-keyword">@include</span> mat.theme((
+    <span class="hljs-attribute">color</span>: mat.<span class="hljs-variable">$violet-palette</span>,
+    <span class="hljs-attribute">typography</span>: Roboto,
+    <span class="hljs-attribute">density</span>: <span class="hljs-number">0</span>
+  ), <span class="hljs-variable">$overrides</span>: (
+    <span class="hljs-attribute">primary-container</span>: orange,
   ));
 }</code></pre>
         <h3 id="component-tokens" class="docs-header-link">
@@ -393,11 +393,11 @@ page under the Styling tab.</p>
 <p>The following example demonstrates the Card’s <code>overrides</code> API to change the
 background color to red, increase the corner border radius, and specify a larger
 title font size.</p>
-<pre><code>html {
-  @include mat.card-overrides((
-    elevated-container-color: red,
-    elevated-container-shape: 32px,
-    title-text-size: 2rem,
+<pre><code class="language-scss"><span class="hljs-selector-tag">html</span> {
+  <span class="hljs-keyword">@include</span> mat.card-overrides((
+    <span class="hljs-attribute">elevated-container-color</span>: red,
+    <span class="hljs-attribute">elevated-container-shape</span>: <span class="hljs-number">32px</span>,
+    <span class="hljs-attribute">title-text-size</span>: <span class="hljs-number">2rem</span>,
   ));
 }</code></pre>
         <h3 id="direct-style-overrides" class="docs-header-link">
