@@ -1,0 +1,7 @@
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-container&quot;</span> <span class="hljs-attr">cdkScrollable</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">cdkDropList</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-list&quot;</span> (<span class="hljs-attr">cdkDropListDropped</span>)=<span class="hljs-string">&quot;drop($event)&quot;</span>&gt;</span>
+    @for (elementName of elementNames; track elementName) {
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-box&quot;</span> <span class="hljs-attr">cdkDrag</span>&gt;</span>{{elementName}}<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    }
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
