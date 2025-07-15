@@ -460,6 +460,20 @@ const EXAMPLE_COMPONENTS = {
         "primaryFile": "cdk-drag-drop-root-element-example.ts",
         "importPath": "cdk/drag-drop"
     },
+    "cdk-drag-drop-scrollable": {
+        "packagePath": "cdk/drag-drop/cdk-drag-drop-scrollable",
+        "title": "Drag&Drop scrollable",
+        "componentName": "CdkDragDropScrollableExample",
+        "files": [
+            "cdk-drag-drop-scrollable-example.ts",
+            "cdk-drag-drop-scrollable-example.html",
+            "cdk-drag-drop-scrollable-example.css"
+        ],
+        "selector": "cdk-drag-drop-scrollable-example",
+        "additionalComponents": [],
+        "primaryFile": "cdk-drag-drop-scrollable-example.ts",
+        "importPath": "cdk/drag-drop"
+    },
     "cdk-drag-drop-sort-predicate": {
         "packagePath": "cdk/drag-drop/cdk-drag-drop-sort-predicate",
         "title": "Drag&Drop sort predicate",
@@ -5097,6 +5111,8 @@ async function loadExample(id) {
         case 'cdk-drag-drop-overview':
             return import('@angular/components-examples/cdk/drag-drop');
         case 'cdk-drag-drop-root-element':
+            return import('@angular/components-examples/cdk/drag-drop');
+        case 'cdk-drag-drop-scrollable':
             return import('@angular/components-examples/cdk/drag-drop');
         case 'cdk-drag-drop-sort-predicate':
             return import('@angular/components-examples/cdk/drag-drop');
