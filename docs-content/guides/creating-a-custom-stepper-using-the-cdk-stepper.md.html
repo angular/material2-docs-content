@@ -34,8 +34,8 @@
 
   <span class="hljs-tag">&lt;<span class="hljs-name">footer</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;step-navigation-bar&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;nav-button&quot;</span> <span class="hljs-attr">cdkStepperPrevious</span>&gt;</span><span class="hljs-symbol">&amp;larr;</span><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-    @for (step of steps; track step) {
-      <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;step&quot;</span> [<span class="hljs-attr">class.active</span>]=<span class="hljs-string">&quot;selectedIndex === $index&quot;</span> (<span class="hljs-attr">click</span>)=<span class="hljs-string">&quot;onClick(i)&quot;</span>&gt;</span>
+    @for (step of steps; track step; let i = $index) {
+      <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;step&quot;</span> [<span class="hljs-attr">class.active</span>]=<span class="hljs-string">&quot;selectedIndex === i&quot;</span> (<span class="hljs-attr">click</span>)=<span class="hljs-string">&quot;onClick(i)&quot;</span>&gt;</span>
         Step {{i + 1}}
       <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
     }
