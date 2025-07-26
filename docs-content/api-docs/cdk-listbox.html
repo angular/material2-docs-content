@@ -69,7 +69,10 @@
       
 
 <tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">&#39;tabindex&#39;</span>)
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">{
+    alias: &#39;tabindex&#39;,
+    transform: (value: unknown) =&gt; (value == null ? undefined : numberAttribute(value)),
+}</span>)
         </div><p class="docs-api-property-name">
       <code>enabledTabIndex: </code>
     </p>
