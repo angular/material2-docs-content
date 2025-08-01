@@ -245,4 +245,14 @@ declare class CdkDragDropCopyListExample {
     static ɵcmp: i0.ɵɵComponentDeclaration<CdkDragDropCopyListExample, "cdk-drag-drop-copy-list-example", never, {}, {}, never, never, true, never>;
 }
 
-export { CdkDragDropAxisLockExample, CdkDragDropBoundaryExample, CdkDragDropConnectedSortingExample, CdkDragDropConnectedSortingGroupExample, CdkDragDropCopyListExample, CdkDragDropCustomPlaceholderExample, CdkDragDropCustomPreviewExample, CdkDragDropDelayExample, CdkDragDropDisabledExample, CdkDragDropDisabledSortingExample, CdkDragDropEnterPredicateExample, CdkDragDropFreeDragPositionExample, CdkDragDropHandleExample, CdkDragDropHorizontalSortingExample, CdkDragDropMixedSortingExample, CdkDragDropOverviewExample, CdkDragDropRootElementExample, CdkDragDropSortPredicateExample, CdkDragDropSortingExample, CdkDragDropTableExample, CdkDragDropTabsExample };
+/**
+ * @title Drag&Drop scrollable
+ */
+declare class CdkDragDropScrollableExample {
+    elementNames: string[];
+    drop(event: CdkDragDrop<string[]>): void;
+    static ɵfac: i0.ɵɵFactoryDeclaration<CdkDragDropScrollableExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<CdkDragDropScrollableExample, "cdk-drag-drop-scrollable-example", never, {}, {}, never, never, true, never>;
+}
+
+export { CdkDragDropAxisLockExample, CdkDragDropBoundaryExample, CdkDragDropConnectedSortingExample, CdkDragDropConnectedSortingGroupExample, CdkDragDropCopyListExample, CdkDragDropCustomPlaceholderExample, CdkDragDropCustomPreviewExample, CdkDragDropDelayExample, CdkDragDropDisabledExample, CdkDragDropDisabledSortingExample, CdkDragDropEnterPredicateExample, CdkDragDropFreeDragPositionExample, CdkDragDropHandleExample, CdkDragDropHorizontalSortingExample, CdkDragDropMixedSortingExample, CdkDragDropOverviewExample, CdkDragDropRootElementExample, CdkDragDropScrollableExample, CdkDragDropSortPredicateExample, CdkDragDropSortingExample, CdkDragDropTableExample, CdkDragDropTabsExample };
