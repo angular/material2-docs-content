@@ -9,6 +9,7 @@ import * as i3 from '@angular/material/icon';
 import { MatIconModule } from '@angular/material/icon';
 import * as i1$1 from '@angular/material/tabs';
 import { MatTabsModule } from '@angular/material/tabs';
+import { CdkScrollable } from '@angular/cdk/scrolling';
 
 /**
  * @title Drag&Drop position locking
@@ -482,5 +483,140 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "20.0.0", ngImpor
             args: [{ selector: 'cdk-drag-drop-copy-list-example', imports: [CdkDropList, CdkDrag], template: "<div class=\"example-container\">\n  <h2>Products</h2>\n\n  <div\n    cdkDropList\n    [cdkDropListData]=\"products\"\n    [cdkDropListConnectedTo]=\"[cartList]\"\n    cdkDropListSortingDisabled\n    cdkDropListHasAnchor\n    class=\"example-list\">\n    @for (product of products; track $index) {\n      <div class=\"example-box\" cdkDrag [cdkDragData]=\"product\">{{product}}</div>\n    }\n  </div>\n</div>\n\n<div class=\"example-container\">\n  <h2>Shopping cart</h2>\n\n  <div\n    cdkDropList\n    #cartList=\"cdkDropList\"\n    [cdkDropListData]=\"cart\"\n    class=\"example-list\"\n    (cdkDropListDropped)=\"drop($event)\">\n    @for (product of cart; track $index) {\n      <div class=\"example-box\" cdkDrag>{{product}}</div>\n    }\n  </div>\n</div>\n\n", styles: [".example-container {\n  width: 400px;\n  max-width: 100%;\n  margin: 0 25px 25px 0;\n  display: inline-block;\n  vertical-align: top;\n}\n\n.example-list {\n  border: solid 1px #ccc;\n  min-height: 60px;\n  background: white;\n  border-radius: 4px;\n  overflow: hidden;\n  display: block;\n}\n\n.example-box {\n  padding: 20px 10px;\n  border-bottom: solid 1px #ccc;\n  color: rgba(0, 0, 0, 0.87);\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  justify-content: space-between;\n  box-sizing: border-box;\n  cursor: move;\n  background: white;\n  font-size: 14px;\n}\n\n.cdk-drag-preview {\n  box-sizing: border-box;\n  border-radius: 4px;\n  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),\n              0 8px 10px 1px rgba(0, 0, 0, 0.14),\n              0 3px 14px 2px rgba(0, 0, 0, 0.12);\n}\n\n.cdk-drag-animating {\n  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);\n}\n\n.example-box:last-child {\n  border: none;\n}\n\n.example-list.cdk-drop-list-dragging .example-box:not(.cdk-drag-placeholder) {\n  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);\n}\n"] }]
         }] });
 
-export { CdkDragDropAxisLockExample, CdkDragDropBoundaryExample, CdkDragDropConnectedSortingExample, CdkDragDropConnectedSortingGroupExample, CdkDragDropCopyListExample, CdkDragDropCustomPlaceholderExample, CdkDragDropCustomPreviewExample, CdkDragDropDelayExample, CdkDragDropDisabledExample, CdkDragDropDisabledSortingExample, CdkDragDropEnterPredicateExample, CdkDragDropFreeDragPositionExample, CdkDragDropHandleExample, CdkDragDropHorizontalSortingExample, CdkDragDropMixedSortingExample, CdkDragDropOverviewExample, CdkDragDropRootElementExample, CdkDragDropSortPredicateExample, CdkDragDropSortingExample, CdkDragDropTableExample, CdkDragDropTabsExample };
+/**
+ * @title Drag&Drop scrollable
+ */
+class CdkDragDropScrollableExample {
+    elementNames = [
+        'Hydrogen',
+        'Helium',
+        'Lithium',
+        'Beryllium',
+        'Boron',
+        'Carbon',
+        'Nitrogen',
+        'Oxygen',
+        'Fluorine',
+        'Neon',
+        'Sodium',
+        'Magnesium',
+        'Aluminum',
+        'Silicon',
+        'Phosphorus',
+        'Sulfur',
+        'Chlorine',
+        'Argon',
+        'Potassium',
+        'Calcium',
+        'Scandium',
+        'Titanium',
+        'Vanadium',
+        'Chromium',
+        'Manganese',
+        'Iron',
+        'Cobalt',
+        'Nickel',
+        'Copper',
+        'Zinc',
+        'Gallium',
+        'Germanium',
+        'Arsenic',
+        'Selenium',
+        'Bromine',
+        'Krypton',
+        'Rubidium',
+        'Strontium',
+        'Yttrium',
+        'Zirconium',
+        'Niobium',
+        'Molybdenum',
+        'Technetium',
+        'Ruthenium',
+        'Rhodium',
+        'Palladium',
+        'Silver',
+        'Cadmium',
+        'Indium',
+        'Tin',
+        'Antimony',
+        'Tellurium',
+        'Iodine',
+        'Xenon',
+        'Cesium',
+        'Barium',
+        'Lanthanum',
+        'Cerium',
+        'Praseodymium',
+        'Neodymium',
+        'Promethium',
+        'Samarium',
+        'Europium',
+        'Gadolinium',
+        'Terbium',
+        'Dysprosium',
+        'Holmium',
+        'Erbium',
+        'Thulium',
+        'Ytterbium',
+        'Lutetium',
+        'Hafnium',
+        'Tantalum',
+        'Tungsten',
+        'Rhenium',
+        'Osmium',
+        'Iridium',
+        'Platinum',
+        'Gold',
+        'Mercury',
+        'Thallium',
+        'Lead',
+        'Bismuth',
+        'Polonium',
+        'Astatine',
+        'Radon',
+        'Francium',
+        'Radium',
+        'Actinium',
+        'Thorium',
+        'Protactinium',
+        'Uranium',
+        'Neptunium',
+        'Plutonium',
+        'Americium',
+        'Curium',
+        'Berkelium',
+        'Californium',
+        'Einsteinium',
+        'Fermium',
+        'Mendelevium',
+        'Nobelium',
+        'Lawrencium',
+        'Rutherfordium',
+        'Dubnium',
+        'Seaborgium',
+        'Bohrium',
+        'Hassium',
+        'Meitnerium',
+        'Darmstadtium',
+        'Roentgenium',
+        'Copernicium',
+        'Nihonium',
+        'Flerovium',
+        'Moscovium',
+        'Livermorium',
+        'Tennessine',
+        'Oganesson',
+    ];
+    drop(event) {
+        moveItemInArray(this.elementNames, event.previousIndex, event.currentIndex);
+    }
+    static ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "20.0.0", ngImport: i0, type: CdkDragDropScrollableExample, deps: [], target: i0.ɵɵFactoryTarget.Component });
+    static ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "17.0.0", version: "20.0.0", type: CdkDragDropScrollableExample, isStandalone: true, selector: "cdk-drag-drop-scrollable-example", ngImport: i0, template: "<div class=\"example-container\" cdkScrollable>\n  <div cdkDropList class=\"example-list\" (cdkDropListDropped)=\"drop($event)\">\n    @for (elementName of elementNames; track elementName) {\n      <div class=\"example-box\" cdkDrag>{{elementName}}</div>\n    }\n  </div>\n</div>", styles: [".example-container {\n  height: 20rem;\n  overflow: auto;\n}\n\n.example-list {\n  width: 500px;\n  max-width: 100%;\n  border: solid 1px #ccc;\n  min-height: 60px;\n  display: block;\n  background: white;\n  border-radius: 4px;\n  overflow: hidden;\n}\n\n.example-box {\n  padding: 20px 10px;\n  border-bottom: solid 1px #ccc;\n  color: rgba(0, 0, 0, 0.87);\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  justify-content: space-between;\n  box-sizing: border-box;\n  cursor: move;\n  background: white;\n  font-size: 14px;\n}\n\n.cdk-drag-preview {\n  border: none;\n  box-sizing: border-box;\n  border-radius: 4px;\n  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),\n              0 8px 10px 1px rgba(0, 0, 0, 0.14),\n              0 3px 14px 2px rgba(0, 0, 0, 0.12);\n}\n\n.cdk-drag-placeholder {\n  opacity: 0;\n}\n\n.cdk-drag-animating {\n  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);\n}\n\n.example-box:last-child {\n  border: none;\n}\n\n.example-list.cdk-drop-list-dragging .example-box:not(.cdk-drag-placeholder) {\n  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);\n}\n"], dependencies: [{ kind: "directive", type: CdkDropList, selector: "[cdkDropList], cdk-drop-list", inputs: ["cdkDropListConnectedTo", "cdkDropListData", "cdkDropListOrientation", "id", "cdkDropListLockAxis", "cdkDropListDisabled", "cdkDropListSortingDisabled", "cdkDropListEnterPredicate", "cdkDropListSortPredicate", "cdkDropListAutoScrollDisabled", "cdkDropListAutoScrollStep", "cdkDropListElementContainer", "cdkDropListHasAnchor"], outputs: ["cdkDropListDropped", "cdkDropListEntered", "cdkDropListExited", "cdkDropListSorted"], exportAs: ["cdkDropList"] }, { kind: "directive", type: CdkDrag, selector: "[cdkDrag]", inputs: ["cdkDragData", "cdkDragLockAxis", "cdkDragRootElement", "cdkDragBoundary", "cdkDragStartDelay", "cdkDragFreeDragPosition", "cdkDragDisabled", "cdkDragConstrainPosition", "cdkDragPreviewClass", "cdkDragPreviewContainer", "cdkDragScale"], outputs: ["cdkDragStarted", "cdkDragReleased", "cdkDragEnded", "cdkDragEntered", "cdkDragExited", "cdkDragDropped", "cdkDragMoved"], exportAs: ["cdkDrag"] }, { kind: "directive", type: CdkScrollable, selector: "[cdk-scrollable], [cdkScrollable]" }] });
+}
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "20.0.0", ngImport: i0, type: CdkDragDropScrollableExample, decorators: [{
+            type: Component,
+            args: [{ selector: 'cdk-drag-drop-scrollable-example', imports: [CdkDropList, CdkDrag, CdkScrollable], template: "<div class=\"example-container\" cdkScrollable>\n  <div cdkDropList class=\"example-list\" (cdkDropListDropped)=\"drop($event)\">\n    @for (elementName of elementNames; track elementName) {\n      <div class=\"example-box\" cdkDrag>{{elementName}}</div>\n    }\n  </div>\n</div>", styles: [".example-container {\n  height: 20rem;\n  overflow: auto;\n}\n\n.example-list {\n  width: 500px;\n  max-width: 100%;\n  border: solid 1px #ccc;\n  min-height: 60px;\n  display: block;\n  background: white;\n  border-radius: 4px;\n  overflow: hidden;\n}\n\n.example-box {\n  padding: 20px 10px;\n  border-bottom: solid 1px #ccc;\n  color: rgba(0, 0, 0, 0.87);\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  justify-content: space-between;\n  box-sizing: border-box;\n  cursor: move;\n  background: white;\n  font-size: 14px;\n}\n\n.cdk-drag-preview {\n  border: none;\n  box-sizing: border-box;\n  border-radius: 4px;\n  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),\n              0 8px 10px 1px rgba(0, 0, 0, 0.14),\n              0 3px 14px 2px rgba(0, 0, 0, 0.12);\n}\n\n.cdk-drag-placeholder {\n  opacity: 0;\n}\n\n.cdk-drag-animating {\n  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);\n}\n\n.example-box:last-child {\n  border: none;\n}\n\n.example-list.cdk-drop-list-dragging .example-box:not(.cdk-drag-placeholder) {\n  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);\n}\n"] }]
+        }] });
+
+export { CdkDragDropAxisLockExample, CdkDragDropBoundaryExample, CdkDragDropConnectedSortingExample, CdkDragDropConnectedSortingGroupExample, CdkDragDropCopyListExample, CdkDragDropCustomPlaceholderExample, CdkDragDropCustomPreviewExample, CdkDragDropDelayExample, CdkDragDropDisabledExample, CdkDragDropDisabledSortingExample, CdkDragDropEnterPredicateExample, CdkDragDropFreeDragPositionExample, CdkDragDropHandleExample, CdkDragDropHorizontalSortingExample, CdkDragDropMixedSortingExample, CdkDragDropOverviewExample, CdkDragDropRootElementExample, CdkDragDropScrollableExample, CdkDragDropSortPredicateExample, CdkDragDropSortingExample, CdkDragDropTableExample, CdkDragDropTabsExample };
 //# sourceMappingURL=drag-drop.mjs.map
