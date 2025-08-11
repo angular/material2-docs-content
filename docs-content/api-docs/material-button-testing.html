@@ -755,6 +755,39 @@ selector within the current harness&#39;s content.</p>
     <tr class="docs-api-method-name-row">
       <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
           async
+        </div>getType
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Gets the type of the button. Supported values are &#39;button&#39;, &#39;submit&#39;, and &#39;reset&#39;.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;ButtonType | null&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        
+      </p>
+    </td>
+  </tr></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
+          async
         </div>getVariant
       </th>
     </tr>
@@ -1031,6 +1064,19 @@ content.</p>
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>buttonType: ButtonType</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Only find instances with the specified type.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
       <code>disabled: boolean</code>
     </p>
   </td>
@@ -1101,6 +1147,20 @@ content.</p>
 </p><div class="docs-markdown">
 <pre class="docs-markdown-pre">
 <code class="docs-markdown-code">type ButtonAppearance = 'text' | 'filled' | 'elevated' | 'outlined' | 'tonal';</code>
+</pre>
+</div>
+
+
+    
+      
+
+<h4 id="ButtonType" class="docs-header-link docs-api-h4 docs-api-type-alias-name">
+  <span header-link="ButtonType"></span>
+  <code>ButtonType</code>
+</h4><p class="docs-api-type-alias-description"><p>Possible button types.</p>
+</p><div class="docs-markdown">
+<pre class="docs-markdown-pre">
+<code class="docs-markdown-code">type ButtonType = 'button' | 'submit' | 'reset';</code>
 </pre>
 </div>
 
