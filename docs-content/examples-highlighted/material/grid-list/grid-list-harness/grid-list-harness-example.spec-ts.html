@@ -2,7 +2,6 @@
 <span class="hljs-keyword">import</span> {<span class="hljs-title class_">TestbedHarnessEnvironment</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/testing/testbed&#x27;</span>;
 <span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatGridListHarness</span>, <span class="hljs-title class_">MatGridTileHarness</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/grid-list/testing&#x27;</span>;
 <span class="hljs-keyword">import</span> {<span class="hljs-title class_">HarnessLoader</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/testing&#x27;</span>;
-<span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatGridListModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/grid-list&#x27;</span>;
 <span class="hljs-keyword">import</span> {<span class="hljs-title class_">GridListHarnessExample</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./grid-list-harness-example&#x27;</span>;
 
 <span class="hljs-title function_">describe</span>(<span class="hljs-string">&#x27;GridListHarnessExample&#x27;</span>, <span class="hljs-function">() =&gt;</span> {
@@ -10,9 +9,6 @@
   <span class="hljs-keyword">let</span> <span class="hljs-attr">loader</span>: <span class="hljs-title class_">HarnessLoader</span>;
 
   <span class="hljs-title function_">beforeEach</span>(<span class="hljs-function">() =&gt;</span> {
-    <span class="hljs-title class_">TestBed</span>.<span class="hljs-title function_">configureTestingModule</span>({
-      <span class="hljs-attr">imports</span>: [<span class="hljs-title class_">MatGridListModule</span>, <span class="hljs-title class_">GridListHarnessExample</span>],
-    });
     fixture = <span class="hljs-title class_">TestBed</span>.<span class="hljs-title function_">createComponent</span>(<span class="hljs-title class_">GridListHarnessExample</span>);
     fixture.<span class="hljs-title function_">detectChanges</span>();
     loader = <span class="hljs-title class_">TestbedHarnessEnvironment</span>.<span class="hljs-title function_">loader</span>(fixture);
