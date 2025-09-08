@@ -337,7 +337,7 @@ in the <code>connectedTo</code> of another <code>CdkDropList</code>.</p>
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">&#39;cdkDropListLockAxis&#39;</span>)
         </div><p class="docs-api-property-name">
-      <code>lockAxis: DragAxis</code>
+      <code>lockAxis: DragAxis | null</code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Locks the position of the draggable elements inside the container along the specified axis.</p>
@@ -729,7 +729,7 @@ Can be used to restore the element&#39;s position for a returning user.</p>
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">&#39;cdkDragLockAxis&#39;</span>)
         </div><p class="docs-api-property-name">
-      <code>lockAxis: DragAxis</code>
+      <code>lockAxis: DragAxis | null</code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Locks the position of the dragged element along the specified axis.</p>
@@ -1448,7 +1448,7 @@ pointer down before starting to drag the element.</p>
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>lockAxis: &#39;x&#39; | &#39;y&#39;</code>
+      <code>lockAxis: &#39;x&#39; | &#39;y&#39; | null</code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Axis along which dragging is locked.</p>
@@ -2459,7 +2459,7 @@ by dragging it into another container.</p>
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>lockAxis: &#39;x&#39; | &#39;y&#39;</code>
+      <code>lockAxis: &#39;x&#39; | &#39;y&#39; | null</code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Locks the position of the draggable elements inside the container along the specified axis.</p>
@@ -4130,7 +4130,7 @@ items and drop lists within a module or a component.</p>
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>lockAxis: DragAxis</code>
+      <code>lockAxis: DragAxis | null</code>
     </p>
   </td>
   <td class="docs-api-property-description"></td>
