@@ -4007,7 +4007,7 @@ the submenu.</p>
 </h4><p class="docs-api-constant-description"><p>Provider that provides the parent menu stack, or a new menu stack if there is no parent one.</p>
 </p><div class="docs-markdown">
 <pre class="docs-markdown-pre">
-<code class="docs-markdown-code">const PARENT_OR_NEW_MENU_STACK_PROVIDER: { provide: InjectionToken<MenuStack>; deps: Optional[][]; useFactory: (parentMenuStack?: MenuStack) => MenuStack; };</code>
+<code class="docs-markdown-code">const PARENT_OR_NEW_MENU_STACK_PROVIDER: { provide: InjectionToken<MenuStack>; useFactory: () => MenuStack; };</code>
 </pre>
 </div>
 
@@ -4021,7 +4021,7 @@ the submenu.</p>
 </h4><p class="docs-api-constant-description"><p>Provider that provides the parent menu stack, or a new inline menu stack if there is no parent one.</p>
 </p><div class="docs-markdown">
 <pre class="docs-markdown-pre">
-<code class="docs-markdown-code">const PARENT_OR_NEW_INLINE_MENU_STACK_PROVIDER: (orientation: "horizontal" | "vertical") => { provide: InjectionToken<MenuStack>; deps: Optional[][]; useFactory: (parentMenuStack?: MenuStack) => MenuStack; };</code>
+<code class="docs-markdown-code">const PARENT_OR_NEW_INLINE_MENU_STACK_PROVIDER: (orientation: "horizontal" | "vertical") => { provide: InjectionToken<MenuStack>; useFactory: () => MenuStack; };</code>
 </pre>
 </div>
 
