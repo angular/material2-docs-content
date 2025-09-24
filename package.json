@@ -1,6 +1,6 @@
 {
   "name": "@angular/components-examples",
-  "version": "21.0.0-next.5+sha-465e7a5",
+  "version": "21.0.0-next.5+sha-5373ced",
   "description": "Angular Components Examples",
   "private": true,
   "repository": {
@@ -259,15 +259,15 @@
   },
   "homepage": "https://github.com/angular/components#readme",
   "peerDependencies": {
-    "@angular/cdk": "21.0.0-next.5+sha-465e7a5",
-    "@angular/cdk-experimental": "21.0.0-next.5+sha-465e7a5",
+    "@angular/cdk": "21.0.0-next.5+sha-5373ced",
+    "@angular/cdk-experimental": "21.0.0-next.5+sha-5373ced",
     "@angular/core": "^21.0.0-0 || ^21.1.0-0 || ^21.2.0-0 || ^21.3.0-0 || ^22.0.0-0",
     "@angular/common": "^21.0.0-0 || ^21.1.0-0 || ^21.2.0-0 || ^21.3.0-0 || ^22.0.0-0",
-    "@angular/material": "21.0.0-next.5+sha-465e7a5",
-    "@angular/material-experimental": "21.0.0-next.5+sha-465e7a5",
-    "@angular/material-moment-adapter": "21.0.0-next.5+sha-465e7a5",
-    "@angular/material-luxon-adapter": "21.0.0-next.5+sha-465e7a5",
-    "@angular/material-date-fns-adapter": "21.0.0-next.5+sha-465e7a5"
+    "@angular/material": "21.0.0-next.5+sha-5373ced",
+    "@angular/material-experimental": "21.0.0-next.5+sha-5373ced",
+    "@angular/material-moment-adapter": "21.0.0-next.5+sha-5373ced",
+    "@angular/material-luxon-adapter": "21.0.0-next.5+sha-5373ced",
+    "@angular/material-date-fns-adapter": "21.0.0-next.5+sha-5373ced"
   },
   "devDependencies": {
     "@angular/cdk": "workspace:*",
