@@ -1,6 +1,6 @@
 {
   "name": "@angular/components-examples",
-  "version": "21.0.0-next.5+sha-6fba204",
+  "version": "21.0.0-next.5+sha-821830d",
   "description": "Angular Components Examples",
   "private": true,
   "repository": {
@@ -21,235 +21,235 @@
       "default": "./package.json"
     },
     ".": {
-      "types": "./index.d.ts",
+      "types": "./types/components-examples.d.ts",
       "default": "./fesm2022/components-examples.mjs"
     },
     "./cdk-experimental/popover-edit": {
-      "types": "./cdk-experimental/popover-edit/index.d.ts",
+      "types": "./types/cdk-experimental/popover-edit.d.ts",
       "default": "./fesm2022/cdk-experimental/popover-edit.mjs"
     },
     "./cdk-experimental/selection": {
-      "types": "./cdk-experimental/selection/index.d.ts",
+      "types": "./types/cdk-experimental/selection.d.ts",
       "default": "./fesm2022/cdk-experimental/selection.mjs"
     },
     "./cdk/a11y": {
-      "types": "./cdk/a11y/index.d.ts",
+      "types": "./types/cdk/a11y.d.ts",
       "default": "./fesm2022/cdk/a11y.mjs"
     },
     "./cdk/accordion": {
-      "types": "./cdk/accordion/index.d.ts",
+      "types": "./types/cdk/accordion.d.ts",
       "default": "./fesm2022/cdk/accordion.mjs"
     },
     "./cdk/clipboard": {
-      "types": "./cdk/clipboard/index.d.ts",
+      "types": "./types/cdk/clipboard.d.ts",
       "default": "./fesm2022/cdk/clipboard.mjs"
     },
     "./cdk/dialog": {
-      "types": "./cdk/dialog/index.d.ts",
+      "types": "./types/cdk/dialog.d.ts",
       "default": "./fesm2022/cdk/dialog.mjs"
     },
     "./cdk/drag-drop": {
-      "types": "./cdk/drag-drop/index.d.ts",
+      "types": "./types/cdk/drag-drop.d.ts",
       "default": "./fesm2022/cdk/drag-drop.mjs"
     },
     "./cdk/layout": {
-      "types": "./cdk/layout/index.d.ts",
+      "types": "./types/cdk/layout.d.ts",
       "default": "./fesm2022/cdk/layout.mjs"
     },
     "./cdk/listbox": {
-      "types": "./cdk/listbox/index.d.ts",
+      "types": "./types/cdk/listbox.d.ts",
       "default": "./fesm2022/cdk/listbox.mjs"
     },
     "./cdk/menu": {
-      "types": "./cdk/menu/index.d.ts",
+      "types": "./types/cdk/menu.d.ts",
       "default": "./fesm2022/cdk/menu.mjs"
     },
     "./cdk/overlay": {
-      "types": "./cdk/overlay/index.d.ts",
+      "types": "./types/cdk/overlay.d.ts",
       "default": "./fesm2022/cdk/overlay.mjs"
     },
     "./cdk/platform": {
-      "types": "./cdk/platform/index.d.ts",
+      "types": "./types/cdk/platform.d.ts",
       "default": "./fesm2022/cdk/platform.mjs"
     },
     "./cdk/portal": {
-      "types": "./cdk/portal/index.d.ts",
+      "types": "./types/cdk/portal.d.ts",
       "default": "./fesm2022/cdk/portal.mjs"
     },
     "./cdk/scrolling": {
-      "types": "./cdk/scrolling/index.d.ts",
+      "types": "./types/cdk/scrolling.d.ts",
       "default": "./fesm2022/cdk/scrolling.mjs"
     },
     "./cdk/stepper": {
-      "types": "./cdk/stepper/index.d.ts",
+      "types": "./types/cdk/stepper.d.ts",
       "default": "./fesm2022/cdk/stepper.mjs"
     },
     "./cdk/table": {
-      "types": "./cdk/table/index.d.ts",
+      "types": "./types/cdk/table.d.ts",
       "default": "./fesm2022/cdk/table.mjs"
     },
     "./cdk/text-field": {
-      "types": "./cdk/text-field/index.d.ts",
+      "types": "./types/cdk/text-field.d.ts",
       "default": "./fesm2022/cdk/text-field.mjs"
     },
     "./cdk/tree": {
-      "types": "./cdk/tree/index.d.ts",
+      "types": "./types/cdk/tree.d.ts",
       "default": "./fesm2022/cdk/tree.mjs"
     },
     "./material-experimental/column-resize": {
-      "types": "./material-experimental/column-resize/index.d.ts",
+      "types": "./types/material-experimental/column-resize.d.ts",
       "default": "./fesm2022/material-experimental/column-resize.mjs"
     },
     "./material-experimental/popover-edit": {
-      "types": "./material-experimental/popover-edit/index.d.ts",
+      "types": "./types/material-experimental/popover-edit.d.ts",
       "default": "./fesm2022/material-experimental/popover-edit.mjs"
     },
     "./material-experimental/selection": {
-      "types": "./material-experimental/selection/index.d.ts",
+      "types": "./types/material-experimental/selection.d.ts",
       "default": "./fesm2022/material-experimental/selection.mjs"
     },
     "./material/autocomplete": {
-      "types": "./material/autocomplete/index.d.ts",
+      "types": "./types/material/autocomplete.d.ts",
       "default": "./fesm2022/material/autocomplete.mjs"
     },
     "./material/badge": {
-      "types": "./material/badge/index.d.ts",
+      "types": "./types/material/badge.d.ts",
       "default": "./fesm2022/material/badge.mjs"
     },
     "./material/bottom-sheet": {
-      "types": "./material/bottom-sheet/index.d.ts",
+      "types": "./types/material/bottom-sheet.d.ts",
       "default": "./fesm2022/material/bottom-sheet.mjs"
     },
     "./material/button": {
-      "types": "./material/button/index.d.ts",
+      "types": "./types/material/button.d.ts",
       "default": "./fesm2022/material/button.mjs"
     },
     "./material/button-toggle": {
-      "types": "./material/button-toggle/index.d.ts",
+      "types": "./types/material/button-toggle.d.ts",
       "default": "./fesm2022/material/button-toggle.mjs"
     },
     "./material/card": {
-      "types": "./material/card/index.d.ts",
+      "types": "./types/material/card.d.ts",
       "default": "./fesm2022/material/card.mjs"
     },
     "./material/checkbox": {
-      "types": "./material/checkbox/index.d.ts",
+      "types": "./types/material/checkbox.d.ts",
       "default": "./fesm2022/material/checkbox.mjs"
     },
     "./material/chips": {
-      "types": "./material/chips/index.d.ts",
+      "types": "./types/material/chips.d.ts",
       "default": "./fesm2022/material/chips.mjs"
     },
     "./material/core": {
-      "types": "./material/core/index.d.ts",
+      "types": "./types/material/core.d.ts",
       "default": "./fesm2022/material/core.mjs"
     },
     "./material/datepicker": {
-      "types": "./material/datepicker/index.d.ts",
+      "types": "./types/material/datepicker.d.ts",
       "default": "./fesm2022/material/datepicker.mjs"
     },
     "./material/dialog": {
-      "types": "./material/dialog/index.d.ts",
+      "types": "./types/material/dialog.d.ts",
       "default": "./fesm2022/material/dialog.mjs"
     },
     "./material/divider": {
-      "types": "./material/divider/index.d.ts",
+      "types": "./types/material/divider.d.ts",
       "default": "./fesm2022/material/divider.mjs"
     },
     "./material/expansion": {
-      "types": "./material/expansion/index.d.ts",
+      "types": "./types/material/expansion.d.ts",
       "default": "./fesm2022/material/expansion.mjs"
     },
     "./material/form-field": {
-      "types": "./material/form-field/index.d.ts",
+      "types": "./types/material/form-field.d.ts",
       "default": "./fesm2022/material/form-field.mjs"
     },
     "./material/grid-list": {
-      "types": "./material/grid-list/index.d.ts",
+      "types": "./types/material/grid-list.d.ts",
       "default": "./fesm2022/material/grid-list.mjs"
     },
     "./material/icon": {
-      "types": "./material/icon/index.d.ts",
+      "types": "./types/material/icon.d.ts",
       "default": "./fesm2022/material/icon.mjs"
     },
     "./material/input": {
-      "types": "./material/input/index.d.ts",
+      "types": "./types/material/input.d.ts",
       "default": "./fesm2022/material/input.mjs"
     },
     "./material/list": {
-      "types": "./material/list/index.d.ts",
+      "types": "./types/material/list.d.ts",
       "default": "./fesm2022/material/list.mjs"
     },
     "./material/menu": {
-      "types": "./material/menu/index.d.ts",
+      "types": "./types/material/menu.d.ts",
       "default": "./fesm2022/material/menu.mjs"
     },
     "./material/paginator": {
-      "types": "./material/paginator/index.d.ts",
+      "types": "./types/material/paginator.d.ts",
       "default": "./fesm2022/material/paginator.mjs"
     },
     "./material/progress-bar": {
-      "types": "./material/progress-bar/index.d.ts",
+      "types": "./types/material/progress-bar.d.ts",
       "default": "./fesm2022/material/progress-bar.mjs"
     },
     "./material/progress-spinner": {
-      "types": "./material/progress-spinner/index.d.ts",
+      "types": "./types/material/progress-spinner.d.ts",
       "default": "./fesm2022/material/progress-spinner.mjs"
     },
     "./material/radio": {
-      "types": "./material/radio/index.d.ts",
+      "types": "./types/material/radio.d.ts",
       "default": "./fesm2022/material/radio.mjs"
     },
     "./material/select": {
-      "types": "./material/select/index.d.ts",
+      "types": "./types/material/select.d.ts",
       "default": "./fesm2022/material/select.mjs"
     },
     "./material/sidenav": {
-      "types": "./material/sidenav/index.d.ts",
+      "types": "./types/material/sidenav.d.ts",
       "default": "./fesm2022/material/sidenav.mjs"
     },
     "./material/slide-toggle": {
-      "types": "./material/slide-toggle/index.d.ts",
+      "types": "./types/material/slide-toggle.d.ts",
       "default": "./fesm2022/material/slide-toggle.mjs"
     },
     "./material/slider": {
-      "types": "./material/slider/index.d.ts",
+      "types": "./types/material/slider.d.ts",
       "default": "./fesm2022/material/slider.mjs"
     },
     "./material/snack-bar": {
-      "types": "./material/snack-bar/index.d.ts",
+      "types": "./types/material/snack-bar.d.ts",
       "default": "./fesm2022/material/snack-bar.mjs"
     },
     "./material/sort": {
-      "types": "./material/sort/index.d.ts",
+      "types": "./types/material/sort.d.ts",
       "default": "./fesm2022/material/sort.mjs"
     },
     "./material/stepper": {
-      "types": "./material/stepper/index.d.ts",
+      "types": "./types/material/stepper.d.ts",
       "default": "./fesm2022/material/stepper.mjs"
     },
     "./material/table": {
-      "types": "./material/table/index.d.ts",
+      "types": "./types/material/table.d.ts",
       "default": "./fesm2022/material/table.mjs"
     },
     "./material/tabs": {
-      "types": "./material/tabs/index.d.ts",
+      "types": "./types/material/tabs.d.ts",
       "default": "./fesm2022/material/tabs.mjs"
     },
     "./material/timepicker": {
-      "types": "./material/timepicker/index.d.ts",
+      "types": "./types/material/timepicker.d.ts",
       "default": "./fesm2022/material/timepicker.mjs"
     },
     "./material/toolbar": {
-      "types": "./material/toolbar/index.d.ts",
+      "types": "./types/material/toolbar.d.ts",
       "default": "./fesm2022/material/toolbar.mjs"
     },
     "./material/tooltip": {
-      "types": "./material/tooltip/index.d.ts",
+      "types": "./types/material/tooltip.d.ts",
       "default": "./fesm2022/material/tooltip.mjs"
     },
     "./material/tree": {
-      "types": "./material/tree/index.d.ts",
+      "types": "./types/material/tree.d.ts",
       "default": "./fesm2022/material/tree.mjs"
     }
   },
@@ -259,15 +259,15 @@
   },
   "homepage": "https://github.com/angular/components#readme",
   "peerDependencies": {
-    "@angular/cdk": "21.0.0-next.5+sha-6fba204",
-    "@angular/cdk-experimental": "21.0.0-next.5+sha-6fba204",
+    "@angular/cdk": "21.0.0-next.5+sha-821830d",
+    "@angular/cdk-experimental": "21.0.0-next.5+sha-821830d",
     "@angular/core": "^21.0.0-0 || ^21.1.0-0 || ^21.2.0-0 || ^21.3.0-0 || ^22.0.0-0",
     "@angular/common": "^21.0.0-0 || ^21.1.0-0 || ^21.2.0-0 || ^21.3.0-0 || ^22.0.0-0",
-    "@angular/material": "21.0.0-next.5+sha-6fba204",
-    "@angular/material-experimental": "21.0.0-next.5+sha-6fba204",
-    "@angular/material-moment-adapter": "21.0.0-next.5+sha-6fba204",
-    "@angular/material-luxon-adapter": "21.0.0-next.5+sha-6fba204",
-    "@angular/material-date-fns-adapter": "21.0.0-next.5+sha-6fba204"
+    "@angular/material": "21.0.0-next.5+sha-821830d",
+    "@angular/material-experimental": "21.0.0-next.5+sha-821830d",
+    "@angular/material-moment-adapter": "21.0.0-next.5+sha-821830d",
+    "@angular/material-luxon-adapter": "21.0.0-next.5+sha-821830d",
+    "@angular/material-date-fns-adapter": "21.0.0-next.5+sha-821830d"
   },
   "devDependencies": {
     "@angular/cdk": "workspace:*",
@@ -280,6 +280,6 @@
     "tslib": "^2.3.0"
   },
   "module": "./fesm2022/components-examples.mjs",
-  "typings": "./index.d.ts",
+  "typings": "./types/components-examples.d.ts",
   "type": "module"
 }
