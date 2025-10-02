@@ -1,0 +1,27 @@
+<span class="hljs-comment">/**
+ * <span class="hljs-doctag">@license</span>
+ * Copyright Google LLC All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.dev/license
+ */</span>
+
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">Component</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">NgTemplateOutlet</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/common&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">Tree</span>, <span class="hljs-title class_">TreeItem</span>, <span class="hljs-title class_">TreeItemGroup</span>, <span class="hljs-title class_">TreeItemGroupContent</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/aria/tree&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">TreeNode</span>, <span class="hljs-variable constant_">NODES</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;../tree-data&#x27;</span>;
+
+<span class="hljs-comment">/**
+ * <span class="hljs-doctag">@title</span> Tree with multi-selection.
+ */</span>
+<span class="hljs-meta">@Component</span>({
+  <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;tree-multi-select-example&#x27;</span>,
+  <span class="hljs-attr">exportAs</span>: <span class="hljs-string">&#x27;TreeMultiSelectExample&#x27;</span>,
+  <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;tree-multi-select-example.html&#x27;</span>,
+  <span class="hljs-attr">styleUrl</span>: <span class="hljs-string">&#x27;../tree-common.css&#x27;</span>,
+  <span class="hljs-attr">standalone</span>: <span class="hljs-literal">true</span>,
+  <span class="hljs-attr">imports</span>: [<span class="hljs-title class_">Tree</span>, <span class="hljs-title class_">TreeItem</span>, <span class="hljs-title class_">TreeItemGroup</span>, <span class="hljs-title class_">TreeItemGroupContent</span>, <span class="hljs-title class_">NgTemplateOutlet</span>],
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">TreeMultiSelectExample</span> {
+  <span class="hljs-attr">nodes</span>: <span class="hljs-title class_">TreeNode</span>[] = <span class="hljs-variable constant_">NODES</span>;
+}

@@ -1,0 +1,24 @@
+<span class="hljs-comment">&lt;!-- Active Descendant --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-container&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">ul</span>
+    <span class="hljs-attr">ngListbox</span>
+    <span class="hljs-attr">focusMode</span>=<span class="hljs-string">&quot;activedescendant&quot;</span>
+    <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-listbox example-parent&quot;</span>
+    <span class="hljs-attr">aria-labelledby</span>=<span class="hljs-string">&quot;active-descendant-label&quot;</span>
+  &gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-label&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;active-descendant-label&quot;</span>&gt;</span>Active Descendant Fruits<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+    @for (fruit of fruits; track fruit) {
+      <span class="hljs-tag">&lt;<span class="hljs-name">li</span>
+        <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-option example-stateful example-selectable&quot;</span>
+        [<span class="hljs-attr">value</span>]=<span class="hljs-string">&quot;fruit&quot;</span>
+        <span class="hljs-attr">ngOption</span>
+        #<span class="hljs-attr">option</span>=<span class="hljs-string">&quot;ngOption&quot;</span>
+      &gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">mat-pseudo-checkbox</span>
+          [<span class="hljs-attr">state</span>]=<span class="hljs-string">&quot;option.pattern.selected() ? &#x27;checked&#x27; : &#x27;unchecked&#x27;&quot;</span>
+        &gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">mat-pseudo-checkbox</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>{{ fruit }}<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+    }
+  <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>

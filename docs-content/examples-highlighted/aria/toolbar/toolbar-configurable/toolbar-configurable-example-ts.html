@@ -1,0 +1,48 @@
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">Component</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">RadioGroup</span>, <span class="hljs-title class_">RadioButton</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/aria/radio-group&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatCheckboxModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/checkbox&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatFormFieldModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/form-field&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatSelectModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/select&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">FormControl</span>, <span class="hljs-title class_">FormsModule</span>, <span class="hljs-title class_">ReactiveFormsModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/forms&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">Toolbar</span>, <span class="hljs-title class_">ToolbarWidget</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/aria/toolbar&#x27;</span>;
+
+<span class="hljs-comment">/** <span class="hljs-doctag">@title</span> Configurable CDK Radio Group */</span>
+<span class="hljs-meta">@Component</span>({
+  <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;toolbar-configurable-example&#x27;</span>,
+  <span class="hljs-attr">exportAs</span>: <span class="hljs-string">&#x27;ToolbarConfigurableExample&#x27;</span>,
+  <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;toolbar-configurable-example.html&#x27;</span>,
+  <span class="hljs-attr">styleUrl</span>: <span class="hljs-string">&#x27;../toolbar-common.css&#x27;</span>,
+  <span class="hljs-attr">standalone</span>: <span class="hljs-literal">true</span>,
+  <span class="hljs-attr">imports</span>: [
+    <span class="hljs-title class_">RadioGroup</span>,
+    <span class="hljs-title class_">RadioButton</span>,
+    <span class="hljs-title class_">Toolbar</span>,
+    <span class="hljs-title class_">ToolbarWidget</span>,
+    <span class="hljs-title class_">MatCheckboxModule</span>,
+    <span class="hljs-title class_">MatFormFieldModule</span>,
+    <span class="hljs-title class_">MatSelectModule</span>,
+    <span class="hljs-title class_">FormsModule</span>,
+    <span class="hljs-title class_">ReactiveFormsModule</span>,
+  ],
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">ToolbarConfigurableExample</span> {
+  skipDisabled = <span class="hljs-keyword">new</span> <span class="hljs-title class_">FormControl</span>(<span class="hljs-literal">false</span>, {<span class="hljs-attr">nonNullable</span>: <span class="hljs-literal">true</span>});
+  wrap = <span class="hljs-keyword">new</span> <span class="hljs-title class_">FormControl</span>(<span class="hljs-literal">true</span>, {<span class="hljs-attr">nonNullable</span>: <span class="hljs-literal">true</span>});
+  toolbarDisabled = <span class="hljs-keyword">new</span> <span class="hljs-title class_">FormControl</span>(<span class="hljs-literal">false</span>, {<span class="hljs-attr">nonNullable</span>: <span class="hljs-literal">true</span>});
+  <span class="hljs-attr">orientation</span>: <span class="hljs-string">&#x27;vertical&#x27;</span> | <span class="hljs-string">&#x27;horizontal&#x27;</span> = <span class="hljs-string">&#x27;horizontal&#x27;</span>;
+
+  fruits = [<span class="hljs-string">&#x27;Apple&#x27;</span>, <span class="hljs-string">&#x27;Apricot&#x27;</span>, <span class="hljs-string">&#x27;Banana&#x27;</span>];
+  buttonFruits = [<span class="hljs-string">&#x27;Pear&#x27;</span>, <span class="hljs-string">&#x27;Blueberry&#x27;</span>, <span class="hljs-string">&#x27;Cherry&#x27;</span>, <span class="hljs-string">&#x27;Date&#x27;</span>];
+
+  <span class="hljs-comment">// Radio group controls</span>
+  disabled = <span class="hljs-keyword">new</span> <span class="hljs-title class_">FormControl</span>(<span class="hljs-literal">false</span>, {<span class="hljs-attr">nonNullable</span>: <span class="hljs-literal">true</span>});
+  <span class="hljs-keyword">readonly</span> = <span class="hljs-keyword">new</span> <span class="hljs-title class_">FormControl</span>(<span class="hljs-literal">false</span>, {<span class="hljs-attr">nonNullable</span>: <span class="hljs-literal">true</span>});
+
+  <span class="hljs-comment">// Control for which radio options are individually disabled</span>
+  <span class="hljs-attr">disabledOptions</span>: <span class="hljs-built_in">string</span>[] = [<span class="hljs-string">&#x27;Banana&#x27;</span>];
+  <span class="hljs-attr">disabledButtonOptions</span>: <span class="hljs-built_in">string</span>[] = [<span class="hljs-string">&#x27;Pear&#x27;</span>];
+
+  <span class="hljs-title function_">test</span>(<span class="hljs-params"><span class="hljs-attr">x</span>: <span class="hljs-title class_">String</span></span>) {
+    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(x);
+  }
+}

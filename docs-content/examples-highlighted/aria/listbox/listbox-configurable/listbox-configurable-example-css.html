@@ -1,0 +1,52 @@
+<span class="hljs-selector-class">.example-listbox-controls</span> {
+  <span class="hljs-attribute">display</span>: flex;
+  <span class="hljs-attribute">flex-wrap</span>: wrap;
+  <span class="hljs-attribute">align-items</span>: center;
+  <span class="hljs-attribute">gap</span>: <span class="hljs-number">16px</span>;
+  <span class="hljs-attribute">padding-bottom</span>: <span class="hljs-number">16px</span>;
+}
+
+<span class="hljs-selector-class">.example-listbox</span> {
+  <span class="hljs-attribute">gap</span>: <span class="hljs-number">4px</span>;
+  <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">padding</span>: <span class="hljs-number">8px</span>;
+  <span class="hljs-attribute">max-height</span>: <span class="hljs-number">300px</span>;
+  <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid <span class="hljs-built_in">var</span>(--mat-sys-outline);
+  <span class="hljs-attribute">border-radius</span>: <span class="hljs-built_in">var</span>(--mat-sys-corner-extra-small);
+  <span class="hljs-attribute">display</span>: flex;
+  <span class="hljs-attribute">list-style</span>: none;
+  <span class="hljs-attribute">flex-direction</span>: column;
+  <span class="hljs-attribute">overflow</span>: scroll;
+  <span class="hljs-attribute">user-select</span>: none;
+}
+
+<span class="hljs-selector-class">.example-listbox</span><span class="hljs-selector-attr">[aria-orientation=<span class="hljs-string">&#x27;horizontal&#x27;</span>]</span> {
+  <span class="hljs-attribute">flex-direction</span>: row;
+}
+
+<span class="hljs-selector-class">.example-listbox</span><span class="hljs-selector-attr">[aria-orientation=<span class="hljs-string">&#x27;horizontal&#x27;</span>]</span> <span class="hljs-selector-class">.example-option</span><span class="hljs-selector-pseudo">::before</span> {
+  <span class="hljs-attribute">display</span>: none;
+}
+
+<span class="hljs-selector-class">.example-listbox</span><span class="hljs-selector-attr">[aria-orientation=<span class="hljs-string">&#x27;horizontal&#x27;</span>]</span> <span class="hljs-selector-class">.example-option</span><span class="hljs-selector-attr">[aria-selected=<span class="hljs-string">&#x27;true&#x27;</span>]</span><span class="hljs-selector-pseudo">::before</span> {
+  <span class="hljs-attribute">display</span>: block;
+}
+
+<span class="hljs-selector-class">.example-listbox</span><span class="hljs-selector-attr">[aria-disabled=<span class="hljs-string">&#x27;true&#x27;</span>]</span> <span class="hljs-selector-class">.example-option</span> {
+  <span class="hljs-attribute">pointer-events</span>: none;
+}
+
+<span class="hljs-selector-class">.example-label</span> {
+  <span class="hljs-attribute">padding</span>: <span class="hljs-number">16px</span>;
+  <span class="hljs-attribute">flex-shrink</span>: <span class="hljs-number">0</span>;
+}
+
+<span class="hljs-selector-class">.example-option</span> {
+  <span class="hljs-attribute">gap</span>: <span class="hljs-number">16px</span>;
+  <span class="hljs-attribute">padding</span>: <span class="hljs-number">16px</span>;
+  <span class="hljs-attribute">display</span>: flex;
+  <span class="hljs-attribute">cursor</span>: pointer;
+  <span class="hljs-attribute">position</span>: relative;
+  <span class="hljs-attribute">align-items</span>: center;
+  <span class="hljs-attribute">border-radius</span>: <span class="hljs-built_in">var</span>(--mat-sys-corner-extra-small);
+}

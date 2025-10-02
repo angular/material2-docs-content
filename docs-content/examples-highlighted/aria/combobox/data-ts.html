@@ -1,0 +1,23 @@
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">interface</span> <span class="hljs-title class_">TreeNode</span> {
+  <span class="hljs-attr">name</span>: <span class="hljs-built_in">string</span>;
+  <span class="hljs-attr">children</span>?: <span class="hljs-title class_">TreeNode</span>[];
+}
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> <span class="hljs-variable constant_">TREE_NODES</span> = [
+  {
+    <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Winter&#x27;</span>,
+    <span class="hljs-attr">children</span>: [{<span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;December&#x27;</span>}, {<span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;January&#x27;</span>}, {<span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;February&#x27;</span>}],
+  },
+  {
+    <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Spring&#x27;</span>,
+    <span class="hljs-attr">children</span>: [{<span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;March&#x27;</span>}, {<span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;April&#x27;</span>}, {<span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;May&#x27;</span>}],
+  },
+  {
+    <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Summer&#x27;</span>,
+    <span class="hljs-attr">children</span>: [{<span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;June&#x27;</span>}, {<span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;July&#x27;</span>}, {<span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;August&#x27;</span>}],
+  },
+  {
+    <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Fall&#x27;</span>,
+    <span class="hljs-attr">children</span>: [{<span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;September&#x27;</span>}, {<span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;October&#x27;</span>}, {<span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;November&#x27;</span>}],
+  },
+];

@@ -1040,7 +1040,7 @@ in arbitrary positioning strategies.</p>
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">&#39;cdkConnectedOverlayViewportMargin&#39;</span>)
         </div><p class="docs-api-property-name">
-      <code>viewportMargin: number</code>
+      <code>viewportMargin: ViewportMargin</code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Margin between the overlay and the viewport edges.</p>
@@ -3192,7 +3192,7 @@ alignment of the overlay.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Sets a minimum distance the overlay may be positioned to the edge of the viewport.</p>
+      <p>Sets a minimum distance the overlay may be positioned from the bottom edge of the viewport.</p>
 
     </td>
   </tr><thead>
@@ -3205,11 +3205,12 @@ alignment of the overlay.</p>
     <td class="docs-api-method-parameter-cell">
       <p class="docs-api-method-parameter-name">
         margin</p>
-      <code class="docs-api-method-parameter-type">number</code>
+      <code class="docs-api-method-parameter-type">ViewportMargin</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>Required margin between the overlay and the viewport edge in pixels.</p>
+        <p>Required margin between the overlay and the viewport.
+It can be a number to be applied to all directions, or an object to supply different values for each direction.</p>
 
       </p>
     </td>
@@ -4914,6 +4915,25 @@ the <code>HashLocationStrategy</code>).</p>
 </p><div class="docs-markdown">
 <pre class="docs-markdown-pre">
 <code class="docs-markdown-code">type VerticalConnectionPos = 'top' | 'center' | 'bottom';</code>
+</pre>
+</div>
+
+
+    
+      
+
+<h4 id="ViewportMargin" class="docs-header-link docs-api-h4 docs-api-type-alias-name">
+  <span header-link="ViewportMargin"></span>
+  <code>ViewportMargin</code>
+</h4><p class="docs-api-type-alias-description"><p>The distance between the overlay element and the viewport.</p>
+</p><div class="docs-markdown">
+<pre class="docs-markdown-pre">
+<code class="docs-markdown-code">type ViewportMargin = number | {
+    top?: number;
+    bottom?: number;
+    start?: number;
+    end?: number;
+};</code>
 </pre>
 </div>
 

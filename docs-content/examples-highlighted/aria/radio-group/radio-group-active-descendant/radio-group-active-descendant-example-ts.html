@@ -1,0 +1,50 @@
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">Component</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">FormsModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/forms&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">RadioGroup</span>, <span class="hljs-title class_">RadioButton</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/aria/radio-group&#x27;</span>;
+
+<span class="hljs-comment">/** <span class="hljs-doctag">@title</span> Active descendant radio group. */</span>
+<span class="hljs-meta">@Component</span>({
+  <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;radio-group-active-descendant-example&#x27;</span>,
+  <span class="hljs-attr">exportAs</span>: <span class="hljs-string">&#x27;RadioActiveDescendantExample&#x27;</span>,
+  <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;radio-group-active-descendant-example.html&#x27;</span>,
+  <span class="hljs-attr">standalone</span>: <span class="hljs-literal">true</span>,
+  <span class="hljs-attr">styleUrl</span>: <span class="hljs-string">&#x27;../radio-common.css&#x27;</span>,
+  <span class="hljs-attr">imports</span>: [<span class="hljs-title class_">RadioGroup</span>, <span class="hljs-title class_">RadioButton</span>, <span class="hljs-title class_">FormsModule</span>],
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">RadioGroupActiveDescendantExample</span> {
+  fruits = [
+    <span class="hljs-string">&#x27;Apple&#x27;</span>,
+    <span class="hljs-string">&#x27;Apricot&#x27;</span>,
+    <span class="hljs-string">&#x27;Banana&#x27;</span>,
+    <span class="hljs-string">&#x27;Blackberry&#x27;</span>,
+    <span class="hljs-string">&#x27;Blueberry&#x27;</span>,
+    <span class="hljs-string">&#x27;Cantaloupe&#x27;</span>,
+    <span class="hljs-string">&#x27;Cherry&#x27;</span>,
+    <span class="hljs-string">&#x27;Clementine&#x27;</span>,
+    <span class="hljs-string">&#x27;Cranberry&#x27;</span>,
+    <span class="hljs-string">&#x27;Dates&#x27;</span>,
+    <span class="hljs-string">&#x27;Figs&#x27;</span>,
+    <span class="hljs-string">&#x27;Grapes&#x27;</span>,
+    <span class="hljs-string">&#x27;Grapefruit&#x27;</span>,
+    <span class="hljs-string">&#x27;Guava&#x27;</span>,
+    <span class="hljs-string">&#x27;Kiwi&#x27;</span>,
+    <span class="hljs-string">&#x27;Kumquat&#x27;</span>,
+    <span class="hljs-string">&#x27;Lemon&#x27;</span>,
+    <span class="hljs-string">&#x27;Lime&#x27;</span>,
+    <span class="hljs-string">&#x27;Mandarin&#x27;</span>,
+    <span class="hljs-string">&#x27;Mango&#x27;</span>,
+    <span class="hljs-string">&#x27;Nectarine&#x27;</span>,
+    <span class="hljs-string">&#x27;Orange&#x27;</span>,
+    <span class="hljs-string">&#x27;Papaya&#x27;</span>,
+    <span class="hljs-string">&#x27;Passion&#x27;</span>,
+    <span class="hljs-string">&#x27;Peach&#x27;</span>,
+    <span class="hljs-string">&#x27;Pear&#x27;</span>,
+    <span class="hljs-string">&#x27;Pineapple&#x27;</span>,
+    <span class="hljs-string">&#x27;Plum&#x27;</span>,
+    <span class="hljs-string">&#x27;Pomegranate&#x27;</span>,
+    <span class="hljs-string">&#x27;Raspberries&#x27;</span>,
+    <span class="hljs-string">&#x27;Strawberry&#x27;</span>,
+    <span class="hljs-string">&#x27;Tangerine&#x27;</span>,
+    <span class="hljs-string">&#x27;Watermelon&#x27;</span>,
+  ];
+}

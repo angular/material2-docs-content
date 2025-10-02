@@ -4,6 +4,748 @@
  ******************************************************************************
  */
 const EXAMPLE_COMPONENTS = {
+    "accordion-configurable": {
+        "packagePath": "aria/accordion/accordion-configurable",
+        "title": "Configurable Accordion using UI Patterns.",
+        "componentName": "AccordionConfigurableExample",
+        "files": [
+            "accordion-configurable-example.ts",
+            "accordion-configurable-example.html",
+            "../accordion-examples.css"
+        ],
+        "selector": "accordion-configurable-example",
+        "additionalComponents": [],
+        "primaryFile": "accordion-configurable-example.ts",
+        "importPath": "aria/accordion"
+    },
+    "accordion-disabled-focusable": {
+        "packagePath": "aria/accordion/accordion-disabled-focusable",
+        "title": "Accordion with focusable disabled items.",
+        "componentName": "AccordionDisabledFocusableExample",
+        "files": [
+            "accordion-disabled-focusable-example.ts",
+            "accordion-disabled-focusable-example.html",
+            "../accordion-examples.css"
+        ],
+        "selector": "accordion-disabled-focusable-example",
+        "additionalComponents": [],
+        "primaryFile": "accordion-disabled-focusable-example.ts",
+        "importPath": "aria/accordion"
+    },
+    "accordion-disabled-skipped": {
+        "packagePath": "aria/accordion/accordion-disabled-skipped",
+        "title": "Accordion with skipped disabled items.",
+        "componentName": "AccordionDisabledSkippedExample",
+        "files": [
+            "accordion-disabled-skipped-example.ts",
+            "accordion-disabled-skipped-example.html",
+            "../accordion-examples.css"
+        ],
+        "selector": "accordion-disabled-skipped-example",
+        "additionalComponents": [],
+        "primaryFile": "accordion-disabled-skipped-example.ts",
+        "importPath": "aria/accordion"
+    },
+    "accordion-disabled": {
+        "packagePath": "aria/accordion/accordion-disabled",
+        "title": "Disabled Accordion.",
+        "componentName": "AccordionDisabledExample",
+        "files": [
+            "accordion-disabled-example.ts",
+            "accordion-disabled-example.html",
+            "../accordion-examples.css"
+        ],
+        "selector": "accordion-disabled-example",
+        "additionalComponents": [],
+        "primaryFile": "accordion-disabled-example.ts",
+        "importPath": "aria/accordion"
+    },
+    "accordion-multi-expansion": {
+        "packagePath": "aria/accordion/accordion-multi-expansion",
+        "title": "Accordion with multi-expansion.",
+        "componentName": "AccordionMultiExpansionExample",
+        "files": [
+            "accordion-multi-expansion-example.ts",
+            "accordion-multi-expansion-example.html",
+            "../accordion-examples.css"
+        ],
+        "selector": "accordion-multi-expansion-example",
+        "additionalComponents": [],
+        "primaryFile": "accordion-multi-expansion-example.ts",
+        "importPath": "aria/accordion"
+    },
+    "accordion-single-expansion": {
+        "packagePath": "aria/accordion/accordion-single-expansion",
+        "title": "Accordion with single expansion.",
+        "componentName": "AccordionSingleExpansionExample",
+        "files": [
+            "accordion-single-expansion-example.ts",
+            "accordion-single-expansion-example.html",
+            "../accordion-examples.css"
+        ],
+        "selector": "accordion-single-expansion-example",
+        "additionalComponents": [],
+        "primaryFile": "accordion-single-expansion-example.ts",
+        "importPath": "aria/accordion"
+    },
+    "combobox-auto-select": {
+        "packagePath": "aria/combobox/combobox-auto-select",
+        "title": "Combobox with auto-select filtering.",
+        "componentName": "ComboboxAutoSelectExample",
+        "files": [
+            "combobox-auto-select-example.ts",
+            "combobox-auto-select-example.html",
+            "../combobox-examples.css"
+        ],
+        "selector": "combobox-auto-select-example",
+        "additionalComponents": [],
+        "primaryFile": "combobox-auto-select-example.ts",
+        "importPath": "aria/combobox"
+    },
+    "combobox-highlight": {
+        "packagePath": "aria/combobox/combobox-highlight",
+        "title": "Combobox with highlight filtering.",
+        "componentName": "ComboboxHighlightExample",
+        "files": [
+            "combobox-highlight-example.ts",
+            "combobox-highlight-example.html",
+            "../combobox-examples.css"
+        ],
+        "selector": "combobox-highlight-example",
+        "additionalComponents": [],
+        "primaryFile": "combobox-highlight-example.ts",
+        "importPath": "aria/combobox"
+    },
+    "combobox-manual": {
+        "packagePath": "aria/combobox/combobox-manual",
+        "title": "Combobox with manual selection.",
+        "componentName": "ComboboxManualExample",
+        "files": [
+            "combobox-manual-example.ts",
+            "combobox-manual-example.html",
+            "../combobox-examples.css"
+        ],
+        "selector": "combobox-manual-example",
+        "additionalComponents": [],
+        "primaryFile": "combobox-manual-example.ts",
+        "importPath": "aria/combobox"
+    },
+    "combobox-tree-auto-select": {
+        "packagePath": "aria/combobox/combobox-tree-auto-select",
+        "title": "Combobox with tree popup and auto-select filtering.",
+        "componentName": "ComboboxTreeAutoSelectExample",
+        "files": [
+            "combobox-tree-auto-select-example.ts",
+            "combobox-tree-auto-select-example.html",
+            "../combobox-examples.css"
+        ],
+        "selector": "combobox-tree-auto-select-example",
+        "additionalComponents": [],
+        "primaryFile": "combobox-tree-auto-select-example.ts",
+        "importPath": "aria/combobox"
+    },
+    "combobox-tree-highlight": {
+        "packagePath": "aria/combobox/combobox-tree-highlight",
+        "title": "Combobox with tree popup and highlight filtering.",
+        "componentName": "ComboboxTreeHighlightExample",
+        "files": [
+            "combobox-tree-highlight-example.ts",
+            "combobox-tree-highlight-example.html",
+            "../combobox-examples.css"
+        ],
+        "selector": "combobox-tree-highlight-example",
+        "additionalComponents": [],
+        "primaryFile": "combobox-tree-highlight-example.ts",
+        "importPath": "aria/combobox"
+    },
+    "combobox-tree-manual": {
+        "packagePath": "aria/combobox/combobox-tree-manual",
+        "title": "Combobox with tree popup and manual filtering.",
+        "componentName": "ComboboxTreeManualExample",
+        "files": [
+            "combobox-tree-manual-example.ts",
+            "combobox-tree-manual-example.html",
+            "../combobox-examples.css"
+        ],
+        "selector": "combobox-tree-manual-example",
+        "additionalComponents": [],
+        "primaryFile": "combobox-tree-manual-example.ts",
+        "importPath": "aria/combobox"
+    },
+    "listbox-active-descendant": {
+        "packagePath": "aria/listbox/listbox-active-descendant",
+        "title": "Listbox with active descendant.",
+        "componentName": "ListboxActiveDescendantExample",
+        "files": [
+            "listbox-active-descendant-example.ts",
+            "listbox-active-descendant-example.html",
+            "../listbox-configurable/listbox-configurable-example.css"
+        ],
+        "selector": "listbox-active-descendant-example",
+        "additionalComponents": [],
+        "primaryFile": "listbox-active-descendant-example.ts",
+        "importPath": "aria/listbox"
+    },
+    "listbox-configurable": {
+        "packagePath": "aria/listbox/listbox-configurable",
+        "title": "Configurable Listbox.",
+        "componentName": "ListboxConfigurableExample",
+        "files": [
+            "listbox-configurable-example.ts",
+            "listbox-configurable-example.html",
+            "listbox-configurable-example.css"
+        ],
+        "selector": "listbox-configurable-example",
+        "additionalComponents": [],
+        "primaryFile": "listbox-configurable-example.ts",
+        "importPath": "aria/listbox"
+    },
+    "listbox-disabled-focusable": {
+        "packagePath": "aria/listbox/listbox-disabled-focusable",
+        "title": "Listbox with focusable disabled options.",
+        "componentName": "ListboxDisabledFocusableExample",
+        "files": [
+            "listbox-disabled-focusable-example.ts",
+            "listbox-disabled-focusable-example.html",
+            "../listbox-configurable/listbox-configurable-example.css"
+        ],
+        "selector": "listbox-disabled-focusable-example",
+        "additionalComponents": [],
+        "primaryFile": "listbox-disabled-focusable-example.ts",
+        "importPath": "aria/listbox"
+    },
+    "listbox-disabled-skipped": {
+        "packagePath": "aria/listbox/listbox-disabled-skipped",
+        "title": "Listbox with skipped disabled options.",
+        "componentName": "ListboxDisabledSkippedExample",
+        "files": [
+            "listbox-disabled-skipped-example.ts",
+            "listbox-disabled-skipped-example.html",
+            "../listbox-configurable/listbox-configurable-example.css"
+        ],
+        "selector": "listbox-disabled-skipped-example",
+        "additionalComponents": [],
+        "primaryFile": "listbox-disabled-skipped-example.ts",
+        "importPath": "aria/listbox"
+    },
+    "listbox-disabled": {
+        "packagePath": "aria/listbox/listbox-disabled",
+        "title": "Listbox with disabled state.",
+        "componentName": "ListboxDisabledExample",
+        "files": [
+            "listbox-disabled-example.ts",
+            "listbox-disabled-example.html",
+            "../listbox-configurable/listbox-configurable-example.css"
+        ],
+        "selector": "listbox-disabled-example",
+        "additionalComponents": [],
+        "primaryFile": "listbox-disabled-example.ts",
+        "importPath": "aria/listbox"
+    },
+    "listbox-horizontal": {
+        "packagePath": "aria/listbox/listbox-horizontal",
+        "title": "Listbox with horizontal orientation.",
+        "componentName": "ListboxHorizontalExample",
+        "files": [
+            "listbox-horizontal-example.ts",
+            "listbox-horizontal-example.html",
+            "../listbox-configurable/listbox-configurable-example.css"
+        ],
+        "selector": "listbox-horizontal-example",
+        "additionalComponents": [],
+        "primaryFile": "listbox-horizontal-example.ts",
+        "importPath": "aria/listbox"
+    },
+    "listbox-multi-select-follow-focus": {
+        "packagePath": "aria/listbox/listbox-multi-select-follow-focus",
+        "title": "Listbox with multi-selection and selection following focus.",
+        "componentName": "ListboxMultiSelectFollowFocusExample",
+        "files": [
+            "listbox-multi-select-follow-focus-example.ts",
+            "listbox-multi-select-follow-focus-example.html",
+            "../listbox-configurable/listbox-configurable-example.css"
+        ],
+        "selector": "listbox-multi-select-follow-focus-example",
+        "additionalComponents": [],
+        "primaryFile": "listbox-multi-select-follow-focus-example.ts",
+        "importPath": "aria/listbox"
+    },
+    "listbox-multi-select": {
+        "packagePath": "aria/listbox/listbox-multi-select",
+        "title": "Listbox with multi-selection.",
+        "componentName": "ListboxMultiSelectExample",
+        "files": [
+            "listbox-multi-select-example.ts",
+            "./listbox-multi-select-example.html",
+            "../listbox-configurable/listbox-configurable-example.css"
+        ],
+        "selector": "listbox-multi-select-example",
+        "additionalComponents": [],
+        "primaryFile": "listbox-multi-select-example.ts",
+        "importPath": "aria/listbox"
+    },
+    "listbox-readonly": {
+        "packagePath": "aria/listbox/listbox-readonly",
+        "title": "Listbox with readonly state.",
+        "componentName": "ListboxReadonlyExample",
+        "files": [
+            "listbox-readonly-example.ts",
+            "listbox-readonly-example.html",
+            "../listbox-configurable/listbox-configurable-example.css"
+        ],
+        "selector": "listbox-readonly-example",
+        "additionalComponents": [],
+        "primaryFile": "listbox-readonly-example.ts",
+        "importPath": "aria/listbox"
+    },
+    "listbox-rtl-horizontal": {
+        "packagePath": "aria/listbox/listbox-rtl-horizontal",
+        "title": "Listbox with RTL and horizontal orientation.",
+        "componentName": "ListboxRtlHorizontalExample",
+        "files": [
+            "listbox-rtl-horizontal-example.ts",
+            "listbox-rtl-horizontal-example.html",
+            "../listbox-configurable/listbox-configurable-example.css"
+        ],
+        "selector": "listbox-rtl-horizontal-example",
+        "additionalComponents": [],
+        "primaryFile": "listbox-rtl-horizontal-example.ts",
+        "importPath": "aria/listbox"
+    },
+    "listbox-single-select-follow-focus": {
+        "packagePath": "aria/listbox/listbox-single-select-follow-focus",
+        "title": "Listbox with single selection and selection follows focus.",
+        "componentName": "ListboxSingleSelectFollowFocusExample",
+        "files": [
+            "listbox-single-select-follow-focus-example.ts",
+            "listbox-single-select-follow-focus-example.html",
+            "../listbox-configurable/listbox-configurable-example.css"
+        ],
+        "selector": "listbox-single-select-follow-focus-example",
+        "additionalComponents": [],
+        "primaryFile": "listbox-single-select-follow-focus-example.ts",
+        "importPath": "aria/listbox"
+    },
+    "listbox-single-select": {
+        "packagePath": "aria/listbox/listbox-single-select",
+        "title": "Listbox with single selection.",
+        "componentName": "ListboxSingleSelectExample",
+        "files": [
+            "listbox-single-select-example.ts",
+            "listbox-single-select-example.html",
+            "../listbox-configurable/listbox-configurable-example.css"
+        ],
+        "selector": "listbox-single-select-example",
+        "additionalComponents": [],
+        "primaryFile": "listbox-single-select-example.ts",
+        "importPath": "aria/listbox"
+    },
+    "radio-group-active-descendant": {
+        "packagePath": "aria/radio-group/radio-group-active-descendant",
+        "title": "Active descendant radio group.",
+        "componentName": "RadioGroupActiveDescendantExample",
+        "files": [
+            "radio-group-active-descendant-example.ts",
+            "radio-group-active-descendant-example.html",
+            "../radio-common.css"
+        ],
+        "selector": "radio-group-active-descendant-example",
+        "additionalComponents": [],
+        "primaryFile": "radio-group-active-descendant-example.ts",
+        "importPath": "aria/radio-group"
+    },
+    "radio-group-configurable": {
+        "packagePath": "aria/radio-group/radio-group-configurable",
+        "title": "Configurable CDK Radio Group",
+        "componentName": "RadioGroupConfigurableExample",
+        "files": [
+            "radio-group-configurable-example.ts",
+            "radio-group-configurable-example.html",
+            "../radio-common.css"
+        ],
+        "selector": "radio-group-configurable-example",
+        "additionalComponents": [],
+        "primaryFile": "radio-group-configurable-example.ts",
+        "importPath": "aria/radio-group"
+    },
+    "radio-group-disabled-focusable": {
+        "packagePath": "aria/radio-group/radio-group-disabled-focusable",
+        "title": "Radio group with disabled options that are focusable.",
+        "componentName": "RadioGroupDisabledFocusableExample",
+        "files": [
+            "radio-group-disabled-focusable-example.ts",
+            "radio-group-disabled-focusable-example.html",
+            "../radio-common.css"
+        ],
+        "selector": "radio-group-disabled-focusable-example",
+        "additionalComponents": [],
+        "primaryFile": "radio-group-disabled-focusable-example.ts",
+        "importPath": "aria/radio-group"
+    },
+    "radio-group-disabled-skipped": {
+        "packagePath": "aria/radio-group/radio-group-disabled-skipped",
+        "title": "Radio group with disabled options that are skipped.",
+        "componentName": "RadioGroupDisabledSkippedExample",
+        "files": [
+            "radio-group-disabled-skipped-example.ts",
+            "radio-group-disabled-skipped-example.html",
+            "../radio-common.css"
+        ],
+        "selector": "radio-group-disabled-skipped-example",
+        "additionalComponents": [],
+        "primaryFile": "radio-group-disabled-skipped-example.ts",
+        "importPath": "aria/radio-group"
+    },
+    "radio-group-disabled": {
+        "packagePath": "aria/radio-group/radio-group-disabled",
+        "title": "Disabled radio group.",
+        "componentName": "RadioGroupDisabledExample",
+        "files": [
+            "radio-group-disabled-example.ts",
+            "radio-group-disabled-example.html",
+            "../radio-common.css"
+        ],
+        "selector": "radio-group-disabled-example",
+        "additionalComponents": [],
+        "primaryFile": "radio-group-disabled-example.ts",
+        "importPath": "aria/radio-group"
+    },
+    "radio-group-horizontal": {
+        "packagePath": "aria/radio-group/radio-group-horizontal",
+        "title": "Horizontal radio group.",
+        "componentName": "RadioGroupHorizontalExample",
+        "files": [
+            "radio-group-horizontal-example.ts",
+            "radio-group-horizontal-example.html",
+            "../radio-common.css"
+        ],
+        "selector": "radio-group-horizontal-example",
+        "additionalComponents": [],
+        "primaryFile": "radio-group-horizontal-example.ts",
+        "importPath": "aria/radio-group"
+    },
+    "radio-group-readonly": {
+        "packagePath": "aria/radio-group/radio-group-readonly",
+        "title": "Readonly radio group.",
+        "componentName": "RadioGroupReadonlyExample",
+        "files": [
+            "radio-group-readonly-example.ts",
+            "radio-group-readonly-example.html",
+            "../radio-common.css"
+        ],
+        "selector": "radio-group-readonly-example",
+        "additionalComponents": [],
+        "primaryFile": "radio-group-readonly-example.ts",
+        "importPath": "aria/radio-group"
+    },
+    "radio-group-rtl-horizontal": {
+        "packagePath": "aria/radio-group/radio-group-rtl-horizontal",
+        "title": "RTL horizontal radio group.",
+        "componentName": "RadioGroupRtlHorizontalExample",
+        "files": [
+            "radio-group-rtl-horizontal-example.ts",
+            "radio-group-rtl-horizontal-example.html",
+            "../radio-common.css"
+        ],
+        "selector": "radio-group-rtl-horizontal-example",
+        "additionalComponents": [],
+        "primaryFile": "radio-group-rtl-horizontal-example.ts",
+        "importPath": "aria/radio-group"
+    },
+    "radio-group-standard": {
+        "packagePath": "aria/radio-group/radio-group-standard",
+        "title": "Basic radio group.",
+        "componentName": "RadioGroupStandardExample",
+        "files": [
+            "radio-group-standard-example.ts",
+            "radio-group-standard-example.html",
+            "../radio-common.css"
+        ],
+        "selector": "radio-group-standard-example",
+        "additionalComponents": [],
+        "primaryFile": "radio-group-standard-example.ts",
+        "importPath": "aria/radio-group"
+    },
+    "tabs-active-descendant": {
+        "packagePath": "aria/tabs/active-descendant",
+        "title": "Active Descendant",
+        "componentName": "TabsActiveDescendantExample",
+        "files": [
+            "tabs-active-descendant-example.ts",
+            "tabs-active-descendant-example.html",
+            "../tabs-common.css"
+        ],
+        "selector": "tabs-active-descendant-example",
+        "additionalComponents": [],
+        "primaryFile": "tabs-active-descendant-example.ts",
+        "importPath": "aria/tabs"
+    },
+    "tabs-disabled-focusable": {
+        "packagePath": "aria/tabs/disabled-focusable",
+        "title": "Disabled Tabs are Focusable",
+        "componentName": "TabsDisabledFocusableExample",
+        "files": [
+            "tabs-disabled-focusable-example.ts",
+            "tabs-disabled-focusable-example.html",
+            "../tabs-common.css"
+        ],
+        "selector": "tabs-disabled-focusable-example",
+        "additionalComponents": [],
+        "primaryFile": "tabs-disabled-focusable-example.ts",
+        "importPath": "aria/tabs"
+    },
+    "tabs-disabled-skipped": {
+        "packagePath": "aria/tabs/disabled-skipped",
+        "title": "Disabled Tabs are Skipped",
+        "componentName": "TabsDisabledSkippedExample",
+        "files": [
+            "tabs-disabled-skipped-example.ts",
+            "tabs-disabled-skipped-example.html",
+            "../tabs-common.css"
+        ],
+        "selector": "tabs-disabled-skipped-example",
+        "additionalComponents": [],
+        "primaryFile": "tabs-disabled-skipped-example.ts",
+        "importPath": "aria/tabs"
+    },
+    "tabs-disabled": {
+        "packagePath": "aria/tabs/disabled",
+        "title": "Disabled",
+        "componentName": "TabsDisabledExample",
+        "files": [
+            "tabs-disabled-example.ts",
+            "tabs-disabled-example.html",
+            "../tabs-common.css"
+        ],
+        "selector": "tabs-disabled-example",
+        "additionalComponents": [],
+        "primaryFile": "tabs-disabled-example.ts",
+        "importPath": "aria/tabs"
+    },
+    "tabs-explicit-selection": {
+        "packagePath": "aria/tabs/explicit-selection",
+        "title": "Explicit selection",
+        "componentName": "TabsExplicitSelectionExample",
+        "files": [
+            "tabs-explicit-selection-example.ts",
+            "tabs-explicit-selection-example.html",
+            "../tabs-common.css"
+        ],
+        "selector": "tabs-explicit-selection-example",
+        "additionalComponents": [],
+        "primaryFile": "tabs-explicit-selection-example.ts",
+        "importPath": "aria/tabs"
+    },
+    "tabs-rtl": {
+        "packagePath": "aria/tabs/rtl",
+        "title": "RTL",
+        "componentName": "TabsRtlExample",
+        "files": [
+            "tabs-rtl-example.ts",
+            "tabs-rtl-example.html",
+            "../tabs-common.css"
+        ],
+        "selector": "tabs-rtl-example",
+        "additionalComponents": [],
+        "primaryFile": "tabs-rtl-example.ts",
+        "importPath": "aria/tabs"
+    },
+    "tabs-selection-follows-focus": {
+        "packagePath": "aria/tabs/selection-follows-focus",
+        "title": "Selection Follows Focus",
+        "componentName": "TabsSelectionFollowsFocusExample",
+        "files": [
+            "tabs-selection-follows-focus-example.ts",
+            "tabs-selection-follows-focus-example.html",
+            "../tabs-common.css"
+        ],
+        "selector": "tabs-selection-follows-focus-example",
+        "additionalComponents": [],
+        "primaryFile": "tabs-selection-follows-focus-example.ts",
+        "importPath": "aria/tabs"
+    },
+    "tabs-configurable": {
+        "packagePath": "aria/tabs/tabs-configurable",
+        "title": "Configurable Tabs.",
+        "componentName": "TabsConfigurableExample",
+        "files": [
+            "tabs-configurable-example.ts",
+            "tabs-configurable-example.html",
+            "../tabs-common.css"
+        ],
+        "selector": "tabs-configurable-example",
+        "additionalComponents": [],
+        "primaryFile": "tabs-configurable-example.ts",
+        "importPath": "aria/tabs"
+    },
+    "tabs-vertical": {
+        "packagePath": "aria/tabs/vertical-orientation",
+        "title": "Vertical",
+        "componentName": "TabsVerticalExample",
+        "files": [
+            "tabs-vertical-example.ts",
+            "tabs-vertical-example.html",
+            "../tabs-common.css"
+        ],
+        "selector": "tabs-vertical-example",
+        "additionalComponents": [],
+        "primaryFile": "tabs-vertical-example.ts",
+        "importPath": "aria/tabs"
+    },
+    "toolbar-configurable": {
+        "packagePath": "aria/toolbar/toolbar-configurable",
+        "title": "Configurable CDK Radio Group",
+        "componentName": "ToolbarConfigurableExample",
+        "files": [
+            "toolbar-configurable-example.ts",
+            "toolbar-configurable-example.html",
+            "../toolbar-common.css"
+        ],
+        "selector": "toolbar-configurable-example",
+        "additionalComponents": [],
+        "primaryFile": "toolbar-configurable-example.ts",
+        "importPath": "aria/toolbar"
+    },
+    "tree-active-descendant": {
+        "packagePath": "aria/tree/tree-active-descendant",
+        "title": "Tree with active descendant focus.",
+        "componentName": "TreeActiveDescendantExample",
+        "files": [
+            "tree-active-descendant-example.ts",
+            "tree-active-descendant-example.html",
+            "../tree-common.css"
+        ],
+        "selector": "tree-active-descendant-example",
+        "additionalComponents": [],
+        "primaryFile": "tree-active-descendant-example.ts",
+        "importPath": "aria/tree"
+    },
+    "tree-configurable": {
+        "packagePath": "aria/tree/tree-configurable",
+        "title": "Configurable Tree.",
+        "componentName": "TreeConfigurableExample",
+        "files": [
+            "tree-configurable-example.ts",
+            "tree-configurable-example.html",
+            "../tree-common.css"
+        ],
+        "selector": "tree-configurable-example",
+        "additionalComponents": [],
+        "primaryFile": "tree-configurable-example.ts",
+        "importPath": "aria/tree"
+    },
+    "tree-disabled-focusable": {
+        "packagePath": "aria/tree/tree-disabled-focusable",
+        "title": "Tree with focusable disabled items.",
+        "componentName": "TreeDisabledFocusableExample",
+        "files": [
+            "tree-disabled-focusable-example.ts",
+            "tree-disabled-focusable-example.html",
+            "../tree-common.css"
+        ],
+        "selector": "tree-disabled-focusable-example",
+        "additionalComponents": [],
+        "primaryFile": "tree-disabled-focusable-example.ts",
+        "importPath": "aria/tree"
+    },
+    "tree-disabled-skipped": {
+        "packagePath": "aria/tree/tree-disabled-skipped",
+        "title": "Tree with skipped disabled items.",
+        "componentName": "TreeDisabledSkippedExample",
+        "files": [
+            "tree-disabled-skipped-example.ts",
+            "tree-disabled-skipped-example.html",
+            "../tree-common.css"
+        ],
+        "selector": "tree-disabled-skipped-example",
+        "additionalComponents": [],
+        "primaryFile": "tree-disabled-skipped-example.ts",
+        "importPath": "aria/tree"
+    },
+    "tree-disabled": {
+        "packagePath": "aria/tree/tree-disabled",
+        "title": "Tree with disabled state.",
+        "componentName": "TreeDisabledExample",
+        "files": [
+            "tree-disabled-example.ts",
+            "tree-disabled-example.html",
+            "../tree-common.css"
+        ],
+        "selector": "tree-disabled-example",
+        "additionalComponents": [],
+        "primaryFile": "tree-disabled-example.ts",
+        "importPath": "aria/tree"
+    },
+    "tree-multi-select-follow-focus": {
+        "packagePath": "aria/tree/tree-multi-select-follow-focus",
+        "title": "Tree with multi-selection and follow focus.",
+        "componentName": "TreeMultiSelectFollowFocusExample",
+        "files": [
+            "tree-multi-select-follow-focus-example.ts",
+            "tree-multi-select-follow-focus-example.html",
+            "../tree-common.css"
+        ],
+        "selector": "tree-multi-select-follow-focus-example",
+        "additionalComponents": [],
+        "primaryFile": "tree-multi-select-follow-focus-example.ts",
+        "importPath": "aria/tree"
+    },
+    "tree-multi-select": {
+        "packagePath": "aria/tree/tree-multi-select",
+        "title": "Tree with multi-selection.",
+        "componentName": "TreeMultiSelectExample",
+        "files": [
+            "tree-multi-select-example.ts",
+            "tree-multi-select-example.html",
+            "../tree-common.css"
+        ],
+        "selector": "tree-multi-select-example",
+        "additionalComponents": [],
+        "primaryFile": "tree-multi-select-example.ts",
+        "importPath": "aria/tree"
+    },
+    "tree-nav": {
+        "packagePath": "aria/tree/tree-nav",
+        "title": "Tree with nav mode.",
+        "componentName": "TreeNavExample",
+        "files": [
+            "tree-nav-example.ts",
+            "tree-nav-example.html",
+            "../tree-common.css"
+        ],
+        "selector": "tree-nav-example",
+        "additionalComponents": [],
+        "primaryFile": "tree-nav-example.ts",
+        "importPath": "aria/tree"
+    },
+    "tree-single-select-follow-focus": {
+        "packagePath": "aria/tree/tree-single-select-follow-focus",
+        "title": "Tree with single selection and follow focus.",
+        "componentName": "TreeSingleSelectFollowFocusExample",
+        "files": [
+            "tree-single-select-follow-focus-example.ts",
+            "tree-single-select-follow-focus-example.html",
+            "../tree-common.css"
+        ],
+        "selector": "tree-single-select-follow-focus-example",
+        "additionalComponents": [],
+        "primaryFile": "tree-single-select-follow-focus-example.ts",
+        "importPath": "aria/tree"
+    },
+    "tree-single-select": {
+        "packagePath": "aria/tree/tree-single-select",
+        "title": "Tree with single selection.",
+        "componentName": "TreeSingleSelectExample",
+        "files": [
+            "tree-single-select-example.ts",
+            "tree-single-select-example.html",
+            "../tree-common.css"
+        ],
+        "selector": "tree-single-select-example",
+        "additionalComponents": [],
+        "primaryFile": "tree-single-select-example.ts",
+        "importPath": "aria/tree"
+    },
     "cdk-popover-edit-cdk-table-flex": {
         "packagePath": "cdk-experimental/popover-edit/cdk-popover-edit-cdk-table-flex",
         "title": "CDK Popover Edit on a flex cdk-table.",
@@ -5048,6 +5790,112 @@ const EXAMPLE_COMPONENTS = {
 };
 async function loadExample(id) {
     switch (id) {
+        case 'accordion-configurable':
+            return import('@angular/components-examples/aria/accordion');
+        case 'accordion-disabled-focusable':
+            return import('@angular/components-examples/aria/accordion');
+        case 'accordion-disabled-skipped':
+            return import('@angular/components-examples/aria/accordion');
+        case 'accordion-disabled':
+            return import('@angular/components-examples/aria/accordion');
+        case 'accordion-multi-expansion':
+            return import('@angular/components-examples/aria/accordion');
+        case 'accordion-single-expansion':
+            return import('@angular/components-examples/aria/accordion');
+        case 'combobox-auto-select':
+            return import('@angular/components-examples/aria/combobox');
+        case 'combobox-highlight':
+            return import('@angular/components-examples/aria/combobox');
+        case 'combobox-manual':
+            return import('@angular/components-examples/aria/combobox');
+        case 'combobox-tree-auto-select':
+            return import('@angular/components-examples/aria/combobox');
+        case 'combobox-tree-highlight':
+            return import('@angular/components-examples/aria/combobox');
+        case 'combobox-tree-manual':
+            return import('@angular/components-examples/aria/combobox');
+        case 'listbox-active-descendant':
+            return import('@angular/components-examples/aria/listbox');
+        case 'listbox-configurable':
+            return import('@angular/components-examples/aria/listbox');
+        case 'listbox-disabled-focusable':
+            return import('@angular/components-examples/aria/listbox');
+        case 'listbox-disabled-skipped':
+            return import('@angular/components-examples/aria/listbox');
+        case 'listbox-disabled':
+            return import('@angular/components-examples/aria/listbox');
+        case 'listbox-horizontal':
+            return import('@angular/components-examples/aria/listbox');
+        case 'listbox-multi-select-follow-focus':
+            return import('@angular/components-examples/aria/listbox');
+        case 'listbox-multi-select':
+            return import('@angular/components-examples/aria/listbox');
+        case 'listbox-readonly':
+            return import('@angular/components-examples/aria/listbox');
+        case 'listbox-rtl-horizontal':
+            return import('@angular/components-examples/aria/listbox');
+        case 'listbox-single-select-follow-focus':
+            return import('@angular/components-examples/aria/listbox');
+        case 'listbox-single-select':
+            return import('@angular/components-examples/aria/listbox');
+        case 'radio-group-active-descendant':
+            return import('@angular/components-examples/aria/radio-group');
+        case 'radio-group-configurable':
+            return import('@angular/components-examples/aria/radio-group');
+        case 'radio-group-disabled-focusable':
+            return import('@angular/components-examples/aria/radio-group');
+        case 'radio-group-disabled-skipped':
+            return import('@angular/components-examples/aria/radio-group');
+        case 'radio-group-disabled':
+            return import('@angular/components-examples/aria/radio-group');
+        case 'radio-group-horizontal':
+            return import('@angular/components-examples/aria/radio-group');
+        case 'radio-group-readonly':
+            return import('@angular/components-examples/aria/radio-group');
+        case 'radio-group-rtl-horizontal':
+            return import('@angular/components-examples/aria/radio-group');
+        case 'radio-group-standard':
+            return import('@angular/components-examples/aria/radio-group');
+        case 'tabs-active-descendant':
+            return import('@angular/components-examples/aria/tabs');
+        case 'tabs-disabled-focusable':
+            return import('@angular/components-examples/aria/tabs');
+        case 'tabs-disabled-skipped':
+            return import('@angular/components-examples/aria/tabs');
+        case 'tabs-disabled':
+            return import('@angular/components-examples/aria/tabs');
+        case 'tabs-explicit-selection':
+            return import('@angular/components-examples/aria/tabs');
+        case 'tabs-rtl':
+            return import('@angular/components-examples/aria/tabs');
+        case 'tabs-selection-follows-focus':
+            return import('@angular/components-examples/aria/tabs');
+        case 'tabs-configurable':
+            return import('@angular/components-examples/aria/tabs');
+        case 'tabs-vertical':
+            return import('@angular/components-examples/aria/tabs');
+        case 'toolbar-configurable':
+            return import('@angular/components-examples/aria/toolbar');
+        case 'tree-active-descendant':
+            return import('@angular/components-examples/aria/tree');
+        case 'tree-configurable':
+            return import('@angular/components-examples/aria/tree');
+        case 'tree-disabled-focusable':
+            return import('@angular/components-examples/aria/tree');
+        case 'tree-disabled-skipped':
+            return import('@angular/components-examples/aria/tree');
+        case 'tree-disabled':
+            return import('@angular/components-examples/aria/tree');
+        case 'tree-multi-select-follow-focus':
+            return import('@angular/components-examples/aria/tree');
+        case 'tree-multi-select':
+            return import('@angular/components-examples/aria/tree');
+        case 'tree-nav':
+            return import('@angular/components-examples/aria/tree');
+        case 'tree-single-select-follow-focus':
+            return import('@angular/components-examples/aria/tree');
+        case 'tree-single-select':
+            return import('@angular/components-examples/aria/tree');
         case 'cdk-popover-edit-cdk-table-flex':
             return import('@angular/components-examples/cdk-experimental/popover-edit');
         case 'cdk-popover-edit-cdk-table':

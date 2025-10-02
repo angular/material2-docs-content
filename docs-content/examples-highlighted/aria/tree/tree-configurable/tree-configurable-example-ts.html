@@ -1,0 +1,50 @@
+<span class="hljs-comment">/**
+ * <span class="hljs-doctag">@license</span>
+ * Copyright Google LLC All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.dev/license
+ */</span>
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">Component</span>, model} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">NgTemplateOutlet</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/common&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">FormControl</span>, <span class="hljs-title class_">FormsModule</span>, <span class="hljs-title class_">ReactiveFormsModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/forms&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatCheckboxModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/checkbox&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatFormFieldModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/form-field&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatSelectModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/select&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">Tree</span>, <span class="hljs-title class_">TreeItem</span>, <span class="hljs-title class_">TreeItemGroup</span>, <span class="hljs-title class_">TreeItemGroupContent</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/aria/tree&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-variable constant_">NODES</span>, <span class="hljs-title class_">TreeNode</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;../tree-data&#x27;</span>;
+
+<span class="hljs-comment">/** <span class="hljs-doctag">@title</span> Configurable Tree. */</span>
+<span class="hljs-meta">@Component</span>({
+  <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;tree-configurable-example&#x27;</span>,
+  <span class="hljs-attr">exportAs</span>: <span class="hljs-string">&#x27;TreeConfigurableExample&#x27;</span>,
+  <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;tree-configurable-example.html&#x27;</span>,
+  <span class="hljs-attr">styleUrl</span>: <span class="hljs-string">&#x27;../tree-common.css&#x27;</span>,
+  <span class="hljs-attr">standalone</span>: <span class="hljs-literal">true</span>,
+  <span class="hljs-attr">imports</span>: [
+    <span class="hljs-title class_">FormsModule</span>,
+    <span class="hljs-title class_">ReactiveFormsModule</span>,
+    <span class="hljs-title class_">MatCheckboxModule</span>,
+    <span class="hljs-title class_">MatFormFieldModule</span>,
+    <span class="hljs-title class_">MatSelectModule</span>,
+    <span class="hljs-title class_">NgTemplateOutlet</span>,
+    <span class="hljs-title class_">Tree</span>,
+    <span class="hljs-title class_">TreeItem</span>,
+    <span class="hljs-title class_">TreeItemGroup</span>,
+    <span class="hljs-title class_">TreeItemGroupContent</span>,
+  ],
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">TreeConfigurableExample</span> {
+  <span class="hljs-attr">nodes</span>: <span class="hljs-title class_">TreeNode</span>[] = <span class="hljs-variable constant_">NODES</span>;
+
+  <span class="hljs-attr">selectionMode</span>: <span class="hljs-string">&#x27;explicit&#x27;</span> | <span class="hljs-string">&#x27;follow&#x27;</span> = <span class="hljs-string">&#x27;explicit&#x27;</span>;
+  <span class="hljs-attr">focusMode</span>: <span class="hljs-string">&#x27;roving&#x27;</span> | <span class="hljs-string">&#x27;activedescendant&#x27;</span> = <span class="hljs-string">&#x27;roving&#x27;</span>;
+
+  multi = <span class="hljs-keyword">new</span> <span class="hljs-title class_">FormControl</span>(<span class="hljs-literal">false</span>, {<span class="hljs-attr">nonNullable</span>: <span class="hljs-literal">true</span>});
+  disabled = <span class="hljs-keyword">new</span> <span class="hljs-title class_">FormControl</span>(<span class="hljs-literal">false</span>, {<span class="hljs-attr">nonNullable</span>: <span class="hljs-literal">true</span>});
+  wrap = <span class="hljs-keyword">new</span> <span class="hljs-title class_">FormControl</span>(<span class="hljs-literal">true</span>, {<span class="hljs-attr">nonNullable</span>: <span class="hljs-literal">true</span>});
+  skipDisabled = <span class="hljs-keyword">new</span> <span class="hljs-title class_">FormControl</span>(<span class="hljs-literal">true</span>, {<span class="hljs-attr">nonNullable</span>: <span class="hljs-literal">true</span>});
+  nav = <span class="hljs-keyword">new</span> <span class="hljs-title class_">FormControl</span>(<span class="hljs-literal">false</span>, {<span class="hljs-attr">nonNullable</span>: <span class="hljs-literal">true</span>});
+
+  selectedValues = model&lt;<span class="hljs-built_in">string</span>[]&gt;([<span class="hljs-string">&#x27;package.json&#x27;</span>]);
+}

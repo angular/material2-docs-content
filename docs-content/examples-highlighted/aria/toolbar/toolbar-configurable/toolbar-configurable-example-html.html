@@ -1,0 +1,105 @@
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-container&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">h4</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-heading&quot;</span>&gt;</span>Toolbar Controls<span class="hljs-tag">&lt;/<span class="hljs-name">h4</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-toolbar-controls&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mat-checkbox</span> [<span class="hljs-attr">formControl</span>]=<span class="hljs-string">&quot;skipDisabled&quot;</span>&gt;</span>Skip Disabled<span class="hljs-tag">&lt;/<span class="hljs-name">mat-checkbox</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mat-checkbox</span> [<span class="hljs-attr">formControl</span>]=<span class="hljs-string">&quot;wrap&quot;</span>&gt;</span>Wrap<span class="hljs-tag">&lt;/<span class="hljs-name">mat-checkbox</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mat-checkbox</span> [<span class="hljs-attr">formControl</span>]=<span class="hljs-string">&quot;toolbarDisabled&quot;</span>&gt;</span>Disabled<span class="hljs-tag">&lt;/<span class="hljs-name">mat-checkbox</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mat-form-field</span> <span class="hljs-attr">subscriptSizing</span>=<span class="hljs-string">&quot;dynamic&quot;</span> <span class="hljs-attr">appearance</span>=<span class="hljs-string">&quot;outline&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">mat-label</span>&gt;</span>Orientation<span class="hljs-tag">&lt;/<span class="hljs-name">mat-label</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">mat-select</span> [(<span class="hljs-attr">value</span>)]=<span class="hljs-string">&quot;orientation&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">mat-option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;vertical&quot;</span>&gt;</span>Vertical<span class="hljs-tag">&lt;/<span class="hljs-name">mat-option</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">mat-option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;horizontal&quot;</span>&gt;</span>Horizontal<span class="hljs-tag">&lt;/<span class="hljs-name">mat-option</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">mat-select</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">mat-form-field</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">h4</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-heading&quot;</span>&gt;</span>Radio Group Controls<span class="hljs-tag">&lt;/<span class="hljs-name">h4</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-toolbar-controls&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mat-checkbox</span> [<span class="hljs-attr">formControl</span>]=<span class="hljs-string">&quot;disabled&quot;</span>&gt;</span>Disabled<span class="hljs-tag">&lt;/<span class="hljs-name">mat-checkbox</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mat-checkbox</span> [<span class="hljs-attr">formControl</span>]=<span class="hljs-string">&quot;readonly&quot;</span>&gt;</span>Readonly<span class="hljs-tag">&lt;/<span class="hljs-name">mat-checkbox</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mat-form-field</span> <span class="hljs-attr">subscriptSizing</span>=<span class="hljs-string">&quot;dynamic&quot;</span> <span class="hljs-attr">appearance</span>=<span class="hljs-string">&quot;outline&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">mat-label</span>&gt;</span>Disabled Radio Options<span class="hljs-tag">&lt;/<span class="hljs-name">mat-label</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">mat-select</span> [(<span class="hljs-attr">value</span>)]=<span class="hljs-string">&quot;disabledOptions&quot;</span> <span class="hljs-attr">multiple</span>&gt;</span>
+        @for (fruit of fruits; track fruit) {
+          <span class="hljs-tag">&lt;<span class="hljs-name">mat-option</span> [<span class="hljs-attr">value</span>]=<span class="hljs-string">&quot;fruit&quot;</span>&gt;</span>{{fruit}}<span class="hljs-tag">&lt;/<span class="hljs-name">mat-option</span>&gt;</span>
+        }
+      <span class="hljs-tag">&lt;/<span class="hljs-name">mat-select</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">mat-form-field</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">h4</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-heading&quot;</span>&gt;</span>Button<span class="hljs-tag">&lt;/<span class="hljs-name">h4</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-toolbar-controls&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mat-form-field</span> <span class="hljs-attr">subscriptSizing</span>=<span class="hljs-string">&quot;dynamic&quot;</span> <span class="hljs-attr">appearance</span>=<span class="hljs-string">&quot;outline&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">mat-label</span>&gt;</span>Disabled Buttons<span class="hljs-tag">&lt;/<span class="hljs-name">mat-label</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">mat-select</span> [(<span class="hljs-attr">value</span>)]=<span class="hljs-string">&quot;disabledButtonOptions&quot;</span> <span class="hljs-attr">multiple</span>&gt;</span>
+        @for (fruit of buttonFruits; track fruit) {
+          <span class="hljs-tag">&lt;<span class="hljs-name">mat-option</span> [<span class="hljs-attr">value</span>]=<span class="hljs-string">&quot;fruit&quot;</span>&gt;</span>{{fruit}}<span class="hljs-tag">&lt;/<span class="hljs-name">mat-option</span>&gt;</span>
+        }
+      <span class="hljs-tag">&lt;/<span class="hljs-name">mat-select</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">mat-form-field</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span>
+  <span class="hljs-attr">ngToolbar</span>
+  [<span class="hljs-attr">orientation</span>]=<span class="hljs-string">&quot;orientation&quot;</span>
+  [<span class="hljs-attr">skipDisabled</span>]=<span class="hljs-string">&quot;skipDisabled.value&quot;</span>
+  [<span class="hljs-attr">wrap</span>]=<span class="hljs-string">&quot;wrap.value&quot;</span>
+  [<span class="hljs-attr">disabled</span>]=<span class="hljs-string">&quot;toolbarDisabled.value&quot;</span>
+  <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-toolbar&quot;</span>
+&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">button</span>
+    <span class="hljs-attr">ngToolbarWidget</span>
+    <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-radio-button&quot;</span>
+    (<span class="hljs-attr">click</span>)=<span class="hljs-string">&quot;test(&#x27;Pear&#x27;)&quot;</span>
+    [<span class="hljs-attr">disabled</span>]=<span class="hljs-string">&quot;disabledButtonOptions.includes(&#x27;Pear&#x27;)&quot;</span>
+  &gt;</span>
+    Pear
+  <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">ul</span>
+    <span class="hljs-attr">ngRadioGroup</span>
+    [<span class="hljs-attr">disabled</span>]=<span class="hljs-string">&quot;disabled.value&quot;</span>
+    [<span class="hljs-attr">readonly</span>]=<span class="hljs-string">&quot;readonly.value&quot;</span>
+    <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-radio-group&quot;</span>
+    <span class="hljs-attr">aria-label</span>=<span class="hljs-string">&quot;Select your favorite fruit&quot;</span>
+  &gt;</span>
+    @for (fruit of fruits; track fruit) {
+      @let optionDisabled = disabledOptions.includes(fruit);
+      <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">ngRadioButton</span> [<span class="hljs-attr">value</span>]=<span class="hljs-string">&quot;fruit&quot;</span> [<span class="hljs-attr">disabled</span>]=<span class="hljs-string">&quot;optionDisabled&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-radio-button&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-radio-indicator&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>{{ fruit }}<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+    }
+  <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">ngRadioGroup</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-radio-group&quot;</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">&quot;Select your favorite fruit&quot;</span>&gt;</span>
+    @for (fruit of fruits; track fruit) {
+      @let optionDisabled = disabledOptions.includes(fruit);
+      <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">ngRadioButton</span> [<span class="hljs-attr">value</span>]=<span class="hljs-string">&quot;fruit&quot;</span> [<span class="hljs-attr">disabled</span>]=<span class="hljs-string">&quot;optionDisabled&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-radio-button&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-radio-indicator&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>{{ fruit }}<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+    }
+  <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">button</span>
+    <span class="hljs-attr">ngToolbarWidget</span>
+    <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-radio-button&quot;</span>
+    (<span class="hljs-attr">click</span>)=<span class="hljs-string">&quot;test(&#x27;Blueberry&#x27;)&quot;</span>
+    [<span class="hljs-attr">disabled</span>]=<span class="hljs-string">&quot;disabledButtonOptions.includes(&#x27;Blueberry&#x27;)&quot;</span>
+  &gt;</span>
+    Blueberry
+  <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">button</span>
+    <span class="hljs-attr">ngToolbarWidget</span>
+    <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-radio-button&quot;</span>
+    (<span class="hljs-attr">click</span>)=<span class="hljs-string">&quot;test(&#x27;Cherry&#x27;)&quot;</span>
+    [<span class="hljs-attr">disabled</span>]=<span class="hljs-string">&quot;disabledButtonOptions.includes(&#x27;Cherry&#x27;)&quot;</span>
+  &gt;</span>
+    Cherry
+  <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">button</span>
+    <span class="hljs-attr">ngToolbarWidget</span>
+    <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-radio-button&quot;</span>
+    (<span class="hljs-attr">click</span>)=<span class="hljs-string">&quot;test(&#x27;Date&#x27;)&quot;</span>
+    [<span class="hljs-attr">disabled</span>]=<span class="hljs-string">&quot;disabledButtonOptions.includes(&#x27;Date&#x27;)&quot;</span>
+  &gt;</span>
+    Date
+  <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>

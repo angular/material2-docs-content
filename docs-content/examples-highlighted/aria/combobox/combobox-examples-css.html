@@ -1,0 +1,149 @@
+<span class="hljs-selector-class">.example-combobox-container</span> {
+  <span class="hljs-attribute">position</span>: relative;
+  <span class="hljs-attribute">width</span>: <span class="hljs-number">300px</span>;
+  <span class="hljs-attribute">display</span>: flex;
+  <span class="hljs-attribute">overflow</span>: hidden;
+  <span class="hljs-attribute">flex-direction</span>: column;
+  <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid <span class="hljs-built_in">var</span>(--mat-sys-outline);
+  <span class="hljs-attribute">border-radius</span>: <span class="hljs-built_in">var</span>(--mat-sys-corner-extra-small);
+}
+
+<span class="hljs-selector-class">.example-combobox-container</span><span class="hljs-selector-pseudo">:has</span>(<span class="hljs-selector-class">.example-combobox-input</span><span class="hljs-selector-attr">[aria-expanded=<span class="hljs-string">&#x27;true&#x27;</span>]</span>) {
+  <span class="hljs-attribute">border-bottom-right-radius</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">border-bottom-left-radius</span>: <span class="hljs-number">0</span>;
+}
+
+<span class="hljs-selector-class">.example-combobox-input-container</span> {
+  <span class="hljs-attribute">display</span>: flex;
+  <span class="hljs-attribute">overflow</span>: hidden;
+  <span class="hljs-attribute">position</span>: relative;
+  <span class="hljs-attribute">align-items</span>: center;
+}
+
+<span class="hljs-selector-class">.example-icon</span> {
+  <span class="hljs-attribute">width</span>: <span class="hljs-number">24px</span>;
+  <span class="hljs-attribute">height</span>: <span class="hljs-number">24px</span>;
+  <span class="hljs-attribute">font-size</span>: <span class="hljs-number">20px</span>;
+  <span class="hljs-attribute">display</span>: grid;
+  <span class="hljs-attribute">place-items</span>: center;
+  <span class="hljs-attribute">pointer-events</span>: none;
+}
+
+<span class="hljs-selector-class">.example-search-icon</span> {
+  <span class="hljs-attribute">padding</span>: <span class="hljs-number">0</span> <span class="hljs-number">0.5rem</span>;
+  <span class="hljs-attribute">position</span>: absolute;
+  <span class="hljs-attribute">opacity</span>: <span class="hljs-number">0.8</span>;
+}
+
+<span class="hljs-selector-class">.example-combobox-input</span> {
+  <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
+  <span class="hljs-attribute">border</span>: none;
+  <span class="hljs-attribute">outline</span>: none;
+  <span class="hljs-attribute">font-size</span>: <span class="hljs-number">1rem</span>;
+  <span class="hljs-attribute">padding</span>: <span class="hljs-number">0.7rem</span> <span class="hljs-number">1rem</span> <span class="hljs-number">0.7rem</span> <span class="hljs-number">2.5rem</span>;
+  <span class="hljs-attribute">background-color</span>: <span class="hljs-built_in">var</span>(--mat-sys-surface);
+}
+
+<span class="hljs-selector-class">.example-popover</span> {
+  <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">padding</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid <span class="hljs-built_in">var</span>(--mat-sys-outline);
+  <span class="hljs-attribute">border-bottom-right-radius</span>: <span class="hljs-built_in">var</span>(--mat-sys-corner-extra-small);
+  <span class="hljs-attribute">border-bottom-left-radius</span>: <span class="hljs-built_in">var</span>(--mat-sys-corner-extra-small);
+  <span class="hljs-attribute">background-color</span>: <span class="hljs-built_in">var</span>(--mat-sys-surface);
+}
+
+<span class="hljs-selector-class">.example-listbox</span> {
+  <span class="hljs-attribute">display</span>: flex;
+  <span class="hljs-attribute">flex-direction</span>: column;
+  <span class="hljs-attribute">overflow</span>: auto;
+  <span class="hljs-attribute">max-height</span>: <span class="hljs-number">10rem</span>;
+  <span class="hljs-attribute">padding</span>: <span class="hljs-number">0.5rem</span>;
+}
+
+<span class="hljs-selector-class">.example-option</span> {
+  <span class="hljs-attribute">cursor</span>: pointer;
+  <span class="hljs-attribute">padding</span>: <span class="hljs-number">0.3rem</span> <span class="hljs-number">1rem</span>;
+  <span class="hljs-attribute">border-radius</span>: <span class="hljs-built_in">var</span>(--mat-sys-corner-extra-small);
+  <span class="hljs-attribute">display</span>: flex;
+  <span class="hljs-attribute">overflow</span>: hidden;
+  <span class="hljs-attribute">flex-shrink</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">align-items</span>: center;
+  <span class="hljs-attribute">justify-content</span>: space-between;
+}
+
+<span class="hljs-selector-class">.example-selected-icon</span> {
+  <span class="hljs-attribute">visibility</span>: hidden;
+}
+
+<span class="hljs-selector-class">.example-option</span><span class="hljs-selector-attr">[aria-selected=<span class="hljs-string">&#x27;true&#x27;</span>]</span> <span class="hljs-selector-class">.example-selected-icon</span> {
+  <span class="hljs-attribute">visibility</span>: visible;
+}
+
+<span class="hljs-selector-class">.example-option</span><span class="hljs-selector-attr">[inert]</span>,
+<span class="hljs-selector-class">.example-tree-item</span><span class="hljs-selector-attr">[inert]</span> {
+  <span class="hljs-attribute">display</span>: none;
+}
+
+<span class="hljs-selector-class">.example-combobox-container</span><span class="hljs-selector-pseudo">:focus-within</span> <span class="hljs-selector-attr">[data-active=<span class="hljs-string">&#x27;true&#x27;</span>]</span> {
+  <span class="hljs-attribute">background</span>: <span class="hljs-built_in">color-mix</span>(
+    in srgb,
+    <span class="hljs-built_in">var</span>(--mat-sys-on-surface) <span class="hljs-built_in">calc</span>(<span class="hljs-built_in">var</span>(--mat-sys-focus-state-layer-opacity) * <span class="hljs-number">100%</span>),
+    transparent
+  );
+}
+
+<span class="hljs-selector-class">.example-combobox-container</span><span class="hljs-selector-pseudo">:focus-within</span> <span class="hljs-selector-attr">[data-active=<span class="hljs-string">&#x27;true&#x27;</span>]</span><span class="hljs-selector-attr">[aria-selected=<span class="hljs-string">&#x27;true&#x27;</span>]</span> {
+  <span class="hljs-attribute">background</span>: <span class="hljs-built_in">color-mix</span>(
+    in srgb,
+    <span class="hljs-built_in">var</span>(--mat-sys-primary) <span class="hljs-built_in">calc</span>(<span class="hljs-built_in">var</span>(--mat-sys-pressed-state-layer-opacity) * <span class="hljs-number">100%</span>),
+    transparent
+  );
+  <span class="hljs-attribute">color</span>: <span class="hljs-built_in">var</span>(--mat-sys-primary);
+}
+
+<span class="hljs-selector-class">.example-tree</span> {
+  <span class="hljs-attribute">padding</span>: <span class="hljs-number">10px</span>;
+  <span class="hljs-attribute">overflow-x</span>: scroll;
+}
+
+<span class="hljs-selector-class">.example-tree-item</span> {
+  <span class="hljs-attribute">cursor</span>: pointer;
+  <span class="hljs-attribute">list-style</span>: none;
+  <span class="hljs-attribute">text-decoration</span>: none;
+  <span class="hljs-attribute">display</span>: flex;
+  <span class="hljs-attribute">align-items</span>: center;
+  <span class="hljs-attribute">gap</span>: <span class="hljs-number">1rem</span>;
+  <span class="hljs-attribute">padding</span>: <span class="hljs-number">0.3rem</span> <span class="hljs-number">1rem</span>;
+}
+
+<span class="hljs-selector-tag">li</span><span class="hljs-selector-attr">[aria-expanded=<span class="hljs-string">&#x27;false&#x27;</span>]</span> + <span class="hljs-selector-tag">ul</span><span class="hljs-selector-attr">[role=<span class="hljs-string">&#x27;group&#x27;</span>]</span> {
+  <span class="hljs-attribute">display</span>: none;
+}
+
+<span class="hljs-selector-tag">ul</span><span class="hljs-selector-attr">[role=<span class="hljs-string">&#x27;group&#x27;</span>]</span> {
+  <span class="hljs-attribute">padding-inline-start</span>: <span class="hljs-number">1rem</span>;
+}
+
+<span class="hljs-selector-class">.example-icon</span> {
+  <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">width</span>: <span class="hljs-number">24px</span>;
+}
+
+<span class="hljs-selector-class">.example-parent-icon</span> {
+  <span class="hljs-attribute">transition</span>: transform <span class="hljs-number">0.2s</span> ease;
+}
+
+<span class="hljs-selector-class">.example-tree-item</span><span class="hljs-selector-attr">[aria-expanded=<span class="hljs-string">&#x27;true&#x27;</span>]</span> <span class="hljs-selector-class">.example-parent-icon</span> {
+  <span class="hljs-attribute">transform</span>: <span class="hljs-built_in">rotate</span>(<span class="hljs-number">90deg</span>);
+}
+
+<span class="hljs-selector-class">.example-selected-icon</span> {
+  <span class="hljs-attribute">visibility</span>: hidden;
+  <span class="hljs-attribute">margin-left</span>: auto;
+}
+
+<span class="hljs-selector-class">.example-tree-item</span><span class="hljs-selector-attr">[aria-current]</span> <span class="hljs-selector-class">.example-selected-icon</span>,
+<span class="hljs-selector-class">.example-tree-item</span><span class="hljs-selector-attr">[aria-selected=<span class="hljs-string">&#x27;true&#x27;</span>]</span> <span class="hljs-selector-class">.example-selected-icon</span> {
+  <span class="hljs-attribute">visibility</span>: visible;
+}

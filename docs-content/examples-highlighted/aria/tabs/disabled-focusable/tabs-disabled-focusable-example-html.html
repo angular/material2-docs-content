@@ -1,0 +1,29 @@
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">ngTabs</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-tabs&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">ngTabList</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-tablist&quot;</span> [<span class="hljs-attr">skipDisabled</span>]=<span class="hljs-string">&quot;false&quot;</span> <span class="hljs-attr">selectedTab</span>=<span class="hljs-string">&quot;tab-1&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">ngTab</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;tab-1&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-tab&quot;</span>&gt;</span>tab 1<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">ngTab</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;tab-2&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-tab&quot;</span>&gt;</span>tab 2<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">ngTab</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;tab-3&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-tab&quot;</span> <span class="hljs-attr">disabled</span>&gt;</span>tab 3<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">ngTab</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;tab-4&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-tab&quot;</span> <span class="hljs-attr">disabled</span>&gt;</span>tab 4<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">ngTab</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;tab-5&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-tab&quot;</span>&gt;</span>tab 5<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">ngTabPanel</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;tab-1&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-tabpanel&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">ng-template</span> <span class="hljs-attr">ngTabContent</span>&gt;</span>Tabpanel 1<span class="hljs-tag">&lt;/<span class="hljs-name">ng-template</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">ngTabPanel</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;tab-2&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-tabpanel&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">ng-template</span> <span class="hljs-attr">ngTabContent</span>&gt;</span>Tabpanel 2<span class="hljs-tag">&lt;/<span class="hljs-name">ng-template</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">ngTabPanel</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;tab-3&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-tabpanel&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">ng-template</span> <span class="hljs-attr">ngTabContent</span>&gt;</span>Tabpanel 3<span class="hljs-tag">&lt;/<span class="hljs-name">ng-template</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">ngTabPanel</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;tab-4&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-tabpanel&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">ng-template</span> <span class="hljs-attr">ngTabContent</span>&gt;</span>Tabpanel 4<span class="hljs-tag">&lt;/<span class="hljs-name">ng-template</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">ngTabPanel</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;tab-5&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-tabpanel&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">ng-template</span> <span class="hljs-attr">ngTabContent</span>&gt;</span>Tabpanel 5<span class="hljs-tag">&lt;/<span class="hljs-name">ng-template</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>

@@ -1,6 +1,6 @@
 {
   "name": "@angular/components-examples",
-  "version": "21.0.0-next.6+sha-542bb6b",
+  "version": "21.0.0-next.6+sha-5dc8c5e",
   "description": "Angular Components Examples",
   "private": true,
   "repository": {
@@ -23,6 +23,34 @@
     ".": {
       "types": "./types/components-examples.d.ts",
       "default": "./fesm2022/components-examples.mjs"
+    },
+    "./aria/accordion": {
+      "types": "./types/aria-accordion.d.ts",
+      "default": "./fesm2022/aria-accordion.mjs"
+    },
+    "./aria/combobox": {
+      "types": "./types/aria-combobox.d.ts",
+      "default": "./fesm2022/aria-combobox.mjs"
+    },
+    "./aria/listbox": {
+      "types": "./types/aria-listbox.d.ts",
+      "default": "./fesm2022/aria-listbox.mjs"
+    },
+    "./aria/radio-group": {
+      "types": "./types/aria-radio-group.d.ts",
+      "default": "./fesm2022/aria-radio-group.mjs"
+    },
+    "./aria/tabs": {
+      "types": "./types/aria-tabs.d.ts",
+      "default": "./fesm2022/aria-tabs.mjs"
+    },
+    "./aria/toolbar": {
+      "types": "./types/aria-toolbar.d.ts",
+      "default": "./fesm2022/aria-toolbar.mjs"
+    },
+    "./aria/tree": {
+      "types": "./types/aria-tree.d.ts",
+      "default": "./fesm2022/aria-tree.mjs"
     },
     "./cdk-experimental/popover-edit": {
       "types": "./types/cdk-experimental-popover-edit.d.ts",
@@ -259,17 +287,19 @@
   },
   "homepage": "https://github.com/angular/components#readme",
   "peerDependencies": {
-    "@angular/cdk": "21.0.0-next.6+sha-542bb6b",
-    "@angular/cdk-experimental": "21.0.0-next.6+sha-542bb6b",
+    "@angular/aria": "21.0.0-next.6+sha-5dc8c5e",
+    "@angular/cdk": "21.0.0-next.6+sha-5dc8c5e",
+    "@angular/cdk-experimental": "21.0.0-next.6+sha-5dc8c5e",
     "@angular/core": "^21.0.0-0 || ^21.1.0-0 || ^21.2.0-0 || ^21.3.0-0 || ^22.0.0-0",
     "@angular/common": "^21.0.0-0 || ^21.1.0-0 || ^21.2.0-0 || ^21.3.0-0 || ^22.0.0-0",
-    "@angular/material": "21.0.0-next.6+sha-542bb6b",
-    "@angular/material-experimental": "21.0.0-next.6+sha-542bb6b",
-    "@angular/material-moment-adapter": "21.0.0-next.6+sha-542bb6b",
-    "@angular/material-luxon-adapter": "21.0.0-next.6+sha-542bb6b",
-    "@angular/material-date-fns-adapter": "21.0.0-next.6+sha-542bb6b"
+    "@angular/material": "21.0.0-next.6+sha-5dc8c5e",
+    "@angular/material-experimental": "21.0.0-next.6+sha-5dc8c5e",
+    "@angular/material-moment-adapter": "21.0.0-next.6+sha-5dc8c5e",
+    "@angular/material-luxon-adapter": "21.0.0-next.6+sha-5dc8c5e",
+    "@angular/material-date-fns-adapter": "21.0.0-next.6+sha-5dc8c5e"
   },
   "devDependencies": {
+    "@angular/aria": "workspace:*",
     "@angular/cdk": "workspace:*",
     "@angular/cdk-experimental": "workspace:*",
     "@angular/material": "workspace:*",
