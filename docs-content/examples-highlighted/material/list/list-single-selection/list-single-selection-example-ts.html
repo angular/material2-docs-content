@@ -1,32 +1,14 @@
 <span class="hljs-keyword">import</span> {<span class="hljs-title class_">Component</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
-<span class="hljs-keyword">import</span> {<span class="hljs-title class_">FormControl</span>, <span class="hljs-title class_">FormGroup</span>, <span class="hljs-title class_">FormsModule</span>, <span class="hljs-title class_">ReactiveFormsModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/forms&#x27;</span>;
 <span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatListModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/list&#x27;</span>;
-<span class="hljs-keyword">interface</span> <span class="hljs-title class_">Shoes</span> {
-  <span class="hljs-attr">value</span>: <span class="hljs-built_in">string</span>;
-  <span class="hljs-attr">name</span>: <span class="hljs-built_in">string</span>;
-}
+
 <span class="hljs-comment">/**
- * <span class="hljs-doctag">@title</span> List with single selection using Reactive Forms
+ * <span class="hljs-doctag">@title</span> List with single selection
  */</span>
 <span class="hljs-meta">@Component</span>({
   <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;list-single-selection-example&#x27;</span>,
   <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;list-single-selection-example.html&#x27;</span>,
-  <span class="hljs-attr">imports</span>: [<span class="hljs-title class_">MatListModule</span>, <span class="hljs-title class_">FormsModule</span>, <span class="hljs-title class_">ReactiveFormsModule</span>],
+  <span class="hljs-attr">imports</span>: [<span class="hljs-title class_">MatListModule</span>],
 })
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">ListSingleSelectionExample</span> {
-  <span class="hljs-attr">form</span>: <span class="hljs-title class_">FormGroup</span>;
-  <span class="hljs-attr">shoes</span>: <span class="hljs-title class_">Shoes</span>[] = [
-    {<span class="hljs-attr">value</span>: <span class="hljs-string">&#x27;boots&#x27;</span>, <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Boots&#x27;</span>},
-    {<span class="hljs-attr">value</span>: <span class="hljs-string">&#x27;clogs&#x27;</span>, <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Clogs&#x27;</span>},
-    {<span class="hljs-attr">value</span>: <span class="hljs-string">&#x27;loafers&#x27;</span>, <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Loafers&#x27;</span>},
-    {<span class="hljs-attr">value</span>: <span class="hljs-string">&#x27;moccasins&#x27;</span>, <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Moccasins&#x27;</span>},
-    {<span class="hljs-attr">value</span>: <span class="hljs-string">&#x27;sneakers&#x27;</span>, <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Sneakers&#x27;</span>},
-  ];
-  shoesControl = <span class="hljs-keyword">new</span> <span class="hljs-title class_">FormControl</span>();
-
-  <span class="hljs-title function_">constructor</span>(<span class="hljs-params"></span>) {
-    <span class="hljs-variable language_">this</span>.<span class="hljs-property">form</span> = <span class="hljs-keyword">new</span> <span class="hljs-title class_">FormGroup</span>({
-      <span class="hljs-attr">clothes</span>: <span class="hljs-variable language_">this</span>.<span class="hljs-property">shoesControl</span>,
-    });
-  }
+  <span class="hljs-attr">typesOfShoes</span>: <span class="hljs-built_in">string</span>[] = [<span class="hljs-string">&#x27;Boots&#x27;</span>, <span class="hljs-string">&#x27;Clogs&#x27;</span>, <span class="hljs-string">&#x27;Loafers&#x27;</span>, <span class="hljs-string">&#x27;Moccasins&#x27;</span>, <span class="hljs-string">&#x27;Sneakers&#x27;</span>];
 }
