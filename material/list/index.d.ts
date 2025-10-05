@@ -32,18 +32,11 @@ declare class ListSelectionExample {
     static ɵcmp: i0.ɵɵComponentDeclaration<ListSelectionExample, "list-selection-example", never, {}, {}, never, never, true, never>;
 }
 
-interface Shoes$1 {
-    value: string;
-    name: string;
-}
 /**
- * @title List with single selection using Reactive Forms
+ * @title List with single selection
  */
 declare class ListSingleSelectionExample {
-    form: FormGroup;
-    shoes: Shoes$1[];
-    shoesControl: FormControl<any>;
-    constructor();
+    typesOfShoes: string[];
     static ɵfac: i0.ɵɵFactoryDeclaration<ListSingleSelectionExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<ListSingleSelectionExample, "list-single-selection-example", never, {}, {}, never, never, true, never>;
 }

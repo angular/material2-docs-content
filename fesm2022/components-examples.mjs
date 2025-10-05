@@ -2835,7 +2835,7 @@ const EXAMPLE_COMPONENTS = {
         "componentName": "ListSingleSelectionReactiveFormExample",
         "files": [
             "list-single-selection-reactive-form-example.ts",
-            "list-single-selection-form-example.html"
+            "list-single-selection-reactive-form-example.html"
         ],
         "selector": "list-single-selection-reactive-form-example",
         "additionalComponents": [],
@@ -2844,7 +2844,7 @@ const EXAMPLE_COMPONENTS = {
     },
     "list-single-selection": {
         "packagePath": "material/list/list-single-selection",
-        "title": "List with single selection using Reactive Forms",
+        "title": "List with single selection",
         "componentName": "ListSingleSelectionExample",
         "files": [
             "list-single-selection-example.ts",

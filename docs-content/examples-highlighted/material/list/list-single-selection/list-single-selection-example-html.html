@@ -1,10 +1,9 @@
-<span class="hljs-tag">&lt;<span class="hljs-name">form</span> [<span class="hljs-attr">formGroup</span>]=<span class="hljs-string">&quot;form&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">mat-selection-list</span> #<span class="hljs-attr">shoesList</span> [<span class="hljs-attr">formControl</span>]=<span class="hljs-string">&quot;shoesControl&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;shoes&quot;</span> [<span class="hljs-attr">multiple</span>]=<span class="hljs-string">&quot;false&quot;</span>&gt;</span>
-    @for (shoe of shoes; track shoe) {
-      <span class="hljs-tag">&lt;<span class="hljs-name">mat-list-option</span> [<span class="hljs-attr">value</span>]=<span class="hljs-string">&quot;shoe.value&quot;</span>&gt;</span>{{shoe.name}}<span class="hljs-tag">&lt;/<span class="hljs-name">mat-list-option</span>&gt;</span>
-    }
-  <span class="hljs-tag">&lt;/<span class="hljs-name">mat-selection-list</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
-     Option selected: {{shoesControl.value ? shoesControl.value[0] : &#x27;None&#x27;}} 
-  <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">mat-selection-list</span> #<span class="hljs-attr">shoes</span> [<span class="hljs-attr">multiple</span>]=<span class="hljs-string">&quot;false&quot;</span>&gt;</span>
+  @for (shoe of typesOfShoes; track shoe) {
+    <span class="hljs-tag">&lt;<span class="hljs-name">mat-list-option</span> [<span class="hljs-attr">value</span>]=<span class="hljs-string">&quot;shoe&quot;</span>&gt;</span>{{shoe}}<span class="hljs-tag">&lt;/<span class="hljs-name">mat-list-option</span>&gt;</span>
+  }
+<span class="hljs-tag">&lt;/<span class="hljs-name">mat-selection-list</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
+  Option selected: {{shoes.selectedOptions.hasValue() ? shoes.selectedOptions.selected[0].value : &#x27;None&#x27;}}
+<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
