@@ -44,6 +44,15 @@ by default it will use the id of the column.</p>
 </div><div material-docs-example="table-sorting"></div><div class="docs-markdown">
 
 
+        <h4 id="customizing-the-icon" class="docs-header-link">
+          <span header-link="customizing-the-icon"></span>
+          Customizing the icon
+        </h4>
+      <p>You can set your own icon for a <code>mat-sort-header</code> by projecting in an element with the
+<code>matSortHeaderIcon</code> attribute.</p>
+</div><div material-docs-example="sort-custom-icon"></div><div class="docs-markdown">
+
+
         <h3 id="accessibility" class="docs-header-link">
           <span header-link="accessibility"></span>
           Accessibility
@@ -60,5 +69,5 @@ assistive technology. However, most screen readers do not announce changes to th
 remedy this, use the <code>matSortChange</code> event on the <code>MatSort</code> directive to announce state
 updates with the <code>LiveAnnouncer</code> service from <code>@angular/cdk/a11y</code>.</p>
 <p>If your application contains many tables and sort headers, consider creating a custom
-directives to consistently apply <code>sortActionDescription</code> and announce sort state changes. </p>
+directives to consistently apply <code>sortActionDescription</code> and announce sort state changes.</p>
 </div>

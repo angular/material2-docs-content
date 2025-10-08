@@ -4488,6 +4488,19 @@ const EXAMPLE_COMPONENTS = {
         "primaryFile": "snack-bar-position-example.ts",
         "importPath": "material/snack-bar"
     },
+    "sort-custom-icon": {
+        "packagePath": "material/sort/sort-custom-icon",
+        "title": "Sort header with a custom icon",
+        "componentName": "SortCustomIconExample",
+        "files": [
+            "sort-custom-icon-example.ts",
+            "sort-custom-icon-example.html"
+        ],
+        "selector": "sort-custom-icon-example",
+        "additionalComponents": [],
+        "primaryFile": "sort-custom-icon-example.ts",
+        "importPath": "material/sort"
+    },
     "sort-harness": {
         "packagePath": "material/sort/sort-harness",
         "title": "Testing with MatSortHarness",
@@ -6432,6 +6445,8 @@ async function loadExample(id) {
             return import('@angular/components-examples/material/snack-bar');
         case 'snack-bar-position':
             return import('@angular/components-examples/material/snack-bar');
+        case 'sort-custom-icon':
+            return import('@angular/components-examples/material/sort');
         case 'sort-harness':
             return import('@angular/components-examples/material/sort');
         case 'sort-overview':

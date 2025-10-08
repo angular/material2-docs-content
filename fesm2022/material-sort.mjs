@@ -2,6 +2,7 @@ import * as i0 from '@angular/core';
 import { Component, signal } from '@angular/core';
 import * as i1 from '@angular/material/sort';
 import { MatSortModule } from '@angular/material/sort';
+import { MatIcon } from '@angular/material/icon';
 
 /**
  * @title Sorting overview
@@ -87,5 +88,17 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "20.2.0-next.2", 
             args: [{ selector: 'sort-harness-example', imports: [MatSortModule], template: "<table matSort (matSortChange)=\"sortData($event)\">\n  <tr>\n    <th mat-sort-header=\"name\">Dessert</th>\n    <th mat-sort-header=\"calories\">Calories</th>\n    <th mat-sort-header=\"fat\" [disabled]=\"disableThirdHeader()\">Fat</th>\n    <th mat-sort-header=\"carbs\">Carbs</th>\n    <th mat-sort-header=\"protein\">Protein</th>\n  </tr>\n\n  @for (dessert of sortedData; track dessert) {\n    <tr>\n      <td>{{dessert.name}}</td>\n      <td>{{dessert.calories}}</td>\n      <td>{{dessert.fat}}</td>\n      <td>{{dessert.carbs}}</td>\n      <td>{{dessert.protein}}</td>\n    </tr>\n  }\n</table>\n" }]
         }] });
 
-export { SortHarnessExample, SortOverviewExample };
+/**
+ * @title Sort header with a custom icon
+ */
+class SortCustomIconExample {
+    static ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "20.2.0-next.2", ngImport: i0, type: SortCustomIconExample, deps: [], target: i0.ɵɵFactoryTarget.Component });
+    static ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "20.2.0-next.2", type: SortCustomIconExample, isStandalone: true, selector: "sort-custom-icon-example", ngImport: i0, template: "<table matSort matSortActive=\"emoji\" matSortDirection=\"asc\">\n  <tr>\n    <th mat-sort-header=\"emoji\">\n      Emoji icon\n      <span matSortHeaderIcon>\u2B06\uFE0F</span>\n    </th>\n    <th mat-sort-header=\"material\">\n      Material Icon\n      <mat-icon matSortHeaderIcon>keyboard_arrow_up</mat-icon>\n    </th>\n  </tr>\n\n  <tbody>\n    <tr>\n      <td>Lorem, ipsum dolor sit amet.</td>\n      <td>Lorem, ipsum dolor sit amet.</td>\n    </tr>\n  </tbody>\n</table>\n", dependencies: [{ kind: "ngmodule", type: MatSortModule }, { kind: "directive", type: i1.MatSort, selector: "[matSort]", inputs: ["matSortActive", "matSortStart", "matSortDirection", "matSortDisableClear", "matSortDisabled"], outputs: ["matSortChange"], exportAs: ["matSort"] }, { kind: "component", type: i1.MatSortHeader, selector: "[mat-sort-header]", inputs: ["mat-sort-header", "arrowPosition", "start", "disabled", "sortActionDescription", "disableClear"], exportAs: ["matSortHeader"] }, { kind: "component", type: MatIcon, selector: "mat-icon", inputs: ["color", "inline", "svgIcon", "fontSet", "fontIcon"], exportAs: ["matIcon"] }] });
+}
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "20.2.0-next.2", ngImport: i0, type: SortCustomIconExample, decorators: [{
+            type: Component,
+            args: [{ selector: 'sort-custom-icon-example', imports: [MatSortModule, MatIcon], template: "<table matSort matSortActive=\"emoji\" matSortDirection=\"asc\">\n  <tr>\n    <th mat-sort-header=\"emoji\">\n      Emoji icon\n      <span matSortHeaderIcon>\u2B06\uFE0F</span>\n    </th>\n    <th mat-sort-header=\"material\">\n      Material Icon\n      <mat-icon matSortHeaderIcon>keyboard_arrow_up</mat-icon>\n    </th>\n  </tr>\n\n  <tbody>\n    <tr>\n      <td>Lorem, ipsum dolor sit amet.</td>\n      <td>Lorem, ipsum dolor sit amet.</td>\n    </tr>\n  </tbody>\n</table>\n" }]
+        }] });
+
+export { SortCustomIconExample, SortHarnessExample, SortOverviewExample };
 //# sourceMappingURL=material-sort.mjs.map

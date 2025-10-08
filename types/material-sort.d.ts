@@ -44,4 +44,12 @@ declare class SortHarnessExample {
     static ɵcmp: i0.ɵɵComponentDeclaration<SortHarnessExample, "sort-harness-example", never, {}, {}, never, never, true, never>;
 }
 
-export { SortHarnessExample, SortOverviewExample };
+/**
+ * @title Sort header with a custom icon
+ */
+declare class SortCustomIconExample {
+    static ɵfac: i0.ɵɵFactoryDeclaration<SortCustomIconExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<SortCustomIconExample, "sort-custom-icon-example", never, {}, {}, never, never, true, never>;
+}
+
+export { SortCustomIconExample, SortHarnessExample, SortOverviewExample };
