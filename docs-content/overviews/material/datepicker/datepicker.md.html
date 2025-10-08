@@ -92,7 +92,7 @@ after choosing a year in <code>multi-view</code> mode (by pressing the <code>ESC
 year, emitted by <code>yearSelected</code> output, will not cause any change in the value of the date in the
 associated <code>&lt;input&gt;</code>.</p>
 <p>The following example uses <code>yearSelected</code> and <code>monthSelected</code> outputs to emulate a month and year
-picker (if you&#39;re not familiar with the usage of <code>MomentDateAdapter</code> and <code>MAT_DATE_FORMATS</code>
+picker (if you&#39;re not familiar with the usage of <code>LuxonDateAdapter</code> and <code>MAT_DATE_FORMATS</code>
 you can <a href="#choosing-a-date-implementation-and-date-format-settings">read more about them</a> below in
 this document to fully understand the example).</p>
 </div><div material-docs-example="datepicker-views-selection"></div><div class="docs-markdown">
@@ -104,13 +104,13 @@ this document to fully understand the example).</p>
         </h3>
       <p>The type of values that the datepicker expects depends on the type of <code>DateAdapter</code> provided in your
 application. The <code>NativeDateAdapter</code>, for example, works directly with plain JavaScript <code>Date</code>
-objects. When using the <code>MomentDateAdapter</code>, however, the values will all be Moment.js instances.
+objects. When using the <code>LuxonDateAdapter</code>, however, the values will all be <code>DateTime</code> instances.
 This use of the adapter pattern allows the datepicker component to work with any arbitrary date
 representation with a custom <code>DateAdapter</code>.
 See <a href="#choosing-a-date-implementation-and-date-format-settings"><em>Choosing a date implementation</em></a>
 for more information.</p>
 <p>Depending on the <code>DateAdapter</code> being used, the datepicker may automatically deserialize certain date
-formats for you as well. For example, both the <code>NativeDateAdapter</code> and <code>MomentDateAdapter</code> allow
+formats for you as well. For example, both the <code>NativeDateAdapter</code> and <code>LuxonDateAdapter</code> allow
 <a href="https://tools.ietf.org/html/rfc3339">ISO 8601</a> strings to be passed to the datepicker and
 automatically converted to the proper object type. This can be convenient when binding data directly
 from your backend to the datepicker. However, the datepicker will not accept date strings formatted
@@ -391,7 +391,7 @@ sure to provide the appropriate pieces for the datepicker to work with their cho
 native <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date"><code>Date</code> object</a>.
 Thus it is not suitable for many locales. One of the biggest shortcomings of the native <code>Date</code>
 object is the inability to set the parse format. We strongly recommend using an adapter based on
-a more robust formatting and parsing library. You can use <code>provideMomentDateAdapter</code>
+a more robust formatting and parsing library. You can use one of the adapters mentioned above
 or a custom <code>DateAdapter</code> that works with the library of your choice.</em></p>
 <p>These APIs include providers for <code>DateAdapter</code> and <code>MAT_DATE_FORMATS</code>.</p>
 <pre><code class="language-ts"><span class="hljs-title function_">bootstrapApplication</span>(<span class="hljs-title class_">MyApp</span>, {
@@ -403,20 +403,12 @@ example:</p>
 <pre><code class="language-ts"><span class="hljs-meta">@Component</span>({...})
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">MyComponent</span> {
   <span class="hljs-meta">@ViewChild</span>(<span class="hljs-title class_">MatDatepicker</span>) <span class="hljs-attr">datepicker</span>: <span class="hljs-title class_">MatDatepicker</span>&lt;<span class="hljs-title class_">Date</span>&gt;;
-}</code></pre></div><div material-docs-example="datepicker-moment"></div><div class="docs-markdown">
+}</code></pre></div><div material-docs-example="datepicker-luxon"></div><div class="docs-markdown">
 
-<p>By default the <code>MomentDateAdapter</code> creates dates in your time zone specific locale. You can change
-the default behaviour to parse dates as UTC by passing <code>useUtc: true</code> into <code>provideMomentDateAdapter</code>
-or by providing the <code>MAT_MOMENT_DATE_ADAPTER_OPTIONS</code> injection token.</p>
+<p>By default the <code>LuxonDateAdapter</code> creates dates in your time zone specific locale. You can change
+the default behaviour to parse dates as UTC by passing <code>useUtc: true</code> into <code>provideLuxonDateAdapter</code>:</p>
 <pre><code class="language-ts"><span class="hljs-title function_">bootstrapApplication</span>(<span class="hljs-title class_">MyApp</span>, {
-  <span class="hljs-attr">providers</span>: [<span class="hljs-title function_">provideMomentDateAdapter</span>(<span class="hljs-literal">undefined</span>, {<span class="hljs-attr">useUtc</span>: <span class="hljs-literal">true</span>})]
-});</code></pre><p>By default the <code>MomentDateAdapter</code> will parse dates in a
-<a href="https://momentjs.com/guides/#/parsing/forgiving-mode/">forgiving way</a>. This may result in dates
-being parsed incorrectly. You can change the default behaviour to
-<a href="https://momentjs.com/guides/#/parsing/strict-mode/">parse dates strictly</a> by <code>strict: true</code> to
-<code>provideMomentDateAdapter</code> or by providing the <code>MAT_MOMENT_DATE_ADAPTER_OPTIONS</code> injection token.</p>
-<pre><code class="language-ts"><span class="hljs-title function_">bootstrapApplication</span>(<span class="hljs-title class_">MyApp</span>, {
-  <span class="hljs-attr">providers</span>: [<span class="hljs-title function_">provideMomentDateAdapter</span>(<span class="hljs-literal">undefined</span>, {<span class="hljs-attr">strict</span>: <span class="hljs-literal">true</span>})]
+  <span class="hljs-attr">providers</span>: [<span class="hljs-title function_">provideLuxonDateAdapter</span>(<span class="hljs-literal">undefined</span>, {<span class="hljs-attr">useUtc</span>: <span class="hljs-literal">true</span>})]
 });</code></pre><p>It is also possible to create your own <code>DateAdapter</code> that works with any date format your app
 requires. This is accomplished by subclassing <code>DateAdapter</code> and providing your subclass as the
 <code>DateAdapter</code> implementation. You will also want to make sure that the <code>MAT_DATE_FORMATS</code> provided
@@ -446,27 +438,6 @@ sure that the format objects you&#39;re using are compatible with the <code>Date
 });</code></pre></div><div material-docs-example="datepicker-formats"></div><div class="docs-markdown">
 
 
-        <h5 id="momentjs-formats" class="docs-header-link">
-          <span header-link="momentjs-formats"></span>
-          Moment.js formats
-        </h5>
-      <p>To use custom formats with the <code>provideMomentDateAdapter</code> you can pick from the parse formats
-documented <a href="https://momentjs.com/docs/#/parsing/string-format/">here</a> and the display formats
-documented <a href="https://momentjs.com/docs/#/displaying/format/">here</a>.</p>
-<p>It is also possible to support multiple parse formats. For example:</p>
-<pre><code class="language-ts"><span class="hljs-title function_">bootstraApplication</span>(<span class="hljs-title class_">MyApp</span>, {
-  <span class="hljs-attr">providers</span>: [<span class="hljs-title function_">provideMomentDateAdapter</span>({
-    <span class="hljs-attr">parse</span>: {
-      <span class="hljs-attr">dateInput</span>: [<span class="hljs-string">&#x27;l&#x27;</span>, <span class="hljs-string">&#x27;LL&#x27;</span>],
-    },
-    <span class="hljs-attr">display</span>: {
-      <span class="hljs-attr">dateInput</span>: <span class="hljs-string">&#x27;L&#x27;</span>,
-      <span class="hljs-attr">monthYearLabel</span>: <span class="hljs-string">&#x27;MMM YYYY&#x27;</span>,
-      <span class="hljs-attr">dateA11yLabel</span>: <span class="hljs-string">&#x27;LL&#x27;</span>,
-      <span class="hljs-attr">monthYearA11yLabel</span>: <span class="hljs-string">&#x27;MMMM YYYY&#x27;</span>,
-    },
-  })]
-});</code></pre>
         <h4 id="customizing-the-calendar-header" class="docs-header-link">
           <span header-link="customizing-the-calendar-header"></span>
           Customizing the calendar header
@@ -526,7 +497,7 @@ or by providing an additional label adjacent to the form field.</p>
 datepicker pop-up. However, ChromeOS intercepts this key combination at the OS level such that the
 browser only receives a <code>PageDown</code> key event. Because of this behavior, you should always include an
 additional means of opening the pop-up, such as <code>MatDatepickerToggle</code>.</p>
-<p><code>MatDatepickerToggle</code> must be included along with <code>MatDatepicker</code> for optimal mobile a11y 
+<p><code>MatDatepickerToggle</code> must be included along with <code>MatDatepicker</code> for optimal mobile a11y
 compatibility. Mobile screen reader users currently do not have a way to trigger the datepicker
 dialog without the icon button present.</p>
 
@@ -721,8 +692,7 @@ dialog without the icon button present.</p>
           Error: MatDatepicker: No provider found for DateAdapter/MAT_DATE_FORMATS
         </h4>
       <p>This error is thrown if you have not provided all of the injectables the datepicker needs to work.
-The easiest way to resolve this is to add <code>provideNativeDateAdapter</code> or <code>provideMomentDateAdapter</code>
-to your app config. See
+The easiest way to resolve this is to add a date adapter to your app config. See
 <a href="#choosing-a-date-implementation-and-date-format-settings"><em>Choosing a date implementation</em></a>) for
 more information.</p>
 

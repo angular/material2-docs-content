@@ -2924,6 +2924,19 @@ const EXAMPLE_COMPONENTS = {
         "primaryFile": "datepicker-locale-example.ts",
         "importPath": "material/datepicker"
     },
+    "datepicker-luxon": {
+        "packagePath": "material/datepicker/datepicker-luxon",
+        "title": "Datepicker that uses Luxon dates",
+        "componentName": "DatepickerLuxonExample",
+        "files": [
+            "datepicker-luxon-example.ts",
+            "datepicker-luxon-example.html"
+        ],
+        "selector": "datepicker-luxon-example",
+        "additionalComponents": [],
+        "primaryFile": "datepicker-luxon-example.ts",
+        "importPath": "material/datepicker"
+    },
     "datepicker-min-max": {
         "packagePath": "material/datepicker/datepicker-min-max",
         "title": "Datepicker with min & max validation",
@@ -2935,19 +2948,6 @@ const EXAMPLE_COMPONENTS = {
         "selector": "datepicker-min-max-example",
         "additionalComponents": [],
         "primaryFile": "datepicker-min-max-example.ts",
-        "importPath": "material/datepicker"
-    },
-    "datepicker-moment": {
-        "packagePath": "material/datepicker/datepicker-moment",
-        "title": "Datepicker that uses Moment.js dates",
-        "componentName": "DatepickerMomentExample",
-        "files": [
-            "datepicker-moment-example.ts",
-            "datepicker-moment-example.html"
-        ],
-        "selector": "datepicker-moment-example",
-        "additionalComponents": [],
-        "primaryFile": "datepicker-moment-example.ts",
         "importPath": "material/datepicker"
     },
     "datepicker-overview": {
@@ -6206,9 +6206,9 @@ async function loadExample(id) {
             return import('@angular/components-examples/material/datepicker');
         case 'datepicker-locale':
             return import('@angular/components-examples/material/datepicker');
-        case 'datepicker-min-max':
+        case 'datepicker-luxon':
             return import('@angular/components-examples/material/datepicker');
-        case 'datepicker-moment':
+        case 'datepicker-min-max':
             return import('@angular/components-examples/material/datepicker');
         case 'datepicker-overview':
             return import('@angular/components-examples/material/datepicker');

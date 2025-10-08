@@ -1,31 +1,22 @@
 <span class="hljs-keyword">import</span> {<span class="hljs-title class_">ChangeDetectionStrategy</span>, <span class="hljs-title class_">Component</span>, <span class="hljs-title class_">ViewEncapsulation</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
 <span class="hljs-keyword">import</span> {<span class="hljs-title class_">FormControl</span>, <span class="hljs-title class_">FormsModule</span>, <span class="hljs-title class_">ReactiveFormsModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/forms&#x27;</span>;
-<span class="hljs-keyword">import</span> {provideMomentDateAdapter} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material-moment-adapter&#x27;</span>;
+<span class="hljs-keyword">import</span> {provideLuxonDateAdapter} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material-luxon-adapter&#x27;</span>;
 <span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatDatepicker</span>, <span class="hljs-title class_">MatDatepickerModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/datepicker&#x27;</span>;
-
-<span class="hljs-comment">// Depending on whether rollup is used, moment needs to be imported differently.</span>
-<span class="hljs-comment">// Since Moment.js doesn&#x27;t have a default export, we normally need to import using the `* as`</span>
-<span class="hljs-comment">// syntax. However, rollup creates a synthetic default module and we thus need to import it using</span>
-<span class="hljs-comment">// the `default as` syntax.</span>
-<span class="hljs-keyword">import</span> * <span class="hljs-keyword">as</span> _moment <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;moment&#x27;</span>;
-<span class="hljs-comment">// tslint:disable-next-line:no-duplicate-imports</span>
-<span class="hljs-keyword">import</span> {<span class="hljs-keyword">default</span> <span class="hljs-keyword">as</span> _rollupMoment, <span class="hljs-title class_">Moment</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;moment&#x27;</span>;
 <span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatInputModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/input&#x27;</span>;
 <span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatFormFieldModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/form-field&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">DateTime</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;luxon&#x27;</span>;
 
-<span class="hljs-keyword">const</span> moment = _rollupMoment || _moment;
-
-<span class="hljs-comment">// See the Moment.js docs for the meaning of these formats:</span>
-<span class="hljs-comment">// https://momentjs.com/docs/#/displaying/format/</span>
+<span class="hljs-comment">// See the Luxon docs for the meaning of these formats:</span>
+<span class="hljs-comment">// https://moment.github.io/luxon/#/formatting</span>
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> <span class="hljs-variable constant_">MY_FORMATS</span> = {
   <span class="hljs-attr">parse</span>: {
-    <span class="hljs-attr">dateInput</span>: <span class="hljs-string">&#x27;MM/YYYY&#x27;</span>,
+    <span class="hljs-attr">dateInput</span>: <span class="hljs-string">&#x27;MM/yyyy&#x27;</span>,
   },
   <span class="hljs-attr">display</span>: {
-    <span class="hljs-attr">dateInput</span>: <span class="hljs-string">&#x27;MM/YYYY&#x27;</span>,
-    <span class="hljs-attr">monthYearLabel</span>: <span class="hljs-string">&#x27;MMM YYYY&#x27;</span>,
-    <span class="hljs-attr">dateA11yLabel</span>: <span class="hljs-string">&#x27;LL&#x27;</span>,
-    <span class="hljs-attr">monthYearA11yLabel</span>: <span class="hljs-string">&#x27;MMMM YYYY&#x27;</span>,
+    <span class="hljs-attr">dateInput</span>: <span class="hljs-string">&#x27;MM/yyyy&#x27;</span>,
+    <span class="hljs-attr">monthYearLabel</span>: <span class="hljs-string">&#x27;MMM yyyy&#x27;</span>,
+    <span class="hljs-attr">dateA11yLabel</span>: <span class="hljs-string">&#x27;DD&#x27;</span>,
+    <span class="hljs-attr">monthYearA11yLabel</span>: <span class="hljs-string">&#x27;MMMM yyyy&#x27;</span>,
   },
 };
 
@@ -35,10 +26,10 @@
   <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;datepicker-views-selection-example.html&#x27;</span>,
   <span class="hljs-attr">styleUrl</span>: <span class="hljs-string">&#x27;datepicker-views-selection-example.css&#x27;</span>,
   <span class="hljs-attr">providers</span>: [
-    <span class="hljs-comment">// Moment can be provided globally to your app by adding `provideMomentDateAdapter`</span>
+    <span class="hljs-comment">// Luxon can be provided globally to your app by adding `provideLuxonDateAdapter`</span>
     <span class="hljs-comment">// to your app config. We provide it at the component level here, due to limitations</span>
     <span class="hljs-comment">// of our example generation script.</span>
-    <span class="hljs-title function_">provideMomentDateAdapter</span>(<span class="hljs-variable constant_">MY_FORMATS</span>),
+    <span class="hljs-title function_">provideLuxonDateAdapter</span>(<span class="hljs-variable constant_">MY_FORMATS</span>),
   ],
   <span class="hljs-attr">encapsulation</span>: <span class="hljs-title class_">ViewEncapsulation</span>.<span class="hljs-property">None</span>,
   <span class="hljs-attr">imports</span>: [
@@ -51,12 +42,13 @@
   <span class="hljs-attr">changeDetection</span>: <span class="hljs-title class_">ChangeDetectionStrategy</span>.<span class="hljs-property">OnPush</span>,
 })
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">DatepickerViewsSelectionExample</span> {
-  <span class="hljs-keyword">readonly</span> date = <span class="hljs-keyword">new</span> <span class="hljs-title class_">FormControl</span>(<span class="hljs-title function_">moment</span>());
+  <span class="hljs-keyword">readonly</span> date = <span class="hljs-keyword">new</span> <span class="hljs-title class_">FormControl</span>&lt;<span class="hljs-title class_">DateTime</span>&gt;(<span class="hljs-title class_">DateTime</span>.<span class="hljs-title function_">now</span>());
 
-  <span class="hljs-title function_">setMonthAndYear</span>(<span class="hljs-params"><span class="hljs-attr">normalizedMonthAndYear</span>: <span class="hljs-title class_">Moment</span>, <span class="hljs-attr">datepicker</span>: <span class="hljs-title class_">MatDatepicker</span>&lt;<span class="hljs-title class_">Moment</span>&gt;</span>) {
-    <span class="hljs-keyword">const</span> ctrlValue = <span class="hljs-variable language_">this</span>.<span class="hljs-property">date</span>.<span class="hljs-property">value</span> ?? <span class="hljs-title function_">moment</span>();
-    ctrlValue.<span class="hljs-title function_">month</span>(normalizedMonthAndYear.<span class="hljs-title function_">month</span>());
-    ctrlValue.<span class="hljs-title function_">year</span>(normalizedMonthAndYear.<span class="hljs-title function_">year</span>());
+  <span class="hljs-title function_">setMonthAndYear</span>(<span class="hljs-params"><span class="hljs-attr">normalizedMonthAndYear</span>: <span class="hljs-title class_">DateTime</span>, <span class="hljs-attr">datepicker</span>: <span class="hljs-title class_">MatDatepicker</span>&lt;<span class="hljs-title class_">DateTime</span>&gt;</span>) {
+    <span class="hljs-keyword">const</span> ctrlValue = <span class="hljs-title class_">DateTime</span>.<span class="hljs-title function_">fromObject</span>({
+      <span class="hljs-attr">month</span>: normalizedMonthAndYear.<span class="hljs-property">month</span>,
+      <span class="hljs-attr">year</span>: normalizedMonthAndYear.<span class="hljs-property">year</span>,
+    });
     <span class="hljs-variable language_">this</span>.<span class="hljs-property">date</span>.<span class="hljs-title function_">setValue</span>(ctrlValue);
     datepicker.<span class="hljs-title function_">close</span>();
   }

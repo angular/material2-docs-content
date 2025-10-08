@@ -2,8 +2,7 @@ import { FormGroup, FormControl } from '@angular/forms';
 import * as i0 from '@angular/core';
 import { OnDestroy, OnInit } from '@angular/core';
 import { MatCalendarCellClassFunction, MatDatepickerInputEvent, MatDatepicker } from '@angular/material/datepicker';
-import * as _moment from 'moment';
-import { Moment } from 'moment';
+import { DateTime } from 'luxon';
 import { MatDialog } from '@angular/material/dialog';
 
 /** @title Date range picker comparison ranges */
@@ -111,7 +110,7 @@ declare class DatepickerFilterExample {
 
 /** @title Datepicker with custom formats */
 declare class DatepickerFormatsExample {
-    readonly date: FormControl<_moment.Moment | null>;
+    readonly date: FormControl<DateTime<true> | null>;
     static ɵfac: i0.ɵɵFactoryDeclaration<DatepickerFormatsExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<DatepickerFormatsExample, "datepicker-formats-example", never, {}, {}, never, never, true, never>;
 }
@@ -155,11 +154,11 @@ declare class DatepickerMinMaxExample {
     static ɵcmp: i0.ɵɵComponentDeclaration<DatepickerMinMaxExample, "datepicker-min-max-example", never, {}, {}, never, never, true, never>;
 }
 
-/** @title Datepicker that uses Moment.js dates */
-declare class DatepickerMomentExample {
-    readonly date: FormControl<_moment.Moment | null>;
-    static ɵfac: i0.ɵɵFactoryDeclaration<DatepickerMomentExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<DatepickerMomentExample, "datepicker-moment-example", never, {}, {}, never, never, true, never>;
+/** @title Datepicker that uses Luxon dates */
+declare class DatepickerLuxonExample {
+    readonly date: FormControl<DateTime<true> | null>;
+    static ɵfac: i0.ɵɵFactoryDeclaration<DatepickerLuxonExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<DatepickerLuxonExample, "datepicker-luxon-example", never, {}, {}, never, never, true, never>;
 }
 
 /** @title Basic datepicker */
@@ -191,8 +190,8 @@ declare class DatepickerValueExample {
 
 /** @title Datepicker emulating a Year and month picker */
 declare class DatepickerViewsSelectionExample {
-    readonly date: FormControl<_moment.Moment | null>;
-    setMonthAndYear(normalizedMonthAndYear: Moment, datepicker: MatDatepicker<Moment>): void;
+    readonly date: FormControl<DateTime<boolean> | null>;
+    setMonthAndYear(normalizedMonthAndYear: DateTime, datepicker: MatDatepicker<DateTime>): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<DatepickerViewsSelectionExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<DatepickerViewsSelectionExample, "datepicker-views-selection-example", never, {}, {}, never, never, true, never>;
 }
@@ -206,4 +205,4 @@ declare class DatepickerDialogExample {
     static ɵcmp: i0.ɵɵComponentDeclaration<DatepickerDialogExample, "datepicker-dialog-example", never, { "selectedDate": { "alias": "selectedDate"; "required": false; "isSignal": true; }; }, { "selectedDate": "selectedDateChange"; }, never, never, true, never>;
 }
 
-export { DateRangePickerComparisonExample, DateRangePickerFormsExample, DateRangePickerOverviewExample, DateRangePickerSelectionStrategyExample, DatepickerActionsExample, DatepickerApiExample, DatepickerCustomHeaderExample, DatepickerCustomIconExample, DatepickerDateClassExample, DatepickerDialogExample, DatepickerDisabledExample, DatepickerEventsExample, DatepickerFilterExample, DatepickerFormatsExample, DatepickerHarnessExample, DatepickerInlineCalendarExample, DatepickerLocaleExample, DatepickerMinMaxExample, DatepickerMomentExample, DatepickerOverviewExample, DatepickerStartViewExample, DatepickerTouchExample, DatepickerValueExample, DatepickerViewsSelectionExample, ExampleHeader };
+export { DateRangePickerComparisonExample, DateRangePickerFormsExample, DateRangePickerOverviewExample, DateRangePickerSelectionStrategyExample, DatepickerActionsExample, DatepickerApiExample, DatepickerCustomHeaderExample, DatepickerCustomIconExample, DatepickerDateClassExample, DatepickerDialogExample, DatepickerDisabledExample, DatepickerEventsExample, DatepickerFilterExample, DatepickerFormatsExample, DatepickerHarnessExample, DatepickerInlineCalendarExample, DatepickerLocaleExample, DatepickerLuxonExample, DatepickerMinMaxExample, DatepickerOverviewExample, DatepickerStartViewExample, DatepickerTouchExample, DatepickerValueExample, DatepickerViewsSelectionExample, ExampleHeader };
