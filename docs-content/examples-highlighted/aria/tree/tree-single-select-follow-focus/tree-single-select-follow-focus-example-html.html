@@ -23,8 +23,8 @@
   <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
 
   @if (node.children) {
-  <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">ngTreeItemGroup</span> [<span class="hljs-attr">ownedBy</span>]=<span class="hljs-string">&quot;treeItem&quot;</span> #<span class="hljs-attr">group</span>=<span class="hljs-string">&quot;ngTreeItemGroup&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">ng-template</span> <span class="hljs-attr">ngTreeItemGroupContent</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">role</span>=<span class="hljs-string">group</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">ng-template</span> <span class="hljs-attr">ngTreeItemGroup</span> [<span class="hljs-attr">ownedBy</span>]=<span class="hljs-string">&quot;treeItem&quot;</span> #<span class="hljs-attr">group</span>=<span class="hljs-string">&quot;ngTreeItemGroup&quot;</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">ng-template</span>
         [<span class="hljs-attr">ngTemplateOutlet</span>]=<span class="hljs-string">&quot;treeNodes&quot;</span>
         [<span class="hljs-attr">ngTemplateOutletContext</span>]=<span class="hljs-string">&quot;{nodes: node.children, parent: group}&quot;</span>
