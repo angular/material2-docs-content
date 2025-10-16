@@ -15,7 +15,7 @@ declare class ToolbarConfigurableExample {
     disabledButtonOptions: string[];
     test(x: String): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<ToolbarConfigurableExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<ToolbarConfigurableExample, "toolbar-configurable-example", ["ToolbarConfigurableExample"], {}, {}, never, never, true, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<ToolbarConfigurableExample, "toolbar-configurable-example", never, {}, {}, never, never, true, never>;
 }
 
 export { ToolbarConfigurableExample };

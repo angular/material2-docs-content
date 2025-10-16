@@ -20,25 +20,25 @@ declare class CdkMenuStandaloneStatefulMenuExample {
 /** @title Google Docs Menu Bar. */
 declare class CdkMenuMenubarExample {
     static ɵfac: i0.ɵɵFactoryDeclaration<CdkMenuMenubarExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<CdkMenuMenubarExample, "cdk-menu-menubar-example", ["cdkMenuMenubarExample"], {}, {}, never, never, true, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<CdkMenuMenubarExample, "cdk-menu-menubar-example", never, {}, {}, never, never, true, never>;
 }
 
 /** @title Gmail inline menu. */
 declare class CdkMenuInlineExample {
     static ɵfac: i0.ɵɵFactoryDeclaration<CdkMenuInlineExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<CdkMenuInlineExample, "cdk-menu-inline-example", ["cdkMenuInlineExample"], {}, {}, never, never, true, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<CdkMenuInlineExample, "cdk-menu-inline-example", never, {}, {}, never, never, true, never>;
 }
 
 /** @title Context menu. */
 declare class CdkMenuContextExample {
     static ɵfac: i0.ɵɵFactoryDeclaration<CdkMenuContextExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<CdkMenuContextExample, "cdk-menu-context-example", ["cdkMenuContextExample"], {}, {}, never, never, true, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<CdkMenuContextExample, "cdk-menu-context-example", never, {}, {}, never, never, true, never>;
 }
 
 /** @title Nested context menus. */
 declare class CdkMenuNestedContextExample {
     static ɵfac: i0.ɵɵFactoryDeclaration<CdkMenuNestedContextExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<CdkMenuNestedContextExample, "cdk-menu-nested-context-example", ["cdkMenuNestedContextExample"], {}, {}, never, never, true, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<CdkMenuNestedContextExample, "cdk-menu-nested-context-example", never, {}, {}, never, never, true, never>;
 }
 
 export { CdkMenuContextExample, CdkMenuInlineExample, CdkMenuMenubarExample, CdkMenuNestedContextExample, CdkMenuStandaloneMenuExample, CdkMenuStandaloneStatefulMenuExample };

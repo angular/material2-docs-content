@@ -12,7 +12,7 @@ declare class AccordionConfigurableExample {
     items: string[];
     expansionIcon(item: string): Signal<string>;
     static ɵfac: i0.ɵɵFactoryDeclaration<AccordionConfigurableExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<AccordionConfigurableExample, "accordion-configurable-example", ["AccordionConfigurableExample"], { "expandedIds": { "alias": "expandedIds"; "required": false; "isSignal": true; }; }, { "expandedIds": "expandedIdsChange"; }, never, never, true, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<AccordionConfigurableExample, "accordion-configurable-example", never, { "expandedIds": { "alias": "expandedIds"; "required": false; "isSignal": true; }; }, { "expandedIds": "expandedIdsChange"; }, never, never, true, never>;
 }
 
 /** @title Accordion with single expansion. */

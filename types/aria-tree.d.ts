@@ -20,7 +20,7 @@ declare class TreeConfigurableExample {
     nav: FormControl<boolean>;
     selectedValues: i0.ModelSignal<string[]>;
     static ɵfac: i0.ɵɵFactoryDeclaration<TreeConfigurableExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TreeConfigurableExample, "tree-configurable-example", ["TreeConfigurableExample"], { "selectedValues": { "alias": "selectedValues"; "required": false; "isSignal": true; }; }, { "selectedValues": "selectedValuesChange"; }, never, never, true, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TreeConfigurableExample, "tree-configurable-example", never, { "selectedValues": { "alias": "selectedValues"; "required": false; "isSignal": true; }; }, { "selectedValues": "selectedValuesChange"; }, never, never, true, never>;
 }
 
 /**
@@ -29,7 +29,7 @@ declare class TreeConfigurableExample {
 declare class TreeActiveDescendantExample {
     nodes: TreeNode[];
     static ɵfac: i0.ɵɵFactoryDeclaration<TreeActiveDescendantExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TreeActiveDescendantExample, "tree-active-descendant-example", ["TreeActiveDescendantExample"], {}, {}, never, never, true, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TreeActiveDescendantExample, "tree-active-descendant-example", never, {}, {}, never, never, true, never>;
 }
 
 /**
@@ -38,7 +38,7 @@ declare class TreeActiveDescendantExample {
 declare class TreeDisabledExample {
     nodes: TreeNode[];
     static ɵfac: i0.ɵɵFactoryDeclaration<TreeDisabledExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TreeDisabledExample, "tree-disabled-example", ["TreeDisabledExample"], {}, {}, never, never, true, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TreeDisabledExample, "tree-disabled-example", never, {}, {}, never, never, true, never>;
 }
 
 /**
@@ -47,7 +47,7 @@ declare class TreeDisabledExample {
 declare class TreeDisabledFocusableExample {
     nodes: TreeNode[];
     static ɵfac: i0.ɵɵFactoryDeclaration<TreeDisabledFocusableExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TreeDisabledFocusableExample, "tree-disabled-focusable-example", ["TreeDisabledFocusableExample"], {}, {}, never, never, true, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TreeDisabledFocusableExample, "tree-disabled-focusable-example", never, {}, {}, never, never, true, never>;
 }
 
 /**
@@ -56,7 +56,7 @@ declare class TreeDisabledFocusableExample {
 declare class TreeDisabledSkippedExample {
     nodes: TreeNode[];
     static ɵfac: i0.ɵɵFactoryDeclaration<TreeDisabledSkippedExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TreeDisabledSkippedExample, "tree-disabled-skipped-example", ["TreeDisabledSkippedExample"], {}, {}, never, never, true, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TreeDisabledSkippedExample, "tree-disabled-skipped-example", never, {}, {}, never, never, true, never>;
 }
 
 /**
@@ -65,7 +65,7 @@ declare class TreeDisabledSkippedExample {
 declare class TreeMultiSelectExample {
     nodes: TreeNode[];
     static ɵfac: i0.ɵɵFactoryDeclaration<TreeMultiSelectExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TreeMultiSelectExample, "tree-multi-select-example", ["TreeMultiSelectExample"], {}, {}, never, never, true, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TreeMultiSelectExample, "tree-multi-select-example", never, {}, {}, never, never, true, never>;
 }
 
 /**
@@ -74,7 +74,7 @@ declare class TreeMultiSelectExample {
 declare class TreeMultiSelectFollowFocusExample {
     nodes: TreeNode[];
     static ɵfac: i0.ɵɵFactoryDeclaration<TreeMultiSelectFollowFocusExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TreeMultiSelectFollowFocusExample, "tree-multi-select-follow-focus-example", ["TreeMultiSelectFollowFocusExample"], {}, {}, never, never, true, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TreeMultiSelectFollowFocusExample, "tree-multi-select-follow-focus-example", never, {}, {}, never, never, true, never>;
 }
 
 /**
@@ -83,7 +83,7 @@ declare class TreeMultiSelectFollowFocusExample {
 declare class TreeNavExample {
     nodes: TreeNode[];
     static ɵfac: i0.ɵɵFactoryDeclaration<TreeNavExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TreeNavExample, "tree-nav-example", ["TreeNavExample"], {}, {}, never, never, true, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TreeNavExample, "tree-nav-example", never, {}, {}, never, never, true, never>;
 }
 
 /**
@@ -92,7 +92,7 @@ declare class TreeNavExample {
 declare class TreeSingleSelectExample {
     nodes: TreeNode[];
     static ɵfac: i0.ɵɵFactoryDeclaration<TreeSingleSelectExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TreeSingleSelectExample, "tree-single-select-example", ["TreeSingleSelectExample"], {}, {}, never, never, true, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TreeSingleSelectExample, "tree-single-select-example", never, {}, {}, never, never, true, never>;
 }
 
 /**
@@ -101,7 +101,7 @@ declare class TreeSingleSelectExample {
 declare class TreeSingleSelectFollowFocusExample {
     nodes: TreeNode[];
     static ɵfac: i0.ɵɵFactoryDeclaration<TreeSingleSelectFollowFocusExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TreeSingleSelectFollowFocusExample, "tree-single-select-follow-focus-example", ["TreeSingleSelectFollowFocusExample"], {}, {}, never, never, true, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TreeSingleSelectFollowFocusExample, "tree-single-select-follow-focus-example", never, {}, {}, never, never, true, never>;
 }
 
 export { TreeActiveDescendantExample, TreeConfigurableExample, TreeDisabledExample, TreeDisabledFocusableExample, TreeDisabledSkippedExample, TreeMultiSelectExample, TreeMultiSelectFollowFocusExample, TreeNavExample, TreeSingleSelectExample, TreeSingleSelectFollowFocusExample };

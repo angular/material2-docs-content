@@ -15,14 +15,14 @@ declare class ListboxConfigurableExample {
     skipDisabled: FormControl<boolean>;
     fruits: string[];
     static ɵfac: i0.ɵɵFactoryDeclaration<ListboxConfigurableExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<ListboxConfigurableExample, "listbox-configurable-example", ["ListboxConfigurableExample"], {}, {}, never, never, true, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<ListboxConfigurableExample, "listbox-configurable-example", never, {}, {}, never, never, true, never>;
 }
 
 /** @title Listbox with single selection. */
 declare class ListboxSingleSelectExample {
     fruits: string[];
     static ɵfac: i0.ɵɵFactoryDeclaration<ListboxSingleSelectExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<ListboxSingleSelectExample, "listbox-single-select-example", ["ListboxSingleSelectExample"], {}, {}, never, never, true, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<ListboxSingleSelectExample, "listbox-single-select-example", never, {}, {}, never, never, true, never>;
 }
 
 /**
@@ -38,7 +38,7 @@ declare class ListboxMultiSelectExample {
 declare class ListboxSingleSelectFollowFocusExample {
     fruits: string[];
     static ɵfac: i0.ɵɵFactoryDeclaration<ListboxSingleSelectFollowFocusExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<ListboxSingleSelectFollowFocusExample, "listbox-single-select-follow-focus-example", ["ListboxSingleSelectFollowFocusExample"], {}, {}, never, never, true, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<ListboxSingleSelectFollowFocusExample, "listbox-single-select-follow-focus-example", never, {}, {}, never, never, true, never>;
 }
 
 /**
@@ -47,7 +47,7 @@ declare class ListboxSingleSelectFollowFocusExample {
 declare class ListboxMultiSelectFollowFocusExample {
     fruits: string[];
     static ɵfac: i0.ɵɵFactoryDeclaration<ListboxMultiSelectFollowFocusExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<ListboxMultiSelectFollowFocusExample, "listbox-multi-select-follow-focus-example", ["ListboxMultiSelectFollowFocusExample"], {}, {}, never, never, true, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<ListboxMultiSelectFollowFocusExample, "listbox-multi-select-follow-focus-example", never, {}, {}, never, never, true, never>;
 }
 
 /**
@@ -56,7 +56,7 @@ declare class ListboxMultiSelectFollowFocusExample {
 declare class ListboxHorizontalExample {
     fruits: string[];
     static ɵfac: i0.ɵɵFactoryDeclaration<ListboxHorizontalExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<ListboxHorizontalExample, "listbox-horizontal-example", ["ListboxHorizontalExample"], {}, {}, never, never, true, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<ListboxHorizontalExample, "listbox-horizontal-example", never, {}, {}, never, never, true, never>;
 }
 
 /**
@@ -65,7 +65,7 @@ declare class ListboxHorizontalExample {
 declare class ListboxRtlHorizontalExample {
     fruits: string[];
     static ɵfac: i0.ɵɵFactoryDeclaration<ListboxRtlHorizontalExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<ListboxRtlHorizontalExample, "listbox-rtl-horizontal-example", ["ListboxRtlHorizontalExample"], {}, {}, never, never, true, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<ListboxRtlHorizontalExample, "listbox-rtl-horizontal-example", never, {}, {}, never, never, true, never>;
 }
 
 /**
@@ -74,7 +74,7 @@ declare class ListboxRtlHorizontalExample {
 declare class ListboxActiveDescendantExample {
     fruits: string[];
     static ɵfac: i0.ɵɵFactoryDeclaration<ListboxActiveDescendantExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<ListboxActiveDescendantExample, "listbox-active-descendant-example", ["ListboxActiveDescendantExample"], {}, {}, never, never, true, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<ListboxActiveDescendantExample, "listbox-active-descendant-example", never, {}, {}, never, never, true, never>;
 }
 
 /**
@@ -83,7 +83,7 @@ declare class ListboxActiveDescendantExample {
 declare class ListboxDisabledFocusableExample {
     fruits: string[];
     static ɵfac: i0.ɵɵFactoryDeclaration<ListboxDisabledFocusableExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<ListboxDisabledFocusableExample, "listbox-disabled-focusable-example", ["ListboxDisabledFocusableExample"], {}, {}, never, never, true, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<ListboxDisabledFocusableExample, "listbox-disabled-focusable-example", never, {}, {}, never, never, true, never>;
 }
 
 /**
@@ -92,7 +92,7 @@ declare class ListboxDisabledFocusableExample {
 declare class ListboxDisabledSkippedExample {
     fruits: string[];
     static ɵfac: i0.ɵɵFactoryDeclaration<ListboxDisabledSkippedExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<ListboxDisabledSkippedExample, "listbox-disabled-skipped-example", ["ListboxDisabledSkippedExample"], {}, {}, never, never, true, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<ListboxDisabledSkippedExample, "listbox-disabled-skipped-example", never, {}, {}, never, never, true, never>;
 }
 
 /**
@@ -101,7 +101,7 @@ declare class ListboxDisabledSkippedExample {
 declare class ListboxReadonlyExample {
     fruits: string[];
     static ɵfac: i0.ɵɵFactoryDeclaration<ListboxReadonlyExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<ListboxReadonlyExample, "listbox-readonly-example", ["ListboxReadonlyExample"], {}, {}, never, never, true, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<ListboxReadonlyExample, "listbox-readonly-example", never, {}, {}, never, never, true, never>;
 }
 
 /**
@@ -110,7 +110,7 @@ declare class ListboxReadonlyExample {
 declare class ListboxDisabledExample {
     fruits: string[];
     static ɵfac: i0.ɵɵFactoryDeclaration<ListboxDisabledExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<ListboxDisabledExample, "listbox-disabled-example", ["ListboxDisabledExample"], {}, {}, never, never, true, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<ListboxDisabledExample, "listbox-disabled-example", never, {}, {}, never, never, true, never>;
 }
 
 export { ListboxActiveDescendantExample, ListboxConfigurableExample, ListboxDisabledExample, ListboxDisabledFocusableExample, ListboxDisabledSkippedExample, ListboxHorizontalExample, ListboxMultiSelectExample, ListboxMultiSelectFollowFocusExample, ListboxReadonlyExample, ListboxRtlHorizontalExample, ListboxSingleSelectExample, ListboxSingleSelectFollowFocusExample };
