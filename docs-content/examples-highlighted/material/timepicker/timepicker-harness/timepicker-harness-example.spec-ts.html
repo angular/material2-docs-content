@@ -3,7 +3,7 @@
 <span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatTimepickerInputHarness</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/timepicker/testing&#x27;</span>;
 <span class="hljs-keyword">import</span> {<span class="hljs-title class_">HarnessLoader</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/testing&#x27;</span>;
 <span class="hljs-keyword">import</span> {<span class="hljs-title class_">TimepickerHarnessExample</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./timepicker-harness-example&#x27;</span>;
-<span class="hljs-keyword">import</span> {<span class="hljs-title class_">DateAdapter</span>, <span class="hljs-variable constant_">MATERIAL_ANIMATIONS</span>, <span class="hljs-title class_">MatNativeDateModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">DateAdapter</span>, <span class="hljs-variable constant_">MATERIAL_ANIMATIONS</span>, provideNativeDateAdapter} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/core&#x27;</span>;
 
 <span class="hljs-title function_">describe</span>(<span class="hljs-string">&#x27;TimepickerHarnessExample&#x27;</span>, <span class="hljs-function">() =&gt;</span> {
   <span class="hljs-keyword">let</span> <span class="hljs-attr">fixture</span>: <span class="hljs-title class_">ComponentFixture</span>&lt;<span class="hljs-title class_">TimepickerHarnessExample</span>&gt;;
@@ -11,8 +11,10 @@
 
   <span class="hljs-title function_">beforeEach</span>(<span class="hljs-function">() =&gt;</span> {
     <span class="hljs-title class_">TestBed</span>.<span class="hljs-title function_">configureTestingModule</span>({
-      <span class="hljs-attr">imports</span>: [<span class="hljs-title class_">MatNativeDateModule</span>],
-      <span class="hljs-attr">providers</span>: [{<span class="hljs-attr">provide</span>: <span class="hljs-variable constant_">MATERIAL_ANIMATIONS</span>, <span class="hljs-attr">useValue</span>: {<span class="hljs-attr">animationsDisabled</span>: <span class="hljs-literal">true</span>}}],
+      <span class="hljs-attr">providers</span>: [
+        <span class="hljs-title function_">provideNativeDateAdapter</span>(),
+        {<span class="hljs-attr">provide</span>: <span class="hljs-variable constant_">MATERIAL_ANIMATIONS</span>, <span class="hljs-attr">useValue</span>: {<span class="hljs-attr">animationsDisabled</span>: <span class="hljs-literal">true</span>}},
+      ],
     });
     <span class="hljs-title class_">TestBed</span>.<span class="hljs-title function_">inject</span>(<span class="hljs-title class_">DateAdapter</span>).<span class="hljs-title function_">setLocale</span>(<span class="hljs-string">&#x27;en-US&#x27;</span>); <span class="hljs-comment">// Set the locale to en-US to guarantee consistent tests.</span>
     fixture = <span class="hljs-title class_">TestBed</span>.<span class="hljs-title function_">createComponent</span>(<span class="hljs-title class_">TimepickerHarnessExample</span>);
