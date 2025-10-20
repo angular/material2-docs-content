@@ -592,6 +592,20 @@ const EXAMPLE_COMPONENTS = {
         "primaryFile": "tabs-vertical-example.ts",
         "importPath": "aria/tabs"
     },
+    "toolbar-basic-horizontal": {
+        "packagePath": "aria/toolbar/toolbar-basic-horizontal",
+        "title": "Basic Horizontal Toolbar Example",
+        "componentName": "ToolbarBasicHorizontalExample",
+        "files": [
+            "toolbar-basic-horizontal-example.ts",
+            "toolbar-basic-horizontal-example.html",
+            "../toolbar-common.css"
+        ],
+        "selector": "toolbar-basic-horizontal-example",
+        "additionalComponents": [],
+        "primaryFile": "toolbar-basic-horizontal-example.ts",
+        "importPath": "aria/toolbar"
+    },
     "toolbar-configurable": {
         "packagePath": "aria/toolbar/toolbar-configurable",
         "title": "Configurable CDK Radio Group",
@@ -5887,6 +5901,8 @@ async function loadExample(id) {
             return import('@angular/components-examples/aria/tabs');
         case 'tabs-vertical':
             return import('@angular/components-examples/aria/tabs');
+        case 'toolbar-basic-horizontal':
+            return import('@angular/components-examples/aria/toolbar');
         case 'toolbar-configurable':
             return import('@angular/components-examples/aria/toolbar');
         case 'tree-active-descendant':

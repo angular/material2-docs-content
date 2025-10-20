@@ -1,5 +1,20 @@
-import { FormControl } from '@angular/forms';
+import { LiveAnnouncer } from '@angular/cdk/a11y';
 import * as i0 from '@angular/core';
+import { FormControl } from '@angular/forms';
+
+/** @title Basic Horizontal Toolbar Example */
+declare class ToolbarBasicHorizontalExample {
+    private _liveAnnouncer;
+    constructor(_liveAnnouncer: LiveAnnouncer);
+    alignments: {
+        value: string;
+        label: string;
+    }[];
+    format(tool: string): void;
+    test(action: string): void;
+    static ɵfac: i0.ɵɵFactoryDeclaration<ToolbarBasicHorizontalExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<ToolbarBasicHorizontalExample, "toolbar-basic-horizontal-example", never, {}, {}, never, never, true, never>;
+}
 
 /** @title Configurable CDK Radio Group */
 declare class ToolbarConfigurableExample {
@@ -18,4 +33,4 @@ declare class ToolbarConfigurableExample {
     static ɵcmp: i0.ɵɵComponentDeclaration<ToolbarConfigurableExample, "toolbar-configurable-example", never, {}, {}, never, never, true, never>;
 }
 
-export { ToolbarConfigurableExample };
+export { ToolbarBasicHorizontalExample, ToolbarConfigurableExample };
