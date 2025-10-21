@@ -620,6 +620,20 @@ const EXAMPLE_COMPONENTS = {
         "primaryFile": "toolbar-configurable-example.ts",
         "importPath": "aria/toolbar"
     },
+    "toolbar-skip-disabled": {
+        "packagePath": "aria/toolbar/toolbar-skip-disabled",
+        "title": "Skip Disabled Toolbar Example",
+        "componentName": "ToolbarSkipDisabledExample",
+        "files": [
+            "toolbar-skip-disabled-example.ts",
+            "toolbar-skip-disabled-example.html",
+            "../toolbar-common.css"
+        ],
+        "selector": "toolbar-skip-disabled-example",
+        "additionalComponents": [],
+        "primaryFile": "toolbar-skip-disabled-example.ts",
+        "importPath": "aria/toolbar"
+    },
     "tree-active-descendant": {
         "packagePath": "aria/tree/tree-active-descendant",
         "title": "Tree with active descendant focus.",
@@ -5904,6 +5918,8 @@ async function loadExample(id) {
         case 'toolbar-basic-horizontal':
             return import('@angular/components-examples/aria/toolbar');
         case 'toolbar-configurable':
+            return import('@angular/components-examples/aria/toolbar');
+        case 'toolbar-skip-disabled':
             return import('@angular/components-examples/aria/toolbar');
         case 'tree-active-descendant':
             return import('@angular/components-examples/aria/tree');

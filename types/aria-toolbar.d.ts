@@ -33,4 +33,19 @@ declare class ToolbarConfigurableExample {
     static ɵcmp: i0.ɵɵComponentDeclaration<ToolbarConfigurableExample, "toolbar-configurable-example", never, {}, {}, never, never, true, never>;
 }
 
-export { ToolbarBasicHorizontalExample, ToolbarConfigurableExample };
+/** @title Skip Disabled Toolbar Example */
+declare class ToolbarSkipDisabledExample {
+    private _liveAnnouncer;
+    constructor(_liveAnnouncer: LiveAnnouncer);
+    alignments: {
+        value: string;
+        label: string;
+    }[];
+    disabledOptions: string[];
+    format(tool: string): void;
+    test(action: string): void;
+    static ɵfac: i0.ɵɵFactoryDeclaration<ToolbarSkipDisabledExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<ToolbarSkipDisabledExample, "toolbar-skip-disabled-example", never, {}, {}, never, never, true, never>;
+}
+
+export { ToolbarBasicHorizontalExample, ToolbarConfigurableExample, ToolbarSkipDisabledExample };

@@ -1,0 +1,32 @@
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">Component</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">Toolbar</span>, <span class="hljs-title class_">ToolbarWidget</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/aria/toolbar&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">RadioGroup</span>, <span class="hljs-title class_">RadioButton</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/aria/radio-group&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">LiveAnnouncer</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/a11y&#x27;</span>;
+
+<span class="hljs-comment">/** <span class="hljs-doctag">@title</span> Skip Disabled Toolbar Example */</span>
+<span class="hljs-meta">@Component</span>({
+  <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;toolbar-skip-disabled-example&#x27;</span>,
+  <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;toolbar-skip-disabled-example.html&#x27;</span>,
+  <span class="hljs-attr">styleUrl</span>: <span class="hljs-string">&#x27;../toolbar-common.css&#x27;</span>,
+  <span class="hljs-attr">imports</span>: [<span class="hljs-title class_">RadioButton</span>, <span class="hljs-title class_">RadioGroup</span>, <span class="hljs-title class_">Toolbar</span>, <span class="hljs-title class_">ToolbarWidget</span>],
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">ToolbarSkipDisabledExample</span> {
+  <span class="hljs-title function_">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">private</span> <span class="hljs-attr">_liveAnnouncer</span>: <span class="hljs-title class_">LiveAnnouncer</span></span>) {}
+  alignments = [
+    {<span class="hljs-attr">value</span>: <span class="hljs-string">&#x27;left&#x27;</span>, <span class="hljs-attr">label</span>: <span class="hljs-string">&#x27;Left&#x27;</span>},
+    {<span class="hljs-attr">value</span>: <span class="hljs-string">&#x27;center&#x27;</span>, <span class="hljs-attr">label</span>: <span class="hljs-string">&#x27;Center&#x27;</span>},
+    {<span class="hljs-attr">value</span>: <span class="hljs-string">&#x27;right&#x27;</span>, <span class="hljs-attr">label</span>: <span class="hljs-string">&#x27;Right&#x27;</span>},
+  ];
+
+  <span class="hljs-comment">// Control for which radio options are individually disabled</span>
+  <span class="hljs-attr">disabledOptions</span>: <span class="hljs-built_in">string</span>[] = [<span class="hljs-string">&#x27;center&#x27;</span>];
+
+  <span class="hljs-title function_">format</span>(<span class="hljs-params"><span class="hljs-attr">tool</span>: <span class="hljs-built_in">string</span></span>) {
+    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">`Tool activated: <span class="hljs-subst">${tool}</span>`</span>);
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">_liveAnnouncer</span>.<span class="hljs-title function_">announce</span>(<span class="hljs-string">`<span class="hljs-subst">${tool}</span> applied`</span>, <span class="hljs-string">&#x27;polite&#x27;</span>);
+  }
+  <span class="hljs-title function_">test</span>(<span class="hljs-params"><span class="hljs-attr">action</span>: <span class="hljs-built_in">string</span></span>) {
+    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">`Action triggered: <span class="hljs-subst">${action}</span>`</span>);
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">_liveAnnouncer</span>.<span class="hljs-title function_">announce</span>(<span class="hljs-string">`<span class="hljs-subst">${action}</span> button activated`</span>, <span class="hljs-string">&#x27;polite&#x27;</span>);
+  }
+}
