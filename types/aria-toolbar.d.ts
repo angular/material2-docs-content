@@ -16,6 +16,20 @@ declare class ToolbarBasicHorizontalExample {
     static ɵcmp: i0.ɵɵComponentDeclaration<ToolbarBasicHorizontalExample, "toolbar-basic-horizontal-example", never, {}, {}, never, never, true, never>;
 }
 
+/** @title Basic Vertical Toolbar Example */
+declare class ToolbarBasicVerticalExample {
+    private _liveAnnouncer;
+    constructor(_liveAnnouncer: LiveAnnouncer);
+    alignments: {
+        value: string;
+        label: string;
+    }[];
+    format(tool: string): void;
+    test(action: string): void;
+    static ɵfac: i0.ɵɵFactoryDeclaration<ToolbarBasicVerticalExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<ToolbarBasicVerticalExample, "toolbar-basic-vertical-example", never, {}, {}, never, never, true, never>;
+}
+
 /** @title Configurable CDK Radio Group */
 declare class ToolbarConfigurableExample {
     skipDisabled: FormControl<boolean>;
@@ -48,4 +62,4 @@ declare class ToolbarSkipDisabledExample {
     static ɵcmp: i0.ɵɵComponentDeclaration<ToolbarSkipDisabledExample, "toolbar-skip-disabled-example", never, {}, {}, never, never, true, never>;
 }
 
-export { ToolbarBasicHorizontalExample, ToolbarConfigurableExample, ToolbarSkipDisabledExample };
+export { ToolbarBasicHorizontalExample, ToolbarBasicVerticalExample, ToolbarConfigurableExample, ToolbarSkipDisabledExample };

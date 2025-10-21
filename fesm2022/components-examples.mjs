@@ -606,6 +606,20 @@ const EXAMPLE_COMPONENTS = {
         "primaryFile": "toolbar-basic-horizontal-example.ts",
         "importPath": "aria/toolbar"
     },
+    "toolbar-basic-vertical": {
+        "packagePath": "aria/toolbar/toolbar-basic-vertical",
+        "title": "Basic Vertical Toolbar Example",
+        "componentName": "ToolbarBasicVerticalExample",
+        "files": [
+            "toolbar-basic-vertical-example.ts",
+            "toolbar-basic-vertical-example.html",
+            "../toolbar-common.css"
+        ],
+        "selector": "toolbar-basic-vertical-example",
+        "additionalComponents": [],
+        "primaryFile": "toolbar-basic-vertical-example.ts",
+        "importPath": "aria/toolbar"
+    },
     "toolbar-configurable": {
         "packagePath": "aria/toolbar/toolbar-configurable",
         "title": "Configurable CDK Radio Group",
@@ -5916,6 +5930,8 @@ async function loadExample(id) {
         case 'tabs-vertical':
             return import('@angular/components-examples/aria/tabs');
         case 'toolbar-basic-horizontal':
+            return import('@angular/components-examples/aria/toolbar');
+        case 'toolbar-basic-vertical':
             return import('@angular/components-examples/aria/toolbar');
         case 'toolbar-configurable':
             return import('@angular/components-examples/aria/toolbar');
