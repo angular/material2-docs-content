@@ -130,6 +130,20 @@ const EXAMPLE_COMPONENTS = {
         "primaryFile": "combobox-manual-example.ts",
         "importPath": "aria/combobox"
     },
+    "combobox-readonly": {
+        "packagePath": "aria/combobox/combobox-readonly",
+        "title": "Readonly combobox.",
+        "componentName": "ComboboxReadonlyExample",
+        "files": [
+            "combobox-readonly-example.ts",
+            "combobox-readonly-example.html",
+            "../combobox-examples.css"
+        ],
+        "selector": "combobox-readonly-example",
+        "additionalComponents": [],
+        "primaryFile": "combobox-readonly-example.ts",
+        "importPath": "aria/combobox"
+    },
     "combobox-tree-auto-select": {
         "packagePath": "aria/combobox/combobox-tree-auto-select",
         "title": "Combobox with tree popup and auto-select filtering.",
@@ -5876,6 +5890,8 @@ async function loadExample(id) {
         case 'combobox-highlight':
             return import('@angular/components-examples/aria/combobox');
         case 'combobox-manual':
+            return import('@angular/components-examples/aria/combobox');
+        case 'combobox-readonly':
             return import('@angular/components-examples/aria/combobox');
         case 'combobox-tree-auto-select':
             return import('@angular/components-examples/aria/combobox');

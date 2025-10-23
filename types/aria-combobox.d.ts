@@ -99,4 +99,17 @@ declare class ComboboxTreeHighlightExample {
     static ɵcmp: i0.ɵɵComponentDeclaration<ComboboxTreeHighlightExample, "combobox-tree-highlight-example", never, {}, {}, never, never, true, never>;
 }
 
-export { ComboboxAutoSelectExample, ComboboxHighlightExample, ComboboxManualExample, ComboboxTreeAutoSelectExample, ComboboxTreeHighlightExample, ComboboxTreeManualExample };
+/** @title Readonly combobox. */
+declare class ComboboxReadonlyExample {
+    popover: i0.Signal<ElementRef<any> | undefined>;
+    listbox: i0.Signal<Listbox<any> | undefined>;
+    combobox: i0.Signal<Combobox<any> | undefined>;
+    options: () => string[];
+    searchString: i0.WritableSignal<string>;
+    constructor();
+    showPopover(): void;
+    static ɵfac: i0.ɵɵFactoryDeclaration<ComboboxReadonlyExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<ComboboxReadonlyExample, "combobox-readonly-example", never, {}, {}, never, never, true, never>;
+}
+
+export { ComboboxAutoSelectExample, ComboboxHighlightExample, ComboboxManualExample, ComboboxReadonlyExample, ComboboxTreeAutoSelectExample, ComboboxTreeHighlightExample, ComboboxTreeManualExample };
