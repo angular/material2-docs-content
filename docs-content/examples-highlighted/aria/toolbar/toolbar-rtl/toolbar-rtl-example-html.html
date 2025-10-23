@@ -1,0 +1,43 @@
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-container&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">ngToolbar</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-toolbar&quot;</span> <span class="hljs-attr">dir</span>=<span class="hljs-string">&quot;rtl&quot;</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">&quot;RTL Toolbar Text Formatting Tools&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">button</span>
+            <span class="hljs-attr">ngToolbarWidget</span>
+            <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-radio-button&quot;</span>
+            (<span class="hljs-attr">click</span>)=<span class="hljs-string">&quot;format(&#x27;bold&#x27;)&quot;</span>
+            (<span class="hljs-attr">keydown.enter</span>)=<span class="hljs-string">&quot;format(&#x27;bold&#x27;)&quot;</span>&gt;</span>
+            Bold
+        <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">button</span>
+            <span class="hljs-attr">ngToolbarWidget</span>
+            <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-radio-button&quot;</span>
+            (<span class="hljs-attr">click</span>)=<span class="hljs-string">&quot;format(&#x27;italic&#x27;)&quot;</span>
+            (<span class="hljs-attr">keydown.enter</span>)=<span class="hljs-string">&quot;format(&#x27;italic&#x27;)&quot;</span>&gt;</span>
+            Italic
+        <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">button</span>
+            <span class="hljs-attr">ngToolbarWidget</span>
+            <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-radio-button&quot;</span>
+            (<span class="hljs-attr">click</span>)=<span class="hljs-string">&quot;format(&#x27;underline&#x27;)&quot;</span>
+            (<span class="hljs-attr">keydown.enter</span>)=<span class="hljs-string">&quot;format(&#x27;underline&#x27;)&quot;</span>&gt;</span>
+            Underline
+        <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">ul</span>
+            <span class="hljs-attr">ngRadioGroup</span>
+            <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-radio-group&quot;</span>
+            <span class="hljs-attr">aria-label</span>=<span class="hljs-string">&quot;Select text alignment&quot;</span>
+        &gt;</span>
+            @for (alignment of alignments; track alignment) {
+            <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">ngRadioButton</span> [<span class="hljs-attr">value</span>]=<span class="hljs-string">&quot;alignment.value&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-radio-button&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-radio-indicator&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>{{ alignment.label }}<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+            }
+        <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">button</span>
+            <span class="hljs-attr">ngToolbarWidget</span>
+            <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-radio-button&quot;</span>
+            [<span class="hljs-attr">disabled</span>]=<span class="hljs-string">&quot;true&quot;</span>&gt;</span>
+            Disabled Action
+        <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>

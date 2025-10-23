@@ -634,6 +634,20 @@ const EXAMPLE_COMPONENTS = {
         "primaryFile": "toolbar-configurable-example.ts",
         "importPath": "aria/toolbar"
     },
+    "toolbar-rtl": {
+        "packagePath": "aria/toolbar/toolbar-rtl",
+        "title": "Basic RTL Toolbar Example",
+        "componentName": "ToolbarRtlExample",
+        "files": [
+            "toolbar-rtl-example.ts",
+            "toolbar-rtl-example.html",
+            "../toolbar-common.css"
+        ],
+        "selector": "toolbar-rtl-example",
+        "additionalComponents": [],
+        "primaryFile": "toolbar-rtl-example.ts",
+        "importPath": "aria/toolbar"
+    },
     "toolbar-skip-disabled": {
         "packagePath": "aria/toolbar/toolbar-skip-disabled",
         "title": "Skip Disabled Toolbar Example",
@@ -5934,6 +5948,8 @@ async function loadExample(id) {
         case 'toolbar-basic-vertical':
             return import('@angular/components-examples/aria/toolbar');
         case 'toolbar-configurable':
+            return import('@angular/components-examples/aria/toolbar');
+        case 'toolbar-rtl':
             return import('@angular/components-examples/aria/toolbar');
         case 'toolbar-skip-disabled':
             return import('@angular/components-examples/aria/toolbar');

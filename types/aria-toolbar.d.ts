@@ -47,6 +47,20 @@ declare class ToolbarConfigurableExample {
     static ɵcmp: i0.ɵɵComponentDeclaration<ToolbarConfigurableExample, "toolbar-configurable-example", never, {}, {}, never, never, true, never>;
 }
 
+/** @title Basic RTL Toolbar Example */
+declare class ToolbarRtlExample {
+    private _liveAnnouncer;
+    constructor(_liveAnnouncer: LiveAnnouncer);
+    alignments: {
+        value: string;
+        label: string;
+    }[];
+    format(tool: string): void;
+    test(action: string): void;
+    static ɵfac: i0.ɵɵFactoryDeclaration<ToolbarRtlExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<ToolbarRtlExample, "toolbar-rtl-example", never, {}, {}, never, never, true, never>;
+}
+
 /** @title Skip Disabled Toolbar Example */
 declare class ToolbarSkipDisabledExample {
     private _liveAnnouncer;
@@ -62,4 +76,4 @@ declare class ToolbarSkipDisabledExample {
     static ɵcmp: i0.ɵɵComponentDeclaration<ToolbarSkipDisabledExample, "toolbar-skip-disabled-example", never, {}, {}, never, never, true, never>;
 }
 
-export { ToolbarBasicHorizontalExample, ToolbarBasicVerticalExample, ToolbarConfigurableExample, ToolbarSkipDisabledExample };
+export { ToolbarBasicHorizontalExample, ToolbarBasicVerticalExample, ToolbarConfigurableExample, ToolbarRtlExample, ToolbarSkipDisabledExample };
