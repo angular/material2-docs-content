@@ -17,15 +17,14 @@ class ComboboxManualExample {
         afterRenderEffect(() => {
             const popover = this.popover();
             const combobox = this.combobox();
-            combobox.pattern.expanded() ? this.showPopover() : popover.nativeElement.hidePopover();
-            // TODO(wagnermaciel): Make this easier for developers to do.
-            this.listbox()?.pattern.inputs.activeItem()?.element().scrollIntoView({ block: 'nearest' });
+            combobox.expanded() ? this.showPopover() : popover.nativeElement.hidePopover();
+            this.listbox()?.scrollActiveItemIntoView();
         });
     }
     showPopover() {
         const popover = this.popover();
         const combobox = this.combobox();
-        const comboboxRect = combobox.pattern.inputs.inputEl()?.getBoundingClientRect();
+        const comboboxRect = combobox.inputElement()?.getBoundingClientRect();
         const popoverEl = popover.nativeElement;
         if (comboboxRect) {
             popoverEl.style.width = `${comboboxRect.width}px`;
@@ -113,15 +112,14 @@ class ComboboxAutoSelectExample {
         afterRenderEffect(() => {
             const popover = this.popover();
             const combobox = this.combobox();
-            combobox.pattern.expanded() ? this.showPopover() : popover.nativeElement.hidePopover();
-            // TODO(wagnermaciel): Make this easier for developers to do.
-            this.listbox()?.pattern.inputs.activeItem()?.element().scrollIntoView({ block: 'nearest' });
+            combobox.expanded() ? this.showPopover() : popover.nativeElement.hidePopover();
+            this.listbox()?.scrollActiveItemIntoView();
         });
     }
     showPopover() {
         const popover = this.popover();
         const combobox = this.combobox();
-        const comboboxRect = combobox.pattern.inputs.inputEl()?.getBoundingClientRect();
+        const comboboxRect = combobox.inputElement()?.getBoundingClientRect();
         const popoverEl = popover.nativeElement;
         if (comboboxRect) {
             popoverEl.style.width = `${comboboxRect.width}px`;
@@ -201,15 +199,14 @@ class ComboboxHighlightExample {
         afterRenderEffect(() => {
             const popover = this.popover();
             const combobox = this.combobox();
-            combobox.pattern.expanded() ? this.showPopover() : popover.nativeElement.hidePopover();
-            // TODO(wagnermaciel): Make this easier for developers to do.
-            this.listbox()?.pattern.inputs.activeItem()?.element().scrollIntoView({ block: 'nearest' });
+            combobox.expanded() ? this.showPopover() : popover.nativeElement.hidePopover();
+            this.listbox()?.scrollActiveItemIntoView();
         });
     }
     showPopover() {
         const popover = this.popover();
         const combobox = this.combobox();
-        const comboboxRect = combobox.pattern.inputs.inputEl()?.getBoundingClientRect();
+        const comboboxRect = combobox.inputElement()?.getBoundingClientRect();
         const popoverEl = popover.nativeElement;
         if (comboboxRect) {
             popoverEl.style.width = `${comboboxRect.width}px`;
@@ -338,15 +335,14 @@ class ComboboxTreeManualExample {
         afterRenderEffect(() => {
             const popover = this.popover();
             const combobox = this.combobox();
-            combobox.pattern.expanded() ? this.showPopover() : popover.nativeElement.hidePopover();
-            // TODO(wagnermaciel): Make this easier for developers to do.
-            this.tree()?.pattern.inputs.activeItem()?.element().scrollIntoView({ block: 'nearest' });
+            combobox.expanded() ? this.showPopover() : popover.nativeElement.hidePopover();
+            this.tree()?.scrollActiveItemIntoView();
         });
     }
     showPopover() {
         const popover = this.popover();
         const combobox = this.combobox();
-        const comboboxRect = combobox.pattern.inputs.inputEl()?.getBoundingClientRect();
+        const comboboxRect = combobox.inputElement()?.getBoundingClientRect();
         const popoverEl = popover.nativeElement;
         if (comboboxRect) {
             popoverEl.style.width = `${comboboxRect.width}px`;
@@ -405,15 +401,14 @@ class ComboboxTreeAutoSelectExample {
         afterRenderEffect(() => {
             const popover = this.popover();
             const combobox = this.combobox();
-            combobox.pattern.expanded() ? this.showPopover() : popover.nativeElement.hidePopover();
-            // TODO(wagnermaciel): Make this easier for developers to do.
-            this.tree()?.pattern.inputs.activeItem()?.element().scrollIntoView({ block: 'nearest' });
+            combobox.expanded() ? this.showPopover() : popover.nativeElement.hidePopover();
+            this.tree()?.scrollActiveItemIntoView();
         });
     }
     showPopover() {
         const popover = this.popover();
         const combobox = this.combobox();
-        const comboboxRect = combobox.pattern.inputs.inputEl()?.getBoundingClientRect();
+        const comboboxRect = combobox.inputElement()?.getBoundingClientRect();
         const popoverEl = popover.nativeElement;
         if (comboboxRect) {
             popoverEl.style.width = `${comboboxRect.width}px`;
@@ -472,15 +467,14 @@ class ComboboxTreeHighlightExample {
         afterRenderEffect(() => {
             const popover = this.popover();
             const combobox = this.combobox();
-            combobox.pattern.expanded() ? this.showPopover() : popover.nativeElement.hidePopover();
-            // TODO(wagnermaciel): Make this easier for developers to do.
-            this.tree()?.pattern.inputs.activeItem()?.element().scrollIntoView({ block: 'nearest' });
+            combobox.expanded() ? this.showPopover() : popover.nativeElement.hidePopover();
+            this.tree()?.scrollActiveItemIntoView();
         });
     }
     showPopover() {
         const popover = this.popover();
         const combobox = this.combobox();
-        const comboboxRect = combobox.pattern.inputs.inputEl()?.getBoundingClientRect();
+        const comboboxRect = combobox.inputElement()?.getBoundingClientRect();
         const popoverEl = popover.nativeElement;
         if (comboboxRect) {
             popoverEl.style.width = `${comboboxRect.width}px`;
@@ -517,15 +511,14 @@ class ComboboxReadonlyExample {
         afterRenderEffect(() => {
             const popover = this.popover();
             const combobox = this.combobox();
-            combobox.pattern.expanded() ? this.showPopover() : popover.nativeElement.hidePopover();
-            // TODO(wagnermaciel): Make this easier for developers to do.
-            this.listbox()?.pattern.inputs.activeItem()?.element().scrollIntoView({ block: 'nearest' });
+            combobox.expanded() ? this.showPopover() : popover.nativeElement.hidePopover();
+            this.listbox()?.scrollActiveItemIntoView();
         });
     }
     showPopover() {
         const popover = this.popover();
         const combobox = this.combobox();
-        const comboboxRect = combobox.pattern.inputs.inputEl()?.getBoundingClientRect();
+        const comboboxRect = combobox.inputElement()?.getBoundingClientRect();
         const popoverEl = popover.nativeElement;
         if (comboboxRect) {
             popoverEl.style.width = `${comboboxRect.width}px`;

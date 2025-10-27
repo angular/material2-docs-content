@@ -46,10 +46,8 @@
     <span class="hljs-title function_">afterRenderEffect</span>(<span class="hljs-function">() =&gt;</span> {
       <span class="hljs-keyword">const</span> popover = <span class="hljs-variable language_">this</span>.<span class="hljs-title function_">popover</span>()!;
       <span class="hljs-keyword">const</span> combobox = <span class="hljs-variable language_">this</span>.<span class="hljs-title function_">combobox</span>()!;
-      combobox.<span class="hljs-property">pattern</span>.<span class="hljs-title function_">expanded</span>() ? <span class="hljs-variable language_">this</span>.<span class="hljs-title function_">showPopover</span>() : popover.<span class="hljs-property">nativeElement</span>.<span class="hljs-title function_">hidePopover</span>();
-
-      <span class="hljs-comment">// TODO(wagnermaciel): Make this easier for developers to do.</span>
-      <span class="hljs-variable language_">this</span>.<span class="hljs-title function_">listbox</span>()?.<span class="hljs-property">pattern</span>.<span class="hljs-property">inputs</span>.<span class="hljs-title function_">activeItem</span>()?.<span class="hljs-title function_">element</span>().<span class="hljs-title function_">scrollIntoView</span>({<span class="hljs-attr">block</span>: <span class="hljs-string">&#x27;nearest&#x27;</span>});
+      combobox.<span class="hljs-title function_">expanded</span>() ? <span class="hljs-variable language_">this</span>.<span class="hljs-title function_">showPopover</span>() : popover.<span class="hljs-property">nativeElement</span>.<span class="hljs-title function_">hidePopover</span>();
+      <span class="hljs-variable language_">this</span>.<span class="hljs-title function_">listbox</span>()?.<span class="hljs-title function_">scrollActiveItemIntoView</span>();
     });
   }
 
@@ -57,7 +55,7 @@
     <span class="hljs-keyword">const</span> popover = <span class="hljs-variable language_">this</span>.<span class="hljs-title function_">popover</span>()!;
     <span class="hljs-keyword">const</span> combobox = <span class="hljs-variable language_">this</span>.<span class="hljs-title function_">combobox</span>()!;
 
-    <span class="hljs-keyword">const</span> comboboxRect = combobox.<span class="hljs-property">pattern</span>.<span class="hljs-property">inputs</span>.<span class="hljs-title function_">inputEl</span>()?.<span class="hljs-title function_">getBoundingClientRect</span>();
+    <span class="hljs-keyword">const</span> comboboxRect = combobox.<span class="hljs-title function_">inputElement</span>()?.<span class="hljs-title function_">getBoundingClientRect</span>();
     <span class="hljs-keyword">const</span> popoverEl = popover.<span class="hljs-property">nativeElement</span>;
 
     <span class="hljs-keyword">if</span> (comboboxRect) {
