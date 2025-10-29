@@ -9,7 +9,7 @@ declare class TabsConfigurableExample {
     tabSelection: string;
     wrap: FormControl<boolean>;
     disabled: FormControl<boolean>;
-    skipDisabled: FormControl<boolean>;
+    softDisabled: FormControl<boolean>;
     static ɵfac: i0.ɵɵFactoryDeclaration<TabsConfigurableExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<TabsConfigurableExample, "tabs-configurable-example", never, {}, {}, never, never, true, never>;
 }

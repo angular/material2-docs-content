@@ -16,7 +16,7 @@ declare class TreeConfigurableExample {
     multi: FormControl<boolean>;
     disabled: FormControl<boolean>;
     wrap: FormControl<boolean>;
-    skipDisabled: FormControl<boolean>;
+    softDisabled: FormControl<boolean>;
     nav: FormControl<boolean>;
     selectedValues: i0.ModelSignal<string[]>;
     static ɵfac: i0.ɵɵFactoryDeclaration<TreeConfigurableExample, never>;

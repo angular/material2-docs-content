@@ -65,7 +65,7 @@ declare class RadioGroupConfigurableExample {
     disabled: FormControl<boolean>;
     fruits: string[];
     readonly: FormControl<boolean>;
-    skipDisabled: FormControl<boolean>;
+    softDisabled: FormControl<boolean>;
     focusMode: 'roving' | 'activedescendant';
     disabledOptions: string[];
     static ɵfac: i0.ɵɵFactoryDeclaration<RadioGroupConfigurableExample, never>;

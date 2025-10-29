@@ -32,7 +32,7 @@ declare class ToolbarBasicVerticalExample {
 
 /** @title Configurable CDK Radio Group */
 declare class ToolbarConfigurableExample {
-    skipDisabled: FormControl<boolean>;
+    softDisabled: FormControl<boolean>;
     wrap: FormControl<boolean>;
     toolbarDisabled: FormControl<boolean>;
     orientation: 'vertical' | 'horizontal';
@@ -61,8 +61,8 @@ declare class ToolbarRtlExample {
     static ɵcmp: i0.ɵɵComponentDeclaration<ToolbarRtlExample, "toolbar-rtl-example", never, {}, {}, never, never, true, never>;
 }
 
-/** @title Skip Disabled Toolbar Example */
-declare class ToolbarSkipDisabledExample {
+/** @title Soft Disabled Toolbar Example */
+declare class ToolbarSoftDisabledExample {
     private _liveAnnouncer;
     constructor(_liveAnnouncer: LiveAnnouncer);
     alignments: {
@@ -72,8 +72,8 @@ declare class ToolbarSkipDisabledExample {
     disabledOptions: string[];
     format(tool: string): void;
     test(action: string): void;
-    static ɵfac: i0.ɵɵFactoryDeclaration<ToolbarSkipDisabledExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<ToolbarSkipDisabledExample, "toolbar-skip-disabled-example", never, {}, {}, never, never, true, never>;
+    static ɵfac: i0.ɵɵFactoryDeclaration<ToolbarSoftDisabledExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<ToolbarSoftDisabledExample, "toolbar-soft-disabled-example", never, {}, {}, never, never, true, never>;
 }
 
-export { ToolbarBasicHorizontalExample, ToolbarBasicVerticalExample, ToolbarConfigurableExample, ToolbarRtlExample, ToolbarSkipDisabledExample };
+export { ToolbarBasicHorizontalExample, ToolbarBasicVerticalExample, ToolbarConfigurableExample, ToolbarRtlExample, ToolbarSoftDisabledExample };

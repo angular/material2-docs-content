@@ -469,14 +469,14 @@ const EXAMPLE_COMPONENTS = {
     "primaryFile": "toolbar-rtl-example.ts",
     "importPath": "aria/toolbar"
   },
-  "toolbar-skip-disabled": {
-    "packagePath": "aria/toolbar/toolbar-skip-disabled",
-    "title": "Skip Disabled Toolbar Example",
-    "componentName": "ToolbarSkipDisabledExample",
-    "files": ["toolbar-skip-disabled-example.ts", "toolbar-skip-disabled-example.html", "../toolbar-common.css"],
-    "selector": "toolbar-skip-disabled-example",
+  "toolbar-soft-disabled": {
+    "packagePath": "aria/toolbar/toolbar-soft-disabled",
+    "title": "Soft Disabled Toolbar Example",
+    "componentName": "ToolbarSoftDisabledExample",
+    "files": ["toolbar-soft-disabled-example.ts", "toolbar-soft-disabled-example.html", "../toolbar-common.css"],
+    "selector": "toolbar-soft-disabled-example",
     "additionalComponents": [],
-    "primaryFile": "toolbar-skip-disabled-example.ts",
+    "primaryFile": "toolbar-soft-disabled-example.ts",
     "importPath": "aria/toolbar"
   },
   "tree-active-descendant": {
@@ -4306,7 +4306,7 @@ async function loadExample(id) {
       return import('@angular/components-examples/aria/toolbar');
     case 'toolbar-rtl':
       return import('@angular/components-examples/aria/toolbar');
-    case 'toolbar-skip-disabled':
+    case 'toolbar-soft-disabled':
       return import('@angular/components-examples/aria/toolbar');
     case 'tree-active-descendant':
       return import('@angular/components-examples/aria/tree');

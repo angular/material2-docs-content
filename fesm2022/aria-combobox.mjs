@@ -100,7 +100,7 @@ class ComboboxManualExample {
       kind: "directive",
       type: Listbox,
       selector: "[ngListbox]",
-      inputs: ["orientation", "multi", "wrap", "skipDisabled", "focusMode", "selectionMode", "typeaheadDelay", "disabled", "readonly", "value"],
+      inputs: ["orientation", "multi", "wrap", "softDisabled", "focusMode", "selectionMode", "typeaheadDelay", "disabled", "readonly", "value"],
       outputs: ["valueChange"],
       exportAs: ["ngListbox"]
     }, {
@@ -229,7 +229,7 @@ class ComboboxAutoSelectExample {
       kind: "directive",
       type: Listbox,
       selector: "[ngListbox]",
-      inputs: ["orientation", "multi", "wrap", "skipDisabled", "focusMode", "selectionMode", "typeaheadDelay", "disabled", "readonly", "value"],
+      inputs: ["orientation", "multi", "wrap", "softDisabled", "focusMode", "selectionMode", "typeaheadDelay", "disabled", "readonly", "value"],
       outputs: ["valueChange"],
       exportAs: ["ngListbox"]
     }, {
@@ -355,7 +355,7 @@ class ComboboxHighlightExample {
       kind: "directive",
       type: Listbox,
       selector: "[ngListbox]",
-      inputs: ["orientation", "multi", "wrap", "skipDisabled", "focusMode", "selectionMode", "typeaheadDelay", "disabled", "readonly", "value"],
+      inputs: ["orientation", "multi", "wrap", "softDisabled", "focusMode", "selectionMode", "typeaheadDelay", "disabled", "readonly", "value"],
       outputs: ["valueChange"],
       exportAs: ["ngListbox"]
     }, {
@@ -549,7 +549,7 @@ class ComboboxTreeManualExample {
       kind: "directive",
       type: Tree,
       selector: "[ngTree]",
-      inputs: ["orientation", "multi", "disabled", "selectionMode", "focusMode", "wrap", "skipDisabled", "typeaheadDelay", "value", "nav", "currentType"],
+      inputs: ["orientation", "multi", "disabled", "selectionMode", "focusMode", "wrap", "softDisabled", "typeaheadDelay", "value", "nav", "currentType"],
       outputs: ["valueChange"],
       exportAs: ["ngTree"]
     }, {
@@ -712,7 +712,7 @@ class ComboboxTreeAutoSelectExample {
       kind: "directive",
       type: Tree,
       selector: "[ngTree]",
-      inputs: ["orientation", "multi", "disabled", "selectionMode", "focusMode", "wrap", "skipDisabled", "typeaheadDelay", "value", "nav", "currentType"],
+      inputs: ["orientation", "multi", "disabled", "selectionMode", "focusMode", "wrap", "softDisabled", "typeaheadDelay", "value", "nav", "currentType"],
       outputs: ["valueChange"],
       exportAs: ["ngTree"]
     }, {
@@ -875,7 +875,7 @@ class ComboboxTreeHighlightExample {
       kind: "directive",
       type: Tree,
       selector: "[ngTree]",
-      inputs: ["orientation", "multi", "disabled", "selectionMode", "focusMode", "wrap", "skipDisabled", "typeaheadDelay", "value", "nav", "currentType"],
+      inputs: ["orientation", "multi", "disabled", "selectionMode", "focusMode", "wrap", "softDisabled", "typeaheadDelay", "value", "nav", "currentType"],
       outputs: ["valueChange"],
       exportAs: ["ngTree"]
     }, {
@@ -1009,7 +1009,7 @@ class ComboboxReadonlyExample {
       kind: "directive",
       type: Listbox,
       selector: "[ngListbox]",
-      inputs: ["orientation", "multi", "wrap", "skipDisabled", "focusMode", "selectionMode", "typeaheadDelay", "disabled", "readonly", "value"],
+      inputs: ["orientation", "multi", "wrap", "softDisabled", "focusMode", "selectionMode", "typeaheadDelay", "disabled", "readonly", "value"],
       outputs: ["valueChange"],
       exportAs: ["ngListbox"]
     }, {

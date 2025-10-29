@@ -3,14 +3,14 @@
 <span class="hljs-keyword">import</span> {<span class="hljs-title class_">RadioGroup</span>, <span class="hljs-title class_">RadioButton</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/aria/radio-group&#x27;</span>;
 <span class="hljs-keyword">import</span> {<span class="hljs-title class_">LiveAnnouncer</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/a11y&#x27;</span>;
 
-<span class="hljs-comment">/** <span class="hljs-doctag">@title</span> Skip Disabled Toolbar Example */</span>
+<span class="hljs-comment">/** <span class="hljs-doctag">@title</span> Soft Disabled Toolbar Example */</span>
 <span class="hljs-meta">@Component</span>({
-  <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;toolbar-skip-disabled-example&#x27;</span>,
-  <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;toolbar-skip-disabled-example.html&#x27;</span>,
+  <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;toolbar-soft-disabled-example&#x27;</span>,
+  <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;toolbar-soft-disabled-example.html&#x27;</span>,
   <span class="hljs-attr">styleUrl</span>: <span class="hljs-string">&#x27;../toolbar-common.css&#x27;</span>,
   <span class="hljs-attr">imports</span>: [<span class="hljs-title class_">RadioButton</span>, <span class="hljs-title class_">RadioGroup</span>, <span class="hljs-title class_">Toolbar</span>, <span class="hljs-title class_">ToolbarWidget</span>],
 })
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">ToolbarSkipDisabledExample</span> {
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">ToolbarSoftDisabledExample</span> {
   <span class="hljs-title function_">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">private</span> <span class="hljs-attr">_liveAnnouncer</span>: <span class="hljs-title class_">LiveAnnouncer</span></span>) {}
   alignments = [
     {<span class="hljs-attr">value</span>: <span class="hljs-string">&#x27;left&#x27;</span>, <span class="hljs-attr">label</span>: <span class="hljs-string">&#x27;Left&#x27;</span>},
