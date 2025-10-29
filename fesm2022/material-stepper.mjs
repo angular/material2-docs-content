@@ -71,7 +71,7 @@ class StepperEditableExample {
       kind: "component",
       type: i1$1.MatStepper,
       selector: "mat-stepper, mat-vertical-stepper, mat-horizontal-stepper, [matStepper]",
-      inputs: ["disableRipple", "color", "labelPosition", "headerPosition", "animationDuration"],
+      inputs: ["disableRipple", "color", "labelPosition", "headerPosition", "headerPrefix", "animationDuration"],
       outputs: ["animationDone"],
       exportAs: ["matStepper", "matVerticalStepper", "matHorizontalStepper"]
     }, {
@@ -211,7 +211,7 @@ class StepperErrorsExample {
       kind: "component",
       type: i1$1.MatStepper,
       selector: "mat-stepper, mat-vertical-stepper, mat-horizontal-stepper, [matStepper]",
-      inputs: ["disableRipple", "color", "labelPosition", "headerPosition", "animationDuration"],
+      inputs: ["disableRipple", "color", "labelPosition", "headerPosition", "headerPrefix", "animationDuration"],
       outputs: ["animationDone"],
       exportAs: ["matStepper", "matVerticalStepper", "matHorizontalStepper"]
     }, {
@@ -360,7 +360,7 @@ class StepperLabelPositionBottomExample {
       kind: "component",
       type: i1$1.MatStepper,
       selector: "mat-stepper, mat-vertical-stepper, mat-horizontal-stepper, [matStepper]",
-      inputs: ["disableRipple", "color", "labelPosition", "headerPosition", "animationDuration"],
+      inputs: ["disableRipple", "color", "labelPosition", "headerPosition", "headerPrefix", "animationDuration"],
       outputs: ["animationDone"],
       exportAs: ["matStepper", "matVerticalStepper", "matHorizontalStepper"]
     }, {
@@ -513,7 +513,7 @@ class StepperOptionalExample {
       kind: "component",
       type: i1$1.MatStepper,
       selector: "mat-stepper, mat-vertical-stepper, mat-horizontal-stepper, [matStepper]",
-      inputs: ["disableRipple", "color", "labelPosition", "headerPosition", "animationDuration"],
+      inputs: ["disableRipple", "color", "labelPosition", "headerPosition", "headerPrefix", "animationDuration"],
       outputs: ["animationDone"],
       exportAs: ["matStepper", "matVerticalStepper", "matHorizontalStepper"]
     }, {
@@ -657,7 +657,7 @@ class StepperOverviewExample {
       kind: "component",
       type: i1$1.MatStepper,
       selector: "mat-stepper, mat-vertical-stepper, mat-horizontal-stepper, [matStepper]",
-      inputs: ["disableRipple", "color", "labelPosition", "headerPosition", "animationDuration"],
+      inputs: ["disableRipple", "color", "labelPosition", "headerPosition", "headerPrefix", "animationDuration"],
       outputs: ["animationDone"],
       exportAs: ["matStepper", "matVerticalStepper", "matHorizontalStepper"]
     }, {
@@ -797,7 +797,7 @@ class StepperStatesExample {
       kind: "component",
       type: i1$1.MatStepper,
       selector: "mat-stepper, mat-vertical-stepper, mat-horizontal-stepper, [matStepper]",
-      inputs: ["disableRipple", "color", "labelPosition", "headerPosition", "animationDuration"],
+      inputs: ["disableRipple", "color", "labelPosition", "headerPosition", "headerPrefix", "animationDuration"],
       outputs: ["animationDone"],
       exportAs: ["matStepper", "matVerticalStepper", "matHorizontalStepper"]
     }, {
@@ -970,7 +970,7 @@ class StepperVerticalExample {
       kind: "component",
       type: i1$1.MatStepper,
       selector: "mat-stepper, mat-vertical-stepper, mat-horizontal-stepper, [matStepper]",
-      inputs: ["disableRipple", "color", "labelPosition", "headerPosition", "animationDuration"],
+      inputs: ["disableRipple", "color", "labelPosition", "headerPosition", "headerPrefix", "animationDuration"],
       outputs: ["animationDone"],
       exportAs: ["matStepper", "matVerticalStepper", "matHorizontalStepper"]
     }, {
@@ -1096,7 +1096,7 @@ class StepperHarnessExample {
       kind: "component",
       type: i1$1.MatStepper,
       selector: "mat-stepper, mat-vertical-stepper, mat-horizontal-stepper, [matStepper]",
-      inputs: ["disableRipple", "color", "labelPosition", "headerPosition", "animationDuration"],
+      inputs: ["disableRipple", "color", "labelPosition", "headerPosition", "headerPrefix", "animationDuration"],
       outputs: ["animationDone"],
       exportAs: ["matStepper", "matVerticalStepper", "matHorizontalStepper"]
     }, {
@@ -1252,7 +1252,7 @@ class StepperIntlExample {
       kind: "component",
       type: i1$1.MatStepper,
       selector: "mat-stepper, mat-vertical-stepper, mat-horizontal-stepper, [matStepper]",
-      inputs: ["disableRipple", "color", "labelPosition", "headerPosition", "animationDuration"],
+      inputs: ["disableRipple", "color", "labelPosition", "headerPosition", "headerPrefix", "animationDuration"],
       outputs: ["animationDone"],
       exportAs: ["matStepper", "matVerticalStepper", "matHorizontalStepper"]
     }, {
@@ -1367,7 +1367,7 @@ class StepperLazyContentExample {
       kind: "component",
       type: i1$1.MatStepper,
       selector: "mat-stepper, mat-vertical-stepper, mat-horizontal-stepper, [matStepper]",
-      inputs: ["disableRipple", "color", "labelPosition", "headerPosition", "animationDuration"],
+      inputs: ["disableRipple", "color", "labelPosition", "headerPosition", "headerPrefix", "animationDuration"],
       outputs: ["animationDone"],
       exportAs: ["matStepper", "matVerticalStepper", "matHorizontalStepper"]
     }, {
@@ -1461,7 +1461,7 @@ class StepperResponsiveExample {
       kind: "component",
       type: i1$1.MatStepper,
       selector: "mat-stepper, mat-vertical-stepper, mat-horizontal-stepper, [matStepper]",
-      inputs: ["disableRipple", "color", "labelPosition", "headerPosition", "animationDuration"],
+      inputs: ["disableRipple", "color", "labelPosition", "headerPosition", "headerPrefix", "animationDuration"],
       outputs: ["animationDone"],
       exportAs: ["matStepper", "matVerticalStepper", "matHorizontalStepper"]
     }, {
@@ -1608,7 +1608,7 @@ class StepperHeaderPositionExample {
       kind: "component",
       type: i1$1.MatStepper,
       selector: "mat-stepper, mat-vertical-stepper, mat-horizontal-stepper, [matStepper]",
-      inputs: ["disableRipple", "color", "labelPosition", "headerPosition", "animationDuration"],
+      inputs: ["disableRipple", "color", "labelPosition", "headerPosition", "headerPrefix", "animationDuration"],
       outputs: ["animationDone"],
       exportAs: ["matStepper", "matVerticalStepper", "matHorizontalStepper"]
     }, {
@@ -1746,7 +1746,7 @@ class StepperAnimationsExample {
       kind: "component",
       type: i1$1.MatStepper,
       selector: "mat-stepper, mat-vertical-stepper, mat-horizontal-stepper, [matStepper]",
-      inputs: ["disableRipple", "color", "labelPosition", "headerPosition", "animationDuration"],
+      inputs: ["disableRipple", "color", "labelPosition", "headerPosition", "headerPrefix", "animationDuration"],
       outputs: ["animationDone"],
       exportAs: ["matStepper", "matVerticalStepper", "matHorizontalStepper"]
     }, {
