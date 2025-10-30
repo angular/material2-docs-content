@@ -70,6 +70,10 @@ and <code>ReactiveFormsModule</code>.</p>
           Autocomplete
         </h4>
       <p>A <code>&lt;mat-chip-grid&gt;</code> can be combined with <code>&lt;mat-autocomplete&gt;</code> to enable free-form chip input with suggestions.</p>
+<blockquote>
+<p><em>Please note: when using <code>MatChipsModule</code> together with <code>MatAutocompleteModule</code>, the order in which modules are imported matters.</em>
+<em>To ensure correct behavior (e.g., preventing adding typed text when autocomplete option is selected via keyboard), make sure to import <code>MatAutocompleteModule</code> before <code>MatChipsModule</code>.</em></p>
+</blockquote>
 </div><div material-docs-example="chips-autocomplete"></div><div class="docs-markdown">
 
 
@@ -146,7 +150,9 @@ and <code>ReactiveFormsModule</code>.</p>
           Text Entry
         </h4>
       <p><code>&lt;mat-chip-grid&gt;</code> and <code>&lt;mat-chip-row&gt;</code> : These elements implement a grid accessibility pattern. Use them as part of a free form input that allows users to enter text to add chips.</p>
-<p>Note : be sure to have the input element be a sibling of mat-chip-grid to ensure accessibility of the input element by accessibility devices such as Voice Control. It is also recommended to apply an appropriate <code>aria-label</code> to the input to optimize accessibility of the input.</p>
+<blockquote>
+<p><em>Please note: be sure to have the input element be a sibling of <code>mat-chip-grid</code> to ensure accessibility of the input element by accessibility devices such as Voice Control. It is also recommended to apply an appropriate <code>aria-label</code> to the input to optimize accessibility of the input.</em></p>
+</blockquote>
 <pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">mat-form-field</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">mat-chip-grid</span> #<span class="hljs-attr">myChipGrid</span> [(<span class="hljs-attr">ngModel</span>)]=<span class="hljs-string">&quot;mySelection&quot;</span>
     <span class="hljs-attr">aria-label</span>=<span class="hljs-string">&quot;enter sandwich fillings&quot;</span>&gt;</span>
