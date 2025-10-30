@@ -99,6 +99,29 @@ class ChipsAutocompleteExample {
       selector: "mat-label"
     }, {
       kind: "ngmodule",
+      type: MatAutocompleteModule
+    }, {
+      kind: "component",
+      type: i4.MatAutocomplete,
+      selector: "mat-autocomplete",
+      inputs: ["aria-label", "aria-labelledby", "displayWith", "autoActiveFirstOption", "autoSelectActiveOption", "requireSelection", "panelWidth", "disableRipple", "class", "hideSingleSelectionIndicator"],
+      outputs: ["optionSelected", "opened", "closed", "optionActivated"],
+      exportAs: ["matAutocomplete"]
+    }, {
+      kind: "component",
+      type: i4.MatOption,
+      selector: "mat-option",
+      inputs: ["value", "id", "disabled"],
+      outputs: ["onSelectionChange"],
+      exportAs: ["matOption"]
+    }, {
+      kind: "directive",
+      type: i4.MatAutocompleteTrigger,
+      selector: "input[matAutocomplete], textarea[matAutocomplete]",
+      inputs: ["matAutocomplete", "matAutocompletePosition", "matAutocompleteConnectedTo", "autocomplete", "matAutocompleteDisabled"],
+      exportAs: ["matAutocompleteTrigger"]
+    }, {
+      kind: "ngmodule",
       type: MatChipsModule
     }, {
       kind: "component",
@@ -132,29 +155,6 @@ class ChipsAutocompleteExample {
       selector: "mat-icon",
       inputs: ["color", "inline", "svgIcon", "fontSet", "fontIcon"],
       exportAs: ["matIcon"]
-    }, {
-      kind: "ngmodule",
-      type: MatAutocompleteModule
-    }, {
-      kind: "component",
-      type: i4.MatAutocomplete,
-      selector: "mat-autocomplete",
-      inputs: ["aria-label", "aria-labelledby", "displayWith", "autoActiveFirstOption", "autoSelectActiveOption", "requireSelection", "panelWidth", "disableRipple", "class", "hideSingleSelectionIndicator"],
-      outputs: ["optionSelected", "opened", "closed", "optionActivated"],
-      exportAs: ["matAutocomplete"]
-    }, {
-      kind: "component",
-      type: i4.MatOption,
-      selector: "mat-option",
-      inputs: ["value", "id", "disabled"],
-      outputs: ["onSelectionChange"],
-      exportAs: ["matOption"]
-    }, {
-      kind: "directive",
-      type: i4.MatAutocompleteTrigger,
-      selector: "input[matAutocomplete], textarea[matAutocomplete]",
-      inputs: ["matAutocomplete", "matAutocompletePosition", "matAutocompleteConnectedTo", "autocomplete", "matAutocompleteDisabled"],
-      exportAs: ["matAutocompleteTrigger"]
     }, {
       kind: "ngmodule",
       type: FormsModule
@@ -201,7 +201,7 @@ i0.ɵɵngDeclareClassMetadata({
     type: Component,
     args: [{
       selector: 'chips-autocomplete-example',
-      imports: [MatFormFieldModule, MatChipsModule, MatIconModule, MatAutocompleteModule, FormsModule],
+      imports: [MatFormFieldModule, MatAutocompleteModule, MatChipsModule, MatIconModule, FormsModule],
       changeDetection: ChangeDetectionStrategy.OnPush,
       template: "<form>\n  <mat-form-field class=\"example-chip-list\">\n    <mat-label>Favorite Fruits</mat-label>\n    <mat-chip-grid #chipGrid aria-label=\"Fruit selection\">\n      @for (fruit of fruits(); track $index) {\n        <mat-chip-row (removed)=\"remove(fruit)\">\n          {{fruit}}\n          <button matChipRemove [attr.aria-label]=\"'remove ' + fruit\">\n            <mat-icon>cancel</mat-icon>\n          </button>\n        </mat-chip-row>\n      }\n    </mat-chip-grid>\n    <input\n      name=\"currentFruit\"\n      placeholder=\"New Fruit...\"\n      #fruitInput\n      [(ngModel)]=\"currentFruit\"\n      [matChipInputFor]=\"chipGrid\"\n      [matAutocomplete]=\"auto\"\n      [matChipInputSeparatorKeyCodes]=\"separatorKeysCodes\"\n      (matChipInputTokenEnd)=\"add($event)\"\n    />\n    <mat-autocomplete #auto=\"matAutocomplete\" (optionSelected)=\"selected($event); fruitInput.value = ''\">\n      @for (fruit of filteredFruits(); track fruit) {\n        <mat-option [value]=\"fruit\">{{fruit}}</mat-option>\n      }\n    </mat-autocomplete>\n  </mat-form-field>\n</form>\n",
       styles: [".example-chip-list {\n  width: 100%;\n}\n"]
