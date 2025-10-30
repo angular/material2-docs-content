@@ -6,10 +6,6 @@ import { FormControl } from '@angular/forms';
 declare class ToolbarBasicHorizontalExample {
     private _liveAnnouncer;
     constructor(_liveAnnouncer: LiveAnnouncer);
-    alignments: {
-        value: string;
-        label: string;
-    }[];
     format(tool: string): void;
     test(action: string): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<ToolbarBasicHorizontalExample, never>;
@@ -20,10 +16,6 @@ declare class ToolbarBasicHorizontalExample {
 declare class ToolbarBasicVerticalExample {
     private _liveAnnouncer;
     constructor(_liveAnnouncer: LiveAnnouncer);
-    alignments: {
-        value: string;
-        label: string;
-    }[];
     format(tool: string): void;
     test(action: string): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<ToolbarBasicVerticalExample, never>;
@@ -51,10 +43,6 @@ declare class ToolbarConfigurableExample {
 declare class ToolbarRtlExample {
     private _liveAnnouncer;
     constructor(_liveAnnouncer: LiveAnnouncer);
-    alignments: {
-        value: string;
-        label: string;
-    }[];
     format(tool: string): void;
     test(action: string): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<ToolbarRtlExample, never>;
@@ -65,10 +53,6 @@ declare class ToolbarRtlExample {
 declare class ToolbarSoftDisabledExample {
     private _liveAnnouncer;
     constructor(_liveAnnouncer: LiveAnnouncer);
-    alignments: {
-        value: string;
-        label: string;
-    }[];
     disabledOptions: string[];
     format(tool: string): void;
     test(action: string): void;

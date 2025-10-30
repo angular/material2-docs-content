@@ -249,96 +249,6 @@ const EXAMPLE_COMPONENTS = {
     "primaryFile": "listbox-single-select-example.ts",
     "importPath": "aria/listbox"
   },
-  "radio-group-active-descendant": {
-    "packagePath": "aria/radio-group/radio-group-active-descendant",
-    "title": "Active descendant radio group.",
-    "componentName": "RadioGroupActiveDescendantExample",
-    "files": ["radio-group-active-descendant-example.ts", "radio-group-active-descendant-example.html", "../radio-common.css"],
-    "selector": "radio-group-active-descendant-example",
-    "additionalComponents": [],
-    "primaryFile": "radio-group-active-descendant-example.ts",
-    "importPath": "aria/radio-group"
-  },
-  "radio-group-configurable": {
-    "packagePath": "aria/radio-group/radio-group-configurable",
-    "title": "Configurable CDK Radio Group",
-    "componentName": "RadioGroupConfigurableExample",
-    "files": ["radio-group-configurable-example.ts", "radio-group-configurable-example.html", "../radio-common.css"],
-    "selector": "radio-group-configurable-example",
-    "additionalComponents": [],
-    "primaryFile": "radio-group-configurable-example.ts",
-    "importPath": "aria/radio-group"
-  },
-  "radio-group-disabled-focusable": {
-    "packagePath": "aria/radio-group/radio-group-disabled-focusable",
-    "title": "Radio group with disabled options that are focusable.",
-    "componentName": "RadioGroupDisabledFocusableExample",
-    "files": ["radio-group-disabled-focusable-example.ts", "radio-group-disabled-focusable-example.html", "../radio-common.css"],
-    "selector": "radio-group-disabled-focusable-example",
-    "additionalComponents": [],
-    "primaryFile": "radio-group-disabled-focusable-example.ts",
-    "importPath": "aria/radio-group"
-  },
-  "radio-group-disabled-skipped": {
-    "packagePath": "aria/radio-group/radio-group-disabled-skipped",
-    "title": "Radio group with disabled options that are skipped.",
-    "componentName": "RadioGroupDisabledSkippedExample",
-    "files": ["radio-group-disabled-skipped-example.ts", "radio-group-disabled-skipped-example.html", "../radio-common.css"],
-    "selector": "radio-group-disabled-skipped-example",
-    "additionalComponents": [],
-    "primaryFile": "radio-group-disabled-skipped-example.ts",
-    "importPath": "aria/radio-group"
-  },
-  "radio-group-disabled": {
-    "packagePath": "aria/radio-group/radio-group-disabled",
-    "title": "Disabled radio group.",
-    "componentName": "RadioGroupDisabledExample",
-    "files": ["radio-group-disabled-example.ts", "radio-group-disabled-example.html", "../radio-common.css"],
-    "selector": "radio-group-disabled-example",
-    "additionalComponents": [],
-    "primaryFile": "radio-group-disabled-example.ts",
-    "importPath": "aria/radio-group"
-  },
-  "radio-group-horizontal": {
-    "packagePath": "aria/radio-group/radio-group-horizontal",
-    "title": "Horizontal radio group.",
-    "componentName": "RadioGroupHorizontalExample",
-    "files": ["radio-group-horizontal-example.ts", "radio-group-horizontal-example.html", "../radio-common.css"],
-    "selector": "radio-group-horizontal-example",
-    "additionalComponents": [],
-    "primaryFile": "radio-group-horizontal-example.ts",
-    "importPath": "aria/radio-group"
-  },
-  "radio-group-readonly": {
-    "packagePath": "aria/radio-group/radio-group-readonly",
-    "title": "Readonly radio group.",
-    "componentName": "RadioGroupReadonlyExample",
-    "files": ["radio-group-readonly-example.ts", "radio-group-readonly-example.html", "../radio-common.css"],
-    "selector": "radio-group-readonly-example",
-    "additionalComponents": [],
-    "primaryFile": "radio-group-readonly-example.ts",
-    "importPath": "aria/radio-group"
-  },
-  "radio-group-rtl-horizontal": {
-    "packagePath": "aria/radio-group/radio-group-rtl-horizontal",
-    "title": "RTL horizontal radio group.",
-    "componentName": "RadioGroupRtlHorizontalExample",
-    "files": ["radio-group-rtl-horizontal-example.ts", "radio-group-rtl-horizontal-example.html", "../radio-common.css"],
-    "selector": "radio-group-rtl-horizontal-example",
-    "additionalComponents": [],
-    "primaryFile": "radio-group-rtl-horizontal-example.ts",
-    "importPath": "aria/radio-group"
-  },
-  "radio-group-standard": {
-    "packagePath": "aria/radio-group/radio-group-standard",
-    "title": "Basic radio group.",
-    "componentName": "RadioGroupStandardExample",
-    "files": ["radio-group-standard-example.ts", "radio-group-standard-example.html", "../radio-common.css"],
-    "selector": "radio-group-standard-example",
-    "additionalComponents": [],
-    "primaryFile": "radio-group-standard-example.ts",
-    "importPath": "aria/radio-group"
-  },
   "tabs-active-descendant": {
     "packagePath": "aria/tabs/active-descendant",
     "title": "Active Descendant",
@@ -4262,24 +4172,6 @@ async function loadExample(id) {
       return import('@angular/components-examples/aria/listbox');
     case 'listbox-single-select':
       return import('@angular/components-examples/aria/listbox');
-    case 'radio-group-active-descendant':
-      return import('@angular/components-examples/aria/radio-group');
-    case 'radio-group-configurable':
-      return import('@angular/components-examples/aria/radio-group');
-    case 'radio-group-disabled-focusable':
-      return import('@angular/components-examples/aria/radio-group');
-    case 'radio-group-disabled-skipped':
-      return import('@angular/components-examples/aria/radio-group');
-    case 'radio-group-disabled':
-      return import('@angular/components-examples/aria/radio-group');
-    case 'radio-group-horizontal':
-      return import('@angular/components-examples/aria/radio-group');
-    case 'radio-group-readonly':
-      return import('@angular/components-examples/aria/radio-group');
-    case 'radio-group-rtl-horizontal':
-      return import('@angular/components-examples/aria/radio-group');
-    case 'radio-group-standard':
-      return import('@angular/components-examples/aria/radio-group');
     case 'tabs-active-descendant':
       return import('@angular/components-examples/aria/tabs');
     case 'tabs-disabled-focusable':
