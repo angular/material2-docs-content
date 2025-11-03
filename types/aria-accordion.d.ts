@@ -7,7 +7,7 @@ declare class AccordionConfigurableExample {
     wrap: FormControl<boolean>;
     multi: FormControl<boolean>;
     disabled: FormControl<boolean>;
-    skipDisabled: FormControl<boolean>;
+    softDisabled: FormControl<boolean>;
     expandedIds: i0.ModelSignal<string[]>;
     items: string[];
     expansionIcon(item: string): Signal<string>;

@@ -12,7 +12,7 @@ declare class ListboxConfigurableExample {
     multi: FormControl<boolean>;
     disabled: FormControl<boolean>;
     readonly: FormControl<boolean>;
-    skipDisabled: FormControl<boolean>;
+    softDisabled: FormControl<boolean>;
     fruits: string[];
     static ɵfac: i0.ɵɵFactoryDeclaration<ListboxConfigurableExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<ListboxConfigurableExample, "listbox-configurable-example", never, {}, {}, never, never, true, never>;

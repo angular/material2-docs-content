@@ -6,10 +6,6 @@ import { FormControl } from '@angular/forms';
 declare class ToolbarBasicHorizontalExample {
     private _liveAnnouncer;
     constructor(_liveAnnouncer: LiveAnnouncer);
-    alignments: {
-        value: string;
-        label: string;
-    }[];
     format(tool: string): void;
     test(action: string): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<ToolbarBasicHorizontalExample, never>;
@@ -20,10 +16,6 @@ declare class ToolbarBasicHorizontalExample {
 declare class ToolbarBasicVerticalExample {
     private _liveAnnouncer;
     constructor(_liveAnnouncer: LiveAnnouncer);
-    alignments: {
-        value: string;
-        label: string;
-    }[];
     format(tool: string): void;
     test(action: string): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<ToolbarBasicVerticalExample, never>;
@@ -32,7 +24,7 @@ declare class ToolbarBasicVerticalExample {
 
 /** @title Configurable CDK Radio Group */
 declare class ToolbarConfigurableExample {
-    skipDisabled: FormControl<boolean>;
+    softDisabled: FormControl<boolean>;
     wrap: FormControl<boolean>;
     toolbarDisabled: FormControl<boolean>;
     orientation: 'vertical' | 'horizontal';
@@ -47,19 +39,25 @@ declare class ToolbarConfigurableExample {
     static ɵcmp: i0.ɵɵComponentDeclaration<ToolbarConfigurableExample, "toolbar-configurable-example", never, {}, {}, never, never, true, never>;
 }
 
-/** @title Skip Disabled Toolbar Example */
-declare class ToolbarSkipDisabledExample {
+/** @title Basic RTL Toolbar Example */
+declare class ToolbarRtlExample {
     private _liveAnnouncer;
     constructor(_liveAnnouncer: LiveAnnouncer);
-    alignments: {
-        value: string;
-        label: string;
-    }[];
+    format(tool: string): void;
+    test(action: string): void;
+    static ɵfac: i0.ɵɵFactoryDeclaration<ToolbarRtlExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<ToolbarRtlExample, "toolbar-rtl-example", never, {}, {}, never, never, true, never>;
+}
+
+/** @title Soft Disabled Toolbar Example */
+declare class ToolbarSoftDisabledExample {
+    private _liveAnnouncer;
+    constructor(_liveAnnouncer: LiveAnnouncer);
     disabledOptions: string[];
     format(tool: string): void;
     test(action: string): void;
-    static ɵfac: i0.ɵɵFactoryDeclaration<ToolbarSkipDisabledExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<ToolbarSkipDisabledExample, "toolbar-skip-disabled-example", never, {}, {}, never, never, true, never>;
+    static ɵfac: i0.ɵɵFactoryDeclaration<ToolbarSoftDisabledExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<ToolbarSoftDisabledExample, "toolbar-soft-disabled-example", never, {}, {}, never, never, true, never>;
 }
 
-export { ToolbarBasicHorizontalExample, ToolbarBasicVerticalExample, ToolbarConfigurableExample, ToolbarSkipDisabledExample };
+export { ToolbarBasicHorizontalExample, ToolbarBasicVerticalExample, ToolbarConfigurableExample, ToolbarRtlExample, ToolbarSoftDisabledExample };

@@ -1,6 +1,6 @@
 {
   "name": "@angular/components-examples",
-  "version": "21.0.0-rc.0+sha-e660f5f",
+  "version": "21.0.0-rc.0+sha-56631cb",
   "description": "Angular Components Examples",
   "private": true,
   "repository": {
@@ -35,10 +35,6 @@
     "./aria/listbox": {
       "types": "./types/aria-listbox.d.ts",
       "default": "./fesm2022/aria-listbox.mjs"
-    },
-    "./aria/radio-group": {
-      "types": "./types/aria-radio-group.d.ts",
-      "default": "./fesm2022/aria-radio-group.mjs"
     },
     "./aria/tabs": {
       "types": "./types/aria-tabs.d.ts",
@@ -287,15 +283,15 @@
   },
   "homepage": "https://github.com/angular/components#readme",
   "peerDependencies": {
-    "@angular/aria": "21.0.0-rc.0+sha-e660f5f",
-    "@angular/cdk": "21.0.0-rc.0+sha-e660f5f",
-    "@angular/cdk-experimental": "21.0.0-rc.0+sha-e660f5f",
+    "@angular/aria": "21.0.0-rc.0+sha-56631cb",
+    "@angular/cdk": "21.0.0-rc.0+sha-56631cb",
+    "@angular/cdk-experimental": "21.0.0-rc.0+sha-56631cb",
     "@angular/core": "^21.0.0-0 || ^21.1.0-0 || ^21.2.0-0 || ^21.3.0-0 || ^22.0.0-0",
     "@angular/common": "^21.0.0-0 || ^21.1.0-0 || ^21.2.0-0 || ^21.3.0-0 || ^22.0.0-0",
-    "@angular/material": "21.0.0-rc.0+sha-e660f5f",
-    "@angular/material-experimental": "21.0.0-rc.0+sha-e660f5f",
-    "@angular/material-luxon-adapter": "21.0.0-rc.0+sha-e660f5f",
-    "@angular/material-date-fns-adapter": "21.0.0-rc.0+sha-e660f5f"
+    "@angular/material": "21.0.0-rc.0+sha-56631cb",
+    "@angular/material-experimental": "21.0.0-rc.0+sha-56631cb",
+    "@angular/material-luxon-adapter": "21.0.0-rc.0+sha-56631cb",
+    "@angular/material-date-fns-adapter": "21.0.0-rc.0+sha-56631cb"
   },
   "devDependencies": {
     "@angular/aria": "workspace:*",

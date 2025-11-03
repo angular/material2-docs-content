@@ -2,22 +2,30 @@
   <span class="hljs-attribute">position</span>: relative;
   <span class="hljs-attribute">width</span>: <span class="hljs-number">300px</span>;
   <span class="hljs-attribute">display</span>: flex;
-  <span class="hljs-attribute">overflow</span>: hidden;
   <span class="hljs-attribute">flex-direction</span>: column;
   <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid <span class="hljs-built_in">var</span>(--mat-sys-outline);
   <span class="hljs-attribute">border-radius</span>: <span class="hljs-built_in">var</span>(--mat-sys-corner-extra-small);
 }
 
-<span class="hljs-selector-class">.example-combobox-container</span><span class="hljs-selector-pseudo">:has</span>(<span class="hljs-selector-class">.example-combobox-input</span><span class="hljs-selector-attr">[aria-expanded=<span class="hljs-string">&#x27;true&#x27;</span>]</span>) {
-  <span class="hljs-attribute">border-bottom-right-radius</span>: <span class="hljs-number">0</span>;
-  <span class="hljs-attribute">border-bottom-left-radius</span>: <span class="hljs-number">0</span>;
-}
-
 <span class="hljs-selector-class">.example-combobox-input-container</span> {
   <span class="hljs-attribute">display</span>: flex;
-  <span class="hljs-attribute">overflow</span>: hidden;
   <span class="hljs-attribute">position</span>: relative;
   <span class="hljs-attribute">align-items</span>: center;
+  <span class="hljs-attribute">border-radius</span>: <span class="hljs-built_in">var</span>(--mat-sys-corner-extra-small);
+}
+
+<span class="hljs-selector-class">.example-combobox-input</span> {
+  <span class="hljs-attribute">border-radius</span>: <span class="hljs-built_in">var</span>(--mat-sys-corner-extra-small);
+}
+
+<span class="hljs-selector-class">.example-combobox-input</span><span class="hljs-selector-attr">[readonly=<span class="hljs-string">&#x27;true&#x27;</span>]</span> {
+  <span class="hljs-attribute">cursor</span>: pointer;
+  <span class="hljs-attribute">padding</span>: <span class="hljs-number">0.7rem</span> <span class="hljs-number">1rem</span>;
+}
+
+<span class="hljs-selector-class">.example-combobox-container</span><span class="hljs-selector-pseudo">:focus-within</span> <span class="hljs-selector-class">.example-combobox-input</span> {
+  <span class="hljs-attribute">outline</span>: <span class="hljs-number">1.5px</span> solid <span class="hljs-built_in">var</span>(--mat-sys-primary);
+  <span class="hljs-attribute">box-shadow</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">4px</span> <span class="hljs-built_in">color-mix</span>(in srgb, <span class="hljs-built_in">var</span>(--mat-sys-primary) <span class="hljs-number">25%</span>, transparent);
 }
 
 <span class="hljs-selector-class">.example-icon</span> {
@@ -35,6 +43,18 @@
   <span class="hljs-attribute">opacity</span>: <span class="hljs-number">0.8</span>;
 }
 
+<span class="hljs-selector-class">.example-arrow-icon</span> {
+  <span class="hljs-attribute">padding</span>: <span class="hljs-number">0</span> <span class="hljs-number">0.5rem</span>;
+  <span class="hljs-attribute">position</span>: absolute;
+  <span class="hljs-attribute">right</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">opacity</span>: <span class="hljs-number">0.8</span>;
+  <span class="hljs-attribute">transition</span>: transform <span class="hljs-number">0.2s</span> ease;
+}
+
+<span class="hljs-selector-class">.example-combobox-input</span><span class="hljs-selector-attr">[aria-expanded=<span class="hljs-string">&#x27;true&#x27;</span>]</span> + <span class="hljs-selector-class">.example-arrow-icon</span> {
+  <span class="hljs-attribute">transform</span>: <span class="hljs-built_in">rotate</span>(<span class="hljs-number">180deg</span>);
+}
+
 <span class="hljs-selector-class">.example-combobox-input</span> {
   <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
   <span class="hljs-attribute">border</span>: none;
@@ -48,8 +68,7 @@
   <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span>;
   <span class="hljs-attribute">padding</span>: <span class="hljs-number">0</span>;
   <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid <span class="hljs-built_in">var</span>(--mat-sys-outline);
-  <span class="hljs-attribute">border-bottom-right-radius</span>: <span class="hljs-built_in">var</span>(--mat-sys-corner-extra-small);
-  <span class="hljs-attribute">border-bottom-left-radius</span>: <span class="hljs-built_in">var</span>(--mat-sys-corner-extra-small);
+  <span class="hljs-attribute">border-radius</span>: <span class="hljs-built_in">var</span>(--mat-sys-corner-extra-small);
   <span class="hljs-attribute">background-color</span>: <span class="hljs-built_in">var</span>(--mat-sys-surface);
 }
 
