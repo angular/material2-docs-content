@@ -1052,9 +1052,9 @@ in arbitrary positioning strategies.</p>
       
 
 <tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">{ alias: &#39;cdkConnectedOverlayUsePopover&#39;, transform: booleanAttribute }</span>)
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">{ alias: &#39;cdkConnectedOverlayUsePopover&#39; }</span>)
         </div><p class="docs-api-property-name">
-      <code>usePopover: boolean</code>
+      <code>usePopover: FlexibleOverlayPopoverLocation | null</code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Whether the connected overlay should be rendered inside a popover element or the overlay container.</p>
@@ -3011,6 +3011,60 @@ when the position is re-applied (e.g. when the user scrolls away).</p>
 <table class="docs-api-method-table">
   <thead>
     <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">withPopoverLocation
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Determines where in the DOM the overlay will be rendered when popover mode is enabled.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+    </tr>
+  </thead>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        location</p>
+      <code class="docs-api-method-parameter-type">FlexibleOverlayPopoverLocation</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        <p>Configures the location in the DOM. Supports the following values:</p>
+<ul>
+<li><code>global</code> - The default which inserts the overlay inside the overlay container.</li>
+<li><code>inline</code> - Inserts the overlay next to the trigger.</li>
+</ul>
+
+      </p>
+    </td>
+  </tr>
+  <thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">this</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        
+      </p>
+    </td>
+  </tr></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
       <th colspan="2" class="docs-api-method-name-cell">withPositions
       </th>
     </tr>
@@ -4223,7 +4277,7 @@ rather than placing it inside of the overlay container.</p>
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>usePopover: boolean</code>
+      <code>usePopover: FlexibleOverlayPopoverLocation | null</code>
     </p>
   </td>
   <td class="docs-api-property-description"></td>
@@ -4474,7 +4528,7 @@ the overlay when it is rendered out as a popover.</p>
   </thead>
   <tr>
     <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">Element</code>
+      <code class="docs-api-method-returns-type">Element | null</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
       <p class="docs-api-method-returns-description">
@@ -4910,12 +4964,25 @@ the overlay when it is rendered out as a popover.</p>
     <td class="docs-api-method-parameter-cell">
       <p class="docs-api-method-parameter-name">
         injector</p>
-      <code class="docs-api-method-parameter-type">Injector</code>
+      <code class="docs-api-method-parameter-type"></code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
         <p>Injector used to resolve dependencies for the strategy.</p>
 
+      </p>
+    </td>
+  </tr>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        _injector</p>
+      <code class="docs-api-method-parameter-type">Injector</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        
       </p>
     </td>
   </tr>
@@ -5232,6 +5299,20 @@ the overlay when it is rendered out as a popover.</p>
       <span header-link="type_aliases"></span>
       Type aliases
     </h3>
+    
+      
+
+<h4 id="FlexibleOverlayPopoverLocation" class="docs-header-link docs-api-h4 docs-api-type-alias-name">
+  <span header-link="FlexibleOverlayPopoverLocation"></span>
+  <code>FlexibleOverlayPopoverLocation</code>
+</h4><p class="docs-api-type-alias-description"><p>Supported locations in the DOM for connected overlays.</p>
+</p><div class="docs-markdown">
+<pre class="docs-markdown-pre">
+<code class="docs-markdown-code">type FlexibleOverlayPopoverLocation = 'global' | 'inline';</code>
+</pre>
+</div>
+
+
     
       
 
