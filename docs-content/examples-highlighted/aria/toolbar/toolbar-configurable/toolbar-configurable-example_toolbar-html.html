@@ -1,41 +1,71 @@
 <span class="hljs-tag">&lt;<span class="hljs-name">div</span>
   <span class="hljs-attr">ngToolbar</span>
+  [<span class="hljs-attr">wrap</span>]=<span class="hljs-string">&quot;wrap&quot;</span>
   [<span class="hljs-attr">orientation</span>]=<span class="hljs-string">&quot;orientation&quot;</span>
-  [<span class="hljs-attr">softDisabled</span>]=<span class="hljs-string">&quot;softDisabled.value&quot;</span>
-  [<span class="hljs-attr">wrap</span>]=<span class="hljs-string">&quot;wrap.value&quot;</span>
-  [<span class="hljs-attr">disabled</span>]=<span class="hljs-string">&quot;toolbarDisabled.value&quot;</span>
+  [<span class="hljs-attr">disabled</span>]=<span class="hljs-string">&quot;toolbarDisabled&quot;</span>
+  [<span class="hljs-attr">softDisabled</span>]=<span class="hljs-string">&quot;softDisabled&quot;</span>
   <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-toolbar&quot;</span>
+  <span class="hljs-attr">aria-label</span>=<span class="hljs-string">&quot;Horizontal Toolbar Text Formatting Tools&quot;</span>
 &gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">button</span>
-    <span class="hljs-attr">ngToolbarWidget</span>
-    <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-radio-button&quot;</span>
-    (<span class="hljs-attr">click</span>)=<span class="hljs-string">&quot;test(&#x27;Pear&#x27;)&quot;</span>
-    [<span class="hljs-attr">disabled</span>]=<span class="hljs-string">&quot;disabledButtonOptions.includes(&#x27;Pear&#x27;)&quot;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-group&quot;</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">&quot;Undo and Redo options&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">toolbar-button</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;undo&quot;</span> [<span class="hljs-attr">disabled</span>]=<span class="hljs-string">&quot;isDisabled(&#x27;Undo&#x27;)&quot;</span>&gt;</span>undo<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">toolbar-button</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;redo&quot;</span> [<span class="hljs-attr">disabled</span>]=<span class="hljs-string">&quot;isDisabled(&#x27;Redo&#x27;)&quot;</span>&gt;</span>redo<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-separator&quot;</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;separator&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-group&quot;</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">&quot;Text formatting options&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">toolbar-toggle-button</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;bold&quot;</span> [<span class="hljs-attr">disabled</span>]=<span class="hljs-string">&quot;isDisabled(&#x27;Bold&#x27;)&quot;</span>&gt;</span>format_bold<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">toolbar-toggle-button</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;italic&quot;</span> [<span class="hljs-attr">disabled</span>]=<span class="hljs-string">&quot;isDisabled(&#x27;Italic&#x27;)&quot;</span>&gt;</span>
+      format_italic
+    <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">toolbar-toggle-button</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;underline&quot;</span> [<span class="hljs-attr">disabled</span>]=<span class="hljs-string">&quot;isDisabled(&#x27;Underline&#x27;)&quot;</span>&gt;</span>
+      format_underlined
+    <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+  @if (orientation === &#x27;horizontal&#x27;) {
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-separator&quot;</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;separator&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">combobox</span> /&gt;</span>
+  }
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-separator&quot;</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;separator&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>
+    <span class="hljs-attr">ngToolbarWidgetGroup</span>
+    <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;radiogroup&quot;</span>
+    <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-group&quot;</span>
+    <span class="hljs-attr">aria-label</span>=<span class="hljs-string">&quot;Alignment options&quot;</span>
+    [<span class="hljs-attr">disabled</span>]=<span class="hljs-string">&quot;isDisabled(&#x27;Alignment options&#x27;)&quot;</span>
   &gt;</span>
-    Pear
-  <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">button</span>
-    <span class="hljs-attr">ngToolbarWidget</span>
-    <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-radio-button&quot;</span>
-    (<span class="hljs-attr">click</span>)=<span class="hljs-string">&quot;test(&#x27;Blueberry&#x27;)&quot;</span>
-    [<span class="hljs-attr">disabled</span>]=<span class="hljs-string">&quot;disabledButtonOptions.includes(&#x27;Blueberry&#x27;)&quot;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">toolbar-radio-button</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;align left&quot;</span> [<span class="hljs-attr">disabled</span>]=<span class="hljs-string">&quot;isDisabled(&#x27;Align left&#x27;)&quot;</span>&gt;</span>
+      format_align_left
+    <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">toolbar-radio-button</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;align center&quot;</span> [<span class="hljs-attr">disabled</span>]=<span class="hljs-string">&quot;isDisabled(&#x27;Align center&#x27;)&quot;</span>&gt;</span>
+      format_align_center
+    <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">toolbar-radio-button</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;align right&quot;</span> [<span class="hljs-attr">disabled</span>]=<span class="hljs-string">&quot;isDisabled(&#x27;Align right&#x27;)&quot;</span>&gt;</span>
+      format_align_right
+    <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-separator&quot;</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;separator&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>
+    <span class="hljs-attr">ngToolbarWidgetGroup</span>
+    <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;radiogroup&quot;</span>
+    <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-group&quot;</span>
+    <span class="hljs-attr">aria-label</span>=<span class="hljs-string">&quot;List options&quot;</span>
+    [<span class="hljs-attr">disabled</span>]=<span class="hljs-string">&quot;isDisabled(&#x27;List options&#x27;)&quot;</span>
   &gt;</span>
-    Blueberry
-  <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">button</span>
-    <span class="hljs-attr">ngToolbarWidget</span>
-    <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-radio-button&quot;</span>
-    (<span class="hljs-attr">click</span>)=<span class="hljs-string">&quot;test(&#x27;Cherry&#x27;)&quot;</span>
-    [<span class="hljs-attr">disabled</span>]=<span class="hljs-string">&quot;disabledButtonOptions.includes(&#x27;Cherry&#x27;)&quot;</span>
-  &gt;</span>
-    Cherry
-  <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">button</span>
-    <span class="hljs-attr">ngToolbarWidget</span>
-    <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-radio-button&quot;</span>
-    (<span class="hljs-attr">click</span>)=<span class="hljs-string">&quot;test(&#x27;Date&#x27;)&quot;</span>
-    [<span class="hljs-attr">disabled</span>]=<span class="hljs-string">&quot;disabledButtonOptions.includes(&#x27;Date&#x27;)&quot;</span>
-  &gt;</span>
-    Date
-  <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">toolbar-radio-button</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;checklist&quot;</span> [<span class="hljs-attr">disabled</span>]=<span class="hljs-string">&quot;isDisabled(&#x27;Checklist&#x27;)&quot;</span>&gt;</span>
+      checklist
+    <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">toolbar-radio-button</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;bullet list&quot;</span> [<span class="hljs-attr">disabled</span>]=<span class="hljs-string">&quot;isDisabled(&#x27;Bullet list&#x27;)&quot;</span>&gt;</span>
+      format_list_bulleted
+    <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">toolbar-radio-button</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;numbered list&quot;</span> [<span class="hljs-attr">disabled</span>]=<span class="hljs-string">&quot;isDisabled(&#x27;Numbered list&#x27;)&quot;</span>&gt;</span>
+      format_list_numbered
+    <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
