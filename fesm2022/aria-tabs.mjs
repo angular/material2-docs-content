@@ -22,7 +22,7 @@ class TabsConfigurableExample {
   disabled = new FormControl(false, {
     nonNullable: true
   });
-  softDisabled = new FormControl(false, {
+  softDisabled = new FormControl(true, {
     nonNullable: true
   });
   static ɵfac = i0.ɵɵngDeclareFactory({
