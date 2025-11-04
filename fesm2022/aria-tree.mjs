@@ -96,7 +96,7 @@ class TreeConfigurableExample {
   wrap = new FormControl(true, {
     nonNullable: true
   });
-  softDisabled = new FormControl(false, {
+  softDisabled = new FormControl(true, {
     nonNullable: true
   });
   nav = new FormControl(false, {
