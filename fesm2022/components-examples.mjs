@@ -361,12 +361,22 @@ const EXAMPLE_COMPONENTS = {
   },
   "toolbar-configurable": {
     "packagePath": "aria/toolbar/toolbar-configurable",
-    "title": "Configurable CDK Radio Group",
+    "title": "Configurable Aria Toolbar Example",
     "componentName": "ToolbarConfigurableExample",
     "files": ["toolbar-configurable-example.ts", "toolbar-configurable-example.html", "../toolbar-common.css"],
     "selector": "toolbar-configurable-example",
     "additionalComponents": [],
     "primaryFile": "toolbar-configurable-example.ts",
+    "importPath": "aria/toolbar"
+  },
+  "toolbar-hard-disabled": {
+    "packagePath": "aria/toolbar/toolbar-hard-disabled",
+    "title": "Hard Disabled Toolbar Example",
+    "componentName": "ToolbarHardDisabledExample",
+    "files": ["toolbar-hard-disabled-example.ts", "toolbar-hard-disabled-example.html", "../toolbar-common.css"],
+    "selector": "toolbar-hard-disabled-example",
+    "additionalComponents": [],
+    "primaryFile": "toolbar-hard-disabled-example.ts",
     "importPath": "aria/toolbar"
   },
   "toolbar-rtl": {
@@ -377,16 +387,6 @@ const EXAMPLE_COMPONENTS = {
     "selector": "toolbar-rtl-example",
     "additionalComponents": [],
     "primaryFile": "toolbar-rtl-example.ts",
-    "importPath": "aria/toolbar"
-  },
-  "toolbar-soft-disabled": {
-    "packagePath": "aria/toolbar/toolbar-soft-disabled",
-    "title": "Soft Disabled Toolbar Example",
-    "componentName": "ToolbarSoftDisabledExample",
-    "files": ["toolbar-soft-disabled-example.ts", "toolbar-soft-disabled-example.html", "../toolbar-common.css"],
-    "selector": "toolbar-soft-disabled-example",
-    "additionalComponents": [],
-    "primaryFile": "toolbar-soft-disabled-example.ts",
     "importPath": "aria/toolbar"
   },
   "tree-active-descendant": {
@@ -4196,9 +4196,9 @@ async function loadExample(id) {
       return import('@angular/components-examples/aria/toolbar');
     case 'toolbar-configurable':
       return import('@angular/components-examples/aria/toolbar');
-    case 'toolbar-rtl':
+    case 'toolbar-hard-disabled':
       return import('@angular/components-examples/aria/toolbar');
-    case 'toolbar-soft-disabled':
+    case 'toolbar-rtl':
       return import('@angular/components-examples/aria/toolbar');
     case 'tree-active-descendant':
       return import('@angular/components-examples/aria/tree');

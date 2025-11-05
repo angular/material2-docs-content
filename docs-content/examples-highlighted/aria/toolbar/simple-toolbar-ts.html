@@ -1,0 +1,142 @@
+<span class="hljs-keyword">import</span> {
+  <span class="hljs-title class_">Combobox</span>,
+  <span class="hljs-title class_">ComboboxInput</span>,
+  <span class="hljs-title class_">ComboboxPopup</span>,
+  <span class="hljs-title class_">ComboboxPopupContainer</span>,
+} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/aria/combobox&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">Listbox</span>, <span class="hljs-title class_">Option</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/aria/listbox&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">ToolbarWidget</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/aria/toolbar&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">Dir</span>, <span class="hljs-title class_">Directionality</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/bidi&#x27;</span>;
+<span class="hljs-keyword">import</span> {
+  afterRenderEffect,
+  <span class="hljs-title class_">Component</span>,
+  <span class="hljs-title class_">Directive</span>,
+  <span class="hljs-title class_">ElementRef</span>,
+  inject,
+  signal,
+  viewChild,
+} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+
+<span class="hljs-meta">@Directive</span>({
+  <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;button[toolbar-button]&#x27;</span>,
+  <span class="hljs-attr">hostDirectives</span>: [{<span class="hljs-attr">directive</span>: <span class="hljs-title class_">ToolbarWidget</span>, <span class="hljs-attr">inputs</span>: [<span class="hljs-string">&#x27;value&#x27;</span>, <span class="hljs-string">&#x27;disabled&#x27;</span>]}],
+  <span class="hljs-attr">host</span>: {
+    <span class="hljs-attr">type</span>: <span class="hljs-string">&#x27;button&#x27;</span>,
+    <span class="hljs-attr">class</span>: <span class="hljs-string">&#x27;example-button material-symbols-outlined&#x27;</span>,
+    <span class="hljs-string">&#x27;[aria-label]&#x27;</span>: <span class="hljs-string">&#x27;widget.value()&#x27;</span>,
+  },
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">SimpleToolbarButton</span> {
+  widget = <span class="hljs-title function_">inject</span>(<span class="hljs-title class_">ToolbarWidget</span>);
+}
+
+<span class="hljs-meta">@Directive</span>({
+  <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;button[toolbar-toggle-button]&#x27;</span>,
+  <span class="hljs-attr">hostDirectives</span>: [{<span class="hljs-attr">directive</span>: <span class="hljs-title class_">ToolbarWidget</span>, <span class="hljs-attr">inputs</span>: [<span class="hljs-string">&#x27;value&#x27;</span>]}],
+  <span class="hljs-attr">host</span>: {
+    <span class="hljs-attr">type</span>: <span class="hljs-string">&#x27;button&#x27;</span>,
+    <span class="hljs-attr">class</span>: <span class="hljs-string">&#x27;example-button material-symbols-outlined&#x27;</span>,
+    <span class="hljs-string">&#x27;[aria-pressed]&#x27;</span>: <span class="hljs-string">&#x27;widget.selected()&#x27;</span>,
+    <span class="hljs-string">&#x27;[aria-label]&#x27;</span>: <span class="hljs-string">&#x27;widget.value()&#x27;</span>,
+  },
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">SimpleToolbarToggleButton</span> {
+  widget = <span class="hljs-title function_">inject</span>(<span class="hljs-title class_">ToolbarWidget</span>);
+}
+
+<span class="hljs-meta">@Directive</span>({
+  <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;button[toolbar-radio-button]&#x27;</span>,
+  <span class="hljs-attr">hostDirectives</span>: [{<span class="hljs-attr">directive</span>: <span class="hljs-title class_">ToolbarWidget</span>, <span class="hljs-attr">inputs</span>: [<span class="hljs-string">&#x27;value&#x27;</span>, <span class="hljs-string">&#x27;disabled&#x27;</span>]}],
+  <span class="hljs-attr">host</span>: {
+    <span class="hljs-attr">role</span>: <span class="hljs-string">&#x27;radio&#x27;</span>,
+    <span class="hljs-attr">type</span>: <span class="hljs-string">&#x27;button&#x27;</span>,
+    <span class="hljs-attr">class</span>: <span class="hljs-string">&#x27;example-button material-symbols-outlined&#x27;</span>,
+    <span class="hljs-string">&#x27;[aria-checked]&#x27;</span>: <span class="hljs-string">&#x27;widget.selected()&#x27;</span>,
+    <span class="hljs-string">&#x27;[aria-label]&#x27;</span>: <span class="hljs-string">&#x27;widget.value()&#x27;</span>,
+  },
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">SimpleToolbarRadioButton</span> {
+  widget = <span class="hljs-title function_">inject</span>(<span class="hljs-title class_">ToolbarWidget</span>);
+}
+
+<span class="hljs-meta">@Component</span>({
+  <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;combobox&#x27;</span>,
+  <span class="hljs-attr">imports</span>: [
+    <span class="hljs-title class_">Dir</span>,
+    <span class="hljs-title class_">Combobox</span>,
+    <span class="hljs-title class_">ComboboxInput</span>,
+    <span class="hljs-title class_">ComboboxPopup</span>,
+    <span class="hljs-title class_">ComboboxPopupContainer</span>,
+    <span class="hljs-title class_">Listbox</span>,
+    <span class="hljs-title class_">Option</span>,
+    <span class="hljs-title class_">ToolbarWidget</span>,
+  ],
+  <span class="hljs-attr">styleUrl</span>: <span class="hljs-string">&#x27;toolbar-common.css&#x27;</span>,
+  <span class="hljs-attr">host</span>: {<span class="hljs-attr">class</span>: <span class="hljs-string">&#x27;example-combobox-container&#x27;</span>},
+  <span class="hljs-attr">template</span>: <span class="hljs-string">`
+    &lt;div ngCombobox [dir]=&quot;dir()&quot; #combobox=&quot;ngCombobox&quot; class=&quot;example-combobox&quot; [readonly]=&quot;true&quot;&gt;
+      &lt;div class=&quot;example-combobox-input-container&quot;&gt;
+        &lt;input
+          ngComboboxInput
+          ngToolbarWidget
+          [(value)]=&quot;value&quot;
+          class=&quot;example-combobox-input&quot;
+          aria-label=&quot;Select a text style&quot;
+        /&gt;
+        &lt;span class=&quot;material-symbols-outlined example-icon example-arrow-icon&quot;
+          &gt;arrow_drop_down&lt;/span
+        &gt;
+      &lt;/div&gt;
+
+      &lt;div popover=&quot;manual&quot; #popover class=&quot;example-popover&quot;&gt;
+        &lt;ng-template ngComboboxPopupContainer&gt;
+          &lt;div ngListbox [value]=&quot;[value()]&quot; class=&quot;example-listbox&quot;&gt;
+            @for (option of options; track option) {
+              &lt;div ngOption [value]=&quot;option&quot; [label]=&quot;option&quot; class=&quot;example-option&quot;&gt;
+                &lt;span&gt;{{option}}&lt;/span&gt;
+                &lt;span aria-hidden=&quot;true&quot; class=&quot;material-symbols-outlined example-option-icon&quot;
+                  &gt;check&lt;/span
+                &gt;
+              &lt;/div&gt;
+            }
+          &lt;/div&gt;
+        &lt;/ng-template&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  `</span>,
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">SimpleCombobox</span> {
+  dir = <span class="hljs-title function_">inject</span>(<span class="hljs-title class_">Directionality</span>).<span class="hljs-property">valueSignal</span>;
+  popover = viewChild&lt;<span class="hljs-title class_">ElementRef</span>&gt;(<span class="hljs-string">&#x27;popover&#x27;</span>);
+  listbox = viewChild&lt;<span class="hljs-title class_">Listbox</span>&lt;<span class="hljs-built_in">any</span>&gt;&gt;(<span class="hljs-title class_">Listbox</span>);
+  combobox = viewChild&lt;<span class="hljs-title class_">Combobox</span>&lt;<span class="hljs-built_in">any</span>&gt;&gt;(<span class="hljs-title class_">Combobox</span>);
+
+  value = <span class="hljs-title function_">signal</span>(<span class="hljs-string">&#x27;Normal text&#x27;</span>);
+  options = [<span class="hljs-string">&#x27;Normal text&#x27;</span>, <span class="hljs-string">&#x27;Title&#x27;</span>, <span class="hljs-string">&#x27;Subtitle&#x27;</span>, <span class="hljs-string">&#x27;Heading 1&#x27;</span>, <span class="hljs-string">&#x27;Heading 2&#x27;</span>, <span class="hljs-string">&#x27;Heading 3&#x27;</span>];
+
+  <span class="hljs-title function_">constructor</span>(<span class="hljs-params"></span>) {
+    <span class="hljs-title function_">afterRenderEffect</span>(<span class="hljs-function">() =&gt;</span> {
+      <span class="hljs-keyword">const</span> popover = <span class="hljs-variable language_">this</span>.<span class="hljs-title function_">popover</span>()!;
+      <span class="hljs-keyword">const</span> combobox = <span class="hljs-variable language_">this</span>.<span class="hljs-title function_">combobox</span>()!;
+      combobox.<span class="hljs-title function_">expanded</span>() ? <span class="hljs-variable language_">this</span>.<span class="hljs-title function_">showPopover</span>() : popover.<span class="hljs-property">nativeElement</span>.<span class="hljs-title function_">hidePopover</span>();
+
+      <span class="hljs-variable language_">this</span>.<span class="hljs-title function_">listbox</span>()?.<span class="hljs-title function_">scrollActiveItemIntoView</span>();
+    });
+  }
+
+  <span class="hljs-title function_">showPopover</span>(<span class="hljs-params"></span>) {
+    <span class="hljs-keyword">const</span> popover = <span class="hljs-variable language_">this</span>.<span class="hljs-title function_">popover</span>()!;
+    <span class="hljs-keyword">const</span> combobox = <span class="hljs-variable language_">this</span>.<span class="hljs-title function_">combobox</span>()!;
+
+    <span class="hljs-keyword">const</span> comboboxRect = combobox.<span class="hljs-title function_">inputElement</span>()?.<span class="hljs-title function_">getBoundingClientRect</span>();
+    <span class="hljs-keyword">const</span> popoverEl = popover.<span class="hljs-property">nativeElement</span>;
+
+    <span class="hljs-keyword">if</span> (comboboxRect) {
+      popoverEl.<span class="hljs-property">style</span>.<span class="hljs-property">width</span> = <span class="hljs-string">`<span class="hljs-subst">${comboboxRect.width}</span>px`</span>;
+      popoverEl.<span class="hljs-property">style</span>.<span class="hljs-property">top</span> = <span class="hljs-string">`<span class="hljs-subst">${comboboxRect.bottom + <span class="hljs-number">4</span>}</span>px`</span>;
+      popoverEl.<span class="hljs-property">style</span>.<span class="hljs-property">left</span> = <span class="hljs-string">`<span class="hljs-subst">${comboboxRect.left - <span class="hljs-number">1</span>}</span>px`</span>;
+    }
+
+    popover.<span class="hljs-property">nativeElement</span>.<span class="hljs-title function_">showPopover</span>();
+  }
+}
