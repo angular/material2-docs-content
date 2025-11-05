@@ -89,6 +89,16 @@ const EXAMPLE_COMPONENTS = {
     "primaryFile": "combobox-manual-example.ts",
     "importPath": "aria/combobox"
   },
+  "combobox-readonly-multiselect": {
+    "packagePath": "aria/combobox/combobox-readonly-multiselect",
+    "title": "Readonly multiselectable combobox.",
+    "componentName": "ComboboxReadonlyMultiselectExample",
+    "files": ["combobox-readonly-multiselect-example.ts", "combobox-readonly-multiselect-example.html", "../combobox-examples.css"],
+    "selector": "combobox-readonly-multiselect-example",
+    "additionalComponents": [],
+    "primaryFile": "combobox-readonly-multiselect-example.ts",
+    "importPath": "aria/combobox"
+  },
   "combobox-readonly": {
     "packagePath": "aria/combobox/combobox-readonly",
     "title": "Readonly combobox.",
@@ -4139,6 +4149,8 @@ async function loadExample(id) {
     case 'combobox-highlight':
       return import('@angular/components-examples/aria/combobox');
     case 'combobox-manual':
+      return import('@angular/components-examples/aria/combobox');
+    case 'combobox-readonly-multiselect':
       return import('@angular/components-examples/aria/combobox');
     case 'combobox-readonly':
       return import('@angular/components-examples/aria/combobox');
