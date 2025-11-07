@@ -69,6 +69,16 @@ const EXAMPLE_COMPONENTS = {
     "primaryFile": "combobox-auto-select-example.ts",
     "importPath": "aria/combobox"
   },
+  "combobox-dialog": {
+    "packagePath": "aria/combobox/combobox-dialog",
+    "title": "Combobox with a dialog popup.",
+    "componentName": "ComboboxDialogExample",
+    "files": ["combobox-dialog-example.ts", "combobox-dialog-example.html", "combobox-dialog-example.css"],
+    "selector": "combobox-dialog-example",
+    "additionalComponents": [],
+    "primaryFile": "combobox-dialog-example.ts",
+    "importPath": "aria/combobox"
+  },
   "combobox-highlight": {
     "packagePath": "aria/combobox/combobox-highlight",
     "title": "Combobox with highlight filtering.",
@@ -4145,6 +4155,8 @@ async function loadExample(id) {
     case 'accordion-single-expansion':
       return import('@angular/components-examples/aria/accordion');
     case 'combobox-auto-select':
+      return import('@angular/components-examples/aria/combobox');
+    case 'combobox-dialog':
       return import('@angular/components-examples/aria/combobox');
     case 'combobox-highlight':
       return import('@angular/components-examples/aria/combobox');

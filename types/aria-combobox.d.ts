@@ -1,8 +1,23 @@
 import * as i0 from '@angular/core';
 import { ElementRef } from '@angular/core';
-import { Combobox } from '@angular/aria/combobox';
+import { ComboboxDialog, Combobox } from '@angular/aria/combobox';
 import { Listbox } from '@angular/aria/listbox';
 import { Tree } from '@angular/aria/tree';
+
+/** @title Combobox with a dialog popup. */
+declare class ComboboxDialogExample {
+    dialog: i0.Signal<ComboboxDialog | undefined>;
+    listbox: i0.Signal<Listbox<string> | undefined>;
+    combobox: i0.Signal<Combobox<string> | undefined>;
+    value: i0.WritableSignal<string>;
+    searchString: i0.WritableSignal<string>;
+    options: i0.Signal<string[]>;
+    selectedStates: i0.WritableSignal<string[]>;
+    constructor();
+    positionDialog(): void;
+    static ɵfac: i0.ɵɵFactoryDeclaration<ComboboxDialogExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<ComboboxDialogExample, "combobox-dialog-example", never, {}, {}, never, never, true, never>;
+}
 
 /** @title Combobox with manual selection. */
 declare class ComboboxManualExample {
@@ -125,4 +140,4 @@ declare class ComboboxTreeHighlightExample {
     static ɵcmp: i0.ɵɵComponentDeclaration<ComboboxTreeHighlightExample, "combobox-tree-highlight-example", never, {}, {}, never, never, true, never>;
 }
 
-export { ComboboxAutoSelectExample, ComboboxHighlightExample, ComboboxManualExample, ComboboxReadonlyExample, ComboboxReadonlyMultiselectExample, ComboboxTreeAutoSelectExample, ComboboxTreeHighlightExample, ComboboxTreeManualExample };
+export { ComboboxAutoSelectExample, ComboboxDialogExample, ComboboxHighlightExample, ComboboxManualExample, ComboboxReadonlyExample, ComboboxReadonlyMultiselectExample, ComboboxTreeAutoSelectExample, ComboboxTreeHighlightExample, ComboboxTreeManualExample };
