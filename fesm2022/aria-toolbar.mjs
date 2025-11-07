@@ -295,7 +295,7 @@ class SimpleCombobox {
       kind: "directive",
       type: Combobox,
       selector: "[ngCombobox]",
-      inputs: ["filterMode", "disabled", "readonly", "firstMatch"],
+      inputs: ["filterMode", "disabled", "readonly", "firstMatch", "alwaysExpanded"],
       exportAs: ["ngCombobox"]
     }, {
       kind: "directive",
