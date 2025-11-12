@@ -49,14 +49,14 @@ class ListboxConfigurableExample {
     isStandalone: true,
     selector: "listbox-configurable-example",
     ngImport: i0,
-    template: "<div class=\"example-listbox-controls\">\n  <mat-checkbox [formControl]=\"wrap\">Wrap</mat-checkbox>\n  <mat-checkbox [formControl]=\"multi\">Multi</mat-checkbox>\n  <mat-checkbox [formControl]=\"disabled\">Disabled</mat-checkbox>\n  <mat-checkbox [formControl]=\"readonly\">Readonly</mat-checkbox>\n  <mat-checkbox [formControl]=\"softDisabled\">Soft Disabled</mat-checkbox>\n\n  <mat-form-field subscriptSizing=\"dynamic\" appearance=\"outline\">\n    <mat-label>Selection</mat-label>\n    <mat-select [(value)]=\"selection\" multiple>\n      @for (fruit of fruits; track fruit) {\n        <mat-option [value]=\"fruit\">{{fruit}}</mat-option>\n      }\n    </mat-select>\n  </mat-form-field>\n\n  <mat-form-field subscriptSizing=\"dynamic\" appearance=\"outline\">\n    <mat-label>Disabled Options</mat-label>\n    <mat-select [(value)]=\"disabledOptions\" multiple>\n      @for (fruit of fruits; track fruit) {\n        <mat-option [value]=\"fruit\">{{fruit}}</mat-option>\n      }\n    </mat-select>\n  </mat-form-field>\n\n  <mat-form-field subscriptSizing=\"dynamic\" appearance=\"outline\">\n    <mat-label>Orientation</mat-label>\n    <mat-select [(value)]=\"orientation\">\n      <mat-option value=\"vertical\">Vertical</mat-option>\n      <mat-option value=\"horizontal\">Horizontal</mat-option>\n    </mat-select>\n  </mat-form-field>\n\n  <mat-form-field subscriptSizing=\"dynamic\" appearance=\"outline\">\n    <mat-label>Selection strategy</mat-label>\n    <mat-select [(value)]=\"selectionMode\">\n      <mat-option value=\"explicit\">Explicit</mat-option>\n      <mat-option value=\"follow\">Follow Focus</mat-option>\n    </mat-select>\n  </mat-form-field>\n\n  <mat-form-field subscriptSizing=\"dynamic\" appearance=\"outline\">\n    <mat-label>Focus strategy</mat-label>\n    <mat-select [(value)]=\"focusMode\">\n      <mat-option value=\"roving tabindex\">Roving Tabindex</mat-option>\n      <mat-option value=\"activedescendant\">Active Descendant</mat-option>\n    </mat-select>\n  </mat-form-field>\n</div>\n\n<!-- #docregion listbox -->\n<ul\n  ngListbox\n  #listbox=\"ngListbox\"\n  [value]=\"selection\"\n  [wrap]=\"wrap.value\"\n  [multi]=\"multi.value\"\n  [readonly]=\"readonly.value\"\n  [disabled]=\"disabled.value\"\n  [softDisabled]=\"softDisabled.value\"\n  [orientation]=\"orientation\"\n  [focusMode]=\"focusMode\"\n  [selectionMode]=\"selectionMode\"\n  class=\"example-listbox example-parent\"\n  aria-labelledby=\"configurable-select-label\"\n>\n  <label class=\"example-label\" id=\"configurable-select-label\">Configurable Select Fruits</label>\n\n  @for (fruit of fruits; track fruit) {\n    @let optionDisabled = disabledOptions.includes(fruit);\n\n    <li\n      class=\"example-option example-stateful example-selectable\"\n      [disabled]=\"optionDisabled\"\n      [value]=\"fruit\"\n      ngOption\n      #option=\"ngOption\"\n    >\n      <mat-pseudo-checkbox\n        [disabled]=\"optionDisabled || listbox.disabled()\"\n        [state]=\"option.selected() ? 'checked' : 'unchecked'\"\n      ></mat-pseudo-checkbox>\n      <span>{{ fruit }}</span>\n    </li>\n  }\n</ul>\n<!-- #enddocregion listbox -->\n",
+    template: "<div class=\"example-listbox-controls\">\n  <mat-checkbox [formControl]=\"wrap\">Wrap</mat-checkbox>\n  <mat-checkbox [formControl]=\"multi\">Multi</mat-checkbox>\n  <mat-checkbox [formControl]=\"disabled\">Disabled</mat-checkbox>\n  <mat-checkbox [formControl]=\"readonly\">Readonly</mat-checkbox>\n  <mat-checkbox [formControl]=\"softDisabled\">Soft Disabled</mat-checkbox>\n\n  <mat-form-field subscriptSizing=\"dynamic\" appearance=\"outline\">\n    <mat-label>Selection</mat-label>\n    <mat-select [(value)]=\"selection\" multiple>\n      @for (fruit of fruits; track fruit) {\n        <mat-option [value]=\"fruit\">{{fruit}}</mat-option>\n      }\n    </mat-select>\n  </mat-form-field>\n\n  <mat-form-field subscriptSizing=\"dynamic\" appearance=\"outline\">\n    <mat-label>Disabled Options</mat-label>\n    <mat-select [(value)]=\"disabledOptions\" multiple>\n      @for (fruit of fruits; track fruit) {\n        <mat-option [value]=\"fruit\">{{fruit}}</mat-option>\n      }\n    </mat-select>\n  </mat-form-field>\n\n  <mat-form-field subscriptSizing=\"dynamic\" appearance=\"outline\">\n    <mat-label>Orientation</mat-label>\n    <mat-select [(value)]=\"orientation\">\n      <mat-option value=\"vertical\">Vertical</mat-option>\n      <mat-option value=\"horizontal\">Horizontal</mat-option>\n    </mat-select>\n  </mat-form-field>\n\n  <mat-form-field subscriptSizing=\"dynamic\" appearance=\"outline\">\n    <mat-label>Selection strategy</mat-label>\n    <mat-select [(value)]=\"selectionMode\">\n      <mat-option value=\"explicit\">Explicit</mat-option>\n      <mat-option value=\"follow\">Follow Focus</mat-option>\n    </mat-select>\n  </mat-form-field>\n\n  <mat-form-field subscriptSizing=\"dynamic\" appearance=\"outline\">\n    <mat-label>Focus strategy</mat-label>\n    <mat-select [(value)]=\"focusMode\">\n      <mat-option value=\"roving tabindex\">Roving Tabindex</mat-option>\n      <mat-option value=\"activedescendant\">Active Descendant</mat-option>\n    </mat-select>\n  </mat-form-field>\n</div>\n\n<!-- #docregion listbox -->\n<ul\n  ngListbox\n  #listbox=\"ngListbox\"\n  [values]=\"selection\"\n  [wrap]=\"wrap.value\"\n  [multi]=\"multi.value\"\n  [readonly]=\"readonly.value\"\n  [disabled]=\"disabled.value\"\n  [softDisabled]=\"softDisabled.value\"\n  [orientation]=\"orientation\"\n  [focusMode]=\"focusMode\"\n  [selectionMode]=\"selectionMode\"\n  class=\"example-listbox example-parent\"\n  aria-labelledby=\"configurable-select-label\"\n>\n  <label class=\"example-label\" id=\"configurable-select-label\">Configurable Select Fruits</label>\n\n  @for (fruit of fruits; track fruit) {\n    @let optionDisabled = disabledOptions.includes(fruit);\n\n    <li\n      class=\"example-option example-stateful example-selectable\"\n      [disabled]=\"optionDisabled\"\n      [value]=\"fruit\"\n      ngOption\n      #option=\"ngOption\"\n    >\n      <mat-pseudo-checkbox\n        [disabled]=\"optionDisabled || listbox.disabled()\"\n        [state]=\"option.selected() ? 'checked' : 'unchecked'\"\n      ></mat-pseudo-checkbox>\n      <span>{{ fruit }}</span>\n    </li>\n  }\n</ul>\n<!-- #enddocregion listbox -->\n",
     styles: [".example-listbox-controls {\n  display: flex;\n  flex-wrap: wrap;\n  align-items: center;\n  gap: 16px;\n  padding-bottom: 16px;\n}\n\n.example-listbox {\n  gap: 4px;\n  margin: 0;\n  padding: 8px;\n  max-height: 300px;\n  border: 1px solid var(--mat-sys-outline);\n  border-radius: var(--mat-sys-corner-extra-small);\n  display: flex;\n  list-style: none;\n  flex-direction: column;\n  overflow: scroll;\n  user-select: none;\n}\n\n.example-listbox[aria-orientation='horizontal'] {\n  flex-direction: row;\n}\n\n.example-listbox[aria-orientation='horizontal'] .example-option::before {\n  display: none;\n}\n\n.example-listbox[aria-orientation='horizontal'] .example-option[aria-selected='true']::before {\n  display: block;\n}\n\n.example-listbox[aria-disabled='true'] .example-option {\n  pointer-events: none;\n}\n\n.example-label {\n  padding: 16px;\n  flex-shrink: 0;\n}\n\n.example-option {\n  gap: 16px;\n  padding: 16px;\n  display: flex;\n  cursor: pointer;\n  position: relative;\n  align-items: center;\n  border-radius: var(--mat-sys-corner-extra-small);\n}\n"],
     dependencies: [{
       kind: "directive",
       type: Listbox,
       selector: "[ngListbox]",
-      inputs: ["orientation", "multi", "wrap", "softDisabled", "focusMode", "selectionMode", "typeaheadDelay", "disabled", "readonly", "value"],
-      outputs: ["valueChange"],
+      inputs: ["orientation", "multi", "wrap", "softDisabled", "focusMode", "selectionMode", "typeaheadDelay", "disabled", "readonly", "values"],
+      outputs: ["valuesChange"],
       exportAs: ["ngListbox"]
     }, {
       kind: "directive",
@@ -136,7 +136,7 @@ i0.ɵɵngDeclareClassMetadata({
     args: [{
       selector: 'listbox-configurable-example',
       imports: [Listbox, Option, MatCheckboxModule, MatFormFieldModule, MatSelectModule, ReactiveFormsModule, MatPseudoCheckbox],
-      template: "<div class=\"example-listbox-controls\">\n  <mat-checkbox [formControl]=\"wrap\">Wrap</mat-checkbox>\n  <mat-checkbox [formControl]=\"multi\">Multi</mat-checkbox>\n  <mat-checkbox [formControl]=\"disabled\">Disabled</mat-checkbox>\n  <mat-checkbox [formControl]=\"readonly\">Readonly</mat-checkbox>\n  <mat-checkbox [formControl]=\"softDisabled\">Soft Disabled</mat-checkbox>\n\n  <mat-form-field subscriptSizing=\"dynamic\" appearance=\"outline\">\n    <mat-label>Selection</mat-label>\n    <mat-select [(value)]=\"selection\" multiple>\n      @for (fruit of fruits; track fruit) {\n        <mat-option [value]=\"fruit\">{{fruit}}</mat-option>\n      }\n    </mat-select>\n  </mat-form-field>\n\n  <mat-form-field subscriptSizing=\"dynamic\" appearance=\"outline\">\n    <mat-label>Disabled Options</mat-label>\n    <mat-select [(value)]=\"disabledOptions\" multiple>\n      @for (fruit of fruits; track fruit) {\n        <mat-option [value]=\"fruit\">{{fruit}}</mat-option>\n      }\n    </mat-select>\n  </mat-form-field>\n\n  <mat-form-field subscriptSizing=\"dynamic\" appearance=\"outline\">\n    <mat-label>Orientation</mat-label>\n    <mat-select [(value)]=\"orientation\">\n      <mat-option value=\"vertical\">Vertical</mat-option>\n      <mat-option value=\"horizontal\">Horizontal</mat-option>\n    </mat-select>\n  </mat-form-field>\n\n  <mat-form-field subscriptSizing=\"dynamic\" appearance=\"outline\">\n    <mat-label>Selection strategy</mat-label>\n    <mat-select [(value)]=\"selectionMode\">\n      <mat-option value=\"explicit\">Explicit</mat-option>\n      <mat-option value=\"follow\">Follow Focus</mat-option>\n    </mat-select>\n  </mat-form-field>\n\n  <mat-form-field subscriptSizing=\"dynamic\" appearance=\"outline\">\n    <mat-label>Focus strategy</mat-label>\n    <mat-select [(value)]=\"focusMode\">\n      <mat-option value=\"roving tabindex\">Roving Tabindex</mat-option>\n      <mat-option value=\"activedescendant\">Active Descendant</mat-option>\n    </mat-select>\n  </mat-form-field>\n</div>\n\n<!-- #docregion listbox -->\n<ul\n  ngListbox\n  #listbox=\"ngListbox\"\n  [value]=\"selection\"\n  [wrap]=\"wrap.value\"\n  [multi]=\"multi.value\"\n  [readonly]=\"readonly.value\"\n  [disabled]=\"disabled.value\"\n  [softDisabled]=\"softDisabled.value\"\n  [orientation]=\"orientation\"\n  [focusMode]=\"focusMode\"\n  [selectionMode]=\"selectionMode\"\n  class=\"example-listbox example-parent\"\n  aria-labelledby=\"configurable-select-label\"\n>\n  <label class=\"example-label\" id=\"configurable-select-label\">Configurable Select Fruits</label>\n\n  @for (fruit of fruits; track fruit) {\n    @let optionDisabled = disabledOptions.includes(fruit);\n\n    <li\n      class=\"example-option example-stateful example-selectable\"\n      [disabled]=\"optionDisabled\"\n      [value]=\"fruit\"\n      ngOption\n      #option=\"ngOption\"\n    >\n      <mat-pseudo-checkbox\n        [disabled]=\"optionDisabled || listbox.disabled()\"\n        [state]=\"option.selected() ? 'checked' : 'unchecked'\"\n      ></mat-pseudo-checkbox>\n      <span>{{ fruit }}</span>\n    </li>\n  }\n</ul>\n<!-- #enddocregion listbox -->\n",
+      template: "<div class=\"example-listbox-controls\">\n  <mat-checkbox [formControl]=\"wrap\">Wrap</mat-checkbox>\n  <mat-checkbox [formControl]=\"multi\">Multi</mat-checkbox>\n  <mat-checkbox [formControl]=\"disabled\">Disabled</mat-checkbox>\n  <mat-checkbox [formControl]=\"readonly\">Readonly</mat-checkbox>\n  <mat-checkbox [formControl]=\"softDisabled\">Soft Disabled</mat-checkbox>\n\n  <mat-form-field subscriptSizing=\"dynamic\" appearance=\"outline\">\n    <mat-label>Selection</mat-label>\n    <mat-select [(value)]=\"selection\" multiple>\n      @for (fruit of fruits; track fruit) {\n        <mat-option [value]=\"fruit\">{{fruit}}</mat-option>\n      }\n    </mat-select>\n  </mat-form-field>\n\n  <mat-form-field subscriptSizing=\"dynamic\" appearance=\"outline\">\n    <mat-label>Disabled Options</mat-label>\n    <mat-select [(value)]=\"disabledOptions\" multiple>\n      @for (fruit of fruits; track fruit) {\n        <mat-option [value]=\"fruit\">{{fruit}}</mat-option>\n      }\n    </mat-select>\n  </mat-form-field>\n\n  <mat-form-field subscriptSizing=\"dynamic\" appearance=\"outline\">\n    <mat-label>Orientation</mat-label>\n    <mat-select [(value)]=\"orientation\">\n      <mat-option value=\"vertical\">Vertical</mat-option>\n      <mat-option value=\"horizontal\">Horizontal</mat-option>\n    </mat-select>\n  </mat-form-field>\n\n  <mat-form-field subscriptSizing=\"dynamic\" appearance=\"outline\">\n    <mat-label>Selection strategy</mat-label>\n    <mat-select [(value)]=\"selectionMode\">\n      <mat-option value=\"explicit\">Explicit</mat-option>\n      <mat-option value=\"follow\">Follow Focus</mat-option>\n    </mat-select>\n  </mat-form-field>\n\n  <mat-form-field subscriptSizing=\"dynamic\" appearance=\"outline\">\n    <mat-label>Focus strategy</mat-label>\n    <mat-select [(value)]=\"focusMode\">\n      <mat-option value=\"roving tabindex\">Roving Tabindex</mat-option>\n      <mat-option value=\"activedescendant\">Active Descendant</mat-option>\n    </mat-select>\n  </mat-form-field>\n</div>\n\n<!-- #docregion listbox -->\n<ul\n  ngListbox\n  #listbox=\"ngListbox\"\n  [values]=\"selection\"\n  [wrap]=\"wrap.value\"\n  [multi]=\"multi.value\"\n  [readonly]=\"readonly.value\"\n  [disabled]=\"disabled.value\"\n  [softDisabled]=\"softDisabled.value\"\n  [orientation]=\"orientation\"\n  [focusMode]=\"focusMode\"\n  [selectionMode]=\"selectionMode\"\n  class=\"example-listbox example-parent\"\n  aria-labelledby=\"configurable-select-label\"\n>\n  <label class=\"example-label\" id=\"configurable-select-label\">Configurable Select Fruits</label>\n\n  @for (fruit of fruits; track fruit) {\n    @let optionDisabled = disabledOptions.includes(fruit);\n\n    <li\n      class=\"example-option example-stateful example-selectable\"\n      [disabled]=\"optionDisabled\"\n      [value]=\"fruit\"\n      ngOption\n      #option=\"ngOption\"\n    >\n      <mat-pseudo-checkbox\n        [disabled]=\"optionDisabled || listbox.disabled()\"\n        [state]=\"option.selected() ? 'checked' : 'unchecked'\"\n      ></mat-pseudo-checkbox>\n      <span>{{ fruit }}</span>\n    </li>\n  }\n</ul>\n<!-- #enddocregion listbox -->\n",
       styles: [".example-listbox-controls {\n  display: flex;\n  flex-wrap: wrap;\n  align-items: center;\n  gap: 16px;\n  padding-bottom: 16px;\n}\n\n.example-listbox {\n  gap: 4px;\n  margin: 0;\n  padding: 8px;\n  max-height: 300px;\n  border: 1px solid var(--mat-sys-outline);\n  border-radius: var(--mat-sys-corner-extra-small);\n  display: flex;\n  list-style: none;\n  flex-direction: column;\n  overflow: scroll;\n  user-select: none;\n}\n\n.example-listbox[aria-orientation='horizontal'] {\n  flex-direction: row;\n}\n\n.example-listbox[aria-orientation='horizontal'] .example-option::before {\n  display: none;\n}\n\n.example-listbox[aria-orientation='horizontal'] .example-option[aria-selected='true']::before {\n  display: block;\n}\n\n.example-listbox[aria-disabled='true'] .example-option {\n  pointer-events: none;\n}\n\n.example-label {\n  padding: 16px;\n  flex-shrink: 0;\n}\n\n.example-option {\n  gap: 16px;\n  padding: 16px;\n  display: flex;\n  cursor: pointer;\n  position: relative;\n  align-items: center;\n  border-radius: var(--mat-sys-corner-extra-small);\n}\n"]
     }]
   }]
@@ -165,8 +165,8 @@ class ListboxSingleSelectExample {
       kind: "directive",
       type: Listbox,
       selector: "[ngListbox]",
-      inputs: ["orientation", "multi", "wrap", "softDisabled", "focusMode", "selectionMode", "typeaheadDelay", "disabled", "readonly", "value"],
-      outputs: ["valueChange"],
+      inputs: ["orientation", "multi", "wrap", "softDisabled", "focusMode", "selectionMode", "typeaheadDelay", "disabled", "readonly", "values"],
+      outputs: ["valuesChange"],
       exportAs: ["ngListbox"]
     }, {
       kind: "directive",
@@ -221,8 +221,8 @@ class ListboxMultiSelectExample {
       kind: "directive",
       type: Listbox,
       selector: "[ngListbox]",
-      inputs: ["orientation", "multi", "wrap", "softDisabled", "focusMode", "selectionMode", "typeaheadDelay", "disabled", "readonly", "value"],
-      outputs: ["valueChange"],
+      inputs: ["orientation", "multi", "wrap", "softDisabled", "focusMode", "selectionMode", "typeaheadDelay", "disabled", "readonly", "values"],
+      outputs: ["valuesChange"],
       exportAs: ["ngListbox"]
     }, {
       kind: "directive",
@@ -277,8 +277,8 @@ class ListboxSingleSelectFollowFocusExample {
       kind: "directive",
       type: Listbox,
       selector: "[ngListbox]",
-      inputs: ["orientation", "multi", "wrap", "softDisabled", "focusMode", "selectionMode", "typeaheadDelay", "disabled", "readonly", "value"],
-      outputs: ["valueChange"],
+      inputs: ["orientation", "multi", "wrap", "softDisabled", "focusMode", "selectionMode", "typeaheadDelay", "disabled", "readonly", "values"],
+      outputs: ["valuesChange"],
       exportAs: ["ngListbox"]
     }, {
       kind: "directive",
@@ -333,8 +333,8 @@ class ListboxMultiSelectFollowFocusExample {
       kind: "directive",
       type: Listbox,
       selector: "[ngListbox]",
-      inputs: ["orientation", "multi", "wrap", "softDisabled", "focusMode", "selectionMode", "typeaheadDelay", "disabled", "readonly", "value"],
-      outputs: ["valueChange"],
+      inputs: ["orientation", "multi", "wrap", "softDisabled", "focusMode", "selectionMode", "typeaheadDelay", "disabled", "readonly", "values"],
+      outputs: ["valuesChange"],
       exportAs: ["ngListbox"]
     }, {
       kind: "directive",
@@ -389,8 +389,8 @@ class ListboxHorizontalExample {
       kind: "directive",
       type: Listbox,
       selector: "[ngListbox]",
-      inputs: ["orientation", "multi", "wrap", "softDisabled", "focusMode", "selectionMode", "typeaheadDelay", "disabled", "readonly", "value"],
-      outputs: ["valueChange"],
+      inputs: ["orientation", "multi", "wrap", "softDisabled", "focusMode", "selectionMode", "typeaheadDelay", "disabled", "readonly", "values"],
+      outputs: ["valuesChange"],
       exportAs: ["ngListbox"]
     }, {
       kind: "directive",
@@ -445,8 +445,8 @@ class ListboxRtlHorizontalExample {
       kind: "directive",
       type: Listbox,
       selector: "[ngListbox]",
-      inputs: ["orientation", "multi", "wrap", "softDisabled", "focusMode", "selectionMode", "typeaheadDelay", "disabled", "readonly", "value"],
-      outputs: ["valueChange"],
+      inputs: ["orientation", "multi", "wrap", "softDisabled", "focusMode", "selectionMode", "typeaheadDelay", "disabled", "readonly", "values"],
+      outputs: ["valuesChange"],
       exportAs: ["ngListbox"]
     }, {
       kind: "directive",
@@ -508,8 +508,8 @@ class ListboxActiveDescendantExample {
       kind: "directive",
       type: Listbox,
       selector: "[ngListbox]",
-      inputs: ["orientation", "multi", "wrap", "softDisabled", "focusMode", "selectionMode", "typeaheadDelay", "disabled", "readonly", "value"],
-      outputs: ["valueChange"],
+      inputs: ["orientation", "multi", "wrap", "softDisabled", "focusMode", "selectionMode", "typeaheadDelay", "disabled", "readonly", "values"],
+      outputs: ["valuesChange"],
       exportAs: ["ngListbox"]
     }, {
       kind: "directive",
@@ -564,8 +564,8 @@ class ListboxDisabledFocusableExample {
       kind: "directive",
       type: Listbox,
       selector: "[ngListbox]",
-      inputs: ["orientation", "multi", "wrap", "softDisabled", "focusMode", "selectionMode", "typeaheadDelay", "disabled", "readonly", "value"],
-      outputs: ["valueChange"],
+      inputs: ["orientation", "multi", "wrap", "softDisabled", "focusMode", "selectionMode", "typeaheadDelay", "disabled", "readonly", "values"],
+      outputs: ["valuesChange"],
       exportAs: ["ngListbox"]
     }, {
       kind: "directive",
@@ -620,8 +620,8 @@ class ListboxDisabledSkippedExample {
       kind: "directive",
       type: Listbox,
       selector: "[ngListbox]",
-      inputs: ["orientation", "multi", "wrap", "softDisabled", "focusMode", "selectionMode", "typeaheadDelay", "disabled", "readonly", "value"],
-      outputs: ["valueChange"],
+      inputs: ["orientation", "multi", "wrap", "softDisabled", "focusMode", "selectionMode", "typeaheadDelay", "disabled", "readonly", "values"],
+      outputs: ["valuesChange"],
       exportAs: ["ngListbox"]
     }, {
       kind: "directive",
@@ -676,8 +676,8 @@ class ListboxReadonlyExample {
       kind: "directive",
       type: Listbox,
       selector: "[ngListbox]",
-      inputs: ["orientation", "multi", "wrap", "softDisabled", "focusMode", "selectionMode", "typeaheadDelay", "disabled", "readonly", "value"],
-      outputs: ["valueChange"],
+      inputs: ["orientation", "multi", "wrap", "softDisabled", "focusMode", "selectionMode", "typeaheadDelay", "disabled", "readonly", "values"],
+      outputs: ["valuesChange"],
       exportAs: ["ngListbox"]
     }, {
       kind: "directive",
@@ -732,8 +732,8 @@ class ListboxDisabledExample {
       kind: "directive",
       type: Listbox,
       selector: "[ngListbox]",
-      inputs: ["orientation", "multi", "wrap", "softDisabled", "focusMode", "selectionMode", "typeaheadDelay", "disabled", "readonly", "value"],
-      outputs: ["valueChange"],
+      inputs: ["orientation", "multi", "wrap", "softDisabled", "focusMode", "selectionMode", "typeaheadDelay", "disabled", "readonly", "values"],
+      outputs: ["valuesChange"],
       exportAs: ["ngListbox"]
     }, {
       kind: "directive",
