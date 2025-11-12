@@ -7,7 +7,7 @@
   <span class="hljs-attribute">border-radius</span>: <span class="hljs-built_in">var</span>(--mat-sys-corner-extra-small);
 }
 
-<span class="hljs-selector-class">.example-combobox-container</span><span class="hljs-selector-pseudo">:has</span>(<span class="hljs-selector-attr">[readonly=<span class="hljs-string">&#x27;true&#x27;</span>]</span>) {
+<span class="hljs-selector-class">.example-combobox-container</span><span class="hljs-selector-pseudo">:has</span>(<span class="hljs-selector-attr">[readonly=<span class="hljs-string">&#x27;true&#x27;</span>]</span><span class="hljs-selector-pseudo">:not</span>(<span class="hljs-selector-attr">[aria-disabled=<span class="hljs-string">&#x27;true&#x27;</span>]</span>)) {
   <span class="hljs-attribute">width</span>: <span class="hljs-number">200px</span>;
 }
 
@@ -22,7 +22,7 @@
   <span class="hljs-attribute">border-radius</span>: <span class="hljs-built_in">var</span>(--mat-sys-corner-extra-small);
 }
 
-<span class="hljs-selector-class">.example-combobox-input</span><span class="hljs-selector-attr">[readonly=<span class="hljs-string">&#x27;true&#x27;</span>]</span> {
+<span class="hljs-selector-class">.example-combobox-input</span><span class="hljs-selector-attr">[readonly=<span class="hljs-string">&#x27;true&#x27;</span>]</span><span class="hljs-selector-pseudo">:not</span>(<span class="hljs-selector-attr">[aria-disabled=<span class="hljs-string">&#x27;true&#x27;</span>]</span>) {
   <span class="hljs-attribute">cursor</span>: pointer;
   <span class="hljs-attribute">padding</span>: <span class="hljs-number">0.7rem</span> <span class="hljs-number">1rem</span>;
 }
@@ -181,4 +181,9 @@
 <span class="hljs-selector-class">.example-tree-item</span><span class="hljs-selector-attr">[aria-current]</span> <span class="hljs-selector-class">.example-selected-icon</span>,
 <span class="hljs-selector-class">.example-tree-item</span><span class="hljs-selector-attr">[aria-selected=<span class="hljs-string">&#x27;true&#x27;</span>]</span> <span class="hljs-selector-class">.example-selected-icon</span> {
   <span class="hljs-attribute">visibility</span>: visible;
+}
+
+<span class="hljs-selector-class">.example-combobox-container</span><span class="hljs-selector-pseudo">:has</span>(<span class="hljs-selector-attr">[aria-disabled=<span class="hljs-string">&#x27;true&#x27;</span>]</span>) {
+  <span class="hljs-attribute">opacity</span>: <span class="hljs-number">0.4</span>;
+  <span class="hljs-attribute">cursor</span>: default;
 }

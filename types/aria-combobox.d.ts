@@ -58,6 +58,19 @@ declare class ComboboxHighlightExample {
     static ɵcmp: i0.ɵɵComponentDeclaration<ComboboxHighlightExample, "combobox-highlight-example", never, {}, {}, never, never, true, never>;
 }
 
+/** @title Disabled combobox example. */
+declare class ComboboxDisabledExample {
+    popover: i0.Signal<ElementRef<any> | undefined>;
+    listbox: i0.Signal<Listbox<any> | undefined>;
+    combobox: i0.Signal<Combobox<any> | undefined>;
+    searchString: i0.WritableSignal<string>;
+    options: i0.Signal<string[]>;
+    constructor();
+    showPopover(): void;
+    static ɵfac: i0.ɵɵFactoryDeclaration<ComboboxDisabledExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<ComboboxDisabledExample, "combobox-disabled-example", never, {}, {}, never, never, true, never>;
+}
+
 /** @title Readonly combobox. */
 declare class ComboboxReadonlyExample {
     popover: i0.Signal<ElementRef<any> | undefined>;
@@ -82,6 +95,19 @@ declare class ComboboxReadonlyMultiselectExample {
     showPopover(): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<ComboboxReadonlyMultiselectExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<ComboboxReadonlyMultiselectExample, "combobox-readonly-multiselect-example", never, {}, {}, never, never, true, never>;
+}
+
+/** @title Disabled readonly combobox. */
+declare class ComboboxReadonlyDisabledExample {
+    popover: i0.Signal<ElementRef<any> | undefined>;
+    listbox: i0.Signal<Listbox<any> | undefined>;
+    combobox: i0.Signal<Combobox<any> | undefined>;
+    options: () => string[];
+    searchString: i0.WritableSignal<string>;
+    constructor();
+    showPopover(): void;
+    static ɵfac: i0.ɵɵFactoryDeclaration<ComboboxReadonlyDisabledExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<ComboboxReadonlyDisabledExample, "combobox-readonly-disabled-example", never, {}, {}, never, never, true, never>;
 }
 
 interface TreeNode {
@@ -140,4 +166,4 @@ declare class ComboboxTreeHighlightExample {
     static ɵcmp: i0.ɵɵComponentDeclaration<ComboboxTreeHighlightExample, "combobox-tree-highlight-example", never, {}, {}, never, never, true, never>;
 }
 
-export { ComboboxAutoSelectExample, ComboboxDialogExample, ComboboxHighlightExample, ComboboxManualExample, ComboboxReadonlyExample, ComboboxReadonlyMultiselectExample, ComboboxTreeAutoSelectExample, ComboboxTreeHighlightExample, ComboboxTreeManualExample };
+export { ComboboxAutoSelectExample, ComboboxDialogExample, ComboboxDisabledExample, ComboboxHighlightExample, ComboboxManualExample, ComboboxReadonlyDisabledExample, ComboboxReadonlyExample, ComboboxReadonlyMultiselectExample, ComboboxTreeAutoSelectExample, ComboboxTreeHighlightExample, ComboboxTreeManualExample };
