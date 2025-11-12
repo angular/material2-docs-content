@@ -3,16 +3,16 @@
   <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-accordion-group&quot;</span>
   [<span class="hljs-attr">multiExpandable</span>]=<span class="hljs-string">&quot;true&quot;</span>
   [<span class="hljs-attr">softDisabled</span>]=<span class="hljs-string">&quot;true&quot;</span>
-  [(<span class="hljs-attr">value</span>)]=<span class="hljs-string">&quot;expandedIds&quot;</span>
+  [(<span class="hljs-attr">expandedPanels</span>)]=<span class="hljs-string">&quot;expandedIds&quot;</span>
 &gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-accordion&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-accordion-header&quot;</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">ngAccordionTrigger</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-accordion-trigger&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;item1&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">ngAccordionTrigger</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-accordion-trigger&quot;</span> <span class="hljs-attr">panelId</span>=<span class="hljs-string">&quot;item1&quot;</span>&gt;</span>
         Item 1 Trigger
         <span class="hljs-tag">&lt;<span class="hljs-name">mat-icon</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">&quot;true&quot;</span>&gt;</span>{{expansionIcon(&#x27;item1&#x27;)()}}<span class="hljs-tag">&lt;/<span class="hljs-name">mat-icon</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">ngAccordionPanel</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;item1&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-accordion-panel&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">ngAccordionPanel</span> <span class="hljs-attr">panelId</span>=<span class="hljs-string">&quot;item1&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-accordion-panel&quot;</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">ng-template</span> <span class="hljs-attr">ngAccordionContent</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>This is the content for Item 1.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-name">ng-template</span>&gt;</span>
@@ -21,12 +21,12 @@
 
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-accordion&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-accordion-header&quot;</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">ngAccordionTrigger</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-accordion-trigger&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;item2&quot;</span> <span class="hljs-attr">disabled</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">ngAccordionTrigger</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-accordion-trigger&quot;</span> <span class="hljs-attr">panelId</span>=<span class="hljs-string">&quot;item2&quot;</span> <span class="hljs-attr">disabled</span>&gt;</span>
         Item 2 Trigger (disabled)
         <span class="hljs-tag">&lt;<span class="hljs-name">mat-icon</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">&quot;true&quot;</span>&gt;</span>{{expansionIcon(&#x27;item2&#x27;)()}}<span class="hljs-tag">&lt;/<span class="hljs-name">mat-icon</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">ngAccordionPanel</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;item2&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-accordion-panel&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">ngAccordionPanel</span> <span class="hljs-attr">panelId</span>=<span class="hljs-string">&quot;item2&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-accordion-panel&quot;</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">ng-template</span> <span class="hljs-attr">ngAccordionContent</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>This is the content for Item 2. This should not be expandable if trigger is disabled.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-name">ng-template</span>&gt;</span>
@@ -35,12 +35,12 @@
 
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-accordion&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-accordion-header&quot;</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">ngAccordionTrigger</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-accordion-trigger&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;item3&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">ngAccordionTrigger</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-accordion-trigger&quot;</span> <span class="hljs-attr">panelId</span>=<span class="hljs-string">&quot;item3&quot;</span>&gt;</span>
         Item 3 Trigger
         <span class="hljs-tag">&lt;<span class="hljs-name">mat-icon</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">&quot;true&quot;</span>&gt;</span>{{expansionIcon(&#x27;item3&#x27;)()}}<span class="hljs-tag">&lt;/<span class="hljs-name">mat-icon</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">ngAccordionPanel</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;item3&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-accordion-panel&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">ngAccordionPanel</span> <span class="hljs-attr">panelId</span>=<span class="hljs-string">&quot;item3&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-accordion-panel&quot;</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">ng-template</span> <span class="hljs-attr">ngAccordionContent</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>This is the content for Item 3.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-name">ng-template</span>&gt;</span>
@@ -49,12 +49,12 @@
 
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-accordion&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-accordion-header&quot;</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">ngAccordionTrigger</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-accordion-trigger&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;item4&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">ngAccordionTrigger</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-accordion-trigger&quot;</span> <span class="hljs-attr">panelId</span>=<span class="hljs-string">&quot;item4&quot;</span>&gt;</span>
         Item 4 Trigger
         <span class="hljs-tag">&lt;<span class="hljs-name">mat-icon</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">&quot;true&quot;</span>&gt;</span>{{expansionIcon(&#x27;item4&#x27;)()}}<span class="hljs-tag">&lt;/<span class="hljs-name">mat-icon</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">ngAccordionPanel</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;item4&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-accordion-panel&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">ngAccordionPanel</span> <span class="hljs-attr">panelId</span>=<span class="hljs-string">&quot;item4&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-accordion-panel&quot;</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">ng-template</span> <span class="hljs-attr">ngAccordionContent</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>This is the content for Item 4<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-name">ng-template</span>&gt;</span>
@@ -63,12 +63,12 @@
 
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-accordion&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-accordion-header&quot;</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">ngAccordionTrigger</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-accordion-trigger&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;item5&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">ngAccordionTrigger</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-accordion-trigger&quot;</span> <span class="hljs-attr">panelId</span>=<span class="hljs-string">&quot;item5&quot;</span>&gt;</span>
         Item 5 Trigger
         <span class="hljs-tag">&lt;<span class="hljs-name">mat-icon</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">&quot;true&quot;</span>&gt;</span>{{expansionIcon(&#x27;item5&#x27;)()}}<span class="hljs-tag">&lt;/<span class="hljs-name">mat-icon</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">ngAccordionPanel</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;item5&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-accordion-panel&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">ngAccordionPanel</span> <span class="hljs-attr">panelId</span>=<span class="hljs-string">&quot;item5&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-accordion-panel&quot;</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">ng-template</span> <span class="hljs-attr">ngAccordionContent</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>This is the content for Item 5<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-name">ng-template</span>&gt;</span>
