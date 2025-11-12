@@ -10,6 +10,7 @@
   <span class="hljs-attr">value</span>: <span class="hljs-built_in">string</span>;
   <span class="hljs-attr">children</span>?: <span class="hljs-title class_">TreeNode</span>[];
   <span class="hljs-attr">disabled</span>?: <span class="hljs-built_in">boolean</span>;
+  <span class="hljs-attr">expanded</span>?: <span class="hljs-built_in">boolean</span>;
 };
 
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> <span class="hljs-attr">NODES</span>: <span class="hljs-title class_">TreeNode</span>[] = [
@@ -21,6 +22,7 @@
       {<span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;favicon.ico&#x27;</span>, <span class="hljs-attr">value</span>: <span class="hljs-string">&#x27;public/favicon.ico&#x27;</span>},
       {<span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;styles.css&#x27;</span>, <span class="hljs-attr">value</span>: <span class="hljs-string">&#x27;public/styles.css&#x27;</span>},
     ],
+    <span class="hljs-attr">expanded</span>: <span class="hljs-literal">false</span>,
   },
   {
     <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;src&#x27;</span>,
@@ -34,25 +36,33 @@
           {<span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;app.module.ts&#x27;</span>, <span class="hljs-attr">value</span>: <span class="hljs-string">&#x27;src/app/app.module.ts&#x27;</span>, <span class="hljs-attr">disabled</span>: <span class="hljs-literal">true</span>},
           {<span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;app.css&#x27;</span>, <span class="hljs-attr">value</span>: <span class="hljs-string">&#x27;src/app/app.css&#x27;</span>},
         ],
+        <span class="hljs-attr">expanded</span>: <span class="hljs-literal">false</span>,
       },
       {
         <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;assets&#x27;</span>,
         <span class="hljs-attr">value</span>: <span class="hljs-string">&#x27;src/assets&#x27;</span>,
         <span class="hljs-attr">children</span>: [{<span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;logo.png&#x27;</span>, <span class="hljs-attr">value</span>: <span class="hljs-string">&#x27;src/assets/logo.png&#x27;</span>}],
+        <span class="hljs-attr">expanded</span>: <span class="hljs-literal">false</span>,
       },
       {
         <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;environments&#x27;</span>,
         <span class="hljs-attr">value</span>: <span class="hljs-string">&#x27;src/environments&#x27;</span>,
         <span class="hljs-attr">children</span>: [
-          {<span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;environment.prod.ts&#x27;</span>, <span class="hljs-attr">value</span>: <span class="hljs-string">&#x27;src/environments/environment.prod.ts&#x27;</span>},
+          {
+            <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;environment.prod.ts&#x27;</span>,
+            <span class="hljs-attr">value</span>: <span class="hljs-string">&#x27;src/environments/environment.prod.ts&#x27;</span>,
+            <span class="hljs-attr">expanded</span>: <span class="hljs-literal">false</span>,
+          },
           {<span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;environment.ts&#x27;</span>, <span class="hljs-attr">value</span>: <span class="hljs-string">&#x27;src/environments/environment.ts&#x27;</span>},
         ],
+        <span class="hljs-attr">expanded</span>: <span class="hljs-literal">false</span>,
       },
       {<span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;main.ts&#x27;</span>, <span class="hljs-attr">value</span>: <span class="hljs-string">&#x27;src/main.ts&#x27;</span>},
       {<span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;polyfills.ts&#x27;</span>, <span class="hljs-attr">value</span>: <span class="hljs-string">&#x27;src/polyfills.ts&#x27;</span>},
       {<span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;styles.css&#x27;</span>, <span class="hljs-attr">value</span>: <span class="hljs-string">&#x27;src/styles.css&#x27;</span>, <span class="hljs-attr">disabled</span>: <span class="hljs-literal">true</span>},
       {<span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;test.ts&#x27;</span>, <span class="hljs-attr">value</span>: <span class="hljs-string">&#x27;src/test.ts&#x27;</span>},
     ],
+    <span class="hljs-attr">expanded</span>: <span class="hljs-literal">false</span>,
   },
   {<span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;angular.json&#x27;</span>, <span class="hljs-attr">value</span>: <span class="hljs-string">&#x27;angular.json&#x27;</span>},
   {<span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;package.json&#x27;</span>, <span class="hljs-attr">value</span>: <span class="hljs-string">&#x27;package.json&#x27;</span>},

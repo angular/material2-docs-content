@@ -40,7 +40,7 @@ class TabsConfigurableExample {
     isStandalone: true,
     selector: "tabs-configurable-example",
     ngImport: i0,
-    template: "<div class=\"example-tablist-controls\">\n  <mat-checkbox [formControl]=\"wrap\">Wrap</mat-checkbox>\n  <mat-checkbox [formControl]=\"disabled\">Disabled</mat-checkbox>\n  <mat-checkbox [formControl]=\"softDisabled\">Soft Disabled</mat-checkbox>\n\n  <mat-form-field subscriptSizing=\"dynamic\" appearance=\"outline\">\n    <mat-label>Orientation</mat-label>\n    <mat-select [(value)]=\"orientation\">\n      <mat-option value=\"vertical\">Vertical</mat-option>\n      <mat-option value=\"horizontal\">Horizontal</mat-option>\n    </mat-select>\n  </mat-form-field>\n\n  <mat-form-field subscriptSizing=\"dynamic\" appearance=\"outline\">\n    <mat-label>Selection strategy</mat-label>\n    <mat-select [(value)]=\"selectionMode\">\n      <mat-option value=\"explicit\">Explicit</mat-option>\n      <mat-option value=\"follow\">Follow Focus</mat-option>\n    </mat-select>\n  </mat-form-field>\n\n  <mat-form-field subscriptSizing=\"dynamic\" appearance=\"outline\">\n    <mat-label>Focus strategy</mat-label>\n    <mat-select [(value)]=\"focusMode\">\n      <mat-option value=\"roving\">Roving Tabindex</mat-option>\n      <mat-option value=\"activedescendant\">Active Descendant</mat-option>\n    </mat-select>\n  </mat-form-field>\n\n  <mat-form-field subscriptSizing=\"dynamic\" appearance=\"outline\">\n    <mat-label>Tab selection</mat-label>\n    <mat-select [(value)]=\"tabSelection\">\n      <mat-option value=\"tab-1\">Tab 1</mat-option>\n      <mat-option value=\"tab-2\">Tab 2</mat-option>\n      <mat-option value=\"tab-3\">Tab 3</mat-option>\n    </mat-select>\n  </mat-form-field>\n</div>\n\n<!-- #docregion tabs -->\n<div ngTabs class=\"example-tabs\">\n  <ul\n    ngTabList\n    class=\"example-tablist\"\n    [wrap]=\"wrap.value\"\n    [disabled]=\"disabled.value\"\n    [softDisabled]=\"softDisabled.value\"\n    [orientation]=\"orientation\"\n    [focusMode]=\"focusMode\"\n    [selectionMode]=\"selectionMode\"\n    [(selectedTab)]=\"tabSelection\"\n  >\n    <li ngTab value=\"tab-1\" class=\"example-tab\">tab 1</li>\n    <li ngTab value=\"tab-2\" class=\"example-tab\" disabled=\"true\">tab 2</li>\n    <li ngTab value=\"tab-3\" class=\"example-tab\">tab 3</li>\n  </ul>\n\n  <div ngTabPanel value=\"tab-1\" class=\"example-tabpanel\">\n    <ng-template ngTabContent>Tabpanel 1</ng-template>\n  </div>\n  <div ngTabPanel value=\"tab-2\" class=\"example-tabpanel\">\n    <ng-template ngTabContent>Tabpanel 2</ng-template>\n  </div>\n  <div ngTabPanel value=\"tab-3\" class=\"example-tabpanel\">\n    <ng-template ngTabContent>Tabpanel 3</ng-template>\n  </div>\n</div>\n<!-- #enddocregion tabs -->\n",
+    template: "<div class=\"example-tablist-controls\">\n  <mat-checkbox [formControl]=\"wrap\">Wrap</mat-checkbox>\n  <mat-checkbox [formControl]=\"disabled\">Disabled</mat-checkbox>\n  <mat-checkbox [formControl]=\"softDisabled\">Soft Disabled</mat-checkbox>\n\n  <mat-form-field subscriptSizing=\"dynamic\" appearance=\"outline\">\n    <mat-label>Orientation</mat-label>\n    <mat-select [(value)]=\"orientation\">\n      <mat-option value=\"vertical\">Vertical</mat-option>\n      <mat-option value=\"horizontal\">Horizontal</mat-option>\n    </mat-select>\n  </mat-form-field>\n\n  <mat-form-field subscriptSizing=\"dynamic\" appearance=\"outline\">\n    <mat-label>Selection strategy</mat-label>\n    <mat-select [(value)]=\"selectionMode\">\n      <mat-option value=\"explicit\">Explicit</mat-option>\n      <mat-option value=\"follow\">Follow Focus</mat-option>\n    </mat-select>\n  </mat-form-field>\n\n  <mat-form-field subscriptSizing=\"dynamic\" appearance=\"outline\">\n    <mat-label>Focus strategy</mat-label>\n    <mat-select [(value)]=\"focusMode\">\n      <mat-option value=\"roving\">Roving Tabindex</mat-option>\n      <mat-option value=\"activedescendant\">Active Descendant</mat-option>\n    </mat-select>\n  </mat-form-field>\n\n  <mat-form-field subscriptSizing=\"dynamic\" appearance=\"outline\">\n    <mat-label>Tab selection</mat-label>\n    <mat-select [(value)]=\"tabSelection\">\n      <mat-option value=\"tab-1\">Tab 1</mat-option>\n      <mat-option value=\"tab-2\">Tab 2</mat-option>\n      <mat-option value=\"tab-3\">Tab 3</mat-option>\n    </mat-select>\n  </mat-form-field>\n</div>\n\n<!-- #docregion tabs -->\n<div ngTabs class=\"example-tabs\">\n  <ul\n    ngTabList\n    class=\"example-tablist\"\n    [wrap]=\"wrap.value\"\n    [disabled]=\"disabled.value\"\n    [softDisabled]=\"softDisabled.value\"\n    [orientation]=\"orientation\"\n    [focusMode]=\"focusMode\"\n    [(selectedTab)]=\"tabSelection\"\n    [selectionMode]=\"selectionMode\"\n  >\n    <li ngTab value=\"tab-1\" class=\"example-tab\">tab 1</li>\n    <li ngTab value=\"tab-2\" class=\"example-tab\" disabled=\"true\">tab 2</li>\n    <li ngTab value=\"tab-3\" class=\"example-tab\">tab 3</li>\n  </ul>\n\n  <div ngTabPanel value=\"tab-1\" class=\"example-tabpanel\">\n    <ng-template ngTabContent>Tabpanel 1</ng-template>\n  </div>\n  <div ngTabPanel value=\"tab-2\" class=\"example-tabpanel\">\n    <ng-template ngTabContent>Tabpanel 2</ng-template>\n  </div>\n  <div ngTabPanel value=\"tab-3\" class=\"example-tabpanel\">\n    <ng-template ngTabContent>Tabpanel 3</ng-template>\n  </div>\n</div>\n<!-- #enddocregion tabs -->\n",
     styles: [".example-tablist-controls {\n  display: flex;\n  flex-wrap: wrap;\n  align-items: center;\n  gap: 16px;\n  padding-bottom: 16px;\n}\n\n.example-tabs {\n  border: 1px solid var(--mat-sys-outline);\n  min-height: 30vh;\n}\n\n.example-tabs:has(ul[aria-orientation='vertical']) {\n  display: flex;\n}\n\n.example-tablist {\n  gap: 8px;\n  margin: 0;\n  padding: 8px;\n  max-height: 50vh;\n  border-bottom: 1px solid var(--mat-sys-outline);\n  border-radius: var(--mat-sys-corner-extra-small);\n  display: flex;\n  list-style: none;\n  flex-direction: row;\n  justify-content: center;\n}\n\n.example-tablist[aria-orientation='vertical'] {\n  flex-direction: column;\n  border-bottom: initial;\n  border-right: 1px solid var(--mat-sys-outline);\n  justify-content: start;\n}\n\n.example-tablist[aria-orientation='horizontal'] li::before {\n  display: none;\n}\n\n.example-tablist[aria-orientation='horizontal'] li[aria-selected='true']::before {\n  display: block;\n}\n\n.example-tablist[aria-disabled='true'] {\n  background-color: var(--mat-sys-surface-dim);\n}\n\n.example-tab {\n  gap: 16px;\n  padding: 16px;\n  display: flex;\n  cursor: pointer;\n  align-items: center;\n  border-radius: var(--mat-sys-corner-extra-small);\n}\n\n.example-tablist:focus-within .example-tab:hover,\n.example-tablist:focus-within .example-tab[data-active='true'] {\n  outline: 1px solid var(--mat-sys-outline);\n  background: var(--mat-sys-surface-container);\n}\n\n.example-tab:focus-within {\n  outline: 2px solid var(--mat-sys-primary);\n  background: var(--mat-sys-surface-container);\n}\n\n.example-tablist:focus-within .example-tab[data-active='true'] {\n  background-color: var(--mat-sys-secondary-container);\n}\n\n.example-tab[aria-disabled='true'] {\n  background-color: var(--mat-sys-surface-dim);\n}\n\n.example-tabpanel {\n  margin: 8px;\n}\n"],
     dependencies: [{
       kind: "directive",
@@ -51,14 +51,14 @@ class TabsConfigurableExample {
       kind: "directive",
       type: TabList,
       selector: "[ngTabList]",
-      inputs: ["orientation", "wrap", "softDisabled", "focusMode", "selectionMode", "disabled", "selectedTab"],
+      inputs: ["orientation", "wrap", "softDisabled", "focusMode", "selectionMode", "selectedTab", "disabled"],
       outputs: ["selectedTabChange"],
       exportAs: ["ngTabList"]
     }, {
       kind: "directive",
       type: Tab,
       selector: "[ngTab]",
-      inputs: ["disabled", "value"],
+      inputs: ["id", "disabled", "value"],
       exportAs: ["ngTab"]
     }, {
       kind: "directive",
@@ -138,7 +138,7 @@ i0.ɵɵngDeclareClassMetadata({
     args: [{
       selector: 'tabs-configurable-example',
       imports: [Tabs, TabList, Tab, TabPanel, TabContent, MatCheckboxModule, MatFormFieldModule, MatSelectModule, ReactiveFormsModule],
-      template: "<div class=\"example-tablist-controls\">\n  <mat-checkbox [formControl]=\"wrap\">Wrap</mat-checkbox>\n  <mat-checkbox [formControl]=\"disabled\">Disabled</mat-checkbox>\n  <mat-checkbox [formControl]=\"softDisabled\">Soft Disabled</mat-checkbox>\n\n  <mat-form-field subscriptSizing=\"dynamic\" appearance=\"outline\">\n    <mat-label>Orientation</mat-label>\n    <mat-select [(value)]=\"orientation\">\n      <mat-option value=\"vertical\">Vertical</mat-option>\n      <mat-option value=\"horizontal\">Horizontal</mat-option>\n    </mat-select>\n  </mat-form-field>\n\n  <mat-form-field subscriptSizing=\"dynamic\" appearance=\"outline\">\n    <mat-label>Selection strategy</mat-label>\n    <mat-select [(value)]=\"selectionMode\">\n      <mat-option value=\"explicit\">Explicit</mat-option>\n      <mat-option value=\"follow\">Follow Focus</mat-option>\n    </mat-select>\n  </mat-form-field>\n\n  <mat-form-field subscriptSizing=\"dynamic\" appearance=\"outline\">\n    <mat-label>Focus strategy</mat-label>\n    <mat-select [(value)]=\"focusMode\">\n      <mat-option value=\"roving\">Roving Tabindex</mat-option>\n      <mat-option value=\"activedescendant\">Active Descendant</mat-option>\n    </mat-select>\n  </mat-form-field>\n\n  <mat-form-field subscriptSizing=\"dynamic\" appearance=\"outline\">\n    <mat-label>Tab selection</mat-label>\n    <mat-select [(value)]=\"tabSelection\">\n      <mat-option value=\"tab-1\">Tab 1</mat-option>\n      <mat-option value=\"tab-2\">Tab 2</mat-option>\n      <mat-option value=\"tab-3\">Tab 3</mat-option>\n    </mat-select>\n  </mat-form-field>\n</div>\n\n<!-- #docregion tabs -->\n<div ngTabs class=\"example-tabs\">\n  <ul\n    ngTabList\n    class=\"example-tablist\"\n    [wrap]=\"wrap.value\"\n    [disabled]=\"disabled.value\"\n    [softDisabled]=\"softDisabled.value\"\n    [orientation]=\"orientation\"\n    [focusMode]=\"focusMode\"\n    [selectionMode]=\"selectionMode\"\n    [(selectedTab)]=\"tabSelection\"\n  >\n    <li ngTab value=\"tab-1\" class=\"example-tab\">tab 1</li>\n    <li ngTab value=\"tab-2\" class=\"example-tab\" disabled=\"true\">tab 2</li>\n    <li ngTab value=\"tab-3\" class=\"example-tab\">tab 3</li>\n  </ul>\n\n  <div ngTabPanel value=\"tab-1\" class=\"example-tabpanel\">\n    <ng-template ngTabContent>Tabpanel 1</ng-template>\n  </div>\n  <div ngTabPanel value=\"tab-2\" class=\"example-tabpanel\">\n    <ng-template ngTabContent>Tabpanel 2</ng-template>\n  </div>\n  <div ngTabPanel value=\"tab-3\" class=\"example-tabpanel\">\n    <ng-template ngTabContent>Tabpanel 3</ng-template>\n  </div>\n</div>\n<!-- #enddocregion tabs -->\n",
+      template: "<div class=\"example-tablist-controls\">\n  <mat-checkbox [formControl]=\"wrap\">Wrap</mat-checkbox>\n  <mat-checkbox [formControl]=\"disabled\">Disabled</mat-checkbox>\n  <mat-checkbox [formControl]=\"softDisabled\">Soft Disabled</mat-checkbox>\n\n  <mat-form-field subscriptSizing=\"dynamic\" appearance=\"outline\">\n    <mat-label>Orientation</mat-label>\n    <mat-select [(value)]=\"orientation\">\n      <mat-option value=\"vertical\">Vertical</mat-option>\n      <mat-option value=\"horizontal\">Horizontal</mat-option>\n    </mat-select>\n  </mat-form-field>\n\n  <mat-form-field subscriptSizing=\"dynamic\" appearance=\"outline\">\n    <mat-label>Selection strategy</mat-label>\n    <mat-select [(value)]=\"selectionMode\">\n      <mat-option value=\"explicit\">Explicit</mat-option>\n      <mat-option value=\"follow\">Follow Focus</mat-option>\n    </mat-select>\n  </mat-form-field>\n\n  <mat-form-field subscriptSizing=\"dynamic\" appearance=\"outline\">\n    <mat-label>Focus strategy</mat-label>\n    <mat-select [(value)]=\"focusMode\">\n      <mat-option value=\"roving\">Roving Tabindex</mat-option>\n      <mat-option value=\"activedescendant\">Active Descendant</mat-option>\n    </mat-select>\n  </mat-form-field>\n\n  <mat-form-field subscriptSizing=\"dynamic\" appearance=\"outline\">\n    <mat-label>Tab selection</mat-label>\n    <mat-select [(value)]=\"tabSelection\">\n      <mat-option value=\"tab-1\">Tab 1</mat-option>\n      <mat-option value=\"tab-2\">Tab 2</mat-option>\n      <mat-option value=\"tab-3\">Tab 3</mat-option>\n    </mat-select>\n  </mat-form-field>\n</div>\n\n<!-- #docregion tabs -->\n<div ngTabs class=\"example-tabs\">\n  <ul\n    ngTabList\n    class=\"example-tablist\"\n    [wrap]=\"wrap.value\"\n    [disabled]=\"disabled.value\"\n    [softDisabled]=\"softDisabled.value\"\n    [orientation]=\"orientation\"\n    [focusMode]=\"focusMode\"\n    [(selectedTab)]=\"tabSelection\"\n    [selectionMode]=\"selectionMode\"\n  >\n    <li ngTab value=\"tab-1\" class=\"example-tab\">tab 1</li>\n    <li ngTab value=\"tab-2\" class=\"example-tab\" disabled=\"true\">tab 2</li>\n    <li ngTab value=\"tab-3\" class=\"example-tab\">tab 3</li>\n  </ul>\n\n  <div ngTabPanel value=\"tab-1\" class=\"example-tabpanel\">\n    <ng-template ngTabContent>Tabpanel 1</ng-template>\n  </div>\n  <div ngTabPanel value=\"tab-2\" class=\"example-tabpanel\">\n    <ng-template ngTabContent>Tabpanel 2</ng-template>\n  </div>\n  <div ngTabPanel value=\"tab-3\" class=\"example-tabpanel\">\n    <ng-template ngTabContent>Tabpanel 3</ng-template>\n  </div>\n</div>\n<!-- #enddocregion tabs -->\n",
       styles: [".example-tablist-controls {\n  display: flex;\n  flex-wrap: wrap;\n  align-items: center;\n  gap: 16px;\n  padding-bottom: 16px;\n}\n\n.example-tabs {\n  border: 1px solid var(--mat-sys-outline);\n  min-height: 30vh;\n}\n\n.example-tabs:has(ul[aria-orientation='vertical']) {\n  display: flex;\n}\n\n.example-tablist {\n  gap: 8px;\n  margin: 0;\n  padding: 8px;\n  max-height: 50vh;\n  border-bottom: 1px solid var(--mat-sys-outline);\n  border-radius: var(--mat-sys-corner-extra-small);\n  display: flex;\n  list-style: none;\n  flex-direction: row;\n  justify-content: center;\n}\n\n.example-tablist[aria-orientation='vertical'] {\n  flex-direction: column;\n  border-bottom: initial;\n  border-right: 1px solid var(--mat-sys-outline);\n  justify-content: start;\n}\n\n.example-tablist[aria-orientation='horizontal'] li::before {\n  display: none;\n}\n\n.example-tablist[aria-orientation='horizontal'] li[aria-selected='true']::before {\n  display: block;\n}\n\n.example-tablist[aria-disabled='true'] {\n  background-color: var(--mat-sys-surface-dim);\n}\n\n.example-tab {\n  gap: 16px;\n  padding: 16px;\n  display: flex;\n  cursor: pointer;\n  align-items: center;\n  border-radius: var(--mat-sys-corner-extra-small);\n}\n\n.example-tablist:focus-within .example-tab:hover,\n.example-tablist:focus-within .example-tab[data-active='true'] {\n  outline: 1px solid var(--mat-sys-outline);\n  background: var(--mat-sys-surface-container);\n}\n\n.example-tab:focus-within {\n  outline: 2px solid var(--mat-sys-primary);\n  background: var(--mat-sys-surface-container);\n}\n\n.example-tablist:focus-within .example-tab[data-active='true'] {\n  background-color: var(--mat-sys-secondary-container);\n}\n\n.example-tab[aria-disabled='true'] {\n  background-color: var(--mat-sys-surface-dim);\n}\n\n.example-tabpanel {\n  margin: 8px;\n}\n"]
     }]
   }]
@@ -166,14 +166,14 @@ class TabsExplicitSelectionExample {
       kind: "directive",
       type: TabList,
       selector: "[ngTabList]",
-      inputs: ["orientation", "wrap", "softDisabled", "focusMode", "selectionMode", "disabled", "selectedTab"],
+      inputs: ["orientation", "wrap", "softDisabled", "focusMode", "selectionMode", "selectedTab", "disabled"],
       outputs: ["selectedTabChange"],
       exportAs: ["ngTabList"]
     }, {
       kind: "directive",
       type: Tab,
       selector: "[ngTab]",
-      inputs: ["disabled", "value"],
+      inputs: ["id", "disabled", "value"],
       exportAs: ["ngTab"]
     }, {
       kind: "directive",
@@ -232,14 +232,14 @@ class TabsSelectionFollowsFocusExample {
       kind: "directive",
       type: TabList,
       selector: "[ngTabList]",
-      inputs: ["orientation", "wrap", "softDisabled", "focusMode", "selectionMode", "disabled", "selectedTab"],
+      inputs: ["orientation", "wrap", "softDisabled", "focusMode", "selectionMode", "selectedTab", "disabled"],
       outputs: ["selectedTabChange"],
       exportAs: ["ngTabList"]
     }, {
       kind: "directive",
       type: Tab,
       selector: "[ngTab]",
-      inputs: ["disabled", "value"],
+      inputs: ["id", "disabled", "value"],
       exportAs: ["ngTab"]
     }, {
       kind: "directive",
@@ -298,14 +298,14 @@ class TabsVerticalExample {
       kind: "directive",
       type: TabList,
       selector: "[ngTabList]",
-      inputs: ["orientation", "wrap", "softDisabled", "focusMode", "selectionMode", "disabled", "selectedTab"],
+      inputs: ["orientation", "wrap", "softDisabled", "focusMode", "selectionMode", "selectedTab", "disabled"],
       outputs: ["selectedTabChange"],
       exportAs: ["ngTabList"]
     }, {
       kind: "directive",
       type: Tab,
       selector: "[ngTab]",
-      inputs: ["disabled", "value"],
+      inputs: ["id", "disabled", "value"],
       exportAs: ["ngTab"]
     }, {
       kind: "directive",
@@ -365,14 +365,14 @@ class TabsRtlExample {
       kind: "directive",
       type: TabList,
       selector: "[ngTabList]",
-      inputs: ["orientation", "wrap", "softDisabled", "focusMode", "selectionMode", "disabled", "selectedTab"],
+      inputs: ["orientation", "wrap", "softDisabled", "focusMode", "selectionMode", "selectedTab", "disabled"],
       outputs: ["selectedTabChange"],
       exportAs: ["ngTabList"]
     }, {
       kind: "directive",
       type: Tab,
       selector: "[ngTab]",
-      inputs: ["disabled", "value"],
+      inputs: ["id", "disabled", "value"],
       exportAs: ["ngTab"]
     }, {
       kind: "directive",
@@ -438,14 +438,14 @@ class TabsActiveDescendantExample {
       kind: "directive",
       type: TabList,
       selector: "[ngTabList]",
-      inputs: ["orientation", "wrap", "softDisabled", "focusMode", "selectionMode", "disabled", "selectedTab"],
+      inputs: ["orientation", "wrap", "softDisabled", "focusMode", "selectionMode", "selectedTab", "disabled"],
       outputs: ["selectedTabChange"],
       exportAs: ["ngTabList"]
     }, {
       kind: "directive",
       type: Tab,
       selector: "[ngTab]",
-      inputs: ["disabled", "value"],
+      inputs: ["id", "disabled", "value"],
       exportAs: ["ngTab"]
     }, {
       kind: "directive",
@@ -504,14 +504,14 @@ class TabsDisabledFocusableExample {
       kind: "directive",
       type: TabList,
       selector: "[ngTabList]",
-      inputs: ["orientation", "wrap", "softDisabled", "focusMode", "selectionMode", "disabled", "selectedTab"],
+      inputs: ["orientation", "wrap", "softDisabled", "focusMode", "selectionMode", "selectedTab", "disabled"],
       outputs: ["selectedTabChange"],
       exportAs: ["ngTabList"]
     }, {
       kind: "directive",
       type: Tab,
       selector: "[ngTab]",
-      inputs: ["disabled", "value"],
+      inputs: ["id", "disabled", "value"],
       exportAs: ["ngTab"]
     }, {
       kind: "directive",
@@ -570,14 +570,14 @@ class TabsDisabledSkippedExample {
       kind: "directive",
       type: TabList,
       selector: "[ngTabList]",
-      inputs: ["orientation", "wrap", "softDisabled", "focusMode", "selectionMode", "disabled", "selectedTab"],
+      inputs: ["orientation", "wrap", "softDisabled", "focusMode", "selectionMode", "selectedTab", "disabled"],
       outputs: ["selectedTabChange"],
       exportAs: ["ngTabList"]
     }, {
       kind: "directive",
       type: Tab,
       selector: "[ngTab]",
-      inputs: ["disabled", "value"],
+      inputs: ["id", "disabled", "value"],
       exportAs: ["ngTab"]
     }, {
       kind: "directive",
@@ -636,14 +636,14 @@ class TabsDisabledExample {
       kind: "directive",
       type: TabList,
       selector: "[ngTabList]",
-      inputs: ["orientation", "wrap", "softDisabled", "focusMode", "selectionMode", "disabled", "selectedTab"],
+      inputs: ["orientation", "wrap", "softDisabled", "focusMode", "selectionMode", "selectedTab", "disabled"],
       outputs: ["selectedTabChange"],
       exportAs: ["ngTabList"]
     }, {
       kind: "directive",
       type: Tab,
       selector: "[ngTab]",
-      inputs: ["disabled", "value"],
+      inputs: ["id", "disabled", "value"],
       exportAs: ["ngTab"]
     }, {
       kind: "directive",
