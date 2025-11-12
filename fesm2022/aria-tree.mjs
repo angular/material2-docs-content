@@ -23,7 +23,8 @@ const NODES = [{
   }, {
     name: 'styles.css',
     value: 'public/styles.css'
-  }]
+  }],
+  expanded: false
 }, {
   name: 'src',
   value: 'src',
@@ -40,24 +41,28 @@ const NODES = [{
     }, {
       name: 'app.css',
       value: 'src/app/app.css'
-    }]
+    }],
+    expanded: false
   }, {
     name: 'assets',
     value: 'src/assets',
     children: [{
       name: 'logo.png',
       value: 'src/assets/logo.png'
-    }]
+    }],
+    expanded: false
   }, {
     name: 'environments',
     value: 'src/environments',
     children: [{
       name: 'environment.prod.ts',
-      value: 'src/environments/environment.prod.ts'
+      value: 'src/environments/environment.prod.ts',
+      expanded: false
     }, {
       name: 'environment.ts',
       value: 'src/environments/environment.ts'
-    }]
+    }],
+    expanded: false
   }, {
     name: 'main.ts',
     value: 'src/main.ts'
@@ -71,7 +76,8 @@ const NODES = [{
   }, {
     name: 'test.ts',
     value: 'src/test.ts'
-  }]
+  }],
+  expanded: false
 }, {
   name: 'angular.json',
   value: 'angular.json'
@@ -132,7 +138,7 @@ class TreeConfigurableExample {
       selectedValues: "selectedValuesChange"
     },
     ngImport: i0,
-    template: "<div class=\"example-tree-controls\">\n  <mat-checkbox [formControl]=\"wrap\">Wrap</mat-checkbox>\n  <mat-checkbox [formControl]=\"multi\">Multi</mat-checkbox>\n  <mat-checkbox [formControl]=\"disabled\">Disabled</mat-checkbox>\n  <mat-checkbox [formControl]=\"softDisabled\">Soft Disabled</mat-checkbox>\n  <mat-checkbox [formControl]=\"nav\">Nav Mode</mat-checkbox>\n\n  <mat-form-field subscriptSizing=\"dynamic\" appearance=\"outline\">\n    <mat-label>Selection Strategy</mat-label>\n    <mat-select [(value)]=\"selectionMode\">\n      <mat-option value=\"explicit\">Explicit</mat-option>\n      <mat-option value=\"follow\">Follow</mat-option>\n    </mat-select>\n  </mat-form-field>\n\n  <mat-form-field subscriptSizing=\"dynamic\" appearance=\"outline\">\n    <mat-label>Focus Strategy</mat-label>\n    <mat-select [(value)]=\"focusMode\">\n      <mat-option value=\"roving\">Roving</mat-option>\n      <mat-option value=\"activedescendant\">Active Descendant</mat-option>\n    </mat-select>\n  </mat-form-field>\n</div>\n\n<div class=\"example-tree-output\">\n  <strong>Selected Values:</strong> {{ selectedValues().join(', ') || 'None' }}\n</div>\n\n<ul\n  ngTree\n  class=\"example-tree\"\n  [multi]=\"multi.value\"\n  [disabled]=\"disabled.value\"\n  [selectionMode]=\"selectionMode\"\n  [focusMode]=\"focusMode\"\n  [wrap]=\"wrap.value\"\n  [softDisabled]=\"softDisabled.value\"\n  [nav]=\"nav.value\"\n  [(values)]=\"selectedValues\"\n  #tree=\"ngTree\"\n>\n  <ng-template\n    [ngTemplateOutlet]=\"treeNodes\"\n    [ngTemplateOutletContext]=\"{nodes: nodes, parent: tree}\"\n  />\n</ul>\n\n<ng-template #treeNodes let-nodes=\"nodes\" let-parent=\"parent\">\n  @for (node of nodes; track node.value) {\n    @if (nav.value) {\n      <li role=\"none\" style=\"list-style: none\">\n        <a\n          ngTreeItem\n          [parent]=\"parent\"\n          [value]=\"node.value\"\n          [label]=\"node.name\"\n          [disabled]=\"node.disabled\"\n          [selectable]=\"!node.children\"\n          #treeItem=\"ngTreeItem\"\n          class=\"example-tree-item example-selectable example-stateful\"\n          [attr.href]=\"!!node.children ? null : '/aria-tree#' + node.name\"\n        >\n          <span\n            aria-hidden=\"true\"\n            class=\"material-symbols-outlined example-parent-icon example-icon\"\n            >{{node.children ? 'chevron_right' : ''}}</span\n          >\n          <span\n            aria-hidden=\"true\"\n            class=\"material-symbols-outlined example-icon\"\n            >{{node.children ? 'folder' : 'docs'}}</span\n          >\n          {{ node.name }}\n          <span\n            aria-hidden=\"true\"\n            class=\"material-symbols-outlined example-selected-icon example-icon\"\n            >check</span\n          >\n        </a>\n      </li>\n\n      @if (node.children) {\n        <ul role=\"group\">\n          <ng-template ngTreeItemGroup [ownedBy]=\"treeItem\" #group=\"ngTreeItemGroup\">\n            <ng-template\n              [ngTemplateOutlet]=\"treeNodes\"\n              [ngTemplateOutletContext]=\"{nodes: node.children, parent: group}\"\n            />\n          </ng-template>\n        </ul>\n      }\n    } @else {\n      <li\n        ngTreeItem\n        [parent]=\"parent\"\n        [value]=\"node.value\"\n        [label]=\"node.name\"\n        [disabled]=\"node.disabled\"\n        #treeItem=\"ngTreeItem\"\n        class=\"example-tree-item example-selectable example-stateful\"\n      >\n        <span\n          aria-hidden=\"true\"\n          class=\"material-symbols-outlined example-parent-icon example-icon\"\n          >{{node.children ? 'chevron_right' : ''}}</span\n        >\n        <span\n          aria-hidden=\"true\"\n          class=\"material-symbols-outlined example-icon\"\n          >{{node.children ? 'folder' : 'docs'}}</span\n        >\n        {{ node.name }}\n        <span\n          aria-hidden=\"true\"\n          class=\"material-symbols-outlined example-selected-icon example-icon\"\n          >check</span\n        >\n      </li>\n\n      @if (node.children) {\n        <ul role=\"group\">\n          <ng-template ngTreeItemGroup [ownedBy]=\"treeItem\" #group=\"ngTreeItemGroup\">\n            <ng-template\n              [ngTemplateOutlet]=\"treeNodes\"\n              [ngTemplateOutletContext]=\"{nodes: node.children, parent: group}\"\n            />\n          </ng-template>\n        </ul>\n      }\n    }\n  }\n</ng-template>\n",
+    template: "<div class=\"example-tree-controls\">\n  <mat-checkbox [formControl]=\"wrap\">Wrap</mat-checkbox>\n  <mat-checkbox [formControl]=\"multi\">Multi</mat-checkbox>\n  <mat-checkbox [formControl]=\"disabled\">Disabled</mat-checkbox>\n  <mat-checkbox [formControl]=\"softDisabled\">Soft Disabled</mat-checkbox>\n  <mat-checkbox [formControl]=\"nav\">Nav Mode</mat-checkbox>\n\n  <mat-form-field subscriptSizing=\"dynamic\" appearance=\"outline\">\n    <mat-label>Selection Strategy</mat-label>\n    <mat-select [(value)]=\"selectionMode\">\n      <mat-option value=\"explicit\">Explicit</mat-option>\n      <mat-option value=\"follow\">Follow</mat-option>\n    </mat-select>\n  </mat-form-field>\n\n  <mat-form-field subscriptSizing=\"dynamic\" appearance=\"outline\">\n    <mat-label>Focus Strategy</mat-label>\n    <mat-select [(value)]=\"focusMode\">\n      <mat-option value=\"roving\">Roving</mat-option>\n      <mat-option value=\"activedescendant\">Active Descendant</mat-option>\n    </mat-select>\n  </mat-form-field>\n</div>\n\n<div class=\"example-tree-output\">\n  <strong>Selected Values:</strong> {{ selectedValues().join(', ') || 'None' }}\n</div>\n\n<ul\n  ngTree\n  class=\"example-tree\"\n  [multi]=\"multi.value\"\n  [disabled]=\"disabled.value\"\n  [selectionMode]=\"selectionMode\"\n  [focusMode]=\"focusMode\"\n  [wrap]=\"wrap.value\"\n  [softDisabled]=\"softDisabled.value\"\n  [nav]=\"nav.value\"\n  [(values)]=\"selectedValues\"\n  #tree=\"ngTree\"\n>\n  <ng-template\n    [ngTemplateOutlet]=\"treeNodes\"\n    [ngTemplateOutletContext]=\"{nodes: nodes, parent: tree}\"\n  />\n</ul>\n\n<ng-template #treeNodes let-nodes=\"nodes\" let-parent=\"parent\">\n  @for (node of nodes; track node.value) {\n    @if (nav.value) {\n      <li role=\"none\" style=\"list-style: none\">\n        <a\n          ngTreeItem\n          [parent]=\"parent\"\n          [value]=\"node.value\"\n          [label]=\"node.name\"\n          [disabled]=\"node.disabled\"\n          [selectable]=\"!node.children\"\n          #treeItem=\"ngTreeItem\"\n          class=\"example-tree-item example-selectable example-stateful\"\n          [attr.href]=\"!!node.children ? null : '/aria-tree#' + node.name\"\n        >\n          <span\n            aria-hidden=\"true\"\n            class=\"material-symbols-outlined example-parent-icon example-icon\"\n            >{{node.children ? 'chevron_right' : ''}}</span\n          >\n          <span\n            aria-hidden=\"true\"\n            class=\"material-symbols-outlined example-icon\"\n            >{{node.children ? 'folder' : 'docs'}}</span\n          >\n          {{ node.name }}\n          <span\n            aria-hidden=\"true\"\n            class=\"material-symbols-outlined example-selected-icon example-icon\"\n            >check</span\n          >\n        </a>\n      </li>\n\n      @if (node.children) {\n        <ul role=\"group\">\n          <ng-template ngTreeItemGroup [ownedBy]=\"treeItem\" #group=\"ngTreeItemGroup\">\n            <ng-template\n              [ngTemplateOutlet]=\"treeNodes\"\n              [ngTemplateOutletContext]=\"{nodes: node.children, parent: group}\"\n            />\n          </ng-template>\n        </ul>\n      }\n    } @else {\n      <li\n        ngTreeItem\n        [parent]=\"parent\"\n        [value]=\"node.value\"\n        [label]=\"node.name\"\n        [disabled]=\"node.disabled\"\n        [(expanded)]=\"node.expanded\"\n        #treeItem=\"ngTreeItem\"\n        class=\"example-tree-item example-selectable example-stateful\"\n      >\n        <span\n          aria-hidden=\"true\"\n          class=\"material-symbols-outlined example-parent-icon example-icon\"\n          >{{node.children ? 'chevron_right' : ''}}</span\n        >\n        <span\n          aria-hidden=\"true\"\n          class=\"material-symbols-outlined example-icon\"\n          >{{node.children ? 'folder' : 'docs'}}</span\n        >\n        {{ node.name }}\n        <span\n          aria-hidden=\"true\"\n          class=\"material-symbols-outlined example-selected-icon example-icon\"\n          >check</span\n        >\n      </li>\n\n      @if (node.children) {\n        <ul role=\"group\">\n          <ng-template ngTreeItemGroup [ownedBy]=\"treeItem\" #group=\"ngTreeItemGroup\">\n            <ng-template\n              [ngTemplateOutlet]=\"treeNodes\"\n              [ngTemplateOutletContext]=\"{nodes: node.children, parent: group}\"\n            />\n          </ng-template>\n        </ul>\n      }\n    }\n  }\n</ng-template>\n",
     styles: [".example-tree-controls {\n  display: flex;\n  flex-wrap: wrap;\n  align-items: center;\n  gap: 16px;\n  margin-bottom: 16px;\n}\n\n.example-tree-output {\n  padding: 10px;\n  margin-bottom: 16px;\n  border: 1px solid var(--mat-sys-outline);\n  border-radius: var(--mat-sys-corner-extra-small);\n}\n\n.example-tree {\n  padding: 10px;\n  border: 1px solid var(--mat-sys-outline);\n  border-radius: var(--mat-sys-corner-extra-small);\n  overflow-x: scroll;\n  min-width: 24rem;\n}\n\n.example-tree-item {\n  cursor: pointer;\n  list-style: none;\n  text-decoration: none;\n  display: flex;\n  align-items: center;\n  gap: 1rem;\n  padding: 0.3rem 1rem;\n}\n\n.example-icon {\n  margin: 0;\n  width: 24px;\n}\n\n.example-parent-icon {\n  transition: transform 0.2s ease;\n}\n\n.example-tree-item[aria-expanded='true'] .example-parent-icon {\n  transform: rotate(90deg);\n}\n\n.example-selected-icon {\n  visibility: hidden;\n  margin-left: auto;\n}\n\n.example-tree-item[aria-current] .example-selected-icon,\n.example-tree-item[aria-selected='true'] .example-selected-icon {\n  visibility: visible;\n}\n\nli[aria-expanded='false'] + ul[role='group'] {\n  display: none;\n}\n"],
     dependencies: [{
       kind: "ngmodule",
@@ -200,14 +206,15 @@ class TreeConfigurableExample {
       kind: "directive",
       type: Tree,
       selector: "[ngTree]",
-      inputs: ["orientation", "multi", "disabled", "selectionMode", "focusMode", "wrap", "softDisabled", "typeaheadDelay", "values", "nav", "currentType"],
+      inputs: ["id", "orientation", "multi", "disabled", "selectionMode", "focusMode", "wrap", "softDisabled", "typeaheadDelay", "values", "nav", "currentType"],
       outputs: ["valuesChange"],
       exportAs: ["ngTree"]
     }, {
       kind: "directive",
       type: TreeItem,
       selector: "[ngTreeItem]",
-      inputs: ["value", "parent", "disabled", "selectable", "label"],
+      inputs: ["id", "value", "parent", "disabled", "selectable", "expanded", "label"],
+      outputs: ["expandedChange"],
       exportAs: ["ngTreeItem"]
     }, {
       kind: "directive",
@@ -228,7 +235,7 @@ i0.ɵɵngDeclareClassMetadata({
     args: [{
       selector: 'tree-configurable-example',
       imports: [FormsModule, ReactiveFormsModule, MatCheckboxModule, MatFormFieldModule, MatSelectModule, NgTemplateOutlet, Tree, TreeItem, TreeItemGroup],
-      template: "<div class=\"example-tree-controls\">\n  <mat-checkbox [formControl]=\"wrap\">Wrap</mat-checkbox>\n  <mat-checkbox [formControl]=\"multi\">Multi</mat-checkbox>\n  <mat-checkbox [formControl]=\"disabled\">Disabled</mat-checkbox>\n  <mat-checkbox [formControl]=\"softDisabled\">Soft Disabled</mat-checkbox>\n  <mat-checkbox [formControl]=\"nav\">Nav Mode</mat-checkbox>\n\n  <mat-form-field subscriptSizing=\"dynamic\" appearance=\"outline\">\n    <mat-label>Selection Strategy</mat-label>\n    <mat-select [(value)]=\"selectionMode\">\n      <mat-option value=\"explicit\">Explicit</mat-option>\n      <mat-option value=\"follow\">Follow</mat-option>\n    </mat-select>\n  </mat-form-field>\n\n  <mat-form-field subscriptSizing=\"dynamic\" appearance=\"outline\">\n    <mat-label>Focus Strategy</mat-label>\n    <mat-select [(value)]=\"focusMode\">\n      <mat-option value=\"roving\">Roving</mat-option>\n      <mat-option value=\"activedescendant\">Active Descendant</mat-option>\n    </mat-select>\n  </mat-form-field>\n</div>\n\n<div class=\"example-tree-output\">\n  <strong>Selected Values:</strong> {{ selectedValues().join(', ') || 'None' }}\n</div>\n\n<ul\n  ngTree\n  class=\"example-tree\"\n  [multi]=\"multi.value\"\n  [disabled]=\"disabled.value\"\n  [selectionMode]=\"selectionMode\"\n  [focusMode]=\"focusMode\"\n  [wrap]=\"wrap.value\"\n  [softDisabled]=\"softDisabled.value\"\n  [nav]=\"nav.value\"\n  [(values)]=\"selectedValues\"\n  #tree=\"ngTree\"\n>\n  <ng-template\n    [ngTemplateOutlet]=\"treeNodes\"\n    [ngTemplateOutletContext]=\"{nodes: nodes, parent: tree}\"\n  />\n</ul>\n\n<ng-template #treeNodes let-nodes=\"nodes\" let-parent=\"parent\">\n  @for (node of nodes; track node.value) {\n    @if (nav.value) {\n      <li role=\"none\" style=\"list-style: none\">\n        <a\n          ngTreeItem\n          [parent]=\"parent\"\n          [value]=\"node.value\"\n          [label]=\"node.name\"\n          [disabled]=\"node.disabled\"\n          [selectable]=\"!node.children\"\n          #treeItem=\"ngTreeItem\"\n          class=\"example-tree-item example-selectable example-stateful\"\n          [attr.href]=\"!!node.children ? null : '/aria-tree#' + node.name\"\n        >\n          <span\n            aria-hidden=\"true\"\n            class=\"material-symbols-outlined example-parent-icon example-icon\"\n            >{{node.children ? 'chevron_right' : ''}}</span\n          >\n          <span\n            aria-hidden=\"true\"\n            class=\"material-symbols-outlined example-icon\"\n            >{{node.children ? 'folder' : 'docs'}}</span\n          >\n          {{ node.name }}\n          <span\n            aria-hidden=\"true\"\n            class=\"material-symbols-outlined example-selected-icon example-icon\"\n            >check</span\n          >\n        </a>\n      </li>\n\n      @if (node.children) {\n        <ul role=\"group\">\n          <ng-template ngTreeItemGroup [ownedBy]=\"treeItem\" #group=\"ngTreeItemGroup\">\n            <ng-template\n              [ngTemplateOutlet]=\"treeNodes\"\n              [ngTemplateOutletContext]=\"{nodes: node.children, parent: group}\"\n            />\n          </ng-template>\n        </ul>\n      }\n    } @else {\n      <li\n        ngTreeItem\n        [parent]=\"parent\"\n        [value]=\"node.value\"\n        [label]=\"node.name\"\n        [disabled]=\"node.disabled\"\n        #treeItem=\"ngTreeItem\"\n        class=\"example-tree-item example-selectable example-stateful\"\n      >\n        <span\n          aria-hidden=\"true\"\n          class=\"material-symbols-outlined example-parent-icon example-icon\"\n          >{{node.children ? 'chevron_right' : ''}}</span\n        >\n        <span\n          aria-hidden=\"true\"\n          class=\"material-symbols-outlined example-icon\"\n          >{{node.children ? 'folder' : 'docs'}}</span\n        >\n        {{ node.name }}\n        <span\n          aria-hidden=\"true\"\n          class=\"material-symbols-outlined example-selected-icon example-icon\"\n          >check</span\n        >\n      </li>\n\n      @if (node.children) {\n        <ul role=\"group\">\n          <ng-template ngTreeItemGroup [ownedBy]=\"treeItem\" #group=\"ngTreeItemGroup\">\n            <ng-template\n              [ngTemplateOutlet]=\"treeNodes\"\n              [ngTemplateOutletContext]=\"{nodes: node.children, parent: group}\"\n            />\n          </ng-template>\n        </ul>\n      }\n    }\n  }\n</ng-template>\n",
+      template: "<div class=\"example-tree-controls\">\n  <mat-checkbox [formControl]=\"wrap\">Wrap</mat-checkbox>\n  <mat-checkbox [formControl]=\"multi\">Multi</mat-checkbox>\n  <mat-checkbox [formControl]=\"disabled\">Disabled</mat-checkbox>\n  <mat-checkbox [formControl]=\"softDisabled\">Soft Disabled</mat-checkbox>\n  <mat-checkbox [formControl]=\"nav\">Nav Mode</mat-checkbox>\n\n  <mat-form-field subscriptSizing=\"dynamic\" appearance=\"outline\">\n    <mat-label>Selection Strategy</mat-label>\n    <mat-select [(value)]=\"selectionMode\">\n      <mat-option value=\"explicit\">Explicit</mat-option>\n      <mat-option value=\"follow\">Follow</mat-option>\n    </mat-select>\n  </mat-form-field>\n\n  <mat-form-field subscriptSizing=\"dynamic\" appearance=\"outline\">\n    <mat-label>Focus Strategy</mat-label>\n    <mat-select [(value)]=\"focusMode\">\n      <mat-option value=\"roving\">Roving</mat-option>\n      <mat-option value=\"activedescendant\">Active Descendant</mat-option>\n    </mat-select>\n  </mat-form-field>\n</div>\n\n<div class=\"example-tree-output\">\n  <strong>Selected Values:</strong> {{ selectedValues().join(', ') || 'None' }}\n</div>\n\n<ul\n  ngTree\n  class=\"example-tree\"\n  [multi]=\"multi.value\"\n  [disabled]=\"disabled.value\"\n  [selectionMode]=\"selectionMode\"\n  [focusMode]=\"focusMode\"\n  [wrap]=\"wrap.value\"\n  [softDisabled]=\"softDisabled.value\"\n  [nav]=\"nav.value\"\n  [(values)]=\"selectedValues\"\n  #tree=\"ngTree\"\n>\n  <ng-template\n    [ngTemplateOutlet]=\"treeNodes\"\n    [ngTemplateOutletContext]=\"{nodes: nodes, parent: tree}\"\n  />\n</ul>\n\n<ng-template #treeNodes let-nodes=\"nodes\" let-parent=\"parent\">\n  @for (node of nodes; track node.value) {\n    @if (nav.value) {\n      <li role=\"none\" style=\"list-style: none\">\n        <a\n          ngTreeItem\n          [parent]=\"parent\"\n          [value]=\"node.value\"\n          [label]=\"node.name\"\n          [disabled]=\"node.disabled\"\n          [selectable]=\"!node.children\"\n          #treeItem=\"ngTreeItem\"\n          class=\"example-tree-item example-selectable example-stateful\"\n          [attr.href]=\"!!node.children ? null : '/aria-tree#' + node.name\"\n        >\n          <span\n            aria-hidden=\"true\"\n            class=\"material-symbols-outlined example-parent-icon example-icon\"\n            >{{node.children ? 'chevron_right' : ''}}</span\n          >\n          <span\n            aria-hidden=\"true\"\n            class=\"material-symbols-outlined example-icon\"\n            >{{node.children ? 'folder' : 'docs'}}</span\n          >\n          {{ node.name }}\n          <span\n            aria-hidden=\"true\"\n            class=\"material-symbols-outlined example-selected-icon example-icon\"\n            >check</span\n          >\n        </a>\n      </li>\n\n      @if (node.children) {\n        <ul role=\"group\">\n          <ng-template ngTreeItemGroup [ownedBy]=\"treeItem\" #group=\"ngTreeItemGroup\">\n            <ng-template\n              [ngTemplateOutlet]=\"treeNodes\"\n              [ngTemplateOutletContext]=\"{nodes: node.children, parent: group}\"\n            />\n          </ng-template>\n        </ul>\n      }\n    } @else {\n      <li\n        ngTreeItem\n        [parent]=\"parent\"\n        [value]=\"node.value\"\n        [label]=\"node.name\"\n        [disabled]=\"node.disabled\"\n        [(expanded)]=\"node.expanded\"\n        #treeItem=\"ngTreeItem\"\n        class=\"example-tree-item example-selectable example-stateful\"\n      >\n        <span\n          aria-hidden=\"true\"\n          class=\"material-symbols-outlined example-parent-icon example-icon\"\n          >{{node.children ? 'chevron_right' : ''}}</span\n        >\n        <span\n          aria-hidden=\"true\"\n          class=\"material-symbols-outlined example-icon\"\n          >{{node.children ? 'folder' : 'docs'}}</span\n        >\n        {{ node.name }}\n        <span\n          aria-hidden=\"true\"\n          class=\"material-symbols-outlined example-selected-icon example-icon\"\n          >check</span\n        >\n      </li>\n\n      @if (node.children) {\n        <ul role=\"group\">\n          <ng-template ngTreeItemGroup [ownedBy]=\"treeItem\" #group=\"ngTreeItemGroup\">\n            <ng-template\n              [ngTemplateOutlet]=\"treeNodes\"\n              [ngTemplateOutletContext]=\"{nodes: node.children, parent: group}\"\n            />\n          </ng-template>\n        </ul>\n      }\n    }\n  }\n</ng-template>\n",
       styles: [".example-tree-controls {\n  display: flex;\n  flex-wrap: wrap;\n  align-items: center;\n  gap: 16px;\n  margin-bottom: 16px;\n}\n\n.example-tree-output {\n  padding: 10px;\n  margin-bottom: 16px;\n  border: 1px solid var(--mat-sys-outline);\n  border-radius: var(--mat-sys-corner-extra-small);\n}\n\n.example-tree {\n  padding: 10px;\n  border: 1px solid var(--mat-sys-outline);\n  border-radius: var(--mat-sys-corner-extra-small);\n  overflow-x: scroll;\n  min-width: 24rem;\n}\n\n.example-tree-item {\n  cursor: pointer;\n  list-style: none;\n  text-decoration: none;\n  display: flex;\n  align-items: center;\n  gap: 1rem;\n  padding: 0.3rem 1rem;\n}\n\n.example-icon {\n  margin: 0;\n  width: 24px;\n}\n\n.example-parent-icon {\n  transition: transform 0.2s ease;\n}\n\n.example-tree-item[aria-expanded='true'] .example-parent-icon {\n  transform: rotate(90deg);\n}\n\n.example-selected-icon {\n  visibility: hidden;\n  margin-left: auto;\n}\n\n.example-tree-item[aria-current] .example-selected-icon,\n.example-tree-item[aria-selected='true'] .example-selected-icon {\n  visibility: visible;\n}\n\nli[aria-expanded='false'] + ul[role='group'] {\n  display: none;\n}\n"]
     }]
   }]
@@ -257,14 +264,15 @@ class TreeActiveDescendantExample {
       kind: "directive",
       type: Tree,
       selector: "[ngTree]",
-      inputs: ["orientation", "multi", "disabled", "selectionMode", "focusMode", "wrap", "softDisabled", "typeaheadDelay", "values", "nav", "currentType"],
+      inputs: ["id", "orientation", "multi", "disabled", "selectionMode", "focusMode", "wrap", "softDisabled", "typeaheadDelay", "values", "nav", "currentType"],
       outputs: ["valuesChange"],
       exportAs: ["ngTree"]
     }, {
       kind: "directive",
       type: TreeItem,
       selector: "[ngTreeItem]",
-      inputs: ["value", "parent", "disabled", "selectable", "label"],
+      inputs: ["id", "value", "parent", "disabled", "selectable", "expanded", "label"],
+      outputs: ["expandedChange"],
       exportAs: ["ngTreeItem"]
     }, {
       kind: "directive",
@@ -319,14 +327,15 @@ class TreeDisabledExample {
       kind: "directive",
       type: Tree,
       selector: "[ngTree]",
-      inputs: ["orientation", "multi", "disabled", "selectionMode", "focusMode", "wrap", "softDisabled", "typeaheadDelay", "values", "nav", "currentType"],
+      inputs: ["id", "orientation", "multi", "disabled", "selectionMode", "focusMode", "wrap", "softDisabled", "typeaheadDelay", "values", "nav", "currentType"],
       outputs: ["valuesChange"],
       exportAs: ["ngTree"]
     }, {
       kind: "directive",
       type: TreeItem,
       selector: "[ngTreeItem]",
-      inputs: ["value", "parent", "disabled", "selectable", "label"],
+      inputs: ["id", "value", "parent", "disabled", "selectable", "expanded", "label"],
+      outputs: ["expandedChange"],
       exportAs: ["ngTreeItem"]
     }, {
       kind: "directive",
@@ -381,14 +390,15 @@ class TreeDisabledFocusableExample {
       kind: "directive",
       type: Tree,
       selector: "[ngTree]",
-      inputs: ["orientation", "multi", "disabled", "selectionMode", "focusMode", "wrap", "softDisabled", "typeaheadDelay", "values", "nav", "currentType"],
+      inputs: ["id", "orientation", "multi", "disabled", "selectionMode", "focusMode", "wrap", "softDisabled", "typeaheadDelay", "values", "nav", "currentType"],
       outputs: ["valuesChange"],
       exportAs: ["ngTree"]
     }, {
       kind: "directive",
       type: TreeItem,
       selector: "[ngTreeItem]",
-      inputs: ["value", "parent", "disabled", "selectable", "label"],
+      inputs: ["id", "value", "parent", "disabled", "selectable", "expanded", "label"],
+      outputs: ["expandedChange"],
       exportAs: ["ngTreeItem"]
     }, {
       kind: "directive",
@@ -443,14 +453,15 @@ class TreeDisabledSkippedExample {
       kind: "directive",
       type: Tree,
       selector: "[ngTree]",
-      inputs: ["orientation", "multi", "disabled", "selectionMode", "focusMode", "wrap", "softDisabled", "typeaheadDelay", "values", "nav", "currentType"],
+      inputs: ["id", "orientation", "multi", "disabled", "selectionMode", "focusMode", "wrap", "softDisabled", "typeaheadDelay", "values", "nav", "currentType"],
       outputs: ["valuesChange"],
       exportAs: ["ngTree"]
     }, {
       kind: "directive",
       type: TreeItem,
       selector: "[ngTreeItem]",
-      inputs: ["value", "parent", "disabled", "selectable", "label"],
+      inputs: ["id", "value", "parent", "disabled", "selectable", "expanded", "label"],
+      outputs: ["expandedChange"],
       exportAs: ["ngTreeItem"]
     }, {
       kind: "directive",
@@ -505,14 +516,15 @@ class TreeMultiSelectExample {
       kind: "directive",
       type: Tree,
       selector: "[ngTree]",
-      inputs: ["orientation", "multi", "disabled", "selectionMode", "focusMode", "wrap", "softDisabled", "typeaheadDelay", "values", "nav", "currentType"],
+      inputs: ["id", "orientation", "multi", "disabled", "selectionMode", "focusMode", "wrap", "softDisabled", "typeaheadDelay", "values", "nav", "currentType"],
       outputs: ["valuesChange"],
       exportAs: ["ngTree"]
     }, {
       kind: "directive",
       type: TreeItem,
       selector: "[ngTreeItem]",
-      inputs: ["value", "parent", "disabled", "selectable", "label"],
+      inputs: ["id", "value", "parent", "disabled", "selectable", "expanded", "label"],
+      outputs: ["expandedChange"],
       exportAs: ["ngTreeItem"]
     }, {
       kind: "directive",
@@ -567,14 +579,15 @@ class TreeMultiSelectFollowFocusExample {
       kind: "directive",
       type: Tree,
       selector: "[ngTree]",
-      inputs: ["orientation", "multi", "disabled", "selectionMode", "focusMode", "wrap", "softDisabled", "typeaheadDelay", "values", "nav", "currentType"],
+      inputs: ["id", "orientation", "multi", "disabled", "selectionMode", "focusMode", "wrap", "softDisabled", "typeaheadDelay", "values", "nav", "currentType"],
       outputs: ["valuesChange"],
       exportAs: ["ngTree"]
     }, {
       kind: "directive",
       type: TreeItem,
       selector: "[ngTreeItem]",
-      inputs: ["value", "parent", "disabled", "selectable", "label"],
+      inputs: ["id", "value", "parent", "disabled", "selectable", "expanded", "label"],
+      outputs: ["expandedChange"],
       exportAs: ["ngTreeItem"]
     }, {
       kind: "directive",
@@ -629,14 +642,15 @@ class TreeNavExample {
       kind: "directive",
       type: Tree,
       selector: "[ngTree]",
-      inputs: ["orientation", "multi", "disabled", "selectionMode", "focusMode", "wrap", "softDisabled", "typeaheadDelay", "values", "nav", "currentType"],
+      inputs: ["id", "orientation", "multi", "disabled", "selectionMode", "focusMode", "wrap", "softDisabled", "typeaheadDelay", "values", "nav", "currentType"],
       outputs: ["valuesChange"],
       exportAs: ["ngTree"]
     }, {
       kind: "directive",
       type: TreeItem,
       selector: "[ngTreeItem]",
-      inputs: ["value", "parent", "disabled", "selectable", "label"],
+      inputs: ["id", "value", "parent", "disabled", "selectable", "expanded", "label"],
+      outputs: ["expandedChange"],
       exportAs: ["ngTreeItem"]
     }, {
       kind: "directive",
@@ -691,14 +705,15 @@ class TreeSingleSelectExample {
       kind: "directive",
       type: Tree,
       selector: "[ngTree]",
-      inputs: ["orientation", "multi", "disabled", "selectionMode", "focusMode", "wrap", "softDisabled", "typeaheadDelay", "values", "nav", "currentType"],
+      inputs: ["id", "orientation", "multi", "disabled", "selectionMode", "focusMode", "wrap", "softDisabled", "typeaheadDelay", "values", "nav", "currentType"],
       outputs: ["valuesChange"],
       exportAs: ["ngTree"]
     }, {
       kind: "directive",
       type: TreeItem,
       selector: "[ngTreeItem]",
-      inputs: ["value", "parent", "disabled", "selectable", "label"],
+      inputs: ["id", "value", "parent", "disabled", "selectable", "expanded", "label"],
+      outputs: ["expandedChange"],
       exportAs: ["ngTreeItem"]
     }, {
       kind: "directive",
@@ -753,14 +768,15 @@ class TreeSingleSelectFollowFocusExample {
       kind: "directive",
       type: Tree,
       selector: "[ngTree]",
-      inputs: ["orientation", "multi", "disabled", "selectionMode", "focusMode", "wrap", "softDisabled", "typeaheadDelay", "values", "nav", "currentType"],
+      inputs: ["id", "orientation", "multi", "disabled", "selectionMode", "focusMode", "wrap", "softDisabled", "typeaheadDelay", "values", "nav", "currentType"],
       outputs: ["valuesChange"],
       exportAs: ["ngTree"]
     }, {
       kind: "directive",
       type: TreeItem,
       selector: "[ngTreeItem]",
-      inputs: ["value", "parent", "disabled", "selectable", "label"],
+      inputs: ["id", "value", "parent", "disabled", "selectable", "expanded", "label"],
+      outputs: ["expandedChange"],
       exportAs: ["ngTreeItem"]
     }, {
       kind: "directive",

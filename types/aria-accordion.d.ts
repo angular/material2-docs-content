@@ -1,6 +1,7 @@
 import * as i0 from '@angular/core';
 import { Signal } from '@angular/core';
 import { FormControl } from '@angular/forms';
+import { AccordionTrigger } from '@angular/aria/accordion';
 
 /** @title Configurable Accordion using UI Patterns. */
 declare class AccordionConfigurableExample {
@@ -8,51 +9,57 @@ declare class AccordionConfigurableExample {
     multi: FormControl<boolean>;
     disabled: FormControl<boolean>;
     softDisabled: FormControl<boolean>;
-    expandedIds: i0.ModelSignal<string[]>;
+    triggers: Signal<readonly AccordionTrigger[]>;
+    expandedIds: Signal<string[]>;
     items: string[];
     expansionIcon(item: string): Signal<string>;
     static ɵfac: i0.ɵɵFactoryDeclaration<AccordionConfigurableExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<AccordionConfigurableExample, "accordion-configurable-example", never, { "expandedIds": { "alias": "expandedIds"; "required": false; "isSignal": true; }; }, { "expandedIds": "expandedIdsChange"; }, never, never, true, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<AccordionConfigurableExample, "accordion-configurable-example", never, {}, {}, never, never, true, never>;
 }
 
 /** @title Accordion with single expansion. */
 declare class AccordionSingleExpansionExample {
-    expandedIds: i0.ModelSignal<string[]>;
+    triggers: Signal<readonly AccordionTrigger[]>;
+    expandedIds: Signal<string[]>;
     expansionIcon(item: string): Signal<string>;
     static ɵfac: i0.ɵɵFactoryDeclaration<AccordionSingleExpansionExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<AccordionSingleExpansionExample, "accordion-single-expansion-example", never, { "expandedIds": { "alias": "expandedIds"; "required": false; "isSignal": true; }; }, { "expandedIds": "expandedIdsChange"; }, never, never, true, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<AccordionSingleExpansionExample, "accordion-single-expansion-example", never, {}, {}, never, never, true, never>;
 }
 
 /** @title Accordion with multi-expansion. */
 declare class AccordionMultiExpansionExample {
-    expandedIds: i0.ModelSignal<string[]>;
+    triggers: Signal<readonly AccordionTrigger[]>;
+    expandedIds: Signal<string[]>;
     expansionIcon(item: string): Signal<string>;
     static ɵfac: i0.ɵɵFactoryDeclaration<AccordionMultiExpansionExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<AccordionMultiExpansionExample, "accordion-multi-expansion-example", never, { "expandedIds": { "alias": "expandedIds"; "required": false; "isSignal": true; }; }, { "expandedIds": "expandedIdsChange"; }, never, never, true, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<AccordionMultiExpansionExample, "accordion-multi-expansion-example", never, {}, {}, never, never, true, never>;
 }
 
 /** @title Accordion with focusable disabled items. */
 declare class AccordionDisabledFocusableExample {
-    expandedIds: i0.ModelSignal<string[]>;
+    triggers: Signal<readonly AccordionTrigger[]>;
+    expandedIds: Signal<string[]>;
     expansionIcon(item: string): Signal<string>;
     static ɵfac: i0.ɵɵFactoryDeclaration<AccordionDisabledFocusableExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<AccordionDisabledFocusableExample, "accordion-disabled-focusable-example", never, { "expandedIds": { "alias": "expandedIds"; "required": false; "isSignal": true; }; }, { "expandedIds": "expandedIdsChange"; }, never, never, true, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<AccordionDisabledFocusableExample, "accordion-disabled-focusable-example", never, {}, {}, never, never, true, never>;
 }
 
 /** @title Accordion with skipped disabled items. */
 declare class AccordionDisabledSkippedExample {
-    expandedIds: i0.ModelSignal<string[]>;
+    triggers: Signal<readonly AccordionTrigger[]>;
+    expandedIds: Signal<string[]>;
     expansionIcon(item: string): Signal<string>;
     static ɵfac: i0.ɵɵFactoryDeclaration<AccordionDisabledSkippedExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<AccordionDisabledSkippedExample, "accordion-disabled-skipped-example", never, { "expandedIds": { "alias": "expandedIds"; "required": false; "isSignal": true; }; }, { "expandedIds": "expandedIdsChange"; }, never, never, true, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<AccordionDisabledSkippedExample, "accordion-disabled-skipped-example", never, {}, {}, never, never, true, never>;
 }
 
 /** @title Disabled Accordion. */
 declare class AccordionDisabledExample {
-    expandedIds: i0.ModelSignal<string[]>;
+    triggers: Signal<readonly AccordionTrigger[]>;
+    expandedIds: Signal<string[]>;
     expansionIcon(item: string): Signal<string>;
     static ɵfac: i0.ɵɵFactoryDeclaration<AccordionDisabledExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<AccordionDisabledExample, "accordion-disabled-example", never, { "expandedIds": { "alias": "expandedIds"; "required": false; "isSignal": true; }; }, { "expandedIds": "expandedIdsChange"; }, never, never, true, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<AccordionDisabledExample, "accordion-disabled-example", never, {}, {}, never, never, true, never>;
 }
 
 export { AccordionConfigurableExample, AccordionDisabledExample, AccordionDisabledFocusableExample, AccordionDisabledSkippedExample, AccordionMultiExpansionExample, AccordionSingleExpansionExample };

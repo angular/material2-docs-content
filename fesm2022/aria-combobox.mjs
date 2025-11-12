@@ -1209,14 +1209,15 @@ class ComboboxTreeManualExample {
       kind: "directive",
       type: Tree,
       selector: "[ngTree]",
-      inputs: ["orientation", "multi", "disabled", "selectionMode", "focusMode", "wrap", "softDisabled", "typeaheadDelay", "values", "nav", "currentType"],
+      inputs: ["id", "orientation", "multi", "disabled", "selectionMode", "focusMode", "wrap", "softDisabled", "typeaheadDelay", "values", "nav", "currentType"],
       outputs: ["valuesChange"],
       exportAs: ["ngTree"]
     }, {
       kind: "directive",
       type: TreeItem,
       selector: "[ngTreeItem]",
-      inputs: ["value", "parent", "disabled", "selectable", "label"],
+      inputs: ["id", "value", "parent", "disabled", "selectable", "expanded", "label"],
+      outputs: ["expandedChange"],
       exportAs: ["ngTreeItem"]
     }, {
       kind: "directive",
@@ -1372,14 +1373,15 @@ class ComboboxTreeAutoSelectExample {
       kind: "directive",
       type: Tree,
       selector: "[ngTree]",
-      inputs: ["orientation", "multi", "disabled", "selectionMode", "focusMode", "wrap", "softDisabled", "typeaheadDelay", "values", "nav", "currentType"],
+      inputs: ["id", "orientation", "multi", "disabled", "selectionMode", "focusMode", "wrap", "softDisabled", "typeaheadDelay", "values", "nav", "currentType"],
       outputs: ["valuesChange"],
       exportAs: ["ngTree"]
     }, {
       kind: "directive",
       type: TreeItem,
       selector: "[ngTreeItem]",
-      inputs: ["value", "parent", "disabled", "selectable", "label"],
+      inputs: ["id", "value", "parent", "disabled", "selectable", "expanded", "label"],
+      outputs: ["expandedChange"],
       exportAs: ["ngTreeItem"]
     }, {
       kind: "directive",
@@ -1535,14 +1537,15 @@ class ComboboxTreeHighlightExample {
       kind: "directive",
       type: Tree,
       selector: "[ngTree]",
-      inputs: ["orientation", "multi", "disabled", "selectionMode", "focusMode", "wrap", "softDisabled", "typeaheadDelay", "values", "nav", "currentType"],
+      inputs: ["id", "orientation", "multi", "disabled", "selectionMode", "focusMode", "wrap", "softDisabled", "typeaheadDelay", "values", "nav", "currentType"],
       outputs: ["valuesChange"],
       exportAs: ["ngTree"]
     }, {
       kind: "directive",
       type: TreeItem,
       selector: "[ngTreeItem]",
-      inputs: ["value", "parent", "disabled", "selectable", "label"],
+      inputs: ["id", "value", "parent", "disabled", "selectable", "expanded", "label"],
+      outputs: ["expandedChange"],
       exportAs: ["ngTreeItem"]
     }, {
       kind: "directive",

@@ -6,6 +6,7 @@ type TreeNode = {
     value: string;
     children?: TreeNode[];
     disabled?: boolean;
+    expanded?: boolean;
 };
 
 /** @title Configurable Tree. */
