@@ -268,7 +268,7 @@ class SimpleCombobox {
 
       <div popover="manual" #popover class="example-popover">
         <ng-template ngComboboxPopupContainer>
-          <div ngListbox [value]="[value()]" class="example-listbox">
+          <div ngListbox [values]="[value()]" class="example-listbox">
             @for (option of options; track option) {
               <div ngOption [value]="option" [label]="option" class="example-option">
                 <span>{{option}}</span>
@@ -313,8 +313,8 @@ class SimpleCombobox {
       kind: "directive",
       type: Listbox,
       selector: "[ngListbox]",
-      inputs: ["orientation", "multi", "wrap", "softDisabled", "focusMode", "selectionMode", "typeaheadDelay", "disabled", "readonly", "value"],
-      outputs: ["valueChange"],
+      inputs: ["orientation", "multi", "wrap", "softDisabled", "focusMode", "selectionMode", "typeaheadDelay", "disabled", "readonly", "values"],
+      outputs: ["valuesChange"],
       exportAs: ["ngListbox"]
     }, {
       kind: "directive",
@@ -361,7 +361,7 @@ i0.ɵɵngDeclareClassMetadata({
 
       <div popover="manual" #popover class="example-popover">
         <ng-template ngComboboxPopupContainer>
-          <div ngListbox [value]="[value()]" class="example-listbox">
+          <div ngListbox [values]="[value()]" class="example-listbox">
             @for (option of options; track option) {
               <div ngOption [value]="option" [label]="option" class="example-option">
                 <span>{{option}}</span>

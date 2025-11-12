@@ -90,7 +90,7 @@
 
       &lt;div popover=&quot;manual&quot; #popover class=&quot;example-popover&quot;&gt;
         &lt;ng-template ngComboboxPopupContainer&gt;
-          &lt;div ngListbox [value]=&quot;[value()]&quot; class=&quot;example-listbox&quot;&gt;
+          &lt;div ngListbox [values]=&quot;[value()]&quot; class=&quot;example-listbox&quot;&gt;
             @for (option of options; track option) {
               &lt;div ngOption [value]=&quot;option&quot; [label]=&quot;option&quot; class=&quot;example-option&quot;&gt;
                 &lt;span&gt;{{option}}&lt;/span&gt;
