@@ -79,6 +79,16 @@ const EXAMPLE_COMPONENTS = {
     "primaryFile": "combobox-dialog-example.ts",
     "importPath": "aria/combobox"
   },
+  "combobox-disabled": {
+    "packagePath": "aria/combobox/combobox-disabled",
+    "title": "Disabled combobox example.",
+    "componentName": "ComboboxDisabledExample",
+    "files": ["combobox-disabled-example.ts", "combobox-disabled-example.html", "../combobox-examples.css"],
+    "selector": "combobox-disabled-example",
+    "additionalComponents": [],
+    "primaryFile": "combobox-disabled-example.ts",
+    "importPath": "aria/combobox"
+  },
   "combobox-highlight": {
     "packagePath": "aria/combobox/combobox-highlight",
     "title": "Combobox with highlight filtering.",
@@ -97,6 +107,16 @@ const EXAMPLE_COMPONENTS = {
     "selector": "combobox-manual-example",
     "additionalComponents": [],
     "primaryFile": "combobox-manual-example.ts",
+    "importPath": "aria/combobox"
+  },
+  "combobox-readonly-disabled": {
+    "packagePath": "aria/combobox/combobox-readonly-disabled",
+    "title": "Disabled readonly combobox.",
+    "componentName": "ComboboxReadonlyDisabledExample",
+    "files": ["combobox-readonly-disabled-example.ts", "combobox-readonly-disabled-example.html", "../combobox-examples.css"],
+    "selector": "combobox-readonly-disabled-example",
+    "additionalComponents": [],
+    "primaryFile": "combobox-readonly-disabled-example.ts",
     "importPath": "aria/combobox"
   },
   "combobox-readonly-multiselect": {
@@ -4158,9 +4178,13 @@ async function loadExample(id) {
       return import('@angular/components-examples/aria/combobox');
     case 'combobox-dialog':
       return import('@angular/components-examples/aria/combobox');
+    case 'combobox-disabled':
+      return import('@angular/components-examples/aria/combobox');
     case 'combobox-highlight':
       return import('@angular/components-examples/aria/combobox');
     case 'combobox-manual':
+      return import('@angular/components-examples/aria/combobox');
+    case 'combobox-readonly-disabled':
       return import('@angular/components-examples/aria/combobox');
     case 'combobox-readonly-multiselect':
       return import('@angular/components-examples/aria/combobox');
