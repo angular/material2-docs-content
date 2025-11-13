@@ -48,12 +48,11 @@ class ComboboxDialogExample {
     const dialog = this.dialog();
     const combobox = this.combobox();
     const comboboxRect = combobox.inputElement()?.getBoundingClientRect();
-    const dialogEl = dialog.element.nativeElement;
     const scrollY = window.scrollY;
     if (comboboxRect) {
-      dialogEl.style.width = `${comboboxRect.width}px`;
-      dialogEl.style.top = `${comboboxRect.bottom + scrollY + 4}px`;
-      dialogEl.style.left = `${comboboxRect.left - 1}px`;
+      dialog.element.style.width = `${comboboxRect.width}px`;
+      dialog.element.style.top = `${comboboxRect.bottom + scrollY + 4}px`;
+      dialog.element.style.left = `${comboboxRect.left - 1}px`;
     }
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
@@ -813,9 +812,7 @@ class ComboboxReadonlyMultiselectExample {
       const popover = this.popover();
       const combobox = this.combobox();
       combobox._pattern.expanded() ? this.showPopover() : popover.nativeElement.hidePopover();
-      this.listbox()?._pattern.inputs.activeItem()?.element()?.scrollIntoView({
-        block: 'nearest'
-      });
+      this.listbox()?.scrollActiveItemIntoView();
     });
   }
   showPopover() {
