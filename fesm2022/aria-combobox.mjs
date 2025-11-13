@@ -1,8 +1,10 @@
 import { ComboboxDialog, Combobox, ComboboxInput, ComboboxPopupContainer, ComboboxPopup } from '@angular/aria/combobox';
 import { Listbox, Option } from '@angular/aria/listbox';
 import * as i0 from '@angular/core';
-import { viewChild, signal, computed, afterRenderEffect, untracked, Component, ChangeDetectionStrategy } from '@angular/core';
+import { viewChild, signal, computed, afterRenderEffect, untracked, Component, ChangeDetectionStrategy, viewChildren } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import * as i1 from '@angular/cdk/overlay';
+import { OverlayModule } from '@angular/cdk/overlay';
 import { Tree, TreeItem, TreeItemGroup } from '@angular/aria/tree';
 import { NgTemplateOutlet } from '@angular/common';
 
@@ -22,7 +24,7 @@ class ComboboxDialogExample {
   searchString = signal('', ...(ngDevMode ? [{
     debugName: "searchString"
   }] : []));
-  options = computed(() => states$7.filter(state => state.toLowerCase().startsWith(this.searchString().toLowerCase())), ...(ngDevMode ? [{
+  options = computed(() => states$4.filter(state => state.toLowerCase().startsWith(this.searchString().toLowerCase())), ...(ngDevMode ? [{
     debugName: "options"
   }] : []));
   selectedStates = signal([], ...(ngDevMode ? [{
@@ -151,7 +153,7 @@ i0.ɵɵngDeclareClassMetadata({
   }],
   ctorParameters: () => []
 });
-const states$7 = ['Alabama', 'Alaska', 'Arizona', 'Arkansas', 'California', 'Colorado', 'Connecticut', 'Delaware', 'Florida', 'Georgia', 'Hawaii', 'Idaho', 'Illinois', 'Indiana', 'Iowa', 'Kansas', 'Kentucky', 'Louisiana', 'Maine', 'Maryland', 'Massachusetts', 'Michigan', 'Minnesota', 'Mississippi', 'Missouri', 'Montana', 'Nebraska', 'Nevada', 'New Hampshire', 'New Jersey', 'New Mexico', 'New York', 'North Carolina', 'North Dakota', 'Ohio', 'Oklahoma', 'Oregon', 'Pennsylvania', 'Rhode Island', 'South Carolina', 'South Dakota', 'Tennessee', 'Texas', 'Utah', 'Vermont', 'Virginia', 'Washington', 'West Virginia', 'Wisconsin', 'Wyoming'];
+const states$4 = ['Alabama', 'Alaska', 'Arizona', 'Arkansas', 'California', 'Colorado', 'Connecticut', 'Delaware', 'Florida', 'Georgia', 'Hawaii', 'Idaho', 'Illinois', 'Indiana', 'Iowa', 'Kansas', 'Kentucky', 'Louisiana', 'Maine', 'Maryland', 'Massachusetts', 'Michigan', 'Minnesota', 'Mississippi', 'Missouri', 'Montana', 'Nebraska', 'Nevada', 'New Hampshire', 'New Jersey', 'New Mexico', 'New York', 'North Carolina', 'North Dakota', 'Ohio', 'Oklahoma', 'Oregon', 'Pennsylvania', 'Rhode Island', 'South Carolina', 'South Dakota', 'Tennessee', 'Texas', 'Utah', 'Vermont', 'Virginia', 'Washington', 'West Virginia', 'Wisconsin', 'Wyoming'];
 
 class ComboboxManualExample {
   popover = viewChild('popover', ...(ngDevMode ? [{
@@ -166,7 +168,7 @@ class ComboboxManualExample {
   searchString = signal('', ...(ngDevMode ? [{
     debugName: "searchString"
   }] : []));
-  options = computed(() => states$6.filter(state => state.toLowerCase().startsWith(this.searchString().toLowerCase())), ...(ngDevMode ? [{
+  options = computed(() => states$3.filter(state => state.toLowerCase().startsWith(this.searchString().toLowerCase())), ...(ngDevMode ? [{
     debugName: "options"
   }] : []));
   constructor() {
@@ -280,7 +282,7 @@ i0.ɵɵngDeclareClassMetadata({
   }],
   ctorParameters: () => []
 });
-const states$6 = ['Alabama', 'Alaska', 'Arizona', 'Arkansas', 'California', 'Colorado', 'Connecticut', 'Delaware', 'Florida', 'Georgia', 'Hawaii', 'Idaho', 'Illinois', 'Indiana', 'Iowa', 'Kansas', 'Kentucky', 'Louisiana', 'Maine', 'Maryland', 'Massachusetts', 'Michigan', 'Minnesota', 'Mississippi', 'Missouri', 'Montana', 'Nebraska', 'Nevada', 'New Hampshire', 'New Jersey', 'New Mexico', 'New York', 'North Carolina', 'North Dakota', 'Ohio', 'Oklahoma', 'Oregon', 'Pennsylvania', 'Rhode Island', 'South Carolina', 'South Dakota', 'Tennessee', 'Texas', 'Utah', 'Vermont', 'Virginia', 'Washington', 'West Virginia', 'Wisconsin', 'Wyoming'];
+const states$3 = ['Alabama', 'Alaska', 'Arizona', 'Arkansas', 'California', 'Colorado', 'Connecticut', 'Delaware', 'Florida', 'Georgia', 'Hawaii', 'Idaho', 'Illinois', 'Indiana', 'Iowa', 'Kansas', 'Kentucky', 'Louisiana', 'Maine', 'Maryland', 'Massachusetts', 'Michigan', 'Minnesota', 'Mississippi', 'Missouri', 'Montana', 'Nebraska', 'Nevada', 'New Hampshire', 'New Jersey', 'New Mexico', 'New York', 'North Carolina', 'North Dakota', 'Ohio', 'Oklahoma', 'Oregon', 'Pennsylvania', 'Rhode Island', 'South Carolina', 'South Dakota', 'Tennessee', 'Texas', 'Utah', 'Vermont', 'Virginia', 'Washington', 'West Virginia', 'Wisconsin', 'Wyoming'];
 
 class ComboboxAutoSelectExample {
   popover = viewChild('popover', ...(ngDevMode ? [{
@@ -295,7 +297,7 @@ class ComboboxAutoSelectExample {
   searchString = signal('', ...(ngDevMode ? [{
     debugName: "searchString"
   }] : []));
-  options = computed(() => states$5.filter(state => state.toLowerCase().startsWith(this.searchString().toLowerCase())), ...(ngDevMode ? [{
+  options = computed(() => states$2.filter(state => state.toLowerCase().startsWith(this.searchString().toLowerCase())), ...(ngDevMode ? [{
     debugName: "options"
   }] : []));
   constructor() {
@@ -406,7 +408,7 @@ i0.ɵɵngDeclareClassMetadata({
   }],
   ctorParameters: () => []
 });
-const states$5 = ['Alabama', 'Alaska', 'Arizona', 'Arkansas', 'California', 'Colorado', 'Connecticut', 'Delaware', 'Florida', 'Georgia', 'Hawaii', 'Idaho', 'Illinois', 'Indiana', 'Iowa', 'Kansas', 'Kentucky', 'Louisiana', 'Maine', 'Maryland', 'Massachusetts', 'Michigan', 'Minnesota', 'Mississippi', 'Missouri', 'Montana', 'Nebraska', 'Nevada', 'New Hampshire', 'New Jersey', 'New Mexico', 'New York', 'North Carolina', 'North Dakota', 'Ohio', 'Oklahoma', 'Oregon', 'Pennsylvania', 'Rhode Island', 'South Carolina', 'South Dakota', 'Tennessee', 'Texas', 'Utah', 'Vermont', 'Virginia', 'Washington', 'West Virginia', 'Wisconsin', 'Wyoming'];
+const states$2 = ['Alabama', 'Alaska', 'Arizona', 'Arkansas', 'California', 'Colorado', 'Connecticut', 'Delaware', 'Florida', 'Georgia', 'Hawaii', 'Idaho', 'Illinois', 'Indiana', 'Iowa', 'Kansas', 'Kentucky', 'Louisiana', 'Maine', 'Maryland', 'Massachusetts', 'Michigan', 'Minnesota', 'Mississippi', 'Missouri', 'Montana', 'Nebraska', 'Nevada', 'New Hampshire', 'New Jersey', 'New Mexico', 'New York', 'North Carolina', 'North Dakota', 'Ohio', 'Oklahoma', 'Oregon', 'Pennsylvania', 'Rhode Island', 'South Carolina', 'South Dakota', 'Tennessee', 'Texas', 'Utah', 'Vermont', 'Virginia', 'Washington', 'West Virginia', 'Wisconsin', 'Wyoming'];
 
 class ComboboxHighlightExample {
   popover = viewChild('popover', ...(ngDevMode ? [{
@@ -421,7 +423,7 @@ class ComboboxHighlightExample {
   searchString = signal('', ...(ngDevMode ? [{
     debugName: "searchString"
   }] : []));
-  options = computed(() => states$4.filter(state => state.toLowerCase().startsWith(this.searchString().toLowerCase())), ...(ngDevMode ? [{
+  options = computed(() => states$1.filter(state => state.toLowerCase().startsWith(this.searchString().toLowerCase())), ...(ngDevMode ? [{
     debugName: "options"
   }] : []));
   constructor() {
@@ -535,7 +537,7 @@ i0.ɵɵngDeclareClassMetadata({
   }],
   ctorParameters: () => []
 });
-const states$4 = ['Alabama', 'Alaska', 'Arizona', 'Arkansas', 'California', 'Colorado', 'Connecticut', 'Delaware', 'Florida', 'Georgia', 'Hawaii', 'Idaho', 'Illinois', 'Indiana', 'Iowa', 'Kansas', 'Kentucky', 'Louisiana', 'Maine', 'Maryland', 'Massachusetts', 'Michigan', 'Minnesota', 'Mississippi', 'Missouri', 'Montana', 'Nebraska', 'Nevada', 'New Hampshire', 'New Jersey', 'New Mexico', 'New York', 'North Carolina', 'North Dakota', 'Ohio', 'Oklahoma', 'Oregon', 'Pennsylvania', 'Rhode Island', 'South Carolina', 'South Dakota', 'Tennessee', 'Texas', 'Utah', 'Vermont', 'Virginia', 'Washington', 'West Virginia', 'Wisconsin', 'Wyoming'];
+const states$1 = ['Alabama', 'Alaska', 'Arizona', 'Arkansas', 'California', 'Colorado', 'Connecticut', 'Delaware', 'Florida', 'Georgia', 'Hawaii', 'Idaho', 'Illinois', 'Indiana', 'Iowa', 'Kansas', 'Kentucky', 'Louisiana', 'Maine', 'Maryland', 'Massachusetts', 'Michigan', 'Minnesota', 'Mississippi', 'Missouri', 'Montana', 'Nebraska', 'Nevada', 'New Hampshire', 'New Jersey', 'New Mexico', 'New York', 'North Carolina', 'North Dakota', 'Ohio', 'Oklahoma', 'Oregon', 'Pennsylvania', 'Rhode Island', 'South Carolina', 'South Dakota', 'Tennessee', 'Texas', 'Utah', 'Vermont', 'Virginia', 'Washington', 'West Virginia', 'Wisconsin', 'Wyoming'];
 
 class ComboboxDisabledExample {
   popover = viewChild('popover', ...(ngDevMode ? [{
@@ -550,7 +552,7 @@ class ComboboxDisabledExample {
   searchString = signal('', ...(ngDevMode ? [{
     debugName: "searchString"
   }] : []));
-  options = computed(() => states$3.filter(state => state.toLowerCase().startsWith(this.searchString().toLowerCase())), ...(ngDevMode ? [{
+  options = computed(() => states.filter(state => state.toLowerCase().startsWith(this.searchString().toLowerCase())), ...(ngDevMode ? [{
     debugName: "options"
   }] : []));
   constructor() {
@@ -664,41 +666,63 @@ i0.ɵɵngDeclareClassMetadata({
   }],
   ctorParameters: () => []
 });
-const states$3 = ['Alabama', 'Alaska', 'Arizona', 'Arkansas', 'California', 'Colorado', 'Connecticut', 'Delaware', 'Florida', 'Georgia', 'Hawaii', 'Idaho', 'Illinois', 'Indiana', 'Iowa', 'Kansas', 'Kentucky', 'Louisiana', 'Maine', 'Maryland', 'Massachusetts', 'Michigan', 'Minnesota', 'Mississippi', 'Missouri', 'Montana', 'Nebraska', 'Nevada', 'New Hampshire', 'New Jersey', 'New Mexico', 'New York', 'North Carolina', 'North Dakota', 'Ohio', 'Oklahoma', 'Oregon', 'Pennsylvania', 'Rhode Island', 'South Carolina', 'South Dakota', 'Tennessee', 'Texas', 'Utah', 'Vermont', 'Virginia', 'Washington', 'West Virginia', 'Wisconsin', 'Wyoming'];
+const states = ['Alabama', 'Alaska', 'Arizona', 'Arkansas', 'California', 'Colorado', 'Connecticut', 'Delaware', 'Florida', 'Georgia', 'Hawaii', 'Idaho', 'Illinois', 'Indiana', 'Iowa', 'Kansas', 'Kentucky', 'Louisiana', 'Maine', 'Maryland', 'Massachusetts', 'Michigan', 'Minnesota', 'Mississippi', 'Missouri', 'Montana', 'Nebraska', 'Nevada', 'New Hampshire', 'New Jersey', 'New Mexico', 'New York', 'North Carolina', 'North Dakota', 'Ohio', 'Oklahoma', 'Oregon', 'Pennsylvania', 'Rhode Island', 'South Carolina', 'South Dakota', 'Tennessee', 'Texas', 'Utah', 'Vermont', 'Virginia', 'Washington', 'West Virginia', 'Wisconsin', 'Wyoming'];
 
 class ComboboxReadonlyExample {
-  popover = viewChild('popover', ...(ngDevMode ? [{
-    debugName: "popover"
+  displayValue = signal('', ...(ngDevMode ? [{
+    debugName: "displayValue"
   }] : []));
   listbox = viewChild(Listbox, ...(ngDevMode ? [{
     debugName: "listbox"
   }] : []));
+  options = viewChildren(Option, ...(ngDevMode ? [{
+    debugName: "options"
+  }] : []));
   combobox = viewChild(Combobox, ...(ngDevMode ? [{
     debugName: "combobox"
   }] : []));
-  options = () => states$2;
-  searchString = signal('', ...(ngDevMode ? [{
-    debugName: "searchString"
-  }] : []));
+  labels = [{
+    value: 'Important',
+    icon: 'label'
+  }, {
+    value: 'Starred',
+    icon: 'star'
+  }, {
+    value: 'Work',
+    icon: 'work'
+  }, {
+    value: 'Personal',
+    icon: 'person'
+  }, {
+    value: 'To Do',
+    icon: 'checklist'
+  }, {
+    value: 'Later',
+    icon: 'schedule'
+  }, {
+    value: 'Read',
+    icon: 'menu_book'
+  }, {
+    value: 'Travel',
+    icon: 'flight'
+  }];
   constructor() {
     afterRenderEffect(() => {
-      const popover = this.popover();
-      const combobox = this.combobox();
-      combobox.expanded() ? this.showPopover() : popover.nativeElement.hidePopover();
-      this.listbox()?.scrollActiveItemIntoView();
+      const values = this.listbox()?.values() || [];
+      const displayValue = values.length ? values[0] : 'Select a label';
+      this.displayValue.set(displayValue);
     });
-  }
-  showPopover() {
-    const popover = this.popover();
-    const combobox = this.combobox();
-    const comboboxRect = combobox.inputElement()?.getBoundingClientRect();
-    const popoverEl = popover.nativeElement;
-    if (comboboxRect) {
-      popoverEl.style.width = `${comboboxRect.width}px`;
-      popoverEl.style.top = `${comboboxRect.bottom + 4}px`;
-      popoverEl.style.left = `${comboboxRect.left - 1}px`;
-    }
-    popover.nativeElement.showPopover();
+    afterRenderEffect(() => {
+      const option = this.options().find(opt => opt.active());
+      setTimeout(() => option?.element.scrollIntoView({
+        block: 'nearest'
+      }), 50);
+    });
+    afterRenderEffect(() => {
+      if (!this.combobox()?.expanded()) {
+        setTimeout(() => this.listbox()?.element.scrollTo(0, 0), 150);
+      }
+    });
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
@@ -715,15 +739,14 @@ class ComboboxReadonlyExample {
     isStandalone: true,
     selector: "combobox-readonly-example",
     viewQueries: [{
-      propertyName: "popover",
-      first: true,
-      predicate: ["popover"],
-      descendants: true,
-      isSignal: true
-    }, {
       propertyName: "listbox",
       first: true,
       predicate: Listbox,
+      descendants: true,
+      isSignal: true
+    }, {
+      propertyName: "options",
+      predicate: Option,
       descendants: true,
       isSignal: true
     }, {
@@ -734,8 +757,8 @@ class ComboboxReadonlyExample {
       isSignal: true
     }],
     ngImport: i0,
-    template: "<div ngCombobox #combobox=\"ngCombobox\" class=\"example-combobox-container\" [readonly]=\"true\">\n  <div class=\"example-combobox-input-container\">\n    <input\n      ngComboboxInput\n      class=\"example-combobox-input\"\n      placeholder=\"Search...\"\n      [(value)]=\"searchString\"\n    />\n    <span class=\"material-symbols-outlined example-icon example-arrow-icon\">arrow_drop_down</span>\n  </div>\n\n  <div popover=\"manual\" #popover class=\"example-popover\">\n    <ng-template ngComboboxPopupContainer>\n      <div ngListbox class=\"example-listbox\">\n        @for (option of options(); track option) {\n          <div\n            class=\"example-option example-selectable example-stateful\"\n            ngOption\n            [value]=\"option\"\n            [label]=\"option\"\n          >\n            <span>{{option}}</span>\n            <span\n              aria-hidden=\"true\"\n              class=\"material-symbols-outlined example-icon example-selected-icon\"\n              >check</span\n            >\n          </div>\n        }\n      </div>\n    </ng-template>\n  </div>\n</div>\n",
-    styles: [".example-combobox-container {\n  position: relative;\n  width: 100%;\n  display: flex;\n  flex-direction: column;\n  border: 1px solid var(--mat-sys-outline);\n  border-radius: var(--mat-sys-corner-extra-small);\n}\n\n.example-combobox-container:has([readonly='true']:not([aria-disabled='true'])) {\n  width: 200px;\n}\n\n.example-combobox-input-container {\n  display: flex;\n  position: relative;\n  align-items: center;\n  border-radius: var(--mat-sys-corner-extra-small);\n}\n\n.example-combobox-input {\n  border-radius: var(--mat-sys-corner-extra-small);\n}\n\n.example-combobox-input[readonly='true']:not([aria-disabled='true']) {\n  cursor: pointer;\n  padding: 0.7rem 1rem;\n}\n\n.example-combobox-container:focus-within .example-combobox-input {\n  outline: 1.5px solid var(--mat-sys-primary);\n  box-shadow: 0 0 0 4px color-mix(in srgb, var(--mat-sys-primary) 25%, transparent);\n}\n\n.example-icon {\n  width: 24px;\n  height: 24px;\n  font-size: 20px;\n  display: grid;\n  place-items: center;\n  pointer-events: none;\n}\n\n.example-search-icon {\n  padding: 0 0.5rem;\n  position: absolute;\n  opacity: 0.8;\n}\n\n.example-arrow-icon {\n  padding: 0 0.5rem;\n  position: absolute;\n  right: 0;\n  opacity: 0.8;\n  transition: transform 0.2s ease;\n}\n\n.example-combobox-input[aria-expanded='true'] + .example-arrow-icon {\n  transform: rotate(180deg);\n}\n\n.example-combobox-input {\n  width: 100%;\n  border: none;\n  outline: none;\n  font-size: 1rem;\n  padding: 0.7rem 1rem 0.7rem 2.5rem;\n  background-color: var(--mat-sys-surface);\n}\n\n.example-popover {\n  margin: 0;\n  padding: 0;\n  border: 1px solid var(--mat-sys-outline);\n  border-radius: var(--mat-sys-corner-extra-small);\n  background-color: var(--mat-sys-surface);\n}\n\n.example-listbox {\n  display: flex;\n  flex-direction: column;\n  overflow: auto;\n  max-height: 10rem;\n  padding: 0.5rem;\n  gap: 4px;\n}\n\n.example-option {\n  cursor: pointer;\n  padding: 0.3rem 1rem;\n  border-radius: var(--mat-sys-corner-extra-small);\n  display: flex;\n  overflow: hidden;\n  flex-shrink: 0;\n  align-items: center;\n  justify-content: space-between;\n  gap: 1rem;\n}\n\n.example-option-text {\n  flex: 1;\n}\n\n.example-checkbox-blank-icon,\n.example-option[aria-selected='true'] .example-checkbox-filled-icon {\n  display: flex;\n  align-items: center;\n}\n\n.example-checkbox-filled-icon,\n.example-option[aria-selected='true'] .example-checkbox-blank-icon {\n  display: none;\n}\n\n.example-checkbox-blank-icon {\n  opacity: 0.6;\n}\n\n.example-selected-icon {\n  visibility: hidden;\n}\n\n.example-option[aria-selected='true'] .example-selected-icon {\n  visibility: visible;\n}\n\n.example-option[aria-selected='true'] {\n  color: var(--mat-sys-primary);\n  background-color: color-mix(in srgb, var(--mat-sys-primary) 10%, transparent);\n}\n\n.example-option:hover {\n  background-color: color-mix(in srgb, var(--mat-sys-on-surface) 10%, transparent);\n}\n\n.example-combobox-container:focus-within [data-active='true'] {\n  outline: 2px solid color-mix(in srgb, var(--mat-sys-primary) 80%, transparent);\n}\n\n.example-tree {\n  padding: 10px;\n  overflow-x: scroll;\n}\n\n.example-tree-item {\n  cursor: pointer;\n  list-style: none;\n  text-decoration: none;\n  display: flex;\n  align-items: center;\n  gap: 1rem;\n  padding: 0.3rem 1rem;\n}\n\nli[aria-expanded='false'] + ul[role='group'] {\n  display: none;\n}\n\nul[role='group'] {\n  padding-inline-start: 1rem;\n}\n\n.example-icon {\n  margin: 0;\n  width: 24px;\n}\n\n.example-parent-icon {\n  transition: transform 0.2s ease;\n}\n\n.example-tree-item[aria-expanded='true'] .example-parent-icon {\n  transform: rotate(90deg);\n}\n\n.example-selected-icon {\n  visibility: hidden;\n  margin-left: auto;\n}\n\n.example-tree-item[aria-current] .example-selected-icon,\n.example-tree-item[aria-selected='true'] .example-selected-icon {\n  visibility: visible;\n}\n\n.example-combobox-container:has([aria-disabled='true']) {\n  opacity: 0.4;\n  cursor: default;\n}\n"],
+    template: "<div ngCombobox readonly>\n  <div #origin class=\"example-select\">\n    <span class=\"example-combobox-text\">{{ displayValue() }}</span>\n    <input aria-label=\"Label dropdown\" placeholder=\"Select a label\" ngComboboxInput />\n    <span class=\"example-arrow material-symbols-outlined\">arrow_drop_down</span>\n  </div>\n\n  <ng-template\n    [cdkConnectedOverlay]=\"{origin, usePopover: 'inline', matchWidth: true}\"\n    [cdkConnectedOverlayOpen]=\"true\"\n  >\n    <ng-template ngComboboxPopupContainer>\n      <div class=\"example-popup-container\">\n        <div ngListbox>\n          @for (label of labels; track label.value) {\n            <div ngOption [value]=\"label.value\" [label]=\"label.value\">\n              <span class=\"example-option-icon material-symbols-outlined\">{{label.icon}}</span>\n              <span class=\"example-option-text\">{{label.value}}</span>\n              <span class=\"example-option-check material-symbols-outlined\">check</span>\n            </div>\n          }\n        </div>\n      </div>\n    </ng-template>\n  </ng-template>\n</div>\n",
+    styles: [".example-select {\n  display: flex;\n  position: relative;\n  align-items: center;\n  color: var(--mat-sys-on-primary);\n  font-size: var(--mat-sys-label-large);\n  background-color: var(--mat-sys-primary);\n  border-radius: var(--mat-sys-corner-extra-large);\n}\n\n.example-select:has([ngComboboxInput][aria-disabled='true']) {\n  opacity: 0.6;\n  cursor: default;\n}\n\n.example-select:hover {\n  background-color: color-mix(in srgb, var(--mat-sys-primary) 90%, transparent);\n}\n\n[ngComboboxInput] {\n  opacity: 0;\n  cursor: pointer;\n  padding: 0 3rem;\n  height: 3rem;\n  border: none;\n}\n\n[ngCombobox]:focus-within .example-select {\n  outline-offset: 2px;\n  outline: 2px solid var(--mat-sys-primary);\n}\n\n.example-combobox-text {\n  left: 2rem;\n  position: absolute;\n}\n\n.example-arrow {\n  right: 1rem;\n  position: absolute;\n  pointer-events: none;\n  transition: transform 150ms ease-in-out;\n}\n\n[ngComboboxInput][aria-expanded='true'] ~ .example-arrow {\n  transform: rotate(180deg);\n}\n\n.example-popup-container {\n  width: 100%;\n  padding: 0.5rem;\n  margin-top: 8px;\n  border-radius: var(--mat-sys-corner-large);\n  background-color: var(--mat-sys-surface-container);\n\n  max-height: 13rem;\n  opacity: 1;\n  visibility: visible;\n  transition: max-height 150ms ease-out, visibility 0s, opacity 25ms ease-out;\n}\n\n[ngListbox] {\n  gap: 4px;\n  height: 100%;\n  display: flex;\n  overflow: auto;\n  flex-direction: column;\n}\n\n[ngCombobox]:has([ngComboboxInput][aria-expanded='false']) .example-popup-container {\n  max-height: 0;\n  opacity: 0;\n  visibility: hidden;\n  transition: max-height 150ms ease-in, visibility 0s 150ms, opacity 150ms ease-in;\n}\n\n[ngCombobox]:has([ngComboboxInput][aria-expanded='true']) [ngListbox] {\n  display: flex;\n}\n\n[ngOption] {\n  display: flex;\n  cursor: pointer;\n  align-items: center;\n  padding: 0 1rem;\n  min-height: 3rem;\n  color: var(--mat-sys-on-surface);\n  font-size: var(--mat-sys-label-large);\n  border-radius: var(--mat-sys-corner-extra-large);\n}\n\n[ngOption]:hover {\n  background-color: color-mix(in srgb, var(--mat-sys-on-surface) 5%, transparent);\n}\n\n[ngOption][data-active='true'] {\n  background-color: color-mix(in srgb, var(--mat-sys-on-surface) 10%, transparent);\n}\n\n[ngOption][aria-selected='true'] {\n  color: var(--mat-sys-primary);\n  background-color: color-mix(in srgb, var(--mat-sys-primary) 10%, transparent);\n}\n\n.example-option-icon {\n  padding-right: 1rem;\n}\n\n.example-option-check,\n.example-option-icon {\n  font-size: var(--mat-sys-label-large);\n}\n\n[ngOption]:not([aria-selected='true']) .example-option-check {\n  display: none;\n}\n\n.example-option-text {\n  flex: 1;\n}\n"],
     dependencies: [{
       kind: "directive",
       type: Combobox,
@@ -769,7 +792,14 @@ class ComboboxReadonlyExample {
       exportAs: ["ngOption"]
     }, {
       kind: "ngmodule",
-      type: FormsModule
+      type: OverlayModule
+    }, {
+      kind: "directive",
+      type: i1.CdkConnectedOverlay,
+      selector: "[cdk-connected-overlay], [connected-overlay], [cdkConnectedOverlay]",
+      inputs: ["cdkConnectedOverlayOrigin", "cdkConnectedOverlayPositions", "cdkConnectedOverlayPositionStrategy", "cdkConnectedOverlayOffsetX", "cdkConnectedOverlayOffsetY", "cdkConnectedOverlayWidth", "cdkConnectedOverlayHeight", "cdkConnectedOverlayMinWidth", "cdkConnectedOverlayMinHeight", "cdkConnectedOverlayBackdropClass", "cdkConnectedOverlayPanelClass", "cdkConnectedOverlayViewportMargin", "cdkConnectedOverlayScrollStrategy", "cdkConnectedOverlayOpen", "cdkConnectedOverlayDisableClose", "cdkConnectedOverlayTransformOriginOn", "cdkConnectedOverlayHasBackdrop", "cdkConnectedOverlayLockPosition", "cdkConnectedOverlayFlexibleDimensions", "cdkConnectedOverlayGrowAfterOpen", "cdkConnectedOverlayPush", "cdkConnectedOverlayDisposeOnNavigation", "cdkConnectedOverlayUsePopover", "cdkConnectedOverlayMatchWidth", "cdkConnectedOverlay"],
+      outputs: ["backdropClick", "positionChange", "attach", "detach", "overlayKeydown", "overlayOutsideClick"],
+      exportAs: ["cdkConnectedOverlay"]
     }],
     changeDetection: i0.ChangeDetectionStrategy.OnPush
   });
@@ -783,49 +813,75 @@ i0.ɵɵngDeclareClassMetadata({
     type: Component,
     args: [{
       selector: 'combobox-readonly-example',
-      imports: [Combobox, ComboboxInput, ComboboxPopup, ComboboxPopupContainer, Listbox, Option, FormsModule],
+      imports: [Combobox, ComboboxInput, ComboboxPopup, ComboboxPopupContainer, Listbox, Option, OverlayModule],
       changeDetection: ChangeDetectionStrategy.OnPush,
-      template: "<div ngCombobox #combobox=\"ngCombobox\" class=\"example-combobox-container\" [readonly]=\"true\">\n  <div class=\"example-combobox-input-container\">\n    <input\n      ngComboboxInput\n      class=\"example-combobox-input\"\n      placeholder=\"Search...\"\n      [(value)]=\"searchString\"\n    />\n    <span class=\"material-symbols-outlined example-icon example-arrow-icon\">arrow_drop_down</span>\n  </div>\n\n  <div popover=\"manual\" #popover class=\"example-popover\">\n    <ng-template ngComboboxPopupContainer>\n      <div ngListbox class=\"example-listbox\">\n        @for (option of options(); track option) {\n          <div\n            class=\"example-option example-selectable example-stateful\"\n            ngOption\n            [value]=\"option\"\n            [label]=\"option\"\n          >\n            <span>{{option}}</span>\n            <span\n              aria-hidden=\"true\"\n              class=\"material-symbols-outlined example-icon example-selected-icon\"\n              >check</span\n            >\n          </div>\n        }\n      </div>\n    </ng-template>\n  </div>\n</div>\n",
-      styles: [".example-combobox-container {\n  position: relative;\n  width: 100%;\n  display: flex;\n  flex-direction: column;\n  border: 1px solid var(--mat-sys-outline);\n  border-radius: var(--mat-sys-corner-extra-small);\n}\n\n.example-combobox-container:has([readonly='true']:not([aria-disabled='true'])) {\n  width: 200px;\n}\n\n.example-combobox-input-container {\n  display: flex;\n  position: relative;\n  align-items: center;\n  border-radius: var(--mat-sys-corner-extra-small);\n}\n\n.example-combobox-input {\n  border-radius: var(--mat-sys-corner-extra-small);\n}\n\n.example-combobox-input[readonly='true']:not([aria-disabled='true']) {\n  cursor: pointer;\n  padding: 0.7rem 1rem;\n}\n\n.example-combobox-container:focus-within .example-combobox-input {\n  outline: 1.5px solid var(--mat-sys-primary);\n  box-shadow: 0 0 0 4px color-mix(in srgb, var(--mat-sys-primary) 25%, transparent);\n}\n\n.example-icon {\n  width: 24px;\n  height: 24px;\n  font-size: 20px;\n  display: grid;\n  place-items: center;\n  pointer-events: none;\n}\n\n.example-search-icon {\n  padding: 0 0.5rem;\n  position: absolute;\n  opacity: 0.8;\n}\n\n.example-arrow-icon {\n  padding: 0 0.5rem;\n  position: absolute;\n  right: 0;\n  opacity: 0.8;\n  transition: transform 0.2s ease;\n}\n\n.example-combobox-input[aria-expanded='true'] + .example-arrow-icon {\n  transform: rotate(180deg);\n}\n\n.example-combobox-input {\n  width: 100%;\n  border: none;\n  outline: none;\n  font-size: 1rem;\n  padding: 0.7rem 1rem 0.7rem 2.5rem;\n  background-color: var(--mat-sys-surface);\n}\n\n.example-popover {\n  margin: 0;\n  padding: 0;\n  border: 1px solid var(--mat-sys-outline);\n  border-radius: var(--mat-sys-corner-extra-small);\n  background-color: var(--mat-sys-surface);\n}\n\n.example-listbox {\n  display: flex;\n  flex-direction: column;\n  overflow: auto;\n  max-height: 10rem;\n  padding: 0.5rem;\n  gap: 4px;\n}\n\n.example-option {\n  cursor: pointer;\n  padding: 0.3rem 1rem;\n  border-radius: var(--mat-sys-corner-extra-small);\n  display: flex;\n  overflow: hidden;\n  flex-shrink: 0;\n  align-items: center;\n  justify-content: space-between;\n  gap: 1rem;\n}\n\n.example-option-text {\n  flex: 1;\n}\n\n.example-checkbox-blank-icon,\n.example-option[aria-selected='true'] .example-checkbox-filled-icon {\n  display: flex;\n  align-items: center;\n}\n\n.example-checkbox-filled-icon,\n.example-option[aria-selected='true'] .example-checkbox-blank-icon {\n  display: none;\n}\n\n.example-checkbox-blank-icon {\n  opacity: 0.6;\n}\n\n.example-selected-icon {\n  visibility: hidden;\n}\n\n.example-option[aria-selected='true'] .example-selected-icon {\n  visibility: visible;\n}\n\n.example-option[aria-selected='true'] {\n  color: var(--mat-sys-primary);\n  background-color: color-mix(in srgb, var(--mat-sys-primary) 10%, transparent);\n}\n\n.example-option:hover {\n  background-color: color-mix(in srgb, var(--mat-sys-on-surface) 10%, transparent);\n}\n\n.example-combobox-container:focus-within [data-active='true'] {\n  outline: 2px solid color-mix(in srgb, var(--mat-sys-primary) 80%, transparent);\n}\n\n.example-tree {\n  padding: 10px;\n  overflow-x: scroll;\n}\n\n.example-tree-item {\n  cursor: pointer;\n  list-style: none;\n  text-decoration: none;\n  display: flex;\n  align-items: center;\n  gap: 1rem;\n  padding: 0.3rem 1rem;\n}\n\nli[aria-expanded='false'] + ul[role='group'] {\n  display: none;\n}\n\nul[role='group'] {\n  padding-inline-start: 1rem;\n}\n\n.example-icon {\n  margin: 0;\n  width: 24px;\n}\n\n.example-parent-icon {\n  transition: transform 0.2s ease;\n}\n\n.example-tree-item[aria-expanded='true'] .example-parent-icon {\n  transform: rotate(90deg);\n}\n\n.example-selected-icon {\n  visibility: hidden;\n  margin-left: auto;\n}\n\n.example-tree-item[aria-current] .example-selected-icon,\n.example-tree-item[aria-selected='true'] .example-selected-icon {\n  visibility: visible;\n}\n\n.example-combobox-container:has([aria-disabled='true']) {\n  opacity: 0.4;\n  cursor: default;\n}\n"]
+      template: "<div ngCombobox readonly>\n  <div #origin class=\"example-select\">\n    <span class=\"example-combobox-text\">{{ displayValue() }}</span>\n    <input aria-label=\"Label dropdown\" placeholder=\"Select a label\" ngComboboxInput />\n    <span class=\"example-arrow material-symbols-outlined\">arrow_drop_down</span>\n  </div>\n\n  <ng-template\n    [cdkConnectedOverlay]=\"{origin, usePopover: 'inline', matchWidth: true}\"\n    [cdkConnectedOverlayOpen]=\"true\"\n  >\n    <ng-template ngComboboxPopupContainer>\n      <div class=\"example-popup-container\">\n        <div ngListbox>\n          @for (label of labels; track label.value) {\n            <div ngOption [value]=\"label.value\" [label]=\"label.value\">\n              <span class=\"example-option-icon material-symbols-outlined\">{{label.icon}}</span>\n              <span class=\"example-option-text\">{{label.value}}</span>\n              <span class=\"example-option-check material-symbols-outlined\">check</span>\n            </div>\n          }\n        </div>\n      </div>\n    </ng-template>\n  </ng-template>\n</div>\n",
+      styles: [".example-select {\n  display: flex;\n  position: relative;\n  align-items: center;\n  color: var(--mat-sys-on-primary);\n  font-size: var(--mat-sys-label-large);\n  background-color: var(--mat-sys-primary);\n  border-radius: var(--mat-sys-corner-extra-large);\n}\n\n.example-select:has([ngComboboxInput][aria-disabled='true']) {\n  opacity: 0.6;\n  cursor: default;\n}\n\n.example-select:hover {\n  background-color: color-mix(in srgb, var(--mat-sys-primary) 90%, transparent);\n}\n\n[ngComboboxInput] {\n  opacity: 0;\n  cursor: pointer;\n  padding: 0 3rem;\n  height: 3rem;\n  border: none;\n}\n\n[ngCombobox]:focus-within .example-select {\n  outline-offset: 2px;\n  outline: 2px solid var(--mat-sys-primary);\n}\n\n.example-combobox-text {\n  left: 2rem;\n  position: absolute;\n}\n\n.example-arrow {\n  right: 1rem;\n  position: absolute;\n  pointer-events: none;\n  transition: transform 150ms ease-in-out;\n}\n\n[ngComboboxInput][aria-expanded='true'] ~ .example-arrow {\n  transform: rotate(180deg);\n}\n\n.example-popup-container {\n  width: 100%;\n  padding: 0.5rem;\n  margin-top: 8px;\n  border-radius: var(--mat-sys-corner-large);\n  background-color: var(--mat-sys-surface-container);\n\n  max-height: 13rem;\n  opacity: 1;\n  visibility: visible;\n  transition: max-height 150ms ease-out, visibility 0s, opacity 25ms ease-out;\n}\n\n[ngListbox] {\n  gap: 4px;\n  height: 100%;\n  display: flex;\n  overflow: auto;\n  flex-direction: column;\n}\n\n[ngCombobox]:has([ngComboboxInput][aria-expanded='false']) .example-popup-container {\n  max-height: 0;\n  opacity: 0;\n  visibility: hidden;\n  transition: max-height 150ms ease-in, visibility 0s 150ms, opacity 150ms ease-in;\n}\n\n[ngCombobox]:has([ngComboboxInput][aria-expanded='true']) [ngListbox] {\n  display: flex;\n}\n\n[ngOption] {\n  display: flex;\n  cursor: pointer;\n  align-items: center;\n  padding: 0 1rem;\n  min-height: 3rem;\n  color: var(--mat-sys-on-surface);\n  font-size: var(--mat-sys-label-large);\n  border-radius: var(--mat-sys-corner-extra-large);\n}\n\n[ngOption]:hover {\n  background-color: color-mix(in srgb, var(--mat-sys-on-surface) 5%, transparent);\n}\n\n[ngOption][data-active='true'] {\n  background-color: color-mix(in srgb, var(--mat-sys-on-surface) 10%, transparent);\n}\n\n[ngOption][aria-selected='true'] {\n  color: var(--mat-sys-primary);\n  background-color: color-mix(in srgb, var(--mat-sys-primary) 10%, transparent);\n}\n\n.example-option-icon {\n  padding-right: 1rem;\n}\n\n.example-option-check,\n.example-option-icon {\n  font-size: var(--mat-sys-label-large);\n}\n\n[ngOption]:not([aria-selected='true']) .example-option-check {\n  display: none;\n}\n\n.example-option-text {\n  flex: 1;\n}\n"]
     }]
   }],
   ctorParameters: () => []
 });
-const states$2 = ['Option 1', 'Option 2', 'Option 3'];
 
 class ComboboxReadonlyMultiselectExample {
-  popover = viewChild('popover', ...(ngDevMode ? [{
-    debugName: "popover"
+  displayValue = signal('', ...(ngDevMode ? [{
+    debugName: "displayValue"
   }] : []));
   listbox = viewChild(Listbox, ...(ngDevMode ? [{
     debugName: "listbox"
   }] : []));
+  options = viewChildren(Option, ...(ngDevMode ? [{
+    debugName: "options"
+  }] : []));
   combobox = viewChild(Combobox, ...(ngDevMode ? [{
     debugName: "combobox"
   }] : []));
-  options = () => states$1;
-  searchString = signal('', ...(ngDevMode ? [{
-    debugName: "searchString"
-  }] : []));
+  labels = [{
+    value: 'Important',
+    icon: 'label'
+  }, {
+    value: 'Starred',
+    icon: 'star'
+  }, {
+    value: 'Work',
+    icon: 'work'
+  }, {
+    value: 'Personal',
+    icon: 'person'
+  }, {
+    value: 'To Do',
+    icon: 'checklist'
+  }, {
+    value: 'Later',
+    icon: 'schedule'
+  }, {
+    value: 'Read',
+    icon: 'menu_book'
+  }, {
+    value: 'Travel',
+    icon: 'flight'
+  }];
   constructor() {
     afterRenderEffect(() => {
-      const popover = this.popover();
-      const combobox = this.combobox();
-      combobox._pattern.expanded() ? this.showPopover() : popover.nativeElement.hidePopover();
-      this.listbox()?.scrollActiveItemIntoView();
+      const values = this.listbox()?.values() || [];
+      if (values.length === 0) {
+        this.displayValue.set('Select a label');
+      } else if (values.length === 1) {
+        this.displayValue.set(values[0]);
+      } else {
+        this.displayValue.set(`${values[0]} + ${values.length - 1} more`);
+      }
     });
-  }
-  showPopover() {
-    const popover = this.popover();
-    const combobox = this.combobox();
-    const comboboxRect = combobox._pattern.inputs.inputEl()?.getBoundingClientRect();
-    const popoverEl = popover.nativeElement;
-    if (comboboxRect) {
-      popoverEl.style.width = `${comboboxRect.width}px`;
-      popoverEl.style.top = `${comboboxRect.bottom + 4}px`;
-      popoverEl.style.left = `${comboboxRect.left - 1}px`;
-    }
-    popover.nativeElement.showPopover();
+    afterRenderEffect(() => {
+      const option = this.options().find(opt => opt.active());
+      setTimeout(() => option?.element.scrollIntoView({
+        block: 'nearest'
+      }), 50);
+    });
+    afterRenderEffect(() => {
+      if (!this.combobox()?.expanded()) {
+        setTimeout(() => this.listbox()?.element.scrollTo(0, 0), 150);
+      }
+    });
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
@@ -842,15 +898,14 @@ class ComboboxReadonlyMultiselectExample {
     isStandalone: true,
     selector: "combobox-readonly-multiselect-example",
     viewQueries: [{
-      propertyName: "popover",
-      first: true,
-      predicate: ["popover"],
-      descendants: true,
-      isSignal: true
-    }, {
       propertyName: "listbox",
       first: true,
       predicate: Listbox,
+      descendants: true,
+      isSignal: true
+    }, {
+      propertyName: "options",
+      predicate: Option,
       descendants: true,
       isSignal: true
     }, {
@@ -861,8 +916,8 @@ class ComboboxReadonlyMultiselectExample {
       isSignal: true
     }],
     ngImport: i0,
-    template: "<div ngCombobox #combobox=\"ngCombobox\" class=\"example-combobox-container\" [readonly]=\"true\">\n  <div class=\"example-combobox-input-container\">\n    <input\n      ngComboboxInput\n      class=\"example-combobox-input\"\n      placeholder=\"Search...\"\n      [(value)]=\"searchString\"\n    />\n    <span class=\"material-symbols-outlined example-icon example-arrow-icon\">arrow_drop_down</span>\n  </div>\n\n  <div popover=\"manual\" #popover class=\"example-popover\">\n    <ng-template ngComboboxPopupContainer>\n      <div ngListbox [multi]=\"true\" class=\"example-listbox\">\n        @for (option of options(); track option) {\n          <div class=\"example-option\" ngOption [value]=\"option\" [label]=\"option\">\n            <span>{{option}}</span>\n            <span\n              aria-hidden=\"true\"\n              class=\"material-symbols-outlined example-icon example-selected-icon\"\n              >check</span\n            >\n          </div>\n        }\n      </div>\n    </ng-template>\n  </div>\n</div>\n",
-    styles: [".example-combobox-container {\n  position: relative;\n  width: 100%;\n  display: flex;\n  flex-direction: column;\n  border: 1px solid var(--mat-sys-outline);\n  border-radius: var(--mat-sys-corner-extra-small);\n}\n\n.example-combobox-container:has([readonly='true']:not([aria-disabled='true'])) {\n  width: 200px;\n}\n\n.example-combobox-input-container {\n  display: flex;\n  position: relative;\n  align-items: center;\n  border-radius: var(--mat-sys-corner-extra-small);\n}\n\n.example-combobox-input {\n  border-radius: var(--mat-sys-corner-extra-small);\n}\n\n.example-combobox-input[readonly='true']:not([aria-disabled='true']) {\n  cursor: pointer;\n  padding: 0.7rem 1rem;\n}\n\n.example-combobox-container:focus-within .example-combobox-input {\n  outline: 1.5px solid var(--mat-sys-primary);\n  box-shadow: 0 0 0 4px color-mix(in srgb, var(--mat-sys-primary) 25%, transparent);\n}\n\n.example-icon {\n  width: 24px;\n  height: 24px;\n  font-size: 20px;\n  display: grid;\n  place-items: center;\n  pointer-events: none;\n}\n\n.example-search-icon {\n  padding: 0 0.5rem;\n  position: absolute;\n  opacity: 0.8;\n}\n\n.example-arrow-icon {\n  padding: 0 0.5rem;\n  position: absolute;\n  right: 0;\n  opacity: 0.8;\n  transition: transform 0.2s ease;\n}\n\n.example-combobox-input[aria-expanded='true'] + .example-arrow-icon {\n  transform: rotate(180deg);\n}\n\n.example-combobox-input {\n  width: 100%;\n  border: none;\n  outline: none;\n  font-size: 1rem;\n  padding: 0.7rem 1rem 0.7rem 2.5rem;\n  background-color: var(--mat-sys-surface);\n}\n\n.example-popover {\n  margin: 0;\n  padding: 0;\n  border: 1px solid var(--mat-sys-outline);\n  border-radius: var(--mat-sys-corner-extra-small);\n  background-color: var(--mat-sys-surface);\n}\n\n.example-listbox {\n  display: flex;\n  flex-direction: column;\n  overflow: auto;\n  max-height: 10rem;\n  padding: 0.5rem;\n  gap: 4px;\n}\n\n.example-option {\n  cursor: pointer;\n  padding: 0.3rem 1rem;\n  border-radius: var(--mat-sys-corner-extra-small);\n  display: flex;\n  overflow: hidden;\n  flex-shrink: 0;\n  align-items: center;\n  justify-content: space-between;\n  gap: 1rem;\n}\n\n.example-option-text {\n  flex: 1;\n}\n\n.example-checkbox-blank-icon,\n.example-option[aria-selected='true'] .example-checkbox-filled-icon {\n  display: flex;\n  align-items: center;\n}\n\n.example-checkbox-filled-icon,\n.example-option[aria-selected='true'] .example-checkbox-blank-icon {\n  display: none;\n}\n\n.example-checkbox-blank-icon {\n  opacity: 0.6;\n}\n\n.example-selected-icon {\n  visibility: hidden;\n}\n\n.example-option[aria-selected='true'] .example-selected-icon {\n  visibility: visible;\n}\n\n.example-option[aria-selected='true'] {\n  color: var(--mat-sys-primary);\n  background-color: color-mix(in srgb, var(--mat-sys-primary) 10%, transparent);\n}\n\n.example-option:hover {\n  background-color: color-mix(in srgb, var(--mat-sys-on-surface) 10%, transparent);\n}\n\n.example-combobox-container:focus-within [data-active='true'] {\n  outline: 2px solid color-mix(in srgb, var(--mat-sys-primary) 80%, transparent);\n}\n\n.example-tree {\n  padding: 10px;\n  overflow-x: scroll;\n}\n\n.example-tree-item {\n  cursor: pointer;\n  list-style: none;\n  text-decoration: none;\n  display: flex;\n  align-items: center;\n  gap: 1rem;\n  padding: 0.3rem 1rem;\n}\n\nli[aria-expanded='false'] + ul[role='group'] {\n  display: none;\n}\n\nul[role='group'] {\n  padding-inline-start: 1rem;\n}\n\n.example-icon {\n  margin: 0;\n  width: 24px;\n}\n\n.example-parent-icon {\n  transition: transform 0.2s ease;\n}\n\n.example-tree-item[aria-expanded='true'] .example-parent-icon {\n  transform: rotate(90deg);\n}\n\n.example-selected-icon {\n  visibility: hidden;\n  margin-left: auto;\n}\n\n.example-tree-item[aria-current] .example-selected-icon,\n.example-tree-item[aria-selected='true'] .example-selected-icon {\n  visibility: visible;\n}\n\n.example-combobox-container:has([aria-disabled='true']) {\n  opacity: 0.4;\n  cursor: default;\n}\n"],
+    template: "<div ngCombobox readonly>\n  <div #origin class=\"example-select\">\n    <span class=\"example-combobox-text\">{{ displayValue() }}</span>\n    <input aria-label=\"Label dropdown\" placeholder=\"Select a label\" ngComboboxInput />\n    <span class=\"example-arrow material-symbols-outlined\">arrow_drop_down</span>\n  </div>\n\n  <ng-template\n    [cdkConnectedOverlay]=\"{origin, usePopover: 'inline', matchWidth: true}\"\n    [cdkConnectedOverlayOpen]=\"true\"\n  >\n    <ng-template ngComboboxPopupContainer>\n      <div class=\"example-popup-container\">\n        <div ngListbox multi>\n          @for (label of labels; track label.value) {\n            <div ngOption [value]=\"label.value\" [label]=\"label.value\">\n              <span class=\"example-option-icon material-symbols-outlined\">{{label.icon}}</span>\n              <span class=\"example-option-text\">{{label.value}}</span>\n              <span class=\"example-option-check material-symbols-outlined\">check</span>\n            </div>\n          }\n        </div>\n      </div>\n    </ng-template>\n  </ng-template>\n</div>\n",
+    styles: [".example-select {\n  display: flex;\n  position: relative;\n  align-items: center;\n  color: var(--mat-sys-on-primary);\n  font-size: var(--mat-sys-label-large);\n  background-color: var(--mat-sys-primary);\n  border-radius: var(--mat-sys-corner-extra-large);\n}\n\n.example-select:has([ngComboboxInput][aria-disabled='true']) {\n  opacity: 0.6;\n  cursor: default;\n}\n\n.example-select:hover {\n  background-color: color-mix(in srgb, var(--mat-sys-primary) 90%, transparent);\n}\n\n[ngComboboxInput] {\n  opacity: 0;\n  cursor: pointer;\n  padding: 0 3rem;\n  height: 3rem;\n  border: none;\n}\n\n[ngCombobox]:focus-within .example-select {\n  outline-offset: 2px;\n  outline: 2px solid var(--mat-sys-primary);\n}\n\n.example-combobox-text {\n  left: 2rem;\n  position: absolute;\n}\n\n.example-arrow {\n  right: 1rem;\n  position: absolute;\n  pointer-events: none;\n  transition: transform 150ms ease-in-out;\n}\n\n[ngComboboxInput][aria-expanded='true'] ~ .example-arrow {\n  transform: rotate(180deg);\n}\n\n.example-popup-container {\n  width: 100%;\n  padding: 0.5rem;\n  margin-top: 8px;\n  border-radius: var(--mat-sys-corner-large);\n  background-color: var(--mat-sys-surface-container);\n\n  max-height: 13rem;\n  opacity: 1;\n  visibility: visible;\n  transition: max-height 150ms ease-out, visibility 0s, opacity 25ms ease-out;\n}\n\n[ngListbox] {\n  gap: 4px;\n  height: 100%;\n  display: flex;\n  overflow: auto;\n  flex-direction: column;\n}\n\n[ngCombobox]:has([ngComboboxInput][aria-expanded='false']) .example-popup-container {\n  max-height: 0;\n  opacity: 0;\n  visibility: hidden;\n  transition: max-height 150ms ease-in, visibility 0s 150ms, opacity 150ms ease-in;\n}\n\n[ngCombobox]:has([ngComboboxInput][aria-expanded='true']) [ngListbox] {\n  display: flex;\n}\n\n[ngOption] {\n  display: flex;\n  cursor: pointer;\n  align-items: center;\n  padding: 0 1rem;\n  min-height: 3rem;\n  color: var(--mat-sys-on-surface);\n  font-size: var(--mat-sys-label-large);\n  border-radius: var(--mat-sys-corner-extra-large);\n}\n\n[ngOption]:hover {\n  background-color: color-mix(in srgb, var(--mat-sys-on-surface) 5%, transparent);\n}\n\n[ngOption][data-active='true'] {\n  background-color: color-mix(in srgb, var(--mat-sys-on-surface) 10%, transparent);\n}\n\n[ngOption][aria-selected='true'] {\n  color: var(--mat-sys-primary);\n  background-color: color-mix(in srgb, var(--mat-sys-primary) 10%, transparent);\n}\n\n.example-option-icon {\n  padding-right: 1rem;\n}\n\n.example-option-check,\n.example-option-icon {\n  font-size: var(--mat-sys-label-large);\n}\n\n[ngOption]:not([aria-selected='true']) .example-option-check {\n  display: none;\n}\n\n.example-option-text {\n  flex: 1;\n}\n"],
     dependencies: [{
       kind: "directive",
       type: Combobox,
@@ -896,7 +951,14 @@ class ComboboxReadonlyMultiselectExample {
       exportAs: ["ngOption"]
     }, {
       kind: "ngmodule",
-      type: FormsModule
+      type: OverlayModule
+    }, {
+      kind: "directive",
+      type: i1.CdkConnectedOverlay,
+      selector: "[cdk-connected-overlay], [connected-overlay], [cdkConnectedOverlay]",
+      inputs: ["cdkConnectedOverlayOrigin", "cdkConnectedOverlayPositions", "cdkConnectedOverlayPositionStrategy", "cdkConnectedOverlayOffsetX", "cdkConnectedOverlayOffsetY", "cdkConnectedOverlayWidth", "cdkConnectedOverlayHeight", "cdkConnectedOverlayMinWidth", "cdkConnectedOverlayMinHeight", "cdkConnectedOverlayBackdropClass", "cdkConnectedOverlayPanelClass", "cdkConnectedOverlayViewportMargin", "cdkConnectedOverlayScrollStrategy", "cdkConnectedOverlayOpen", "cdkConnectedOverlayDisableClose", "cdkConnectedOverlayTransformOriginOn", "cdkConnectedOverlayHasBackdrop", "cdkConnectedOverlayLockPosition", "cdkConnectedOverlayFlexibleDimensions", "cdkConnectedOverlayGrowAfterOpen", "cdkConnectedOverlayPush", "cdkConnectedOverlayDisposeOnNavigation", "cdkConnectedOverlayUsePopover", "cdkConnectedOverlayMatchWidth", "cdkConnectedOverlay"],
+      outputs: ["backdropClick", "positionChange", "attach", "detach", "overlayKeydown", "overlayOutsideClick"],
+      exportAs: ["cdkConnectedOverlay"]
     }],
     changeDetection: i0.ChangeDetectionStrategy.OnPush
   });
@@ -910,49 +972,75 @@ i0.ɵɵngDeclareClassMetadata({
     type: Component,
     args: [{
       selector: 'combobox-readonly-multiselect-example',
-      imports: [Combobox, ComboboxInput, ComboboxPopup, ComboboxPopupContainer, Listbox, Option, FormsModule],
+      imports: [Combobox, ComboboxInput, ComboboxPopup, ComboboxPopupContainer, Listbox, Option, OverlayModule],
       changeDetection: ChangeDetectionStrategy.OnPush,
-      template: "<div ngCombobox #combobox=\"ngCombobox\" class=\"example-combobox-container\" [readonly]=\"true\">\n  <div class=\"example-combobox-input-container\">\n    <input\n      ngComboboxInput\n      class=\"example-combobox-input\"\n      placeholder=\"Search...\"\n      [(value)]=\"searchString\"\n    />\n    <span class=\"material-symbols-outlined example-icon example-arrow-icon\">arrow_drop_down</span>\n  </div>\n\n  <div popover=\"manual\" #popover class=\"example-popover\">\n    <ng-template ngComboboxPopupContainer>\n      <div ngListbox [multi]=\"true\" class=\"example-listbox\">\n        @for (option of options(); track option) {\n          <div class=\"example-option\" ngOption [value]=\"option\" [label]=\"option\">\n            <span>{{option}}</span>\n            <span\n              aria-hidden=\"true\"\n              class=\"material-symbols-outlined example-icon example-selected-icon\"\n              >check</span\n            >\n          </div>\n        }\n      </div>\n    </ng-template>\n  </div>\n</div>\n",
-      styles: [".example-combobox-container {\n  position: relative;\n  width: 100%;\n  display: flex;\n  flex-direction: column;\n  border: 1px solid var(--mat-sys-outline);\n  border-radius: var(--mat-sys-corner-extra-small);\n}\n\n.example-combobox-container:has([readonly='true']:not([aria-disabled='true'])) {\n  width: 200px;\n}\n\n.example-combobox-input-container {\n  display: flex;\n  position: relative;\n  align-items: center;\n  border-radius: var(--mat-sys-corner-extra-small);\n}\n\n.example-combobox-input {\n  border-radius: var(--mat-sys-corner-extra-small);\n}\n\n.example-combobox-input[readonly='true']:not([aria-disabled='true']) {\n  cursor: pointer;\n  padding: 0.7rem 1rem;\n}\n\n.example-combobox-container:focus-within .example-combobox-input {\n  outline: 1.5px solid var(--mat-sys-primary);\n  box-shadow: 0 0 0 4px color-mix(in srgb, var(--mat-sys-primary) 25%, transparent);\n}\n\n.example-icon {\n  width: 24px;\n  height: 24px;\n  font-size: 20px;\n  display: grid;\n  place-items: center;\n  pointer-events: none;\n}\n\n.example-search-icon {\n  padding: 0 0.5rem;\n  position: absolute;\n  opacity: 0.8;\n}\n\n.example-arrow-icon {\n  padding: 0 0.5rem;\n  position: absolute;\n  right: 0;\n  opacity: 0.8;\n  transition: transform 0.2s ease;\n}\n\n.example-combobox-input[aria-expanded='true'] + .example-arrow-icon {\n  transform: rotate(180deg);\n}\n\n.example-combobox-input {\n  width: 100%;\n  border: none;\n  outline: none;\n  font-size: 1rem;\n  padding: 0.7rem 1rem 0.7rem 2.5rem;\n  background-color: var(--mat-sys-surface);\n}\n\n.example-popover {\n  margin: 0;\n  padding: 0;\n  border: 1px solid var(--mat-sys-outline);\n  border-radius: var(--mat-sys-corner-extra-small);\n  background-color: var(--mat-sys-surface);\n}\n\n.example-listbox {\n  display: flex;\n  flex-direction: column;\n  overflow: auto;\n  max-height: 10rem;\n  padding: 0.5rem;\n  gap: 4px;\n}\n\n.example-option {\n  cursor: pointer;\n  padding: 0.3rem 1rem;\n  border-radius: var(--mat-sys-corner-extra-small);\n  display: flex;\n  overflow: hidden;\n  flex-shrink: 0;\n  align-items: center;\n  justify-content: space-between;\n  gap: 1rem;\n}\n\n.example-option-text {\n  flex: 1;\n}\n\n.example-checkbox-blank-icon,\n.example-option[aria-selected='true'] .example-checkbox-filled-icon {\n  display: flex;\n  align-items: center;\n}\n\n.example-checkbox-filled-icon,\n.example-option[aria-selected='true'] .example-checkbox-blank-icon {\n  display: none;\n}\n\n.example-checkbox-blank-icon {\n  opacity: 0.6;\n}\n\n.example-selected-icon {\n  visibility: hidden;\n}\n\n.example-option[aria-selected='true'] .example-selected-icon {\n  visibility: visible;\n}\n\n.example-option[aria-selected='true'] {\n  color: var(--mat-sys-primary);\n  background-color: color-mix(in srgb, var(--mat-sys-primary) 10%, transparent);\n}\n\n.example-option:hover {\n  background-color: color-mix(in srgb, var(--mat-sys-on-surface) 10%, transparent);\n}\n\n.example-combobox-container:focus-within [data-active='true'] {\n  outline: 2px solid color-mix(in srgb, var(--mat-sys-primary) 80%, transparent);\n}\n\n.example-tree {\n  padding: 10px;\n  overflow-x: scroll;\n}\n\n.example-tree-item {\n  cursor: pointer;\n  list-style: none;\n  text-decoration: none;\n  display: flex;\n  align-items: center;\n  gap: 1rem;\n  padding: 0.3rem 1rem;\n}\n\nli[aria-expanded='false'] + ul[role='group'] {\n  display: none;\n}\n\nul[role='group'] {\n  padding-inline-start: 1rem;\n}\n\n.example-icon {\n  margin: 0;\n  width: 24px;\n}\n\n.example-parent-icon {\n  transition: transform 0.2s ease;\n}\n\n.example-tree-item[aria-expanded='true'] .example-parent-icon {\n  transform: rotate(90deg);\n}\n\n.example-selected-icon {\n  visibility: hidden;\n  margin-left: auto;\n}\n\n.example-tree-item[aria-current] .example-selected-icon,\n.example-tree-item[aria-selected='true'] .example-selected-icon {\n  visibility: visible;\n}\n\n.example-combobox-container:has([aria-disabled='true']) {\n  opacity: 0.4;\n  cursor: default;\n}\n"]
+      template: "<div ngCombobox readonly>\n  <div #origin class=\"example-select\">\n    <span class=\"example-combobox-text\">{{ displayValue() }}</span>\n    <input aria-label=\"Label dropdown\" placeholder=\"Select a label\" ngComboboxInput />\n    <span class=\"example-arrow material-symbols-outlined\">arrow_drop_down</span>\n  </div>\n\n  <ng-template\n    [cdkConnectedOverlay]=\"{origin, usePopover: 'inline', matchWidth: true}\"\n    [cdkConnectedOverlayOpen]=\"true\"\n  >\n    <ng-template ngComboboxPopupContainer>\n      <div class=\"example-popup-container\">\n        <div ngListbox multi>\n          @for (label of labels; track label.value) {\n            <div ngOption [value]=\"label.value\" [label]=\"label.value\">\n              <span class=\"example-option-icon material-symbols-outlined\">{{label.icon}}</span>\n              <span class=\"example-option-text\">{{label.value}}</span>\n              <span class=\"example-option-check material-symbols-outlined\">check</span>\n            </div>\n          }\n        </div>\n      </div>\n    </ng-template>\n  </ng-template>\n</div>\n",
+      styles: [".example-select {\n  display: flex;\n  position: relative;\n  align-items: center;\n  color: var(--mat-sys-on-primary);\n  font-size: var(--mat-sys-label-large);\n  background-color: var(--mat-sys-primary);\n  border-radius: var(--mat-sys-corner-extra-large);\n}\n\n.example-select:has([ngComboboxInput][aria-disabled='true']) {\n  opacity: 0.6;\n  cursor: default;\n}\n\n.example-select:hover {\n  background-color: color-mix(in srgb, var(--mat-sys-primary) 90%, transparent);\n}\n\n[ngComboboxInput] {\n  opacity: 0;\n  cursor: pointer;\n  padding: 0 3rem;\n  height: 3rem;\n  border: none;\n}\n\n[ngCombobox]:focus-within .example-select {\n  outline-offset: 2px;\n  outline: 2px solid var(--mat-sys-primary);\n}\n\n.example-combobox-text {\n  left: 2rem;\n  position: absolute;\n}\n\n.example-arrow {\n  right: 1rem;\n  position: absolute;\n  pointer-events: none;\n  transition: transform 150ms ease-in-out;\n}\n\n[ngComboboxInput][aria-expanded='true'] ~ .example-arrow {\n  transform: rotate(180deg);\n}\n\n.example-popup-container {\n  width: 100%;\n  padding: 0.5rem;\n  margin-top: 8px;\n  border-radius: var(--mat-sys-corner-large);\n  background-color: var(--mat-sys-surface-container);\n\n  max-height: 13rem;\n  opacity: 1;\n  visibility: visible;\n  transition: max-height 150ms ease-out, visibility 0s, opacity 25ms ease-out;\n}\n\n[ngListbox] {\n  gap: 4px;\n  height: 100%;\n  display: flex;\n  overflow: auto;\n  flex-direction: column;\n}\n\n[ngCombobox]:has([ngComboboxInput][aria-expanded='false']) .example-popup-container {\n  max-height: 0;\n  opacity: 0;\n  visibility: hidden;\n  transition: max-height 150ms ease-in, visibility 0s 150ms, opacity 150ms ease-in;\n}\n\n[ngCombobox]:has([ngComboboxInput][aria-expanded='true']) [ngListbox] {\n  display: flex;\n}\n\n[ngOption] {\n  display: flex;\n  cursor: pointer;\n  align-items: center;\n  padding: 0 1rem;\n  min-height: 3rem;\n  color: var(--mat-sys-on-surface);\n  font-size: var(--mat-sys-label-large);\n  border-radius: var(--mat-sys-corner-extra-large);\n}\n\n[ngOption]:hover {\n  background-color: color-mix(in srgb, var(--mat-sys-on-surface) 5%, transparent);\n}\n\n[ngOption][data-active='true'] {\n  background-color: color-mix(in srgb, var(--mat-sys-on-surface) 10%, transparent);\n}\n\n[ngOption][aria-selected='true'] {\n  color: var(--mat-sys-primary);\n  background-color: color-mix(in srgb, var(--mat-sys-primary) 10%, transparent);\n}\n\n.example-option-icon {\n  padding-right: 1rem;\n}\n\n.example-option-check,\n.example-option-icon {\n  font-size: var(--mat-sys-label-large);\n}\n\n[ngOption]:not([aria-selected='true']) .example-option-check {\n  display: none;\n}\n\n.example-option-text {\n  flex: 1;\n}\n"]
     }]
   }],
   ctorParameters: () => []
 });
-const states$1 = ['Option 1', 'Option 2', 'Option 3'];
 
 class ComboboxReadonlyDisabledExample {
-  popover = viewChild('popover', ...(ngDevMode ? [{
-    debugName: "popover"
+  displayValue = signal('', ...(ngDevMode ? [{
+    debugName: "displayValue"
   }] : []));
   listbox = viewChild(Listbox, ...(ngDevMode ? [{
     debugName: "listbox"
   }] : []));
+  options = viewChildren(Option, ...(ngDevMode ? [{
+    debugName: "options"
+  }] : []));
   combobox = viewChild(Combobox, ...(ngDevMode ? [{
     debugName: "combobox"
   }] : []));
-  options = () => states;
-  searchString = signal('', ...(ngDevMode ? [{
-    debugName: "searchString"
-  }] : []));
+  labels = [{
+    value: 'Important',
+    icon: 'label'
+  }, {
+    value: 'Starred',
+    icon: 'star'
+  }, {
+    value: 'Work',
+    icon: 'work'
+  }, {
+    value: 'Personal',
+    icon: 'person'
+  }, {
+    value: 'To Do',
+    icon: 'checklist'
+  }, {
+    value: 'Later',
+    icon: 'schedule'
+  }, {
+    value: 'Read',
+    icon: 'menu_book'
+  }, {
+    value: 'Travel',
+    icon: 'flight'
+  }];
   constructor() {
     afterRenderEffect(() => {
-      const popover = this.popover();
-      const combobox = this.combobox();
-      combobox.expanded() ? this.showPopover() : popover.nativeElement.hidePopover();
-      this.listbox()?.scrollActiveItemIntoView();
+      const values = this.listbox()?.values() || [];
+      if (values.length === 0) {
+        this.displayValue.set('Select a label');
+      } else if (values.length === 1) {
+        this.displayValue.set(values[0]);
+      } else {
+        this.displayValue.set(`${values[0]} + ${values.length - 1} more`);
+      }
     });
-  }
-  showPopover() {
-    const popover = this.popover();
-    const combobox = this.combobox();
-    const comboboxRect = combobox.inputElement()?.getBoundingClientRect();
-    const popoverEl = popover.nativeElement;
-    if (comboboxRect) {
-      popoverEl.style.width = `${comboboxRect.width}px`;
-      popoverEl.style.top = `${comboboxRect.bottom + 4}px`;
-      popoverEl.style.left = `${comboboxRect.left - 1}px`;
-    }
-    popover.nativeElement.showPopover();
+    afterRenderEffect(() => {
+      const option = this.options().find(opt => opt.active());
+      setTimeout(() => option?.element.scrollIntoView({
+        block: 'nearest'
+      }), 50);
+    });
+    afterRenderEffect(() => {
+      if (!this.combobox()?.expanded()) {
+        setTimeout(() => this.listbox()?.element.scrollTo(0, 0), 150);
+      }
+    });
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
@@ -969,15 +1057,14 @@ class ComboboxReadonlyDisabledExample {
     isStandalone: true,
     selector: "combobox-readonly-disabled-example",
     viewQueries: [{
-      propertyName: "popover",
-      first: true,
-      predicate: ["popover"],
-      descendants: true,
-      isSignal: true
-    }, {
       propertyName: "listbox",
       first: true,
       predicate: Listbox,
+      descendants: true,
+      isSignal: true
+    }, {
+      propertyName: "options",
+      predicate: Option,
       descendants: true,
       isSignal: true
     }, {
@@ -988,8 +1075,8 @@ class ComboboxReadonlyDisabledExample {
       isSignal: true
     }],
     ngImport: i0,
-    template: "<div ngCombobox #combobox=\"ngCombobox\" class=\"example-combobox-container\" [readonly]=\"true\" [disabled]=\"true\">\n  <div class=\"example-combobox-input-container\">\n    <input\n      ngComboboxInput\n      class=\"example-combobox-input\"\n      placeholder=\"Search...\"\n      [(value)]=\"searchString\"\n    />\n    <span class=\"material-symbols-outlined example-icon example-arrow-icon\">arrow_drop_down</span>\n  </div>\n\n  <div popover=\"manual\" #popover class=\"example-popover\">\n    <ng-template ngComboboxPopupContainer>\n      <div ngListbox class=\"example-listbox\">\n        @for (option of options(); track option) {\n          <div\n            class=\"example-option example-selectable example-stateful\"\n            ngOption\n            [value]=\"option\"\n            [label]=\"option\"\n          >\n            <span>{{option}}</span>\n            <span\n              aria-hidden=\"true\"\n              class=\"material-symbols-outlined example-icon example-selected-icon\"\n              >check</span\n            >\n          </div>\n        }\n      </div>\n    </ng-template>\n  </div>\n</div>\n",
-    styles: [".example-combobox-container {\n  position: relative;\n  width: 100%;\n  display: flex;\n  flex-direction: column;\n  border: 1px solid var(--mat-sys-outline);\n  border-radius: var(--mat-sys-corner-extra-small);\n}\n\n.example-combobox-container:has([readonly='true']:not([aria-disabled='true'])) {\n  width: 200px;\n}\n\n.example-combobox-input-container {\n  display: flex;\n  position: relative;\n  align-items: center;\n  border-radius: var(--mat-sys-corner-extra-small);\n}\n\n.example-combobox-input {\n  border-radius: var(--mat-sys-corner-extra-small);\n}\n\n.example-combobox-input[readonly='true']:not([aria-disabled='true']) {\n  cursor: pointer;\n  padding: 0.7rem 1rem;\n}\n\n.example-combobox-container:focus-within .example-combobox-input {\n  outline: 1.5px solid var(--mat-sys-primary);\n  box-shadow: 0 0 0 4px color-mix(in srgb, var(--mat-sys-primary) 25%, transparent);\n}\n\n.example-icon {\n  width: 24px;\n  height: 24px;\n  font-size: 20px;\n  display: grid;\n  place-items: center;\n  pointer-events: none;\n}\n\n.example-search-icon {\n  padding: 0 0.5rem;\n  position: absolute;\n  opacity: 0.8;\n}\n\n.example-arrow-icon {\n  padding: 0 0.5rem;\n  position: absolute;\n  right: 0;\n  opacity: 0.8;\n  transition: transform 0.2s ease;\n}\n\n.example-combobox-input[aria-expanded='true'] + .example-arrow-icon {\n  transform: rotate(180deg);\n}\n\n.example-combobox-input {\n  width: 100%;\n  border: none;\n  outline: none;\n  font-size: 1rem;\n  padding: 0.7rem 1rem 0.7rem 2.5rem;\n  background-color: var(--mat-sys-surface);\n}\n\n.example-popover {\n  margin: 0;\n  padding: 0;\n  border: 1px solid var(--mat-sys-outline);\n  border-radius: var(--mat-sys-corner-extra-small);\n  background-color: var(--mat-sys-surface);\n}\n\n.example-listbox {\n  display: flex;\n  flex-direction: column;\n  overflow: auto;\n  max-height: 10rem;\n  padding: 0.5rem;\n  gap: 4px;\n}\n\n.example-option {\n  cursor: pointer;\n  padding: 0.3rem 1rem;\n  border-radius: var(--mat-sys-corner-extra-small);\n  display: flex;\n  overflow: hidden;\n  flex-shrink: 0;\n  align-items: center;\n  justify-content: space-between;\n  gap: 1rem;\n}\n\n.example-option-text {\n  flex: 1;\n}\n\n.example-checkbox-blank-icon,\n.example-option[aria-selected='true'] .example-checkbox-filled-icon {\n  display: flex;\n  align-items: center;\n}\n\n.example-checkbox-filled-icon,\n.example-option[aria-selected='true'] .example-checkbox-blank-icon {\n  display: none;\n}\n\n.example-checkbox-blank-icon {\n  opacity: 0.6;\n}\n\n.example-selected-icon {\n  visibility: hidden;\n}\n\n.example-option[aria-selected='true'] .example-selected-icon {\n  visibility: visible;\n}\n\n.example-option[aria-selected='true'] {\n  color: var(--mat-sys-primary);\n  background-color: color-mix(in srgb, var(--mat-sys-primary) 10%, transparent);\n}\n\n.example-option:hover {\n  background-color: color-mix(in srgb, var(--mat-sys-on-surface) 10%, transparent);\n}\n\n.example-combobox-container:focus-within [data-active='true'] {\n  outline: 2px solid color-mix(in srgb, var(--mat-sys-primary) 80%, transparent);\n}\n\n.example-tree {\n  padding: 10px;\n  overflow-x: scroll;\n}\n\n.example-tree-item {\n  cursor: pointer;\n  list-style: none;\n  text-decoration: none;\n  display: flex;\n  align-items: center;\n  gap: 1rem;\n  padding: 0.3rem 1rem;\n}\n\nli[aria-expanded='false'] + ul[role='group'] {\n  display: none;\n}\n\nul[role='group'] {\n  padding-inline-start: 1rem;\n}\n\n.example-icon {\n  margin: 0;\n  width: 24px;\n}\n\n.example-parent-icon {\n  transition: transform 0.2s ease;\n}\n\n.example-tree-item[aria-expanded='true'] .example-parent-icon {\n  transform: rotate(90deg);\n}\n\n.example-selected-icon {\n  visibility: hidden;\n  margin-left: auto;\n}\n\n.example-tree-item[aria-current] .example-selected-icon,\n.example-tree-item[aria-selected='true'] .example-selected-icon {\n  visibility: visible;\n}\n\n.example-combobox-container:has([aria-disabled='true']) {\n  opacity: 0.4;\n  cursor: default;\n}\n"],
+    template: "<div ngCombobox readonly disabled>\n  <div #origin class=\"example-select\">\n    <span class=\"example-combobox-text\">{{ displayValue() }}</span>\n    <input aria-label=\"Label dropdown\" placeholder=\"Select a label\" ngComboboxInput />\n    <span class=\"example-arrow material-symbols-outlined\">arrow_drop_down</span>\n  </div>\n\n  <ng-template\n    [cdkConnectedOverlay]=\"{origin, usePopover: 'inline', matchWidth: true}\"\n    [cdkConnectedOverlayOpen]=\"true\"\n  >\n    <ng-template ngComboboxPopupContainer>\n      <div class=\"example-popup-container\">\n        <div ngListbox>\n          @for (label of labels; track label.value) {\n            <div ngOption [value]=\"label.value\" [label]=\"label.value\">\n              <span class=\"example-option-icon material-symbols-outlined\">{{label.icon}}</span>\n              <span class=\"example-option-text\">{{label.value}}</span>\n              <span class=\"example-option-check material-symbols-outlined\">check</span>\n            </div>\n          }\n        </div>\n      </div>\n    </ng-template>\n  </ng-template>\n</div>\n",
+    styles: [".example-select {\n  display: flex;\n  position: relative;\n  align-items: center;\n  color: var(--mat-sys-on-primary);\n  font-size: var(--mat-sys-label-large);\n  background-color: var(--mat-sys-primary);\n  border-radius: var(--mat-sys-corner-extra-large);\n}\n\n.example-select:has([ngComboboxInput][aria-disabled='true']) {\n  opacity: 0.6;\n  cursor: default;\n}\n\n.example-select:hover {\n  background-color: color-mix(in srgb, var(--mat-sys-primary) 90%, transparent);\n}\n\n[ngComboboxInput] {\n  opacity: 0;\n  cursor: pointer;\n  padding: 0 3rem;\n  height: 3rem;\n  border: none;\n}\n\n[ngCombobox]:focus-within .example-select {\n  outline-offset: 2px;\n  outline: 2px solid var(--mat-sys-primary);\n}\n\n.example-combobox-text {\n  left: 2rem;\n  position: absolute;\n}\n\n.example-arrow {\n  right: 1rem;\n  position: absolute;\n  pointer-events: none;\n  transition: transform 150ms ease-in-out;\n}\n\n[ngComboboxInput][aria-expanded='true'] ~ .example-arrow {\n  transform: rotate(180deg);\n}\n\n.example-popup-container {\n  width: 100%;\n  padding: 0.5rem;\n  margin-top: 8px;\n  border-radius: var(--mat-sys-corner-large);\n  background-color: var(--mat-sys-surface-container);\n\n  max-height: 13rem;\n  opacity: 1;\n  visibility: visible;\n  transition: max-height 150ms ease-out, visibility 0s, opacity 25ms ease-out;\n}\n\n[ngListbox] {\n  gap: 4px;\n  height: 100%;\n  display: flex;\n  overflow: auto;\n  flex-direction: column;\n}\n\n[ngCombobox]:has([ngComboboxInput][aria-expanded='false']) .example-popup-container {\n  max-height: 0;\n  opacity: 0;\n  visibility: hidden;\n  transition: max-height 150ms ease-in, visibility 0s 150ms, opacity 150ms ease-in;\n}\n\n[ngCombobox]:has([ngComboboxInput][aria-expanded='true']) [ngListbox] {\n  display: flex;\n}\n\n[ngOption] {\n  display: flex;\n  cursor: pointer;\n  align-items: center;\n  padding: 0 1rem;\n  min-height: 3rem;\n  color: var(--mat-sys-on-surface);\n  font-size: var(--mat-sys-label-large);\n  border-radius: var(--mat-sys-corner-extra-large);\n}\n\n[ngOption]:hover {\n  background-color: color-mix(in srgb, var(--mat-sys-on-surface) 5%, transparent);\n}\n\n[ngOption][data-active='true'] {\n  background-color: color-mix(in srgb, var(--mat-sys-on-surface) 10%, transparent);\n}\n\n[ngOption][aria-selected='true'] {\n  color: var(--mat-sys-primary);\n  background-color: color-mix(in srgb, var(--mat-sys-primary) 10%, transparent);\n}\n\n.example-option-icon {\n  padding-right: 1rem;\n}\n\n.example-option-check,\n.example-option-icon {\n  font-size: var(--mat-sys-label-large);\n}\n\n[ngOption]:not([aria-selected='true']) .example-option-check {\n  display: none;\n}\n\n.example-option-text {\n  flex: 1;\n}\n"],
     dependencies: [{
       kind: "directive",
       type: Combobox,
@@ -1023,7 +1110,14 @@ class ComboboxReadonlyDisabledExample {
       exportAs: ["ngOption"]
     }, {
       kind: "ngmodule",
-      type: FormsModule
+      type: OverlayModule
+    }, {
+      kind: "directive",
+      type: i1.CdkConnectedOverlay,
+      selector: "[cdk-connected-overlay], [connected-overlay], [cdkConnectedOverlay]",
+      inputs: ["cdkConnectedOverlayOrigin", "cdkConnectedOverlayPositions", "cdkConnectedOverlayPositionStrategy", "cdkConnectedOverlayOffsetX", "cdkConnectedOverlayOffsetY", "cdkConnectedOverlayWidth", "cdkConnectedOverlayHeight", "cdkConnectedOverlayMinWidth", "cdkConnectedOverlayMinHeight", "cdkConnectedOverlayBackdropClass", "cdkConnectedOverlayPanelClass", "cdkConnectedOverlayViewportMargin", "cdkConnectedOverlayScrollStrategy", "cdkConnectedOverlayOpen", "cdkConnectedOverlayDisableClose", "cdkConnectedOverlayTransformOriginOn", "cdkConnectedOverlayHasBackdrop", "cdkConnectedOverlayLockPosition", "cdkConnectedOverlayFlexibleDimensions", "cdkConnectedOverlayGrowAfterOpen", "cdkConnectedOverlayPush", "cdkConnectedOverlayDisposeOnNavigation", "cdkConnectedOverlayUsePopover", "cdkConnectedOverlayMatchWidth", "cdkConnectedOverlay"],
+      outputs: ["backdropClick", "positionChange", "attach", "detach", "overlayKeydown", "overlayOutsideClick"],
+      exportAs: ["cdkConnectedOverlay"]
     }],
     changeDetection: i0.ChangeDetectionStrategy.OnPush
   });
@@ -1037,15 +1131,14 @@ i0.ɵɵngDeclareClassMetadata({
     type: Component,
     args: [{
       selector: 'combobox-readonly-disabled-example',
-      imports: [Combobox, ComboboxInput, ComboboxPopup, ComboboxPopupContainer, Listbox, Option, FormsModule],
+      imports: [Combobox, ComboboxInput, ComboboxPopup, ComboboxPopupContainer, Listbox, Option, OverlayModule],
       changeDetection: ChangeDetectionStrategy.OnPush,
-      template: "<div ngCombobox #combobox=\"ngCombobox\" class=\"example-combobox-container\" [readonly]=\"true\" [disabled]=\"true\">\n  <div class=\"example-combobox-input-container\">\n    <input\n      ngComboboxInput\n      class=\"example-combobox-input\"\n      placeholder=\"Search...\"\n      [(value)]=\"searchString\"\n    />\n    <span class=\"material-symbols-outlined example-icon example-arrow-icon\">arrow_drop_down</span>\n  </div>\n\n  <div popover=\"manual\" #popover class=\"example-popover\">\n    <ng-template ngComboboxPopupContainer>\n      <div ngListbox class=\"example-listbox\">\n        @for (option of options(); track option) {\n          <div\n            class=\"example-option example-selectable example-stateful\"\n            ngOption\n            [value]=\"option\"\n            [label]=\"option\"\n          >\n            <span>{{option}}</span>\n            <span\n              aria-hidden=\"true\"\n              class=\"material-symbols-outlined example-icon example-selected-icon\"\n              >check</span\n            >\n          </div>\n        }\n      </div>\n    </ng-template>\n  </div>\n</div>\n",
-      styles: [".example-combobox-container {\n  position: relative;\n  width: 100%;\n  display: flex;\n  flex-direction: column;\n  border: 1px solid var(--mat-sys-outline);\n  border-radius: var(--mat-sys-corner-extra-small);\n}\n\n.example-combobox-container:has([readonly='true']:not([aria-disabled='true'])) {\n  width: 200px;\n}\n\n.example-combobox-input-container {\n  display: flex;\n  position: relative;\n  align-items: center;\n  border-radius: var(--mat-sys-corner-extra-small);\n}\n\n.example-combobox-input {\n  border-radius: var(--mat-sys-corner-extra-small);\n}\n\n.example-combobox-input[readonly='true']:not([aria-disabled='true']) {\n  cursor: pointer;\n  padding: 0.7rem 1rem;\n}\n\n.example-combobox-container:focus-within .example-combobox-input {\n  outline: 1.5px solid var(--mat-sys-primary);\n  box-shadow: 0 0 0 4px color-mix(in srgb, var(--mat-sys-primary) 25%, transparent);\n}\n\n.example-icon {\n  width: 24px;\n  height: 24px;\n  font-size: 20px;\n  display: grid;\n  place-items: center;\n  pointer-events: none;\n}\n\n.example-search-icon {\n  padding: 0 0.5rem;\n  position: absolute;\n  opacity: 0.8;\n}\n\n.example-arrow-icon {\n  padding: 0 0.5rem;\n  position: absolute;\n  right: 0;\n  opacity: 0.8;\n  transition: transform 0.2s ease;\n}\n\n.example-combobox-input[aria-expanded='true'] + .example-arrow-icon {\n  transform: rotate(180deg);\n}\n\n.example-combobox-input {\n  width: 100%;\n  border: none;\n  outline: none;\n  font-size: 1rem;\n  padding: 0.7rem 1rem 0.7rem 2.5rem;\n  background-color: var(--mat-sys-surface);\n}\n\n.example-popover {\n  margin: 0;\n  padding: 0;\n  border: 1px solid var(--mat-sys-outline);\n  border-radius: var(--mat-sys-corner-extra-small);\n  background-color: var(--mat-sys-surface);\n}\n\n.example-listbox {\n  display: flex;\n  flex-direction: column;\n  overflow: auto;\n  max-height: 10rem;\n  padding: 0.5rem;\n  gap: 4px;\n}\n\n.example-option {\n  cursor: pointer;\n  padding: 0.3rem 1rem;\n  border-radius: var(--mat-sys-corner-extra-small);\n  display: flex;\n  overflow: hidden;\n  flex-shrink: 0;\n  align-items: center;\n  justify-content: space-between;\n  gap: 1rem;\n}\n\n.example-option-text {\n  flex: 1;\n}\n\n.example-checkbox-blank-icon,\n.example-option[aria-selected='true'] .example-checkbox-filled-icon {\n  display: flex;\n  align-items: center;\n}\n\n.example-checkbox-filled-icon,\n.example-option[aria-selected='true'] .example-checkbox-blank-icon {\n  display: none;\n}\n\n.example-checkbox-blank-icon {\n  opacity: 0.6;\n}\n\n.example-selected-icon {\n  visibility: hidden;\n}\n\n.example-option[aria-selected='true'] .example-selected-icon {\n  visibility: visible;\n}\n\n.example-option[aria-selected='true'] {\n  color: var(--mat-sys-primary);\n  background-color: color-mix(in srgb, var(--mat-sys-primary) 10%, transparent);\n}\n\n.example-option:hover {\n  background-color: color-mix(in srgb, var(--mat-sys-on-surface) 10%, transparent);\n}\n\n.example-combobox-container:focus-within [data-active='true'] {\n  outline: 2px solid color-mix(in srgb, var(--mat-sys-primary) 80%, transparent);\n}\n\n.example-tree {\n  padding: 10px;\n  overflow-x: scroll;\n}\n\n.example-tree-item {\n  cursor: pointer;\n  list-style: none;\n  text-decoration: none;\n  display: flex;\n  align-items: center;\n  gap: 1rem;\n  padding: 0.3rem 1rem;\n}\n\nli[aria-expanded='false'] + ul[role='group'] {\n  display: none;\n}\n\nul[role='group'] {\n  padding-inline-start: 1rem;\n}\n\n.example-icon {\n  margin: 0;\n  width: 24px;\n}\n\n.example-parent-icon {\n  transition: transform 0.2s ease;\n}\n\n.example-tree-item[aria-expanded='true'] .example-parent-icon {\n  transform: rotate(90deg);\n}\n\n.example-selected-icon {\n  visibility: hidden;\n  margin-left: auto;\n}\n\n.example-tree-item[aria-current] .example-selected-icon,\n.example-tree-item[aria-selected='true'] .example-selected-icon {\n  visibility: visible;\n}\n\n.example-combobox-container:has([aria-disabled='true']) {\n  opacity: 0.4;\n  cursor: default;\n}\n"]
+      template: "<div ngCombobox readonly disabled>\n  <div #origin class=\"example-select\">\n    <span class=\"example-combobox-text\">{{ displayValue() }}</span>\n    <input aria-label=\"Label dropdown\" placeholder=\"Select a label\" ngComboboxInput />\n    <span class=\"example-arrow material-symbols-outlined\">arrow_drop_down</span>\n  </div>\n\n  <ng-template\n    [cdkConnectedOverlay]=\"{origin, usePopover: 'inline', matchWidth: true}\"\n    [cdkConnectedOverlayOpen]=\"true\"\n  >\n    <ng-template ngComboboxPopupContainer>\n      <div class=\"example-popup-container\">\n        <div ngListbox>\n          @for (label of labels; track label.value) {\n            <div ngOption [value]=\"label.value\" [label]=\"label.value\">\n              <span class=\"example-option-icon material-symbols-outlined\">{{label.icon}}</span>\n              <span class=\"example-option-text\">{{label.value}}</span>\n              <span class=\"example-option-check material-symbols-outlined\">check</span>\n            </div>\n          }\n        </div>\n      </div>\n    </ng-template>\n  </ng-template>\n</div>\n",
+      styles: [".example-select {\n  display: flex;\n  position: relative;\n  align-items: center;\n  color: var(--mat-sys-on-primary);\n  font-size: var(--mat-sys-label-large);\n  background-color: var(--mat-sys-primary);\n  border-radius: var(--mat-sys-corner-extra-large);\n}\n\n.example-select:has([ngComboboxInput][aria-disabled='true']) {\n  opacity: 0.6;\n  cursor: default;\n}\n\n.example-select:hover {\n  background-color: color-mix(in srgb, var(--mat-sys-primary) 90%, transparent);\n}\n\n[ngComboboxInput] {\n  opacity: 0;\n  cursor: pointer;\n  padding: 0 3rem;\n  height: 3rem;\n  border: none;\n}\n\n[ngCombobox]:focus-within .example-select {\n  outline-offset: 2px;\n  outline: 2px solid var(--mat-sys-primary);\n}\n\n.example-combobox-text {\n  left: 2rem;\n  position: absolute;\n}\n\n.example-arrow {\n  right: 1rem;\n  position: absolute;\n  pointer-events: none;\n  transition: transform 150ms ease-in-out;\n}\n\n[ngComboboxInput][aria-expanded='true'] ~ .example-arrow {\n  transform: rotate(180deg);\n}\n\n.example-popup-container {\n  width: 100%;\n  padding: 0.5rem;\n  margin-top: 8px;\n  border-radius: var(--mat-sys-corner-large);\n  background-color: var(--mat-sys-surface-container);\n\n  max-height: 13rem;\n  opacity: 1;\n  visibility: visible;\n  transition: max-height 150ms ease-out, visibility 0s, opacity 25ms ease-out;\n}\n\n[ngListbox] {\n  gap: 4px;\n  height: 100%;\n  display: flex;\n  overflow: auto;\n  flex-direction: column;\n}\n\n[ngCombobox]:has([ngComboboxInput][aria-expanded='false']) .example-popup-container {\n  max-height: 0;\n  opacity: 0;\n  visibility: hidden;\n  transition: max-height 150ms ease-in, visibility 0s 150ms, opacity 150ms ease-in;\n}\n\n[ngCombobox]:has([ngComboboxInput][aria-expanded='true']) [ngListbox] {\n  display: flex;\n}\n\n[ngOption] {\n  display: flex;\n  cursor: pointer;\n  align-items: center;\n  padding: 0 1rem;\n  min-height: 3rem;\n  color: var(--mat-sys-on-surface);\n  font-size: var(--mat-sys-label-large);\n  border-radius: var(--mat-sys-corner-extra-large);\n}\n\n[ngOption]:hover {\n  background-color: color-mix(in srgb, var(--mat-sys-on-surface) 5%, transparent);\n}\n\n[ngOption][data-active='true'] {\n  background-color: color-mix(in srgb, var(--mat-sys-on-surface) 10%, transparent);\n}\n\n[ngOption][aria-selected='true'] {\n  color: var(--mat-sys-primary);\n  background-color: color-mix(in srgb, var(--mat-sys-primary) 10%, transparent);\n}\n\n.example-option-icon {\n  padding-right: 1rem;\n}\n\n.example-option-check,\n.example-option-icon {\n  font-size: var(--mat-sys-label-large);\n}\n\n[ngOption]:not([aria-selected='true']) .example-option-check {\n  display: none;\n}\n\n.example-option-text {\n  flex: 1;\n}\n"]
     }]
   }],
   ctorParameters: () => []
 });
-const states = ['Option 1', 'Option 2', 'Option 3'];
 
 const TREE_NODES = [{
   name: 'Winter',
