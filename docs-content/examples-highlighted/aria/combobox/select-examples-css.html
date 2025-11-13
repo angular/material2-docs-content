@@ -1,0 +1,120 @@
+<span class="hljs-selector-class">.example-select</span> {
+  <span class="hljs-attribute">display</span>: flex;
+  <span class="hljs-attribute">position</span>: relative;
+  <span class="hljs-attribute">align-items</span>: center;
+  <span class="hljs-attribute">color</span>: <span class="hljs-built_in">var</span>(--mat-sys-on-primary);
+  <span class="hljs-attribute">font-size</span>: <span class="hljs-built_in">var</span>(--mat-sys-label-large);
+  <span class="hljs-attribute">background-color</span>: <span class="hljs-built_in">var</span>(--mat-sys-primary);
+  <span class="hljs-attribute">border-radius</span>: <span class="hljs-built_in">var</span>(--mat-sys-corner-extra-large);
+}
+
+<span class="hljs-selector-class">.example-select</span><span class="hljs-selector-pseudo">:has</span>(<span class="hljs-selector-attr">[ngComboboxInput]</span><span class="hljs-selector-attr">[aria-disabled=<span class="hljs-string">&#x27;true&#x27;</span>]</span>) {
+  <span class="hljs-attribute">opacity</span>: <span class="hljs-number">0.6</span>;
+  <span class="hljs-attribute">cursor</span>: default;
+}
+
+<span class="hljs-selector-class">.example-select</span><span class="hljs-selector-pseudo">:hover</span> {
+  <span class="hljs-attribute">background-color</span>: <span class="hljs-built_in">color-mix</span>(in srgb, <span class="hljs-built_in">var</span>(--mat-sys-primary) <span class="hljs-number">90%</span>, transparent);
+}
+
+<span class="hljs-selector-attr">[ngComboboxInput]</span> {
+  <span class="hljs-attribute">opacity</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">cursor</span>: pointer;
+  <span class="hljs-attribute">padding</span>: <span class="hljs-number">0</span> <span class="hljs-number">3rem</span>;
+  <span class="hljs-attribute">height</span>: <span class="hljs-number">3rem</span>;
+  <span class="hljs-attribute">border</span>: none;
+}
+
+<span class="hljs-selector-attr">[ngCombobox]</span><span class="hljs-selector-pseudo">:focus-within</span> <span class="hljs-selector-class">.example-select</span> {
+  <span class="hljs-attribute">outline-offset</span>: <span class="hljs-number">2px</span>;
+  <span class="hljs-attribute">outline</span>: <span class="hljs-number">2px</span> solid <span class="hljs-built_in">var</span>(--mat-sys-primary);
+}
+
+<span class="hljs-selector-class">.example-combobox-text</span> {
+  <span class="hljs-attribute">left</span>: <span class="hljs-number">2rem</span>;
+  <span class="hljs-attribute">position</span>: absolute;
+}
+
+<span class="hljs-selector-class">.example-arrow</span> {
+  <span class="hljs-attribute">right</span>: <span class="hljs-number">1rem</span>;
+  <span class="hljs-attribute">position</span>: absolute;
+  <span class="hljs-attribute">pointer-events</span>: none;
+  <span class="hljs-attribute">transition</span>: transform <span class="hljs-number">150ms</span> ease-in-out;
+}
+
+<span class="hljs-selector-attr">[ngComboboxInput]</span><span class="hljs-selector-attr">[aria-expanded=<span class="hljs-string">&#x27;true&#x27;</span>]</span> ~ <span class="hljs-selector-class">.example-arrow</span> {
+  <span class="hljs-attribute">transform</span>: <span class="hljs-built_in">rotate</span>(<span class="hljs-number">180deg</span>);
+}
+
+<span class="hljs-selector-class">.example-popup-container</span> {
+  <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
+  <span class="hljs-attribute">padding</span>: <span class="hljs-number">0.5rem</span>;
+  <span class="hljs-attribute">margin-top</span>: <span class="hljs-number">8px</span>;
+  <span class="hljs-attribute">border-radius</span>: <span class="hljs-built_in">var</span>(--mat-sys-corner-large);
+  <span class="hljs-attribute">background-color</span>: <span class="hljs-built_in">var</span>(--mat-sys-surface-container);
+
+  <span class="hljs-attribute">max-height</span>: <span class="hljs-number">13rem</span>;
+  <span class="hljs-attribute">opacity</span>: <span class="hljs-number">1</span>;
+  <span class="hljs-attribute">visibility</span>: visible;
+  <span class="hljs-attribute">transition</span>: max-height <span class="hljs-number">150ms</span> ease-out, visibility <span class="hljs-number">0s</span>, opacity <span class="hljs-number">25ms</span> ease-out;
+}
+
+<span class="hljs-selector-attr">[ngListbox]</span> {
+  <span class="hljs-attribute">gap</span>: <span class="hljs-number">4px</span>;
+  <span class="hljs-attribute">height</span>: <span class="hljs-number">100%</span>;
+  <span class="hljs-attribute">display</span>: flex;
+  <span class="hljs-attribute">overflow</span>: auto;
+  <span class="hljs-attribute">flex-direction</span>: column;
+}
+
+<span class="hljs-selector-attr">[ngCombobox]</span><span class="hljs-selector-pseudo">:has</span>(<span class="hljs-selector-attr">[ngComboboxInput]</span><span class="hljs-selector-attr">[aria-expanded=<span class="hljs-string">&#x27;false&#x27;</span>]</span>) <span class="hljs-selector-class">.example-popup-container</span> {
+  <span class="hljs-attribute">max-height</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">opacity</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">visibility</span>: hidden;
+  <span class="hljs-attribute">transition</span>: max-height <span class="hljs-number">150ms</span> ease-in, visibility <span class="hljs-number">0s</span> <span class="hljs-number">150ms</span>, opacity <span class="hljs-number">150ms</span> ease-in;
+}
+
+<span class="hljs-selector-attr">[ngCombobox]</span><span class="hljs-selector-pseudo">:has</span>(<span class="hljs-selector-attr">[ngComboboxInput]</span><span class="hljs-selector-attr">[aria-expanded=<span class="hljs-string">&#x27;true&#x27;</span>]</span>) <span class="hljs-selector-attr">[ngListbox]</span> {
+  <span class="hljs-attribute">display</span>: flex;
+}
+
+<span class="hljs-selector-attr">[ngOption]</span> {
+  <span class="hljs-attribute">display</span>: flex;
+  <span class="hljs-attribute">cursor</span>: pointer;
+  <span class="hljs-attribute">align-items</span>: center;
+  <span class="hljs-attribute">padding</span>: <span class="hljs-number">0</span> <span class="hljs-number">1rem</span>;
+  <span class="hljs-attribute">min-height</span>: <span class="hljs-number">3rem</span>;
+  <span class="hljs-attribute">color</span>: <span class="hljs-built_in">var</span>(--mat-sys-on-surface);
+  <span class="hljs-attribute">font-size</span>: <span class="hljs-built_in">var</span>(--mat-sys-label-large);
+  <span class="hljs-attribute">border-radius</span>: <span class="hljs-built_in">var</span>(--mat-sys-corner-extra-large);
+}
+
+<span class="hljs-selector-attr">[ngOption]</span><span class="hljs-selector-pseudo">:hover</span> {
+  <span class="hljs-attribute">background-color</span>: <span class="hljs-built_in">color-mix</span>(in srgb, <span class="hljs-built_in">var</span>(--mat-sys-on-surface) <span class="hljs-number">5%</span>, transparent);
+}
+
+<span class="hljs-selector-attr">[ngOption]</span><span class="hljs-selector-attr">[data-active=<span class="hljs-string">&#x27;true&#x27;</span>]</span> {
+  <span class="hljs-attribute">background-color</span>: <span class="hljs-built_in">color-mix</span>(in srgb, <span class="hljs-built_in">var</span>(--mat-sys-on-surface) <span class="hljs-number">10%</span>, transparent);
+}
+
+<span class="hljs-selector-attr">[ngOption]</span><span class="hljs-selector-attr">[aria-selected=<span class="hljs-string">&#x27;true&#x27;</span>]</span> {
+  <span class="hljs-attribute">color</span>: <span class="hljs-built_in">var</span>(--mat-sys-primary);
+  <span class="hljs-attribute">background-color</span>: <span class="hljs-built_in">color-mix</span>(in srgb, <span class="hljs-built_in">var</span>(--mat-sys-primary) <span class="hljs-number">10%</span>, transparent);
+}
+
+<span class="hljs-selector-class">.example-option-icon</span> {
+  <span class="hljs-attribute">padding-right</span>: <span class="hljs-number">1rem</span>;
+}
+
+<span class="hljs-selector-class">.example-option-check</span>,
+<span class="hljs-selector-class">.example-option-icon</span> {
+  <span class="hljs-attribute">font-size</span>: <span class="hljs-built_in">var</span>(--mat-sys-label-large);
+}
+
+<span class="hljs-selector-attr">[ngOption]</span><span class="hljs-selector-pseudo">:not</span>(<span class="hljs-selector-attr">[aria-selected=<span class="hljs-string">&#x27;true&#x27;</span>]</span>) <span class="hljs-selector-class">.example-option-check</span> {
+  <span class="hljs-attribute">display</span>: none;
+}
+
+<span class="hljs-selector-class">.example-option-text</span> {
+  <span class="hljs-attribute">flex</span>: <span class="hljs-number">1</span>;
+}

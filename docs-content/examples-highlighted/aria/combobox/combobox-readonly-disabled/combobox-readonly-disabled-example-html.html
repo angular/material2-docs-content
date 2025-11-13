@@ -1,33 +1,26 @@
-<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">ngCombobox</span> #<span class="hljs-attr">combobox</span>=<span class="hljs-string">&quot;ngCombobox&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-combobox-container&quot;</span> [<span class="hljs-attr">readonly</span>]=<span class="hljs-string">&quot;true&quot;</span> [<span class="hljs-attr">disabled</span>]=<span class="hljs-string">&quot;true&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-combobox-input-container&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">input</span>
-      <span class="hljs-attr">ngComboboxInput</span>
-      <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-combobox-input&quot;</span>
-      <span class="hljs-attr">placeholder</span>=<span class="hljs-string">&quot;Search...&quot;</span>
-      [(<span class="hljs-attr">value</span>)]=<span class="hljs-string">&quot;searchString&quot;</span>
-    /&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;material-symbols-outlined example-icon example-arrow-icon&quot;</span>&gt;</span>arrow_drop_down<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">ngCombobox</span> <span class="hljs-attr">readonly</span> <span class="hljs-attr">disabled</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> #<span class="hljs-attr">origin</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-select&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-combobox-text&quot;</span>&gt;</span>{{ displayValue() }}<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">&quot;Label dropdown&quot;</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">&quot;Select a label&quot;</span> <span class="hljs-attr">ngComboboxInput</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-arrow material-symbols-outlined&quot;</span>&gt;</span>arrow_drop_down<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
-  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">popover</span>=<span class="hljs-string">&quot;manual&quot;</span> #<span class="hljs-attr">popover</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-popover&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">ng-template</span>
+    [<span class="hljs-attr">cdkConnectedOverlay</span>]=<span class="hljs-string">&quot;{origin, usePopover: &#x27;inline&#x27;, matchWidth: true}&quot;</span>
+    [<span class="hljs-attr">cdkConnectedOverlayOpen</span>]=<span class="hljs-string">&quot;true&quot;</span>
+  &gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">ng-template</span> <span class="hljs-attr">ngComboboxPopupContainer</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">ngListbox</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-listbox&quot;</span>&gt;</span>
-        @for (option of options(); track option) {
-          <span class="hljs-tag">&lt;<span class="hljs-name">div</span>
-            <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-option example-selectable example-stateful&quot;</span>
-            <span class="hljs-attr">ngOption</span>
-            [<span class="hljs-attr">value</span>]=<span class="hljs-string">&quot;option&quot;</span>
-            [<span class="hljs-attr">label</span>]=<span class="hljs-string">&quot;option&quot;</span>
-          &gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>{{option}}<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">span</span>
-              <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">&quot;true&quot;</span>
-              <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;material-symbols-outlined example-icon example-selected-icon&quot;</span>
-              &gt;</span>check&lt;/span
-            &gt;
-          <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-        }
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-popup-container&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">ngListbox</span>&gt;</span>
+          @for (label of labels; track label.value) {
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">ngOption</span> [<span class="hljs-attr">value</span>]=<span class="hljs-string">&quot;label.value&quot;</span> [<span class="hljs-attr">label</span>]=<span class="hljs-string">&quot;label.value&quot;</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-option-icon material-symbols-outlined&quot;</span>&gt;</span>{{label.icon}}<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-option-text&quot;</span>&gt;</span>{{label.value}}<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-option-check material-symbols-outlined&quot;</span>&gt;</span>check<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+          }
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">ng-template</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">ng-template</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>

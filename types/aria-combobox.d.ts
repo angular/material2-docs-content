@@ -1,7 +1,7 @@
 import * as i0 from '@angular/core';
 import { ElementRef } from '@angular/core';
 import { ComboboxDialog, Combobox } from '@angular/aria/combobox';
-import { Listbox } from '@angular/aria/listbox';
+import { Listbox, Option } from '@angular/aria/listbox';
 import { Tree } from '@angular/aria/tree';
 
 /** @title Combobox with a dialog popup. */
@@ -73,39 +73,60 @@ declare class ComboboxDisabledExample {
 
 /** @title Readonly combobox. */
 declare class ComboboxReadonlyExample {
-    popover: i0.Signal<ElementRef<any> | undefined>;
-    listbox: i0.Signal<Listbox<any> | undefined>;
-    combobox: i0.Signal<Combobox<any> | undefined>;
-    options: () => string[];
-    searchString: i0.WritableSignal<string>;
+    /** The string that is displayed in the combobox. */
+    displayValue: i0.WritableSignal<string>;
+    /** The combobox listbox popup. */
+    listbox: i0.Signal<Listbox<string> | undefined>;
+    /** The options available in the listbox. */
+    options: i0.Signal<readonly Option<string>[]>;
+    /** A reference to the ng aria combobox. */
+    combobox: i0.Signal<Combobox<string> | undefined>;
+    /** The labels that are available for selection. */
+    labels: {
+        value: string;
+        icon: string;
+    }[];
     constructor();
-    showPopover(): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<ComboboxReadonlyExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<ComboboxReadonlyExample, "combobox-readonly-example", never, {}, {}, never, never, true, never>;
 }
 
 /** @title Readonly multiselectable combobox. */
 declare class ComboboxReadonlyMultiselectExample {
-    popover: i0.Signal<ElementRef<any> | undefined>;
-    listbox: i0.Signal<Listbox<any> | undefined>;
-    combobox: i0.Signal<Combobox<any> | undefined>;
-    options: () => string[];
-    searchString: i0.WritableSignal<string>;
+    /** The string that is displayed in the combobox. */
+    displayValue: i0.WritableSignal<string>;
+    /** The combobox listbox popup. */
+    listbox: i0.Signal<Listbox<string> | undefined>;
+    /** The options available in the listbox. */
+    options: i0.Signal<readonly Option<string>[]>;
+    /** A reference to the ng aria combobox. */
+    combobox: i0.Signal<Combobox<string> | undefined>;
+    /** The labels that are available for selection. */
+    labels: {
+        value: string;
+        icon: string;
+    }[];
     constructor();
-    showPopover(): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<ComboboxReadonlyMultiselectExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<ComboboxReadonlyMultiselectExample, "combobox-readonly-multiselect-example", never, {}, {}, never, never, true, never>;
 }
 
 /** @title Disabled readonly combobox. */
 declare class ComboboxReadonlyDisabledExample {
-    popover: i0.Signal<ElementRef<any> | undefined>;
-    listbox: i0.Signal<Listbox<any> | undefined>;
-    combobox: i0.Signal<Combobox<any> | undefined>;
-    options: () => string[];
-    searchString: i0.WritableSignal<string>;
+    /** The string that is displayed in the combobox. */
+    displayValue: i0.WritableSignal<string>;
+    /** The combobox listbox popup. */
+    listbox: i0.Signal<Listbox<string> | undefined>;
+    /** The options available in the listbox. */
+    options: i0.Signal<readonly Option<string>[]>;
+    /** A reference to the ng aria combobox. */
+    combobox: i0.Signal<Combobox<string> | undefined>;
+    /** The labels that are available for selection. */
+    labels: {
+        value: string;
+        icon: string;
+    }[];
     constructor();
-    showPopover(): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<ComboboxReadonlyDisabledExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<ComboboxReadonlyDisabledExample, "combobox-readonly-disabled-example", never, {}, {}, never, never, true, never>;
 }
