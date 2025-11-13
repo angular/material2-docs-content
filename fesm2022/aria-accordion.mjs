@@ -116,7 +116,7 @@ class AccordionConfigurableExample {
       kind: "directive",
       type: AccordionPanel,
       selector: "[ngAccordionPanel]",
-      inputs: ["panelId"],
+      inputs: ["id", "panelId"],
       exportAs: ["ngAccordionPanel"]
     }, {
       kind: "directive",
@@ -200,7 +200,7 @@ class AccordionSingleExpansionExample {
       kind: "directive",
       type: AccordionPanel,
       selector: "[ngAccordionPanel]",
-      inputs: ["panelId"],
+      inputs: ["id", "panelId"],
       exportAs: ["ngAccordionPanel"]
     }, {
       kind: "directive",
@@ -284,7 +284,7 @@ class AccordionMultiExpansionExample {
       kind: "directive",
       type: AccordionPanel,
       selector: "[ngAccordionPanel]",
-      inputs: ["panelId"],
+      inputs: ["id", "panelId"],
       exportAs: ["ngAccordionPanel"]
     }, {
       kind: "directive",
@@ -368,7 +368,7 @@ class AccordionDisabledFocusableExample {
       kind: "directive",
       type: AccordionPanel,
       selector: "[ngAccordionPanel]",
-      inputs: ["panelId"],
+      inputs: ["id", "panelId"],
       exportAs: ["ngAccordionPanel"]
     }, {
       kind: "directive",
@@ -452,7 +452,7 @@ class AccordionDisabledSkippedExample {
       kind: "directive",
       type: AccordionPanel,
       selector: "[ngAccordionPanel]",
-      inputs: ["panelId"],
+      inputs: ["id", "panelId"],
       exportAs: ["ngAccordionPanel"]
     }, {
       kind: "directive",
@@ -536,7 +536,7 @@ class AccordionDisabledExample {
       kind: "directive",
       type: AccordionPanel,
       selector: "[ngAccordionPanel]",
-      inputs: ["panelId"],
+      inputs: ["id", "panelId"],
       exportAs: ["ngAccordionPanel"]
     }, {
       kind: "directive",
