@@ -313,14 +313,14 @@ class SimpleCombobox {
       kind: "directive",
       type: Listbox,
       selector: "[ngListbox]",
-      inputs: ["orientation", "multi", "wrap", "softDisabled", "focusMode", "selectionMode", "typeaheadDelay", "disabled", "readonly", "values"],
+      inputs: ["id", "orientation", "multi", "wrap", "softDisabled", "focusMode", "selectionMode", "typeaheadDelay", "disabled", "readonly", "values"],
       outputs: ["valuesChange"],
       exportAs: ["ngListbox"]
     }, {
       kind: "directive",
       type: Option,
       selector: "[ngOption]",
-      inputs: ["value", "disabled", "label"],
+      inputs: ["id", "value", "disabled", "label"],
       exportAs: ["ngOption"]
     }, {
       kind: "directive",

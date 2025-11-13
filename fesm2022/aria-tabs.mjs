@@ -64,7 +64,7 @@ class TabsConfigurableExample {
       kind: "directive",
       type: TabPanel,
       selector: "[ngTabPanel]",
-      inputs: ["value"],
+      inputs: ["id", "value"],
       exportAs: ["ngTabPanel"]
     }, {
       kind: "directive",
@@ -184,7 +184,7 @@ class TabsExplicitSelectionExample {
       kind: "directive",
       type: TabPanel,
       selector: "[ngTabPanel]",
-      inputs: ["value"],
+      inputs: ["id", "value"],
       exportAs: ["ngTabPanel"]
     }, {
       kind: "directive",
@@ -250,7 +250,7 @@ class TabsSelectionFollowsFocusExample {
       kind: "directive",
       type: TabPanel,
       selector: "[ngTabPanel]",
-      inputs: ["value"],
+      inputs: ["id", "value"],
       exportAs: ["ngTabPanel"]
     }, {
       kind: "directive",
@@ -316,7 +316,7 @@ class TabsVerticalExample {
       kind: "directive",
       type: TabPanel,
       selector: "[ngTabPanel]",
-      inputs: ["value"],
+      inputs: ["id", "value"],
       exportAs: ["ngTabPanel"]
     }, {
       kind: "directive",
@@ -383,7 +383,7 @@ class TabsRtlExample {
       kind: "directive",
       type: TabPanel,
       selector: "[ngTabPanel]",
-      inputs: ["value"],
+      inputs: ["id", "value"],
       exportAs: ["ngTabPanel"]
     }, {
       kind: "directive",
@@ -456,7 +456,7 @@ class TabsActiveDescendantExample {
       kind: "directive",
       type: TabPanel,
       selector: "[ngTabPanel]",
-      inputs: ["value"],
+      inputs: ["id", "value"],
       exportAs: ["ngTabPanel"]
     }, {
       kind: "directive",
@@ -522,7 +522,7 @@ class TabsDisabledFocusableExample {
       kind: "directive",
       type: TabPanel,
       selector: "[ngTabPanel]",
-      inputs: ["value"],
+      inputs: ["id", "value"],
       exportAs: ["ngTabPanel"]
     }, {
       kind: "directive",
@@ -588,7 +588,7 @@ class TabsDisabledSkippedExample {
       kind: "directive",
       type: TabPanel,
       selector: "[ngTabPanel]",
-      inputs: ["value"],
+      inputs: ["id", "value"],
       exportAs: ["ngTabPanel"]
     }, {
       kind: "directive",
@@ -654,7 +654,7 @@ class TabsDisabledExample {
       kind: "directive",
       type: TabPanel,
       selector: "[ngTabPanel]",
-      inputs: ["value"],
+      inputs: ["id", "value"],
       exportAs: ["ngTabPanel"]
     }, {
       kind: "directive",

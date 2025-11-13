@@ -55,14 +55,14 @@ class ListboxConfigurableExample {
       kind: "directive",
       type: Listbox,
       selector: "[ngListbox]",
-      inputs: ["orientation", "multi", "wrap", "softDisabled", "focusMode", "selectionMode", "typeaheadDelay", "disabled", "readonly", "values"],
+      inputs: ["id", "orientation", "multi", "wrap", "softDisabled", "focusMode", "selectionMode", "typeaheadDelay", "disabled", "readonly", "values"],
       outputs: ["valuesChange"],
       exportAs: ["ngListbox"]
     }, {
       kind: "directive",
       type: Option,
       selector: "[ngOption]",
-      inputs: ["value", "disabled", "label"],
+      inputs: ["id", "value", "disabled", "label"],
       exportAs: ["ngOption"]
     }, {
       kind: "ngmodule",
@@ -165,14 +165,14 @@ class ListboxSingleSelectExample {
       kind: "directive",
       type: Listbox,
       selector: "[ngListbox]",
-      inputs: ["orientation", "multi", "wrap", "softDisabled", "focusMode", "selectionMode", "typeaheadDelay", "disabled", "readonly", "values"],
+      inputs: ["id", "orientation", "multi", "wrap", "softDisabled", "focusMode", "selectionMode", "typeaheadDelay", "disabled", "readonly", "values"],
       outputs: ["valuesChange"],
       exportAs: ["ngListbox"]
     }, {
       kind: "directive",
       type: Option,
       selector: "[ngOption]",
-      inputs: ["value", "disabled", "label"],
+      inputs: ["id", "value", "disabled", "label"],
       exportAs: ["ngOption"]
     }, {
       kind: "component",
@@ -221,14 +221,14 @@ class ListboxMultiSelectExample {
       kind: "directive",
       type: Listbox,
       selector: "[ngListbox]",
-      inputs: ["orientation", "multi", "wrap", "softDisabled", "focusMode", "selectionMode", "typeaheadDelay", "disabled", "readonly", "values"],
+      inputs: ["id", "orientation", "multi", "wrap", "softDisabled", "focusMode", "selectionMode", "typeaheadDelay", "disabled", "readonly", "values"],
       outputs: ["valuesChange"],
       exportAs: ["ngListbox"]
     }, {
       kind: "directive",
       type: Option,
       selector: "[ngOption]",
-      inputs: ["value", "disabled", "label"],
+      inputs: ["id", "value", "disabled", "label"],
       exportAs: ["ngOption"]
     }, {
       kind: "component",
@@ -277,14 +277,14 @@ class ListboxSingleSelectFollowFocusExample {
       kind: "directive",
       type: Listbox,
       selector: "[ngListbox]",
-      inputs: ["orientation", "multi", "wrap", "softDisabled", "focusMode", "selectionMode", "typeaheadDelay", "disabled", "readonly", "values"],
+      inputs: ["id", "orientation", "multi", "wrap", "softDisabled", "focusMode", "selectionMode", "typeaheadDelay", "disabled", "readonly", "values"],
       outputs: ["valuesChange"],
       exportAs: ["ngListbox"]
     }, {
       kind: "directive",
       type: Option,
       selector: "[ngOption]",
-      inputs: ["value", "disabled", "label"],
+      inputs: ["id", "value", "disabled", "label"],
       exportAs: ["ngOption"]
     }, {
       kind: "component",
@@ -333,14 +333,14 @@ class ListboxMultiSelectFollowFocusExample {
       kind: "directive",
       type: Listbox,
       selector: "[ngListbox]",
-      inputs: ["orientation", "multi", "wrap", "softDisabled", "focusMode", "selectionMode", "typeaheadDelay", "disabled", "readonly", "values"],
+      inputs: ["id", "orientation", "multi", "wrap", "softDisabled", "focusMode", "selectionMode", "typeaheadDelay", "disabled", "readonly", "values"],
       outputs: ["valuesChange"],
       exportAs: ["ngListbox"]
     }, {
       kind: "directive",
       type: Option,
       selector: "[ngOption]",
-      inputs: ["value", "disabled", "label"],
+      inputs: ["id", "value", "disabled", "label"],
       exportAs: ["ngOption"]
     }, {
       kind: "component",
@@ -389,14 +389,14 @@ class ListboxHorizontalExample {
       kind: "directive",
       type: Listbox,
       selector: "[ngListbox]",
-      inputs: ["orientation", "multi", "wrap", "softDisabled", "focusMode", "selectionMode", "typeaheadDelay", "disabled", "readonly", "values"],
+      inputs: ["id", "orientation", "multi", "wrap", "softDisabled", "focusMode", "selectionMode", "typeaheadDelay", "disabled", "readonly", "values"],
       outputs: ["valuesChange"],
       exportAs: ["ngListbox"]
     }, {
       kind: "directive",
       type: Option,
       selector: "[ngOption]",
-      inputs: ["value", "disabled", "label"],
+      inputs: ["id", "value", "disabled", "label"],
       exportAs: ["ngOption"]
     }, {
       kind: "component",
@@ -445,14 +445,14 @@ class ListboxRtlHorizontalExample {
       kind: "directive",
       type: Listbox,
       selector: "[ngListbox]",
-      inputs: ["orientation", "multi", "wrap", "softDisabled", "focusMode", "selectionMode", "typeaheadDelay", "disabled", "readonly", "values"],
+      inputs: ["id", "orientation", "multi", "wrap", "softDisabled", "focusMode", "selectionMode", "typeaheadDelay", "disabled", "readonly", "values"],
       outputs: ["valuesChange"],
       exportAs: ["ngListbox"]
     }, {
       kind: "directive",
       type: Option,
       selector: "[ngOption]",
-      inputs: ["value", "disabled", "label"],
+      inputs: ["id", "value", "disabled", "label"],
       exportAs: ["ngOption"]
     }, {
       kind: "directive",
@@ -508,14 +508,14 @@ class ListboxActiveDescendantExample {
       kind: "directive",
       type: Listbox,
       selector: "[ngListbox]",
-      inputs: ["orientation", "multi", "wrap", "softDisabled", "focusMode", "selectionMode", "typeaheadDelay", "disabled", "readonly", "values"],
+      inputs: ["id", "orientation", "multi", "wrap", "softDisabled", "focusMode", "selectionMode", "typeaheadDelay", "disabled", "readonly", "values"],
       outputs: ["valuesChange"],
       exportAs: ["ngListbox"]
     }, {
       kind: "directive",
       type: Option,
       selector: "[ngOption]",
-      inputs: ["value", "disabled", "label"],
+      inputs: ["id", "value", "disabled", "label"],
       exportAs: ["ngOption"]
     }, {
       kind: "component",
@@ -564,14 +564,14 @@ class ListboxDisabledFocusableExample {
       kind: "directive",
       type: Listbox,
       selector: "[ngListbox]",
-      inputs: ["orientation", "multi", "wrap", "softDisabled", "focusMode", "selectionMode", "typeaheadDelay", "disabled", "readonly", "values"],
+      inputs: ["id", "orientation", "multi", "wrap", "softDisabled", "focusMode", "selectionMode", "typeaheadDelay", "disabled", "readonly", "values"],
       outputs: ["valuesChange"],
       exportAs: ["ngListbox"]
     }, {
       kind: "directive",
       type: Option,
       selector: "[ngOption]",
-      inputs: ["value", "disabled", "label"],
+      inputs: ["id", "value", "disabled", "label"],
       exportAs: ["ngOption"]
     }, {
       kind: "component",
@@ -620,14 +620,14 @@ class ListboxDisabledSkippedExample {
       kind: "directive",
       type: Listbox,
       selector: "[ngListbox]",
-      inputs: ["orientation", "multi", "wrap", "softDisabled", "focusMode", "selectionMode", "typeaheadDelay", "disabled", "readonly", "values"],
+      inputs: ["id", "orientation", "multi", "wrap", "softDisabled", "focusMode", "selectionMode", "typeaheadDelay", "disabled", "readonly", "values"],
       outputs: ["valuesChange"],
       exportAs: ["ngListbox"]
     }, {
       kind: "directive",
       type: Option,
       selector: "[ngOption]",
-      inputs: ["value", "disabled", "label"],
+      inputs: ["id", "value", "disabled", "label"],
       exportAs: ["ngOption"]
     }, {
       kind: "component",
@@ -676,14 +676,14 @@ class ListboxReadonlyExample {
       kind: "directive",
       type: Listbox,
       selector: "[ngListbox]",
-      inputs: ["orientation", "multi", "wrap", "softDisabled", "focusMode", "selectionMode", "typeaheadDelay", "disabled", "readonly", "values"],
+      inputs: ["id", "orientation", "multi", "wrap", "softDisabled", "focusMode", "selectionMode", "typeaheadDelay", "disabled", "readonly", "values"],
       outputs: ["valuesChange"],
       exportAs: ["ngListbox"]
     }, {
       kind: "directive",
       type: Option,
       selector: "[ngOption]",
-      inputs: ["value", "disabled", "label"],
+      inputs: ["id", "value", "disabled", "label"],
       exportAs: ["ngOption"]
     }, {
       kind: "component",
@@ -732,14 +732,14 @@ class ListboxDisabledExample {
       kind: "directive",
       type: Listbox,
       selector: "[ngListbox]",
-      inputs: ["orientation", "multi", "wrap", "softDisabled", "focusMode", "selectionMode", "typeaheadDelay", "disabled", "readonly", "values"],
+      inputs: ["id", "orientation", "multi", "wrap", "softDisabled", "focusMode", "selectionMode", "typeaheadDelay", "disabled", "readonly", "values"],
       outputs: ["valuesChange"],
       exportAs: ["ngListbox"]
     }, {
       kind: "directive",
       type: Option,
       selector: "[ngOption]",
-      inputs: ["value", "disabled", "label"],
+      inputs: ["id", "value", "disabled", "label"],
       exportAs: ["ngOption"]
     }, {
       kind: "component",
