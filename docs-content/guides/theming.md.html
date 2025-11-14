@@ -43,7 +43,12 @@ on-surface text colors as a default across your application:</p>
 <pre><code class="language-scss"><span class="hljs-selector-tag">body</span> {
   <span class="hljs-attribute">background</span>: <span class="hljs-built_in">var</span>(--mat-sys-surface);
   <span class="hljs-attribute">color</span>: <span class="hljs-built_in">var</span>(--mat-sys-on-surface);
-}</code></pre><p>The <code>mat.theme</code> mixin will only declare CSS variables for the categories
+}</code></pre><p>You can also define a convenient set of CSS utility classes that let you apply 
+theme styles from your component templates.</p>
+<pre><code class="language-scss"><span class="hljs-selector-tag">html</span> {
+  ...
+  <span class="hljs-keyword">@include</span> mat.system-classes();
+}</code></pre><pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">body</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;mat-bg-surface mat-text-on-surface&quot;</span>&gt;</span></code></pre><p>The <code>mat.theme</code> mixin will only declare CSS variables for the categories
 included in the input. For example, if <code>typography</code> is not defined, then
 typography CSS variables will not be included in the output.</p>
 
@@ -322,13 +327,14 @@ text consistency through the application.</p>
 <p>The following example styles demonstrate a component using the color and
 typography variables to create an application-wide banner presenting important
 information to the user:</p>
-<pre><code class="language-scss"><span class="hljs-selector-pseudo">:host</span> {
+<pre><code class="language-scss"><span class="hljs-selector-class">.my-component</span> {
   <span class="hljs-attribute">background</span>: <span class="hljs-built_in">var</span>(--mat-sys-primary-container);
   <span class="hljs-attribute">color</span>: <span class="hljs-built_in">var</span>(--mat-sys-on-primary-container);
   <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid <span class="hljs-built_in">var</span>(--mat-sys-outline-variant);
   <span class="hljs-attribute">font</span>: <span class="hljs-built_in">var</span>(--mat-sys-body-large);
-}</code></pre><p>See the <a href="https://material.angular.dev/guide/system-variables">Theme Variables</a> guide for a
-comprehensive list of these variables, examples of where they are used, and how
+}</code></pre><p>Alternatively, you can use utility classes to achieve the same styles:</p>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;mat-bg-primary-container mat-text-on-primary-container mat-border-variant mat-font-body-lg&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre><p>See the <a href="https://material.angular.dev/guide/theming-your-components">Theming your components</a> guide for a
+comprehensive list of these variables and classes, including examples of where they are used, and how
 components can depend on them.</p>
 
         <h2 id="customizing-tokens" class="docs-header-link">
