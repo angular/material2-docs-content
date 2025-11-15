@@ -403,7 +403,8 @@ class ToolbarBasicHorizontalExample {
       kind: "directive",
       type: Toolbar,
       selector: "[ngToolbar]",
-      inputs: ["orientation", "softDisabled", "disabled", "wrap"],
+      inputs: ["orientation", "softDisabled", "disabled", "wrap", "values"],
+      outputs: ["valuesChange"],
       exportAs: ["ngToolbar"]
     }, {
       kind: "directive",
@@ -468,7 +469,8 @@ class ToolbarBasicVerticalExample {
       kind: "directive",
       type: Toolbar,
       selector: "[ngToolbar]",
-      inputs: ["orientation", "softDisabled", "disabled", "wrap"],
+      inputs: ["orientation", "softDisabled", "disabled", "wrap", "values"],
+      outputs: ["valuesChange"],
       exportAs: ["ngToolbar"]
     }, {
       kind: "directive",
@@ -540,7 +542,8 @@ class ToolbarConfigurableExample {
       kind: "directive",
       type: Toolbar,
       selector: "[ngToolbar]",
-      inputs: ["orientation", "softDisabled", "disabled", "wrap"],
+      inputs: ["orientation", "softDisabled", "disabled", "wrap", "values"],
+      outputs: ["valuesChange"],
       exportAs: ["ngToolbar"]
     }, {
       kind: "directive",
@@ -669,7 +672,8 @@ class ToolbarRtlExample {
       kind: "directive",
       type: Toolbar,
       selector: "[ngToolbar]",
-      inputs: ["orientation", "softDisabled", "disabled", "wrap"],
+      inputs: ["orientation", "softDisabled", "disabled", "wrap", "values"],
+      outputs: ["valuesChange"],
       exportAs: ["ngToolbar"]
     }, {
       kind: "directive",
@@ -734,7 +738,8 @@ class ToolbarHardDisabledExample {
       kind: "directive",
       type: Toolbar,
       selector: "[ngToolbar]",
-      inputs: ["orientation", "softDisabled", "disabled", "wrap"],
+      inputs: ["orientation", "softDisabled", "disabled", "wrap", "values"],
+      outputs: ["valuesChange"],
       exportAs: ["ngToolbar"]
     }, {
       kind: "directive",
