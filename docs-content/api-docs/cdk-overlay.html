@@ -3037,6 +3037,8 @@ when the position is re-applied (e.g. when the user scrolls away).</p>
 <ul>
 <li><code>global</code> - The default which inserts the overlay inside the overlay container.</li>
 <li><code>inline</code> - Inserts the overlay next to the trigger.</li>
+<li>{type: &#39;parent&#39;, element: element} - Inserts the overlay to a child of a custom parent
+element.</li>
 </ul>
 
       </p>
@@ -4561,7 +4563,10 @@ the overlay when it is rendered out as a popover.</p>
   </thead>
   <tr>
     <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">Element | null</code>
+      <code class="docs-api-method-returns-type">Element | null | {
+    type: &#39;parent&#39;;
+    element: Element;
+}</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
       <p class="docs-api-method-returns-description">
@@ -5341,7 +5346,10 @@ the overlay when it is rendered out as a popover.</p>
 </h4><p class="docs-api-type-alias-description"><p>Supported locations in the DOM for connected overlays.</p>
 </p><div class="docs-markdown">
 <pre class="docs-markdown-pre">
-<code class="docs-markdown-code">type FlexibleOverlayPopoverLocation = 'global' | 'inline';</code>
+<code class="docs-markdown-code">type FlexibleOverlayPopoverLocation = 'global' | 'inline' | {
+    type: 'parent';
+    element: Element;
+};</code>
 </pre>
 </div>
 
