@@ -61,7 +61,7 @@ class CdkTableFlexBasicExample {
   dataSource = new ExampleDataSource$3();
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: CdkTableFlexBasicExample,
     deps: [],
@@ -69,7 +69,7 @@ class CdkTableFlexBasicExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: CdkTableFlexBasicExample,
     isStandalone: true,
     selector: "cdk-table-flex-basic-example",
@@ -130,7 +130,7 @@ class CdkTableFlexBasicExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: CdkTableFlexBasicExample,
   decorators: [{
@@ -207,7 +207,7 @@ class CdkTableBasicExample {
   dataSource = new ExampleDataSource$2();
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: CdkTableBasicExample,
     deps: [],
@@ -215,7 +215,7 @@ class CdkTableBasicExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: CdkTableBasicExample,
     isStandalone: true,
     selector: "cdk-table-basic-example",
@@ -276,7 +276,7 @@ class CdkTableBasicExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: CdkTableBasicExample,
   decorators: [{
@@ -353,7 +353,7 @@ class CdkTableFixedLayoutExample {
   dataSource = new ExampleDataSource$1();
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: CdkTableFixedLayoutExample,
     deps: [],
@@ -361,7 +361,7 @@ class CdkTableFixedLayoutExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: CdkTableFixedLayoutExample,
     isStandalone: true,
     selector: "cdk-table-fixed-layout-example",
@@ -422,7 +422,7 @@ class CdkTableFixedLayoutExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: CdkTableFixedLayoutExample,
   decorators: [{
@@ -499,7 +499,7 @@ class CdkTableRecycleRowsExample {
   dataSource = new ExampleDataSource();
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: CdkTableRecycleRowsExample,
     deps: [],
@@ -507,7 +507,7 @@ class CdkTableRecycleRowsExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: CdkTableRecycleRowsExample,
     isStandalone: true,
     selector: "cdk-table-recycle-rows-example",
@@ -572,7 +572,7 @@ class CdkTableRecycleRowsExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: CdkTableRecycleRowsExample,
   decorators: [{

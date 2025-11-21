@@ -18,7 +18,7 @@ class ExpansionExpandCollapseAllExample {
   accordion = viewChild.required(MatAccordion);
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: ExpansionExpandCollapseAllExample,
     deps: [],
@@ -26,7 +26,7 @@ class ExpansionExpandCollapseAllExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.2.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: ExpansionExpandCollapseAllExample,
     isStandalone: true,
     selector: "expansion-expand-collapse-all-example",
@@ -130,7 +130,7 @@ class ExpansionExpandCollapseAllExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: ExpansionExpandCollapseAllExample,
   decorators: [{
@@ -143,7 +143,15 @@ i0.ɵɵngDeclareClassMetadata({
       template: "<div class=\"example-action-buttons\">\n  <button matButton (click)=\"accordion().openAll()\">Expand All</button>\n  <button matButton (click)=\"accordion().closeAll()\">Collapse All</button>\n</div>\n<!-- #docregion multi -->\n<mat-accordion class=\"example-headers-align\" multi>\n  <!-- #enddocregion multi -->\n  <mat-expansion-panel>\n    <mat-expansion-panel-header>\n      <mat-panel-title> Personal data </mat-panel-title>\n      <mat-panel-description>\n        Type your name and age\n        <mat-icon>account_circle</mat-icon>\n      </mat-panel-description>\n    </mat-expansion-panel-header>\n\n    <mat-form-field>\n      <mat-label>First name</mat-label>\n      <input matInput />\n    </mat-form-field>\n\n    <mat-form-field>\n      <mat-label>Age</mat-label>\n      <input matInput type=\"number\" min=\"1\" />\n    </mat-form-field>\n  </mat-expansion-panel>\n  <!-- #docregion disabled -->\n  <mat-expansion-panel disabled>\n    <!-- #enddocregion disabled -->\n    <mat-expansion-panel-header>\n      <mat-panel-title> Destination </mat-panel-title>\n      <mat-panel-description>\n        Type the country name\n        <mat-icon>map</mat-icon>\n      </mat-panel-description>\n    </mat-expansion-panel-header>\n\n    <mat-form-field>\n      <mat-label>Country</mat-label>\n      <input matInput />\n    </mat-form-field>\n  </mat-expansion-panel>\n\n  <mat-expansion-panel>\n    <mat-expansion-panel-header>\n      <mat-panel-title> Day of the trip </mat-panel-title>\n      <mat-panel-description>\n        Inform the date you wish to travel\n        <mat-icon>date_range</mat-icon>\n      </mat-panel-description>\n    </mat-expansion-panel-header>\n\n    <mat-form-field>\n      <mat-label>Date</mat-label>\n      <input matInput [matDatepicker]=\"picker\" (focus)=\"picker.open()\" readonly />\n    </mat-form-field>\n    <mat-datepicker #picker></mat-datepicker>\n  </mat-expansion-panel>\n</mat-accordion>\n",
       styles: [".example-action-buttons {\n  padding-bottom: 20px;\n}\n\n.example-headers-align .mat-expansion-panel-header-description {\n  justify-content: space-between;\n  align-items: center;\n}\n\n.example-headers-align .mat-mdc-form-field + .mat-mdc-form-field {\n  margin-left: 8px;\n}\n"]
     }]
-  }]
+  }],
+  propDecorators: {
+    accordion: [{
+      type: i0.ViewChild,
+      args: [i0.forwardRef(() => MatAccordion), {
+        isSignal: true
+      }]
+    }]
+  }
 });
 
 class ExpansionOverviewExample {
@@ -152,7 +160,7 @@ class ExpansionOverviewExample {
   }] : []));
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: ExpansionOverviewExample,
     deps: [],
@@ -160,7 +168,7 @@ class ExpansionOverviewExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: ExpansionOverviewExample,
     isStandalone: true,
     selector: "expansion-overview-example",
@@ -201,7 +209,7 @@ class ExpansionOverviewExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: ExpansionOverviewExample,
   decorators: [{
@@ -230,7 +238,7 @@ class ExpansionStepsExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: ExpansionStepsExample,
     deps: [],
@@ -238,7 +246,7 @@ class ExpansionStepsExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: ExpansionStepsExample,
     isStandalone: true,
     selector: "expansion-steps-example",
@@ -339,7 +347,7 @@ class ExpansionStepsExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: ExpansionStepsExample,
   decorators: [{
@@ -358,7 +366,7 @@ i0.ɵɵngDeclareClassMetadata({
 class ExpansionHarnessExample {
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: ExpansionHarnessExample,
     deps: [],
@@ -366,7 +374,7 @@ class ExpansionHarnessExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: ExpansionHarnessExample,
     isStandalone: true,
     selector: "expansion-harness-example",
@@ -403,7 +411,7 @@ class ExpansionHarnessExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: ExpansionHarnessExample,
   decorators: [{

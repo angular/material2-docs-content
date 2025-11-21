@@ -18,7 +18,7 @@ class SimpleToolbarButton {
   widget = inject(ToolbarWidget);
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: SimpleToolbarButton,
     deps: [],
@@ -26,7 +26,7 @@ class SimpleToolbarButton {
   });
   static ɵdir = i0.ɵɵngDeclareDirective({
     minVersion: "14.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: SimpleToolbarButton,
     isStandalone: true,
     selector: "button[toolbar-button]",
@@ -48,7 +48,7 @@ class SimpleToolbarButton {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: SimpleToolbarButton,
   decorators: [{
@@ -71,7 +71,7 @@ class SimpleToolbarToggleButton {
   widget = inject(ToolbarWidget);
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: SimpleToolbarToggleButton,
     deps: [],
@@ -79,7 +79,7 @@ class SimpleToolbarToggleButton {
   });
   static ɵdir = i0.ɵɵngDeclareDirective({
     minVersion: "14.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: SimpleToolbarToggleButton,
     isStandalone: true,
     selector: "button[toolbar-toggle-button]",
@@ -102,7 +102,7 @@ class SimpleToolbarToggleButton {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: SimpleToolbarToggleButton,
   decorators: [{
@@ -126,7 +126,7 @@ class SimpleToolbarRadioButton {
   widget = inject(ToolbarWidget);
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: SimpleToolbarRadioButton,
     deps: [],
@@ -134,7 +134,7 @@ class SimpleToolbarRadioButton {
   });
   static ɵdir = i0.ɵɵngDeclareDirective({
     minVersion: "14.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: SimpleToolbarRadioButton,
     isStandalone: true,
     selector: "button[toolbar-radio-button]",
@@ -158,7 +158,7 @@ class SimpleToolbarRadioButton {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: SimpleToolbarRadioButton,
   decorators: [{
@@ -216,7 +216,7 @@ class SimpleCombobox {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: SimpleCombobox,
     deps: [],
@@ -224,7 +224,7 @@ class SimpleCombobox {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: SimpleCombobox,
     isStandalone: true,
     selector: "combobox",
@@ -333,7 +333,7 @@ class SimpleCombobox {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: SimpleCombobox,
   decorators: [{
@@ -378,13 +378,33 @@ i0.ɵɵngDeclareClassMetadata({
       styles: [".example-heading {\n  margin: 16px 0 4px;\n}\n\n.example-toolbar-controls {\n  display: flex;\n  flex-wrap: wrap;\n  align-items: center;\n  gap: 16px;\n  padding-bottom: 4px;\n}\n\n.example-toolbar {\n  gap: 16px;\n  padding: 8px;\n  display: flex;\n  width: -webkit-fit-content;\n  width: -moz-fit-content;\n  flex-direction: row;\n  border-radius: var(--mat-sys-corner-small);\n  background-color: var(--mat-sys-surface);\n  border: 1px solid color-mix(in srgb, var(--mat-sys-outline) 50%, transparent);\n}\n\n.example-toolbar[aria-orientation='vertical'],\n.example-toolbar[aria-orientation='vertical'] .example-group {\n  flex-direction: column;\n}\n\n.example-group {\n  gap: 4px;\n  display: flex;\n}\n\n.example-button {\n  cursor: pointer;\n  opacity: 0.875;\n  font-size: 1.25rem;\n  padding: 6px 8px;\n  background-color: transparent;\n  border: 1px solid transparent;\n  border-radius: var(--mat-sys-corner-extra-small);\n}\n\n.example-button:focus,\n.example-button:hover {\n  background: color-mix(in srgb, var(--mat-sys-outline) 10%, transparent);\n}\n\n.example-button:active {\n  background: color-mix(in srgb, var(--mat-sys-outline) 20%, transparent);\n}\n\n.example-button[aria-pressed='true'],\n.example-button[aria-checked='true'] {\n  color: color-mix(in srgb, var(--mat-sys-primary) 90%, black);\n  background: color-mix(in srgb, var(--mat-sys-primary) 15%, transparent);\n}\n\n.example-button:focus {\n  border-color: var(--mat-sys-primary);\n  outline: 2px solid color-mix(in srgb, var(--mat-sys-primary) 50%, transparent);\n}\n\n.example-button[aria-disabled='true'] {\n  cursor: default;\n  opacity: 0.45;\n}\n\n.example-separator {\n  width: 1px;\n  background: color-mix(in srgb, var(--mat-sys-outline) 50%, transparent);\n}\n\n.example-toolbar[aria-orientation='vertical'] .example-separator {\n  height: 1px;\n  width: auto;\n}\n\n.example-combobox-container {\n  border-radius: var(--mat-sys-corner-extra-small);\n  border: 1px solid color-mix(in srgb, var(--mat-sys-outline) 50%, transparent);\n}\n\n.example-combobox-container:focus-within {\n  border-color: var(--mat-sys-primary);\n  outline: 2px solid color-mix(in srgb, var(--mat-sys-primary) 50%, transparent);\n}\n\n.example-combobox {\n  height: 100%;\n  width: 10rem;\n  display: flex;\n  position: relative;\n  flex-direction: column;\n}\n\n.example-combobox-input-container {\n  display: flex;\n  position: relative;\n  align-items: center;\n  border-radius: var(--mat-sys-corner-extra-small);\n  height: 100%;\n}\n\n.example-combobox-input {\n  cursor: pointer;\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  height: 100%;\n  width: 100%;\n  border: none;\n  outline: none;\n  font-size: 0.8rem;\n  padding: 0 0.5rem;\n  border-radius: var(--mat-sys-corner-extra-small);\n  background-color: transparent;\n}\n\n.example-combobox-input::-moz-selection {\n  background: transparent;\n}\n\n.example-combobox-input::-webkit-selection {\n  background: transparent;\n}\n\n.example-arrow-icon {\n  padding: 0 0.2rem;\n  position: absolute;\n  right: 0;\n  opacity: 0.7;\n  transition: transform 0.2s ease;\n  pointer-events: none;\n}\n\n.example-combobox[dir='rtl'] .example-arrow-icon {\n  right: auto;\n  left: 0;\n}\n\n.example-combobox-input[aria-expanded='true'] + .example-arrow-icon {\n  transform: rotate(180deg);\n}\n\n.example-popover {\n  margin: 0;\n  padding: 0;\n  border: 1px solid color-mix(in srgb, var(--mat-sys-outline) 50%, transparent);\n  border-radius: var(--mat-sys-corner-extra-small);\n  background-color: var(--mat-sys-surface);\n}\n\n.example-option {\n  cursor: pointer;\n  font-size: 0.8rem;\n  padding: 0.5rem;\n  display: flex;\n  overflow: hidden;\n  flex-shrink: 0;\n  align-items: center;\n  justify-content: space-between;\n}\n\n.example-option:hover {\n  background: color-mix(in srgb, var(--mat-sys-outline) 10%, transparent);\n}\n\n.example-option[data-active='true'] {\n  border-radius: var(--mat-sys-corner-extra-small);\n  outline: 1px solid var(--mat-sys-primary);\n  outline-offset: -1px;\n}\n\n.example-option[aria-selected='true'] {\n  color: var(--mat-sys-primary);\n  background: color-mix(in srgb, var(--mat-sys-primary) 10%, transparent);\n}\n\n.example-option-icon {\n  font-size: 1rem;\n}\n\n.example-option[aria-selected='false'] .example-option-icon {\n  visibility: hidden;\n}\n"]
     }]
   }],
-  ctorParameters: () => []
+  ctorParameters: () => [],
+  propDecorators: {
+    popover: [{
+      type: i0.ViewChild,
+      args: ['popover', {
+        isSignal: true
+      }]
+    }],
+    listbox: [{
+      type: i0.ViewChild,
+      args: [i0.forwardRef(() => Listbox), {
+        isSignal: true
+      }]
+    }],
+    combobox: [{
+      type: i0.ViewChild,
+      args: [i0.forwardRef(() => Combobox), {
+        isSignal: true
+      }]
+    }]
+  }
 });
 
 class ToolbarBasicHorizontalExample {
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: ToolbarBasicHorizontalExample,
     deps: [],
@@ -392,7 +412,7 @@ class ToolbarBasicHorizontalExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: ToolbarBasicHorizontalExample,
     isStandalone: true,
     selector: "toolbar-basic-horizontal-example",
@@ -433,7 +453,7 @@ class ToolbarBasicHorizontalExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: ToolbarBasicHorizontalExample,
   decorators: [{
@@ -450,7 +470,7 @@ i0.ɵɵngDeclareClassMetadata({
 class ToolbarBasicVerticalExample {
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: ToolbarBasicVerticalExample,
     deps: [],
@@ -458,7 +478,7 @@ class ToolbarBasicVerticalExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: ToolbarBasicVerticalExample,
     isStandalone: true,
     selector: "toolbar-basic-vertical-example",
@@ -495,7 +515,7 @@ class ToolbarBasicVerticalExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: ToolbarBasicVerticalExample,
   decorators: [{
@@ -523,7 +543,7 @@ class ToolbarConfigurableExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: ToolbarConfigurableExample,
     deps: [],
@@ -531,7 +551,7 @@ class ToolbarConfigurableExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: ToolbarConfigurableExample,
     isStandalone: true,
     selector: "toolbar-configurable-example",
@@ -629,7 +649,7 @@ class ToolbarConfigurableExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: ToolbarConfigurableExample,
   decorators: [{
@@ -646,7 +666,7 @@ i0.ɵɵngDeclareClassMetadata({
 class ToolbarRtlExample {
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: ToolbarRtlExample,
     deps: [],
@@ -654,7 +674,7 @@ class ToolbarRtlExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: ToolbarRtlExample,
     isStandalone: true,
     selector: "toolbar-rtl-example",
@@ -702,7 +722,7 @@ class ToolbarRtlExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: ToolbarRtlExample,
   decorators: [{
@@ -719,7 +739,7 @@ i0.ɵɵngDeclareClassMetadata({
 class ToolbarHardDisabledExample {
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: ToolbarHardDisabledExample,
     deps: [],
@@ -727,7 +747,7 @@ class ToolbarHardDisabledExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: ToolbarHardDisabledExample,
     isStandalone: true,
     selector: "toolbar-hard-disabled-example",
@@ -768,7 +788,7 @@ class ToolbarHardDisabledExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: ToolbarHardDisabledExample,
   decorators: [{

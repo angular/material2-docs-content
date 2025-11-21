@@ -9,7 +9,7 @@ import { FormBuilder, Validators, FormsModule, ReactiveFormsModule } from '@angu
 class CdkCustomStepperWithoutFormExample {
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: CdkCustomStepperWithoutFormExample,
     deps: [],
@@ -17,7 +17,7 @@ class CdkCustomStepperWithoutFormExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: CdkCustomStepperWithoutFormExample,
     isStandalone: true,
     selector: "cdk-custom-stepper-without-form-example",
@@ -43,7 +43,7 @@ class CdkCustomStepperWithoutFormExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: CdkCustomStepperWithoutFormExample,
   decorators: [{
@@ -61,7 +61,7 @@ class CustomStepper extends CdkStepper {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: CustomStepper,
     deps: null,
@@ -69,7 +69,7 @@ class CustomStepper extends CdkStepper {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: CustomStepper,
     isStandalone: true,
     selector: "example-custom-stepper",
@@ -104,7 +104,7 @@ class CustomStepper extends CdkStepper {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: CustomStepper,
   decorators: [{
@@ -136,7 +136,7 @@ class CdkLinearStepperWithFormExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: CdkLinearStepperWithFormExample,
     deps: [],
@@ -144,7 +144,7 @@ class CdkLinearStepperWithFormExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: CdkLinearStepperWithFormExample,
     isStandalone: true,
     selector: "cdk-linear-stepper-with-form-example",
@@ -210,7 +210,7 @@ class CdkLinearStepperWithFormExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: CdkLinearStepperWithFormExample,
   decorators: [{
@@ -229,7 +229,7 @@ class CustomLinearStepper extends CdkStepper {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: CustomLinearStepper,
     deps: null,
@@ -237,7 +237,7 @@ class CustomLinearStepper extends CdkStepper {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: CustomLinearStepper,
     isStandalone: true,
     selector: "example-custom-linear-stepper",
@@ -272,7 +272,7 @@ class CustomLinearStepper extends CdkStepper {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: CustomLinearStepper,
   decorators: [{

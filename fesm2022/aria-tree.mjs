@@ -113,7 +113,7 @@ class TreeConfigurableExample {
   }] : []));
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: TreeConfigurableExample,
     deps: [],
@@ -121,7 +121,7 @@ class TreeConfigurableExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: TreeConfigurableExample,
     isStandalone: true,
     selector: "tree-configurable-example",
@@ -227,7 +227,7 @@ class TreeConfigurableExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: TreeConfigurableExample,
   decorators: [{
@@ -238,14 +238,27 @@ i0.ɵɵngDeclareClassMetadata({
       template: "<div class=\"example-tree-controls\">\n  <mat-checkbox [formControl]=\"wrap\">Wrap</mat-checkbox>\n  <mat-checkbox [formControl]=\"multi\">Multi</mat-checkbox>\n  <mat-checkbox [formControl]=\"disabled\">Disabled</mat-checkbox>\n  <mat-checkbox [formControl]=\"softDisabled\">Soft Disabled</mat-checkbox>\n  <mat-checkbox [formControl]=\"nav\">Nav Mode</mat-checkbox>\n\n  <mat-form-field subscriptSizing=\"dynamic\" appearance=\"outline\">\n    <mat-label>Selection Strategy</mat-label>\n    <mat-select [(value)]=\"selectionMode\">\n      <mat-option value=\"explicit\">Explicit</mat-option>\n      <mat-option value=\"follow\">Follow</mat-option>\n    </mat-select>\n  </mat-form-field>\n\n  <mat-form-field subscriptSizing=\"dynamic\" appearance=\"outline\">\n    <mat-label>Focus Strategy</mat-label>\n    <mat-select [(value)]=\"focusMode\">\n      <mat-option value=\"roving\">Roving</mat-option>\n      <mat-option value=\"activedescendant\">Active Descendant</mat-option>\n    </mat-select>\n  </mat-form-field>\n</div>\n\n<div class=\"example-tree-output\">\n  <strong>Selected Values:</strong> {{ selectedValues().join(', ') || 'None' }}\n</div>\n\n<ul\n  ngTree\n  class=\"example-tree\"\n  [multi]=\"multi.value\"\n  [disabled]=\"disabled.value\"\n  [selectionMode]=\"selectionMode\"\n  [focusMode]=\"focusMode\"\n  [wrap]=\"wrap.value\"\n  [softDisabled]=\"softDisabled.value\"\n  [nav]=\"nav.value\"\n  [(values)]=\"selectedValues\"\n  #tree=\"ngTree\"\n>\n  <ng-template\n    [ngTemplateOutlet]=\"treeNodes\"\n    [ngTemplateOutletContext]=\"{nodes: nodes, parent: tree}\"\n  />\n</ul>\n\n<ng-template #treeNodes let-nodes=\"nodes\" let-parent=\"parent\">\n  @for (node of nodes; track node.value) {\n    @if (nav.value) {\n      <li role=\"none\" style=\"list-style: none\">\n        <a\n          ngTreeItem\n          [parent]=\"parent\"\n          [value]=\"node.value\"\n          [label]=\"node.name\"\n          [disabled]=\"node.disabled\"\n          [selectable]=\"!node.children\"\n          #treeItem=\"ngTreeItem\"\n          class=\"example-tree-item example-selectable example-stateful\"\n          [attr.href]=\"!!node.children ? null : '/aria-tree#' + node.name\"\n        >\n          <span\n            aria-hidden=\"true\"\n            class=\"material-symbols-outlined example-parent-icon example-icon\"\n            >{{node.children ? 'chevron_right' : ''}}</span\n          >\n          <span\n            aria-hidden=\"true\"\n            class=\"material-symbols-outlined example-icon\"\n            >{{node.children ? 'folder' : 'docs'}}</span\n          >\n          {{ node.name }}\n          <span\n            aria-hidden=\"true\"\n            class=\"material-symbols-outlined example-selected-icon example-icon\"\n            >check</span\n          >\n        </a>\n      </li>\n\n      @if (node.children) {\n        <ul role=\"group\">\n          <ng-template ngTreeItemGroup [ownedBy]=\"treeItem\" #group=\"ngTreeItemGroup\">\n            <ng-template\n              [ngTemplateOutlet]=\"treeNodes\"\n              [ngTemplateOutletContext]=\"{nodes: node.children, parent: group}\"\n            />\n          </ng-template>\n        </ul>\n      }\n    } @else {\n      <li\n        ngTreeItem\n        [parent]=\"parent\"\n        [value]=\"node.value\"\n        [label]=\"node.name\"\n        [disabled]=\"node.disabled\"\n        [(expanded)]=\"node.expanded\"\n        #treeItem=\"ngTreeItem\"\n        class=\"example-tree-item example-selectable example-stateful\"\n      >\n        <span\n          aria-hidden=\"true\"\n          class=\"material-symbols-outlined example-parent-icon example-icon\"\n          >{{node.children ? 'chevron_right' : ''}}</span\n        >\n        <span\n          aria-hidden=\"true\"\n          class=\"material-symbols-outlined example-icon\"\n          >{{node.children ? 'folder' : 'docs'}}</span\n        >\n        {{ node.name }}\n        <span\n          aria-hidden=\"true\"\n          class=\"material-symbols-outlined example-selected-icon example-icon\"\n          >check</span\n        >\n      </li>\n\n      @if (node.children) {\n        <ul role=\"group\">\n          <ng-template ngTreeItemGroup [ownedBy]=\"treeItem\" #group=\"ngTreeItemGroup\">\n            <ng-template\n              [ngTemplateOutlet]=\"treeNodes\"\n              [ngTemplateOutletContext]=\"{nodes: node.children, parent: group}\"\n            />\n          </ng-template>\n        </ul>\n      }\n    }\n  }\n</ng-template>\n",
       styles: [".example-tree-controls {\n  display: flex;\n  flex-wrap: wrap;\n  align-items: center;\n  gap: 16px;\n  margin-bottom: 16px;\n}\n\n.example-tree-output {\n  padding: 10px;\n  margin-bottom: 16px;\n  border: 1px solid var(--mat-sys-outline);\n  border-radius: var(--mat-sys-corner-extra-small);\n}\n\n.example-tree {\n  padding: 10px;\n  border: 1px solid var(--mat-sys-outline);\n  border-radius: var(--mat-sys-corner-extra-small);\n  overflow-x: scroll;\n  min-width: 24rem;\n}\n\n.example-tree-item {\n  cursor: pointer;\n  list-style: none;\n  text-decoration: none;\n  display: flex;\n  align-items: center;\n  gap: 1rem;\n  padding: 0.3rem 1rem;\n}\n\n.example-icon {\n  margin: 0;\n  width: 24px;\n}\n\n.example-parent-icon {\n  transition: transform 0.2s ease;\n}\n\n.example-tree-item[aria-expanded='true'] .example-parent-icon {\n  transform: rotate(90deg);\n}\n\n.example-selected-icon {\n  visibility: hidden;\n  margin-left: auto;\n}\n\n.example-tree-item[aria-current] .example-selected-icon,\n.example-tree-item[aria-selected='true'] .example-selected-icon {\n  visibility: visible;\n}\n\nli[aria-expanded='false'] + ul[role='group'] {\n  display: none;\n}\n"]
     }]
-  }]
+  }],
+  propDecorators: {
+    selectedValues: [{
+      type: i0.Input,
+      args: [{
+        isSignal: true,
+        alias: "selectedValues",
+        required: false
+      }]
+    }, {
+      type: i0.Output,
+      args: ["selectedValuesChange"]
+    }]
+  }
 });
 
 class TreeActiveDescendantExample {
   nodes = NODES;
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: TreeActiveDescendantExample,
     deps: [],
@@ -253,7 +266,7 @@ class TreeActiveDescendantExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: TreeActiveDescendantExample,
     isStandalone: true,
     selector: "tree-active-descendant-example",
@@ -290,7 +303,7 @@ class TreeActiveDescendantExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: TreeActiveDescendantExample,
   decorators: [{
@@ -308,7 +321,7 @@ class TreeDisabledExample {
   nodes = NODES;
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: TreeDisabledExample,
     deps: [],
@@ -316,7 +329,7 @@ class TreeDisabledExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: TreeDisabledExample,
     isStandalone: true,
     selector: "tree-disabled-example",
@@ -353,7 +366,7 @@ class TreeDisabledExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: TreeDisabledExample,
   decorators: [{
@@ -371,7 +384,7 @@ class TreeDisabledFocusableExample {
   nodes = NODES;
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: TreeDisabledFocusableExample,
     deps: [],
@@ -379,7 +392,7 @@ class TreeDisabledFocusableExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: TreeDisabledFocusableExample,
     isStandalone: true,
     selector: "tree-disabled-focusable-example",
@@ -416,7 +429,7 @@ class TreeDisabledFocusableExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: TreeDisabledFocusableExample,
   decorators: [{
@@ -434,7 +447,7 @@ class TreeDisabledSkippedExample {
   nodes = NODES;
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: TreeDisabledSkippedExample,
     deps: [],
@@ -442,7 +455,7 @@ class TreeDisabledSkippedExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: TreeDisabledSkippedExample,
     isStandalone: true,
     selector: "tree-disabled-skipped-example",
@@ -479,7 +492,7 @@ class TreeDisabledSkippedExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: TreeDisabledSkippedExample,
   decorators: [{
@@ -497,7 +510,7 @@ class TreeMultiSelectExample {
   nodes = NODES;
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: TreeMultiSelectExample,
     deps: [],
@@ -505,7 +518,7 @@ class TreeMultiSelectExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: TreeMultiSelectExample,
     isStandalone: true,
     selector: "tree-multi-select-example",
@@ -542,7 +555,7 @@ class TreeMultiSelectExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: TreeMultiSelectExample,
   decorators: [{
@@ -560,7 +573,7 @@ class TreeMultiSelectFollowFocusExample {
   nodes = NODES;
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: TreeMultiSelectFollowFocusExample,
     deps: [],
@@ -568,7 +581,7 @@ class TreeMultiSelectFollowFocusExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: TreeMultiSelectFollowFocusExample,
     isStandalone: true,
     selector: "tree-multi-select-follow-focus-example",
@@ -605,7 +618,7 @@ class TreeMultiSelectFollowFocusExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: TreeMultiSelectFollowFocusExample,
   decorators: [{
@@ -623,7 +636,7 @@ class TreeNavExample {
   nodes = NODES;
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: TreeNavExample,
     deps: [],
@@ -631,7 +644,7 @@ class TreeNavExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: TreeNavExample,
     isStandalone: true,
     selector: "tree-nav-example",
@@ -668,7 +681,7 @@ class TreeNavExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: TreeNavExample,
   decorators: [{
@@ -686,7 +699,7 @@ class TreeSingleSelectExample {
   nodes = NODES;
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: TreeSingleSelectExample,
     deps: [],
@@ -694,7 +707,7 @@ class TreeSingleSelectExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: TreeSingleSelectExample,
     isStandalone: true,
     selector: "tree-single-select-example",
@@ -731,7 +744,7 @@ class TreeSingleSelectExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: TreeSingleSelectExample,
   decorators: [{
@@ -749,7 +762,7 @@ class TreeSingleSelectFollowFocusExample {
   nodes = NODES;
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: TreeSingleSelectFollowFocusExample,
     deps: [],
@@ -757,7 +770,7 @@ class TreeSingleSelectFollowFocusExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: TreeSingleSelectFollowFocusExample,
     isStandalone: true,
     selector: "tree-single-select-follow-focus-example",
@@ -794,7 +807,7 @@ class TreeSingleSelectFollowFocusExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: TreeSingleSelectFollowFocusExample,
   decorators: [{

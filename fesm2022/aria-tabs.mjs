@@ -27,7 +27,7 @@ class TabsConfigurableExample {
   });
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: TabsConfigurableExample,
     deps: [],
@@ -35,7 +35,7 @@ class TabsConfigurableExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: TabsConfigurableExample,
     isStandalone: true,
     selector: "tabs-configurable-example",
@@ -130,7 +130,7 @@ class TabsConfigurableExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: TabsConfigurableExample,
   decorators: [{
@@ -147,7 +147,7 @@ i0.ɵɵngDeclareClassMetadata({
 class TabsExplicitSelectionExample {
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: TabsExplicitSelectionExample,
     deps: [],
@@ -155,7 +155,7 @@ class TabsExplicitSelectionExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: TabsExplicitSelectionExample,
     isStandalone: true,
     selector: "tabs-explicit-selection-example",
@@ -196,7 +196,7 @@ class TabsExplicitSelectionExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: TabsExplicitSelectionExample,
   decorators: [{
@@ -213,7 +213,7 @@ i0.ɵɵngDeclareClassMetadata({
 class TabsSelectionFollowsFocusExample {
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: TabsSelectionFollowsFocusExample,
     deps: [],
@@ -221,7 +221,7 @@ class TabsSelectionFollowsFocusExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: TabsSelectionFollowsFocusExample,
     isStandalone: true,
     selector: "tabs-selection-follows-focus-example",
@@ -262,7 +262,7 @@ class TabsSelectionFollowsFocusExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: TabsSelectionFollowsFocusExample,
   decorators: [{
@@ -279,7 +279,7 @@ i0.ɵɵngDeclareClassMetadata({
 class TabsVerticalExample {
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: TabsVerticalExample,
     deps: [],
@@ -287,7 +287,7 @@ class TabsVerticalExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: TabsVerticalExample,
     isStandalone: true,
     selector: "tabs-vertical-example",
@@ -328,7 +328,7 @@ class TabsVerticalExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: TabsVerticalExample,
   decorators: [{
@@ -346,7 +346,7 @@ class TabsRtlExample {
   selectedIndex = 0;
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: TabsRtlExample,
     deps: [],
@@ -354,7 +354,7 @@ class TabsRtlExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: TabsRtlExample,
     isStandalone: true,
     selector: "tabs-rtl-example",
@@ -402,7 +402,7 @@ class TabsRtlExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: TabsRtlExample,
   decorators: [{
@@ -419,7 +419,7 @@ i0.ɵɵngDeclareClassMetadata({
 class TabsActiveDescendantExample {
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: TabsActiveDescendantExample,
     deps: [],
@@ -427,7 +427,7 @@ class TabsActiveDescendantExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: TabsActiveDescendantExample,
     isStandalone: true,
     selector: "tabs-active-descendant-example",
@@ -468,7 +468,7 @@ class TabsActiveDescendantExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: TabsActiveDescendantExample,
   decorators: [{
@@ -485,7 +485,7 @@ i0.ɵɵngDeclareClassMetadata({
 class TabsDisabledFocusableExample {
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: TabsDisabledFocusableExample,
     deps: [],
@@ -493,7 +493,7 @@ class TabsDisabledFocusableExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: TabsDisabledFocusableExample,
     isStandalone: true,
     selector: "tabs-disabled-focusable-example",
@@ -534,7 +534,7 @@ class TabsDisabledFocusableExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: TabsDisabledFocusableExample,
   decorators: [{
@@ -551,7 +551,7 @@ i0.ɵɵngDeclareClassMetadata({
 class TabsDisabledSkippedExample {
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: TabsDisabledSkippedExample,
     deps: [],
@@ -559,7 +559,7 @@ class TabsDisabledSkippedExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: TabsDisabledSkippedExample,
     isStandalone: true,
     selector: "tabs-disabled-skipped-example",
@@ -600,7 +600,7 @@ class TabsDisabledSkippedExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: TabsDisabledSkippedExample,
   decorators: [{
@@ -617,7 +617,7 @@ i0.ɵɵngDeclareClassMetadata({
 class TabsDisabledExample {
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: TabsDisabledExample,
     deps: [],
@@ -625,7 +625,7 @@ class TabsDisabledExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: TabsDisabledExample,
     isStandalone: true,
     selector: "tabs-disabled-example",
@@ -666,7 +666,7 @@ class TabsDisabledExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: TabsDisabledExample,
   decorators: [{

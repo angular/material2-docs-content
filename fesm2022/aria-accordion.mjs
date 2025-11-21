@@ -36,7 +36,7 @@ class AccordionConfigurableExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: AccordionConfigurableExample,
     deps: [],
@@ -44,7 +44,7 @@ class AccordionConfigurableExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.2.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: AccordionConfigurableExample,
     isStandalone: true,
     selector: "accordion-configurable-example",
@@ -127,7 +127,7 @@ class AccordionConfigurableExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: AccordionConfigurableExample,
   decorators: [{
@@ -138,7 +138,15 @@ i0.ɵɵngDeclareClassMetadata({
       template: "<div class=\"example-accordion-controls\">\n  <mat-checkbox [formControl]=\"wrap\">Wrap (ArrowKey-only)</mat-checkbox>\n  <mat-checkbox [formControl]=\"multi\">Multi</mat-checkbox>\n  <mat-checkbox [formControl]=\"disabled\">Disabled</mat-checkbox>\n  <mat-checkbox [formControl]=\"softDisabled\">Soft Disabled</mat-checkbox>\n</div>\n\n<div\n  ngAccordionGroup\n  class=\"example-accordion-group\"\n  [multiExpandable]=\"multi.value\"\n  [disabled]=\"disabled.value\"\n  [softDisabled]=\"softDisabled.value\"\n  [wrap]=\"wrap.value\"\n>\n  <div class=\"example-accordion\">\n    <h3 class=\"example-accordion-header\">\n      <button ngAccordionTrigger class=\"example-accordion-trigger\" panelId=\"item1\">\n        Item 1 Trigger\n        <mat-icon aria-hidden=\"true\">{{expansionIcon('item1')()}}</mat-icon>\n      </button>\n    </h3>\n    <div ngAccordionPanel panelId=\"item1\" class=\"example-accordion-panel\">\n      <ng-template ngAccordionContent>\n        <p>This is the content for Item 1.</p>\n        <button>Focusable Button</button>\n      </ng-template>\n    </div>\n  </div>\n\n  <div class=\"example-accordion\">\n    <h3 class=\"example-accordion-header\">\n      <button ngAccordionTrigger class=\"example-accordion-trigger\" panelId=\"item2\" disabled [expanded]=\"true\">\n        Item 2 Trigger (disabled)\n        <mat-icon aria-hidden=\"true\">{{expansionIcon('item2')()}}</mat-icon>\n      </button>\n    </h3>\n    <div ngAccordionPanel panelId=\"item2\" class=\"example-accordion-panel\">\n      <ng-template ngAccordionContent>\n        <p>This is the content for Item 2.</p>\n        <label>Input inside panel: <input type=\"text\" /></label>\n      </ng-template>\n    </div>\n  </div>\n\n  <div class=\"example-accordion\">\n    <h3 class=\"example-accordion-header\">\n      <button ngAccordionTrigger class=\"example-accordion-trigger\" panelId=\"item3\">\n        Item 3 Trigger\n        <mat-icon aria-hidden=\"true\">{{expansionIcon('item3')()}}</mat-icon>\n      </button>\n    </h3>\n    <div ngAccordionPanel panelId=\"item3\" class=\"example-accordion-panel\">\n      <ng-template ngAccordionContent>\n        <p>This is the content for Item 3.</p>\n      </ng-template>\n    </div>\n  </div>\n\n  <div class=\"example-accordion\">\n    <h3 class=\"example-accordion-header\">\n      <button ngAccordionTrigger class=\"example-accordion-trigger\" panelId=\"item4\">\n        Item 4 Trigger\n        <mat-icon aria-hidden=\"true\">{{expansionIcon('item4')()}}</mat-icon>\n      </button>\n    </h3>\n    <div ngAccordionPanel panelId=\"item4\" class=\"example-accordion-panel\">\n      <ng-template ngAccordionContent>\n        <p>This is the content for Item 4</p>\n      </ng-template>\n    </div>\n  </div>\n\n  <div class=\"example-accordion\">\n    <h3 class=\"example-accordion-header\">\n      <button ngAccordionTrigger class=\"example-accordion-trigger\" panelId=\"item5\">\n        Item 5 Trigger\n        <mat-icon aria-hidden=\"true\">{{expansionIcon('item5')()}}</mat-icon>\n      </button>\n    </h3>\n    <div ngAccordionPanel panelId=\"item5\" class=\"example-accordion-panel\">\n      <ng-template ngAccordionContent>\n        <p>This is the content for Item 5</p>\n      </ng-template>\n    </div>\n  </div>\n</div>\n",
       styles: ["/* Common styles for CDK Accordion examples */\n.example-accordion-controls {\n  display: flex;\n  flex-wrap: wrap;\n  align-items: center;\n  gap: 16px;\n  padding-bottom: 16px;\n  margin-bottom: 16px;\n}\n\n.example-accordion-header {\n  margin: 0;\n}\n\n.example-accordion-header .example-accordion-trigger {\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  width: 100%;\n  padding: 12px 16px;\n  border: 1px solid transparent;\n  background-color: var(--mat-sys-surface);\n  cursor: pointer;\n  border-radius: 4px;\n  margin-bottom: 4px;\n}\n\n.example-accordion-header .example-accordion-trigger:hover {\n  background-color: var(--mat-sys-surface-container-highest);\n}\n\n.example-accordion-header .example-accordion-trigger[data-active='true'] {\n  background-color: var(--mat-sys-surface-dim);\n}\n\n.example-accordion-header .example-accordion-trigger:focus {\n  outline: 2px solid var(--mat-sys-primary);\n  outline-offset: -2px;\n}\n\n.example-accordion-header .example-accordion-trigger[aria-disabled='true'] {\n  color: inherit;\n  opacity: 0.6;\n}\n\n.example-accordion-panel {\n  padding: 16px;\n  background-color: var(--mat-sys-surface-container);\n  margin-bottom: 4px;\n}\n\n.example-accordion-panel[inert] {\n  display: none;\n}\n"]
     }]
-  }]
+  }],
+  propDecorators: {
+    triggers: [{
+      type: i0.ViewChildren,
+      args: [i0.forwardRef(() => AccordionTrigger), {
+        isSignal: true
+      }]
+    }]
+  }
 });
 
 class AccordionSingleExpansionExample {
@@ -153,7 +161,7 @@ class AccordionSingleExpansionExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: AccordionSingleExpansionExample,
     deps: [],
@@ -161,7 +169,7 @@ class AccordionSingleExpansionExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.2.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: AccordionSingleExpansionExample,
     isStandalone: true,
     selector: "accordion-single-expansion-example",
@@ -211,7 +219,7 @@ class AccordionSingleExpansionExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: AccordionSingleExpansionExample,
   decorators: [{
@@ -222,7 +230,15 @@ i0.ɵɵngDeclareClassMetadata({
       template: "<div\n  ngAccordionGroup\n  class=\"example-accordion-group\"\n  [multiExpandable]=\"false\"\n>\n  <div class=\"example-accordion\">\n    <h3 class=\"example-accordion-header\">\n      <button ngAccordionTrigger class=\"example-accordion-trigger\" panelId=\"item1\">\n        Item 1 Trigger\n        <mat-icon aria-hidden=\"true\">{{expansionIcon('item1')()}}</mat-icon>\n      </button>\n    </h3>\n    <div ngAccordionPanel panelId=\"item1\" class=\"example-accordion-panel\">\n      <ng-template ngAccordionContent>\n        <p>This is the content for Item 1.</p>\n        <button>Focusable Button</button>\n      </ng-template>\n    </div>\n  </div>\n\n  <div class=\"example-accordion\">\n    <h3 class=\"example-accordion-header\">\n      <button ngAccordionTrigger class=\"example-accordion-trigger\" panelId=\"item2\">\n        Item 2 Trigger\n        <mat-icon aria-hidden=\"true\">{{expansionIcon('item2')()}}</mat-icon>\n      </button>\n    </h3>\n    <div ngAccordionPanel panelId=\"item2\" class=\"example-accordion-panel\">\n      <ng-template ngAccordionContent>\n        <p>This is the content for Item 2.</p>\n        <label>Input inside panel: <input type=\"text\"></label>\n      </ng-template>\n    </div>\n  </div>\n\n  <div class=\"example-accordion\">\n    <h3 class=\"example-accordion-header\">\n      <button ngAccordionTrigger class=\"example-accordion-trigger\" panelId=\"item3\">\n        Item 3 Trigger\n        <mat-icon aria-hidden=\"true\">{{expansionIcon('item3')()}}</mat-icon>\n      </button>\n    </h3>\n    <div\n      ngAccordionPanel\n      panelId=\"item3\"\n      class=\"example-accordion-panel\"\n    >\n      <ng-template ngAccordionContent>\n        <p>This is the content for Item 3.</p>\n      </ng-template>\n    </div>\n  </div>\n\n  <div class=\"example-accordion\">\n    <h3 class=\"example-accordion-header\">\n      <button ngAccordionTrigger class=\"example-accordion-trigger\" panelId=\"item4\">\n        Item 4 Trigger\n        <mat-icon aria-hidden=\"true\">{{expansionIcon('item4')()}}</mat-icon>\n      </button>\n    </h3>\n    <div\n      ngAccordionPanel\n      panelId=\"item4\"\n      class=\"example-accordion-panel\"\n    >\n      <ng-template ngAccordionContent>\n        <p>This is the content for Item 4</p>\n      </ng-template>\n    </div>\n  </div>\n\n  <div class=\"example-accordion\">\n    <h3 class=\"example-accordion-header\">\n      <button ngAccordionTrigger class=\"example-accordion-trigger\" panelId=\"item5\">\n        Item 5 Trigger\n        <mat-icon aria-hidden=\"true\">{{expansionIcon('item5')()}}</mat-icon>\n      </button>\n    </h3>\n    <div\n      ngAccordionPanel\n      panelId=\"item5\"\n      class=\"example-accordion-panel\"\n    >\n      <ng-template ngAccordionContent>\n        <p>This is the content for Item 5</p>\n      </ng-template>\n    </div>\n  </div>\n</div>\n",
       styles: ["/* Common styles for CDK Accordion examples */\n.example-accordion-controls {\n  display: flex;\n  flex-wrap: wrap;\n  align-items: center;\n  gap: 16px;\n  padding-bottom: 16px;\n  margin-bottom: 16px;\n}\n\n.example-accordion-header {\n  margin: 0;\n}\n\n.example-accordion-header .example-accordion-trigger {\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  width: 100%;\n  padding: 12px 16px;\n  border: 1px solid transparent;\n  background-color: var(--mat-sys-surface);\n  cursor: pointer;\n  border-radius: 4px;\n  margin-bottom: 4px;\n}\n\n.example-accordion-header .example-accordion-trigger:hover {\n  background-color: var(--mat-sys-surface-container-highest);\n}\n\n.example-accordion-header .example-accordion-trigger[data-active='true'] {\n  background-color: var(--mat-sys-surface-dim);\n}\n\n.example-accordion-header .example-accordion-trigger:focus {\n  outline: 2px solid var(--mat-sys-primary);\n  outline-offset: -2px;\n}\n\n.example-accordion-header .example-accordion-trigger[aria-disabled='true'] {\n  color: inherit;\n  opacity: 0.6;\n}\n\n.example-accordion-panel {\n  padding: 16px;\n  background-color: var(--mat-sys-surface-container);\n  margin-bottom: 4px;\n}\n\n.example-accordion-panel[inert] {\n  display: none;\n}\n"]
     }]
-  }]
+  }],
+  propDecorators: {
+    triggers: [{
+      type: i0.ViewChildren,
+      args: [i0.forwardRef(() => AccordionTrigger), {
+        isSignal: true
+      }]
+    }]
+  }
 });
 
 class AccordionMultiExpansionExample {
@@ -237,7 +253,7 @@ class AccordionMultiExpansionExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: AccordionMultiExpansionExample,
     deps: [],
@@ -245,7 +261,7 @@ class AccordionMultiExpansionExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.2.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: AccordionMultiExpansionExample,
     isStandalone: true,
     selector: "accordion-multi-expansion-example",
@@ -295,7 +311,7 @@ class AccordionMultiExpansionExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: AccordionMultiExpansionExample,
   decorators: [{
@@ -306,7 +322,15 @@ i0.ɵɵngDeclareClassMetadata({
       template: "<div\n  ngAccordionGroup\n  class=\"example-accordion-group\"\n  [multiExpandable]=\"true\"\n>\n  <div class=\"example-accordion\">\n    <h3 class=\"example-accordion-header\">\n      <button ngAccordionTrigger class=\"example-accordion-trigger\" panelId=\"item1\">\n        Item 1 Trigger\n        <mat-icon aria-hidden=\"true\">{{expansionIcon('item1')()}}</mat-icon>\n      </button>\n    </h3>\n    <div ngAccordionPanel panelId=\"item1\" class=\"example-accordion-panel\">\n      <ng-template ngAccordionContent>\n        <p>This is the content for Item 1. Multiple items can be expanded.</p>\n        <button>Focusable Button</button>\n      </ng-template>\n    </div>\n  </div>\n\n  <div class=\"example-accordion\">\n    <h3 class=\"example-accordion-header\">\n      <button ngAccordionTrigger class=\"example-accordion-trigger\" panelId=\"item2\">\n        Item 2 Trigger\n        <mat-icon aria-hidden=\"true\">{{expansionIcon('item2')()}}</mat-icon>\n      </button>\n    </h3>\n    <div ngAccordionPanel panelId=\"item2\" class=\"example-accordion-panel\">\n      <ng-template ngAccordionContent>\n        <p>This is the content for Item 2.</p>\n        <label>Input inside panel: <input type=\"text\"></label>\n      </ng-template>\n    </div>\n  </div>\n\n  <div class=\"example-accordion\">\n    <h3 class=\"example-accordion-header\">\n      <button ngAccordionTrigger class=\"example-accordion-trigger\" panelId=\"item3\">\n        Item 3 Trigger\n        <mat-icon aria-hidden=\"true\">{{expansionIcon('item3')()}}</mat-icon>\n      </button>\n    </h3>\n    <div\n      ngAccordionPanel\n      panelId=\"item3\"\n      class=\"example-accordion-panel\"\n    >\n      <ng-template ngAccordionContent>\n        <p>This is the content for Item 3.</p>\n      </ng-template>\n    </div>\n  </div>\n\n  <div class=\"example-accordion\">\n    <h3 class=\"example-accordion-header\">\n      <button ngAccordionTrigger class=\"example-accordion-trigger\" panelId=\"item4\">\n        Item 4 Trigger\n        <mat-icon aria-hidden=\"true\">{{expansionIcon('item4')()}}</mat-icon>\n      </button>\n    </h3>\n    <div\n      ngAccordionPanel\n      panelId=\"item4\"\n      class=\"example-accordion-panel\"\n    >\n      <ng-template ngAccordionContent>\n        <p>This is the content for Item 4</p>\n      </ng-template>\n    </div>\n  </div>\n\n  <div class=\"example-accordion\">\n    <h3 class=\"example-accordion-header\">\n      <button ngAccordionTrigger class=\"example-accordion-trigger\" panelId=\"item5\">\n        Item 5 Trigger\n        <mat-icon aria-hidden=\"true\">{{expansionIcon('item5')()}}</mat-icon>\n      </button>\n    </h3>\n    <div\n      ngAccordionPanel\n      panelId=\"item5\"\n      class=\"example-accordion-panel\"\n    >\n      <ng-template ngAccordionContent>\n        <p>This is the content for Item 5</p>\n      </ng-template>\n    </div>\n  </div>\n</div>\n",
       styles: ["/* Common styles for CDK Accordion examples */\n.example-accordion-controls {\n  display: flex;\n  flex-wrap: wrap;\n  align-items: center;\n  gap: 16px;\n  padding-bottom: 16px;\n  margin-bottom: 16px;\n}\n\n.example-accordion-header {\n  margin: 0;\n}\n\n.example-accordion-header .example-accordion-trigger {\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  width: 100%;\n  padding: 12px 16px;\n  border: 1px solid transparent;\n  background-color: var(--mat-sys-surface);\n  cursor: pointer;\n  border-radius: 4px;\n  margin-bottom: 4px;\n}\n\n.example-accordion-header .example-accordion-trigger:hover {\n  background-color: var(--mat-sys-surface-container-highest);\n}\n\n.example-accordion-header .example-accordion-trigger[data-active='true'] {\n  background-color: var(--mat-sys-surface-dim);\n}\n\n.example-accordion-header .example-accordion-trigger:focus {\n  outline: 2px solid var(--mat-sys-primary);\n  outline-offset: -2px;\n}\n\n.example-accordion-header .example-accordion-trigger[aria-disabled='true'] {\n  color: inherit;\n  opacity: 0.6;\n}\n\n.example-accordion-panel {\n  padding: 16px;\n  background-color: var(--mat-sys-surface-container);\n  margin-bottom: 4px;\n}\n\n.example-accordion-panel[inert] {\n  display: none;\n}\n"]
     }]
-  }]
+  }],
+  propDecorators: {
+    triggers: [{
+      type: i0.ViewChildren,
+      args: [i0.forwardRef(() => AccordionTrigger), {
+        isSignal: true
+      }]
+    }]
+  }
 });
 
 class AccordionDisabledFocusableExample {
@@ -321,7 +345,7 @@ class AccordionDisabledFocusableExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: AccordionDisabledFocusableExample,
     deps: [],
@@ -329,7 +353,7 @@ class AccordionDisabledFocusableExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.2.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: AccordionDisabledFocusableExample,
     isStandalone: true,
     selector: "accordion-disabled-focusable-example",
@@ -379,7 +403,7 @@ class AccordionDisabledFocusableExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: AccordionDisabledFocusableExample,
   decorators: [{
@@ -390,7 +414,15 @@ i0.ɵɵngDeclareClassMetadata({
       template: "<div\n  ngAccordionGroup\n  class=\"example-accordion-group\"\n  [multiExpandable]=\"true\"\n  [softDisabled]=\"true\"\n>\n  <div class=\"example-accordion\">\n    <h3 class=\"example-accordion-header\">\n      <button ngAccordionTrigger class=\"example-accordion-trigger\" panelId=\"item1\">\n        Item 1 Trigger\n        <mat-icon aria-hidden=\"true\">{{expansionIcon('item1')()}}</mat-icon>\n      </button>\n    </h3>\n    <div ngAccordionPanel panelId=\"item1\" class=\"example-accordion-panel\">\n      <ng-template ngAccordionContent>\n        <p>This is the content for Item 1.</p>\n      </ng-template>\n    </div>\n  </div>\n\n  <div class=\"example-accordion\">\n    <h3 class=\"example-accordion-header\">\n      <button ngAccordionTrigger class=\"example-accordion-trigger\" panelId=\"item2\" disabled>\n        Item 2 Trigger (disabled)\n        <mat-icon aria-hidden=\"true\">{{expansionIcon('item2')()}}</mat-icon>\n      </button>\n    </h3>\n    <div ngAccordionPanel panelId=\"item2\" class=\"example-accordion-panel\">\n      <ng-template ngAccordionContent>\n        <p>This is the content for Item 2. This should not be expandable if trigger is disabled.</p>\n      </ng-template>\n    </div>\n  </div>\n\n  <div class=\"example-accordion\">\n    <h3 class=\"example-accordion-header\">\n      <button ngAccordionTrigger class=\"example-accordion-trigger\" panelId=\"item3\">\n        Item 3 Trigger\n        <mat-icon aria-hidden=\"true\">{{expansionIcon('item3')()}}</mat-icon>\n      </button>\n    </h3>\n    <div ngAccordionPanel panelId=\"item3\" class=\"example-accordion-panel\">\n      <ng-template ngAccordionContent>\n        <p>This is the content for Item 3.</p>\n      </ng-template>\n    </div>\n  </div>\n\n  <div class=\"example-accordion\">\n    <h3 class=\"example-accordion-header\">\n      <button ngAccordionTrigger class=\"example-accordion-trigger\" panelId=\"item4\">\n        Item 4 Trigger\n        <mat-icon aria-hidden=\"true\">{{expansionIcon('item4')()}}</mat-icon>\n      </button>\n    </h3>\n    <div ngAccordionPanel panelId=\"item4\" class=\"example-accordion-panel\">\n      <ng-template ngAccordionContent>\n        <p>This is the content for Item 4</p>\n      </ng-template>\n    </div>\n  </div>\n\n  <div class=\"example-accordion\">\n    <h3 class=\"example-accordion-header\">\n      <button ngAccordionTrigger class=\"example-accordion-trigger\" panelId=\"item5\">\n        Item 5 Trigger\n        <mat-icon aria-hidden=\"true\">{{expansionIcon('item5')()}}</mat-icon>\n      </button>\n    </h3>\n    <div ngAccordionPanel panelId=\"item5\" class=\"example-accordion-panel\">\n      <ng-template ngAccordionContent>\n        <p>This is the content for Item 5</p>\n      </ng-template>\n    </div>\n  </div>\n</div>\n",
       styles: ["/* Common styles for CDK Accordion examples */\n.example-accordion-controls {\n  display: flex;\n  flex-wrap: wrap;\n  align-items: center;\n  gap: 16px;\n  padding-bottom: 16px;\n  margin-bottom: 16px;\n}\n\n.example-accordion-header {\n  margin: 0;\n}\n\n.example-accordion-header .example-accordion-trigger {\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  width: 100%;\n  padding: 12px 16px;\n  border: 1px solid transparent;\n  background-color: var(--mat-sys-surface);\n  cursor: pointer;\n  border-radius: 4px;\n  margin-bottom: 4px;\n}\n\n.example-accordion-header .example-accordion-trigger:hover {\n  background-color: var(--mat-sys-surface-container-highest);\n}\n\n.example-accordion-header .example-accordion-trigger[data-active='true'] {\n  background-color: var(--mat-sys-surface-dim);\n}\n\n.example-accordion-header .example-accordion-trigger:focus {\n  outline: 2px solid var(--mat-sys-primary);\n  outline-offset: -2px;\n}\n\n.example-accordion-header .example-accordion-trigger[aria-disabled='true'] {\n  color: inherit;\n  opacity: 0.6;\n}\n\n.example-accordion-panel {\n  padding: 16px;\n  background-color: var(--mat-sys-surface-container);\n  margin-bottom: 4px;\n}\n\n.example-accordion-panel[inert] {\n  display: none;\n}\n"]
     }]
-  }]
+  }],
+  propDecorators: {
+    triggers: [{
+      type: i0.ViewChildren,
+      args: [i0.forwardRef(() => AccordionTrigger), {
+        isSignal: true
+      }]
+    }]
+  }
 });
 
 class AccordionDisabledSkippedExample {
@@ -405,7 +437,7 @@ class AccordionDisabledSkippedExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: AccordionDisabledSkippedExample,
     deps: [],
@@ -413,7 +445,7 @@ class AccordionDisabledSkippedExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.2.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: AccordionDisabledSkippedExample,
     isStandalone: true,
     selector: "accordion-disabled-skipped-example",
@@ -463,7 +495,7 @@ class AccordionDisabledSkippedExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: AccordionDisabledSkippedExample,
   decorators: [{
@@ -474,7 +506,15 @@ i0.ɵɵngDeclareClassMetadata({
       template: "<div\n  ngAccordionGroup\n  class=\"example-accordion-group\"\n  [multiExpandable]=\"true\"\n  [softDisabled]=\"false\"\n>\n  <div class=\"example-accordion\">\n    <h3 class=\"example-accordion-header\">\n      <button ngAccordionTrigger class=\"example-accordion-trigger\" panelId=\"item1\">\n        Item 1 Trigger\n        <mat-icon aria-hidden=\"true\">{{expansionIcon('item1')()}}</mat-icon>\n      </button>\n    </h3>\n    <div ngAccordionPanel panelId=\"item1\" class=\"example-accordion-panel\">\n      <ng-template ngAccordionContent>\n        <p>This is the content for Item 1.</p>\n      </ng-template>\n    </div>\n  </div>\n\n  <div class=\"example-accordion\">\n    <h3 class=\"example-accordion-header\">\n      <button ngAccordionTrigger class=\"example-accordion-trigger\" panelId=\"item2\" disabled>\n        Item 2 Trigger (disabled)\n        <mat-icon aria-hidden=\"true\">{{expansionIcon('item2')()}}</mat-icon>\n      </button>\n    </h3>\n    <div ngAccordionPanel panelId=\"item2\" class=\"example-accordion-panel\">\n      <ng-template ngAccordionContent>\n        <p>This is the content for Item 2. This should not be reachable or expandable.</p>\n      </ng-template>\n    </div>\n  </div>\n\n  <div class=\"example-accordion\">\n    <h3 class=\"example-accordion-header\">\n      <button ngAccordionTrigger class=\"example-accordion-trigger\" panelId=\"item3\">\n        Item 3 Trigger\n        <mat-icon aria-hidden=\"true\">{{expansionIcon('item3')()}}</mat-icon>\n      </button>\n    </h3>\n    <div ngAccordionPanel panelId=\"item3\" class=\"example-accordion-panel\">\n      <ng-template ngAccordionContent>\n        <p>This is the content for Item 3.</p>\n      </ng-template>\n    </div>\n  </div>\n\n  <div class=\"example-accordion\">\n    <h3 class=\"example-accordion-header\">\n      <button ngAccordionTrigger class=\"example-accordion-trigger\" panelId=\"item4\">\n        Item 4 Trigger\n        <mat-icon aria-hidden=\"true\">{{expansionIcon('item4')()}}</mat-icon>\n      </button>\n    </h3>\n    <div ngAccordionPanel panelId=\"item4\" class=\"example-accordion-panel\">\n      <ng-template ngAccordionContent>\n        <p>This is the content for Item 4</p>\n      </ng-template>\n    </div>\n  </div>\n\n  <div class=\"example-accordion\">\n    <h3 class=\"example-accordion-header\">\n      <button ngAccordionTrigger class=\"example-accordion-trigger\" panelId=\"item5\">\n        Item 5 Trigger\n        <mat-icon aria-hidden=\"true\">{{expansionIcon('item5')()}}</mat-icon>\n      </button>\n    </h3>\n    <div ngAccordionPanel panelId=\"item5\" class=\"example-accordion-panel\">\n      <ng-template ngAccordionContent>\n        <p>This is the content for Item 5</p>\n      </ng-template>\n    </div>\n  </div>\n</div>\n",
       styles: ["/* Common styles for CDK Accordion examples */\n.example-accordion-controls {\n  display: flex;\n  flex-wrap: wrap;\n  align-items: center;\n  gap: 16px;\n  padding-bottom: 16px;\n  margin-bottom: 16px;\n}\n\n.example-accordion-header {\n  margin: 0;\n}\n\n.example-accordion-header .example-accordion-trigger {\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  width: 100%;\n  padding: 12px 16px;\n  border: 1px solid transparent;\n  background-color: var(--mat-sys-surface);\n  cursor: pointer;\n  border-radius: 4px;\n  margin-bottom: 4px;\n}\n\n.example-accordion-header .example-accordion-trigger:hover {\n  background-color: var(--mat-sys-surface-container-highest);\n}\n\n.example-accordion-header .example-accordion-trigger[data-active='true'] {\n  background-color: var(--mat-sys-surface-dim);\n}\n\n.example-accordion-header .example-accordion-trigger:focus {\n  outline: 2px solid var(--mat-sys-primary);\n  outline-offset: -2px;\n}\n\n.example-accordion-header .example-accordion-trigger[aria-disabled='true'] {\n  color: inherit;\n  opacity: 0.6;\n}\n\n.example-accordion-panel {\n  padding: 16px;\n  background-color: var(--mat-sys-surface-container);\n  margin-bottom: 4px;\n}\n\n.example-accordion-panel[inert] {\n  display: none;\n}\n"]
     }]
-  }]
+  }],
+  propDecorators: {
+    triggers: [{
+      type: i0.ViewChildren,
+      args: [i0.forwardRef(() => AccordionTrigger), {
+        isSignal: true
+      }]
+    }]
+  }
 });
 
 class AccordionDisabledExample {
@@ -489,7 +529,7 @@ class AccordionDisabledExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: AccordionDisabledExample,
     deps: [],
@@ -497,7 +537,7 @@ class AccordionDisabledExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.2.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: AccordionDisabledExample,
     isStandalone: true,
     selector: "accordion-disabled-example",
@@ -547,7 +587,7 @@ class AccordionDisabledExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: AccordionDisabledExample,
   decorators: [{
@@ -558,7 +598,15 @@ i0.ɵɵngDeclareClassMetadata({
       template: "<div ngAccordionGroup class=\"example-accordion-group\" [disabled]=\"true\">\n  <div class=\"example-accordion\">\n    <h3 class=\"example-accordion-header\">\n      <button ngAccordionTrigger class=\"example-accordion-trigger\" panelId=\"item1\" [expanded]=\"true\">\n        Item 1 Trigger\n        <mat-icon aria-hidden=\"true\">{{expansionIcon('item1')()}}</mat-icon>\n      </button>\n    </h3>\n    <div ngAccordionPanel panelId=\"item1\" class=\"example-accordion-panel\">\n      <ng-template ngAccordionContent>\n        <p>This is the content for Item 1.</p>\n        <button>Focusable Button</button>\n      </ng-template>\n    </div>\n  </div>\n\n  <div class=\"example-accordion\">\n    <h3 class=\"example-accordion-header\">\n      <button ngAccordionTrigger class=\"example-accordion-trigger\" panelId=\"item2\">\n        Item 2 Trigger\n        <mat-icon aria-hidden=\"true\">{{expansionIcon('item2')()}}</mat-icon>\n      </button>\n    </h3>\n    <div ngAccordionPanel panelId=\"item2\" class=\"example-accordion-panel\">\n      <ng-template ngAccordionContent>\n        <p>This is the content for Item 2.</p>\n        <label>Input inside panel: <input type=\"text\" /></label>\n      </ng-template>\n    </div>\n  </div>\n\n  <div class=\"example-accordion\">\n    <h3 class=\"example-accordion-header\">\n      <button ngAccordionTrigger class=\"example-accordion-trigger\" panelId=\"item3\">\n        Item 3 Trigger\n        <mat-icon aria-hidden=\"true\">{{expansionIcon('item3')()}}</mat-icon>\n      </button>\n    </h3>\n    <div ngAccordionPanel panelId=\"item3\" class=\"example-accordion-panel\">\n      <ng-template ngAccordionContent>\n        <p>This is the content for Item 3.</p>\n      </ng-template>\n    </div>\n  </div>\n\n  <div class=\"example-accordion\">\n    <h3 class=\"example-accordion-header\">\n      <button ngAccordionTrigger class=\"example-accordion-trigger\" panelId=\"item4\">\n        Item 4 Trigger\n        <mat-icon aria-hidden=\"true\">{{expansionIcon('item4')()}}</mat-icon>\n      </button>\n    </h3>\n    <div ngAccordionPanel panelId=\"item4\" class=\"example-accordion-panel\">\n      <ng-template ngAccordionContent>\n        <p>This is the content for Item 4</p>\n      </ng-template>\n    </div>\n  </div>\n\n  <div class=\"example-accordion\">\n    <h3 class=\"example-accordion-header\">\n      <button ngAccordionTrigger class=\"example-accordion-trigger\" panelId=\"item5\">\n        Item 5 Trigger\n        <mat-icon aria-hidden=\"true\">{{expansionIcon('item5')()}}</mat-icon>\n      </button>\n    </h3>\n    <div ngAccordionPanel panelId=\"item5\" class=\"example-accordion-panel\">\n      <ng-template ngAccordionContent>\n        <p>This is the content for Item 5</p>\n      </ng-template>\n    </div>\n  </div>\n</div>\n",
       styles: ["/* Common styles for CDK Accordion examples */\n.example-accordion-controls {\n  display: flex;\n  flex-wrap: wrap;\n  align-items: center;\n  gap: 16px;\n  padding-bottom: 16px;\n  margin-bottom: 16px;\n}\n\n.example-accordion-header {\n  margin: 0;\n}\n\n.example-accordion-header .example-accordion-trigger {\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  width: 100%;\n  padding: 12px 16px;\n  border: 1px solid transparent;\n  background-color: var(--mat-sys-surface);\n  cursor: pointer;\n  border-radius: 4px;\n  margin-bottom: 4px;\n}\n\n.example-accordion-header .example-accordion-trigger:hover {\n  background-color: var(--mat-sys-surface-container-highest);\n}\n\n.example-accordion-header .example-accordion-trigger[data-active='true'] {\n  background-color: var(--mat-sys-surface-dim);\n}\n\n.example-accordion-header .example-accordion-trigger:focus {\n  outline: 2px solid var(--mat-sys-primary);\n  outline-offset: -2px;\n}\n\n.example-accordion-header .example-accordion-trigger[aria-disabled='true'] {\n  color: inherit;\n  opacity: 0.6;\n}\n\n.example-accordion-panel {\n  padding: 16px;\n  background-color: var(--mat-sys-surface-container);\n  margin-bottom: 4px;\n}\n\n.example-accordion-panel[inert] {\n  display: none;\n}\n"]
     }]
-  }]
+  }],
+  propDecorators: {
+    triggers: [{
+      type: i0.ViewChildren,
+      args: [i0.forwardRef(() => AccordionTrigger), {
+        isSignal: true
+      }]
+    }]
+  }
 });
 
 export { AccordionConfigurableExample, AccordionDisabledExample, AccordionDisabledFocusableExample, AccordionDisabledSkippedExample, AccordionMultiExpansionExample, AccordionSingleExpansionExample };

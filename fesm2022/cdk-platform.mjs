@@ -9,7 +9,7 @@ class CdkPlatformOverviewExample {
   supportsScrollBehavior = supportsScrollBehavior();
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: CdkPlatformOverviewExample,
     deps: [],
@@ -17,7 +17,7 @@ class CdkPlatformOverviewExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: CdkPlatformOverviewExample,
     isStandalone: true,
     selector: "cdk-platform-overview-example",
@@ -27,7 +27,7 @@ class CdkPlatformOverviewExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: CdkPlatformOverviewExample,
   decorators: [{

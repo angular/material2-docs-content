@@ -25,7 +25,7 @@ class CheckboxConfigurableExample {
   }] : []));
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: CheckboxConfigurableExample,
     deps: [],
@@ -33,7 +33,7 @@ class CheckboxConfigurableExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.1.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: CheckboxConfigurableExample,
     isStandalone: true,
     selector: "checkbox-configurable-example",
@@ -136,7 +136,7 @@ class CheckboxConfigurableExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: CheckboxConfigurableExample,
   decorators: [{
@@ -148,7 +148,53 @@ i0.ɵɵngDeclareClassMetadata({
       template: "<mat-card>\n  <mat-card-content>\n    <h2 class=\"example-h2\">Checkbox configuration</h2>\n\n    <section class=\"example-section\">\n      <mat-checkbox class=\"example-margin\" [(ngModel)]=\"checked\">Checked</mat-checkbox>\n      <mat-checkbox class=\"example-margin\" [(ngModel)]=\"indeterminate\">Indeterminate</mat-checkbox>\n    </section>\n\n    <section class=\"example-section\">\n      <label class=\"example-margin\">Align:</label>\n      <mat-radio-group [(ngModel)]=\"labelPosition\">\n        <mat-radio-button class=\"example-margin\" value=\"after\">After</mat-radio-button>\n        <mat-radio-button class=\"example-margin\" value=\"before\">Before</mat-radio-button>\n      </mat-radio-group>\n    </section>\n\n    <section class=\"example-section\">\n      <mat-checkbox class=\"example-margin\" [(ngModel)]=\"disabled\">Disabled</mat-checkbox>\n    </section>\n  </mat-card-content>\n</mat-card>\n\n<mat-card class=\"result\">\n  <mat-card-content>\n    <h2 class=\"example-h2\">Result</h2>\n\n    <section class=\"example-section\">\n      <mat-checkbox\n        class=\"example-margin\"\n        [(ngModel)]=\"checked\"\n        [(indeterminate)]=\"indeterminate\"\n        [labelPosition]=\"labelPosition()\"\n        [disabled]=\"disabled()\"\n      >\n        I'm a checkbox\n      </mat-checkbox>\n    </section>\n  </mat-card-content>\n</mat-card>\n",
       styles: [".example-h2 {\n  margin: 10px;\n}\n\n.example-section {\n  display: flex;\n  align-content: center;\n  align-items: center;\n  height: 60px;\n}\n\n.example-margin {\n  margin: 0 10px;\n}\n"]
     }]
-  }]
+  }],
+  propDecorators: {
+    checked: [{
+      type: i0.Input,
+      args: [{
+        isSignal: true,
+        alias: "checked",
+        required: false
+      }]
+    }, {
+      type: i0.Output,
+      args: ["checkedChange"]
+    }],
+    indeterminate: [{
+      type: i0.Input,
+      args: [{
+        isSignal: true,
+        alias: "indeterminate",
+        required: false
+      }]
+    }, {
+      type: i0.Output,
+      args: ["indeterminateChange"]
+    }],
+    labelPosition: [{
+      type: i0.Input,
+      args: [{
+        isSignal: true,
+        alias: "labelPosition",
+        required: false
+      }]
+    }, {
+      type: i0.Output,
+      args: ["labelPositionChange"]
+    }],
+    disabled: [{
+      type: i0.Input,
+      args: [{
+        isSignal: true,
+        alias: "disabled",
+        required: false
+      }]
+    }, {
+      type: i0.Output,
+      args: ["disabledChange"]
+    }]
+  }
 });
 
 class CheckboxHarnessExample {
@@ -157,7 +203,7 @@ class CheckboxHarnessExample {
   }] : []));
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: CheckboxHarnessExample,
     deps: [],
@@ -165,7 +211,7 @@ class CheckboxHarnessExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.1.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: CheckboxHarnessExample,
     isStandalone: true,
     selector: "checkbox-harness-example",
@@ -196,7 +242,7 @@ class CheckboxHarnessExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: CheckboxHarnessExample,
   decorators: [{
@@ -207,7 +253,17 @@ i0.ɵɵngDeclareClassMetadata({
       changeDetection: ChangeDetectionStrategy.OnPush,
       template: "<mat-checkbox\n  required\n  [checked]=\"true\"\n  name=\"first-name\"\n  value=\"first-value\"\n  aria-label=\"First checkbox\"\n>\n  First\n</mat-checkbox>\n<mat-checkbox indeterminate=\"true\" [disabled]=\"disabled()\" aria-label=\"Second checkbox\">\n  Second\n</mat-checkbox>\n"
     }]
-  }]
+  }],
+  propDecorators: {
+    disabled: [{
+      type: i0.Input,
+      args: [{
+        isSignal: true,
+        alias: "disabled",
+        required: false
+      }]
+    }]
+  }
 });
 
 class CheckboxOverviewExample {
@@ -252,7 +308,7 @@ class CheckboxOverviewExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: CheckboxOverviewExample,
     deps: [],
@@ -260,7 +316,7 @@ class CheckboxOverviewExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: CheckboxOverviewExample,
     isStandalone: true,
     selector: "checkbox-overview-example",
@@ -286,7 +342,7 @@ class CheckboxOverviewExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: CheckboxOverviewExample,
   decorators: [{
@@ -310,7 +366,7 @@ class CheckboxReactiveFormsExample {
   });
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: CheckboxReactiveFormsExample,
     deps: [],
@@ -318,7 +374,7 @@ class CheckboxReactiveFormsExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: CheckboxReactiveFormsExample,
     isStandalone: true,
     selector: "checkbox-reactive-forms-example",
@@ -372,7 +428,7 @@ class CheckboxReactiveFormsExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: CheckboxReactiveFormsExample,
   decorators: [{

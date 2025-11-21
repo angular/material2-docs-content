@@ -23,7 +23,7 @@ class SliderConfigurableExample {
   value = 0;
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: SliderConfigurableExample,
     deps: [],
@@ -31,7 +31,7 @@ class SliderConfigurableExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: SliderConfigurableExample,
     isStandalone: true,
     selector: "slider-configurable-example",
@@ -126,7 +126,7 @@ class SliderConfigurableExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: SliderConfigurableExample,
   decorators: [{
@@ -149,7 +149,7 @@ class SliderFormattingExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: SliderFormattingExample,
     deps: [],
@@ -157,7 +157,7 @@ class SliderFormattingExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: SliderFormattingExample,
     isStandalone: true,
     selector: "slider-formatting-example",
@@ -185,7 +185,7 @@ class SliderFormattingExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: SliderFormattingExample,
   decorators: [{
@@ -202,7 +202,7 @@ i0.ɵɵngDeclareClassMetadata({
 class SliderOverviewExample {
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: SliderOverviewExample,
     deps: [],
@@ -210,7 +210,7 @@ class SliderOverviewExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: SliderOverviewExample,
     isStandalone: true,
     selector: "slider-overview-example",
@@ -238,7 +238,7 @@ class SliderOverviewExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: SliderOverviewExample,
   decorators: [{
@@ -255,7 +255,7 @@ i0.ɵɵngDeclareClassMetadata({
 class SliderHarnessExample {
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: SliderHarnessExample,
     deps: [],
@@ -263,7 +263,7 @@ class SliderHarnessExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: SliderHarnessExample,
     isStandalone: true,
     selector: "slider-harness-example",
@@ -290,7 +290,7 @@ class SliderHarnessExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: SliderHarnessExample,
   decorators: [{
@@ -306,7 +306,7 @@ i0.ɵɵngDeclareClassMetadata({
 class SliderRangeExample {
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: SliderRangeExample,
     deps: [],
@@ -314,7 +314,7 @@ class SliderRangeExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: SliderRangeExample,
     isStandalone: true,
     selector: "slider-range-example",
@@ -340,7 +340,7 @@ class SliderRangeExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: SliderRangeExample,
   decorators: [{

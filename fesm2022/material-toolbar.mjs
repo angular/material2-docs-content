@@ -10,7 +10,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 class ToolbarBasicExample {
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: ToolbarBasicExample,
     deps: [],
@@ -18,7 +18,7 @@ class ToolbarBasicExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: ToolbarBasicExample,
     isStandalone: true,
     selector: "toolbar-basic-example",
@@ -56,7 +56,7 @@ class ToolbarBasicExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: ToolbarBasicExample,
   decorators: [{
@@ -73,7 +73,7 @@ i0.ɵɵngDeclareClassMetadata({
 class ToolbarMultirowExample {
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: ToolbarMultirowExample,
     deps: [],
@@ -81,7 +81,7 @@ class ToolbarMultirowExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: ToolbarMultirowExample,
     isStandalone: true,
     selector: "toolbar-multirow-example",
@@ -116,7 +116,7 @@ class ToolbarMultirowExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: ToolbarMultirowExample,
   decorators: [{
@@ -133,7 +133,7 @@ i0.ɵɵngDeclareClassMetadata({
 class ToolbarSimpleExample {
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: ToolbarSimpleExample,
     deps: [],
@@ -141,7 +141,7 @@ class ToolbarSimpleExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: ToolbarSimpleExample,
     isStandalone: true,
     selector: "toolbar-simple-example",
@@ -161,7 +161,7 @@ class ToolbarSimpleExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: ToolbarSimpleExample,
   decorators: [{
@@ -177,7 +177,7 @@ i0.ɵɵngDeclareClassMetadata({
 class ToolbarOverviewExample {
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: ToolbarOverviewExample,
     deps: [],
@@ -185,7 +185,7 @@ class ToolbarOverviewExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: ToolbarOverviewExample,
     isStandalone: true,
     selector: "toolbar-overview-example",
@@ -223,7 +223,7 @@ class ToolbarOverviewExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: ToolbarOverviewExample,
   decorators: [{
@@ -240,7 +240,7 @@ i0.ɵɵngDeclareClassMetadata({
 class ToolbarHarnessExample {
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: ToolbarHarnessExample,
     deps: [],
@@ -248,7 +248,7 @@ class ToolbarHarnessExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: ToolbarHarnessExample,
     isStandalone: true,
     selector: "toolbar-harness-example",
@@ -282,7 +282,7 @@ class ToolbarHarnessExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: ToolbarHarnessExample,
   decorators: [{

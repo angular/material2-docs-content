@@ -10,7 +10,7 @@ class CdkListboxActivedescendantExample {
   features = ['Hydrodynamic', 'Port & Starboard Attachments', 'Turbo Drive'];
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: CdkListboxActivedescendantExample,
     deps: [],
@@ -18,7 +18,7 @@ class CdkListboxActivedescendantExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: CdkListboxActivedescendantExample,
     isStandalone: true,
     selector: "cdk-listbox-activedescendant-example",
@@ -43,7 +43,7 @@ class CdkListboxActivedescendantExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: CdkListboxActivedescendantExample,
   decorators: [{
@@ -79,7 +79,7 @@ class CdkListboxCompareWithExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: CdkListboxCompareWithExample,
     deps: [],
@@ -87,7 +87,7 @@ class CdkListboxCompareWithExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: CdkListboxCompareWithExample,
     isStandalone: true,
     selector: "cdk-listbox-compare-with-example",
@@ -116,7 +116,7 @@ class CdkListboxCompareWithExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: CdkListboxCompareWithExample,
   decorators: [{
@@ -133,7 +133,7 @@ i0.ɵɵngDeclareClassMetadata({
 class CdkListboxCustomNavigationExample {
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: CdkListboxCustomNavigationExample,
     deps: [],
@@ -141,7 +141,7 @@ class CdkListboxCustomNavigationExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: CdkListboxCustomNavigationExample,
     isStandalone: true,
     selector: "cdk-listbox-custom-navigation-example",
@@ -166,7 +166,7 @@ class CdkListboxCustomNavigationExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: CdkListboxCustomNavigationExample,
   decorators: [{
@@ -183,7 +183,7 @@ i0.ɵɵngDeclareClassMetadata({
 class CdkListboxCustomTypeaheadExample {
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: CdkListboxCustomTypeaheadExample,
     deps: [],
@@ -191,7 +191,7 @@ class CdkListboxCustomTypeaheadExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: CdkListboxCustomTypeaheadExample,
     isStandalone: true,
     selector: "cdk-listbox-custom-typeahead-example",
@@ -216,7 +216,7 @@ class CdkListboxCustomTypeaheadExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: CdkListboxCustomTypeaheadExample,
   decorators: [{
@@ -234,7 +234,7 @@ class CdkListboxDisabledExample {
   canDrinkCtrl = new FormControl(false);
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: CdkListboxDisabledExample,
     deps: [],
@@ -242,7 +242,7 @@ class CdkListboxDisabledExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: CdkListboxDisabledExample,
     isStandalone: true,
     selector: "cdk-listbox-disabled-example",
@@ -303,7 +303,7 @@ class CdkListboxDisabledExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: CdkListboxDisabledExample,
   decorators: [{
@@ -333,7 +333,7 @@ class CdkListboxFormsValidationExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: CdkListboxFormsValidationExample,
     deps: [],
@@ -341,7 +341,7 @@ class CdkListboxFormsValidationExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: CdkListboxFormsValidationExample,
     isStandalone: true,
     selector: "cdk-listbox-forms-validation-example",
@@ -391,7 +391,7 @@ class CdkListboxFormsValidationExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: CdkListboxFormsValidationExample,
   decorators: [{
@@ -410,7 +410,7 @@ class CdkListboxHorizontalExample {
   sizes = ['XS', 'S', 'M', 'L', 'XL'];
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: CdkListboxHorizontalExample,
     deps: [],
@@ -418,7 +418,7 @@ class CdkListboxHorizontalExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: CdkListboxHorizontalExample,
     isStandalone: true,
     selector: "cdk-listbox-horizontal-example",
@@ -443,7 +443,7 @@ class CdkListboxHorizontalExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: CdkListboxHorizontalExample,
   decorators: [{
@@ -460,7 +460,7 @@ i0.ɵɵngDeclareClassMetadata({
 class CdkListboxMultipleExample {
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: CdkListboxMultipleExample,
     deps: [],
@@ -468,7 +468,7 @@ class CdkListboxMultipleExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: CdkListboxMultipleExample,
     isStandalone: true,
     selector: "cdk-listbox-multiple-example",
@@ -493,7 +493,7 @@ class CdkListboxMultipleExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: CdkListboxMultipleExample,
   decorators: [{
@@ -510,7 +510,7 @@ i0.ɵɵngDeclareClassMetadata({
 class CdkListboxOverviewExample {
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: CdkListboxOverviewExample,
     deps: [],
@@ -518,7 +518,7 @@ class CdkListboxOverviewExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: CdkListboxOverviewExample,
     isStandalone: true,
     selector: "cdk-listbox-overview-example",
@@ -543,7 +543,7 @@ class CdkListboxOverviewExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: CdkListboxOverviewExample,
   decorators: [{
@@ -562,7 +562,7 @@ class CdkListboxReactiveFormsExample {
   languageCtrl = new FormControl(['TypeScript']);
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: CdkListboxReactiveFormsExample,
     deps: [],
@@ -570,7 +570,7 @@ class CdkListboxReactiveFormsExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: CdkListboxReactiveFormsExample,
     isStandalone: true,
     selector: "cdk-listbox-reactive-forms-example",
@@ -616,7 +616,7 @@ class CdkListboxReactiveFormsExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: CdkListboxReactiveFormsExample,
   decorators: [{
@@ -635,7 +635,7 @@ class CdkListboxTemplateFormsExample {
   order = [];
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: CdkListboxTemplateFormsExample,
     deps: [],
@@ -643,7 +643,7 @@ class CdkListboxTemplateFormsExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: CdkListboxTemplateFormsExample,
     isStandalone: true,
     selector: "cdk-listbox-template-forms-example",
@@ -686,7 +686,7 @@ class CdkListboxTemplateFormsExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: CdkListboxTemplateFormsExample,
   decorators: [{
@@ -708,7 +708,7 @@ class CdkListboxValueBindingExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: CdkListboxValueBindingExample,
     deps: [],
@@ -716,7 +716,7 @@ class CdkListboxValueBindingExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: CdkListboxValueBindingExample,
     isStandalone: true,
     selector: "cdk-listbox-value-binding-example",
@@ -745,7 +745,7 @@ class CdkListboxValueBindingExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: CdkListboxValueBindingExample,
   decorators: [{
