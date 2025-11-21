@@ -19,4 +19,81 @@
   <h2>
     API reference for Angular CDK private
   </h2>
-    <p>Import symbols from <code>@angular/cdk/private</code></p></div>
+    <p>Import symbols from <code>@angular/cdk/private</code></p><h3 id="cdk-private-interfaces" class="docs-header-link docs-api-h3">
+      <span header-link="interfaces"></span>
+      Interfaces
+    </h3>
+    
+      
+
+<h4 id="TrustedHTML" class="docs-header-link docs-api-h4 docs-api-interface-name">
+  <span header-link="TrustedHTML"></span>
+  <code>TrustedHTML</code>
+</h4>
+
+
+
+
+
+
+    <h3 id="cdk-private-functions" class="docs-header-link docs-api-h3">
+      <span header-link="functions"></span>
+      Functions
+    </h3>
+    
+      
+      
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">trustedHTMLFromString
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Unsafely promote a string to a TrustedHTML, falling back to strings when
+Trusted Types are not available.</p>
+<p>Important!!! This is a security-sensitive function; any use of this function
+must go through security review. In particular, it must be assured that the
+provided string will never cause an XSS vulnerability if used in a context
+that will be interpreted as HTML by a browser, e.g. when assigning to
+element.innerHTML.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+    </tr>
+  </thead>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        html</p>
+      <code class="docs-api-method-parameter-type">string</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        
+      </p>
+    </td>
+  </tr>
+  <thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">TrustedHTML</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        
+      </p>
+    </td>
+  </tr></table>
+
+
+    </div>
