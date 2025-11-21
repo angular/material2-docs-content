@@ -17,7 +17,7 @@ class MatSelectionColumnExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: MatSelectionColumnExample,
     deps: [],
@@ -25,7 +25,7 @@ class MatSelectionColumnExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: MatSelectionColumnExample,
     isStandalone: true,
     selector: "mat-selection-column-example",
@@ -106,7 +106,7 @@ class MatSelectionColumnExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: MatSelectionColumnExample,
   decorators: [{
@@ -241,7 +241,7 @@ class MatSelectionListExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: MatSelectionListExample,
     deps: [],
@@ -249,7 +249,7 @@ class MatSelectionListExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: MatSelectionListExample,
     isStandalone: true,
     selector: "mat-selection-list-example",
@@ -295,7 +295,7 @@ class MatSelectionListExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: MatSelectionListExample,
   decorators: [{

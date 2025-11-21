@@ -59,7 +59,7 @@ class ComboboxDialogExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: ComboboxDialogExample,
     deps: [],
@@ -67,7 +67,7 @@ class ComboboxDialogExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: ComboboxDialogExample,
     isStandalone: true,
     selector: "combobox-dialog-example",
@@ -138,7 +138,7 @@ class ComboboxDialogExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: ComboboxDialogExample,
   decorators: [{
@@ -151,7 +151,27 @@ i0.ɵɵngDeclareClassMetadata({
       styles: [".example-combobox-container {\n  position: relative;\n  width: 100%;\n  display: flex;\n  flex-direction: column;\n  border: 1px solid var(--mat-sys-outline);\n  border-radius: var(--mat-sys-corner-extra-small);\n}\n\n.example-combobox-container:has([readonly='true']) {\n  width: 225px;\n}\n\n.example-combobox-input-container {\n  display: flex;\n  position: relative;\n  align-items: center;\n  border-radius: var(--mat-sys-corner-extra-small);\n}\n\n.example-combobox-input {\n  border-radius: var(--mat-sys-corner-extra-small);\n}\n\n.example-combobox-input[readonly='true'] {\n  cursor: pointer;\n  padding: 0.7rem 1rem;\n}\n\n.example-combobox-container:focus-within .example-combobox-input {\n  outline: 1.5px solid var(--mat-sys-primary);\n  box-shadow: 0 0 0 4px color-mix(in srgb, var(--mat-sys-primary) 25%, transparent);\n}\n\n.example-icon {\n  width: 24px;\n  height: 24px;\n  font-size: 20px;\n  display: grid;\n  place-items: center;\n  pointer-events: none;\n}\n\n.example-search-icon {\n  padding: 0 0.5rem;\n  position: absolute;\n  opacity: 0.8;\n}\n\n.example-arrow-icon {\n  padding: 0 0.5rem;\n  position: absolute;\n  right: 0;\n  opacity: 0.8;\n  transition: transform 0.2s ease;\n}\n\n.example-combobox-input[aria-expanded='true'] + .example-arrow-icon {\n  transform: rotate(180deg);\n}\n\n.example-combobox-input {\n  width: 100%;\n  border: none;\n  outline: none;\n  font-size: 1rem;\n  padding: 0.7rem 1rem 0.7rem 2.5rem;\n  background-color: var(--mat-sys-surface);\n}\n\n.example-popover {\n  margin: 0;\n  padding: 0;\n  border: 1px solid var(--mat-sys-outline);\n  border-radius: var(--mat-sys-corner-extra-small);\n  background-color: var(--mat-sys-surface);\n}\n\n.example-listbox {\n  display: flex;\n  flex-direction: column;\n  overflow: auto;\n  max-height: 10rem;\n  padding: 0.5rem;\n  gap: 4px;\n}\n\n.example-option {\n  cursor: pointer;\n  padding: 0.3rem 1rem;\n  border-radius: var(--mat-sys-corner-extra-small);\n  display: flex;\n  overflow: hidden;\n  flex-shrink: 0;\n  align-items: center;\n  justify-content: space-between;\n  gap: 1rem;\n}\n\n.example-option-text {\n  flex: 1;\n}\n\n.example-checkbox-blank-icon,\n.example-option[aria-selected='true'] .example-checkbox-filled-icon {\n  display: flex;\n  align-items: center;\n}\n\n.example-checkbox-filled-icon,\n.example-option[aria-selected='true'] .example-checkbox-blank-icon {\n  display: none;\n}\n\n.example-checkbox-blank-icon {\n  opacity: 0.6;\n}\n\n.example-selected-icon {\n  visibility: hidden;\n}\n\n.example-option[aria-selected='true'] .example-selected-icon {\n  visibility: visible;\n}\n\n.example-option[aria-selected='true'] {\n  color: var(--mat-sys-primary);\n  background-color: color-mix(in srgb, var(--mat-sys-primary) 10%, transparent);\n}\n\n.example-option:hover {\n  background-color: color-mix(in srgb, var(--mat-sys-on-surface) 10%, transparent);\n}\n\n.example-combobox-container:focus-within [data-active='true'] {\n  outline: 2px solid color-mix(in srgb, var(--mat-sys-primary) 80%, transparent);\n}\n\n.example-tree {\n  padding: 10px;\n  overflow-x: scroll;\n}\n\n.example-tree-item {\n  cursor: pointer;\n  list-style: none;\n  text-decoration: none;\n  display: flex;\n  align-items: center;\n  gap: 1rem;\n  padding: 0.3rem 1rem;\n}\n\nli[aria-expanded='false'] + ul[role='group'] {\n  display: none;\n}\n\nul[role='group'] {\n  padding-inline-start: 1rem;\n}\n\n.example-icon {\n  margin: 0;\n  width: 24px;\n}\n\n.example-parent-icon {\n  transition: transform 0.2s ease;\n}\n\n.example-tree-item[aria-expanded='true'] .example-parent-icon {\n  transform: rotate(90deg);\n}\n\n.example-selected-icon {\n  visibility: hidden;\n  margin-left: auto;\n}\n\n.example-tree-item[aria-current] .example-selected-icon,\n.example-tree-item[aria-selected='true'] .example-selected-icon {\n  visibility: visible;\n}\n\n.example-dialog {\n  position: absolute;\n  left: auto;\n  right: auto;\n  top: auto;\n  bottom: auto;\n  padding: 0;\n  border: 1px solid var(--mat-sys-outline);\n  border-radius: var(--mat-sys-corner-extra-small);\n}\n\n.example-dialog .example-combobox-input-container {\n  border-radius: 0;\n}\n\n.example-dialog .example-combobox-container,\n.example-dialog .example-combobox-input-container {\n  border: none;\n}\n\n.example-dialog .example-combobox-input {\n  border-bottom-left-radius: 0;\n  border-bottom-right-radius: 0;\n}\n\n.example-dialog .example-combobox-container:focus-within .example-combobox-input {\n  outline: none;\n  box-shadow: none;\n}\n\n.example-dialog .example-combobox-input-container {\n  border-bottom: 1px solid var(--mat-sys-outline);\n}\n\n.example-dialog::backdrop {\n  opacity: 0;\n}\n"]
     }]
   }],
-  ctorParameters: () => []
+  ctorParameters: () => [],
+  propDecorators: {
+    dialog: [{
+      type: i0.ViewChild,
+      args: [i0.forwardRef(() => ComboboxDialog), {
+        isSignal: true
+      }]
+    }],
+    listbox: [{
+      type: i0.ViewChild,
+      args: [i0.forwardRef(() => Listbox), {
+        isSignal: true
+      }]
+    }],
+    combobox: [{
+      type: i0.ViewChild,
+      args: [i0.forwardRef(() => Combobox), {
+        isSignal: true
+      }]
+    }]
+  }
 });
 const states$4 = ['Alabama', 'Alaska', 'Arizona', 'Arkansas', 'California', 'Colorado', 'Connecticut', 'Delaware', 'Florida', 'Georgia', 'Hawaii', 'Idaho', 'Illinois', 'Indiana', 'Iowa', 'Kansas', 'Kentucky', 'Louisiana', 'Maine', 'Maryland', 'Massachusetts', 'Michigan', 'Minnesota', 'Mississippi', 'Missouri', 'Montana', 'Nebraska', 'Nevada', 'New Hampshire', 'New Jersey', 'New Mexico', 'New York', 'North Carolina', 'North Dakota', 'Ohio', 'Oklahoma', 'Oregon', 'Pennsylvania', 'Rhode Island', 'South Carolina', 'South Dakota', 'Tennessee', 'Texas', 'Utah', 'Vermont', 'Virginia', 'Washington', 'West Virginia', 'Wisconsin', 'Wyoming'];
 
@@ -193,7 +213,7 @@ class ComboboxManualExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: ComboboxManualExample,
     deps: [],
@@ -201,7 +221,7 @@ class ComboboxManualExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: ComboboxManualExample,
     isStandalone: true,
     selector: "combobox-manual-example",
@@ -267,7 +287,7 @@ class ComboboxManualExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: ComboboxManualExample,
   decorators: [{
@@ -280,7 +300,27 @@ i0.ɵɵngDeclareClassMetadata({
       styles: [".example-combobox-container {\n  position: relative;\n  width: 100%;\n  display: flex;\n  flex-direction: column;\n  border: 1px solid var(--mat-sys-outline);\n  border-radius: var(--mat-sys-corner-extra-small);\n}\n\n.example-combobox-container:has([readonly='true']:not([aria-disabled='true'])) {\n  width: 200px;\n}\n\n.example-combobox-input-container {\n  display: flex;\n  position: relative;\n  align-items: center;\n  border-radius: var(--mat-sys-corner-extra-small);\n}\n\n.example-combobox-input {\n  border-radius: var(--mat-sys-corner-extra-small);\n}\n\n.example-combobox-input[readonly='true']:not([aria-disabled='true']) {\n  cursor: pointer;\n  padding: 0.7rem 1rem;\n}\n\n.example-combobox-container:focus-within .example-combobox-input {\n  outline: 1.5px solid var(--mat-sys-primary);\n  box-shadow: 0 0 0 4px color-mix(in srgb, var(--mat-sys-primary) 25%, transparent);\n}\n\n.example-icon {\n  width: 24px;\n  height: 24px;\n  font-size: 20px;\n  display: grid;\n  place-items: center;\n  pointer-events: none;\n}\n\n.example-search-icon {\n  padding: 0 0.5rem;\n  position: absolute;\n  opacity: 0.8;\n}\n\n.example-arrow-icon {\n  padding: 0 0.5rem;\n  position: absolute;\n  right: 0;\n  opacity: 0.8;\n  transition: transform 0.2s ease;\n}\n\n.example-combobox-input[aria-expanded='true'] + .example-arrow-icon {\n  transform: rotate(180deg);\n}\n\n.example-combobox-input {\n  width: 100%;\n  border: none;\n  outline: none;\n  font-size: 1rem;\n  padding: 0.7rem 1rem 0.7rem 2.5rem;\n  background-color: var(--mat-sys-surface);\n}\n\n.example-popover {\n  margin: 0;\n  padding: 0;\n  border: 1px solid var(--mat-sys-outline);\n  border-radius: var(--mat-sys-corner-extra-small);\n  background-color: var(--mat-sys-surface);\n}\n\n.example-listbox {\n  display: flex;\n  flex-direction: column;\n  overflow: auto;\n  max-height: 10rem;\n  padding: 0.5rem;\n  gap: 4px;\n}\n\n.example-option {\n  cursor: pointer;\n  padding: 0.3rem 1rem;\n  border-radius: var(--mat-sys-corner-extra-small);\n  display: flex;\n  overflow: hidden;\n  flex-shrink: 0;\n  align-items: center;\n  justify-content: space-between;\n  gap: 1rem;\n}\n\n.example-option-text {\n  flex: 1;\n}\n\n.example-checkbox-blank-icon,\n.example-option[aria-selected='true'] .example-checkbox-filled-icon {\n  display: flex;\n  align-items: center;\n}\n\n.example-checkbox-filled-icon,\n.example-option[aria-selected='true'] .example-checkbox-blank-icon {\n  display: none;\n}\n\n.example-checkbox-blank-icon {\n  opacity: 0.6;\n}\n\n.example-selected-icon {\n  visibility: hidden;\n}\n\n.example-option[aria-selected='true'] .example-selected-icon {\n  visibility: visible;\n}\n\n.example-option[aria-selected='true'] {\n  color: var(--mat-sys-primary);\n  background-color: color-mix(in srgb, var(--mat-sys-primary) 10%, transparent);\n}\n\n.example-option:hover {\n  background-color: color-mix(in srgb, var(--mat-sys-on-surface) 10%, transparent);\n}\n\n.example-combobox-container:focus-within [data-active='true'] {\n  outline: 2px solid color-mix(in srgb, var(--mat-sys-primary) 80%, transparent);\n}\n\n.example-tree {\n  padding: 10px;\n  overflow-x: scroll;\n}\n\n.example-tree-item {\n  cursor: pointer;\n  list-style: none;\n  text-decoration: none;\n  display: flex;\n  align-items: center;\n  gap: 1rem;\n  padding: 0.3rem 1rem;\n}\n\nli[aria-expanded='false'] + ul[role='group'] {\n  display: none;\n}\n\nul[role='group'] {\n  padding-inline-start: 1rem;\n}\n\n.example-icon {\n  margin: 0;\n  width: 24px;\n}\n\n.example-parent-icon {\n  transition: transform 0.2s ease;\n}\n\n.example-tree-item[aria-expanded='true'] .example-parent-icon {\n  transform: rotate(90deg);\n}\n\n.example-selected-icon {\n  visibility: hidden;\n  margin-left: auto;\n}\n\n.example-tree-item[aria-current] .example-selected-icon,\n.example-tree-item[aria-selected='true'] .example-selected-icon {\n  visibility: visible;\n}\n\n.example-combobox-container:has([aria-disabled='true']) {\n  opacity: 0.4;\n  cursor: default;\n}\n"]
     }]
   }],
-  ctorParameters: () => []
+  ctorParameters: () => [],
+  propDecorators: {
+    popover: [{
+      type: i0.ViewChild,
+      args: ['popover', {
+        isSignal: true
+      }]
+    }],
+    listbox: [{
+      type: i0.ViewChild,
+      args: [i0.forwardRef(() => Listbox), {
+        isSignal: true
+      }]
+    }],
+    combobox: [{
+      type: i0.ViewChild,
+      args: [i0.forwardRef(() => Combobox), {
+        isSignal: true
+      }]
+    }]
+  }
 });
 const states$3 = ['Alabama', 'Alaska', 'Arizona', 'Arkansas', 'California', 'Colorado', 'Connecticut', 'Delaware', 'Florida', 'Georgia', 'Hawaii', 'Idaho', 'Illinois', 'Indiana', 'Iowa', 'Kansas', 'Kentucky', 'Louisiana', 'Maine', 'Maryland', 'Massachusetts', 'Michigan', 'Minnesota', 'Mississippi', 'Missouri', 'Montana', 'Nebraska', 'Nevada', 'New Hampshire', 'New Jersey', 'New Mexico', 'New York', 'North Carolina', 'North Dakota', 'Ohio', 'Oklahoma', 'Oregon', 'Pennsylvania', 'Rhode Island', 'South Carolina', 'South Dakota', 'Tennessee', 'Texas', 'Utah', 'Vermont', 'Virginia', 'Washington', 'West Virginia', 'Wisconsin', 'Wyoming'];
 
@@ -322,7 +362,7 @@ class ComboboxAutoSelectExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: ComboboxAutoSelectExample,
     deps: [],
@@ -330,7 +370,7 @@ class ComboboxAutoSelectExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: ComboboxAutoSelectExample,
     isStandalone: true,
     selector: "combobox-auto-select-example",
@@ -393,7 +433,7 @@ class ComboboxAutoSelectExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: ComboboxAutoSelectExample,
   decorators: [{
@@ -406,7 +446,27 @@ i0.ɵɵngDeclareClassMetadata({
       styles: [".example-combobox-container {\n  position: relative;\n  width: 100%;\n  display: flex;\n  flex-direction: column;\n  border: 1px solid var(--mat-sys-outline);\n  border-radius: var(--mat-sys-corner-extra-small);\n}\n\n.example-combobox-container:has([readonly='true']:not([aria-disabled='true'])) {\n  width: 200px;\n}\n\n.example-combobox-input-container {\n  display: flex;\n  position: relative;\n  align-items: center;\n  border-radius: var(--mat-sys-corner-extra-small);\n}\n\n.example-combobox-input {\n  border-radius: var(--mat-sys-corner-extra-small);\n}\n\n.example-combobox-input[readonly='true']:not([aria-disabled='true']) {\n  cursor: pointer;\n  padding: 0.7rem 1rem;\n}\n\n.example-combobox-container:focus-within .example-combobox-input {\n  outline: 1.5px solid var(--mat-sys-primary);\n  box-shadow: 0 0 0 4px color-mix(in srgb, var(--mat-sys-primary) 25%, transparent);\n}\n\n.example-icon {\n  width: 24px;\n  height: 24px;\n  font-size: 20px;\n  display: grid;\n  place-items: center;\n  pointer-events: none;\n}\n\n.example-search-icon {\n  padding: 0 0.5rem;\n  position: absolute;\n  opacity: 0.8;\n}\n\n.example-arrow-icon {\n  padding: 0 0.5rem;\n  position: absolute;\n  right: 0;\n  opacity: 0.8;\n  transition: transform 0.2s ease;\n}\n\n.example-combobox-input[aria-expanded='true'] + .example-arrow-icon {\n  transform: rotate(180deg);\n}\n\n.example-combobox-input {\n  width: 100%;\n  border: none;\n  outline: none;\n  font-size: 1rem;\n  padding: 0.7rem 1rem 0.7rem 2.5rem;\n  background-color: var(--mat-sys-surface);\n}\n\n.example-popover {\n  margin: 0;\n  padding: 0;\n  border: 1px solid var(--mat-sys-outline);\n  border-radius: var(--mat-sys-corner-extra-small);\n  background-color: var(--mat-sys-surface);\n}\n\n.example-listbox {\n  display: flex;\n  flex-direction: column;\n  overflow: auto;\n  max-height: 10rem;\n  padding: 0.5rem;\n  gap: 4px;\n}\n\n.example-option {\n  cursor: pointer;\n  padding: 0.3rem 1rem;\n  border-radius: var(--mat-sys-corner-extra-small);\n  display: flex;\n  overflow: hidden;\n  flex-shrink: 0;\n  align-items: center;\n  justify-content: space-between;\n  gap: 1rem;\n}\n\n.example-option-text {\n  flex: 1;\n}\n\n.example-checkbox-blank-icon,\n.example-option[aria-selected='true'] .example-checkbox-filled-icon {\n  display: flex;\n  align-items: center;\n}\n\n.example-checkbox-filled-icon,\n.example-option[aria-selected='true'] .example-checkbox-blank-icon {\n  display: none;\n}\n\n.example-checkbox-blank-icon {\n  opacity: 0.6;\n}\n\n.example-selected-icon {\n  visibility: hidden;\n}\n\n.example-option[aria-selected='true'] .example-selected-icon {\n  visibility: visible;\n}\n\n.example-option[aria-selected='true'] {\n  color: var(--mat-sys-primary);\n  background-color: color-mix(in srgb, var(--mat-sys-primary) 10%, transparent);\n}\n\n.example-option:hover {\n  background-color: color-mix(in srgb, var(--mat-sys-on-surface) 10%, transparent);\n}\n\n.example-combobox-container:focus-within [data-active='true'] {\n  outline: 2px solid color-mix(in srgb, var(--mat-sys-primary) 80%, transparent);\n}\n\n.example-tree {\n  padding: 10px;\n  overflow-x: scroll;\n}\n\n.example-tree-item {\n  cursor: pointer;\n  list-style: none;\n  text-decoration: none;\n  display: flex;\n  align-items: center;\n  gap: 1rem;\n  padding: 0.3rem 1rem;\n}\n\nli[aria-expanded='false'] + ul[role='group'] {\n  display: none;\n}\n\nul[role='group'] {\n  padding-inline-start: 1rem;\n}\n\n.example-icon {\n  margin: 0;\n  width: 24px;\n}\n\n.example-parent-icon {\n  transition: transform 0.2s ease;\n}\n\n.example-tree-item[aria-expanded='true'] .example-parent-icon {\n  transform: rotate(90deg);\n}\n\n.example-selected-icon {\n  visibility: hidden;\n  margin-left: auto;\n}\n\n.example-tree-item[aria-current] .example-selected-icon,\n.example-tree-item[aria-selected='true'] .example-selected-icon {\n  visibility: visible;\n}\n\n.example-combobox-container:has([aria-disabled='true']) {\n  opacity: 0.4;\n  cursor: default;\n}\n"]
     }]
   }],
-  ctorParameters: () => []
+  ctorParameters: () => [],
+  propDecorators: {
+    popover: [{
+      type: i0.ViewChild,
+      args: ['popover', {
+        isSignal: true
+      }]
+    }],
+    listbox: [{
+      type: i0.ViewChild,
+      args: [i0.forwardRef(() => Listbox), {
+        isSignal: true
+      }]
+    }],
+    combobox: [{
+      type: i0.ViewChild,
+      args: [i0.forwardRef(() => Combobox), {
+        isSignal: true
+      }]
+    }]
+  }
 });
 const states$2 = ['Alabama', 'Alaska', 'Arizona', 'Arkansas', 'California', 'Colorado', 'Connecticut', 'Delaware', 'Florida', 'Georgia', 'Hawaii', 'Idaho', 'Illinois', 'Indiana', 'Iowa', 'Kansas', 'Kentucky', 'Louisiana', 'Maine', 'Maryland', 'Massachusetts', 'Michigan', 'Minnesota', 'Mississippi', 'Missouri', 'Montana', 'Nebraska', 'Nevada', 'New Hampshire', 'New Jersey', 'New Mexico', 'New York', 'North Carolina', 'North Dakota', 'Ohio', 'Oklahoma', 'Oregon', 'Pennsylvania', 'Rhode Island', 'South Carolina', 'South Dakota', 'Tennessee', 'Texas', 'Utah', 'Vermont', 'Virginia', 'Washington', 'West Virginia', 'Wisconsin', 'Wyoming'];
 
@@ -448,7 +508,7 @@ class ComboboxHighlightExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: ComboboxHighlightExample,
     deps: [],
@@ -456,7 +516,7 @@ class ComboboxHighlightExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: ComboboxHighlightExample,
     isStandalone: true,
     selector: "combobox-highlight-example",
@@ -522,7 +582,7 @@ class ComboboxHighlightExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: ComboboxHighlightExample,
   decorators: [{
@@ -535,7 +595,27 @@ i0.ɵɵngDeclareClassMetadata({
       styles: [".example-combobox-container {\n  position: relative;\n  width: 100%;\n  display: flex;\n  flex-direction: column;\n  border: 1px solid var(--mat-sys-outline);\n  border-radius: var(--mat-sys-corner-extra-small);\n}\n\n.example-combobox-container:has([readonly='true']:not([aria-disabled='true'])) {\n  width: 200px;\n}\n\n.example-combobox-input-container {\n  display: flex;\n  position: relative;\n  align-items: center;\n  border-radius: var(--mat-sys-corner-extra-small);\n}\n\n.example-combobox-input {\n  border-radius: var(--mat-sys-corner-extra-small);\n}\n\n.example-combobox-input[readonly='true']:not([aria-disabled='true']) {\n  cursor: pointer;\n  padding: 0.7rem 1rem;\n}\n\n.example-combobox-container:focus-within .example-combobox-input {\n  outline: 1.5px solid var(--mat-sys-primary);\n  box-shadow: 0 0 0 4px color-mix(in srgb, var(--mat-sys-primary) 25%, transparent);\n}\n\n.example-icon {\n  width: 24px;\n  height: 24px;\n  font-size: 20px;\n  display: grid;\n  place-items: center;\n  pointer-events: none;\n}\n\n.example-search-icon {\n  padding: 0 0.5rem;\n  position: absolute;\n  opacity: 0.8;\n}\n\n.example-arrow-icon {\n  padding: 0 0.5rem;\n  position: absolute;\n  right: 0;\n  opacity: 0.8;\n  transition: transform 0.2s ease;\n}\n\n.example-combobox-input[aria-expanded='true'] + .example-arrow-icon {\n  transform: rotate(180deg);\n}\n\n.example-combobox-input {\n  width: 100%;\n  border: none;\n  outline: none;\n  font-size: 1rem;\n  padding: 0.7rem 1rem 0.7rem 2.5rem;\n  background-color: var(--mat-sys-surface);\n}\n\n.example-popover {\n  margin: 0;\n  padding: 0;\n  border: 1px solid var(--mat-sys-outline);\n  border-radius: var(--mat-sys-corner-extra-small);\n  background-color: var(--mat-sys-surface);\n}\n\n.example-listbox {\n  display: flex;\n  flex-direction: column;\n  overflow: auto;\n  max-height: 10rem;\n  padding: 0.5rem;\n  gap: 4px;\n}\n\n.example-option {\n  cursor: pointer;\n  padding: 0.3rem 1rem;\n  border-radius: var(--mat-sys-corner-extra-small);\n  display: flex;\n  overflow: hidden;\n  flex-shrink: 0;\n  align-items: center;\n  justify-content: space-between;\n  gap: 1rem;\n}\n\n.example-option-text {\n  flex: 1;\n}\n\n.example-checkbox-blank-icon,\n.example-option[aria-selected='true'] .example-checkbox-filled-icon {\n  display: flex;\n  align-items: center;\n}\n\n.example-checkbox-filled-icon,\n.example-option[aria-selected='true'] .example-checkbox-blank-icon {\n  display: none;\n}\n\n.example-checkbox-blank-icon {\n  opacity: 0.6;\n}\n\n.example-selected-icon {\n  visibility: hidden;\n}\n\n.example-option[aria-selected='true'] .example-selected-icon {\n  visibility: visible;\n}\n\n.example-option[aria-selected='true'] {\n  color: var(--mat-sys-primary);\n  background-color: color-mix(in srgb, var(--mat-sys-primary) 10%, transparent);\n}\n\n.example-option:hover {\n  background-color: color-mix(in srgb, var(--mat-sys-on-surface) 10%, transparent);\n}\n\n.example-combobox-container:focus-within [data-active='true'] {\n  outline: 2px solid color-mix(in srgb, var(--mat-sys-primary) 80%, transparent);\n}\n\n.example-tree {\n  padding: 10px;\n  overflow-x: scroll;\n}\n\n.example-tree-item {\n  cursor: pointer;\n  list-style: none;\n  text-decoration: none;\n  display: flex;\n  align-items: center;\n  gap: 1rem;\n  padding: 0.3rem 1rem;\n}\n\nli[aria-expanded='false'] + ul[role='group'] {\n  display: none;\n}\n\nul[role='group'] {\n  padding-inline-start: 1rem;\n}\n\n.example-icon {\n  margin: 0;\n  width: 24px;\n}\n\n.example-parent-icon {\n  transition: transform 0.2s ease;\n}\n\n.example-tree-item[aria-expanded='true'] .example-parent-icon {\n  transform: rotate(90deg);\n}\n\n.example-selected-icon {\n  visibility: hidden;\n  margin-left: auto;\n}\n\n.example-tree-item[aria-current] .example-selected-icon,\n.example-tree-item[aria-selected='true'] .example-selected-icon {\n  visibility: visible;\n}\n\n.example-combobox-container:has([aria-disabled='true']) {\n  opacity: 0.4;\n  cursor: default;\n}\n"]
     }]
   }],
-  ctorParameters: () => []
+  ctorParameters: () => [],
+  propDecorators: {
+    popover: [{
+      type: i0.ViewChild,
+      args: ['popover', {
+        isSignal: true
+      }]
+    }],
+    listbox: [{
+      type: i0.ViewChild,
+      args: [i0.forwardRef(() => Listbox), {
+        isSignal: true
+      }]
+    }],
+    combobox: [{
+      type: i0.ViewChild,
+      args: [i0.forwardRef(() => Combobox), {
+        isSignal: true
+      }]
+    }]
+  }
 });
 const states$1 = ['Alabama', 'Alaska', 'Arizona', 'Arkansas', 'California', 'Colorado', 'Connecticut', 'Delaware', 'Florida', 'Georgia', 'Hawaii', 'Idaho', 'Illinois', 'Indiana', 'Iowa', 'Kansas', 'Kentucky', 'Louisiana', 'Maine', 'Maryland', 'Massachusetts', 'Michigan', 'Minnesota', 'Mississippi', 'Missouri', 'Montana', 'Nebraska', 'Nevada', 'New Hampshire', 'New Jersey', 'New Mexico', 'New York', 'North Carolina', 'North Dakota', 'Ohio', 'Oklahoma', 'Oregon', 'Pennsylvania', 'Rhode Island', 'South Carolina', 'South Dakota', 'Tennessee', 'Texas', 'Utah', 'Vermont', 'Virginia', 'Washington', 'West Virginia', 'Wisconsin', 'Wyoming'];
 
@@ -577,7 +657,7 @@ class ComboboxDisabledExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: ComboboxDisabledExample,
     deps: [],
@@ -585,7 +665,7 @@ class ComboboxDisabledExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: ComboboxDisabledExample,
     isStandalone: true,
     selector: "combobox-disabled-example",
@@ -651,7 +731,7 @@ class ComboboxDisabledExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: ComboboxDisabledExample,
   decorators: [{
@@ -664,7 +744,27 @@ i0.ɵɵngDeclareClassMetadata({
       styles: [".example-combobox-container {\n  position: relative;\n  width: 100%;\n  display: flex;\n  flex-direction: column;\n  border: 1px solid var(--mat-sys-outline);\n  border-radius: var(--mat-sys-corner-extra-small);\n}\n\n.example-combobox-container:has([readonly='true']:not([aria-disabled='true'])) {\n  width: 200px;\n}\n\n.example-combobox-input-container {\n  display: flex;\n  position: relative;\n  align-items: center;\n  border-radius: var(--mat-sys-corner-extra-small);\n}\n\n.example-combobox-input {\n  border-radius: var(--mat-sys-corner-extra-small);\n}\n\n.example-combobox-input[readonly='true']:not([aria-disabled='true']) {\n  cursor: pointer;\n  padding: 0.7rem 1rem;\n}\n\n.example-combobox-container:focus-within .example-combobox-input {\n  outline: 1.5px solid var(--mat-sys-primary);\n  box-shadow: 0 0 0 4px color-mix(in srgb, var(--mat-sys-primary) 25%, transparent);\n}\n\n.example-icon {\n  width: 24px;\n  height: 24px;\n  font-size: 20px;\n  display: grid;\n  place-items: center;\n  pointer-events: none;\n}\n\n.example-search-icon {\n  padding: 0 0.5rem;\n  position: absolute;\n  opacity: 0.8;\n}\n\n.example-arrow-icon {\n  padding: 0 0.5rem;\n  position: absolute;\n  right: 0;\n  opacity: 0.8;\n  transition: transform 0.2s ease;\n}\n\n.example-combobox-input[aria-expanded='true'] + .example-arrow-icon {\n  transform: rotate(180deg);\n}\n\n.example-combobox-input {\n  width: 100%;\n  border: none;\n  outline: none;\n  font-size: 1rem;\n  padding: 0.7rem 1rem 0.7rem 2.5rem;\n  background-color: var(--mat-sys-surface);\n}\n\n.example-popover {\n  margin: 0;\n  padding: 0;\n  border: 1px solid var(--mat-sys-outline);\n  border-radius: var(--mat-sys-corner-extra-small);\n  background-color: var(--mat-sys-surface);\n}\n\n.example-listbox {\n  display: flex;\n  flex-direction: column;\n  overflow: auto;\n  max-height: 10rem;\n  padding: 0.5rem;\n  gap: 4px;\n}\n\n.example-option {\n  cursor: pointer;\n  padding: 0.3rem 1rem;\n  border-radius: var(--mat-sys-corner-extra-small);\n  display: flex;\n  overflow: hidden;\n  flex-shrink: 0;\n  align-items: center;\n  justify-content: space-between;\n  gap: 1rem;\n}\n\n.example-option-text {\n  flex: 1;\n}\n\n.example-checkbox-blank-icon,\n.example-option[aria-selected='true'] .example-checkbox-filled-icon {\n  display: flex;\n  align-items: center;\n}\n\n.example-checkbox-filled-icon,\n.example-option[aria-selected='true'] .example-checkbox-blank-icon {\n  display: none;\n}\n\n.example-checkbox-blank-icon {\n  opacity: 0.6;\n}\n\n.example-selected-icon {\n  visibility: hidden;\n}\n\n.example-option[aria-selected='true'] .example-selected-icon {\n  visibility: visible;\n}\n\n.example-option[aria-selected='true'] {\n  color: var(--mat-sys-primary);\n  background-color: color-mix(in srgb, var(--mat-sys-primary) 10%, transparent);\n}\n\n.example-option:hover {\n  background-color: color-mix(in srgb, var(--mat-sys-on-surface) 10%, transparent);\n}\n\n.example-combobox-container:focus-within [data-active='true'] {\n  outline: 2px solid color-mix(in srgb, var(--mat-sys-primary) 80%, transparent);\n}\n\n.example-tree {\n  padding: 10px;\n  overflow-x: scroll;\n}\n\n.example-tree-item {\n  cursor: pointer;\n  list-style: none;\n  text-decoration: none;\n  display: flex;\n  align-items: center;\n  gap: 1rem;\n  padding: 0.3rem 1rem;\n}\n\nli[aria-expanded='false'] + ul[role='group'] {\n  display: none;\n}\n\nul[role='group'] {\n  padding-inline-start: 1rem;\n}\n\n.example-icon {\n  margin: 0;\n  width: 24px;\n}\n\n.example-parent-icon {\n  transition: transform 0.2s ease;\n}\n\n.example-tree-item[aria-expanded='true'] .example-parent-icon {\n  transform: rotate(90deg);\n}\n\n.example-selected-icon {\n  visibility: hidden;\n  margin-left: auto;\n}\n\n.example-tree-item[aria-current] .example-selected-icon,\n.example-tree-item[aria-selected='true'] .example-selected-icon {\n  visibility: visible;\n}\n\n.example-combobox-container:has([aria-disabled='true']) {\n  opacity: 0.4;\n  cursor: default;\n}\n"]
     }]
   }],
-  ctorParameters: () => []
+  ctorParameters: () => [],
+  propDecorators: {
+    popover: [{
+      type: i0.ViewChild,
+      args: ['popover', {
+        isSignal: true
+      }]
+    }],
+    listbox: [{
+      type: i0.ViewChild,
+      args: [i0.forwardRef(() => Listbox), {
+        isSignal: true
+      }]
+    }],
+    combobox: [{
+      type: i0.ViewChild,
+      args: [i0.forwardRef(() => Combobox), {
+        isSignal: true
+      }]
+    }]
+  }
 });
 const states = ['Alabama', 'Alaska', 'Arizona', 'Arkansas', 'California', 'Colorado', 'Connecticut', 'Delaware', 'Florida', 'Georgia', 'Hawaii', 'Idaho', 'Illinois', 'Indiana', 'Iowa', 'Kansas', 'Kentucky', 'Louisiana', 'Maine', 'Maryland', 'Massachusetts', 'Michigan', 'Minnesota', 'Mississippi', 'Missouri', 'Montana', 'Nebraska', 'Nevada', 'New Hampshire', 'New Jersey', 'New Mexico', 'New York', 'North Carolina', 'North Dakota', 'Ohio', 'Oklahoma', 'Oregon', 'Pennsylvania', 'Rhode Island', 'South Carolina', 'South Dakota', 'Tennessee', 'Texas', 'Utah', 'Vermont', 'Virginia', 'Washington', 'West Virginia', 'Wisconsin', 'Wyoming'];
 
@@ -726,7 +826,7 @@ class ComboboxReadonlyExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: ComboboxReadonlyExample,
     deps: [],
@@ -734,7 +834,7 @@ class ComboboxReadonlyExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: ComboboxReadonlyExample,
     isStandalone: true,
     selector: "combobox-readonly-example",
@@ -806,7 +906,7 @@ class ComboboxReadonlyExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: ComboboxReadonlyExample,
   decorators: [{
@@ -819,7 +919,27 @@ i0.ɵɵngDeclareClassMetadata({
       styles: [".example-select {\n  display: flex;\n  position: relative;\n  align-items: center;\n  color: var(--mat-sys-on-primary);\n  font-size: var(--mat-sys-label-large);\n  background-color: var(--mat-sys-primary);\n  border-radius: var(--mat-sys-corner-extra-large);\n}\n\n.example-select:has([ngComboboxInput][aria-disabled='true']) {\n  opacity: 0.6;\n  cursor: default;\n}\n\n.example-select:hover {\n  background-color: color-mix(in srgb, var(--mat-sys-primary) 90%, transparent);\n}\n\n[ngComboboxInput] {\n  opacity: 0;\n  cursor: pointer;\n  padding: 0 3rem;\n  height: 3rem;\n  border: none;\n}\n\n[ngCombobox]:focus-within .example-select {\n  outline-offset: 2px;\n  outline: 2px solid var(--mat-sys-primary);\n}\n\n.example-combobox-text {\n  left: 2rem;\n  position: absolute;\n}\n\n.example-arrow {\n  right: 1rem;\n  position: absolute;\n  pointer-events: none;\n  transition: transform 150ms ease-in-out;\n}\n\n[ngComboboxInput][aria-expanded='true'] ~ .example-arrow {\n  transform: rotate(180deg);\n}\n\n.example-popup-container {\n  width: 100%;\n  padding: 0.5rem;\n  margin-top: 8px;\n  border-radius: var(--mat-sys-corner-large);\n  background-color: var(--mat-sys-surface-container);\n\n  max-height: 13rem;\n  opacity: 1;\n  visibility: visible;\n  transition: max-height 150ms ease-out, visibility 0s, opacity 25ms ease-out;\n}\n\n[ngListbox] {\n  gap: 4px;\n  height: 100%;\n  display: flex;\n  overflow: auto;\n  flex-direction: column;\n}\n\n[ngCombobox]:has([ngComboboxInput][aria-expanded='false']) .example-popup-container {\n  max-height: 0;\n  opacity: 0;\n  visibility: hidden;\n  transition: max-height 150ms ease-in, visibility 0s 150ms, opacity 150ms ease-in;\n}\n\n[ngCombobox]:has([ngComboboxInput][aria-expanded='true']) [ngListbox] {\n  display: flex;\n}\n\n[ngOption] {\n  display: flex;\n  cursor: pointer;\n  align-items: center;\n  padding: 0 1rem;\n  min-height: 3rem;\n  color: var(--mat-sys-on-surface);\n  font-size: var(--mat-sys-label-large);\n  border-radius: var(--mat-sys-corner-extra-large);\n}\n\n[ngOption]:hover {\n  background-color: color-mix(in srgb, var(--mat-sys-on-surface) 5%, transparent);\n}\n\n[ngOption][data-active='true'] {\n  background-color: color-mix(in srgb, var(--mat-sys-on-surface) 10%, transparent);\n}\n\n[ngOption][aria-selected='true'] {\n  color: var(--mat-sys-primary);\n  background-color: color-mix(in srgb, var(--mat-sys-primary) 10%, transparent);\n}\n\n.example-option-icon {\n  padding-right: 1rem;\n}\n\n.example-option-check,\n.example-option-icon {\n  font-size: var(--mat-sys-label-large);\n}\n\n[ngOption]:not([aria-selected='true']) .example-option-check {\n  display: none;\n}\n\n.example-option-text {\n  flex: 1;\n}\n"]
     }]
   }],
-  ctorParameters: () => []
+  ctorParameters: () => [],
+  propDecorators: {
+    listbox: [{
+      type: i0.ViewChild,
+      args: [i0.forwardRef(() => Listbox), {
+        isSignal: true
+      }]
+    }],
+    options: [{
+      type: i0.ViewChildren,
+      args: [i0.forwardRef(() => Option), {
+        isSignal: true
+      }]
+    }],
+    combobox: [{
+      type: i0.ViewChild,
+      args: [i0.forwardRef(() => Combobox), {
+        isSignal: true
+      }]
+    }]
+  }
 });
 
 class ComboboxReadonlyMultiselectExample {
@@ -885,7 +1005,7 @@ class ComboboxReadonlyMultiselectExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: ComboboxReadonlyMultiselectExample,
     deps: [],
@@ -893,7 +1013,7 @@ class ComboboxReadonlyMultiselectExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: ComboboxReadonlyMultiselectExample,
     isStandalone: true,
     selector: "combobox-readonly-multiselect-example",
@@ -965,7 +1085,7 @@ class ComboboxReadonlyMultiselectExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: ComboboxReadonlyMultiselectExample,
   decorators: [{
@@ -978,7 +1098,27 @@ i0.ɵɵngDeclareClassMetadata({
       styles: [".example-select {\n  display: flex;\n  position: relative;\n  align-items: center;\n  color: var(--mat-sys-on-primary);\n  font-size: var(--mat-sys-label-large);\n  background-color: var(--mat-sys-primary);\n  border-radius: var(--mat-sys-corner-extra-large);\n}\n\n.example-select:has([ngComboboxInput][aria-disabled='true']) {\n  opacity: 0.6;\n  cursor: default;\n}\n\n.example-select:hover {\n  background-color: color-mix(in srgb, var(--mat-sys-primary) 90%, transparent);\n}\n\n[ngComboboxInput] {\n  opacity: 0;\n  cursor: pointer;\n  padding: 0 3rem;\n  height: 3rem;\n  border: none;\n}\n\n[ngCombobox]:focus-within .example-select {\n  outline-offset: 2px;\n  outline: 2px solid var(--mat-sys-primary);\n}\n\n.example-combobox-text {\n  left: 2rem;\n  position: absolute;\n}\n\n.example-arrow {\n  right: 1rem;\n  position: absolute;\n  pointer-events: none;\n  transition: transform 150ms ease-in-out;\n}\n\n[ngComboboxInput][aria-expanded='true'] ~ .example-arrow {\n  transform: rotate(180deg);\n}\n\n.example-popup-container {\n  width: 100%;\n  padding: 0.5rem;\n  margin-top: 8px;\n  border-radius: var(--mat-sys-corner-large);\n  background-color: var(--mat-sys-surface-container);\n\n  max-height: 13rem;\n  opacity: 1;\n  visibility: visible;\n  transition: max-height 150ms ease-out, visibility 0s, opacity 25ms ease-out;\n}\n\n[ngListbox] {\n  gap: 4px;\n  height: 100%;\n  display: flex;\n  overflow: auto;\n  flex-direction: column;\n}\n\n[ngCombobox]:has([ngComboboxInput][aria-expanded='false']) .example-popup-container {\n  max-height: 0;\n  opacity: 0;\n  visibility: hidden;\n  transition: max-height 150ms ease-in, visibility 0s 150ms, opacity 150ms ease-in;\n}\n\n[ngCombobox]:has([ngComboboxInput][aria-expanded='true']) [ngListbox] {\n  display: flex;\n}\n\n[ngOption] {\n  display: flex;\n  cursor: pointer;\n  align-items: center;\n  padding: 0 1rem;\n  min-height: 3rem;\n  color: var(--mat-sys-on-surface);\n  font-size: var(--mat-sys-label-large);\n  border-radius: var(--mat-sys-corner-extra-large);\n}\n\n[ngOption]:hover {\n  background-color: color-mix(in srgb, var(--mat-sys-on-surface) 5%, transparent);\n}\n\n[ngOption][data-active='true'] {\n  background-color: color-mix(in srgb, var(--mat-sys-on-surface) 10%, transparent);\n}\n\n[ngOption][aria-selected='true'] {\n  color: var(--mat-sys-primary);\n  background-color: color-mix(in srgb, var(--mat-sys-primary) 10%, transparent);\n}\n\n.example-option-icon {\n  padding-right: 1rem;\n}\n\n.example-option-check,\n.example-option-icon {\n  font-size: var(--mat-sys-label-large);\n}\n\n[ngOption]:not([aria-selected='true']) .example-option-check {\n  display: none;\n}\n\n.example-option-text {\n  flex: 1;\n}\n"]
     }]
   }],
-  ctorParameters: () => []
+  ctorParameters: () => [],
+  propDecorators: {
+    listbox: [{
+      type: i0.ViewChild,
+      args: [i0.forwardRef(() => Listbox), {
+        isSignal: true
+      }]
+    }],
+    options: [{
+      type: i0.ViewChildren,
+      args: [i0.forwardRef(() => Option), {
+        isSignal: true
+      }]
+    }],
+    combobox: [{
+      type: i0.ViewChild,
+      args: [i0.forwardRef(() => Combobox), {
+        isSignal: true
+      }]
+    }]
+  }
 });
 
 class ComboboxReadonlyDisabledExample {
@@ -1044,7 +1184,7 @@ class ComboboxReadonlyDisabledExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: ComboboxReadonlyDisabledExample,
     deps: [],
@@ -1052,7 +1192,7 @@ class ComboboxReadonlyDisabledExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: ComboboxReadonlyDisabledExample,
     isStandalone: true,
     selector: "combobox-readonly-disabled-example",
@@ -1124,7 +1264,7 @@ class ComboboxReadonlyDisabledExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: ComboboxReadonlyDisabledExample,
   decorators: [{
@@ -1137,7 +1277,27 @@ i0.ɵɵngDeclareClassMetadata({
       styles: [".example-select {\n  display: flex;\n  position: relative;\n  align-items: center;\n  color: var(--mat-sys-on-primary);\n  font-size: var(--mat-sys-label-large);\n  background-color: var(--mat-sys-primary);\n  border-radius: var(--mat-sys-corner-extra-large);\n}\n\n.example-select:has([ngComboboxInput][aria-disabled='true']) {\n  opacity: 0.6;\n  cursor: default;\n}\n\n.example-select:hover {\n  background-color: color-mix(in srgb, var(--mat-sys-primary) 90%, transparent);\n}\n\n[ngComboboxInput] {\n  opacity: 0;\n  cursor: pointer;\n  padding: 0 3rem;\n  height: 3rem;\n  border: none;\n}\n\n[ngCombobox]:focus-within .example-select {\n  outline-offset: 2px;\n  outline: 2px solid var(--mat-sys-primary);\n}\n\n.example-combobox-text {\n  left: 2rem;\n  position: absolute;\n}\n\n.example-arrow {\n  right: 1rem;\n  position: absolute;\n  pointer-events: none;\n  transition: transform 150ms ease-in-out;\n}\n\n[ngComboboxInput][aria-expanded='true'] ~ .example-arrow {\n  transform: rotate(180deg);\n}\n\n.example-popup-container {\n  width: 100%;\n  padding: 0.5rem;\n  margin-top: 8px;\n  border-radius: var(--mat-sys-corner-large);\n  background-color: var(--mat-sys-surface-container);\n\n  max-height: 13rem;\n  opacity: 1;\n  visibility: visible;\n  transition: max-height 150ms ease-out, visibility 0s, opacity 25ms ease-out;\n}\n\n[ngListbox] {\n  gap: 4px;\n  height: 100%;\n  display: flex;\n  overflow: auto;\n  flex-direction: column;\n}\n\n[ngCombobox]:has([ngComboboxInput][aria-expanded='false']) .example-popup-container {\n  max-height: 0;\n  opacity: 0;\n  visibility: hidden;\n  transition: max-height 150ms ease-in, visibility 0s 150ms, opacity 150ms ease-in;\n}\n\n[ngCombobox]:has([ngComboboxInput][aria-expanded='true']) [ngListbox] {\n  display: flex;\n}\n\n[ngOption] {\n  display: flex;\n  cursor: pointer;\n  align-items: center;\n  padding: 0 1rem;\n  min-height: 3rem;\n  color: var(--mat-sys-on-surface);\n  font-size: var(--mat-sys-label-large);\n  border-radius: var(--mat-sys-corner-extra-large);\n}\n\n[ngOption]:hover {\n  background-color: color-mix(in srgb, var(--mat-sys-on-surface) 5%, transparent);\n}\n\n[ngOption][data-active='true'] {\n  background-color: color-mix(in srgb, var(--mat-sys-on-surface) 10%, transparent);\n}\n\n[ngOption][aria-selected='true'] {\n  color: var(--mat-sys-primary);\n  background-color: color-mix(in srgb, var(--mat-sys-primary) 10%, transparent);\n}\n\n.example-option-icon {\n  padding-right: 1rem;\n}\n\n.example-option-check,\n.example-option-icon {\n  font-size: var(--mat-sys-label-large);\n}\n\n[ngOption]:not([aria-selected='true']) .example-option-check {\n  display: none;\n}\n\n.example-option-text {\n  flex: 1;\n}\n"]
     }]
   }],
-  ctorParameters: () => []
+  ctorParameters: () => [],
+  propDecorators: {
+    listbox: [{
+      type: i0.ViewChild,
+      args: [i0.forwardRef(() => Listbox), {
+        isSignal: true
+      }]
+    }],
+    options: [{
+      type: i0.ViewChildren,
+      args: [i0.forwardRef(() => Option), {
+        isSignal: true
+      }]
+    }],
+    combobox: [{
+      type: i0.ViewChild,
+      args: [i0.forwardRef(() => Combobox), {
+        isSignal: true
+      }]
+    }]
+  }
 });
 
 const TREE_NODES = [{
@@ -1243,7 +1403,7 @@ class ComboboxTreeManualExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: ComboboxTreeManualExample,
     deps: [],
@@ -1251,7 +1411,7 @@ class ComboboxTreeManualExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: ComboboxTreeManualExample,
     isStandalone: true,
     selector: "combobox-tree-manual-example",
@@ -1326,7 +1486,7 @@ class ComboboxTreeManualExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: ComboboxTreeManualExample,
   decorators: [{
@@ -1339,7 +1499,27 @@ i0.ɵɵngDeclareClassMetadata({
       styles: [".example-combobox-container {\n  position: relative;\n  width: 100%;\n  display: flex;\n  flex-direction: column;\n  border: 1px solid var(--mat-sys-outline);\n  border-radius: var(--mat-sys-corner-extra-small);\n}\n\n.example-combobox-container:has([readonly='true']:not([aria-disabled='true'])) {\n  width: 200px;\n}\n\n.example-combobox-input-container {\n  display: flex;\n  position: relative;\n  align-items: center;\n  border-radius: var(--mat-sys-corner-extra-small);\n}\n\n.example-combobox-input {\n  border-radius: var(--mat-sys-corner-extra-small);\n}\n\n.example-combobox-input[readonly='true']:not([aria-disabled='true']) {\n  cursor: pointer;\n  padding: 0.7rem 1rem;\n}\n\n.example-combobox-container:focus-within .example-combobox-input {\n  outline: 1.5px solid var(--mat-sys-primary);\n  box-shadow: 0 0 0 4px color-mix(in srgb, var(--mat-sys-primary) 25%, transparent);\n}\n\n.example-icon {\n  width: 24px;\n  height: 24px;\n  font-size: 20px;\n  display: grid;\n  place-items: center;\n  pointer-events: none;\n}\n\n.example-search-icon {\n  padding: 0 0.5rem;\n  position: absolute;\n  opacity: 0.8;\n}\n\n.example-arrow-icon {\n  padding: 0 0.5rem;\n  position: absolute;\n  right: 0;\n  opacity: 0.8;\n  transition: transform 0.2s ease;\n}\n\n.example-combobox-input[aria-expanded='true'] + .example-arrow-icon {\n  transform: rotate(180deg);\n}\n\n.example-combobox-input {\n  width: 100%;\n  border: none;\n  outline: none;\n  font-size: 1rem;\n  padding: 0.7rem 1rem 0.7rem 2.5rem;\n  background-color: var(--mat-sys-surface);\n}\n\n.example-popover {\n  margin: 0;\n  padding: 0;\n  border: 1px solid var(--mat-sys-outline);\n  border-radius: var(--mat-sys-corner-extra-small);\n  background-color: var(--mat-sys-surface);\n}\n\n.example-listbox {\n  display: flex;\n  flex-direction: column;\n  overflow: auto;\n  max-height: 10rem;\n  padding: 0.5rem;\n  gap: 4px;\n}\n\n.example-option {\n  cursor: pointer;\n  padding: 0.3rem 1rem;\n  border-radius: var(--mat-sys-corner-extra-small);\n  display: flex;\n  overflow: hidden;\n  flex-shrink: 0;\n  align-items: center;\n  justify-content: space-between;\n  gap: 1rem;\n}\n\n.example-option-text {\n  flex: 1;\n}\n\n.example-checkbox-blank-icon,\n.example-option[aria-selected='true'] .example-checkbox-filled-icon {\n  display: flex;\n  align-items: center;\n}\n\n.example-checkbox-filled-icon,\n.example-option[aria-selected='true'] .example-checkbox-blank-icon {\n  display: none;\n}\n\n.example-checkbox-blank-icon {\n  opacity: 0.6;\n}\n\n.example-selected-icon {\n  visibility: hidden;\n}\n\n.example-option[aria-selected='true'] .example-selected-icon {\n  visibility: visible;\n}\n\n.example-option[aria-selected='true'] {\n  color: var(--mat-sys-primary);\n  background-color: color-mix(in srgb, var(--mat-sys-primary) 10%, transparent);\n}\n\n.example-option:hover {\n  background-color: color-mix(in srgb, var(--mat-sys-on-surface) 10%, transparent);\n}\n\n.example-combobox-container:focus-within [data-active='true'] {\n  outline: 2px solid color-mix(in srgb, var(--mat-sys-primary) 80%, transparent);\n}\n\n.example-tree {\n  padding: 10px;\n  overflow-x: scroll;\n}\n\n.example-tree-item {\n  cursor: pointer;\n  list-style: none;\n  text-decoration: none;\n  display: flex;\n  align-items: center;\n  gap: 1rem;\n  padding: 0.3rem 1rem;\n}\n\nli[aria-expanded='false'] + ul[role='group'] {\n  display: none;\n}\n\nul[role='group'] {\n  padding-inline-start: 1rem;\n}\n\n.example-icon {\n  margin: 0;\n  width: 24px;\n}\n\n.example-parent-icon {\n  transition: transform 0.2s ease;\n}\n\n.example-tree-item[aria-expanded='true'] .example-parent-icon {\n  transform: rotate(90deg);\n}\n\n.example-selected-icon {\n  visibility: hidden;\n  margin-left: auto;\n}\n\n.example-tree-item[aria-current] .example-selected-icon,\n.example-tree-item[aria-selected='true'] .example-selected-icon {\n  visibility: visible;\n}\n\n.example-combobox-container:has([aria-disabled='true']) {\n  opacity: 0.4;\n  cursor: default;\n}\n"]
     }]
   }],
-  ctorParameters: () => []
+  ctorParameters: () => [],
+  propDecorators: {
+    popover: [{
+      type: i0.ViewChild,
+      args: ['popover', {
+        isSignal: true
+      }]
+    }],
+    tree: [{
+      type: i0.ViewChild,
+      args: [i0.forwardRef(() => Tree), {
+        isSignal: true
+      }]
+    }],
+    combobox: [{
+      type: i0.ViewChild,
+      args: [i0.forwardRef(() => Combobox), {
+        isSignal: true
+      }]
+    }]
+  }
 });
 
 class ComboboxTreeAutoSelectExample {
@@ -1407,7 +1587,7 @@ class ComboboxTreeAutoSelectExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: ComboboxTreeAutoSelectExample,
     deps: [],
@@ -1415,7 +1595,7 @@ class ComboboxTreeAutoSelectExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: ComboboxTreeAutoSelectExample,
     isStandalone: true,
     selector: "combobox-tree-auto-select-example",
@@ -1490,7 +1670,7 @@ class ComboboxTreeAutoSelectExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: ComboboxTreeAutoSelectExample,
   decorators: [{
@@ -1503,7 +1683,27 @@ i0.ɵɵngDeclareClassMetadata({
       styles: [".example-combobox-container {\n  position: relative;\n  width: 100%;\n  display: flex;\n  flex-direction: column;\n  border: 1px solid var(--mat-sys-outline);\n  border-radius: var(--mat-sys-corner-extra-small);\n}\n\n.example-combobox-container:has([readonly='true']:not([aria-disabled='true'])) {\n  width: 200px;\n}\n\n.example-combobox-input-container {\n  display: flex;\n  position: relative;\n  align-items: center;\n  border-radius: var(--mat-sys-corner-extra-small);\n}\n\n.example-combobox-input {\n  border-radius: var(--mat-sys-corner-extra-small);\n}\n\n.example-combobox-input[readonly='true']:not([aria-disabled='true']) {\n  cursor: pointer;\n  padding: 0.7rem 1rem;\n}\n\n.example-combobox-container:focus-within .example-combobox-input {\n  outline: 1.5px solid var(--mat-sys-primary);\n  box-shadow: 0 0 0 4px color-mix(in srgb, var(--mat-sys-primary) 25%, transparent);\n}\n\n.example-icon {\n  width: 24px;\n  height: 24px;\n  font-size: 20px;\n  display: grid;\n  place-items: center;\n  pointer-events: none;\n}\n\n.example-search-icon {\n  padding: 0 0.5rem;\n  position: absolute;\n  opacity: 0.8;\n}\n\n.example-arrow-icon {\n  padding: 0 0.5rem;\n  position: absolute;\n  right: 0;\n  opacity: 0.8;\n  transition: transform 0.2s ease;\n}\n\n.example-combobox-input[aria-expanded='true'] + .example-arrow-icon {\n  transform: rotate(180deg);\n}\n\n.example-combobox-input {\n  width: 100%;\n  border: none;\n  outline: none;\n  font-size: 1rem;\n  padding: 0.7rem 1rem 0.7rem 2.5rem;\n  background-color: var(--mat-sys-surface);\n}\n\n.example-popover {\n  margin: 0;\n  padding: 0;\n  border: 1px solid var(--mat-sys-outline);\n  border-radius: var(--mat-sys-corner-extra-small);\n  background-color: var(--mat-sys-surface);\n}\n\n.example-listbox {\n  display: flex;\n  flex-direction: column;\n  overflow: auto;\n  max-height: 10rem;\n  padding: 0.5rem;\n  gap: 4px;\n}\n\n.example-option {\n  cursor: pointer;\n  padding: 0.3rem 1rem;\n  border-radius: var(--mat-sys-corner-extra-small);\n  display: flex;\n  overflow: hidden;\n  flex-shrink: 0;\n  align-items: center;\n  justify-content: space-between;\n  gap: 1rem;\n}\n\n.example-option-text {\n  flex: 1;\n}\n\n.example-checkbox-blank-icon,\n.example-option[aria-selected='true'] .example-checkbox-filled-icon {\n  display: flex;\n  align-items: center;\n}\n\n.example-checkbox-filled-icon,\n.example-option[aria-selected='true'] .example-checkbox-blank-icon {\n  display: none;\n}\n\n.example-checkbox-blank-icon {\n  opacity: 0.6;\n}\n\n.example-selected-icon {\n  visibility: hidden;\n}\n\n.example-option[aria-selected='true'] .example-selected-icon {\n  visibility: visible;\n}\n\n.example-option[aria-selected='true'] {\n  color: var(--mat-sys-primary);\n  background-color: color-mix(in srgb, var(--mat-sys-primary) 10%, transparent);\n}\n\n.example-option:hover {\n  background-color: color-mix(in srgb, var(--mat-sys-on-surface) 10%, transparent);\n}\n\n.example-combobox-container:focus-within [data-active='true'] {\n  outline: 2px solid color-mix(in srgb, var(--mat-sys-primary) 80%, transparent);\n}\n\n.example-tree {\n  padding: 10px;\n  overflow-x: scroll;\n}\n\n.example-tree-item {\n  cursor: pointer;\n  list-style: none;\n  text-decoration: none;\n  display: flex;\n  align-items: center;\n  gap: 1rem;\n  padding: 0.3rem 1rem;\n}\n\nli[aria-expanded='false'] + ul[role='group'] {\n  display: none;\n}\n\nul[role='group'] {\n  padding-inline-start: 1rem;\n}\n\n.example-icon {\n  margin: 0;\n  width: 24px;\n}\n\n.example-parent-icon {\n  transition: transform 0.2s ease;\n}\n\n.example-tree-item[aria-expanded='true'] .example-parent-icon {\n  transform: rotate(90deg);\n}\n\n.example-selected-icon {\n  visibility: hidden;\n  margin-left: auto;\n}\n\n.example-tree-item[aria-current] .example-selected-icon,\n.example-tree-item[aria-selected='true'] .example-selected-icon {\n  visibility: visible;\n}\n\n.example-combobox-container:has([aria-disabled='true']) {\n  opacity: 0.4;\n  cursor: default;\n}\n"]
     }]
   }],
-  ctorParameters: () => []
+  ctorParameters: () => [],
+  propDecorators: {
+    popover: [{
+      type: i0.ViewChild,
+      args: ['popover', {
+        isSignal: true
+      }]
+    }],
+    tree: [{
+      type: i0.ViewChild,
+      args: [i0.forwardRef(() => Tree), {
+        isSignal: true
+      }]
+    }],
+    combobox: [{
+      type: i0.ViewChild,
+      args: [i0.forwardRef(() => Combobox), {
+        isSignal: true
+      }]
+    }]
+  }
 });
 
 class ComboboxTreeHighlightExample {
@@ -1571,7 +1771,7 @@ class ComboboxTreeHighlightExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: ComboboxTreeHighlightExample,
     deps: [],
@@ -1579,7 +1779,7 @@ class ComboboxTreeHighlightExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: ComboboxTreeHighlightExample,
     isStandalone: true,
     selector: "combobox-tree-highlight-example",
@@ -1654,7 +1854,7 @@ class ComboboxTreeHighlightExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: ComboboxTreeHighlightExample,
   decorators: [{
@@ -1667,7 +1867,27 @@ i0.ɵɵngDeclareClassMetadata({
       styles: [".example-combobox-container {\n  position: relative;\n  width: 100%;\n  display: flex;\n  flex-direction: column;\n  border: 1px solid var(--mat-sys-outline);\n  border-radius: var(--mat-sys-corner-extra-small);\n}\n\n.example-combobox-container:has([readonly='true']:not([aria-disabled='true'])) {\n  width: 200px;\n}\n\n.example-combobox-input-container {\n  display: flex;\n  position: relative;\n  align-items: center;\n  border-radius: var(--mat-sys-corner-extra-small);\n}\n\n.example-combobox-input {\n  border-radius: var(--mat-sys-corner-extra-small);\n}\n\n.example-combobox-input[readonly='true']:not([aria-disabled='true']) {\n  cursor: pointer;\n  padding: 0.7rem 1rem;\n}\n\n.example-combobox-container:focus-within .example-combobox-input {\n  outline: 1.5px solid var(--mat-sys-primary);\n  box-shadow: 0 0 0 4px color-mix(in srgb, var(--mat-sys-primary) 25%, transparent);\n}\n\n.example-icon {\n  width: 24px;\n  height: 24px;\n  font-size: 20px;\n  display: grid;\n  place-items: center;\n  pointer-events: none;\n}\n\n.example-search-icon {\n  padding: 0 0.5rem;\n  position: absolute;\n  opacity: 0.8;\n}\n\n.example-arrow-icon {\n  padding: 0 0.5rem;\n  position: absolute;\n  right: 0;\n  opacity: 0.8;\n  transition: transform 0.2s ease;\n}\n\n.example-combobox-input[aria-expanded='true'] + .example-arrow-icon {\n  transform: rotate(180deg);\n}\n\n.example-combobox-input {\n  width: 100%;\n  border: none;\n  outline: none;\n  font-size: 1rem;\n  padding: 0.7rem 1rem 0.7rem 2.5rem;\n  background-color: var(--mat-sys-surface);\n}\n\n.example-popover {\n  margin: 0;\n  padding: 0;\n  border: 1px solid var(--mat-sys-outline);\n  border-radius: var(--mat-sys-corner-extra-small);\n  background-color: var(--mat-sys-surface);\n}\n\n.example-listbox {\n  display: flex;\n  flex-direction: column;\n  overflow: auto;\n  max-height: 10rem;\n  padding: 0.5rem;\n  gap: 4px;\n}\n\n.example-option {\n  cursor: pointer;\n  padding: 0.3rem 1rem;\n  border-radius: var(--mat-sys-corner-extra-small);\n  display: flex;\n  overflow: hidden;\n  flex-shrink: 0;\n  align-items: center;\n  justify-content: space-between;\n  gap: 1rem;\n}\n\n.example-option-text {\n  flex: 1;\n}\n\n.example-checkbox-blank-icon,\n.example-option[aria-selected='true'] .example-checkbox-filled-icon {\n  display: flex;\n  align-items: center;\n}\n\n.example-checkbox-filled-icon,\n.example-option[aria-selected='true'] .example-checkbox-blank-icon {\n  display: none;\n}\n\n.example-checkbox-blank-icon {\n  opacity: 0.6;\n}\n\n.example-selected-icon {\n  visibility: hidden;\n}\n\n.example-option[aria-selected='true'] .example-selected-icon {\n  visibility: visible;\n}\n\n.example-option[aria-selected='true'] {\n  color: var(--mat-sys-primary);\n  background-color: color-mix(in srgb, var(--mat-sys-primary) 10%, transparent);\n}\n\n.example-option:hover {\n  background-color: color-mix(in srgb, var(--mat-sys-on-surface) 10%, transparent);\n}\n\n.example-combobox-container:focus-within [data-active='true'] {\n  outline: 2px solid color-mix(in srgb, var(--mat-sys-primary) 80%, transparent);\n}\n\n.example-tree {\n  padding: 10px;\n  overflow-x: scroll;\n}\n\n.example-tree-item {\n  cursor: pointer;\n  list-style: none;\n  text-decoration: none;\n  display: flex;\n  align-items: center;\n  gap: 1rem;\n  padding: 0.3rem 1rem;\n}\n\nli[aria-expanded='false'] + ul[role='group'] {\n  display: none;\n}\n\nul[role='group'] {\n  padding-inline-start: 1rem;\n}\n\n.example-icon {\n  margin: 0;\n  width: 24px;\n}\n\n.example-parent-icon {\n  transition: transform 0.2s ease;\n}\n\n.example-tree-item[aria-expanded='true'] .example-parent-icon {\n  transform: rotate(90deg);\n}\n\n.example-selected-icon {\n  visibility: hidden;\n  margin-left: auto;\n}\n\n.example-tree-item[aria-current] .example-selected-icon,\n.example-tree-item[aria-selected='true'] .example-selected-icon {\n  visibility: visible;\n}\n\n.example-combobox-container:has([aria-disabled='true']) {\n  opacity: 0.4;\n  cursor: default;\n}\n"]
     }]
   }],
-  ctorParameters: () => []
+  ctorParameters: () => [],
+  propDecorators: {
+    popover: [{
+      type: i0.ViewChild,
+      args: ['popover', {
+        isSignal: true
+      }]
+    }],
+    tree: [{
+      type: i0.ViewChild,
+      args: [i0.forwardRef(() => Tree), {
+        isSignal: true
+      }]
+    }],
+    combobox: [{
+      type: i0.ViewChild,
+      args: [i0.forwardRef(() => Combobox), {
+        isSignal: true
+      }]
+    }]
+  }
 });
 
 export { ComboboxAutoSelectExample, ComboboxDialogExample, ComboboxDisabledExample, ComboboxHighlightExample, ComboboxManualExample, ComboboxReadonlyDisabledExample, ComboboxReadonlyExample, ComboboxReadonlyMultiselectExample, ComboboxTreeAutoSelectExample, ComboboxTreeHighlightExample, ComboboxTreeManualExample };

@@ -17,7 +17,7 @@ class CdkSelectionColumnExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: CdkSelectionColumnExample,
     deps: [],
@@ -25,7 +25,7 @@ class CdkSelectionColumnExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: CdkSelectionColumnExample,
     isStandalone: true,
     selector: "cdk-selection-column-example",
@@ -106,7 +106,7 @@ class CdkSelectionColumnExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: CdkSelectionColumnExample,
   decorators: [{
@@ -241,7 +241,7 @@ class CdkSelectionListExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: CdkSelectionListExample,
     deps: [],
@@ -249,7 +249,7 @@ class CdkSelectionListExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: CdkSelectionListExample,
     isStandalone: true,
     selector: "cdk-selection-list-example",
@@ -295,7 +295,7 @@ class CdkSelectionListExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: CdkSelectionListExample,
   decorators: [{

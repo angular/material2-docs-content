@@ -8,7 +8,7 @@ class CdkAccordionOverviewExample {
   expandedIndex = 0;
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: CdkAccordionOverviewExample,
     deps: [],
@@ -16,7 +16,7 @@ class CdkAccordionOverviewExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: CdkAccordionOverviewExample,
     isStandalone: true,
     selector: "cdk-accordion-overview-example",
@@ -44,7 +44,7 @@ class CdkAccordionOverviewExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: CdkAccordionOverviewExample,
   decorators: [{

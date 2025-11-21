@@ -5,7 +5,7 @@ import { CdkMenuTrigger, CdkMenu, CdkMenuItem, CdkMenuItemCheckbox, CdkMenuGroup
 class CdkMenuStandaloneMenuExample {
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: CdkMenuStandaloneMenuExample,
     deps: [],
@@ -13,7 +13,7 @@ class CdkMenuStandaloneMenuExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: CdkMenuStandaloneMenuExample,
     isStandalone: true,
     selector: "cdk-menu-standalone-menu-example",
@@ -45,7 +45,7 @@ class CdkMenuStandaloneMenuExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: CdkMenuStandaloneMenuExample,
   decorators: [{
@@ -71,7 +71,7 @@ class CdkMenuStandaloneStatefulMenuExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: CdkMenuStandaloneStatefulMenuExample,
     deps: [],
@@ -79,7 +79,7 @@ class CdkMenuStandaloneStatefulMenuExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: CdkMenuStandaloneStatefulMenuExample,
     isStandalone: true,
     selector: "cdk-menu-standalone-stateful-menu-example",
@@ -126,7 +126,7 @@ class CdkMenuStandaloneStatefulMenuExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: CdkMenuStandaloneStatefulMenuExample,
   decorators: [{
@@ -143,7 +143,7 @@ i0.ɵɵngDeclareClassMetadata({
 class CdkMenuMenubarExample {
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: CdkMenuMenubarExample,
     deps: [],
@@ -151,7 +151,7 @@ class CdkMenuMenubarExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: CdkMenuMenubarExample,
     isStandalone: true,
     selector: "cdk-menu-menubar-example",
@@ -203,7 +203,7 @@ class CdkMenuMenubarExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: CdkMenuMenubarExample,
   decorators: [{
@@ -220,7 +220,7 @@ i0.ɵɵngDeclareClassMetadata({
 class CdkMenuInlineExample {
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: CdkMenuInlineExample,
     deps: [],
@@ -228,7 +228,7 @@ class CdkMenuInlineExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: CdkMenuInlineExample,
     isStandalone: true,
     selector: "cdk-menu-inline-example",
@@ -253,7 +253,7 @@ class CdkMenuInlineExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: CdkMenuInlineExample,
   decorators: [{
@@ -270,7 +270,7 @@ i0.ɵɵngDeclareClassMetadata({
 class CdkMenuContextExample {
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: CdkMenuContextExample,
     deps: [],
@@ -278,7 +278,7 @@ class CdkMenuContextExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: CdkMenuContextExample,
     isStandalone: true,
     selector: "cdk-menu-context-example",
@@ -310,7 +310,7 @@ class CdkMenuContextExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: CdkMenuContextExample,
   decorators: [{
@@ -327,7 +327,7 @@ i0.ɵɵngDeclareClassMetadata({
 class CdkMenuNestedContextExample {
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: CdkMenuNestedContextExample,
     deps: [],
@@ -335,7 +335,7 @@ class CdkMenuNestedContextExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: CdkMenuNestedContextExample,
     isStandalone: true,
     selector: "cdk-menu-nested-context-example",
@@ -367,7 +367,7 @@ class CdkMenuNestedContextExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: CdkMenuNestedContextExample,
   decorators: [{

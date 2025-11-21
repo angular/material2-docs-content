@@ -23,7 +23,7 @@ class DialogContentExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: DialogContentExample,
     deps: [],
@@ -31,7 +31,7 @@ class DialogContentExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: DialogContentExample,
     isStandalone: true,
     selector: "dialog-content-example",
@@ -55,7 +55,7 @@ class DialogContentExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: DialogContentExample,
   decorators: [{
@@ -71,7 +71,7 @@ i0.ɵɵngDeclareClassMetadata({
 class DialogContentExampleDialog {
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: DialogContentExampleDialog,
     deps: [],
@@ -79,7 +79,7 @@ class DialogContentExampleDialog {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: DialogContentExampleDialog,
     isStandalone: true,
     selector: "dialog-content-example-dialog",
@@ -124,7 +124,7 @@ class DialogContentExampleDialog {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: DialogContentExampleDialog,
   decorators: [{
@@ -149,7 +149,7 @@ class DialogDataExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: DialogDataExample,
     deps: [],
@@ -157,7 +157,7 @@ class DialogDataExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: DialogDataExample,
     isStandalone: true,
     selector: "dialog-data-example",
@@ -177,7 +177,7 @@ class DialogDataExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: DialogDataExample,
   decorators: [{
@@ -193,7 +193,7 @@ class DialogDataExampleDialog {
   data = inject(MAT_DIALOG_DATA);
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: DialogDataExampleDialog,
     deps: [],
@@ -201,7 +201,7 @@ class DialogDataExampleDialog {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: DialogDataExampleDialog,
     isStandalone: true,
     selector: "dialog-data-example-dialog",
@@ -222,7 +222,7 @@ class DialogDataExampleDialog {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: DialogDataExampleDialog,
   decorators: [{
@@ -242,7 +242,7 @@ class DialogElementsExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: DialogElementsExample,
     deps: [],
@@ -250,7 +250,7 @@ class DialogElementsExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: DialogElementsExample,
     isStandalone: true,
     selector: "dialog-elements-example",
@@ -271,7 +271,7 @@ class DialogElementsExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: DialogElementsExample,
   decorators: [{
@@ -287,7 +287,7 @@ i0.ɵɵngDeclareClassMetadata({
 class DialogElementsExampleDialog {
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: DialogElementsExampleDialog,
     deps: [],
@@ -295,7 +295,7 @@ class DialogElementsExampleDialog {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: DialogElementsExampleDialog,
     isStandalone: true,
     selector: "dialog-elements-example-dialog",
@@ -337,7 +337,7 @@ class DialogElementsExampleDialog {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: DialogElementsExampleDialog,
   decorators: [{
@@ -375,7 +375,7 @@ class DialogOverviewExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: DialogOverviewExample,
     deps: [],
@@ -383,7 +383,7 @@ class DialogOverviewExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: DialogOverviewExample,
     isStandalone: true,
     selector: "dialog-overview-example",
@@ -456,7 +456,7 @@ class DialogOverviewExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: DialogOverviewExample,
   decorators: [{
@@ -467,7 +467,20 @@ i0.ɵɵngDeclareClassMetadata({
       changeDetection: ChangeDetectionStrategy.OnPush,
       template: "<ol>\n  <li>\n    <mat-form-field>\n      <mat-label>What's your name?</mat-label>\n      <input matInput [(ngModel)]=\"name\" />\n    </mat-form-field>\n  </li>\n  <li>\n    <button matButton=\"elevated\" (click)=\"openDialog()\">Pick one</button>\n  </li>\n  @if (animal()) {\n    <li>\n      You chose: <em>{{animal()}}</em>\n    </li>\n  }\n</ol>\n"
     }]
-  }]
+  }],
+  propDecorators: {
+    name: [{
+      type: i0.Input,
+      args: [{
+        isSignal: true,
+        alias: "name",
+        required: false
+      }]
+    }, {
+      type: i0.Output,
+      args: ["nameChange"]
+    }]
+  }
 });
 class DialogOverviewExampleDialog {
   dialogRef = inject(MatDialogRef);
@@ -480,7 +493,7 @@ class DialogOverviewExampleDialog {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: DialogOverviewExampleDialog,
     deps: [],
@@ -488,7 +501,7 @@ class DialogOverviewExampleDialog {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.1.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: DialogOverviewExampleDialog,
     isStandalone: true,
     selector: "dialog-overview-example-dialog",
@@ -581,7 +594,7 @@ class DialogOverviewExampleDialog {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: DialogOverviewExampleDialog,
   decorators: [{
@@ -591,7 +604,20 @@ i0.ɵɵngDeclareClassMetadata({
       imports: [MatFormFieldModule, MatInputModule, FormsModule, MatButtonModule, MatDialogTitle, MatDialogContent, MatDialogActions, MatDialogClose],
       template: "<h2 mat-dialog-title>Hi {{data.name}}</h2>\n<mat-dialog-content>\n  <p>What's your favorite animal?</p>\n  <mat-form-field>\n    <mat-label>Favorite Animal</mat-label>\n    <input matInput [(ngModel)]=\"animal\" />\n  </mat-form-field>\n</mat-dialog-content>\n<mat-dialog-actions>\n  <button matButton (click)=\"onNoClick()\">No Thanks</button>\n  <button matButton [mat-dialog-close]=\"animal()\" cdkFocusInitial>Ok</button>\n</mat-dialog-actions>\n"
     }]
-  }]
+  }],
+  propDecorators: {
+    animal: [{
+      type: i0.Input,
+      args: [{
+        isSignal: true,
+        alias: "animal",
+        required: false
+      }]
+    }, {
+      type: i0.Output,
+      args: ["animalChange"]
+    }]
+  }
 });
 
 class DialogFromMenuExample {
@@ -605,7 +631,7 @@ class DialogFromMenuExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: DialogFromMenuExample,
     deps: [],
@@ -613,7 +639,7 @@ class DialogFromMenuExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.2.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: DialogFromMenuExample,
     isStandalone: true,
     selector: "dialog-from-menu-example",
@@ -664,7 +690,7 @@ class DialogFromMenuExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: DialogFromMenuExample,
   decorators: [{
@@ -675,12 +701,20 @@ i0.ɵɵngDeclareClassMetadata({
       changeDetection: ChangeDetectionStrategy.OnPush,
       template: "<button matButton [matMenuTriggerFor]=\"menu\" #menuTrigger>Menu</button>\n<mat-menu #menu=\"matMenu\">\n  <button mat-menu-item (click)=\"openDialog()\">Open dialog</button>\n</mat-menu>\n"
     }]
-  }]
+  }],
+  propDecorators: {
+    menuTrigger: [{
+      type: i0.ViewChild,
+      args: [i0.forwardRef(() => MatMenuTrigger), {
+        isSignal: true
+      }]
+    }]
+  }
 });
 class DialogFromMenuExampleDialog {
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: DialogFromMenuExampleDialog,
     deps: [],
@@ -688,7 +722,7 @@ class DialogFromMenuExampleDialog {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: DialogFromMenuExampleDialog,
     isStandalone: true,
     selector: "dialog-from-menu-dialog",
@@ -724,7 +758,7 @@ class DialogFromMenuExampleDialog {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: DialogFromMenuExampleDialog,
   decorators: [{
@@ -746,7 +780,7 @@ class DialogHarnessExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: DialogHarnessExample,
     deps: [],
@@ -754,7 +788,7 @@ class DialogHarnessExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.2.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: DialogHarnessExample,
     isStandalone: true,
     selector: "dialog-harness-example",
@@ -772,7 +806,7 @@ class DialogHarnessExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: DialogHarnessExample,
   decorators: [{
@@ -782,7 +816,15 @@ i0.ɵɵngDeclareClassMetadata({
       changeDetection: ChangeDetectionStrategy.OnPush,
       template: "<ng-template>\n  Hello from the dialog!\n</ng-template>\n"
     }]
-  }]
+  }],
+  propDecorators: {
+    dialogTemplate: [{
+      type: i0.ViewChild,
+      args: [i0.forwardRef(() => TemplateRef), {
+        isSignal: true
+      }]
+    }]
+  }
 });
 
 class DialogAnimationsExample {
@@ -796,7 +838,7 @@ class DialogAnimationsExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: DialogAnimationsExample,
     deps: [],
@@ -804,7 +846,7 @@ class DialogAnimationsExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: DialogAnimationsExample,
     isStandalone: true,
     selector: "dialog-animations-example",
@@ -826,7 +868,7 @@ class DialogAnimationsExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: DialogAnimationsExample,
   decorators: [{
@@ -844,7 +886,7 @@ class DialogAnimationsExampleDialog {
   dialogRef = inject(MatDialogRef);
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: DialogAnimationsExampleDialog,
     deps: [],
@@ -852,7 +894,7 @@ class DialogAnimationsExampleDialog {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: DialogAnimationsExampleDialog,
     isStandalone: true,
     selector: "dialog-animations-example-dialog",
@@ -894,7 +936,7 @@ class DialogAnimationsExampleDialog {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: DialogAnimationsExampleDialog,
   decorators: [{

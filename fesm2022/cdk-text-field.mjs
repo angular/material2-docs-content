@@ -16,7 +16,7 @@ class TextFieldAutofillDirectiveExample {
   lastNameAutofilled;
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: TextFieldAutofillDirectiveExample,
     deps: [],
@@ -24,7 +24,7 @@ class TextFieldAutofillDirectiveExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: TextFieldAutofillDirectiveExample,
     isStandalone: true,
     selector: "text-field-autofill-directive-example",
@@ -80,7 +80,7 @@ class TextFieldAutofillDirectiveExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: TextFieldAutofillDirectiveExample,
   decorators: [{
@@ -110,7 +110,7 @@ class TextFieldAutofillMonitorExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: TextFieldAutofillMonitorExample,
     deps: [],
@@ -118,7 +118,7 @@ class TextFieldAutofillMonitorExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: TextFieldAutofillMonitorExample,
     isStandalone: true,
     selector: "text-field-autofill-monitor-example",
@@ -179,7 +179,7 @@ class TextFieldAutofillMonitorExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: TextFieldAutofillMonitorExample,
   decorators: [{
@@ -219,7 +219,7 @@ class TextFieldAutosizeTextareaExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: TextFieldAutosizeTextareaExample,
     deps: [],
@@ -227,7 +227,7 @@ class TextFieldAutosizeTextareaExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: TextFieldAutosizeTextareaExample,
     isStandalone: true,
     selector: "text-field-autosize-textarea-example",
@@ -293,7 +293,7 @@ class TextFieldAutosizeTextareaExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: TextFieldAutosizeTextareaExample,
   decorators: [{

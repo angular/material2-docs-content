@@ -11,7 +11,7 @@ import { MatTooltip } from '@angular/material/tooltip';
 class ButtonOverviewExample {
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: ButtonOverviewExample,
     deps: [],
@@ -19,7 +19,7 @@ class ButtonOverviewExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: ButtonOverviewExample,
     isStandalone: true,
     selector: "button-overview-example",
@@ -73,7 +73,7 @@ class ButtonOverviewExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: ButtonOverviewExample,
   decorators: [{
@@ -90,7 +90,7 @@ i0.ɵɵngDeclareClassMetadata({
 class ButtonDisabledInteractiveExample {
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: ButtonDisabledInteractiveExample,
     deps: [],
@@ -98,7 +98,7 @@ class ButtonDisabledInteractiveExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: ButtonDisabledInteractiveExample,
     isStandalone: true,
     selector: "button-disabled-interactive-example",
@@ -122,7 +122,7 @@ class ButtonDisabledInteractiveExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: ButtonDisabledInteractiveExample,
   decorators: [{
@@ -140,7 +140,7 @@ class ButtonHarnessExample {
   clicked = false;
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: ButtonHarnessExample,
     deps: [],
@@ -148,7 +148,7 @@ class ButtonHarnessExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: ButtonHarnessExample,
     isStandalone: true,
     selector: "button-harness-example",
@@ -168,7 +168,7 @@ class ButtonHarnessExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: ButtonHarnessExample,
   decorators: [{

@@ -17,7 +17,7 @@ class SlideToggleConfigurableExample {
   disabled = false;
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: SlideToggleConfigurableExample,
     deps: [],
@@ -25,7 +25,7 @@ class SlideToggleConfigurableExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: SlideToggleConfigurableExample,
     isStandalone: true,
     selector: "slide-toggle-configurable-example",
@@ -87,7 +87,7 @@ class SlideToggleConfigurableExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: SlideToggleConfigurableExample,
   decorators: [{
@@ -113,7 +113,7 @@ class SlideToggleFormsExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: SlideToggleFormsExample,
     deps: [],
@@ -121,7 +121,7 @@ class SlideToggleFormsExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: SlideToggleFormsExample,
     isStandalone: true,
     selector: "slide-toggle-forms-example",
@@ -202,7 +202,7 @@ class SlideToggleFormsExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: SlideToggleFormsExample,
   decorators: [{
@@ -219,7 +219,7 @@ i0.ɵɵngDeclareClassMetadata({
 class SlideToggleOverviewExample {
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: SlideToggleOverviewExample,
     deps: [],
@@ -227,7 +227,7 @@ class SlideToggleOverviewExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: SlideToggleOverviewExample,
     isStandalone: true,
     selector: "slide-toggle-overview-example",
@@ -248,7 +248,7 @@ class SlideToggleOverviewExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: SlideToggleOverviewExample,
   decorators: [{
@@ -266,7 +266,7 @@ class SlideToggleHarnessExample {
   ctrl = new FormControl(true);
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: SlideToggleHarnessExample,
     deps: [],
@@ -274,7 +274,7 @@ class SlideToggleHarnessExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: SlideToggleHarnessExample,
     isStandalone: true,
     selector: "slide-toggle-harness-example",
@@ -312,7 +312,7 @@ class SlideToggleHarnessExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: SlideToggleHarnessExample,
   decorators: [{

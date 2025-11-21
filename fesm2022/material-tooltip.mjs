@@ -22,7 +22,7 @@ class TooltipAutoHideExample {
   position = new FormControl(this.positionOptions[0]);
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: TooltipAutoHideExample,
     deps: [],
@@ -30,7 +30,7 @@ class TooltipAutoHideExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: TooltipAutoHideExample,
     isStandalone: true,
     selector: "tooltip-auto-hide-example",
@@ -111,7 +111,7 @@ class TooltipAutoHideExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: TooltipAutoHideExample,
   decorators: [{
@@ -128,7 +128,7 @@ i0.ɵɵngDeclareClassMetadata({
 class TooltipCustomClassExample {
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: TooltipCustomClassExample,
     deps: [],
@@ -136,7 +136,7 @@ class TooltipCustomClassExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: TooltipCustomClassExample,
     isStandalone: true,
     selector: "tooltip-custom-class-example",
@@ -167,7 +167,7 @@ class TooltipCustomClassExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: TooltipCustomClassExample,
   decorators: [{
@@ -187,7 +187,7 @@ class TooltipDelayExample {
   hideDelay = new FormControl(2000);
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: TooltipDelayExample,
     deps: [],
@@ -195,7 +195,7 @@ class TooltipDelayExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: TooltipDelayExample,
     isStandalone: true,
     selector: "tooltip-delay-example",
@@ -277,7 +277,7 @@ class TooltipDelayExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: TooltipDelayExample,
   decorators: [{
@@ -295,7 +295,7 @@ class TooltipDisabledExample {
   disabled = new FormControl(false);
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: TooltipDisabledExample,
     deps: [],
@@ -303,7 +303,7 @@ class TooltipDisabledExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: TooltipDisabledExample,
     isStandalone: true,
     selector: "tooltip-disabled-example",
@@ -360,7 +360,7 @@ class TooltipDisabledExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: TooltipDisabledExample,
   decorators: [{
@@ -377,7 +377,7 @@ i0.ɵɵngDeclareClassMetadata({
 class TooltipManualExample {
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: TooltipManualExample,
     deps: [],
@@ -385,7 +385,7 @@ class TooltipManualExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: TooltipManualExample,
     isStandalone: true,
     selector: "tooltip-manual-example",
@@ -415,7 +415,7 @@ class TooltipManualExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: TooltipManualExample,
   decorators: [{
@@ -433,7 +433,7 @@ class TooltipMessageExample {
   message = new FormControl('Info about the action');
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: TooltipMessageExample,
     deps: [],
@@ -441,7 +441,7 @@ class TooltipMessageExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: TooltipMessageExample,
     isStandalone: true,
     selector: "tooltip-message-example",
@@ -514,7 +514,7 @@ class TooltipMessageExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: TooltipMessageExample,
   decorators: [{
@@ -536,7 +536,7 @@ const myCustomTooltipDefaults = {
 class TooltipModifiedDefaultsExample {
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: TooltipModifiedDefaultsExample,
     deps: [],
@@ -544,7 +544,7 @@ class TooltipModifiedDefaultsExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: TooltipModifiedDefaultsExample,
     isStandalone: true,
     selector: "tooltip-modified-defaults-example",
@@ -577,7 +577,7 @@ class TooltipModifiedDefaultsExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: TooltipModifiedDefaultsExample,
   decorators: [{
@@ -597,7 +597,7 @@ i0.ɵɵngDeclareClassMetadata({
 class TooltipOverviewExample {
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: TooltipOverviewExample,
     deps: [],
@@ -605,7 +605,7 @@ class TooltipOverviewExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: TooltipOverviewExample,
     isStandalone: true,
     selector: "tooltip-overview-example",
@@ -634,7 +634,7 @@ class TooltipOverviewExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: TooltipOverviewExample,
   decorators: [{
@@ -652,7 +652,7 @@ class TooltipPositionExample {
   position = new FormControl(this.positionOptions[0]);
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: TooltipPositionExample,
     deps: [],
@@ -660,7 +660,7 @@ class TooltipPositionExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: TooltipPositionExample,
     isStandalone: true,
     selector: "tooltip-position-example",
@@ -737,7 +737,7 @@ class TooltipPositionExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: TooltipPositionExample,
   decorators: [{
@@ -755,7 +755,7 @@ class TooltipPositionAtOriginExample {
   enabled = new FormControl(false);
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: TooltipPositionAtOriginExample,
     deps: [],
@@ -763,7 +763,7 @@ class TooltipPositionAtOriginExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: TooltipPositionAtOriginExample,
     isStandalone: true,
     selector: "tooltip-position-at-origin-example",
@@ -820,7 +820,7 @@ class TooltipPositionAtOriginExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: TooltipPositionAtOriginExample,
   decorators: [{
@@ -838,7 +838,7 @@ class TooltipHarnessExample {
   message = 'Tooltip message';
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: TooltipHarnessExample,
     deps: [],
@@ -846,7 +846,7 @@ class TooltipHarnessExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: TooltipHarnessExample,
     isStandalone: true,
     selector: "tooltip-harness-example",
@@ -866,7 +866,7 @@ class TooltipHarnessExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: TooltipHarnessExample,
   decorators: [{

@@ -14,7 +14,7 @@ import { CdkScrollable } from '@angular/cdk/scrolling';
 class CdkDragDropAxisLockExample {
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: CdkDragDropAxisLockExample,
     deps: [],
@@ -22,7 +22,7 @@ class CdkDragDropAxisLockExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: CdkDragDropAxisLockExample,
     isStandalone: true,
     selector: "cdk-drag-drop-axis-lock-example",
@@ -41,7 +41,7 @@ class CdkDragDropAxisLockExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: CdkDragDropAxisLockExample,
   decorators: [{
@@ -58,7 +58,7 @@ i0.ɵɵngDeclareClassMetadata({
 class CdkDragDropBoundaryExample {
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: CdkDragDropBoundaryExample,
     deps: [],
@@ -66,7 +66,7 @@ class CdkDragDropBoundaryExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: CdkDragDropBoundaryExample,
     isStandalone: true,
     selector: "cdk-drag-drop-boundary-example",
@@ -85,7 +85,7 @@ class CdkDragDropBoundaryExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: CdkDragDropBoundaryExample,
   decorators: [{
@@ -111,7 +111,7 @@ class CdkDragDropConnectedSortingGroupExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: CdkDragDropConnectedSortingGroupExample,
     deps: [],
@@ -119,7 +119,7 @@ class CdkDragDropConnectedSortingGroupExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: CdkDragDropConnectedSortingGroupExample,
     isStandalone: true,
     selector: "cdk-drag-drop-connected-sorting-group-example",
@@ -151,7 +151,7 @@ class CdkDragDropConnectedSortingGroupExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: CdkDragDropConnectedSortingGroupExample,
   decorators: [{
@@ -177,7 +177,7 @@ class CdkDragDropConnectedSortingExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: CdkDragDropConnectedSortingExample,
     deps: [],
@@ -185,7 +185,7 @@ class CdkDragDropConnectedSortingExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: CdkDragDropConnectedSortingExample,
     isStandalone: true,
     selector: "cdk-drag-drop-connected-sorting-example",
@@ -211,7 +211,7 @@ class CdkDragDropConnectedSortingExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: CdkDragDropConnectedSortingExample,
   decorators: [{
@@ -232,7 +232,7 @@ class CdkDragDropCustomPlaceholderExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: CdkDragDropCustomPlaceholderExample,
     deps: [],
@@ -240,7 +240,7 @@ class CdkDragDropCustomPlaceholderExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: CdkDragDropCustomPlaceholderExample,
     isStandalone: true,
     selector: "cdk-drag-drop-custom-placeholder-example",
@@ -271,7 +271,7 @@ class CdkDragDropCustomPlaceholderExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: CdkDragDropCustomPlaceholderExample,
   decorators: [{
@@ -319,7 +319,7 @@ class CdkDragDropCustomPreviewExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: CdkDragDropCustomPreviewExample,
     deps: [],
@@ -327,7 +327,7 @@ class CdkDragDropCustomPreviewExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: CdkDragDropCustomPreviewExample,
     isStandalone: true,
     selector: "cdk-drag-drop-custom-preview-example",
@@ -358,7 +358,7 @@ class CdkDragDropCustomPreviewExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: CdkDragDropCustomPreviewExample,
   decorators: [{
@@ -375,7 +375,7 @@ i0.ɵɵngDeclareClassMetadata({
 class CdkDragDropDelayExample {
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: CdkDragDropDelayExample,
     deps: [],
@@ -383,7 +383,7 @@ class CdkDragDropDelayExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: CdkDragDropDelayExample,
     isStandalone: true,
     selector: "cdk-drag-drop-delay-example",
@@ -402,7 +402,7 @@ class CdkDragDropDelayExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: CdkDragDropDelayExample,
   decorators: [{
@@ -428,7 +428,7 @@ class CdkDragDropDisabledSortingExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: CdkDragDropDisabledSortingExample,
     deps: [],
@@ -436,7 +436,7 @@ class CdkDragDropDisabledSortingExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: CdkDragDropDisabledSortingExample,
     isStandalone: true,
     selector: "cdk-drag-drop-disabled-sorting-example",
@@ -468,7 +468,7 @@ class CdkDragDropDisabledSortingExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: CdkDragDropDisabledSortingExample,
   decorators: [{
@@ -498,7 +498,7 @@ class CdkDragDropDisabledExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: CdkDragDropDisabledExample,
     deps: [],
@@ -506,7 +506,7 @@ class CdkDragDropDisabledExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: CdkDragDropDisabledExample,
     isStandalone: true,
     selector: "cdk-drag-drop-disabled-example",
@@ -532,7 +532,7 @@ class CdkDragDropDisabledExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: CdkDragDropDisabledExample,
   decorators: [{
@@ -564,7 +564,7 @@ class CdkDragDropEnterPredicateExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: CdkDragDropEnterPredicateExample,
     deps: [],
@@ -572,7 +572,7 @@ class CdkDragDropEnterPredicateExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: CdkDragDropEnterPredicateExample,
     isStandalone: true,
     selector: "cdk-drag-drop-enter-predicate-example",
@@ -598,7 +598,7 @@ class CdkDragDropEnterPredicateExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: CdkDragDropEnterPredicateExample,
   decorators: [{
@@ -625,7 +625,7 @@ class CdkDragDropFreeDragPositionExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: CdkDragDropFreeDragPositionExample,
     deps: [],
@@ -633,7 +633,7 @@ class CdkDragDropFreeDragPositionExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: CdkDragDropFreeDragPositionExample,
     isStandalone: true,
     selector: "cdk-drag-drop-free-drag-position-example",
@@ -652,7 +652,7 @@ class CdkDragDropFreeDragPositionExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: CdkDragDropFreeDragPositionExample,
   decorators: [{
@@ -669,7 +669,7 @@ i0.ɵɵngDeclareClassMetadata({
 class CdkDragDropHandleExample {
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: CdkDragDropHandleExample,
     deps: [],
@@ -677,7 +677,7 @@ class CdkDragDropHandleExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: CdkDragDropHandleExample,
     isStandalone: true,
     selector: "cdk-drag-drop-handle-example",
@@ -701,7 +701,7 @@ class CdkDragDropHandleExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: CdkDragDropHandleExample,
   decorators: [{
@@ -722,7 +722,7 @@ class CdkDragDropHorizontalSortingExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: CdkDragDropHorizontalSortingExample,
     deps: [],
@@ -730,7 +730,7 @@ class CdkDragDropHorizontalSortingExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: CdkDragDropHorizontalSortingExample,
     isStandalone: true,
     selector: "cdk-drag-drop-horizontal-sorting-example",
@@ -756,7 +756,7 @@ class CdkDragDropHorizontalSortingExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: CdkDragDropHorizontalSortingExample,
   decorators: [{
@@ -773,7 +773,7 @@ i0.ɵɵngDeclareClassMetadata({
 class CdkDragDropOverviewExample {
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: CdkDragDropOverviewExample,
     deps: [],
@@ -781,7 +781,7 @@ class CdkDragDropOverviewExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: CdkDragDropOverviewExample,
     isStandalone: true,
     selector: "cdk-drag-drop-overview-example",
@@ -800,7 +800,7 @@ class CdkDragDropOverviewExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: CdkDragDropOverviewExample,
   decorators: [{
@@ -836,7 +836,7 @@ class CdkDragDropRootElementExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: CdkDragDropRootElementExample,
     deps: [],
@@ -844,7 +844,7 @@ class CdkDragDropRootElementExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: CdkDragDropRootElementExample,
     isStandalone: true,
     selector: "cdk-drag-drop-root-element-example",
@@ -869,7 +869,7 @@ class CdkDragDropRootElementExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: CdkDragDropRootElementExample,
   decorators: [{
@@ -896,7 +896,7 @@ class CdkDragDropSortingExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: CdkDragDropSortingExample,
     deps: [],
@@ -904,7 +904,7 @@ class CdkDragDropSortingExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: CdkDragDropSortingExample,
     isStandalone: true,
     selector: "cdk-drag-drop-sorting-example",
@@ -930,7 +930,7 @@ class CdkDragDropSortingExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: CdkDragDropSortingExample,
   decorators: [{
@@ -954,7 +954,7 @@ class CdkDragDropSortPredicateExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: CdkDragDropSortPredicateExample,
     deps: [],
@@ -962,7 +962,7 @@ class CdkDragDropSortPredicateExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: CdkDragDropSortPredicateExample,
     isStandalone: true,
     selector: "cdk-drag-drop-sort-predicate-example",
@@ -988,7 +988,7 @@ class CdkDragDropSortPredicateExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: CdkDragDropSortPredicateExample,
   decorators: [{
@@ -1074,7 +1074,7 @@ class CdkDragDropTableExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: CdkDragDropTableExample,
     deps: [],
@@ -1082,7 +1082,7 @@ class CdkDragDropTableExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: CdkDragDropTableExample,
     isStandalone: true,
     selector: "cdk-drag-drop-table-example",
@@ -1173,7 +1173,7 @@ class CdkDragDropTableExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: CdkDragDropTableExample,
   decorators: [{
@@ -1202,7 +1202,7 @@ class CdkDragDropMixedSortingExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: CdkDragDropMixedSortingExample,
     deps: [],
@@ -1210,7 +1210,7 @@ class CdkDragDropMixedSortingExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: CdkDragDropMixedSortingExample,
     isStandalone: true,
     selector: "cdk-drag-drop-mixed-sorting-example",
@@ -1236,7 +1236,7 @@ class CdkDragDropMixedSortingExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: CdkDragDropMixedSortingExample,
   decorators: [{
@@ -1260,7 +1260,7 @@ class CdkDragDropTabsExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: CdkDragDropTabsExample,
     deps: [],
@@ -1268,7 +1268,7 @@ class CdkDragDropTabsExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: CdkDragDropTabsExample,
     isStandalone: true,
     selector: "cdk-drag-drop-tabs-example",
@@ -1315,7 +1315,7 @@ class CdkDragDropTabsExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: CdkDragDropTabsExample,
   decorators: [{
@@ -1342,7 +1342,7 @@ class CdkDragDropCopyListExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: CdkDragDropCopyListExample,
     deps: [],
@@ -1350,7 +1350,7 @@ class CdkDragDropCopyListExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: CdkDragDropCopyListExample,
     isStandalone: true,
     selector: "cdk-drag-drop-copy-list-example",
@@ -1376,7 +1376,7 @@ class CdkDragDropCopyListExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: CdkDragDropCopyListExample,
   decorators: [{
@@ -1397,7 +1397,7 @@ class CdkDragDropScrollableExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: CdkDragDropScrollableExample,
     deps: [],
@@ -1405,7 +1405,7 @@ class CdkDragDropScrollableExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: CdkDragDropScrollableExample,
     isStandalone: true,
     selector: "cdk-drag-drop-scrollable-example",
@@ -1435,7 +1435,7 @@ class CdkDragDropScrollableExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: CdkDragDropScrollableExample,
   decorators: [{

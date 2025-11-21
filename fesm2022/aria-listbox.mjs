@@ -36,7 +36,7 @@ class ListboxConfigurableExample {
   fruits = ['Apple', 'Apricot', 'Banana', 'Blackberry', 'Blueberry', 'Cantaloupe', 'Cherry', 'Clementine', 'Cranberry', 'Dates', 'Figs', 'Grapes', 'Grapefruit', 'Guava', 'Kiwi', 'Kumquat', 'Lemon', 'Lime', 'Mandarin', 'Mango', 'Nectarine', 'Orange', 'Papaya', 'Passion', 'Peach', 'Pear', 'Pineapple', 'Plum', 'Pomegranate', 'Raspberries', 'Strawberry', 'Tangerine', 'Watermelon'];
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: ListboxConfigurableExample,
     deps: [],
@@ -44,7 +44,7 @@ class ListboxConfigurableExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: ListboxConfigurableExample,
     isStandalone: true,
     selector: "listbox-configurable-example",
@@ -128,7 +128,7 @@ class ListboxConfigurableExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: ListboxConfigurableExample,
   decorators: [{
@@ -146,7 +146,7 @@ class ListboxSingleSelectExample {
   fruits = ['Apple', 'Apricot', 'Banana', 'Blackberry', 'Blueberry', 'Cantaloupe', 'Cherry', 'Clementine', 'Cranberry', 'Dates', 'Figs', 'Grapes', 'Grapefruit', 'Guava', 'Kiwi', 'Kumquat', 'Lemon', 'Lime', 'Mandarin', 'Mango', 'Nectarine', 'Orange', 'Papaya', 'Passion', 'Peach', 'Pear', 'Pineapple', 'Plum', 'Pomegranate', 'Raspberries', 'Strawberry', 'Tangerine', 'Watermelon'];
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: ListboxSingleSelectExample,
     deps: [],
@@ -154,7 +154,7 @@ class ListboxSingleSelectExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: ListboxSingleSelectExample,
     isStandalone: true,
     selector: "listbox-single-select-example",
@@ -184,7 +184,7 @@ class ListboxSingleSelectExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: ListboxSingleSelectExample,
   decorators: [{
@@ -202,7 +202,7 @@ class ListboxMultiSelectExample {
   fruits = ['Apple', 'Apricot', 'Banana', 'Blackberry', 'Blueberry', 'Cantaloupe', 'Cherry', 'Clementine', 'Cranberry', 'Dates', 'Figs', 'Grapes', 'Grapefruit', 'Guava', 'Kiwi', 'Kumquat', 'Lemon', 'Lime', 'Mandarin', 'Mango', 'Nectarine', 'Orange', 'Papaya', 'Passion', 'Peach', 'Pear', 'Pineapple', 'Plum', 'Pomegranate', 'Raspberries', 'Strawberry', 'Tangerine', 'Watermelon'];
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: ListboxMultiSelectExample,
     deps: [],
@@ -210,7 +210,7 @@ class ListboxMultiSelectExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: ListboxMultiSelectExample,
     isStandalone: true,
     selector: "listbox-multi-select-example",
@@ -240,7 +240,7 @@ class ListboxMultiSelectExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: ListboxMultiSelectExample,
   decorators: [{
@@ -258,7 +258,7 @@ class ListboxSingleSelectFollowFocusExample {
   fruits = ['Apple', 'Apricot', 'Banana', 'Blackberry', 'Blueberry', 'Cantaloupe', 'Cherry', 'Clementine', 'Cranberry', 'Dates', 'Figs', 'Grapes', 'Grapefruit', 'Guava', 'Kiwi', 'Kumquat', 'Lemon', 'Lime', 'Mandarin', 'Mango', 'Nectarine', 'Orange', 'Papaya', 'Passion', 'Peach', 'Pear', 'Pineapple', 'Plum', 'Pomegranate', 'Raspberries', 'Strawberry', 'Tangerine', 'Watermelon'];
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: ListboxSingleSelectFollowFocusExample,
     deps: [],
@@ -266,7 +266,7 @@ class ListboxSingleSelectFollowFocusExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: ListboxSingleSelectFollowFocusExample,
     isStandalone: true,
     selector: "listbox-single-select-follow-focus-example",
@@ -296,7 +296,7 @@ class ListboxSingleSelectFollowFocusExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: ListboxSingleSelectFollowFocusExample,
   decorators: [{
@@ -314,7 +314,7 @@ class ListboxMultiSelectFollowFocusExample {
   fruits = ['Apple', 'Apricot', 'Banana', 'Blackberry', 'Blueberry', 'Cantaloupe', 'Cherry', 'Clementine', 'Cranberry', 'Dates', 'Figs', 'Grapes', 'Grapefruit', 'Guava', 'Kiwi', 'Kumquat', 'Lemon', 'Lime', 'Mandarin', 'Mango', 'Nectarine', 'Orange', 'Papaya', 'Passion', 'Peach', 'Pear', 'Pineapple', 'Plum', 'Pomegranate', 'Raspberries', 'Strawberry', 'Tangerine', 'Watermelon'];
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: ListboxMultiSelectFollowFocusExample,
     deps: [],
@@ -322,7 +322,7 @@ class ListboxMultiSelectFollowFocusExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: ListboxMultiSelectFollowFocusExample,
     isStandalone: true,
     selector: "listbox-multi-select-follow-focus-example",
@@ -352,7 +352,7 @@ class ListboxMultiSelectFollowFocusExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: ListboxMultiSelectFollowFocusExample,
   decorators: [{
@@ -370,7 +370,7 @@ class ListboxHorizontalExample {
   fruits = ['Apple', 'Apricot', 'Banana', 'Blackberry', 'Blueberry', 'Cantaloupe', 'Cherry', 'Clementine', 'Cranberry', 'Dates', 'Figs', 'Grapes', 'Grapefruit', 'Guava', 'Kiwi', 'Kumquat', 'Lemon', 'Lime', 'Mandarin', 'Mango', 'Nectarine', 'Orange', 'Papaya', 'Passion', 'Peach', 'Pear', 'Pineapple', 'Plum', 'Pomegranate', 'Raspberries', 'Strawberry', 'Tangerine', 'Watermelon'];
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: ListboxHorizontalExample,
     deps: [],
@@ -378,7 +378,7 @@ class ListboxHorizontalExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: ListboxHorizontalExample,
     isStandalone: true,
     selector: "listbox-horizontal-example",
@@ -408,7 +408,7 @@ class ListboxHorizontalExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: ListboxHorizontalExample,
   decorators: [{
@@ -426,7 +426,7 @@ class ListboxRtlHorizontalExample {
   fruits = ['Apple', 'Apricot', 'Banana', 'Blackberry', 'Blueberry', 'Cantaloupe', 'Cherry', 'Clementine', 'Cranberry', 'Dates', 'Figs', 'Grapes', 'Grapefruit', 'Guava', 'Kiwi', 'Kumquat', 'Lemon', 'Lime', 'Mandarin', 'Mango', 'Nectarine', 'Orange', 'Papaya', 'Passion', 'Peach', 'Pear', 'Pineapple', 'Plum', 'Pomegranate', 'Raspberries', 'Strawberry', 'Tangerine', 'Watermelon'];
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: ListboxRtlHorizontalExample,
     deps: [],
@@ -434,7 +434,7 @@ class ListboxRtlHorizontalExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: ListboxRtlHorizontalExample,
     isStandalone: true,
     selector: "listbox-rtl-horizontal-example",
@@ -471,7 +471,7 @@ class ListboxRtlHorizontalExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: ListboxRtlHorizontalExample,
   decorators: [{
@@ -489,7 +489,7 @@ class ListboxActiveDescendantExample {
   fruits = ['Apple', 'Apricot', 'Banana', 'Blackberry', 'Blueberry', 'Cantaloupe', 'Cherry', 'Clementine', 'Cranberry', 'Dates', 'Figs', 'Grapes', 'Grapefruit', 'Guava', 'Kiwi', 'Kumquat', 'Lemon', 'Lime', 'Mandarin', 'Mango', 'Nectarine', 'Orange', 'Papaya', 'Passion', 'Peach', 'Pear', 'Pineapple', 'Plum', 'Pomegranate', 'Raspberries', 'Strawberry', 'Tangerine', 'Watermelon'];
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: ListboxActiveDescendantExample,
     deps: [],
@@ -497,7 +497,7 @@ class ListboxActiveDescendantExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: ListboxActiveDescendantExample,
     isStandalone: true,
     selector: "listbox-active-descendant-example",
@@ -527,7 +527,7 @@ class ListboxActiveDescendantExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: ListboxActiveDescendantExample,
   decorators: [{
@@ -545,7 +545,7 @@ class ListboxDisabledFocusableExample {
   fruits = ['Apple', 'Apricot', 'Banana', 'Blackberry', 'Blueberry', 'Cantaloupe', 'Cherry', 'Clementine', 'Cranberry', 'Dates', 'Figs', 'Grapes', 'Grapefruit', 'Guava', 'Kiwi', 'Kumquat', 'Lemon', 'Lime', 'Mandarin', 'Mango', 'Nectarine', 'Orange', 'Papaya', 'Passion', 'Peach', 'Pear', 'Pineapple', 'Plum', 'Pomegranate', 'Raspberries', 'Strawberry', 'Tangerine', 'Watermelon'];
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: ListboxDisabledFocusableExample,
     deps: [],
@@ -553,7 +553,7 @@ class ListboxDisabledFocusableExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: ListboxDisabledFocusableExample,
     isStandalone: true,
     selector: "listbox-disabled-focusable-example",
@@ -583,7 +583,7 @@ class ListboxDisabledFocusableExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: ListboxDisabledFocusableExample,
   decorators: [{
@@ -601,7 +601,7 @@ class ListboxDisabledSkippedExample {
   fruits = ['Apple', 'Apricot', 'Banana', 'Blackberry', 'Blueberry', 'Cantaloupe', 'Cherry', 'Clementine', 'Cranberry', 'Dates', 'Figs', 'Grapes', 'Grapefruit', 'Guava', 'Kiwi', 'Kumquat', 'Lemon', 'Lime', 'Mandarin', 'Mango', 'Nectarine', 'Orange', 'Papaya', 'Passion', 'Peach', 'Pear', 'Pineapple', 'Plum', 'Pomegranate', 'Raspberries', 'Strawberry', 'Tangerine', 'Watermelon'];
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: ListboxDisabledSkippedExample,
     deps: [],
@@ -609,7 +609,7 @@ class ListboxDisabledSkippedExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: ListboxDisabledSkippedExample,
     isStandalone: true,
     selector: "listbox-disabled-skipped-example",
@@ -639,7 +639,7 @@ class ListboxDisabledSkippedExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: ListboxDisabledSkippedExample,
   decorators: [{
@@ -657,7 +657,7 @@ class ListboxReadonlyExample {
   fruits = ['Apple', 'Apricot', 'Banana', 'Blackberry', 'Blueberry', 'Cantaloupe', 'Cherry', 'Clementine', 'Cranberry', 'Dates', 'Figs', 'Grapes', 'Grapefruit', 'Guava', 'Kiwi', 'Kumquat', 'Lemon', 'Lime', 'Mandarin', 'Mango', 'Nectarine', 'Orange', 'Papaya', 'Passion', 'Peach', 'Pear', 'Pineapple', 'Plum', 'Pomegranate', 'Raspberries', 'Strawberry', 'Tangerine', 'Watermelon'];
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: ListboxReadonlyExample,
     deps: [],
@@ -665,7 +665,7 @@ class ListboxReadonlyExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: ListboxReadonlyExample,
     isStandalone: true,
     selector: "listbox-readonly-example",
@@ -695,7 +695,7 @@ class ListboxReadonlyExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: ListboxReadonlyExample,
   decorators: [{
@@ -713,7 +713,7 @@ class ListboxDisabledExample {
   fruits = ['Apple', 'Apricot', 'Banana', 'Blackberry', 'Blueberry', 'Cantaloupe', 'Cherry', 'Clementine', 'Cranberry', 'Dates', 'Figs', 'Grapes', 'Grapefruit', 'Guava', 'Kiwi', 'Kumquat', 'Lemon', 'Lime', 'Mandarin', 'Mango', 'Nectarine', 'Orange', 'Papaya', 'Passion', 'Peach', 'Pear', 'Pineapple', 'Plum', 'Pomegranate', 'Raspberries', 'Strawberry', 'Tangerine', 'Watermelon'];
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     ngImport: i0,
     type: ListboxDisabledExample,
     deps: [],
@@ -721,7 +721,7 @@ class ListboxDisabledExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "20.2.0-next.2",
+    version: "21.0.0",
     type: ListboxDisabledExample,
     isStandalone: true,
     selector: "listbox-disabled-example",
@@ -751,7 +751,7 @@ class ListboxDisabledExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "20.2.0-next.2",
+  version: "21.0.0",
   ngImport: i0,
   type: ListboxDisabledExample,
   decorators: [{
