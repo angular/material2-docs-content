@@ -1,6 +1,6 @@
 {
   "name": "@angular/components-examples",
-  "version": "21.1.0-next.0+sha-c4d5ab8",
+  "version": "21.1.0-next.0+sha-2c0ba8d",
   "description": "Angular Components Examples",
   "private": true,
   "repository": {
@@ -23,30 +23,6 @@
     ".": {
       "types": "./types/components-examples.d.ts",
       "default": "./fesm2022/components-examples.mjs"
-    },
-    "./aria/accordion": {
-      "types": "./types/aria-accordion.d.ts",
-      "default": "./fesm2022/aria-accordion.mjs"
-    },
-    "./aria/combobox": {
-      "types": "./types/aria-combobox.d.ts",
-      "default": "./fesm2022/aria-combobox.mjs"
-    },
-    "./aria/listbox": {
-      "types": "./types/aria-listbox.d.ts",
-      "default": "./fesm2022/aria-listbox.mjs"
-    },
-    "./aria/tabs": {
-      "types": "./types/aria-tabs.d.ts",
-      "default": "./fesm2022/aria-tabs.mjs"
-    },
-    "./aria/toolbar": {
-      "types": "./types/aria-toolbar.d.ts",
-      "default": "./fesm2022/aria-toolbar.mjs"
-    },
-    "./aria/tree": {
-      "types": "./types/aria-tree.d.ts",
-      "default": "./fesm2022/aria-tree.mjs"
     },
     "./cdk-experimental/popover-edit": {
       "types": "./types/cdk-experimental-popover-edit.d.ts",
@@ -283,15 +259,15 @@
   },
   "homepage": "https://github.com/angular/components#readme",
   "peerDependencies": {
-    "@angular/aria": "21.1.0-next.0+sha-c4d5ab8",
-    "@angular/cdk": "21.1.0-next.0+sha-c4d5ab8",
-    "@angular/cdk-experimental": "21.1.0-next.0+sha-c4d5ab8",
+    "@angular/aria": "21.1.0-next.0+sha-2c0ba8d",
+    "@angular/cdk": "21.1.0-next.0+sha-2c0ba8d",
+    "@angular/cdk-experimental": "21.1.0-next.0+sha-2c0ba8d",
     "@angular/core": "^21.0.0-0 || ^21.1.0-0 || ^21.2.0-0 || ^21.3.0-0 || ^22.0.0-0",
     "@angular/common": "^21.0.0-0 || ^21.1.0-0 || ^21.2.0-0 || ^21.3.0-0 || ^22.0.0-0",
-    "@angular/material": "21.1.0-next.0+sha-c4d5ab8",
-    "@angular/material-experimental": "21.1.0-next.0+sha-c4d5ab8",
-    "@angular/material-luxon-adapter": "21.1.0-next.0+sha-c4d5ab8",
-    "@angular/material-date-fns-adapter": "21.1.0-next.0+sha-c4d5ab8"
+    "@angular/material": "21.1.0-next.0+sha-2c0ba8d",
+    "@angular/material-experimental": "21.1.0-next.0+sha-2c0ba8d",
+    "@angular/material-luxon-adapter": "21.1.0-next.0+sha-2c0ba8d",
+    "@angular/material-date-fns-adapter": "21.1.0-next.0+sha-2c0ba8d"
   },
   "devDependencies": {
     "@angular/aria": "workspace:*",
