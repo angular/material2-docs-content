@@ -5,7 +5,7 @@ import { MatListModule } from '@angular/material/list';
 import { MatDividerModule } from '@angular/material/divider';
 import * as i3 from '@angular/material/icon';
 import { MatIconModule } from '@angular/material/icon';
-import { DatePipe } from '@angular/common';
+import { DatePipe, TitleCasePipe } from '@angular/common';
 import * as i3$1 from '@angular/forms';
 import { FormControl, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 
@@ -505,5 +505,197 @@ i0.ɵɵngDeclareClassMetadata({
   }]
 });
 
-export { ListHarnessExample, ListOverviewExample, ListSectionsExample, ListSelectionExample, ListSingleSelectionExample, ListSingleSelectionReactiveFormExample, ListVariantsExample };
+class ListActionExample {
+  action(task) {
+    window.alert(task);
+  }
+  static ɵfac = i0.ɵɵngDeclareFactory({
+    minVersion: "12.0.0",
+    version: "21.0.0",
+    ngImport: i0,
+    type: ListActionExample,
+    deps: [],
+    target: i0.ɵɵFactoryTarget.Component
+  });
+  static ɵcmp = i0.ɵɵngDeclareComponent({
+    minVersion: "14.0.0",
+    version: "21.0.0",
+    type: ListActionExample,
+    isStandalone: true,
+    selector: "list-action-example",
+    ngImport: i0,
+    template: "<mat-action-list>\n  <button mat-list-item (click)=\"action('save')\">Save</button>\n  <button mat-list-item (click)=\"action('undo')\">Undo</button>\n</mat-action-list>\n",
+    dependencies: [{
+      kind: "ngmodule",
+      type: MatListModule
+    }, {
+      kind: "component",
+      type: i1.MatActionList,
+      selector: "mat-action-list",
+      exportAs: ["matActionList"]
+    }, {
+      kind: "component",
+      type: i1.MatListItem,
+      selector: "mat-list-item, a[mat-list-item], button[mat-list-item]",
+      inputs: ["activated"],
+      exportAs: ["matListItem"]
+    }]
+  });
+}
+i0.ɵɵngDeclareClassMetadata({
+  minVersion: "12.0.0",
+  version: "21.0.0",
+  ngImport: i0,
+  type: ListActionExample,
+  decorators: [{
+    type: Component,
+    args: [{
+      selector: 'list-action-example',
+      imports: [MatListModule],
+      template: "<mat-action-list>\n  <button mat-list-item (click)=\"action('save')\">Save</button>\n  <button mat-list-item (click)=\"action('undo')\">Undo</button>\n</mat-action-list>\n"
+    }]
+  }]
+});
+
+class ListAvatarExample {
+  static ɵfac = i0.ɵɵngDeclareFactory({
+    minVersion: "12.0.0",
+    version: "21.0.0",
+    ngImport: i0,
+    type: ListAvatarExample,
+    deps: [],
+    target: i0.ɵɵFactoryTarget.Component
+  });
+  static ɵcmp = i0.ɵɵngDeclareComponent({
+    minVersion: "14.0.0",
+    version: "21.0.0",
+    type: ListAvatarExample,
+    isStandalone: true,
+    selector: "list-avatar-example",
+    ngImport: i0,
+    template: "<mat-selection-list>\n  <mat-list-option togglePosition=\"before\">\n    <img matListItemAvatar src=\"https://material.angular.dev/assets/img/examples/shiba1.jpg\" />\n    <span matListItemTitle>Shiba Inu</span>\n  </mat-list-option>\n\n  <mat-list-option togglePosition=\"after\">\n    <img matListItemAvatar src=\"https://material.angular.dev/assets/img/examples/shiba2.jpg\" />\n    <span matListItemTitle>Other Shiba Inu</span>\n  </mat-list-option>\n</mat-selection-list>\n",
+    dependencies: [{
+      kind: "ngmodule",
+      type: MatListModule
+    }, {
+      kind: "component",
+      type: i1.MatSelectionList,
+      selector: "mat-selection-list",
+      inputs: ["color", "compareWith", "multiple", "hideSingleSelectionIndicator", "disabled"],
+      outputs: ["selectionChange"],
+      exportAs: ["matSelectionList"]
+    }, {
+      kind: "component",
+      type: i1.MatListOption,
+      selector: "mat-list-option",
+      inputs: ["togglePosition", "checkboxPosition", "color", "value", "selected"],
+      outputs: ["selectedChange"],
+      exportAs: ["matListOption"]
+    }, {
+      kind: "directive",
+      type: i1.MatListItemAvatar,
+      selector: "[matListItemAvatar]"
+    }, {
+      kind: "directive",
+      type: i1.MatListItemTitle,
+      selector: "[matListItemTitle]"
+    }]
+  });
+}
+i0.ɵɵngDeclareClassMetadata({
+  minVersion: "12.0.0",
+  version: "21.0.0",
+  ngImport: i0,
+  type: ListAvatarExample,
+  decorators: [{
+    type: Component,
+    args: [{
+      selector: 'list-avatar-example',
+      imports: [MatListModule],
+      template: "<mat-selection-list>\n  <mat-list-option togglePosition=\"before\">\n    <img matListItemAvatar src=\"https://material.angular.dev/assets/img/examples/shiba1.jpg\" />\n    <span matListItemTitle>Shiba Inu</span>\n  </mat-list-option>\n\n  <mat-list-option togglePosition=\"after\">\n    <img matListItemAvatar src=\"https://material.angular.dev/assets/img/examples/shiba2.jpg\" />\n    <span matListItemTitle>Other Shiba Inu</span>\n  </mat-list-option>\n</mat-selection-list>\n"
+    }]
+  }]
+});
+
+class ListNavigationExample {
+  fragments = ['inbox', 'outbox', 'drafts'];
+  activeLink = null;
+  static ɵfac = i0.ɵɵngDeclareFactory({
+    minVersion: "12.0.0",
+    version: "21.0.0",
+    ngImport: i0,
+    type: ListNavigationExample,
+    deps: [],
+    target: i0.ɵɵFactoryTarget.Component
+  });
+  static ɵcmp = i0.ɵɵngDeclareComponent({
+    minVersion: "17.0.0",
+    version: "21.0.0",
+    type: ListNavigationExample,
+    isStandalone: true,
+    selector: "list-navigation-example",
+    ngImport: i0,
+    template: "<mat-nav-list>\n  @for (link of fragments; track link) {\n    <a\n      mat-list-item\n      href=\"#{{link}}\"\n      (click)=\"$event.preventDefault(); activeLink=link;\"\n      [activated]=\"activeLink === link\"\n      >{{link | titlecase}}</a\n    >\n  }\n\n  <h3 matSubheader>List with icons</h3>\n  @for (link of fragments; track link) {\n    <a\n      mat-list-item\n      [activated]=\"activeLink===link\"\n      href=\"#{{link}}\"\n      (click)=\"$event.preventDefault(); activeLink=link;\"\n    >\n      <mat-icon matListItemIcon>folder</mat-icon>\n      <span matListItemTitle>{{ link | titlecase}}</span>\n      <div matListItemMeta>\n        <mat-icon>{{link}}</mat-icon>\n      </div>\n    </a>\n  }\n</mat-nav-list>\n",
+    dependencies: [{
+      kind: "ngmodule",
+      type: MatListModule
+    }, {
+      kind: "component",
+      type: i1.MatNavList,
+      selector: "mat-nav-list",
+      exportAs: ["matNavList"]
+    }, {
+      kind: "component",
+      type: i1.MatListItem,
+      selector: "mat-list-item, a[mat-list-item], button[mat-list-item]",
+      inputs: ["activated"],
+      exportAs: ["matListItem"]
+    }, {
+      kind: "directive",
+      type: i1.MatListItemIcon,
+      selector: "[matListItemIcon]"
+    }, {
+      kind: "directive",
+      type: i1.MatListSubheaderCssMatStyler,
+      selector: "[mat-subheader], [matSubheader]"
+    }, {
+      kind: "directive",
+      type: i1.MatListItemTitle,
+      selector: "[matListItemTitle]"
+    }, {
+      kind: "directive",
+      type: i1.MatListItemMeta,
+      selector: "[matListItemMeta]"
+    }, {
+      kind: "ngmodule",
+      type: MatIconModule
+    }, {
+      kind: "component",
+      type: i3.MatIcon,
+      selector: "mat-icon",
+      inputs: ["color", "inline", "svgIcon", "fontSet", "fontIcon"],
+      exportAs: ["matIcon"]
+    }, {
+      kind: "pipe",
+      type: TitleCasePipe,
+      name: "titlecase"
+    }]
+  });
+}
+i0.ɵɵngDeclareClassMetadata({
+  minVersion: "12.0.0",
+  version: "21.0.0",
+  ngImport: i0,
+  type: ListNavigationExample,
+  decorators: [{
+    type: Component,
+    args: [{
+      selector: 'list-navigation-example',
+      imports: [MatListModule, MatIconModule, TitleCasePipe],
+      template: "<mat-nav-list>\n  @for (link of fragments; track link) {\n    <a\n      mat-list-item\n      href=\"#{{link}}\"\n      (click)=\"$event.preventDefault(); activeLink=link;\"\n      [activated]=\"activeLink === link\"\n      >{{link | titlecase}}</a\n    >\n  }\n\n  <h3 matSubheader>List with icons</h3>\n  @for (link of fragments; track link) {\n    <a\n      mat-list-item\n      [activated]=\"activeLink===link\"\n      href=\"#{{link}}\"\n      (click)=\"$event.preventDefault(); activeLink=link;\"\n    >\n      <mat-icon matListItemIcon>folder</mat-icon>\n      <span matListItemTitle>{{ link | titlecase}}</span>\n      <div matListItemMeta>\n        <mat-icon>{{link}}</mat-icon>\n      </div>\n    </a>\n  }\n</mat-nav-list>\n"
+    }]
+  }]
+});
+
+export { ListActionExample, ListAvatarExample, ListHarnessExample, ListNavigationExample, ListOverviewExample, ListSectionsExample, ListSelectionExample, ListSingleSelectionExample, ListSingleSelectionReactiveFormExample, ListVariantsExample };
 //# sourceMappingURL=material-list.mjs.map

@@ -73,4 +73,31 @@ declare class ListVariantsExample {
     static ɵcmp: i0.ɵɵComponentDeclaration<ListVariantsExample, "list-variants-example", never, {}, {}, never, never, true, never>;
 }
 
-export { ListHarnessExample, ListOverviewExample, ListSectionsExample, ListSelectionExample, ListSingleSelectionExample, ListSingleSelectionReactiveFormExample, ListVariantsExample };
+/**
+ * @title Action list
+ */
+declare class ListActionExample {
+    action(task: string): void;
+    static ɵfac: i0.ɵɵFactoryDeclaration<ListActionExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<ListActionExample, "list-action-example", never, {}, {}, never, never, true, never>;
+}
+
+/**
+ * @title Selection list with avatars
+ */
+declare class ListAvatarExample {
+    static ɵfac: i0.ɵɵFactoryDeclaration<ListAvatarExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<ListAvatarExample, "list-avatar-example", never, {}, {}, never, never, true, never>;
+}
+
+/**
+ * @title Navigation list
+ */
+declare class ListNavigationExample {
+    fragments: string[];
+    activeLink: string | null;
+    static ɵfac: i0.ɵɵFactoryDeclaration<ListNavigationExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<ListNavigationExample, "list-navigation-example", never, {}, {}, never, never, true, never>;
+}
+
+export { ListActionExample, ListAvatarExample, ListHarnessExample, ListNavigationExample, ListOverviewExample, ListSectionsExample, ListSelectionExample, ListSingleSelectionExample, ListSingleSelectionReactiveFormExample, ListVariantsExample };
