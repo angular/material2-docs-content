@@ -125,6 +125,21 @@ defined in the table, or otherwise the default row which does not have a when pr
       
 
 <tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">{ transform: booleanAttribute }</span>)
+        </div><p class="docs-api-property-name">
+      <code>recycleRows: false</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Whether rows should be recycled which reduces latency, but is not compatible with tables
+that animate rows. Note that this input cannot change after the table is initialized.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
           @Input()</div><p class="docs-api-property-name">
       <code>trackBy: TrackByFunction&lt;T&gt;</code>
@@ -798,7 +813,10 @@ tables that animate rows.</p>
   
     <span class="docs-api-class-selector-name">table[mat-table][recycleRows]</span>
   
-</p>
+</p><div class="docs-api-class-deprecated-marker" deprecated-message="This directive is a no-op and will be removed. Will be removed in v23.0.0 or later."
+  >
+  Deprecated
+</div>
 
 
 

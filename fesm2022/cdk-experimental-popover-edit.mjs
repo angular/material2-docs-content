@@ -151,7 +151,7 @@ class CdkPopoverEditCdkTableFlexExample {
       kind: "component",
       type: i1.CdkTable,
       selector: "cdk-table, table[cdk-table]",
-      inputs: ["trackBy", "dataSource", "multiTemplateDataRows", "fixedLayout"],
+      inputs: ["trackBy", "dataSource", "multiTemplateDataRows", "fixedLayout", "recycleRows"],
       outputs: ["contentChanged"],
       exportAs: ["cdkTable"]
     }, {
@@ -438,7 +438,7 @@ class CdkPopoverEditCdkTableExample {
       kind: "component",
       type: i1.CdkTable,
       selector: "cdk-table, table[cdk-table]",
-      inputs: ["trackBy", "dataSource", "multiTemplateDataRows", "fixedLayout"],
+      inputs: ["trackBy", "dataSource", "multiTemplateDataRows", "fixedLayout", "recycleRows"],
       outputs: ["contentChanged"],
       exportAs: ["cdkTable"]
     }, {

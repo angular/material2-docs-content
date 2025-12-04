@@ -83,7 +83,7 @@ class CdkTableFlexBasicExample {
       kind: "component",
       type: i1.CdkTable,
       selector: "cdk-table, table[cdk-table]",
-      inputs: ["trackBy", "dataSource", "multiTemplateDataRows", "fixedLayout"],
+      inputs: ["trackBy", "dataSource", "multiTemplateDataRows", "fixedLayout", "recycleRows"],
       outputs: ["contentChanged"],
       exportAs: ["cdkTable"]
     }, {
@@ -229,7 +229,7 @@ class CdkTableBasicExample {
       kind: "component",
       type: i1.CdkTable,
       selector: "cdk-table, table[cdk-table]",
-      inputs: ["trackBy", "dataSource", "multiTemplateDataRows", "fixedLayout"],
+      inputs: ["trackBy", "dataSource", "multiTemplateDataRows", "fixedLayout", "recycleRows"],
       outputs: ["contentChanged"],
       exportAs: ["cdkTable"]
     }, {
@@ -375,7 +375,7 @@ class CdkTableFixedLayoutExample {
       kind: "component",
       type: i1.CdkTable,
       selector: "cdk-table, table[cdk-table]",
-      inputs: ["trackBy", "dataSource", "multiTemplateDataRows", "fixedLayout"],
+      inputs: ["trackBy", "dataSource", "multiTemplateDataRows", "fixedLayout", "recycleRows"],
       outputs: ["contentChanged"],
       exportAs: ["cdkTable"]
     }, {
@@ -521,7 +521,7 @@ class CdkTableRecycleRowsExample {
       kind: "component",
       type: i1.CdkTable,
       selector: "cdk-table, table[cdk-table]",
-      inputs: ["trackBy", "dataSource", "multiTemplateDataRows", "fixedLayout"],
+      inputs: ["trackBy", "dataSource", "multiTemplateDataRows", "fixedLayout", "recycleRows"],
       outputs: ["contentChanged"],
       exportAs: ["cdkTable"]
     }, {
