@@ -24,7 +24,7 @@ class CdkMenuStandaloneMenuExample {
       kind: "directive",
       type: CdkMenuTrigger,
       selector: "[cdkMenuTriggerFor]",
-      inputs: ["cdkMenuTriggerFor", "cdkMenuPosition", "cdkMenuTriggerData"],
+      inputs: ["cdkMenuTriggerFor", "cdkMenuPosition", "cdkMenuTriggerData", "cdkMenuTriggerTransformOriginOn"],
       outputs: ["cdkMenuOpened", "cdkMenuClosed"],
       exportAs: ["cdkMenuTriggerFor"]
     }, {
@@ -90,7 +90,7 @@ class CdkMenuStandaloneStatefulMenuExample {
       kind: "directive",
       type: CdkMenuTrigger,
       selector: "[cdkMenuTriggerFor]",
-      inputs: ["cdkMenuTriggerFor", "cdkMenuPosition", "cdkMenuTriggerData"],
+      inputs: ["cdkMenuTriggerFor", "cdkMenuPosition", "cdkMenuTriggerData", "cdkMenuTriggerTransformOriginOn"],
       outputs: ["cdkMenuOpened", "cdkMenuClosed"],
       exportAs: ["cdkMenuTriggerFor"]
     }, {
@@ -174,7 +174,7 @@ class CdkMenuMenubarExample {
       kind: "directive",
       type: CdkMenuTrigger,
       selector: "[cdkMenuTriggerFor]",
-      inputs: ["cdkMenuTriggerFor", "cdkMenuPosition", "cdkMenuTriggerData"],
+      inputs: ["cdkMenuTriggerFor", "cdkMenuPosition", "cdkMenuTriggerData", "cdkMenuTriggerTransformOriginOn"],
       outputs: ["cdkMenuOpened", "cdkMenuClosed"],
       exportAs: ["cdkMenuTriggerFor"]
     }, {
@@ -289,7 +289,7 @@ class CdkMenuContextExample {
       kind: "directive",
       type: CdkContextMenuTrigger,
       selector: "[cdkContextMenuTriggerFor]",
-      inputs: ["cdkContextMenuTriggerFor", "cdkContextMenuPosition", "cdkContextMenuTriggerData", "cdkContextMenuDisabled"],
+      inputs: ["cdkContextMenuTriggerFor", "cdkContextMenuPosition", "cdkContextMenuTriggerData", "cdkContextMenuTriggerTransformOriginOn", "cdkContextMenuDisabled"],
       outputs: ["cdkContextMenuOpened", "cdkContextMenuClosed"],
       exportAs: ["cdkContextMenuTriggerFor"]
     }, {
@@ -346,7 +346,7 @@ class CdkMenuNestedContextExample {
       kind: "directive",
       type: CdkContextMenuTrigger,
       selector: "[cdkContextMenuTriggerFor]",
-      inputs: ["cdkContextMenuTriggerFor", "cdkContextMenuPosition", "cdkContextMenuTriggerData", "cdkContextMenuDisabled"],
+      inputs: ["cdkContextMenuTriggerFor", "cdkContextMenuPosition", "cdkContextMenuTriggerData", "cdkContextMenuTriggerTransformOriginOn", "cdkContextMenuDisabled"],
       outputs: ["cdkContextMenuOpened", "cdkContextMenuClosed"],
       exportAs: ["cdkContextMenuTriggerFor"]
     }, {
