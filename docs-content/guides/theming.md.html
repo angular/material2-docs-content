@@ -43,7 +43,7 @@ on-surface text colors as a default across your application:</p>
 <pre><code class="language-scss"><span class="hljs-selector-tag">body</span> {
   <span class="hljs-attribute">background</span>: <span class="hljs-built_in">var</span>(--mat-sys-surface);
   <span class="hljs-attribute">color</span>: <span class="hljs-built_in">var</span>(--mat-sys-on-surface);
-}</code></pre><p>You can also define a convenient set of CSS utility classes that let you apply 
+}</code></pre><p>You can also define a convenient set of CSS utility classes that let you apply
 theme styles from your component templates.</p>
 <pre><code class="language-scss"><span class="hljs-selector-tag">html</span> {
   ...
@@ -425,61 +425,39 @@ be defined through the <code>overrides</code> API instead of defined explicitly.
 by the Material Design specification. This behavior, however, can fall short of accessibility
 requirements, such as [WCAG 4.5:1][], which require a stronger indication of browser focus.</p>
 <p>Angular Material supports rendering highly visible outlines on focused elements. Applications can
-enable these strong focus indicators via two Sass mixins:
-<code>strong-focus-indicators</code> and <code>strong-focus-indicators-theme</code>.</p>
-<p>The <code>strong-focus-indicators</code> mixin emits structural indicator styles for all components. This mixin
-should be included exactly once in an application, similar to the <code>core</code> mixin described above.</p>
-<p>The <code>strong-focus-indicators-theme</code> mixin emits only the indicator&#39;s color styles. This mixin should
-be included once per theme, similar to the theme mixins described above. Additionally, you can use
-this mixin to change the color of the focus indicators in situations in which the default color
-would not contrast sufficiently with the background color.</p>
-<p>The following example includes strong focus indicator styles in an application alongside the rest of
-the custom theme API.</p>
+enable these strong focus indicators by calling <code>mat.strong-focus-indicators()</code>.</p>
 <pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;@angular/material&#x27;</span> as mat;
-
-<span class="hljs-variable">$my-theme</span>: (
-  color: mat.<span class="hljs-variable">$violet-palette</span>,
-  typography: Roboto,
-  density: <span class="hljs-number">0</span>
-);
-
-<span class="hljs-keyword">@include</span> mat.strong-focus-indicators();
 
 <span class="hljs-selector-tag">html</span> {
   <span class="hljs-attribute">color-scheme</span>: light dark;
-  <span class="hljs-keyword">@include</span> mat.theme(<span class="hljs-variable">$my-theme</span>);
-  <span class="hljs-keyword">@include</span> mat.strong-focus-indicators-theme(<span class="hljs-variable">$my-theme</span>);
-}</code></pre>
+  <span class="hljs-keyword">@include</span> mat.theme((
+    <span class="hljs-attribute">color</span>: mat.<span class="hljs-variable">$violet-palette</span>,
+    <span class="hljs-attribute">typography</span>: Roboto,
+    <span class="hljs-attribute">density</span>: <span class="hljs-number">0</span>
+  ));
+  <span class="hljs-keyword">@include</span> mat.strong-focus-indicators();
+}</code></pre><p>By default, the focus indicator uses the theme&#39;s secondary color, but you can customize this color
+by calling the <code>strong-focus-indicators-theme($color)</code> mixin. Additionally, you can use
+this mixin to change the color of the focus indicators in situations in which the default color
+would not contrast sufficiently with the background color.</p>
+
         <h3 id="customizing-strong-focus-indicators" class="docs-header-link">
           <span header-link="customizing-strong-focus-indicators"></span>
           Customizing strong focus indicators
         </h3>
       <p>You can pass a configuration map to <code>strong-focus-indicators</code> to customize the appearance of the
-indicators. This configuration includes <code>border-style</code>, <code>border-width</code>, and <code>border-radius</code>.</p>
-<p>You also can customize the color of indicators with <code>strong-focus-indicators-theme</code>. This mixin
-accepts either a theme, as described earlier in this guide, or a CSS color value. When providing a
-theme, the indicators will use the default hue of the primary palette.</p>
+indicators. This configuration includes <code>border-color</code>, <code>border-style</code>, <code>border-width</code>, and
+<code>border-radius</code>.</p>
 <p>The following example includes strong focus indicator styles with custom settings alongside the rest
 of the custom theme API.</p>
 <pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;@angular/material&#x27;</span> as mat;
 
 <span class="hljs-keyword">@include</span> mat.strong-focus-indicators((
+  <span class="hljs-attribute">border-color</span>: red,
   <span class="hljs-attribute">border-style</span>: dotted,
   <span class="hljs-attribute">border-width</span>: <span class="hljs-number">4px</span>,
   <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">2px</span>,
-));
-
-<span class="hljs-selector-tag">html</span> {
-  <span class="hljs-attribute">color-scheme</span>: light dark;
-
-  <span class="hljs-keyword">@include</span> mat.theme((
-    <span class="hljs-attribute">color</span>: mat.<span class="hljs-variable">$rose-palette</span>,
-    <span class="hljs-attribute">typography</span>: Roboto,
-    <span class="hljs-attribute">density</span>: <span class="hljs-number">0</span>
-  ));
-
-  <span class="hljs-keyword">@include</span> mat.strong-focus-indicators-theme(orange);
-}</code></pre>
+));</code></pre>
         <h2 id="shadow-dom" class="docs-header-link">
           <span header-link="shadow-dom"></span>
           Shadow DOM
