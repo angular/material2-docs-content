@@ -2,7 +2,7 @@ import { DataSource } from '@angular/cdk/collections';
 import { BehaviorSubject, Observable } from 'rxjs';
 import * as i0 from '@angular/core';
 
-interface PeriodicElement$3 {
+interface PeriodicElement$4 {
     name: string;
     position: number;
     symbol: string;
@@ -24,15 +24,15 @@ declare class CdkTableFlexBasicExample {
  * the underlying data. Instead, it only needs to take the data and send the table exactly what
  * should be rendered.
  */
-declare class ExampleDataSource$3 extends DataSource<PeriodicElement$3> {
+declare class ExampleDataSource$3 extends DataSource<PeriodicElement$4> {
     /** Stream of data that is provided to the table. */
-    data: BehaviorSubject<PeriodicElement$3[]>;
+    data: BehaviorSubject<PeriodicElement$4[]>;
     /** Connect function called by the table to retrieve one stream containing the data to render. */
-    connect(): Observable<PeriodicElement$3[]>;
+    connect(): Observable<PeriodicElement$4[]>;
     disconnect(): void;
 }
 
-interface PeriodicElement$2 {
+interface PeriodicElement$3 {
     name: string;
     position: number;
     weight: number;
@@ -54,15 +54,15 @@ declare class CdkTableBasicExample {
  * the underlying data. Instead, it only needs to take the data and send the table exactly what
  * should be rendered.
  */
-declare class ExampleDataSource$2 extends DataSource<PeriodicElement$2> {
+declare class ExampleDataSource$2 extends DataSource<PeriodicElement$3> {
     /** Stream of data that is provided to the table. */
-    data: BehaviorSubject<PeriodicElement$2[]>;
+    data: BehaviorSubject<PeriodicElement$3[]>;
     /** Connect function called by the table to retrieve one stream containing the data to render. */
-    connect(): Observable<PeriodicElement$2[]>;
+    connect(): Observable<PeriodicElement$3[]>;
     disconnect(): void;
 }
 
-interface PeriodicElement$1 {
+interface PeriodicElement$2 {
     name: string;
     position: number;
     weight: number;
@@ -84,15 +84,15 @@ declare class CdkTableFixedLayoutExample {
  * the underlying data. Instead, it only needs to take the data and send the table exactly what
  * should be rendered.
  */
-declare class ExampleDataSource$1 extends DataSource<PeriodicElement$1> {
+declare class ExampleDataSource$1 extends DataSource<PeriodicElement$2> {
     /** Stream of data that is provided to the table. */
-    data: BehaviorSubject<PeriodicElement$1[]>;
+    data: BehaviorSubject<PeriodicElement$2[]>;
     /** Connect function called by the table to retrieve one stream containing the data to render. */
-    connect(): Observable<PeriodicElement$1[]>;
+    connect(): Observable<PeriodicElement$2[]>;
     disconnect(): void;
 }
 
-interface PeriodicElement {
+interface PeriodicElement$1 {
     name: string;
     position: number;
     weight: number;
@@ -114,12 +114,29 @@ declare class CdkTableRecycleRowsExample {
  * the underlying data. Instead, it only needs to take the data and send the table exactly what
  * should be rendered.
  */
-declare class ExampleDataSource extends DataSource<PeriodicElement> {
+declare class ExampleDataSource extends DataSource<PeriodicElement$1> {
     /** Stream of data that is provided to the table. */
-    data: BehaviorSubject<PeriodicElement[]>;
+    data: BehaviorSubject<PeriodicElement$1[]>;
     /** Connect function called by the table to retrieve one stream containing the data to render. */
-    connect(): Observable<PeriodicElement[]>;
+    connect(): Observable<PeriodicElement$1[]>;
     disconnect(): void;
 }
 
-export { CdkTableBasicExample, CdkTableFixedLayoutExample, CdkTableFlexBasicExample, CdkTableRecycleRowsExample };
+interface PeriodicElement {
+    name: string;
+    position: number;
+    weight: number;
+    symbol: string;
+}
+/**
+ * @title Example of a CDK table with virtual scroll enabled.
+ */
+declare class CdkTableVirtualScrollExample {
+    displayedColumns: string[];
+    dataSource: PeriodicElement[];
+    trackBy: (index: number, el: PeriodicElement) => number;
+    static ɵfac: i0.ɵɵFactoryDeclaration<CdkTableVirtualScrollExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<CdkTableVirtualScrollExample, "cdk-table-virtual-scroll-example", never, {}, {}, never, never, true, never>;
+}
+
+export { CdkTableBasicExample, CdkTableFixedLayoutExample, CdkTableFlexBasicExample, CdkTableRecycleRowsExample, CdkTableVirtualScrollExample };

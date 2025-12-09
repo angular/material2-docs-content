@@ -29,8 +29,10 @@ import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { moveItemInArray, CdkDropList, CdkDrag } from '@angular/cdk/drag-drop';
 import * as i5 from '@angular/material/core';
 import { MatRippleModule } from '@angular/material/core';
+import * as i1$7 from '@angular/cdk/scrolling';
+import { ScrollingModule } from '@angular/cdk/scrolling';
 
-const ELEMENT_DATA$o = [{
+const ELEMENT_DATA$p = [{
   position: 1,
   name: 'Hydrogen',
   weight: 1.0079,
@@ -83,7 +85,7 @@ const ELEMENT_DATA$o = [{
 }];
 class TableFlexBasicExample {
   displayedColumns = ['position', 'name', 'weight', 'symbol'];
-  dataSource = ELEMENT_DATA$o;
+  dataSource = ELEMENT_DATA$p;
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
     version: "21.0.0",
@@ -169,7 +171,7 @@ i0.ɵɵngDeclareClassMetadata({
   }]
 });
 
-const ELEMENT_DATA$n = [{
+const ELEMENT_DATA$o = [{
   position: 1,
   name: 'Hydrogen',
   weight: 1.0079,
@@ -222,7 +224,7 @@ const ELEMENT_DATA$n = [{
 }];
 class TableBasicExample {
   displayedColumns = ['position', 'name', 'weight', 'symbol'];
-  dataSource = ELEMENT_DATA$n;
+  dataSource = ELEMENT_DATA$o;
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
     version: "21.0.0",
@@ -308,7 +310,7 @@ i0.ɵɵngDeclareClassMetadata({
   }]
 });
 
-const ELEMENT_DATA$m = [{
+const ELEMENT_DATA$n = [{
   position: 1,
   name: 'Hydrogen',
   weight: 1.0079,
@@ -362,7 +364,7 @@ const ELEMENT_DATA$m = [{
 class TableDynamicColumnsExample {
   displayedColumns = ['name', 'weight', 'symbol', 'position'];
   columnsToDisplay = this.displayedColumns.slice();
-  data = ELEMENT_DATA$m;
+  data = ELEMENT_DATA$n;
   addColumn() {
     const randomColumn = Math.floor(Math.random() * this.displayedColumns.length);
     this.columnsToDisplay.push(this.displayedColumns[randomColumn]);
@@ -477,7 +479,7 @@ i0.ɵɵngDeclareClassMetadata({
 });
 
 class TableExpandableRowsExample {
-  dataSource = ELEMENT_DATA$l;
+  dataSource = ELEMENT_DATA$m;
   columnsToDisplay = ['name', 'weight', 'symbol', 'position'];
   columnsToDisplayWithExpand = [...this.columnsToDisplay, 'expand'];
   expandedElement;
@@ -588,7 +590,7 @@ i0.ɵɵngDeclareClassMetadata({
     }]
   }]
 });
-const ELEMENT_DATA$l = [{
+const ELEMENT_DATA$m = [{
   position: 1,
   name: 'Hydrogen',
   weight: 1.0079,
@@ -668,7 +670,7 @@ const ELEMENT_DATA$l = [{
         two-thirds the density of air.`
 }];
 
-const ELEMENT_DATA$k = [{
+const ELEMENT_DATA$l = [{
   position: 1,
   name: 'Hydrogen',
   weight: 1.0079,
@@ -721,7 +723,7 @@ const ELEMENT_DATA$k = [{
 }];
 class TableFilteringExample {
   displayedColumns = ['position', 'name', 'weight', 'symbol'];
-  dataSource = new MatTableDataSource(ELEMENT_DATA$k);
+  dataSource = new MatTableDataSource(ELEMENT_DATA$l);
   applyFilter(event) {
     const filterValue = event.target.value;
     this.dataSource.filter = filterValue.trim().toLowerCase();
@@ -1283,7 +1285,7 @@ i0.ɵɵngDeclareClassMetadata({
 
 class TableMultipleRowTemplateExample {
   displayedColumns = ['position', 'name', 'weight', 'symbol'];
-  dataSource = new MatTableDataSource(ELEMENT_DATA$j);
+  dataSource = new MatTableDataSource(ELEMENT_DATA$k);
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
     version: "21.0.0",
@@ -1368,7 +1370,7 @@ i0.ɵɵngDeclareClassMetadata({
     }]
   }]
 });
-const ELEMENT_DATA$j = [{
+const ELEMENT_DATA$k = [{
   position: 1,
   name: 'Hydrogen',
   weight: 1.0079,
@@ -1664,7 +1666,7 @@ function createNewUser(id) {
 
 class TablePaginationExample {
   displayedColumns = ['position', 'name', 'weight', 'symbol'];
-  dataSource = new MatTableDataSource(ELEMENT_DATA$i);
+  dataSource = new MatTableDataSource(ELEMENT_DATA$j);
   paginator;
   ngAfterViewInit() {
     this.dataSource.paginator = this.paginator;
@@ -1775,7 +1777,7 @@ i0.ɵɵngDeclareClassMetadata({
     }]
   }
 });
-const ELEMENT_DATA$i = [{
+const ELEMENT_DATA$j = [{
   position: 1,
   name: 'Hydrogen',
   weight: 1.0079,
@@ -1965,7 +1967,7 @@ i0.ɵɵngDeclareClassMetadata({
   }]
 });
 
-const ELEMENT_DATA$h = [{
+const ELEMENT_DATA$i = [{
   position: 1,
   name: 'Hydrogen',
   weight: 1.0079,
@@ -2018,7 +2020,7 @@ const ELEMENT_DATA$h = [{
 }];
 class TableSelectionExample {
   displayedColumns = ['select', 'position', 'name', 'weight', 'symbol'];
-  dataSource = new MatTableDataSource(ELEMENT_DATA$h);
+  dataSource = new MatTableDataSource(ELEMENT_DATA$i);
   selection = new SelectionModel(true, []);
   isAllSelected() {
     const numSelected = this.selection.selected.length;
@@ -2133,7 +2135,7 @@ i0.ɵɵngDeclareClassMetadata({
   }]
 });
 
-const ELEMENT_DATA$g = [{
+const ELEMENT_DATA$h = [{
   position: 1,
   name: 'Hydrogen',
   weight: 1.0079,
@@ -2187,7 +2189,7 @@ const ELEMENT_DATA$g = [{
 class TableSortingExample {
   _liveAnnouncer = inject(LiveAnnouncer);
   displayedColumns = ['position', 'name', 'weight', 'symbol'];
-  dataSource = new MatTableDataSource(ELEMENT_DATA$g);
+  dataSource = new MatTableDataSource(ELEMENT_DATA$h);
   sort;
   ngAfterViewInit() {
     this.dataSource.sort = this.sort;
@@ -2314,7 +2316,7 @@ i0.ɵɵngDeclareClassMetadata({
 
 class TableStickyColumnsExample {
   displayedColumns = ['name', 'position', 'weight', 'symbol', 'position', 'weight', 'symbol', 'star'];
-  dataSource = ELEMENT_DATA$f;
+  dataSource = ELEMENT_DATA$g;
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
     version: "21.0.0",
@@ -2408,7 +2410,7 @@ i0.ɵɵngDeclareClassMetadata({
     }]
   }]
 });
-const ELEMENT_DATA$f = [{
+const ELEMENT_DATA$g = [{
   position: 1,
   name: 'Hydrogen',
   weight: 1.0079,
@@ -2462,7 +2464,7 @@ const ELEMENT_DATA$f = [{
 
 class TableStickyComplexFlexExample {
   displayedColumns = [];
-  dataSource = ELEMENT_DATA$e;
+  dataSource = ELEMENT_DATA$f;
   tables = [0];
   constructor() {
     this.displayedColumns.length = 24;
@@ -2604,7 +2606,7 @@ i0.ɵɵngDeclareClassMetadata({
   }],
   ctorParameters: () => []
 });
-const ELEMENT_DATA$e = [{
+const ELEMENT_DATA$f = [{
   position: 1,
   name: 'Hydrogen',
   weight: 1.0079,
@@ -2658,7 +2660,7 @@ const ELEMENT_DATA$e = [{
 
 class TableStickyComplexExample {
   displayedColumns = [];
-  dataSource = ELEMENT_DATA$d;
+  dataSource = ELEMENT_DATA$e;
   tables = [0];
   constructor() {
     this.displayedColumns.length = 24;
@@ -2800,7 +2802,7 @@ i0.ɵɵngDeclareClassMetadata({
   }],
   ctorParameters: () => []
 });
-const ELEMENT_DATA$d = [{
+const ELEMENT_DATA$e = [{
   position: 1,
   name: 'Hydrogen',
   weight: 1.0079,
@@ -2985,7 +2987,7 @@ i0.ɵɵngDeclareClassMetadata({
 
 class TableStickyHeaderExample {
   displayedColumns = ['position', 'name', 'weight', 'symbol'];
-  dataSource = ELEMENT_DATA$c;
+  dataSource = ELEMENT_DATA$d;
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
     version: "21.0.0",
@@ -3070,7 +3072,7 @@ i0.ɵɵngDeclareClassMetadata({
     }]
   }]
 });
-const ELEMENT_DATA$c = [{
+const ELEMENT_DATA$d = [{
   position: 1,
   name: 'Hydrogen',
   weight: 1.0079,
@@ -3122,7 +3124,7 @@ const ELEMENT_DATA$c = [{
   symbol: 'Ne'
 }];
 
-const ELEMENT_DATA$b = [{
+const ELEMENT_DATA$c = [{
   position: 1,
   name: 'Hydrogen',
   weight: 1.0079,
@@ -3175,7 +3177,7 @@ const ELEMENT_DATA$b = [{
 }];
 class TableTextColumnAdvancedExample {
   displayedColumns = ['position', 'name', 'weight', 'symbol'];
-  dataSource = new MatTableDataSource(ELEMENT_DATA$b);
+  dataSource = new MatTableDataSource(ELEMENT_DATA$c);
   headerText;
   decimalPipe = new DecimalPipe('en-US');
   getWeight = data => {
@@ -3250,7 +3252,7 @@ i0.ɵɵngDeclareClassMetadata({
   }]
 });
 
-const ELEMENT_DATA$a = [{
+const ELEMENT_DATA$b = [{
   position: 1,
   name: 'Hydrogen',
   weight: 1.0079,
@@ -3303,7 +3305,7 @@ const ELEMENT_DATA$a = [{
 }];
 class TableTextColumnExample {
   displayedColumns = ['position', 'name', 'weight', 'symbol'];
-  dataSource = ELEMENT_DATA$a;
+  dataSource = ELEMENT_DATA$b;
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
     version: "21.0.0",
@@ -3372,7 +3374,7 @@ i0.ɵɵngDeclareClassMetadata({
   }]
 });
 
-const ELEMENT_DATA$9 = [{
+const ELEMENT_DATA$a = [{
   position: 1,
   name: 'Hydrogen',
   weight: 1.0079,
@@ -3425,7 +3427,7 @@ const ELEMENT_DATA$9 = [{
 }];
 class TableWrappedExample {
   displayedColumns = ['position', 'name', 'weight', 'symbol'];
-  dataSource = new MatTableDataSource(ELEMENT_DATA$9);
+  dataSource = new MatTableDataSource(ELEMENT_DATA$a);
   sort;
   ngAfterViewInit() {
     this.dataSource.sort = this.sort;
@@ -3434,7 +3436,7 @@ class TableWrappedExample {
     this.dataSource.data = [];
   }
   addData() {
-    this.dataSource.data = ELEMENT_DATA$9;
+    this.dataSource.data = ELEMENT_DATA$a;
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
@@ -3727,7 +3729,7 @@ i0.ɵɵngDeclareClassMetadata({
 
 class TableReorderableExample {
   columns = ['position', 'name', 'weight', 'symbol'];
-  dataSource = ELEMENT_DATA$8;
+  dataSource = ELEMENT_DATA$9;
   drop(event) {
     moveItemInArray(this.columns, event.previousIndex, event.currentIndex);
   }
@@ -3829,7 +3831,7 @@ i0.ɵɵngDeclareClassMetadata({
     }]
   }]
 });
-const ELEMENT_DATA$8 = [{
+const ELEMENT_DATA$9 = [{
   position: 1,
   name: 'Hydrogen',
   weight: 1.0079,
@@ -3881,7 +3883,7 @@ const ELEMENT_DATA$8 = [{
   symbol: 'Ne'
 }];
 
-const ELEMENT_DATA$7 = [{
+const ELEMENT_DATA$8 = [{
   position: 1,
   name: 'Hydrogen',
   weight: 1.0079,
@@ -3934,7 +3936,7 @@ const ELEMENT_DATA$7 = [{
 }];
 class TableRecycleRowsExample {
   displayedColumns = ['position', 'name', 'weight', 'symbol'];
-  dataSource = ELEMENT_DATA$7;
+  dataSource = ELEMENT_DATA$8;
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
     version: "21.0.0",
@@ -4178,7 +4180,7 @@ i0.ɵɵngDeclareClassMetadata({
   }]
 });
 
-const ELEMENT_DATA$6 = [{
+const ELEMENT_DATA$7 = [{
   name: 'Hydrogen'
 }, {
   name: 'Helium'
@@ -4201,7 +4203,7 @@ const ELEMENT_DATA$6 = [{
 }];
 class TableWithRipplesExample {
   displayedColumns = ['name'];
-  dataSource = ELEMENT_DATA$6;
+  dataSource = ELEMENT_DATA$7;
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
     version: "21.0.0",
@@ -4294,7 +4296,7 @@ i0.ɵɵngDeclareClassMetadata({
   }]
 });
 
-const ELEMENT_DATA$5 = [{
+const ELEMENT_DATA$6 = [{
   position: 1,
   name: 'Hydrogen',
   weight: 1.0079,
@@ -4347,7 +4349,7 @@ const ELEMENT_DATA$5 = [{
 }];
 class TableColumnStylingExample {
   displayedColumns = ['demo-position', 'demo-name', 'demo-weight', 'demo-symbol'];
-  dataSource = ELEMENT_DATA$5;
+  dataSource = ELEMENT_DATA$6;
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
     version: "21.0.0",
@@ -4433,7 +4435,7 @@ i0.ɵɵngDeclareClassMetadata({
   }]
 });
 
-const ELEMENT_DATA$4 = [{
+const ELEMENT_DATA$5 = [{
   position: 1,
   name: 'Hydrogen',
   weight: 1.0079,
@@ -4486,7 +4488,7 @@ const ELEMENT_DATA$4 = [{
 }];
 class TableRowBindingExample {
   displayedColumns = ['position', 'name', 'weight', 'symbol'];
-  dataSource = ELEMENT_DATA$4;
+  dataSource = ELEMENT_DATA$5;
   clickedRows = new Set();
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
@@ -4573,7 +4575,7 @@ i0.ɵɵngDeclareClassMetadata({
   }]
 });
 
-const ELEMENT_DATA$3 = [{
+const ELEMENT_DATA$4 = [{
   position: 1,
   name: 'Hydrogen',
   weight: 1.0079,
@@ -4626,11 +4628,11 @@ const ELEMENT_DATA$3 = [{
 }];
 class TableDynamicArrayDataExample {
   displayedColumns = ['position', 'name', 'weight', 'symbol'];
-  dataSource = [...ELEMENT_DATA$3];
+  dataSource = [...ELEMENT_DATA$4];
   table;
   addData() {
-    const randomElementIndex = Math.floor(Math.random() * ELEMENT_DATA$3.length);
-    this.dataSource.push(ELEMENT_DATA$3[randomElementIndex]);
+    const randomElementIndex = Math.floor(Math.random() * ELEMENT_DATA$4.length);
+    this.dataSource.push(ELEMENT_DATA$4[randomElementIndex]);
     this.table.renderRows();
   }
   removeData() {
@@ -4743,7 +4745,7 @@ i0.ɵɵngDeclareClassMetadata({
   }
 });
 
-const ELEMENT_DATA$2 = [{
+const ELEMENT_DATA$3 = [{
   position: 1,
   name: 'Hydrogen',
   weight: 1.0079,
@@ -4796,11 +4798,11 @@ const ELEMENT_DATA$2 = [{
 }];
 class TableDynamicObservableDataExample {
   displayedColumns = ['position', 'name', 'weight', 'symbol'];
-  dataToDisplay = [...ELEMENT_DATA$2];
+  dataToDisplay = [...ELEMENT_DATA$3];
   dataSource = new ExampleDataSource(this.dataToDisplay);
   addData() {
-    const randomElementIndex = Math.floor(Math.random() * ELEMENT_DATA$2.length);
-    this.dataToDisplay = [...this.dataToDisplay, ELEMENT_DATA$2[randomElementIndex]];
+    const randomElementIndex = Math.floor(Math.random() * ELEMENT_DATA$3.length);
+    this.dataToDisplay = [...this.dataToDisplay, ELEMENT_DATA$3[randomElementIndex]];
     this.dataSource.setData(this.dataToDisplay);
   }
   removeData() {
@@ -4915,7 +4917,7 @@ class ExampleDataSource extends DataSource {
   }
 }
 
-const ELEMENT_DATA$1 = [{
+const ELEMENT_DATA$2 = [{
   position: 1,
   name: 'Hydrogen',
   weight: 1.0079,
@@ -4984,7 +4986,7 @@ class TableGeneratedColumnsExample {
     header: 'Symbol',
     cell: element => `${element.symbol}`
   }];
-  dataSource = ELEMENT_DATA$1;
+  dataSource = ELEMENT_DATA$2;
   displayedColumns = this.columns.map(c => c.columnDef);
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
@@ -5071,7 +5073,7 @@ i0.ɵɵngDeclareClassMetadata({
   }]
 });
 
-const ELEMENT_DATA = [{
+const ELEMENT_DATA$1 = [{
   position: 1,
   name: 'Hydrogen',
   weight: 1.0079,
@@ -5124,7 +5126,7 @@ const ELEMENT_DATA = [{
 }];
 class TableFlexLargeRowExample {
   displayedColumns = ['position', 'name', 'weight', 'symbol'];
-  dataSource = ELEMENT_DATA;
+  dataSource = ELEMENT_DATA$1;
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
     version: "21.0.0",
@@ -5210,5 +5212,172 @@ i0.ɵɵngDeclareClassMetadata({
   }]
 });
 
-export { TableBasicExample, TableColumnStylingExample, TableDynamicArrayDataExample, TableDynamicColumnsExample, TableDynamicObservableDataExample, TableExpandableRowsExample, TableFilteringExample, TableFlexBasicExample, TableFlexLargeRowExample, TableFooterRowExample, TableGeneratedColumnsExample, TableHarnessExample, TableHttpExample, TableMultipleHeaderFooterExample, TableMultipleRowTemplateExample, TableOverviewExample, TablePaginationExample, TableRecycleRowsExample, TableReorderableExample, TableRowBindingExample, TableRowContextExample, TableSelectionExample, TableSortingExample, TableStickyColumnsExample, TableStickyComplexExample, TableStickyComplexFlexExample, TableStickyFooterExample, TableStickyHeaderExample, TableTextColumnAdvancedExample, TableTextColumnExample, TableWithRipplesExample, TableWrappedExample, WrapperTable };
+const ELEMENT_DATA = [{
+  position: 1,
+  name: 'Hydrogen',
+  weight: 1.0079,
+  symbol: 'H'
+}, {
+  position: 2,
+  name: 'Helium',
+  weight: 4.0026,
+  symbol: 'He'
+}, {
+  position: 3,
+  name: 'Lithium',
+  weight: 6.941,
+  symbol: 'Li'
+}, {
+  position: 4,
+  name: 'Beryllium',
+  weight: 9.0122,
+  symbol: 'Be'
+}, {
+  position: 5,
+  name: 'Boron',
+  weight: 10.811,
+  symbol: 'B'
+}, {
+  position: 6,
+  name: 'Carbon',
+  weight: 12.0107,
+  symbol: 'C'
+}, {
+  position: 7,
+  name: 'Nitrogen',
+  weight: 14.0067,
+  symbol: 'N'
+}, {
+  position: 8,
+  name: 'Oxygen',
+  weight: 15.9994,
+  symbol: 'O'
+}, {
+  position: 9,
+  name: 'Fluorine',
+  weight: 18.9984,
+  symbol: 'F'
+}, {
+  position: 10,
+  name: 'Neon',
+  weight: 20.1797,
+  symbol: 'Ne'
+}];
+const EXPANDED_ELEMENT_DATA = [];
+for (let x = 0; x < 250; x++) {
+  for (const entry of ELEMENT_DATA) {
+    EXPANDED_ELEMENT_DATA.push({
+      ...entry,
+      position: entry.position + 10 * x
+    });
+  }
+}
+class TableVirtualScrollExample {
+  displayedColumns = ['position', 'name', 'weight', 'symbol'];
+  dataSource = EXPANDED_ELEMENT_DATA;
+  trackBy = (index, el) => el.position;
+  static ɵfac = i0.ɵɵngDeclareFactory({
+    minVersion: "12.0.0",
+    version: "21.0.0",
+    ngImport: i0,
+    type: TableVirtualScrollExample,
+    deps: [],
+    target: i0.ɵɵFactoryTarget.Component
+  });
+  static ɵcmp = i0.ɵɵngDeclareComponent({
+    minVersion: "14.0.0",
+    version: "21.0.0",
+    type: TableVirtualScrollExample,
+    isStandalone: true,
+    selector: "table-virtual-scroll-example",
+    ngImport: i0,
+    template: "<p>Showing {{dataSource.length}} rows</p>\n\n<!-- Enable virtual scrolling -->\n<cdk-virtual-scroll-viewport class=\"example-container\" [itemSize]=\"52\" [maxBufferPx]=\"1200\" [minBufferPx]=\"400\">\n  <table mat-table [dataSource]=\"dataSource\" [trackBy]=\"trackBy\">\n    <!-- Position Column -->\n    <ng-container matColumnDef=\"position\">\n      <th mat-header-cell *matHeaderCellDef> No. </th>\n      <td mat-cell *matCellDef=\"let element\"> {{element.position}} </td>\n      <th mat-footer-cell *matFooterCellDef> No. </th>\n    </ng-container>\n\n    <!-- Name Column -->\n    <ng-container matColumnDef=\"name\">\n      <th mat-header-cell *matHeaderCellDef> Name </th>\n      <td mat-cell *matCellDef=\"let element\"> {{element.name}} </td>\n      <th mat-footer-cell *matFooterCellDef> Name </th>\n    </ng-container>\n\n    <!-- Weight Column -->\n    <ng-container matColumnDef=\"weight\">\n      <th mat-header-cell *matHeaderCellDef> Weight </th>\n      <td mat-cell *matCellDef=\"let element\"> {{element.weight}} </td>\n      <th mat-footer-cell *matFooterCellDef> Weight </th>\n    </ng-container>\n\n    <!-- Symbol Column -->\n    <ng-container matColumnDef=\"symbol\">\n      <th mat-header-cell *matHeaderCellDef> Symbol </th>\n      <td mat-cell *matCellDef=\"let element\"> {{element.symbol}} </td>\n      <th mat-footer-cell *matFooterCellDef> Symbol </th>\n    </ng-container>\n\n    <tr mat-header-row *matHeaderRowDef=\"displayedColumns; sticky: true\"></tr>\n    <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n  </table>\n</cdk-virtual-scroll-viewport>\n",
+    styles: ["/* Make the container scrollable */\n.example-container {\n  height: 600px;\n  overflow: auto;\n}\n\n.example-container table {\n  width: 100%;\n}\n"],
+    dependencies: [{
+      kind: "ngmodule",
+      type: MatTableModule
+    }, {
+      kind: "component",
+      type: i1.MatTable,
+      selector: "mat-table, table[mat-table]",
+      exportAs: ["matTable"]
+    }, {
+      kind: "directive",
+      type: i1.MatHeaderCellDef,
+      selector: "[matHeaderCellDef]"
+    }, {
+      kind: "directive",
+      type: i1.MatHeaderRowDef,
+      selector: "[matHeaderRowDef]",
+      inputs: ["matHeaderRowDef", "matHeaderRowDefSticky"]
+    }, {
+      kind: "directive",
+      type: i1.MatColumnDef,
+      selector: "[matColumnDef]",
+      inputs: ["matColumnDef"]
+    }, {
+      kind: "directive",
+      type: i1.MatCellDef,
+      selector: "[matCellDef]"
+    }, {
+      kind: "directive",
+      type: i1.MatRowDef,
+      selector: "[matRowDef]",
+      inputs: ["matRowDefColumns", "matRowDefWhen"]
+    }, {
+      kind: "directive",
+      type: i1.MatFooterCellDef,
+      selector: "[matFooterCellDef]"
+    }, {
+      kind: "directive",
+      type: i1.MatHeaderCell,
+      selector: "mat-header-cell, th[mat-header-cell]"
+    }, {
+      kind: "directive",
+      type: i1.MatCell,
+      selector: "mat-cell, td[mat-cell]"
+    }, {
+      kind: "component",
+      type: i1.MatHeaderRow,
+      selector: "mat-header-row, tr[mat-header-row]",
+      exportAs: ["matHeaderRow"]
+    }, {
+      kind: "component",
+      type: i1.MatRow,
+      selector: "mat-row, tr[mat-row]",
+      exportAs: ["matRow"]
+    }, {
+      kind: "ngmodule",
+      type: ScrollingModule
+    }, {
+      kind: "directive",
+      type: i1$7.CdkFixedSizeVirtualScroll,
+      selector: "cdk-virtual-scroll-viewport[itemSize]",
+      inputs: ["itemSize", "minBufferPx", "maxBufferPx"]
+    }, {
+      kind: "component",
+      type: i1$7.CdkVirtualScrollViewport,
+      selector: "cdk-virtual-scroll-viewport",
+      inputs: ["orientation", "appendOnly"],
+      outputs: ["scrolledIndexChange"]
+    }]
+  });
+}
+i0.ɵɵngDeclareClassMetadata({
+  minVersion: "12.0.0",
+  version: "21.0.0",
+  ngImport: i0,
+  type: TableVirtualScrollExample,
+  decorators: [{
+    type: Component,
+    args: [{
+      selector: 'table-virtual-scroll-example',
+      imports: [MatTableModule, ScrollingModule],
+      template: "<p>Showing {{dataSource.length}} rows</p>\n\n<!-- Enable virtual scrolling -->\n<cdk-virtual-scroll-viewport class=\"example-container\" [itemSize]=\"52\" [maxBufferPx]=\"1200\" [minBufferPx]=\"400\">\n  <table mat-table [dataSource]=\"dataSource\" [trackBy]=\"trackBy\">\n    <!-- Position Column -->\n    <ng-container matColumnDef=\"position\">\n      <th mat-header-cell *matHeaderCellDef> No. </th>\n      <td mat-cell *matCellDef=\"let element\"> {{element.position}} </td>\n      <th mat-footer-cell *matFooterCellDef> No. </th>\n    </ng-container>\n\n    <!-- Name Column -->\n    <ng-container matColumnDef=\"name\">\n      <th mat-header-cell *matHeaderCellDef> Name </th>\n      <td mat-cell *matCellDef=\"let element\"> {{element.name}} </td>\n      <th mat-footer-cell *matFooterCellDef> Name </th>\n    </ng-container>\n\n    <!-- Weight Column -->\n    <ng-container matColumnDef=\"weight\">\n      <th mat-header-cell *matHeaderCellDef> Weight </th>\n      <td mat-cell *matCellDef=\"let element\"> {{element.weight}} </td>\n      <th mat-footer-cell *matFooterCellDef> Weight </th>\n    </ng-container>\n\n    <!-- Symbol Column -->\n    <ng-container matColumnDef=\"symbol\">\n      <th mat-header-cell *matHeaderCellDef> Symbol </th>\n      <td mat-cell *matCellDef=\"let element\"> {{element.symbol}} </td>\n      <th mat-footer-cell *matFooterCellDef> Symbol </th>\n    </ng-container>\n\n    <tr mat-header-row *matHeaderRowDef=\"displayedColumns; sticky: true\"></tr>\n    <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n  </table>\n</cdk-virtual-scroll-viewport>\n",
+      styles: ["/* Make the container scrollable */\n.example-container {\n  height: 600px;\n  overflow: auto;\n}\n\n.example-container table {\n  width: 100%;\n}\n"]
+    }]
+  }]
+});
+
+export { TableBasicExample, TableColumnStylingExample, TableDynamicArrayDataExample, TableDynamicColumnsExample, TableDynamicObservableDataExample, TableExpandableRowsExample, TableFilteringExample, TableFlexBasicExample, TableFlexLargeRowExample, TableFooterRowExample, TableGeneratedColumnsExample, TableHarnessExample, TableHttpExample, TableMultipleHeaderFooterExample, TableMultipleRowTemplateExample, TableOverviewExample, TablePaginationExample, TableRecycleRowsExample, TableReorderableExample, TableRowBindingExample, TableRowContextExample, TableSelectionExample, TableSortingExample, TableStickyColumnsExample, TableStickyComplexExample, TableStickyComplexFlexExample, TableStickyFooterExample, TableStickyHeaderExample, TableTextColumnAdvancedExample, TableTextColumnExample, TableVirtualScrollExample, TableWithRipplesExample, TableWrappedExample, WrapperTable };
 //# sourceMappingURL=material-table.mjs.map

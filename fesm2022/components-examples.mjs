@@ -759,6 +759,16 @@ const EXAMPLE_COMPONENTS = {
     "primaryFile": "cdk-table-recycle-rows-example.ts",
     "importPath": "cdk/table"
   },
+  "cdk-table-virtual-scroll": {
+    "packagePath": "cdk/table/cdk-table-virtual-scroll",
+    "title": "Example of a CDK table with virtual scroll enabled.",
+    "componentName": "CdkTableVirtualScrollExample",
+    "files": ["cdk-table-virtual-scroll-example.ts", "cdk-table-virtual-scroll-example.html", "cdk-table-virtual-scroll-example.css"],
+    "selector": "cdk-table-virtual-scroll-example",
+    "additionalComponents": [],
+    "primaryFile": "cdk-table-virtual-scroll-example.ts",
+    "importPath": "cdk/table"
+  },
   "text-field-autofill-directive": {
     "packagePath": "cdk/text-field/text-field-autofill-directive",
     "title": "Monitoring autofill state with cdkAutofill",
@@ -3169,6 +3179,16 @@ const EXAMPLE_COMPONENTS = {
     "primaryFile": "table-text-column-example.ts",
     "importPath": "material/table"
   },
+  "table-virtual-scroll": {
+    "packagePath": "material/table/table-virtual-scroll",
+    "title": "Example of a Material table with virtual scroll enabled.",
+    "componentName": "TableVirtualScrollExample",
+    "files": ["table-virtual-scroll-example.ts", "table-virtual-scroll-example.html", "table-virtual-scroll-example.css"],
+    "selector": "table-virtual-scroll-example",
+    "additionalComponents": [],
+    "primaryFile": "table-virtual-scroll-example.ts",
+    "importPath": "material/table"
+  },
   "table-with-ripples": {
     "packagePath": "material/table/table-with-ripples",
     "title": "Tables with Material Design ripples.",
@@ -3814,6 +3834,8 @@ async function loadExample(id) {
       return import('@angular/components-examples/cdk/table');
     case 'cdk-table-recycle-rows':
       return import('@angular/components-examples/cdk/table');
+    case 'cdk-table-virtual-scroll':
+      return import('@angular/components-examples/cdk/table');
     case 'text-field-autofill-directive':
       return import('@angular/components-examples/cdk/text-field');
     case 'text-field-autofill-monitor':
@@ -4295,6 +4317,8 @@ async function loadExample(id) {
     case 'table-text-column-advanced':
       return import('@angular/components-examples/material/table');
     case 'table-text-column':
+      return import('@angular/components-examples/material/table');
+    case 'table-virtual-scroll':
       return import('@angular/components-examples/material/table');
     case 'table-with-ripples':
       return import('@angular/components-examples/material/table');

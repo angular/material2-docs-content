@@ -22,7 +22,7 @@ top of the CDK data-table.</p>
       <p>The first step to writing the data-table template is to define the columns.
 A column definition is specified via an <code>&lt;ng-container&gt;</code> with the <code>cdkColumnDef</code> directive, giving
 the column a name. Each column definition can contain a header-cell template
-(<code>cdkHeaderCellDef</code>), data-cell template (<code>cdkCellDef</code>), and footer-cell 
+(<code>cdkHeaderCellDef</code>), data-cell template (<code>cdkCellDef</code>), and footer-cell
 template (<code>cdkFooterCellDef</code>).</p>
 <pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">ng-container</span> <span class="hljs-attr">cdkColumnDef</span>=<span class="hljs-string">&quot;username&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">cdk-header-cell</span> *<span class="hljs-attr">cdkHeaderCellDef</span>&gt;</span> User name <span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
@@ -99,9 +99,9 @@ and <code>username</code> and in that order, then the row and header definitions
 cells that are displayed in the column <code>name</code> will be given the class <code>cdk-column-name</code>. This allows
 columns to be given styles that will match across the header and rows.</p>
 <p>Since columns can be given any string for its name, its possible that it cannot be directly applied
-to the CSS class (e.g. <code>*nameColumn!</code>). In these cases, the special characters will be replaced by 
+to the CSS class (e.g. <code>*nameColumn!</code>). In these cases, the special characters will be replaced by
 the <code>-</code> character. For example, cells container in a column named <code>*nameColumn!</code> will be given
-the class <code>cdk-column--nameColumn-</code>.    </p>
+the class <code>cdk-column--nameColumn-</code>.</p>
 
         <h4 id="connecting-the-table-to-a-data-source" class="docs-header-link">
           <span header-link="connecting-the-table-to-a-data-source"></span>
@@ -137,11 +137,21 @@ table how to uniquely identify rows to track how the data changes with each upda
           <span header-link="recyclerows"></span>
           <code>recycleRows</code>
         </h5>
-      <p>By default, <code>CdkTable</code> creates and destroys an internal Angular view for each row. This allows rows 
-to participate in animations and to toggle between different row templates with <code>cdkRowDefWhen</code>. If 
-you don&#39;t need these features, you can instruct the table to cache and recycle rows by specifying 
+      <p>By default, <code>CdkTable</code> creates and destroys an internal Angular view for each row. This allows rows
+to participate in animations and to toggle between different row templates with <code>cdkRowDefWhen</code>. If
+you don&#39;t need these features, you can instruct the table to cache and recycle rows by specifying
 <code>recycleRows</code>.</p>
 <pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">table</span> <span class="hljs-attr">cdk-table</span> [<span class="hljs-attr">dataSource</span>]=<span class="hljs-string">&quot;dataSource&quot;</span> <span class="hljs-attr">recycleRows</span>&gt;</span></code></pre>
+        <h3 id="virtual-scrolling" class="docs-header-link">
+          <span header-link="virtual-scrolling"></span>
+          Virtual scrolling
+        </h3>
+      <p>If you&#39;re showing a large amount of data in your table, you can use virtual scrolling to ensure a
+smooth experience for the user. To enable virtual scrolling, you have to wrap the CDK table in a
+<code>cdk-virtual-scroll-viewport</code> element and add some CSS to make it scrollable.</p>
+</div><div material-docs-example="cdk-table-virtual-scroll"></div><div class="docs-markdown">
+
+
         <h3 id="alternate-html-to-using-native-table" class="docs-header-link">
           <span header-link="alternate-html-to-using-native-table"></span>
           Alternate HTML to using native table
@@ -150,7 +160,7 @@ you don&#39;t need these features, you can instruct the table to cache and recyc
 over the style of the table, it may be easier to follow an alternative template approach that does
 not use the native table element tags.</p>
 <p>This alternative approach replaces the native table element tags with the CDK table directive
-selectors. For example, <code>&lt;table cdk-table&gt;</code> becomes <code>&lt;cdk-table&gt;</code>; <code>&lt;tr cdk-row</code>&gt; becomes 
+selectors. For example, <code>&lt;table cdk-table&gt;</code> becomes <code>&lt;cdk-table&gt;</code>; <code>&lt;tr cdk-row</code>&gt; becomes
 <code>&lt;cdk-row&gt;</code>. The following shows a previous example using this alternative template:</p>
 <pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">cdk-table</span> [<span class="hljs-attr">dataSource</span>]=<span class="hljs-string">&quot;dataSource&quot;</span>&gt;</span>
   <span class="hljs-comment">&lt;!-- User name Definition --&gt;</span>
