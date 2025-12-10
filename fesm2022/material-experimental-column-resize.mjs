@@ -111,7 +111,7 @@ class DefaultEnabledColumnResizeExample {
   dataSource = ELEMENT_DATA$2;
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     ngImport: i0,
     type: DefaultEnabledColumnResizeExample,
     deps: [],
@@ -119,7 +119,7 @@ class DefaultEnabledColumnResizeExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     type: DefaultEnabledColumnResizeExample,
     isStandalone: true,
     selector: "default-enabled-column-resize-example",
@@ -192,7 +192,7 @@ class DefaultEnabledColumnResizeExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "21.0.0",
+  version: "21.0.3",
   ngImport: i0,
   type: DefaultEnabledColumnResizeExample,
   decorators: [{
@@ -312,7 +312,7 @@ class DefaultEnabledColumnResizeFlexExample {
   dataSource = ELEMENT_DATA$1;
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     ngImport: i0,
     type: DefaultEnabledColumnResizeFlexExample,
     deps: [],
@@ -320,7 +320,7 @@ class DefaultEnabledColumnResizeFlexExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     type: DefaultEnabledColumnResizeFlexExample,
     isStandalone: true,
     selector: "default-enabled-column-resize-flex-example",
@@ -393,7 +393,7 @@ class DefaultEnabledColumnResizeFlexExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "21.0.0",
+  version: "21.0.3",
   ngImport: i0,
   type: DefaultEnabledColumnResizeFlexExample,
   decorators: [{
@@ -513,7 +513,7 @@ class OptInColumnResizeExample {
   dataSource = ELEMENT_DATA;
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     ngImport: i0,
     type: OptInColumnResizeExample,
     deps: [],
@@ -521,7 +521,7 @@ class OptInColumnResizeExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     type: OptInColumnResizeExample,
     isStandalone: true,
     selector: "opt-in-column-resize-example",
@@ -594,7 +594,7 @@ class OptInColumnResizeExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "21.0.0",
+  version: "21.0.3",
   ngImport: i0,
   type: OptInColumnResizeExample,
   decorators: [{

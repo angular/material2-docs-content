@@ -66,7 +66,7 @@ class SortOverviewExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     ngImport: i0,
     type: SortOverviewExample,
     deps: [],
@@ -74,7 +74,7 @@ class SortOverviewExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     type: SortOverviewExample,
     isStandalone: true,
     selector: "sort-overview-example",
@@ -102,7 +102,7 @@ class SortOverviewExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "21.0.0",
+  version: "21.0.3",
   ngImport: i0,
   type: SortOverviewExample,
   decorators: [{
@@ -170,7 +170,7 @@ class SortHarnessExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     ngImport: i0,
     type: SortHarnessExample,
     deps: [],
@@ -178,7 +178,7 @@ class SortHarnessExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     type: SortHarnessExample,
     isStandalone: true,
     selector: "sort-harness-example",
@@ -205,7 +205,7 @@ class SortHarnessExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "21.0.0",
+  version: "21.0.3",
   ngImport: i0,
   type: SortHarnessExample,
   decorators: [{
@@ -221,7 +221,7 @@ i0.ɵɵngDeclareClassMetadata({
 class SortCustomIconExample {
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     ngImport: i0,
     type: SortCustomIconExample,
     deps: [],
@@ -229,7 +229,7 @@ class SortCustomIconExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     type: SortCustomIconExample,
     isStandalone: true,
     selector: "sort-custom-icon-example",
@@ -262,7 +262,7 @@ class SortCustomIconExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "21.0.0",
+  version: "21.0.3",
   ngImport: i0,
   type: SortCustomIconExample,
   decorators: [{

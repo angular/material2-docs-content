@@ -10,7 +10,7 @@ import { MatButtonModule } from '@angular/material/button';
 class MenuIconsExample {
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     ngImport: i0,
     type: MenuIconsExample,
     deps: [],
@@ -18,7 +18,7 @@ class MenuIconsExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     type: MenuIconsExample,
     isStandalone: true,
     selector: "menu-icons-example",
@@ -69,7 +69,7 @@ class MenuIconsExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "21.0.0",
+  version: "21.0.3",
   ngImport: i0,
   type: MenuIconsExample,
   decorators: [{
@@ -85,7 +85,7 @@ i0.ɵɵngDeclareClassMetadata({
 class MenuOverviewExample {
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     ngImport: i0,
     type: MenuOverviewExample,
     deps: [],
@@ -93,7 +93,7 @@ class MenuOverviewExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     type: MenuOverviewExample,
     isStandalone: true,
     selector: "menu-overview-example",
@@ -136,7 +136,7 @@ class MenuOverviewExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "21.0.0",
+  version: "21.0.3",
   ngImport: i0,
   type: MenuOverviewExample,
   decorators: [{
@@ -152,7 +152,7 @@ i0.ɵɵngDeclareClassMetadata({
 class MenuPositionExample {
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     ngImport: i0,
     type: MenuPositionExample,
     deps: [],
@@ -160,7 +160,7 @@ class MenuPositionExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     type: MenuPositionExample,
     isStandalone: true,
     selector: "menu-position-example",
@@ -203,7 +203,7 @@ class MenuPositionExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "21.0.0",
+  version: "21.0.3",
   ngImport: i0,
   type: MenuPositionExample,
   decorators: [{
@@ -219,7 +219,7 @@ i0.ɵɵngDeclareClassMetadata({
 class MenuNestedExample {
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     ngImport: i0,
     type: MenuNestedExample,
     deps: [],
@@ -227,7 +227,7 @@ class MenuNestedExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     type: MenuNestedExample,
     isStandalone: true,
     selector: "menu-nested-example",
@@ -270,7 +270,7 @@ class MenuNestedExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "21.0.0",
+  version: "21.0.3",
   ngImport: i0,
   type: MenuNestedExample,
   decorators: [{
@@ -286,7 +286,7 @@ i0.ɵɵngDeclareClassMetadata({
 class MenuHarnessExample {
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     ngImport: i0,
     type: MenuHarnessExample,
     deps: [],
@@ -294,7 +294,7 @@ class MenuHarnessExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     type: MenuHarnessExample,
     isStandalone: true,
     selector: "menu-harness-example",
@@ -328,7 +328,7 @@ class MenuHarnessExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "21.0.0",
+  version: "21.0.3",
   ngImport: i0,
   type: MenuHarnessExample,
   decorators: [{
@@ -344,7 +344,7 @@ i0.ɵɵngDeclareClassMetadata({
 class ContextMenuExample {
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     ngImport: i0,
     type: ContextMenuExample,
     deps: [],
@@ -352,7 +352,7 @@ class ContextMenuExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     type: ContextMenuExample,
     isStandalone: true,
     selector: "context-menu-example",
@@ -396,7 +396,7 @@ class ContextMenuExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "21.0.0",
+  version: "21.0.3",
   ngImport: i0,
   type: ContextMenuExample,
   decorators: [{

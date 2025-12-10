@@ -12,7 +12,7 @@ import { FormControl, FormGroup, FormsModule, ReactiveFormsModule } from '@angul
 class ListOverviewExample {
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     ngImport: i0,
     type: ListOverviewExample,
     deps: [],
@@ -20,7 +20,7 @@ class ListOverviewExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     type: ListOverviewExample,
     isStandalone: true,
     selector: "list-overview-example",
@@ -45,7 +45,7 @@ class ListOverviewExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "21.0.0",
+  version: "21.0.3",
   ngImport: i0,
   type: ListOverviewExample,
   decorators: [{
@@ -78,7 +78,7 @@ class ListSectionsExample {
   }];
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     ngImport: i0,
     type: ListSectionsExample,
     deps: [],
@@ -86,7 +86,7 @@ class ListSectionsExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     type: ListSectionsExample,
     isStandalone: true,
     selector: "list-sections-example",
@@ -149,7 +149,7 @@ class ListSectionsExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "21.0.0",
+  version: "21.0.3",
   ngImport: i0,
   type: ListSectionsExample,
   decorators: [{
@@ -167,7 +167,7 @@ class ListSelectionExample {
   typesOfShoes = ['Boots', 'Clogs', 'Loafers', 'Moccasins', 'Sneakers'];
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     ngImport: i0,
     type: ListSelectionExample,
     deps: [],
@@ -175,7 +175,7 @@ class ListSelectionExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     type: ListSelectionExample,
     isStandalone: true,
     selector: "list-selection-example",
@@ -203,7 +203,7 @@ class ListSelectionExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "21.0.0",
+  version: "21.0.3",
   ngImport: i0,
   type: ListSelectionExample,
   decorators: [{
@@ -220,7 +220,7 @@ class ListSingleSelectionExample {
   typesOfShoes = ['Boots', 'Clogs', 'Loafers', 'Moccasins', 'Sneakers'];
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     ngImport: i0,
     type: ListSingleSelectionExample,
     deps: [],
@@ -228,7 +228,7 @@ class ListSingleSelectionExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     type: ListSingleSelectionExample,
     isStandalone: true,
     selector: "list-single-selection-example",
@@ -256,7 +256,7 @@ class ListSingleSelectionExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "21.0.0",
+  version: "21.0.3",
   ngImport: i0,
   type: ListSingleSelectionExample,
   decorators: [{
@@ -295,7 +295,7 @@ class ListSingleSelectionReactiveFormExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     ngImport: i0,
     type: ListSingleSelectionReactiveFormExample,
     deps: [],
@@ -303,7 +303,7 @@ class ListSingleSelectionReactiveFormExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     type: ListSingleSelectionReactiveFormExample,
     isStandalone: true,
     selector: "list-single-selection-reactive-form-example",
@@ -363,7 +363,7 @@ class ListSingleSelectionReactiveFormExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "21.0.0",
+  version: "21.0.3",
   ngImport: i0,
   type: ListSingleSelectionReactiveFormExample,
   decorators: [{
@@ -380,7 +380,7 @@ i0.ɵɵngDeclareClassMetadata({
 class ListHarnessExample {
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     ngImport: i0,
     type: ListHarnessExample,
     deps: [],
@@ -388,7 +388,7 @@ class ListHarnessExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     type: ListHarnessExample,
     isStandalone: true,
     selector: "list-harness-example",
@@ -433,7 +433,7 @@ class ListHarnessExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "21.0.0",
+  version: "21.0.3",
   ngImport: i0,
   type: ListHarnessExample,
   decorators: [{
@@ -449,7 +449,7 @@ i0.ɵɵngDeclareClassMetadata({
 class ListVariantsExample {
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     ngImport: i0,
     type: ListVariantsExample,
     deps: [],
@@ -457,7 +457,7 @@ class ListVariantsExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     type: ListVariantsExample,
     isStandalone: true,
     selector: "list-variants-example",
@@ -491,7 +491,7 @@ class ListVariantsExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "21.0.0",
+  version: "21.0.3",
   ngImport: i0,
   type: ListVariantsExample,
   decorators: [{
@@ -511,7 +511,7 @@ class ListActionExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     ngImport: i0,
     type: ListActionExample,
     deps: [],
@@ -519,7 +519,7 @@ class ListActionExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     type: ListActionExample,
     isStandalone: true,
     selector: "list-action-example",
@@ -544,7 +544,7 @@ class ListActionExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "21.0.0",
+  version: "21.0.3",
   ngImport: i0,
   type: ListActionExample,
   decorators: [{
@@ -560,7 +560,7 @@ i0.ɵɵngDeclareClassMetadata({
 class ListAvatarExample {
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     ngImport: i0,
     type: ListAvatarExample,
     deps: [],
@@ -568,7 +568,7 @@ class ListAvatarExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     type: ListAvatarExample,
     isStandalone: true,
     selector: "list-avatar-example",
@@ -604,7 +604,7 @@ class ListAvatarExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "21.0.0",
+  version: "21.0.3",
   ngImport: i0,
   type: ListAvatarExample,
   decorators: [{
@@ -622,7 +622,7 @@ class ListNavigationExample {
   activeLink = null;
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     ngImport: i0,
     type: ListNavigationExample,
     deps: [],
@@ -630,7 +630,7 @@ class ListNavigationExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     type: ListNavigationExample,
     isStandalone: true,
     selector: "list-navigation-example",
@@ -684,7 +684,7 @@ class ListNavigationExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "21.0.0",
+  version: "21.0.3",
   ngImport: i0,
   type: ListNavigationExample,
   decorators: [{

@@ -18,7 +18,7 @@ class CdkPortalOverviewExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     ngImport: i0,
     type: CdkPortalOverviewExample,
     deps: [],
@@ -26,7 +26,7 @@ class CdkPortalOverviewExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     type: CdkPortalOverviewExample,
     isStandalone: true,
     selector: "cdk-portal-overview-example",
@@ -59,7 +59,7 @@ class CdkPortalOverviewExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "21.0.0",
+  version: "21.0.3",
   ngImport: i0,
   type: CdkPortalOverviewExample,
   decorators: [{
@@ -85,7 +85,7 @@ i0.ɵɵngDeclareClassMetadata({
 class ComponentPortalExample {
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     ngImport: i0,
     type: ComponentPortalExample,
     deps: [],
@@ -93,7 +93,7 @@ class ComponentPortalExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     type: ComponentPortalExample,
     isStandalone: true,
     selector: "component-portal-example",
@@ -104,7 +104,7 @@ class ComponentPortalExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "21.0.0",
+  version: "21.0.3",
   ngImport: i0,
   type: ComponentPortalExample,
   decorators: [{

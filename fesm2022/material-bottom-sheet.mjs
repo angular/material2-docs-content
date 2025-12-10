@@ -13,7 +13,7 @@ class BottomSheetOverviewExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     ngImport: i0,
     type: BottomSheetOverviewExample,
     deps: [],
@@ -21,7 +21,7 @@ class BottomSheetOverviewExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     type: BottomSheetOverviewExample,
     isStandalone: true,
     selector: "bottom-sheet-overview-example",
@@ -44,7 +44,7 @@ class BottomSheetOverviewExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "21.0.0",
+  version: "21.0.3",
   ngImport: i0,
   type: BottomSheetOverviewExample,
   decorators: [{
@@ -64,7 +64,7 @@ class BottomSheetOverviewExampleSheet {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     ngImport: i0,
     type: BottomSheetOverviewExampleSheet,
     deps: [],
@@ -72,7 +72,7 @@ class BottomSheetOverviewExampleSheet {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     type: BottomSheetOverviewExampleSheet,
     isStandalone: true,
     selector: "bottom-sheet-overview-example-sheet",
@@ -101,7 +101,7 @@ class BottomSheetOverviewExampleSheet {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "21.0.0",
+  version: "21.0.3",
   ngImport: i0,
   type: BottomSheetOverviewExampleSheet,
   decorators: [{
@@ -122,7 +122,7 @@ class BottomSheetHarnessExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     ngImport: i0,
     type: BottomSheetHarnessExample,
     deps: [],
@@ -130,7 +130,7 @@ class BottomSheetHarnessExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     type: BottomSheetHarnessExample,
     isStandalone: true,
     selector: "bottom-sheet-harness-example",
@@ -150,7 +150,7 @@ class BottomSheetHarnessExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "21.0.0",
+  version: "21.0.3",
   ngImport: i0,
   type: BottomSheetHarnessExample,
   decorators: [{

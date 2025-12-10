@@ -129,7 +129,7 @@ class CdkPopoverEditCdkTableFlexExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     ngImport: i0,
     type: CdkPopoverEditCdkTableFlexExample,
     deps: [],
@@ -137,7 +137,7 @@ class CdkPopoverEditCdkTableFlexExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     type: CdkPopoverEditCdkTableFlexExample,
     isStandalone: true,
     selector: "cdk-popover-edit-cdk-table-flex-example",
@@ -275,7 +275,7 @@ class CdkPopoverEditCdkTableFlexExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "21.0.0",
+  version: "21.0.3",
   ngImport: i0,
   type: CdkPopoverEditCdkTableFlexExample,
   decorators: [{
@@ -416,7 +416,7 @@ class CdkPopoverEditCdkTableExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     ngImport: i0,
     type: CdkPopoverEditCdkTableExample,
     deps: [],
@@ -424,7 +424,7 @@ class CdkPopoverEditCdkTableExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     type: CdkPopoverEditCdkTableExample,
     isStandalone: true,
     selector: "cdk-popover-edit-cdk-table-example",
@@ -562,7 +562,7 @@ class CdkPopoverEditCdkTableExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "21.0.0",
+  version: "21.0.3",
   ngImport: i0,
   type: CdkPopoverEditCdkTableExample,
   decorators: [{
@@ -642,7 +642,7 @@ class CdkPopoverEditCellSpanVanillaTableExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     ngImport: i0,
     type: CdkPopoverEditCellSpanVanillaTableExample,
     deps: [],
@@ -650,7 +650,7 @@ class CdkPopoverEditCellSpanVanillaTableExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     type: CdkPopoverEditCellSpanVanillaTableExample,
     isStandalone: true,
     selector: "cdk-popover-edit-cell-span-vanilla-table-example",
@@ -735,7 +735,7 @@ class CdkPopoverEditCellSpanVanillaTableExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "21.0.0",
+  version: "21.0.3",
   ngImport: i0,
   type: CdkPopoverEditCellSpanVanillaTableExample,
   decorators: [{
@@ -868,7 +868,7 @@ class CdkPopoverEditTabOutVanillaTableExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     ngImport: i0,
     type: CdkPopoverEditTabOutVanillaTableExample,
     deps: [],
@@ -876,7 +876,7 @@ class CdkPopoverEditTabOutVanillaTableExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     type: CdkPopoverEditTabOutVanillaTableExample,
     isStandalone: true,
     selector: "cdk-popover-edit-tab-out-vanilla-table-example",
@@ -952,7 +952,7 @@ class CdkPopoverEditTabOutVanillaTableExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "21.0.0",
+  version: "21.0.3",
   ngImport: i0,
   type: CdkPopoverEditTabOutVanillaTableExample,
   decorators: [{
@@ -1085,7 +1085,7 @@ class CdkPopoverEditVanillaTableExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     ngImport: i0,
     type: CdkPopoverEditVanillaTableExample,
     deps: [],
@@ -1093,7 +1093,7 @@ class CdkPopoverEditVanillaTableExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     type: CdkPopoverEditVanillaTableExample,
     isStandalone: true,
     selector: "cdk-popover-edit-vanilla-table-example",
@@ -1182,7 +1182,7 @@ class CdkPopoverEditVanillaTableExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "21.0.0",
+  version: "21.0.3",
   ngImport: i0,
   type: CdkPopoverEditVanillaTableExample,
   decorators: [{

@@ -20,7 +20,7 @@ class FocusMonitorDirectivesExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     ngImport: i0,
     type: FocusMonitorDirectivesExample,
     deps: [],
@@ -28,7 +28,7 @@ class FocusMonitorDirectivesExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     type: FocusMonitorDirectivesExample,
     isStandalone: true,
     selector: "focus-monitor-directives-example",
@@ -49,7 +49,7 @@ class FocusMonitorDirectivesExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "21.0.0",
+  version: "21.0.3",
   ngImport: i0,
   type: FocusMonitorDirectivesExample,
   decorators: [{
@@ -83,7 +83,7 @@ class FocusMonitorFocusViaExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     ngImport: i0,
     type: FocusMonitorFocusViaExample,
     deps: [],
@@ -91,7 +91,7 @@ class FocusMonitorFocusViaExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     type: FocusMonitorFocusViaExample,
     isStandalone: true,
     selector: "focus-monitor-focus-via-example",
@@ -139,7 +139,7 @@ class FocusMonitorFocusViaExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "21.0.0",
+  version: "21.0.3",
   ngImport: i0,
   type: FocusMonitorFocusViaExample,
   decorators: [{
@@ -186,7 +186,7 @@ class FocusMonitorOverviewExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     ngImport: i0,
     type: FocusMonitorOverviewExample,
     deps: [],
@@ -194,7 +194,7 @@ class FocusMonitorOverviewExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     type: FocusMonitorOverviewExample,
     isStandalone: true,
     selector: "focus-monitor-overview-example",
@@ -216,7 +216,7 @@ class FocusMonitorOverviewExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "21.0.0",
+  version: "21.0.3",
   ngImport: i0,
   type: FocusMonitorOverviewExample,
   decorators: [{
