@@ -1,6 +1,6 @@
 {
   "name": "@angular/components-examples",
-  "version": "21.0.3+sha-4256fcb",
+  "version": "21.0.3+sha-a01c404",
   "description": "Angular Components Examples",
   "private": true,
   "repository": {
@@ -259,15 +259,15 @@
   },
   "homepage": "https://github.com/angular/components#readme",
   "peerDependencies": {
-    "@angular/aria": "21.0.3+sha-4256fcb",
-    "@angular/cdk": "21.0.3+sha-4256fcb",
-    "@angular/cdk-experimental": "21.0.3+sha-4256fcb",
+    "@angular/aria": "21.0.3+sha-a01c404",
+    "@angular/cdk": "21.0.3+sha-a01c404",
+    "@angular/cdk-experimental": "21.0.3+sha-a01c404",
     "@angular/core": "^21.0.0 || ^22.0.0",
     "@angular/common": "^21.0.0 || ^22.0.0",
-    "@angular/material": "21.0.3+sha-4256fcb",
-    "@angular/material-experimental": "21.0.3+sha-4256fcb",
-    "@angular/material-luxon-adapter": "21.0.3+sha-4256fcb",
-    "@angular/material-date-fns-adapter": "21.0.3+sha-4256fcb"
+    "@angular/material": "21.0.3+sha-a01c404",
+    "@angular/material-experimental": "21.0.3+sha-a01c404",
+    "@angular/material-luxon-adapter": "21.0.3+sha-a01c404",
+    "@angular/material-date-fns-adapter": "21.0.3+sha-a01c404"
   },
   "devDependencies": {
     "@angular/aria": "workspace:*",
