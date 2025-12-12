@@ -27,7 +27,7 @@ class GridListDynamicExample {
   }];
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     ngImport: i0,
     type: GridListDynamicExample,
     deps: [],
@@ -35,7 +35,7 @@ class GridListDynamicExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     type: GridListDynamicExample,
     isStandalone: true,
     selector: "grid-list-dynamic-example",
@@ -61,7 +61,7 @@ class GridListDynamicExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "21.0.0",
+  version: "21.0.3",
   ngImport: i0,
   type: GridListDynamicExample,
   decorators: [{
@@ -77,7 +77,7 @@ i0.ɵɵngDeclareClassMetadata({
 class GridListOverviewExample {
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     ngImport: i0,
     type: GridListOverviewExample,
     deps: [],
@@ -85,7 +85,7 @@ class GridListOverviewExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     type: GridListOverviewExample,
     isStandalone: true,
     selector: "grid-list-overview-example",
@@ -112,7 +112,7 @@ class GridListOverviewExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "21.0.0",
+  version: "21.0.3",
   ngImport: i0,
   type: GridListOverviewExample,
   decorators: [{
@@ -129,7 +129,7 @@ i0.ɵɵngDeclareClassMetadata({
 class GridListHarnessExample {
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     ngImport: i0,
     type: GridListHarnessExample,
     deps: [],
@@ -137,7 +137,7 @@ class GridListHarnessExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     type: GridListHarnessExample,
     isStandalone: true,
     selector: "grid-list-harness-example",
@@ -175,7 +175,7 @@ class GridListHarnessExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "21.0.0",
+  version: "21.0.3",
   ngImport: i0,
   type: GridListHarnessExample,
   decorators: [{

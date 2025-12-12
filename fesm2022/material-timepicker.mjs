@@ -19,7 +19,7 @@ import { MatButtonModule } from '@angular/material/button';
 class TimepickerOverviewExample {
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     ngImport: i0,
     type: TimepickerOverviewExample,
     deps: [],
@@ -27,7 +27,7 @@ class TimepickerOverviewExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     type: TimepickerOverviewExample,
     isStandalone: true,
     selector: "timepicker-overview-example",
@@ -90,7 +90,7 @@ class TimepickerOverviewExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "21.0.0",
+  version: "21.0.3",
   ngImport: i0,
   type: TimepickerOverviewExample,
   decorators: [{
@@ -114,7 +114,7 @@ class TimepickerFormsExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     ngImport: i0,
     type: TimepickerFormsExample,
     deps: [],
@@ -122,7 +122,7 @@ class TimepickerFormsExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     type: TimepickerFormsExample,
     isStandalone: true,
     selector: "timepicker-forms-example",
@@ -203,7 +203,7 @@ class TimepickerFormsExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "21.0.0",
+  version: "21.0.3",
   ngImport: i0,
   type: TimepickerFormsExample,
   decorators: [{
@@ -223,7 +223,7 @@ class TimepickerDatepickerIntegrationExample {
   value;
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     ngImport: i0,
     type: TimepickerDatepickerIntegrationExample,
     deps: [],
@@ -231,7 +231,7 @@ class TimepickerDatepickerIntegrationExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     type: TimepickerDatepickerIntegrationExample,
     isStandalone: true,
     selector: "timepicker-datepicker-integration-example",
@@ -333,7 +333,7 @@ class TimepickerDatepickerIntegrationExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "21.0.0",
+  version: "21.0.3",
   ngImport: i0,
   type: TimepickerDatepickerIntegrationExample,
   decorators: [{
@@ -353,7 +353,7 @@ class TimepickerValidationExample {
   formControl = new FormControl(null);
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     ngImport: i0,
     type: TimepickerValidationExample,
     deps: [],
@@ -361,7 +361,7 @@ class TimepickerValidationExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     type: TimepickerValidationExample,
     isStandalone: true,
     selector: "timepicker-validation-example",
@@ -452,7 +452,7 @@ class TimepickerValidationExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "21.0.0",
+  version: "21.0.3",
   ngImport: i0,
   type: TimepickerValidationExample,
   decorators: [{
@@ -481,7 +481,7 @@ class TimepickerOptionsExample {
   }];
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     ngImport: i0,
     type: TimepickerOptionsExample,
     deps: [],
@@ -489,7 +489,7 @@ class TimepickerOptionsExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     type: TimepickerOptionsExample,
     isStandalone: true,
     selector: "timepicker-options-example",
@@ -552,7 +552,7 @@ class TimepickerOptionsExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "21.0.0",
+  version: "21.0.3",
   ngImport: i0,
   type: TimepickerOptionsExample,
   decorators: [{
@@ -570,7 +570,7 @@ i0.ɵɵngDeclareClassMetadata({
 class TimepickerCustomIconExample {
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     ngImport: i0,
     type: TimepickerCustomIconExample,
     deps: [],
@@ -578,7 +578,7 @@ class TimepickerCustomIconExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     type: TimepickerCustomIconExample,
     isStandalone: true,
     selector: "timepicker-custom-icon-example",
@@ -647,7 +647,7 @@ class TimepickerCustomIconExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "21.0.0",
+  version: "21.0.3",
   ngImport: i0,
   type: TimepickerCustomIconExample,
   decorators: [{
@@ -670,7 +670,7 @@ class TimepickerLocaleExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     ngImport: i0,
     type: TimepickerLocaleExample,
     deps: [],
@@ -678,7 +678,7 @@ class TimepickerLocaleExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     type: TimepickerLocaleExample,
     isStandalone: true,
     selector: "timepicker-locale-example",
@@ -768,7 +768,7 @@ class TimepickerLocaleExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "21.0.0",
+  version: "21.0.3",
   ngImport: i0,
   type: TimepickerLocaleExample,
   decorators: [{
@@ -793,7 +793,7 @@ class TimepickerHarnessExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     ngImport: i0,
     type: TimepickerHarnessExample,
     deps: [],
@@ -801,7 +801,7 @@ class TimepickerHarnessExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     type: TimepickerHarnessExample,
     isStandalone: true,
     selector: "timepicker-harness-example",
@@ -831,7 +831,7 @@ class TimepickerHarnessExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "21.0.0",
+  version: "21.0.3",
   ngImport: i0,
   type: TimepickerHarnessExample,
   decorators: [{

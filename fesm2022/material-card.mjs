@@ -11,7 +11,7 @@ import { MatChipsModule } from '@angular/material/chips';
 class CardOverviewExample {
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     ngImport: i0,
     type: CardOverviewExample,
     deps: [],
@@ -19,7 +19,7 @@ class CardOverviewExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     type: CardOverviewExample,
     isStandalone: true,
     selector: "card-overview-example",
@@ -80,7 +80,7 @@ class CardOverviewExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "21.0.0",
+  version: "21.0.3",
   ngImport: i0,
   type: CardOverviewExample,
   decorators: [{
@@ -98,7 +98,7 @@ i0.ɵɵngDeclareClassMetadata({
 class CardHarnessExample {
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     ngImport: i0,
     type: CardHarnessExample,
     deps: [],
@@ -106,7 +106,7 @@ class CardHarnessExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     type: CardHarnessExample,
     isStandalone: true,
     selector: "card-harness-example",
@@ -166,7 +166,7 @@ class CardHarnessExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "21.0.0",
+  version: "21.0.3",
   ngImport: i0,
   type: CardHarnessExample,
   decorators: [{
@@ -183,7 +183,7 @@ i0.ɵɵngDeclareClassMetadata({
 class CardActionsExample {
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     ngImport: i0,
     type: CardActionsExample,
     deps: [],
@@ -191,7 +191,7 @@ class CardActionsExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     type: CardActionsExample,
     isStandalone: true,
     selector: "card-actions-example",
@@ -239,7 +239,7 @@ class CardActionsExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "21.0.0",
+  version: "21.0.3",
   ngImport: i0,
   type: CardActionsExample,
   decorators: [{
@@ -259,7 +259,7 @@ class CardMediaSizeExample {
   originally bred for hunting.`;
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     ngImport: i0,
     type: CardMediaSizeExample,
     deps: [],
@@ -267,7 +267,7 @@ class CardMediaSizeExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     type: CardMediaSizeExample,
     isStandalone: true,
     selector: "card-media-size-example",
@@ -325,7 +325,7 @@ class CardMediaSizeExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "21.0.0",
+  version: "21.0.3",
   ngImport: i0,
   type: CardMediaSizeExample,
   decorators: [{
@@ -346,7 +346,7 @@ class CardFooterExample {
   usually kept as a companion animal or for showing.`;
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     ngImport: i0,
     type: CardFooterExample,
     deps: [],
@@ -354,7 +354,7 @@ class CardFooterExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     type: CardFooterExample,
     isStandalone: true,
     selector: "card-footer-example",
@@ -410,7 +410,7 @@ class CardFooterExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "21.0.0",
+  version: "21.0.3",
   ngImport: i0,
   type: CardFooterExample,
   decorators: [{

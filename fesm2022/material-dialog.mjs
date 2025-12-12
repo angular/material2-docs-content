@@ -23,7 +23,7 @@ class DialogContentExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     ngImport: i0,
     type: DialogContentExample,
     deps: [],
@@ -31,7 +31,7 @@ class DialogContentExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     type: DialogContentExample,
     isStandalone: true,
     selector: "dialog-content-example",
@@ -55,7 +55,7 @@ class DialogContentExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "21.0.0",
+  version: "21.0.3",
   ngImport: i0,
   type: DialogContentExample,
   decorators: [{
@@ -71,7 +71,7 @@ i0.ɵɵngDeclareClassMetadata({
 class DialogContentExampleDialog {
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     ngImport: i0,
     type: DialogContentExampleDialog,
     deps: [],
@@ -79,7 +79,7 @@ class DialogContentExampleDialog {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     type: DialogContentExampleDialog,
     isStandalone: true,
     selector: "dialog-content-example-dialog",
@@ -124,7 +124,7 @@ class DialogContentExampleDialog {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "21.0.0",
+  version: "21.0.3",
   ngImport: i0,
   type: DialogContentExampleDialog,
   decorators: [{
@@ -149,7 +149,7 @@ class DialogDataExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     ngImport: i0,
     type: DialogDataExample,
     deps: [],
@@ -157,7 +157,7 @@ class DialogDataExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     type: DialogDataExample,
     isStandalone: true,
     selector: "dialog-data-example",
@@ -177,7 +177,7 @@ class DialogDataExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "21.0.0",
+  version: "21.0.3",
   ngImport: i0,
   type: DialogDataExample,
   decorators: [{
@@ -193,7 +193,7 @@ class DialogDataExampleDialog {
   data = inject(MAT_DIALOG_DATA);
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     ngImport: i0,
     type: DialogDataExampleDialog,
     deps: [],
@@ -201,7 +201,7 @@ class DialogDataExampleDialog {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     type: DialogDataExampleDialog,
     isStandalone: true,
     selector: "dialog-data-example-dialog",
@@ -222,7 +222,7 @@ class DialogDataExampleDialog {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "21.0.0",
+  version: "21.0.3",
   ngImport: i0,
   type: DialogDataExampleDialog,
   decorators: [{
@@ -242,7 +242,7 @@ class DialogElementsExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     ngImport: i0,
     type: DialogElementsExample,
     deps: [],
@@ -250,7 +250,7 @@ class DialogElementsExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     type: DialogElementsExample,
     isStandalone: true,
     selector: "dialog-elements-example",
@@ -271,7 +271,7 @@ class DialogElementsExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "21.0.0",
+  version: "21.0.3",
   ngImport: i0,
   type: DialogElementsExample,
   decorators: [{
@@ -287,7 +287,7 @@ i0.ɵɵngDeclareClassMetadata({
 class DialogElementsExampleDialog {
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     ngImport: i0,
     type: DialogElementsExampleDialog,
     deps: [],
@@ -295,7 +295,7 @@ class DialogElementsExampleDialog {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     type: DialogElementsExampleDialog,
     isStandalone: true,
     selector: "dialog-elements-example-dialog",
@@ -337,7 +337,7 @@ class DialogElementsExampleDialog {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "21.0.0",
+  version: "21.0.3",
   ngImport: i0,
   type: DialogElementsExampleDialog,
   decorators: [{
@@ -375,7 +375,7 @@ class DialogOverviewExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     ngImport: i0,
     type: DialogOverviewExample,
     deps: [],
@@ -383,7 +383,7 @@ class DialogOverviewExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     type: DialogOverviewExample,
     isStandalone: true,
     selector: "dialog-overview-example",
@@ -456,7 +456,7 @@ class DialogOverviewExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "21.0.0",
+  version: "21.0.3",
   ngImport: i0,
   type: DialogOverviewExample,
   decorators: [{
@@ -493,7 +493,7 @@ class DialogOverviewExampleDialog {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     ngImport: i0,
     type: DialogOverviewExampleDialog,
     deps: [],
@@ -501,7 +501,7 @@ class DialogOverviewExampleDialog {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.1.0",
-    version: "21.0.0",
+    version: "21.0.3",
     type: DialogOverviewExampleDialog,
     isStandalone: true,
     selector: "dialog-overview-example-dialog",
@@ -594,7 +594,7 @@ class DialogOverviewExampleDialog {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "21.0.0",
+  version: "21.0.3",
   ngImport: i0,
   type: DialogOverviewExampleDialog,
   decorators: [{
@@ -631,7 +631,7 @@ class DialogFromMenuExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     ngImport: i0,
     type: DialogFromMenuExample,
     deps: [],
@@ -639,7 +639,7 @@ class DialogFromMenuExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.2.0",
-    version: "21.0.0",
+    version: "21.0.3",
     type: DialogFromMenuExample,
     isStandalone: true,
     selector: "dialog-from-menu-example",
@@ -690,7 +690,7 @@ class DialogFromMenuExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "21.0.0",
+  version: "21.0.3",
   ngImport: i0,
   type: DialogFromMenuExample,
   decorators: [{
@@ -714,7 +714,7 @@ i0.ɵɵngDeclareClassMetadata({
 class DialogFromMenuExampleDialog {
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     ngImport: i0,
     type: DialogFromMenuExampleDialog,
     deps: [],
@@ -722,7 +722,7 @@ class DialogFromMenuExampleDialog {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     type: DialogFromMenuExampleDialog,
     isStandalone: true,
     selector: "dialog-from-menu-dialog",
@@ -758,7 +758,7 @@ class DialogFromMenuExampleDialog {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "21.0.0",
+  version: "21.0.3",
   ngImport: i0,
   type: DialogFromMenuExampleDialog,
   decorators: [{
@@ -780,7 +780,7 @@ class DialogHarnessExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     ngImport: i0,
     type: DialogHarnessExample,
     deps: [],
@@ -788,7 +788,7 @@ class DialogHarnessExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.2.0",
-    version: "21.0.0",
+    version: "21.0.3",
     type: DialogHarnessExample,
     isStandalone: true,
     selector: "dialog-harness-example",
@@ -806,7 +806,7 @@ class DialogHarnessExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "21.0.0",
+  version: "21.0.3",
   ngImport: i0,
   type: DialogHarnessExample,
   decorators: [{
@@ -838,7 +838,7 @@ class DialogAnimationsExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     ngImport: i0,
     type: DialogAnimationsExample,
     deps: [],
@@ -846,7 +846,7 @@ class DialogAnimationsExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     type: DialogAnimationsExample,
     isStandalone: true,
     selector: "dialog-animations-example",
@@ -868,7 +868,7 @@ class DialogAnimationsExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "21.0.0",
+  version: "21.0.3",
   ngImport: i0,
   type: DialogAnimationsExample,
   decorators: [{
@@ -886,7 +886,7 @@ class DialogAnimationsExampleDialog {
   dialogRef = inject(MatDialogRef);
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     ngImport: i0,
     type: DialogAnimationsExampleDialog,
     deps: [],
@@ -894,7 +894,7 @@ class DialogAnimationsExampleDialog {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     type: DialogAnimationsExampleDialog,
     isStandalone: true,
     selector: "dialog-animations-example-dialog",
@@ -936,7 +936,7 @@ class DialogAnimationsExampleDialog {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "21.0.0",
+  version: "21.0.3",
   ngImport: i0,
   type: DialogAnimationsExampleDialog,
   decorators: [{

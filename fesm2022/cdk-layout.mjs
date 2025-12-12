@@ -23,7 +23,7 @@ class BreakpointObserverOverviewExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     ngImport: i0,
     type: BreakpointObserverOverviewExample,
     deps: [],
@@ -31,7 +31,7 @@ class BreakpointObserverOverviewExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     type: BreakpointObserverOverviewExample,
     isStandalone: true,
     selector: "breakpoint-observer-overview-example",
@@ -42,7 +42,7 @@ class BreakpointObserverOverviewExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "21.0.0",
+  version: "21.0.3",
   ngImport: i0,
   type: BreakpointObserverOverviewExample,
   decorators: [{

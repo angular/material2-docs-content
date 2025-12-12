@@ -57,7 +57,7 @@ class ChipsAutocompleteExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     ngImport: i0,
     type: ChipsAutocompleteExample,
     deps: [],
@@ -65,7 +65,7 @@ class ChipsAutocompleteExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     type: ChipsAutocompleteExample,
     isStandalone: true,
     selector: "chips-autocomplete-example",
@@ -194,7 +194,7 @@ class ChipsAutocompleteExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "21.0.0",
+  version: "21.0.3",
   ngImport: i0,
   type: ChipsAutocompleteExample,
   decorators: [{
@@ -246,7 +246,7 @@ class ChipsDragDropExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     ngImport: i0,
     type: ChipsDragDropExample,
     deps: [],
@@ -254,7 +254,7 @@ class ChipsDragDropExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     type: ChipsDragDropExample,
     isStandalone: true,
     selector: "chips-drag-drop-example",
@@ -296,7 +296,7 @@ class ChipsDragDropExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "21.0.0",
+  version: "21.0.3",
   ngImport: i0,
   type: ChipsDragDropExample,
   decorators: [{
@@ -361,7 +361,7 @@ class ChipsInputExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     ngImport: i0,
     type: ChipsInputExample,
     deps: [],
@@ -369,7 +369,7 @@ class ChipsInputExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     type: ChipsInputExample,
     isStandalone: true,
     selector: "chips-input-example",
@@ -434,7 +434,7 @@ class ChipsInputExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "21.0.0",
+  version: "21.0.3",
   ngImport: i0,
   type: ChipsInputExample,
   decorators: [{
@@ -452,7 +452,7 @@ i0.ɵɵngDeclareClassMetadata({
 class ChipsOverviewExample {
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     ngImport: i0,
     type: ChipsOverviewExample,
     deps: [],
@@ -460,7 +460,7 @@ class ChipsOverviewExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     type: ChipsOverviewExample,
     isStandalone: true,
     selector: "chips-overview-example",
@@ -487,7 +487,7 @@ class ChipsOverviewExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "21.0.0",
+  version: "21.0.3",
   ngImport: i0,
   type: ChipsOverviewExample,
   decorators: [{
@@ -505,7 +505,7 @@ class ChipsStackedExample {
   bestBoys = ['Samoyed', 'Akita Inu', 'Alaskan Malamute', 'Siberian Husky'];
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     ngImport: i0,
     type: ChipsStackedExample,
     deps: [],
@@ -513,7 +513,7 @@ class ChipsStackedExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     type: ChipsStackedExample,
     isStandalone: true,
     selector: "chips-stacked-example",
@@ -540,7 +540,7 @@ class ChipsStackedExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "21.0.0",
+  version: "21.0.3",
   ngImport: i0,
   type: ChipsStackedExample,
   decorators: [{
@@ -562,7 +562,7 @@ class ChipsHarnessExample {
   add = jasmine.createSpy('add spy');
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     ngImport: i0,
     type: ChipsHarnessExample,
     deps: [],
@@ -570,7 +570,7 @@ class ChipsHarnessExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     type: ChipsHarnessExample,
     isStandalone: true,
     selector: "chips-harness-example",
@@ -614,7 +614,7 @@ class ChipsHarnessExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "21.0.0",
+  version: "21.0.3",
   ngImport: i0,
   type: ChipsHarnessExample,
   decorators: [{
@@ -654,7 +654,7 @@ class ChipsFormControlExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     ngImport: i0,
     type: ChipsFormControlExample,
     deps: [],
@@ -662,7 +662,7 @@ class ChipsFormControlExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     type: ChipsFormControlExample,
     isStandalone: true,
     selector: "chips-form-control-example",
@@ -749,7 +749,7 @@ class ChipsFormControlExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "21.0.0",
+  version: "21.0.3",
   ngImport: i0,
   type: ChipsFormControlExample,
   decorators: [{
@@ -791,7 +791,7 @@ class ChipsReactiveFormExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     ngImport: i0,
     type: ChipsReactiveFormExample,
     deps: [],
@@ -799,7 +799,7 @@ class ChipsReactiveFormExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     type: ChipsReactiveFormExample,
     isStandalone: true,
     selector: "chips-reactive-form-example",
@@ -877,7 +877,7 @@ class ChipsReactiveFormExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "21.0.0",
+  version: "21.0.3",
   ngImport: i0,
   type: ChipsReactiveFormExample,
   decorators: [{
@@ -918,7 +918,7 @@ class ChipsTemplateFormExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     ngImport: i0,
     type: ChipsTemplateFormExample,
     deps: [],
@@ -926,7 +926,7 @@ class ChipsTemplateFormExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     type: ChipsTemplateFormExample,
     isStandalone: true,
     selector: "chips-template-form-example",
@@ -1004,7 +1004,7 @@ class ChipsTemplateFormExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "21.0.0",
+  version: "21.0.3",
   ngImport: i0,
   type: ChipsTemplateFormExample,
   decorators: [{
@@ -1022,7 +1022,7 @@ i0.ɵɵngDeclareClassMetadata({
 class ChipsAvatarExample {
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     ngImport: i0,
     type: ChipsAvatarExample,
     deps: [],
@@ -1030,7 +1030,7 @@ class ChipsAvatarExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     type: ChipsAvatarExample,
     isStandalone: true,
     selector: "chips-avatar-example",
@@ -1062,7 +1062,7 @@ class ChipsAvatarExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "21.0.0",
+  version: "21.0.3",
   ngImport: i0,
   type: ChipsAvatarExample,
   decorators: [{

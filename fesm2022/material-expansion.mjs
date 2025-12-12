@@ -18,7 +18,7 @@ class ExpansionExpandCollapseAllExample {
   accordion = viewChild.required(MatAccordion);
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     ngImport: i0,
     type: ExpansionExpandCollapseAllExample,
     deps: [],
@@ -26,7 +26,7 @@ class ExpansionExpandCollapseAllExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.2.0",
-    version: "21.0.0",
+    version: "21.0.3",
     type: ExpansionExpandCollapseAllExample,
     isStandalone: true,
     selector: "expansion-expand-collapse-all-example",
@@ -130,7 +130,7 @@ class ExpansionExpandCollapseAllExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "21.0.0",
+  version: "21.0.3",
   ngImport: i0,
   type: ExpansionExpandCollapseAllExample,
   decorators: [{
@@ -160,7 +160,7 @@ class ExpansionOverviewExample {
   }] : []));
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     ngImport: i0,
     type: ExpansionOverviewExample,
     deps: [],
@@ -168,7 +168,7 @@ class ExpansionOverviewExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     type: ExpansionOverviewExample,
     isStandalone: true,
     selector: "expansion-overview-example",
@@ -209,7 +209,7 @@ class ExpansionOverviewExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "21.0.0",
+  version: "21.0.3",
   ngImport: i0,
   type: ExpansionOverviewExample,
   decorators: [{
@@ -238,7 +238,7 @@ class ExpansionStepsExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     ngImport: i0,
     type: ExpansionStepsExample,
     deps: [],
@@ -246,7 +246,7 @@ class ExpansionStepsExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     type: ExpansionStepsExample,
     isStandalone: true,
     selector: "expansion-steps-example",
@@ -347,7 +347,7 @@ class ExpansionStepsExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "21.0.0",
+  version: "21.0.3",
   ngImport: i0,
   type: ExpansionStepsExample,
   decorators: [{
@@ -366,7 +366,7 @@ i0.ɵɵngDeclareClassMetadata({
 class ExpansionHarnessExample {
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     ngImport: i0,
     type: ExpansionHarnessExample,
     deps: [],
@@ -374,7 +374,7 @@ class ExpansionHarnessExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "21.0.0",
+    version: "21.0.3",
     type: ExpansionHarnessExample,
     isStandalone: true,
     selector: "expansion-harness-example",
@@ -411,7 +411,7 @@ class ExpansionHarnessExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "21.0.0",
+  version: "21.0.3",
   ngImport: i0,
   type: ExpansionHarnessExample,
   decorators: [{
