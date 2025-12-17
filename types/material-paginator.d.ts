@@ -13,7 +13,7 @@ declare class PaginatorConfigurableExample {
     showPageSizeOptions: boolean;
     showFirstLastButtons: boolean;
     disabled: boolean;
-    pageEvent: PageEvent;
+    pageEvent: PageEvent | undefined;
     handlePageEvent(e: PageEvent): void;
     setPageSizeOptions(setPageSizeOptionsInput: string): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<PaginatorConfigurableExample, never>;

@@ -14,7 +14,6 @@ interface Dessert {
 declare class SortOverviewExample {
     desserts: Dessert[];
     sortedData: Dessert[];
-    constructor();
     sortData(sort: Sort): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<SortOverviewExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<SortOverviewExample, "sort-overview-example", never, {}, {}, never, never, true, never>;

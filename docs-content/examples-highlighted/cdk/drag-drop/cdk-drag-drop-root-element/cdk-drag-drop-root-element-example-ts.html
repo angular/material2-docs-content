@@ -25,9 +25,9 @@
   <span class="hljs-keyword">private</span> _injector = <span class="hljs-title function_">inject</span>(<span class="hljs-title class_">Injector</span>);
   <span class="hljs-keyword">private</span> _viewContainerRef = <span class="hljs-title function_">inject</span>(<span class="hljs-title class_">ViewContainerRef</span>);
 
-  <span class="hljs-meta">@ViewChild</span>(<span class="hljs-title class_">TemplateRef</span>) <span class="hljs-attr">_dialogTemplate</span>: <span class="hljs-title class_">TemplateRef</span>&lt;<span class="hljs-built_in">any</span>&gt;;
-  <span class="hljs-keyword">private</span> <span class="hljs-attr">_overlayRef</span>: <span class="hljs-title class_">OverlayRef</span>;
-  <span class="hljs-keyword">private</span> <span class="hljs-attr">_portal</span>: <span class="hljs-title class_">TemplatePortal</span>;
+  <span class="hljs-meta">@ViewChild</span>(<span class="hljs-title class_">TemplateRef</span>) _dialogTemplate!: <span class="hljs-title class_">TemplateRef</span>&lt;<span class="hljs-built_in">any</span>&gt;;
+  <span class="hljs-keyword">private</span> _overlayRef!: <span class="hljs-title class_">OverlayRef</span>;
+  <span class="hljs-keyword">private</span> _portal!: <span class="hljs-title class_">TemplatePortal</span>;
 
   <span class="hljs-title function_">ngAfterViewInit</span>(<span class="hljs-params"></span>) {
     <span class="hljs-variable language_">this</span>.<span class="hljs-property">_portal</span> = <span class="hljs-keyword">new</span> <span class="hljs-title class_">TemplatePortal</span>(<span class="hljs-variable language_">this</span>.<span class="hljs-property">_dialogTemplate</span>, <span class="hljs-variable language_">this</span>.<span class="hljs-property">_viewContainerRef</span>);

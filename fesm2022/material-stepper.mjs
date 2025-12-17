@@ -1154,7 +1154,7 @@ i0.ɵɵngDeclareClassMetadata({
 class StepperIntlExample {
   _formBuilder = inject(FormBuilder);
   _matStepperIntl = inject(MatStepperIntl);
-  optionalLabelText;
+  optionalLabelText = '';
   optionalLabelTextChoices = ['Option 1', 'Option 2', 'Option 3'];
   firstFormGroup = this._formBuilder.group({
     firstCtrl: ['', Validators.required]

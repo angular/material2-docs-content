@@ -1,4 +1,4 @@
-<span class="hljs-keyword">import</span> {<span class="hljs-title class_">Component</span>, <span class="hljs-title class_">OnInit</span>, inject} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">Component</span>, inject} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
 <span class="hljs-keyword">import</span> {<span class="hljs-title class_">FormBuilder</span>, <span class="hljs-title class_">FormsModule</span>, <span class="hljs-title class_">ReactiveFormsModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/forms&#x27;</span>;
 <span class="hljs-keyword">import</span> {<span class="hljs-title class_">Observable</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;rxjs&#x27;</span>;
 <span class="hljs-keyword">import</span> {startWith, map} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;rxjs/operators&#x27;</span>;
@@ -33,7 +33,7 @@
     <span class="hljs-title class_">AsyncPipe</span>,
   ],
 })
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">AutocompleteOptgroupExample</span> <span class="hljs-keyword">implements</span> <span class="hljs-title class_">OnInit</span> {
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">AutocompleteOptgroupExample</span> {
   <span class="hljs-keyword">private</span> _formBuilder = <span class="hljs-title function_">inject</span>(<span class="hljs-title class_">FormBuilder</span>);
 
   stateForm = <span class="hljs-variable language_">this</span>.<span class="hljs-property">_formBuilder</span>.<span class="hljs-title function_">group</span>({
@@ -139,7 +139,7 @@
 
   <span class="hljs-attr">stateGroupOptions</span>: <span class="hljs-title class_">Observable</span>&lt;<span class="hljs-title class_">StateGroup</span>[]&gt;;
 
-  <span class="hljs-title function_">ngOnInit</span>(<span class="hljs-params"></span>) {
+  <span class="hljs-title function_">constructor</span>(<span class="hljs-params"></span>) {
     <span class="hljs-variable language_">this</span>.<span class="hljs-property">stateGroupOptions</span> = <span class="hljs-variable language_">this</span>.<span class="hljs-property">stateForm</span>.<span class="hljs-title function_">get</span>(<span class="hljs-string">&#x27;stateGroup&#x27;</span>)!.<span class="hljs-property">valueChanges</span>.<span class="hljs-title function_">pipe</span>(
       <span class="hljs-title function_">startWith</span>(<span class="hljs-string">&#x27;&#x27;</span>),
       <span class="hljs-title function_">map</span>(<span class="hljs-function"><span class="hljs-params">value</span> =&gt;</span> <span class="hljs-variable language_">this</span>.<span class="hljs-title function_">_filterGroup</span>(value || <span class="hljs-string">&#x27;&#x27;</span>)),

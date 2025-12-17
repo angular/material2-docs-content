@@ -27,11 +27,7 @@
     {<span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Gingerbread&#x27;</span>, <span class="hljs-attr">calories</span>: <span class="hljs-number">356</span>, <span class="hljs-attr">fat</span>: <span class="hljs-number">16</span>, <span class="hljs-attr">carbs</span>: <span class="hljs-number">49</span>, <span class="hljs-attr">protein</span>: <span class="hljs-number">4</span>},
   ];
 
-  <span class="hljs-attr">sortedData</span>: <span class="hljs-title class_">Dessert</span>[];
-
-  <span class="hljs-title function_">constructor</span>(<span class="hljs-params"></span>) {
-    <span class="hljs-variable language_">this</span>.<span class="hljs-property">sortedData</span> = <span class="hljs-variable language_">this</span>.<span class="hljs-property">desserts</span>.<span class="hljs-title function_">slice</span>();
-  }
+  sortedData = <span class="hljs-variable language_">this</span>.<span class="hljs-property">desserts</span>.<span class="hljs-title function_">slice</span>();
 
   <span class="hljs-title function_">sortData</span>(<span class="hljs-params"><span class="hljs-attr">sort</span>: <span class="hljs-title class_">Sort</span></span>) {
     <span class="hljs-keyword">const</span> data = <span class="hljs-variable language_">this</span>.<span class="hljs-property">desserts</span>.<span class="hljs-title function_">slice</span>();

@@ -56,10 +56,10 @@
 })
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">TableOverviewExample</span> <span class="hljs-keyword">implements</span> <span class="hljs-title class_">AfterViewInit</span> {
   <span class="hljs-attr">displayedColumns</span>: <span class="hljs-built_in">string</span>[] = [<span class="hljs-string">&#x27;id&#x27;</span>, <span class="hljs-string">&#x27;name&#x27;</span>, <span class="hljs-string">&#x27;progress&#x27;</span>, <span class="hljs-string">&#x27;fruit&#x27;</span>];
-  <span class="hljs-attr">dataSource</span>: <span class="hljs-title class_">MatTableDataSource</span>&lt;<span class="hljs-title class_">UserData</span>&gt;;
+  dataSource!: <span class="hljs-title class_">MatTableDataSource</span>&lt;<span class="hljs-title class_">UserData</span>&gt;;
 
-  <span class="hljs-meta">@ViewChild</span>(<span class="hljs-title class_">MatPaginator</span>) <span class="hljs-attr">paginator</span>: <span class="hljs-title class_">MatPaginator</span>;
-  <span class="hljs-meta">@ViewChild</span>(<span class="hljs-title class_">MatSort</span>) <span class="hljs-attr">sort</span>: <span class="hljs-title class_">MatSort</span>;
+  <span class="hljs-meta">@ViewChild</span>(<span class="hljs-title class_">MatPaginator</span>) paginator!: <span class="hljs-title class_">MatPaginator</span>;
+  <span class="hljs-meta">@ViewChild</span>(<span class="hljs-title class_">MatSort</span>) sort!: <span class="hljs-title class_">MatSort</span>;
 
   <span class="hljs-title function_">constructor</span>(<span class="hljs-params"></span>) {
     <span class="hljs-comment">// Create 100 users</span>

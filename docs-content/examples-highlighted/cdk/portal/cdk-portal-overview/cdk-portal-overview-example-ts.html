@@ -27,13 +27,13 @@
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">CdkPortalOverviewExample</span> <span class="hljs-keyword">implements</span> <span class="hljs-title class_">AfterViewInit</span> {
   <span class="hljs-keyword">private</span> _viewContainerRef = <span class="hljs-title function_">inject</span>(<span class="hljs-title class_">ViewContainerRef</span>);
 
-  <span class="hljs-meta">@ViewChild</span>(<span class="hljs-string">&#x27;templatePortalContent&#x27;</span>) <span class="hljs-attr">templatePortalContent</span>: <span class="hljs-title class_">TemplateRef</span>&lt;<span class="hljs-built_in">unknown</span>&gt;;
-  <span class="hljs-meta">@ViewChild</span>(<span class="hljs-string">&#x27;domPortalContent&#x27;</span>) <span class="hljs-attr">domPortalContent</span>: <span class="hljs-title class_">ElementRef</span>&lt;<span class="hljs-title class_">HTMLElement</span>&gt;;
+  <span class="hljs-meta">@ViewChild</span>(<span class="hljs-string">&#x27;templatePortalContent&#x27;</span>) templatePortalContent!: <span class="hljs-title class_">TemplateRef</span>&lt;<span class="hljs-built_in">unknown</span>&gt;;
+  <span class="hljs-meta">@ViewChild</span>(<span class="hljs-string">&#x27;domPortalContent&#x27;</span>) domPortalContent!: <span class="hljs-title class_">ElementRef</span>&lt;<span class="hljs-title class_">HTMLElement</span>&gt;;
 
-  <span class="hljs-attr">selectedPortal</span>: <span class="hljs-title class_">Portal</span>&lt;<span class="hljs-built_in">any</span>&gt;;
-  <span class="hljs-attr">componentPortal</span>: <span class="hljs-title class_">ComponentPortal</span>&lt;<span class="hljs-title class_">ComponentPortalExample</span>&gt;;
-  <span class="hljs-attr">templatePortal</span>: <span class="hljs-title class_">TemplatePortal</span>&lt;<span class="hljs-built_in">any</span>&gt;;
-  <span class="hljs-attr">domPortal</span>: <span class="hljs-title class_">DomPortal</span>&lt;<span class="hljs-built_in">any</span>&gt;;
+  selectedPortal!: <span class="hljs-title class_">Portal</span>&lt;<span class="hljs-built_in">any</span>&gt;;
+  componentPortal!: <span class="hljs-title class_">ComponentPortal</span>&lt;<span class="hljs-title class_">ComponentPortalExample</span>&gt;;
+  templatePortal!: <span class="hljs-title class_">TemplatePortal</span>&lt;<span class="hljs-built_in">any</span>&gt;;
+  domPortal!: <span class="hljs-title class_">DomPortal</span>&lt;<span class="hljs-built_in">any</span>&gt;;
 
   <span class="hljs-title function_">ngAfterViewInit</span>(<span class="hljs-params"></span>) {
     <span class="hljs-variable language_">this</span>.<span class="hljs-property">componentPortal</span> = <span class="hljs-keyword">new</span> <span class="hljs-title class_">ComponentPortal</span>(<span class="hljs-title class_">ComponentPortalExample</span>);

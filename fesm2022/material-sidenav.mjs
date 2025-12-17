@@ -586,7 +586,7 @@ i0.ɵɵngDeclareClassMetadata({
 
 class SidenavOpenCloseExample {
   events = [];
-  opened;
+  opened = false;
   shouldRun = /(^|.)(stackblitz|webcontainer).(io|com)$/.test(window.location.host);
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",

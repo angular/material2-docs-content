@@ -34,7 +34,7 @@
   <span class="hljs-attr">imports</span>: [<span class="hljs-title class_">CdkDropList</span>, <span class="hljs-title class_">CdkDrag</span>, <span class="hljs-title class_">MatTableModule</span>, <span class="hljs-title class_">MatIconModule</span>],
 })
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">CdkDragDropTableExample</span> {
-  <span class="hljs-meta">@ViewChild</span>(<span class="hljs-string">&#x27;table&#x27;</span>, {<span class="hljs-attr">static</span>: <span class="hljs-literal">true</span>}) <span class="hljs-attr">table</span>: <span class="hljs-title class_">MatTable</span>&lt;<span class="hljs-title class_">PeriodicElement</span>&gt;;
+  <span class="hljs-meta">@ViewChild</span>(<span class="hljs-string">&#x27;table&#x27;</span>, {<span class="hljs-attr">static</span>: <span class="hljs-literal">true</span>}) table!: <span class="hljs-title class_">MatTable</span>&lt;<span class="hljs-title class_">PeriodicElement</span>&gt;;
 
   <span class="hljs-attr">displayedColumns</span>: <span class="hljs-built_in">string</span>[] = [<span class="hljs-string">&#x27;position&#x27;</span>, <span class="hljs-string">&#x27;name&#x27;</span>, <span class="hljs-string">&#x27;weight&#x27;</span>, <span class="hljs-string">&#x27;symbol&#x27;</span>, <span class="hljs-string">&#x27;quantity&#x27;</span>];
   dataSource = <span class="hljs-variable constant_">ELEMENT_DATA</span>;

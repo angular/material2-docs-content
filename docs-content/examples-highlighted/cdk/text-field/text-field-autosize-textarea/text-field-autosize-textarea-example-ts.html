@@ -14,7 +14,7 @@
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">TextFieldAutosizeTextareaExample</span> {
   <span class="hljs-keyword">private</span> _injector = <span class="hljs-title function_">inject</span>(<span class="hljs-title class_">Injector</span>);
 
-  <span class="hljs-meta">@ViewChild</span>(<span class="hljs-string">&#x27;autosize&#x27;</span>) <span class="hljs-attr">autosize</span>: <span class="hljs-title class_">CdkTextareaAutosize</span>;
+  <span class="hljs-meta">@ViewChild</span>(<span class="hljs-string">&#x27;autosize&#x27;</span>) autosize!: <span class="hljs-title class_">CdkTextareaAutosize</span>;
 
   <span class="hljs-title function_">triggerResize</span>(<span class="hljs-params"></span>) {
     <span class="hljs-comment">// Wait for content to render, then trigger textarea resize.</span>

@@ -34,7 +34,7 @@
   <span class="hljs-keyword">private</span> _formBuilder = <span class="hljs-title function_">inject</span>(<span class="hljs-title class_">FormBuilder</span>);
   <span class="hljs-keyword">private</span> _matStepperIntl = <span class="hljs-title function_">inject</span>(<span class="hljs-title class_">MatStepperIntl</span>);
 
-  <span class="hljs-attr">optionalLabelText</span>: <span class="hljs-built_in">string</span>;
+  optionalLabelText = <span class="hljs-string">&#x27;&#x27;</span>;
   <span class="hljs-attr">optionalLabelTextChoices</span>: <span class="hljs-built_in">string</span>[] = [<span class="hljs-string">&#x27;Option 1&#x27;</span>, <span class="hljs-string">&#x27;Option 2&#x27;</span>, <span class="hljs-string">&#x27;Option 3&#x27;</span>];
   firstFormGroup = <span class="hljs-variable language_">this</span>.<span class="hljs-property">_formBuilder</span>.<span class="hljs-title function_">group</span>({
     <span class="hljs-attr">firstCtrl</span>: [<span class="hljs-string">&#x27;&#x27;</span>, <span class="hljs-title class_">Validators</span>.<span class="hljs-property">required</span>],

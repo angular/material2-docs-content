@@ -6,7 +6,7 @@ import * as i1 from '@angular/material/radio';
 import { MatRadioModule } from '@angular/material/radio';
 
 class RadioNgModelExample {
-  favoriteSeason;
+  favoriteSeason = '';
   seasons = ['Winter', 'Spring', 'Summer', 'Autumn'];
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",

@@ -20,14 +20,10 @@
   ],
 })
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">AutocompleteRequireSelectionExample</span> {
-  <span class="hljs-meta">@ViewChild</span>(<span class="hljs-string">&#x27;input&#x27;</span>) <span class="hljs-attr">input</span>: <span class="hljs-title class_">ElementRef</span>&lt;<span class="hljs-title class_">HTMLInputElement</span>&gt;;
+  <span class="hljs-meta">@ViewChild</span>(<span class="hljs-string">&#x27;input&#x27;</span>) input!: <span class="hljs-title class_">ElementRef</span>&lt;<span class="hljs-title class_">HTMLInputElement</span>&gt;;
   myControl = <span class="hljs-keyword">new</span> <span class="hljs-title class_">FormControl</span>(<span class="hljs-string">&#x27;&#x27;</span>);
   <span class="hljs-attr">options</span>: <span class="hljs-built_in">string</span>[] = [<span class="hljs-string">&#x27;One&#x27;</span>, <span class="hljs-string">&#x27;Two&#x27;</span>, <span class="hljs-string">&#x27;Three&#x27;</span>, <span class="hljs-string">&#x27;Four&#x27;</span>, <span class="hljs-string">&#x27;Five&#x27;</span>];
-  <span class="hljs-attr">filteredOptions</span>: <span class="hljs-built_in">string</span>[];
-
-  <span class="hljs-title function_">constructor</span>(<span class="hljs-params"></span>) {
-    <span class="hljs-variable language_">this</span>.<span class="hljs-property">filteredOptions</span> = <span class="hljs-variable language_">this</span>.<span class="hljs-property">options</span>.<span class="hljs-title function_">slice</span>();
-  }
+  <span class="hljs-attr">filteredOptions</span>: <span class="hljs-built_in">string</span>[] = <span class="hljs-variable language_">this</span>.<span class="hljs-property">options</span>.<span class="hljs-title function_">slice</span>();
 
   <span class="hljs-title function_">filter</span>(): <span class="hljs-built_in">void</span> {
     <span class="hljs-keyword">const</span> filterValue = <span class="hljs-variable language_">this</span>.<span class="hljs-property">input</span>.<span class="hljs-property">nativeElement</span>.<span class="hljs-property">value</span>.<span class="hljs-title function_">toLowerCase</span>();

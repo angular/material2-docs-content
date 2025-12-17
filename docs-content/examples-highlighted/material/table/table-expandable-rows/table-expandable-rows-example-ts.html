@@ -16,7 +16,7 @@
   dataSource = <span class="hljs-variable constant_">ELEMENT_DATA</span>;
   columnsToDisplay = [<span class="hljs-string">&#x27;name&#x27;</span>, <span class="hljs-string">&#x27;weight&#x27;</span>, <span class="hljs-string">&#x27;symbol&#x27;</span>, <span class="hljs-string">&#x27;position&#x27;</span>];
   columnsToDisplayWithExpand = [...<span class="hljs-variable language_">this</span>.<span class="hljs-property">columnsToDisplay</span>, <span class="hljs-string">&#x27;expand&#x27;</span>];
-  <span class="hljs-attr">expandedElement</span>: <span class="hljs-title class_">PeriodicElement</span> | <span class="hljs-literal">null</span>;
+  <span class="hljs-attr">expandedElement</span>: <span class="hljs-title class_">PeriodicElement</span> | <span class="hljs-literal">null</span> = <span class="hljs-literal">null</span>;
 
   <span class="hljs-comment">/** Checks whether an element is expanded. */</span>
   <span class="hljs-title function_">isExpanded</span>(<span class="hljs-params"><span class="hljs-attr">element</span>: <span class="hljs-title class_">PeriodicElement</span></span>) {

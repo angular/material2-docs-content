@@ -14,10 +14,10 @@
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">TextFieldAutofillMonitorExample</span> <span class="hljs-keyword">implements</span> <span class="hljs-title class_">AfterViewInit</span>, <span class="hljs-title class_">OnDestroy</span> {
   <span class="hljs-keyword">private</span> _autofill = <span class="hljs-title function_">inject</span>(<span class="hljs-title class_">AutofillMonitor</span>);
 
-  <span class="hljs-meta">@ViewChild</span>(<span class="hljs-string">&#x27;first&#x27;</span>, {<span class="hljs-attr">read</span>: <span class="hljs-title class_">ElementRef</span>}) <span class="hljs-attr">firstName</span>: <span class="hljs-title class_">ElementRef</span>&lt;<span class="hljs-title class_">HTMLElement</span>&gt;;
-  <span class="hljs-meta">@ViewChild</span>(<span class="hljs-string">&#x27;last&#x27;</span>, {<span class="hljs-attr">read</span>: <span class="hljs-title class_">ElementRef</span>}) <span class="hljs-attr">lastName</span>: <span class="hljs-title class_">ElementRef</span>&lt;<span class="hljs-title class_">HTMLElement</span>&gt;;
-  <span class="hljs-attr">firstNameAutofilled</span>: <span class="hljs-built_in">boolean</span>;
-  <span class="hljs-attr">lastNameAutofilled</span>: <span class="hljs-built_in">boolean</span>;
+  <span class="hljs-meta">@ViewChild</span>(<span class="hljs-string">&#x27;first&#x27;</span>, {<span class="hljs-attr">read</span>: <span class="hljs-title class_">ElementRef</span>}) firstName!: <span class="hljs-title class_">ElementRef</span>&lt;<span class="hljs-title class_">HTMLElement</span>&gt;;
+  <span class="hljs-meta">@ViewChild</span>(<span class="hljs-string">&#x27;last&#x27;</span>, {<span class="hljs-attr">read</span>: <span class="hljs-title class_">ElementRef</span>}) lastName!: <span class="hljs-title class_">ElementRef</span>&lt;<span class="hljs-title class_">HTMLElement</span>&gt;;
+  firstNameAutofilled = <span class="hljs-literal">false</span>;
+  lastNameAutofilled = <span class="hljs-literal">false</span>;
 
   <span class="hljs-title function_">ngAfterViewInit</span>(<span class="hljs-params"></span>) {
     <span class="hljs-variable language_">this</span>.<span class="hljs-property">_autofill</span>

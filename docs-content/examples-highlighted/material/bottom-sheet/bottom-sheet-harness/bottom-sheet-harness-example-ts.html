@@ -16,7 +16,7 @@
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">BottomSheetHarnessExample</span> {
   <span class="hljs-keyword">readonly</span> bottomSheet = <span class="hljs-title function_">inject</span>(<span class="hljs-title class_">MatBottomSheet</span>);
 
-  <span class="hljs-meta">@ViewChild</span>(<span class="hljs-title class_">TemplateRef</span>) <span class="hljs-attr">template</span>: <span class="hljs-title class_">TemplateRef</span>&lt;<span class="hljs-built_in">any</span>&gt;;
+  <span class="hljs-meta">@ViewChild</span>(<span class="hljs-title class_">TemplateRef</span>) template!: <span class="hljs-title class_">TemplateRef</span>&lt;<span class="hljs-built_in">any</span>&gt;;
 
   <span class="hljs-title function_">open</span>(<span class="hljs-params"><span class="hljs-attr">config</span>?: <span class="hljs-title class_">MatBottomSheetConfig</span></span>) {
     <span class="hljs-keyword">return</span> <span class="hljs-variable language_">this</span>.<span class="hljs-property">bottomSheet</span>.<span class="hljs-title function_">open</span>(<span class="hljs-variable language_">this</span>.<span class="hljs-property">template</span>, config);

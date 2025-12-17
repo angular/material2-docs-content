@@ -17,7 +17,7 @@ class AutocompleteAutoActiveFirstOptionExample {
   myControl = new FormControl('');
   options = ['One', 'Two', 'Three'];
   filteredOptions;
-  ngOnInit() {
+  constructor() {
     this.filteredOptions = this.myControl.valueChanges.pipe(startWith(''), map(value => this._filter(value || '')));
   }
   _filter(value) {
@@ -142,7 +142,8 @@ i0.ɵɵngDeclareClassMetadata({
       template: "<form class=\"example-form\">\n  <mat-form-field class=\"example-full-width\">\n    <mat-label>Number</mat-label>\n    <input type=\"text\"\n           placeholder=\"Pick one\"\n           aria-label=\"Number\"\n           matInput\n           [formControl]=\"myControl\"\n           [matAutocomplete]=\"auto\">\n    <mat-autocomplete autoActiveFirstOption #auto=\"matAutocomplete\">\n      @for (option of filteredOptions | async; track option) {\n        <mat-option [value]=\"option\">{{option}}</mat-option>\n      }\n    </mat-autocomplete>\n  </mat-form-field>\n</form>\n",
       styles: [".example-form {\n  min-width: 150px;\n  max-width: 500px;\n  width: 100%;\n}\n\n.example-full-width {\n  width: 100%;\n}\n"]
     }]
-  }]
+  }],
+  ctorParameters: () => []
 });
 
 class AutocompleteDisplayExample {
@@ -155,7 +156,7 @@ class AutocompleteDisplayExample {
     name: 'Igor'
   }];
   filteredOptions;
-  ngOnInit() {
+  constructor() {
     this.filteredOptions = this.myControl.valueChanges.pipe(startWith(''), map(value => {
       const name = typeof value === 'string' ? value : value?.name;
       return name ? this._filter(name) : this.options.slice();
@@ -286,14 +287,15 @@ i0.ɵɵngDeclareClassMetadata({
       template: "<form class=\"example-form\">\n  <mat-form-field class=\"example-full-width\">\n    <mat-label>Assignee</mat-label>\n    <input type=\"text\" matInput [formControl]=\"myControl\" [matAutocomplete]=\"auto\">\n    <mat-autocomplete #auto=\"matAutocomplete\" [displayWith]=\"displayFn\">\n      @for (option of filteredOptions | async; track option) {\n        <mat-option [value]=\"option\">{{option.name}}</mat-option>\n      }\n    </mat-autocomplete>\n  </mat-form-field>\n</form>\n",
       styles: [".example-form {\n  min-width: 150px;\n  max-width: 500px;\n  width: 100%;\n}\n\n.example-full-width {\n  width: 100%;\n}\n"]
     }]
-  }]
+  }],
+  ctorParameters: () => []
 });
 
 class AutocompleteFilterExample {
   myControl = new FormControl('');
   options = ['One', 'Two', 'Three'];
   filteredOptions;
-  ngOnInit() {
+  constructor() {
     this.filteredOptions = this.myControl.valueChanges.pipe(startWith(''), map(value => this._filter(value || '')));
   }
   _filter(value) {
@@ -418,7 +420,8 @@ i0.ɵɵngDeclareClassMetadata({
       template: "<form class=\"example-form\">\n  <mat-form-field class=\"example-full-width\">\n    <mat-label>Number</mat-label>\n    <input type=\"text\"\n           placeholder=\"Pick one\"\n           aria-label=\"Number\"\n           matInput\n           [formControl]=\"myControl\"\n           [matAutocomplete]=\"auto\">\n    <mat-autocomplete #auto=\"matAutocomplete\">\n      @for (option of filteredOptions | async; track option) {\n        <mat-option [value]=\"option\">{{option}}</mat-option>\n      }\n    </mat-autocomplete>\n  </mat-form-field>\n</form>\n",
       styles: [".example-form {\n  min-width: 150px;\n  max-width: 500px;\n  width: 100%;\n}\n\n.example-full-width {\n  width: 100%;\n}\n"]
     }]
-  }]
+  }],
+  ctorParameters: () => []
 });
 
 const _filter = (opt, value) => {
@@ -489,7 +492,7 @@ class AutocompleteOptgroupExample {
     names: ['Washington', 'West Virginia', 'Wisconsin', 'Wyoming']
   }];
   stateGroupOptions;
-  ngOnInit() {
+  constructor() {
     this.stateGroupOptions = this.stateForm.get('stateGroup').valueChanges.pipe(startWith(''), map(value => this._filterGroup(value || '')));
   }
   _filterGroup(value) {
@@ -627,7 +630,8 @@ i0.ɵɵngDeclareClassMetadata({
       imports: [FormsModule, ReactiveFormsModule, MatFormFieldModule, MatInputModule, MatAutocompleteModule, AsyncPipe],
       template: "<form [formGroup]=\"stateForm\">\n  <mat-form-field>\n    <mat-label>States Group</mat-label>\n    <input type=\"text\"\n           matInput\n           formControlName=\"stateGroup\"\n           required\n           [matAutocomplete]=\"autoGroup\">\n<!-- #docregion mat-autocomplete -->\n      <mat-autocomplete #autoGroup=\"matAutocomplete\">\n        @for (group of stateGroupOptions | async; track group) {\n          <mat-optgroup [label]=\"group.letter\">\n            @for (name of group.names; track name) {\n              <mat-option [value]=\"name\">{{name}}</mat-option>\n            }\n          </mat-optgroup>\n        }\n    </mat-autocomplete>\n<!-- #enddocregion mat-autocomplete -->\n  </mat-form-field>\n</form>\n"
     }]
-  }]
+  }],
+  ctorParameters: () => []
 });
 
 class AutocompleteOverviewExample {
@@ -793,7 +797,7 @@ class AutocompletePlainInputExample {
   control = new FormControl('');
   streets = ['Champs-Élysées', 'Lombard Street', 'Abbey Road', 'Fifth Avenue'];
   filteredStreets;
-  ngOnInit() {
+  constructor() {
     this.filteredStreets = this.control.valueChanges.pipe(startWith(''), map(value => this._filter(value || '')));
   }
   _filter(value) {
@@ -899,7 +903,8 @@ i0.ɵɵngDeclareClassMetadata({
       template: "<form class=\"example-form\">\n  <input type=\"text\"\n         placeholder=\"Search for a street\"\n         [formControl]=\"control\"\n         [matAutocomplete]=\"auto\"\n         class=\"example-input\">\n  <mat-autocomplete #auto=\"matAutocomplete\">\n    @for (street of filteredStreets | async; track street) {\n      <mat-option [value]=\"street\">{{street}}</mat-option>\n    }\n  </mat-autocomplete>\n</form>\n",
       styles: [".example-form {\n  min-width: 150px;\n  max-width: 500px;\n  width: 100%;\n}\n\n.example-full-width {\n  width: 100%;\n}\n\n.example-input {\n  max-width: 100%;\n  width: 300px;\n}\n"]
     }]
-  }]
+  }],
+  ctorParameters: () => []
 });
 
 class AutocompleteSimpleExample {
@@ -1026,10 +1031,7 @@ class AutocompleteRequireSelectionExample {
   input;
   myControl = new FormControl('');
   options = ['One', 'Two', 'Three', 'Four', 'Five'];
-  filteredOptions;
-  constructor() {
-    this.filteredOptions = this.options.slice();
-  }
+  filteredOptions = this.options.slice();
   filter() {
     const filterValue = this.input.nativeElement.value.toLowerCase();
     this.filteredOptions = this.options.filter(o => o.toLowerCase().includes(filterValue));
@@ -1155,7 +1157,6 @@ i0.ɵɵngDeclareClassMetadata({
       styles: [".example-form {\n  min-width: 150px;\n  max-width: 500px;\n  width: 100%;\n  margin-top: 16px;\n}\n\n.example-full-width {\n  width: 100%;\n}\n"]
     }]
   }],
-  ctorParameters: () => [],
   propDecorators: {
     input: [{
       type: ViewChild,

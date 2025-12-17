@@ -21,15 +21,15 @@
   <span class="hljs-keyword">private</span> _httpClient = <span class="hljs-title function_">inject</span>(<span class="hljs-title class_">HttpClient</span>);
 
   <span class="hljs-attr">displayedColumns</span>: <span class="hljs-built_in">string</span>[] = [<span class="hljs-string">&#x27;created&#x27;</span>, <span class="hljs-string">&#x27;state&#x27;</span>, <span class="hljs-string">&#x27;number&#x27;</span>, <span class="hljs-string">&#x27;title&#x27;</span>];
-  <span class="hljs-attr">exampleDatabase</span>: <span class="hljs-title class_">ExampleHttpDatabase</span> | <span class="hljs-literal">null</span>;
+  <span class="hljs-attr">exampleDatabase</span>: <span class="hljs-title class_">ExampleHttpDatabase</span> | <span class="hljs-literal">null</span> = <span class="hljs-literal">null</span>;
   <span class="hljs-attr">data</span>: <span class="hljs-title class_">GithubIssue</span>[] = [];
 
   resultsLength = <span class="hljs-number">0</span>;
   isLoadingResults = <span class="hljs-literal">true</span>;
   isRateLimitReached = <span class="hljs-literal">false</span>;
 
-  <span class="hljs-meta">@ViewChild</span>(<span class="hljs-title class_">MatPaginator</span>) <span class="hljs-attr">paginator</span>: <span class="hljs-title class_">MatPaginator</span>;
-  <span class="hljs-meta">@ViewChild</span>(<span class="hljs-title class_">MatSort</span>) <span class="hljs-attr">sort</span>: <span class="hljs-title class_">MatSort</span>;
+  <span class="hljs-meta">@ViewChild</span>(<span class="hljs-title class_">MatPaginator</span>) paginator!: <span class="hljs-title class_">MatPaginator</span>;
+  <span class="hljs-meta">@ViewChild</span>(<span class="hljs-title class_">MatSort</span>) sort!: <span class="hljs-title class_">MatSort</span>;
 
   <span class="hljs-title function_">ngAfterViewInit</span>(<span class="hljs-params"></span>) {
     <span class="hljs-variable language_">this</span>.<span class="hljs-property">exampleDatabase</span> = <span class="hljs-keyword">new</span> <span class="hljs-title class_">ExampleHttpDatabase</span>(<span class="hljs-variable language_">this</span>.<span class="hljs-property">_httpClient</span>);

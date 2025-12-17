@@ -12,8 +12,8 @@ import * as i2$1 from '@angular/material/select';
 import { MatSelectModule } from '@angular/material/select';
 
 class TextFieldAutofillDirectiveExample {
-  firstNameAutofilled;
-  lastNameAutofilled;
+  firstNameAutofilled = false;
+  lastNameAutofilled = false;
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
     version: "21.0.3",
@@ -98,8 +98,8 @@ class TextFieldAutofillMonitorExample {
   _autofill = inject(AutofillMonitor);
   firstName;
   lastName;
-  firstNameAutofilled;
-  lastNameAutofilled;
+  firstNameAutofilled = false;
+  lastNameAutofilled = false;
   ngAfterViewInit() {
     this._autofill.monitor(this.firstName).subscribe(e => this.firstNameAutofilled = e.isAutofilled);
     this._autofill.monitor(this.lastName).subscribe(e => this.lastNameAutofilled = e.isAutofilled);

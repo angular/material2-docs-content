@@ -1,4 +1,4 @@
-<span class="hljs-keyword">import</span> {<span class="hljs-title class_">Component</span>, <span class="hljs-title class_">OnInit</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">Component</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
 <span class="hljs-keyword">import</span> {<span class="hljs-title class_">FormControl</span>, <span class="hljs-title class_">FormsModule</span>, <span class="hljs-title class_">ReactiveFormsModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/forms&#x27;</span>;
 <span class="hljs-keyword">import</span> {<span class="hljs-title class_">Observable</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;rxjs&#x27;</span>;
 <span class="hljs-keyword">import</span> {map, startWith} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;rxjs/operators&#x27;</span>;
@@ -27,12 +27,12 @@
     <span class="hljs-title class_">AsyncPipe</span>,
   ],
 })
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">AutocompleteDisplayExample</span> <span class="hljs-keyword">implements</span> <span class="hljs-title class_">OnInit</span> {
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">AutocompleteDisplayExample</span> {
   myControl = <span class="hljs-keyword">new</span> <span class="hljs-title class_">FormControl</span>&lt;<span class="hljs-built_in">string</span> | <span class="hljs-title class_">User</span>&gt;(<span class="hljs-string">&#x27;&#x27;</span>);
   <span class="hljs-attr">options</span>: <span class="hljs-title class_">User</span>[] = [{<span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Mary&#x27;</span>}, {<span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Shelley&#x27;</span>}, {<span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Igor&#x27;</span>}];
   <span class="hljs-attr">filteredOptions</span>: <span class="hljs-title class_">Observable</span>&lt;<span class="hljs-title class_">User</span>[]&gt;;
 
-  <span class="hljs-title function_">ngOnInit</span>(<span class="hljs-params"></span>) {
+  <span class="hljs-title function_">constructor</span>(<span class="hljs-params"></span>) {
     <span class="hljs-variable language_">this</span>.<span class="hljs-property">filteredOptions</span> = <span class="hljs-variable language_">this</span>.<span class="hljs-property">myControl</span>.<span class="hljs-property">valueChanges</span>.<span class="hljs-title function_">pipe</span>(
       <span class="hljs-title function_">startWith</span>(<span class="hljs-string">&#x27;&#x27;</span>),
       <span class="hljs-title function_">map</span>(<span class="hljs-function"><span class="hljs-params">value</span> =&gt;</span> {

@@ -21,8 +21,8 @@
   <span class="hljs-keyword">private</span> _cdr = <span class="hljs-title function_">inject</span>(<span class="hljs-title class_">ChangeDetectorRef</span>);
   <span class="hljs-keyword">private</span> _ngZone = <span class="hljs-title function_">inject</span>(<span class="hljs-title class_">NgZone</span>);
 
-  <span class="hljs-meta">@ViewChild</span>(<span class="hljs-string">&#x27;element&#x27;</span>) <span class="hljs-attr">element</span>: <span class="hljs-title class_">ElementRef</span>&lt;<span class="hljs-title class_">HTMLElement</span>&gt;;
-  <span class="hljs-meta">@ViewChild</span>(<span class="hljs-string">&#x27;subtree&#x27;</span>) <span class="hljs-attr">subtree</span>: <span class="hljs-title class_">ElementRef</span>&lt;<span class="hljs-title class_">HTMLElement</span>&gt;;
+  <span class="hljs-meta">@ViewChild</span>(<span class="hljs-string">&#x27;element&#x27;</span>) element!: <span class="hljs-title class_">ElementRef</span>&lt;<span class="hljs-title class_">HTMLElement</span>&gt;;
+  <span class="hljs-meta">@ViewChild</span>(<span class="hljs-string">&#x27;subtree&#x27;</span>) subtree!: <span class="hljs-title class_">ElementRef</span>&lt;<span class="hljs-title class_">HTMLElement</span>&gt;;
 
   elementOrigin = <span class="hljs-variable language_">this</span>.<span class="hljs-title function_">formatOrigin</span>(<span class="hljs-literal">null</span>);
   subtreeOrigin = <span class="hljs-variable language_">this</span>.<span class="hljs-title function_">formatOrigin</span>(<span class="hljs-literal">null</span>);

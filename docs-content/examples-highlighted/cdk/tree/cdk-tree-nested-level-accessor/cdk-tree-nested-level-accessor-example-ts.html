@@ -23,7 +23,7 @@
   <span class="hljs-attr">changeDetection</span>: <span class="hljs-title class_">ChangeDetectionStrategy</span>.<span class="hljs-property">OnPush</span>,
 })
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">CdkTreeNestedLevelAccessorExample</span> {
-  <span class="hljs-meta">@ViewChild</span>(<span class="hljs-title class_">CdkTree</span>) <span class="hljs-attr">tree</span>: <span class="hljs-title class_">CdkTree</span>&lt;<span class="hljs-title class_">FlatFoodNode</span>&gt;;
+  <span class="hljs-meta">@ViewChild</span>(<span class="hljs-title class_">CdkTree</span>) tree!: <span class="hljs-title class_">CdkTree</span>&lt;<span class="hljs-title class_">FlatFoodNode</span>&gt;;
 
   levelAccessor = <span class="hljs-function">(<span class="hljs-params"><span class="hljs-attr">dataNode</span>: <span class="hljs-title class_">FlatFoodNode</span></span>) =&gt;</span> dataNode.<span class="hljs-property">level</span>;
 

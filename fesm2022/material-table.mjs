@@ -482,7 +482,7 @@ class TableExpandableRowsExample {
   dataSource = ELEMENT_DATA$m;
   columnsToDisplay = ['name', 'weight', 'symbol', 'position'];
   columnsToDisplayWithExpand = [...this.columnsToDisplay, 'expand'];
-  expandedElement;
+  expandedElement = null;
   isExpanded(element) {
     return this.expandedElement === element;
   }
@@ -973,7 +973,7 @@ i0.ɵɵngDeclareClassMetadata({
 class TableHttpExample {
   _httpClient = inject(HttpClient);
   displayedColumns = ['created', 'state', 'number', 'title'];
-  exampleDatabase;
+  exampleDatabase = null;
   data = [];
   resultsLength = 0;
   isLoadingResults = true;
@@ -3178,7 +3178,7 @@ const ELEMENT_DATA$c = [{
 class TableTextColumnAdvancedExample {
   displayedColumns = ['position', 'name', 'weight', 'symbol'];
   dataSource = new MatTableDataSource(ELEMENT_DATA$c);
-  headerText;
+  headerText = '';
   decimalPipe = new DecimalPipe('en-US');
   getWeight = data => {
     const result = this.decimalPipe.transform(data.weight, '1.0-2');

@@ -36,10 +36,7 @@ class SortOverviewExample {
     carbs: 49,
     protein: 4
   }];
-  sortedData;
-  constructor() {
-    this.sortedData = this.desserts.slice();
-  }
+  sortedData = this.desserts.slice();
   sortData(sort) {
     const data = this.desserts.slice();
     if (!sort.active || sort.direction === '') {
@@ -113,8 +110,7 @@ i0.ɵɵngDeclareClassMetadata({
       template: "<table matSort (matSortChange)=\"sortData($event)\">\n  <tr>\n    <th mat-sort-header=\"name\">Dessert (100g)</th>\n    <th mat-sort-header=\"calories\">Calories</th>\n    <th mat-sort-header=\"fat\">Fat (g)</th>\n    <th mat-sort-header=\"carbs\">Carbs (g)</th>\n    <th mat-sort-header=\"protein\">Protein (g)</th>\n  </tr>\n\n  @for (dessert of sortedData; track dessert) {\n    <tr>\n      <td>{{dessert.name}}</td>\n      <td>{{dessert.calories}}</td>\n      <td>{{dessert.fat}}</td>\n      <td>{{dessert.carbs}}</td>\n      <td>{{dessert.protein}}</td>\n    </tr>\n  }\n</table>\n",
       styles: [".mat-sort-header-container {\n  align-items: center;\n}\n"]
     }]
-  }],
-  ctorParameters: () => []
+  }]
 });
 function compare(a, b, isAsc) {
   return (a < b ? -1 : 1) * (isAsc ? 1 : -1);

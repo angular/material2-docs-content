@@ -55,7 +55,7 @@
   <span class="hljs-attr">displayedColumns</span>: <span class="hljs-built_in">string</span>[] = [<span class="hljs-string">&#x27;position&#x27;</span>, <span class="hljs-string">&#x27;name&#x27;</span>, <span class="hljs-string">&#x27;weight&#x27;</span>, <span class="hljs-string">&#x27;symbol&#x27;</span>];
   dataSource = <span class="hljs-keyword">new</span> <span class="hljs-title class_">MatTableDataSource</span>&lt;<span class="hljs-title class_">PeriodicElement</span>&gt;(<span class="hljs-variable constant_">ELEMENT_DATA</span>);
 
-  <span class="hljs-meta">@ViewChild</span>(<span class="hljs-string">&#x27;sort&#x27;</span>) <span class="hljs-attr">sort</span>: <span class="hljs-title class_">MatSort</span>;
+  <span class="hljs-meta">@ViewChild</span>(<span class="hljs-string">&#x27;sort&#x27;</span>) sort!: <span class="hljs-title class_">MatSort</span>;
 
   <span class="hljs-title function_">ngAfterViewInit</span>(<span class="hljs-params"></span>) {
     <span class="hljs-variable language_">this</span>.<span class="hljs-property">dataSource</span>.<span class="hljs-property">sort</span> = <span class="hljs-variable language_">this</span>.<span class="hljs-property">sort</span>;
@@ -85,12 +85,12 @@
   <span class="hljs-attr">imports</span>: [<span class="hljs-title class_">MatTableModule</span>, <span class="hljs-title class_">MatSortModule</span>],
 })
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">WrapperTable</span>&lt;T&gt; <span class="hljs-keyword">implements</span> <span class="hljs-title class_">AfterContentInit</span> {
-  <span class="hljs-meta">@ContentChildren</span>(<span class="hljs-title class_">MatHeaderRowDef</span>) <span class="hljs-attr">headerRowDefs</span>: <span class="hljs-title class_">QueryList</span>&lt;<span class="hljs-title class_">MatHeaderRowDef</span>&gt;;
-  <span class="hljs-meta">@ContentChildren</span>(<span class="hljs-title class_">MatRowDef</span>) <span class="hljs-attr">rowDefs</span>: <span class="hljs-title class_">QueryList</span>&lt;<span class="hljs-title class_">MatRowDef</span>&lt;T&gt;&gt;;
-  <span class="hljs-meta">@ContentChildren</span>(<span class="hljs-title class_">MatColumnDef</span>) <span class="hljs-attr">columnDefs</span>: <span class="hljs-title class_">QueryList</span>&lt;<span class="hljs-title class_">MatColumnDef</span>&gt;;
-  <span class="hljs-meta">@ContentChild</span>(<span class="hljs-title class_">MatNoDataRow</span>) <span class="hljs-attr">noDataRow</span>: <span class="hljs-title class_">MatNoDataRow</span>;
+  <span class="hljs-meta">@ContentChildren</span>(<span class="hljs-title class_">MatHeaderRowDef</span>) headerRowDefs!: <span class="hljs-title class_">QueryList</span>&lt;<span class="hljs-title class_">MatHeaderRowDef</span>&gt;;
+  <span class="hljs-meta">@ContentChildren</span>(<span class="hljs-title class_">MatRowDef</span>) rowDefs!: <span class="hljs-title class_">QueryList</span>&lt;<span class="hljs-title class_">MatRowDef</span>&lt;T&gt;&gt;;
+  <span class="hljs-meta">@ContentChildren</span>(<span class="hljs-title class_">MatColumnDef</span>) columnDefs!: <span class="hljs-title class_">QueryList</span>&lt;<span class="hljs-title class_">MatColumnDef</span>&gt;;
+  <span class="hljs-meta">@ContentChild</span>(<span class="hljs-title class_">MatNoDataRow</span>) noDataRow!: <span class="hljs-title class_">MatNoDataRow</span>;
 
-  <span class="hljs-meta">@ViewChild</span>(<span class="hljs-title class_">MatTable</span>, {<span class="hljs-attr">static</span>: <span class="hljs-literal">true</span>}) <span class="hljs-attr">table</span>: <span class="hljs-title class_">MatTable</span>&lt;T&gt;;
+  <span class="hljs-meta">@ViewChild</span>(<span class="hljs-title class_">MatTable</span>, {<span class="hljs-attr">static</span>: <span class="hljs-literal">true</span>}) table!: <span class="hljs-title class_">MatTable</span>&lt;T&gt;;
 
   <span class="hljs-keyword">readonly</span> columns = input.<span class="hljs-property">required</span>&lt;<span class="hljs-built_in">string</span>[]&gt;();
   <span class="hljs-keyword">readonly</span> dataSource = input.<span class="hljs-property">required</span>&lt;<span class="hljs-title class_">DataSource</span>&lt;T&gt;&gt;();

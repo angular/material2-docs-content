@@ -24,7 +24,7 @@
   <span class="hljs-keyword">private</span> _cdr = <span class="hljs-title function_">inject</span>(<span class="hljs-title class_">ChangeDetectorRef</span>);
   <span class="hljs-keyword">private</span> _ngZone = <span class="hljs-title function_">inject</span>(<span class="hljs-title class_">NgZone</span>);
 
-  <span class="hljs-meta">@ViewChild</span>(<span class="hljs-string">&#x27;monitored&#x27;</span>) <span class="hljs-attr">monitoredEl</span>: <span class="hljs-title class_">ElementRef</span>&lt;<span class="hljs-title class_">HTMLElement</span>&gt;;
+  <span class="hljs-meta">@ViewChild</span>(<span class="hljs-string">&#x27;monitored&#x27;</span>) monitoredEl!: <span class="hljs-title class_">ElementRef</span>&lt;<span class="hljs-title class_">HTMLElement</span>&gt;;
 
   origin = <span class="hljs-variable language_">this</span>.<span class="hljs-title function_">formatOrigin</span>(<span class="hljs-literal">null</span>);
 

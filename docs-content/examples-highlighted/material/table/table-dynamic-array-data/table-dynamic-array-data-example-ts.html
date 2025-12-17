@@ -35,7 +35,7 @@
   <span class="hljs-attr">displayedColumns</span>: <span class="hljs-built_in">string</span>[] = [<span class="hljs-string">&#x27;position&#x27;</span>, <span class="hljs-string">&#x27;name&#x27;</span>, <span class="hljs-string">&#x27;weight&#x27;</span>, <span class="hljs-string">&#x27;symbol&#x27;</span>];
   dataSource = [...<span class="hljs-variable constant_">ELEMENT_DATA</span>];
 
-  <span class="hljs-meta">@ViewChild</span>(<span class="hljs-title class_">MatTable</span>) <span class="hljs-attr">table</span>: <span class="hljs-title class_">MatTable</span>&lt;<span class="hljs-title class_">PeriodicElement</span>&gt;;
+  <span class="hljs-meta">@ViewChild</span>(<span class="hljs-title class_">MatTable</span>) table!: <span class="hljs-title class_">MatTable</span>&lt;<span class="hljs-title class_">PeriodicElement</span>&gt;;
 
   <span class="hljs-title function_">addData</span>(<span class="hljs-params"></span>) {
     <span class="hljs-keyword">const</span> randomElementIndex = <span class="hljs-title class_">Math</span>.<span class="hljs-title function_">floor</span>(<span class="hljs-title class_">Math</span>.<span class="hljs-title function_">random</span>() * <span class="hljs-variable constant_">ELEMENT_DATA</span>.<span class="hljs-property">length</span>);

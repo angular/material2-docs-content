@@ -13,7 +13,7 @@
 })
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">SidenavOpenCloseExample</span> {
   <span class="hljs-attr">events</span>: <span class="hljs-built_in">string</span>[] = [];
-  <span class="hljs-attr">opened</span>: <span class="hljs-built_in">boolean</span>;
+  opened = <span class="hljs-literal">false</span>;
 
   shouldRun = <span class="hljs-regexp">/(^|.)(stackblitz|webcontainer).(io|com)$/</span>.<span class="hljs-title function_">test</span>(<span class="hljs-variable language_">window</span>.<span class="hljs-property">location</span>.<span class="hljs-property">host</span>);
 }

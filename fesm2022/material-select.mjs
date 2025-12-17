@@ -341,7 +341,7 @@ i0.ɵɵngDeclareClassMetadata({
 
 class SelectFormExample {
   selectedValue;
-  selectedCar;
+  selectedCar = '';
   foods = [{
     value: 'steak-0',
     viewValue: 'Steak'
