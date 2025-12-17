@@ -1496,6 +1496,8 @@ predicate.</li>
     <td colspan="2" class="docs-api-method-description-cell">
       <p>Waits for all scheduled or running async tasks to complete. This allows harness
 authors to wait for async tasks outside of the Angular zone.</p>
+<p>This only works when Zone.js is present <em>and</em> patches are applied to the test framework
+by <code>zone.js/testing</code> (Jasmine and Jest only) or another script.</p>
 
     </td>
   </tr><thead>
