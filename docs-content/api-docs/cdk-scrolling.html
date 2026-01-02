@@ -41,17 +41,18 @@
 </h4><p class="docs-api-class-description"><p>Service contained all registered Scrollable references and emits an event when any one of the
 Scrollable references emit a scrolled event.</p>
 </p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
-  <table class="docs-api-properties-table">
-    <tr class="docs-api-properties-header-row">
-      <th class="docs-api-properties-th">Name</th>
-      <th class="docs-api-properties-th">Description</th>
-    </tr>
-    
+  <div class="docs-api-properties-card">
+    <table class="docs-api-properties-table">
+      <tr class="docs-api-properties-header-row">
+        <th class="docs-api-properties-th">Name</th>
+        <th class="docs-api-properties-th">Description</th>
+      </tr>
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>scrollContainers: Map&lt;CdkScrollable, Subscription&gt;</code>
+      <code>scrollContainers: <code class="docs-api-property-type">Map&lt;CdkScrollable, Subscription&gt;</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Map of all the scrollable references that are registered with the service and their
@@ -60,210 +61,237 @@ scroll event subscriptions.</p>
 </tr>
 
 
-    
-  </table>
+      
+    </table>
+  </div>
 
 
 <h5 class="docs-api-h5 docs-api-method-header">Methods</h5>
   
     
 
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">ancestorScrolled
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Returns an observable that emits whenever any of the
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell">ancestorScrolled
+          (<span class="docs-api-method-parameter-name">elementOrElementRef:
+            </span>
+            <code class="docs-api-method-parameter-type">HTMLElement | ElementRef&lt;any&gt;</code>, <span class="docs-api-method-parameter-name">auditTimeInMs<span class="docs-api-method-parameter-optional-marker">?</span>:
+            </span>
+            <code class="docs-api-method-parameter-type">number</code>): <code class="docs-api-method-returns-type">Observable&lt;CdkScrollable | void&gt;</code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Returns an observable that emits whenever any of the
 scrollable ancestors of an element are scrolled.</p>
 
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-parameters-header-row">
-      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
-    </tr>
-  </thead>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        elementOrElementRef</p>
-      <code class="docs-api-method-parameter-type">HTMLElement | ElementRef&lt;any&gt;</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        <p>Element whose ancestors to listen for.</p>
+      </td>
+    </tr><thead>
+      <tr class="docs-api-method-parameters-header-row">
+        <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+      </tr>
+    </thead>
+    
+    <tr class="docs-api-method-parameter-row">
+      <td class="docs-api-method-parameter-cell">
+        <p class="docs-api-method-parameter-name">
+          elementOrElementRef</p>
+        <code class="docs-api-method-parameter-type">HTMLElement | ElementRef&lt;any&gt;</code>
+      </td>
+      <td class="docs-api-method-parameter-description-cell">
+        <p class="docs-api-method-parameter-description">
+          <p>Element whose ancestors to listen for.</p>
 
-      </p>
-    </td>
-  </tr>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        auditTimeInMs<span class="docs-api-method-parameter-optional-marker">?</span></p>
-      <code class="docs-api-method-parameter-type">number</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        <p>Time to throttle the scroll events.</p>
-
-      </p>
-    </td>
-  </tr>
-  <thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+        </p>
+      </td>
     </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">Observable&lt;CdkScrollable | void&gt;</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        
-      </p>
-    </td>
-  </tr></table>
+    
+    <tr class="docs-api-method-parameter-row">
+      <td class="docs-api-method-parameter-cell">
+        <p class="docs-api-method-parameter-name">
+          auditTimeInMs<span class="docs-api-method-parameter-optional-marker">?</span></p>
+        <code class="docs-api-method-parameter-type">number</code>
+      </td>
+      <td class="docs-api-method-parameter-description-cell">
+        <p class="docs-api-method-parameter-description">
+          <p>Time to throttle the scroll events.</p>
+
+        </p>
+      </td>
+    </tr>
+    <thead>
+      <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+      </tr>
+    </thead>
+    <tr>
+      <td class="docs-api-method-returns-type-cell">
+        <code class="docs-api-method-returns-type">Observable&lt;CdkScrollable | void&gt;</code>
+      </td>
+      <td class="docs-api-method-returns-description-cell">
+        <p class="docs-api-method-returns-description">
+          
+        </p>
+      </td>
+    </tr></table>
+</div>
 
 
   
     
 
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">deregister
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>De-registers a Scrollable reference and unsubscribes from its scroll event observable.</p>
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell">deregister
+          (<span class="docs-api-method-parameter-name">scrollable:
+            </span>
+            <code class="docs-api-method-parameter-type">CdkScrollable</code>): <code class="docs-api-method-returns-type">void</code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>De-registers a Scrollable reference and unsubscribes from its scroll event observable.</p>
 
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-parameters-header-row">
-      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
-    </tr>
-  </thead>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        scrollable</p>
-      <code class="docs-api-method-parameter-type">CdkScrollable</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        <p>Scrollable instance to be deregistered.</p>
+      </td>
+    </tr><thead>
+      <tr class="docs-api-method-parameters-header-row">
+        <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+      </tr>
+    </thead>
+    
+    <tr class="docs-api-method-parameter-row">
+      <td class="docs-api-method-parameter-cell">
+        <p class="docs-api-method-parameter-name">
+          scrollable</p>
+        <code class="docs-api-method-parameter-type">CdkScrollable</code>
+      </td>
+      <td class="docs-api-method-parameter-description-cell">
+        <p class="docs-api-method-parameter-description">
+          <p>Scrollable instance to be deregistered.</p>
 
-      </p>
-    </td>
-  </tr>
-  </table>
+        </p>
+      </td>
+    </tr>
+    </table>
+</div>
 
 
   
     
 
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">getAncestorScrollContainers
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Returns all registered Scrollables that contain the provided element.</p>
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell">getAncestorScrollContainers
+          (<span class="docs-api-method-parameter-name">elementOrElementRef:
+            </span>
+            <code class="docs-api-method-parameter-type">HTMLElement | ElementRef&lt;any&gt;</code>): <code class="docs-api-method-returns-type">CdkScrollable[]</code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Returns all registered Scrollables that contain the provided element.</p>
 
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-parameters-header-row">
-      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+      </td>
+    </tr><thead>
+      <tr class="docs-api-method-parameters-header-row">
+        <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+      </tr>
+    </thead>
+    
+    <tr class="docs-api-method-parameter-row">
+      <td class="docs-api-method-parameter-cell">
+        <p class="docs-api-method-parameter-name">
+          elementOrElementRef</p>
+        <code class="docs-api-method-parameter-type">HTMLElement | ElementRef&lt;any&gt;</code>
+      </td>
+      <td class="docs-api-method-parameter-description-cell">
+        <p class="docs-api-method-parameter-description">
+          
+        </p>
+      </td>
     </tr>
-  </thead>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        elementOrElementRef</p>
-      <code class="docs-api-method-parameter-type">HTMLElement | ElementRef&lt;any&gt;</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        
-      </p>
-    </td>
-  </tr>
-  <thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
-    </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">CdkScrollable[]</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        
-      </p>
-    </td>
-  </tr></table>
+    <thead>
+      <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+      </tr>
+    </thead>
+    <tr>
+      <td class="docs-api-method-returns-type-cell">
+        <code class="docs-api-method-returns-type">CdkScrollable[]</code>
+      </td>
+      <td class="docs-api-method-returns-description-cell">
+        <p class="docs-api-method-returns-description">
+          
+        </p>
+      </td>
+    </tr></table>
+</div>
 
 
   
     
 
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">register
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Registers a scrollable instance with the service and listens for its scrolled events. When the
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell">register
+          (<span class="docs-api-method-parameter-name">scrollable:
+            </span>
+            <code class="docs-api-method-parameter-type">CdkScrollable</code>): <code class="docs-api-method-returns-type">void</code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Registers a scrollable instance with the service and listens for its scrolled events. When the
 scrollable is scrolled, the service emits the event to its scrolled observable.</p>
 
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-parameters-header-row">
-      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
-    </tr>
-  </thead>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        scrollable</p>
-      <code class="docs-api-method-parameter-type">CdkScrollable</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        <p>Scrollable instance to be registered.</p>
+      </td>
+    </tr><thead>
+      <tr class="docs-api-method-parameters-header-row">
+        <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+      </tr>
+    </thead>
+    
+    <tr class="docs-api-method-parameter-row">
+      <td class="docs-api-method-parameter-cell">
+        <p class="docs-api-method-parameter-name">
+          scrollable</p>
+        <code class="docs-api-method-parameter-type">CdkScrollable</code>
+      </td>
+      <td class="docs-api-method-parameter-description-cell">
+        <p class="docs-api-method-parameter-description">
+          <p>Scrollable instance to be registered.</p>
 
-      </p>
-    </td>
-  </tr>
-  </table>
+        </p>
+      </td>
+    </tr>
+    </table>
+</div>
 
 
   
     
 
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">scrolled
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Returns an observable that emits an event whenever any of the registered Scrollable
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell">scrolled
+          (<span class="docs-api-method-parameter-name">auditTimeInMs:
+            </span>
+            <code class="docs-api-method-parameter-type">number = DEFAULT_SCROLL_TIME</code>): <code class="docs-api-method-returns-type">Observable&lt;CdkScrollable | void&gt;</code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Returns an observable that emits an event whenever any of the registered Scrollable
 references (or window, document, or body) fire a scrolled event. Can provide a time in ms
 to override the default &quot;throttle&quot; time.</p>
 <p><strong>Note:</strong> in order to avoid hitting change detection for every scroll event,
@@ -271,40 +299,41 @@ all of the events emitted from this stream will be run outside the Angular zone.
 If you need to update any data bindings as a result of a scroll event, you have
 to run the callback using <code>NgZone.run</code>.</p>
 
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-parameters-header-row">
-      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+      </td>
+    </tr><thead>
+      <tr class="docs-api-method-parameters-header-row">
+        <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+      </tr>
+    </thead>
+    
+    <tr class="docs-api-method-parameter-row">
+      <td class="docs-api-method-parameter-cell">
+        <p class="docs-api-method-parameter-name">
+          auditTimeInMs</p>
+        <code class="docs-api-method-parameter-type">number = DEFAULT_SCROLL_TIME</code>
+      </td>
+      <td class="docs-api-method-parameter-description-cell">
+        <p class="docs-api-method-parameter-description">
+          
+        </p>
+      </td>
     </tr>
-  </thead>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        auditTimeInMs</p>
-      <code class="docs-api-method-parameter-type">number = DEFAULT_SCROLL_TIME</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        
-      </p>
-    </td>
-  </tr>
-  <thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
-    </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">Observable&lt;CdkScrollable | void&gt;</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        
-      </p>
-    </td>
-  </tr></table>
+    <thead>
+      <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+      </tr>
+    </thead>
+    <tr>
+      <td class="docs-api-method-returns-type-cell">
+        <code class="docs-api-method-returns-type">Observable&lt;CdkScrollable | void&gt;</code>
+      </td>
+      <td class="docs-api-method-returns-description-cell">
+        <p class="docs-api-method-returns-description">
+          
+        </p>
+      </td>
+    </tr></table>
+</div>
 
 
   
@@ -336,18 +365,19 @@ to run the callback using <code>NgZone.run</code>.</p>
     <span class="docs-api-class-selector-name">cdk-virtual-scroll-viewport</span>
   
 </p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
-  <table class="docs-api-properties-table">
-    <tr class="docs-api-properties-header-row">
-      <th class="docs-api-properties-th">Name</th>
-      <th class="docs-api-properties-th">Description</th>
-    </tr>
-    
+  <div class="docs-api-properties-card">
+    <table class="docs-api-properties-table">
+      <tr class="docs-api-properties-header-row">
+        <th class="docs-api-properties-th">Name</th>
+        <th class="docs-api-properties-th">Description</th>
+      </tr>
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">{ transform: booleanAttribute }</span>)
         </div><p class="docs-api-property-name">
-      <code>appendOnly: boolean</code>
+      <code>appendOnly: <code class="docs-api-property-type">boolean</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Whether rendered items should persist in the DOM after scrolling out of view. By default, items
@@ -356,13 +386,13 @@ will be removed.</p>
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
           @Input()</div><p class="docs-api-property-name">
-      <code>orientation: &quot;horizontal&quot; | &quot;vertical&quot;</code>
+      <code>orientation: <code class="docs-api-property-type">&quot;horizontal&quot; | &quot;vertical&quot;</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>The direction the viewport scrolls.</p>
@@ -370,13 +400,13 @@ will be removed.</p>
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><div class="docs-api-output-marker">
           @Output()</div><p class="docs-api-property-name">
-      <code>scrolledIndexChange: Observable&lt;number&gt;</code>
+      <code>scrolledIndexChange: <code class="docs-api-property-type">Observable&lt;number&gt;</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Emits when the index of the first element visible in the viewport changes.</p>
@@ -384,24 +414,24 @@ will be removed.</p>
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>elementRef: inject&lt;ElementRef&lt;HTMLElement&gt;&gt;(ElementRef)</code>
+      <code>elementRef: <code class="docs-api-property-type">inject&lt;ElementRef&lt;HTMLElement&gt;&gt;(ElementRef)</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"></td>
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>renderedRangeStream: Observable&lt;ListRange&gt;</code>
+      <code>renderedRangeStream: <code class="docs-api-property-type">Observable&lt;ListRange&gt;</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>A stream that emits whenever the rendered range changes.</p>
@@ -409,786 +439,880 @@ will be removed.</p>
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>scrollable: inject&lt;CdkVirtualScrollable&gt;(VIRTUAL_SCROLLABLE, { optional: true })!</code>
+      <code>scrollable: <code class="docs-api-property-type">inject&lt;CdkVirtualScrollable&gt;(VIRTUAL_SCROLLABLE, { optional: true })!</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"></td>
 </tr>
 
 
-    
-  </table>
+      
+    </table>
+  </div>
 
 
 <h5 class="docs-api-h5 docs-api-method-header">Methods</h5>
   
     
 
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">attach
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Attaches a <code>CdkVirtualScrollRepeater</code> to this viewport.</p>
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell">attach
+          (<span class="docs-api-method-parameter-name">forOf:
+            </span>
+            <code class="docs-api-method-parameter-type">CdkVirtualScrollRepeater&lt;any&gt;</code>): <code class="docs-api-method-returns-type"></code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Attaches a <code>CdkVirtualScrollRepeater</code> to this viewport.</p>
 
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-parameters-header-row">
-      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+      </td>
+    </tr><thead>
+      <tr class="docs-api-method-parameters-header-row">
+        <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+      </tr>
+    </thead>
+    
+    <tr class="docs-api-method-parameter-row">
+      <td class="docs-api-method-parameter-cell">
+        <p class="docs-api-method-parameter-name">
+          forOf</p>
+        <code class="docs-api-method-parameter-type">CdkVirtualScrollRepeater&lt;any&gt;</code>
+      </td>
+      <td class="docs-api-method-parameter-description-cell">
+        <p class="docs-api-method-parameter-description">
+          
+        </p>
+      </td>
     </tr>
-  </thead>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        forOf</p>
-      <code class="docs-api-method-parameter-type">CdkVirtualScrollRepeater&lt;any&gt;</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        
-      </p>
-    </td>
-  </tr>
-  </table>
+    </table>
+</div>
 
 
   
     
 
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">checkViewportSize
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Update the viewport dimensions and re-render.</p>
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell">checkViewportSize
+          (): <code class="docs-api-method-returns-type"></code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Update the viewport dimensions and re-render.</p>
 
-    </td>
-  </tr></table>
-
-
-  
-    
-
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">detach
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Detaches the current <code>CdkVirtualForOf</code>.</p>
-
-    </td>
-  </tr></table>
+      </td>
+    </tr></table>
+</div>
 
 
   
     
 
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">elementScrolled
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Returns observable that emits when a scroll event is fired on the host element.</p>
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell">detach
+          (): <code class="docs-api-method-returns-type"></code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Detaches the current <code>CdkVirtualForOf</code>.</p>
 
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
-    </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">Observable&lt;Event&gt;</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        
-      </p>
-    </td>
-  </tr></table>
+      </td>
+    </tr></table>
+</div>
 
 
   
     
 
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">getDataLength
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets the length of the data bound to this viewport (in number of items).</p>
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell">elementScrolled
+          (): <code class="docs-api-method-returns-type">Observable&lt;Event&gt;</code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Returns observable that emits when a scroll event is fired on the host element.</p>
 
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
-    </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">number</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        
-      </p>
-    </td>
-  </tr></table>
-
-
-  
-    
-
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">getElementRef
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets the ElementRef for the viewport.</p>
-
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
-    </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">ElementRef&lt;HTMLElement&gt;</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        
-      </p>
-    </td>
-  </tr></table>
+      </td>
+    </tr><thead>
+      <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+      </tr>
+    </thead>
+    <tr>
+      <td class="docs-api-method-returns-type-cell">
+        <code class="docs-api-method-returns-type">Observable&lt;Event&gt;</code>
+      </td>
+      <td class="docs-api-method-returns-description-cell">
+        <p class="docs-api-method-returns-description">
+          
+        </p>
+      </td>
+    </tr></table>
+</div>
 
 
   
     
 
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">getOffsetToRenderedContentStart
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets the offset from the start of the viewport to the start of the rendered data (in pixels).</p>
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell">getDataLength
+          (): <code class="docs-api-method-returns-type">number</code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Gets the length of the data bound to this viewport (in number of items).</p>
 
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
-    </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">number | null</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        
-      </p>
-    </td>
-  </tr></table>
-
-
-  
-    
-
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">getRenderedRange
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Get the current rendered range of items.</p>
-
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
-    </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">ListRange</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        
-      </p>
-    </td>
-  </tr></table>
+      </td>
+    </tr><thead>
+      <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+      </tr>
+    </thead>
+    <tr>
+      <td class="docs-api-method-returns-type-cell">
+        <code class="docs-api-method-returns-type">number</code>
+      </td>
+      <td class="docs-api-method-returns-description-cell">
+        <p class="docs-api-method-returns-description">
+          
+        </p>
+      </td>
+    </tr></table>
+</div>
 
 
   
     
 
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">getViewportSize
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets the size of the viewport (in pixels).</p>
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell">getElementRef
+          (): <code class="docs-api-method-returns-type">ElementRef&lt;HTMLElement&gt;</code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Gets the ElementRef for the viewport.</p>
 
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
-    </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">number</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        
-      </p>
-    </td>
-  </tr></table>
-
-
-  
-    
-
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">measureBoundingClientRectWithScrollOffset
-      </th>
-    </tr>
-  </thead><thead>
-    <tr class="docs-api-method-parameters-header-row">
-      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
-    </tr>
-  </thead>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        from</p>
-      <code class="docs-api-method-parameter-type">&quot;left&quot; | &quot;right&quot; | &quot;top&quot; | &quot;bottom&quot;</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        
-      </p>
-    </td>
-  </tr>
-  <thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
-    </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">number</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        
-      </p>
-    </td>
-  </tr></table>
+      </td>
+    </tr><thead>
+      <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+      </tr>
+    </thead>
+    <tr>
+      <td class="docs-api-method-returns-type-cell">
+        <code class="docs-api-method-returns-type">ElementRef&lt;HTMLElement&gt;</code>
+      </td>
+      <td class="docs-api-method-returns-description-cell">
+        <p class="docs-api-method-returns-description">
+          
+        </p>
+      </td>
+    </tr></table>
+</div>
 
 
   
     
 
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">measureRangeSize
-      </th>
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell">getOffsetToRenderedContentStart
+          (): <code class="docs-api-method-returns-type">number | null</code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Gets the offset from the start of the viewport to the start of the rendered data (in pixels).</p>
+
+      </td>
+    </tr><thead>
+      <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+      </tr>
+    </thead>
+    <tr>
+      <td class="docs-api-method-returns-type-cell">
+        <code class="docs-api-method-returns-type">number | null</code>
+      </td>
+      <td class="docs-api-method-returns-description-cell">
+        <p class="docs-api-method-returns-description">
+          
+        </p>
+      </td>
+    </tr></table>
+</div>
+
+
+  
+    
+
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell">getRenderedRange
+          (): <code class="docs-api-method-returns-type">ListRange</code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Get the current rendered range of items.</p>
+
+      </td>
+    </tr><thead>
+      <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+      </tr>
+    </thead>
+    <tr>
+      <td class="docs-api-method-returns-type-cell">
+        <code class="docs-api-method-returns-type">ListRange</code>
+      </td>
+      <td class="docs-api-method-returns-description-cell">
+        <p class="docs-api-method-returns-description">
+          
+        </p>
+      </td>
+    </tr></table>
+</div>
+
+
+  
+    
+
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell">getViewportSize
+          (): <code class="docs-api-method-returns-type">number</code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Gets the size of the viewport (in pixels).</p>
+
+      </td>
+    </tr><thead>
+      <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+      </tr>
+    </thead>
+    <tr>
+      <td class="docs-api-method-returns-type-cell">
+        <code class="docs-api-method-returns-type">number</code>
+      </td>
+      <td class="docs-api-method-returns-description-cell">
+        <p class="docs-api-method-returns-description">
+          
+        </p>
+      </td>
+    </tr></table>
+</div>
+
+
+  
+    
+
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell">measureBoundingClientRectWithScrollOffset
+          (<span class="docs-api-method-parameter-name">from:
+            </span>
+            <code class="docs-api-method-parameter-type">&quot;left&quot; | &quot;right&quot; | &quot;top&quot; | &quot;bottom&quot;</code>): <code class="docs-api-method-returns-type">number</code>
+        </th>
+      </tr>
+    </thead><thead>
+      <tr class="docs-api-method-parameters-header-row">
+        <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+      </tr>
+    </thead>
+    
+    <tr class="docs-api-method-parameter-row">
+      <td class="docs-api-method-parameter-cell">
+        <p class="docs-api-method-parameter-name">
+          from</p>
+        <code class="docs-api-method-parameter-type">&quot;left&quot; | &quot;right&quot; | &quot;top&quot; | &quot;bottom&quot;</code>
+      </td>
+      <td class="docs-api-method-parameter-description-cell">
+        <p class="docs-api-method-parameter-description">
+          
+        </p>
+      </td>
     </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Measure the total combined size of the given range. Throws if the range includes items that are
+    <thead>
+      <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+      </tr>
+    </thead>
+    <tr>
+      <td class="docs-api-method-returns-type-cell">
+        <code class="docs-api-method-returns-type">number</code>
+      </td>
+      <td class="docs-api-method-returns-description-cell">
+        <p class="docs-api-method-returns-description">
+          
+        </p>
+      </td>
+    </tr></table>
+</div>
+
+
+  
+    
+
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell">measureRangeSize
+          (<span class="docs-api-method-parameter-name">range:
+            </span>
+            <code class="docs-api-method-parameter-type">ListRange</code>): <code class="docs-api-method-returns-type">number</code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Measure the total combined size of the given range. Throws if the range includes items that are
 not rendered.</p>
 
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-parameters-header-row">
-      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+      </td>
+    </tr><thead>
+      <tr class="docs-api-method-parameters-header-row">
+        <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+      </tr>
+    </thead>
+    
+    <tr class="docs-api-method-parameter-row">
+      <td class="docs-api-method-parameter-cell">
+        <p class="docs-api-method-parameter-name">
+          range</p>
+        <code class="docs-api-method-parameter-type">ListRange</code>
+      </td>
+      <td class="docs-api-method-parameter-description-cell">
+        <p class="docs-api-method-parameter-description">
+          
+        </p>
+      </td>
     </tr>
-  </thead>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        range</p>
-      <code class="docs-api-method-parameter-type">ListRange</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        
-      </p>
-    </td>
-  </tr>
-  <thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
-    </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">number</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        
-      </p>
-    </td>
-  </tr></table>
+    <thead>
+      <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+      </tr>
+    </thead>
+    <tr>
+      <td class="docs-api-method-returns-type-cell">
+        <code class="docs-api-method-returns-type">number</code>
+      </td>
+      <td class="docs-api-method-returns-description-cell">
+        <p class="docs-api-method-returns-description">
+          
+        </p>
+      </td>
+    </tr></table>
+</div>
 
 
   
     
 
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">measureRenderedContentSize
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Measure the combined size of all of the rendered items.</p>
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell">measureRenderedContentSize
+          (): <code class="docs-api-method-returns-type">number</code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Measure the combined size of all of the rendered items.</p>
 
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
-    </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">number</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        
-      </p>
-    </td>
-  </tr></table>
+      </td>
+    </tr><thead>
+      <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+      </tr>
+    </thead>
+    <tr>
+      <td class="docs-api-method-returns-type-cell">
+        <code class="docs-api-method-returns-type">number</code>
+      </td>
+      <td class="docs-api-method-returns-description-cell">
+        <p class="docs-api-method-returns-description">
+          
+        </p>
+      </td>
+    </tr></table>
+</div>
 
 
   
     
 
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">measureScrollOffset
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets the current scroll offset from the start of the scrollable (in pixels).</p>
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell">measureScrollOffset
+          (<span class="docs-api-method-parameter-name">from<span class="docs-api-method-parameter-optional-marker">?</span>:
+            </span>
+            <code class="docs-api-method-parameter-type">&quot;left&quot; | &quot;right&quot; | &quot;start&quot; | &quot;end&quot; | &quot;top&quot; | &quot;bottom&quot;</code>): <code class="docs-api-method-returns-type">number</code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Gets the current scroll offset from the start of the scrollable (in pixels).</p>
 
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-parameters-header-row">
-      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
-    </tr>
-  </thead>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        from<span class="docs-api-method-parameter-optional-marker">?</span></p>
-      <code class="docs-api-method-parameter-type">&quot;left&quot; | &quot;right&quot; | &quot;start&quot; | &quot;end&quot; | &quot;top&quot; | &quot;bottom&quot;</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        <p>The edge to measure the offset from. Defaults to &#39;top&#39; in vertical mode and &#39;start&#39;
+      </td>
+    </tr><thead>
+      <tr class="docs-api-method-parameters-header-row">
+        <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+      </tr>
+    </thead>
+    
+    <tr class="docs-api-method-parameter-row">
+      <td class="docs-api-method-parameter-cell">
+        <p class="docs-api-method-parameter-name">
+          from<span class="docs-api-method-parameter-optional-marker">?</span></p>
+        <code class="docs-api-method-parameter-type">&quot;left&quot; | &quot;right&quot; | &quot;start&quot; | &quot;end&quot; | &quot;top&quot; | &quot;bottom&quot;</code>
+      </td>
+      <td class="docs-api-method-parameter-description-cell">
+        <p class="docs-api-method-parameter-description">
+          <p>The edge to measure the offset from. Defaults to &#39;top&#39; in vertical mode and &#39;start&#39;
     in horizontal mode.</p>
 
-      </p>
-    </td>
-  </tr>
-  <thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+        </p>
+      </td>
     </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">number</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        
-      </p>
-    </td>
-  </tr></table>
+    <thead>
+      <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+      </tr>
+    </thead>
+    <tr>
+      <td class="docs-api-method-returns-type-cell">
+        <code class="docs-api-method-returns-type">number</code>
+      </td>
+      <td class="docs-api-method-returns-description-cell">
+        <p class="docs-api-method-returns-description">
+          
+        </p>
+      </td>
+    </tr></table>
+</div>
 
 
   
     
 
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">measureViewportOffset
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Measures the offset of the viewport from the scrolling container</p>
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell">measureViewportOffset
+          (<span class="docs-api-method-parameter-name">from<span class="docs-api-method-parameter-optional-marker">?</span>:
+            </span>
+            <code class="docs-api-method-parameter-type">&quot;left&quot; | &quot;right&quot; | &quot;start&quot; | &quot;end&quot; | &quot;top&quot; | &quot;bottom&quot;</code>): <code class="docs-api-method-returns-type"></code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Measures the offset of the viewport from the scrolling container</p>
 
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-parameters-header-row">
-      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
-    </tr>
-  </thead>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        from<span class="docs-api-method-parameter-optional-marker">?</span></p>
-      <code class="docs-api-method-parameter-type">&quot;left&quot; | &quot;right&quot; | &quot;start&quot; | &quot;end&quot; | &quot;top&quot; | &quot;bottom&quot;</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        <p>The edge to measure from.</p>
+      </td>
+    </tr><thead>
+      <tr class="docs-api-method-parameters-header-row">
+        <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+      </tr>
+    </thead>
+    
+    <tr class="docs-api-method-parameter-row">
+      <td class="docs-api-method-parameter-cell">
+        <p class="docs-api-method-parameter-name">
+          from<span class="docs-api-method-parameter-optional-marker">?</span></p>
+        <code class="docs-api-method-parameter-type">&quot;left&quot; | &quot;right&quot; | &quot;start&quot; | &quot;end&quot; | &quot;top&quot; | &quot;bottom&quot;</code>
+      </td>
+      <td class="docs-api-method-parameter-description-cell">
+        <p class="docs-api-method-parameter-description">
+          <p>The edge to measure from.</p>
 
-      </p>
-    </td>
-  </tr>
-  </table>
+        </p>
+      </td>
+    </tr>
+    </table>
+</div>
 
 
   
     
 
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">measureViewportSize
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Measure the viewport size for the provided orientation.</p>
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell">measureViewportSize
+          (<span class="docs-api-method-parameter-name">orientation:
+            </span>
+            <code class="docs-api-method-parameter-type">&quot;horizontal&quot; | &quot;vertical&quot;</code>): <code class="docs-api-method-returns-type"></code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Measure the viewport size for the provided orientation.</p>
 
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-parameters-header-row">
-      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
-    </tr>
-  </thead>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        orientation</p>
-      <code class="docs-api-method-parameter-type">&quot;horizontal&quot; | &quot;vertical&quot;</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        <p>The orientation to measure the size from.</p>
+      </td>
+    </tr><thead>
+      <tr class="docs-api-method-parameters-header-row">
+        <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+      </tr>
+    </thead>
+    
+    <tr class="docs-api-method-parameter-row">
+      <td class="docs-api-method-parameter-cell">
+        <p class="docs-api-method-parameter-name">
+          orientation</p>
+        <code class="docs-api-method-parameter-type">&quot;horizontal&quot; | &quot;vertical&quot;</code>
+      </td>
+      <td class="docs-api-method-parameter-description-cell">
+        <p class="docs-api-method-parameter-description">
+          <p>The orientation to measure the size from.</p>
 
-      </p>
-    </td>
-  </tr>
-  </table>
+        </p>
+      </td>
+    </tr>
+    </table>
+</div>
 
 
   
     
 
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">scrollTo
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Scrolls to the specified offsets. This is a normalized version of the browser&#39;s native scrollTo
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell">scrollTo
+          (<span class="docs-api-method-parameter-name">options:
+            </span>
+            <code class="docs-api-method-parameter-type">ExtendedScrollToOptions</code>): <code class="docs-api-method-returns-type">void</code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Scrolls to the specified offsets. This is a normalized version of the browser&#39;s native scrollTo
 method, since browsers are not consistent about what scrollLeft means in RTL. For this method
 left and right always refer to the left and right side of the scrolling container irrespective
 of the layout direction. start and end refer to left and right in an LTR context and vice-versa
 in an RTL context.</p>
 
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-parameters-header-row">
-      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
-    </tr>
-  </thead>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        options</p>
-      <code class="docs-api-method-parameter-type">ExtendedScrollToOptions</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        <p>specified the offsets to scroll to.</p>
+      </td>
+    </tr><thead>
+      <tr class="docs-api-method-parameters-header-row">
+        <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+      </tr>
+    </thead>
+    
+    <tr class="docs-api-method-parameter-row">
+      <td class="docs-api-method-parameter-cell">
+        <p class="docs-api-method-parameter-name">
+          options</p>
+        <code class="docs-api-method-parameter-type">ExtendedScrollToOptions</code>
+      </td>
+      <td class="docs-api-method-parameter-description-cell">
+        <p class="docs-api-method-parameter-description">
+          <p>specified the offsets to scroll to.</p>
 
-      </p>
-    </td>
-  </tr>
-  </table>
+        </p>
+      </td>
+    </tr>
+    </table>
+</div>
 
 
   
     
 
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">scrollToIndex
-      </th>
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell">scrollToIndex
+          (<span class="docs-api-method-parameter-name">index:
+            </span>
+            <code class="docs-api-method-parameter-type">number</code>, <span class="docs-api-method-parameter-name">behavior:
+            </span>
+            <code class="docs-api-method-parameter-type">ScrollBehavior = &#39;auto&#39;</code>): <code class="docs-api-method-returns-type"></code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Scrolls to the offset for the given index.</p>
+
+      </td>
+    </tr><thead>
+      <tr class="docs-api-method-parameters-header-row">
+        <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+      </tr>
+    </thead>
+    
+    <tr class="docs-api-method-parameter-row">
+      <td class="docs-api-method-parameter-cell">
+        <p class="docs-api-method-parameter-name">
+          index</p>
+        <code class="docs-api-method-parameter-type">number</code>
+      </td>
+      <td class="docs-api-method-parameter-description-cell">
+        <p class="docs-api-method-parameter-description">
+          <p>The index of the element to scroll to.</p>
+
+        </p>
+      </td>
     </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Scrolls to the offset for the given index.</p>
+    
+    <tr class="docs-api-method-parameter-row">
+      <td class="docs-api-method-parameter-cell">
+        <p class="docs-api-method-parameter-name">
+          behavior</p>
+        <code class="docs-api-method-parameter-type">ScrollBehavior = &#39;auto&#39;</code>
+      </td>
+      <td class="docs-api-method-parameter-description-cell">
+        <p class="docs-api-method-parameter-description">
+          <p>The ScrollBehavior to use when scrolling. Default is behavior is <code>auto</code>.</p>
 
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-parameters-header-row">
-      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+        </p>
+      </td>
     </tr>
-  </thead>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        index</p>
-      <code class="docs-api-method-parameter-type">number</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        <p>The index of the element to scroll to.</p>
-
-      </p>
-    </td>
-  </tr>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        behavior</p>
-      <code class="docs-api-method-parameter-type">ScrollBehavior = &#39;auto&#39;</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        <p>The ScrollBehavior to use when scrolling. Default is behavior is <code>auto</code>.</p>
-
-      </p>
-    </td>
-  </tr>
-  </table>
+    </table>
+</div>
 
 
   
     
 
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">scrollToOffset
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Scrolls to the given offset from the start of the viewport. Please note that this is not always
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell">scrollToOffset
+          (<span class="docs-api-method-parameter-name">offset:
+            </span>
+            <code class="docs-api-method-parameter-type">number</code>, <span class="docs-api-method-parameter-name">behavior:
+            </span>
+            <code class="docs-api-method-parameter-type">ScrollBehavior = &#39;auto&#39;</code>): <code class="docs-api-method-returns-type"></code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Scrolls to the given offset from the start of the viewport. Please note that this is not always
 the same as setting <code>scrollTop</code> or <code>scrollLeft</code>. In a horizontal viewport with right-to-left
 direction, this would be the equivalent of setting a fictional <code>scrollRight</code> property.</p>
 
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-parameters-header-row">
-      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+      </td>
+    </tr><thead>
+      <tr class="docs-api-method-parameters-header-row">
+        <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+      </tr>
+    </thead>
+    
+    <tr class="docs-api-method-parameter-row">
+      <td class="docs-api-method-parameter-cell">
+        <p class="docs-api-method-parameter-name">
+          offset</p>
+        <code class="docs-api-method-parameter-type">number</code>
+      </td>
+      <td class="docs-api-method-parameter-description-cell">
+        <p class="docs-api-method-parameter-description">
+          <p>The offset to scroll to.</p>
+
+        </p>
+      </td>
     </tr>
-  </thead>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        offset</p>
-      <code class="docs-api-method-parameter-type">number</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        <p>The offset to scroll to.</p>
+    
+    <tr class="docs-api-method-parameter-row">
+      <td class="docs-api-method-parameter-cell">
+        <p class="docs-api-method-parameter-name">
+          behavior</p>
+        <code class="docs-api-method-parameter-type">ScrollBehavior = &#39;auto&#39;</code>
+      </td>
+      <td class="docs-api-method-parameter-description-cell">
+        <p class="docs-api-method-parameter-description">
+          <p>The ScrollBehavior to use when scrolling. Default is behavior is <code>auto</code>.</p>
 
-      </p>
-    </td>
-  </tr>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        behavior</p>
-      <code class="docs-api-method-parameter-type">ScrollBehavior = &#39;auto&#39;</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        <p>The ScrollBehavior to use when scrolling. Default is behavior is <code>auto</code>.</p>
-
-      </p>
-    </td>
-  </tr>
-  </table>
+        </p>
+      </td>
+    </tr>
+    </table>
+</div>
 
 
   
     
 
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">setRenderedContentOffset
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Sets the offset from the start of the viewport to either the start or end of the rendered data
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell">setRenderedContentOffset
+          (<span class="docs-api-method-parameter-name">offset:
+            </span>
+            <code class="docs-api-method-parameter-type">number</code>, <span class="docs-api-method-parameter-name">to:
+            </span>
+            <code class="docs-api-method-parameter-type">&quot;to-start&quot; | &quot;to-end&quot; = &#39;to-start&#39;</code>): <code class="docs-api-method-returns-type"></code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Sets the offset from the start of the viewport to either the start or end of the rendered data
 (in pixels).</p>
 
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-parameters-header-row">
-      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+      </td>
+    </tr><thead>
+      <tr class="docs-api-method-parameters-header-row">
+        <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+      </tr>
+    </thead>
+    
+    <tr class="docs-api-method-parameter-row">
+      <td class="docs-api-method-parameter-cell">
+        <p class="docs-api-method-parameter-name">
+          offset</p>
+        <code class="docs-api-method-parameter-type">number</code>
+      </td>
+      <td class="docs-api-method-parameter-description-cell">
+        <p class="docs-api-method-parameter-description">
+          
+        </p>
+      </td>
     </tr>
-  </thead>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        offset</p>
-      <code class="docs-api-method-parameter-type">number</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        
-      </p>
-    </td>
-  </tr>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        to</p>
-      <code class="docs-api-method-parameter-type">&quot;to-start&quot; | &quot;to-end&quot; = &#39;to-start&#39;</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        
-      </p>
-    </td>
-  </tr>
-  </table>
+    
+    <tr class="docs-api-method-parameter-row">
+      <td class="docs-api-method-parameter-cell">
+        <p class="docs-api-method-parameter-name">
+          to</p>
+        <code class="docs-api-method-parameter-type">&quot;to-start&quot; | &quot;to-end&quot; = &#39;to-start&#39;</code>
+      </td>
+      <td class="docs-api-method-parameter-description-cell">
+        <p class="docs-api-method-parameter-description">
+          
+        </p>
+      </td>
+    </tr>
+    </table>
+</div>
 
 
   
     
 
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">setRenderedRange
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Sets the currently rendered range of indices.</p>
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell">setRenderedRange
+          (<span class="docs-api-method-parameter-name">range:
+            </span>
+            <code class="docs-api-method-parameter-type">ListRange</code>): <code class="docs-api-method-returns-type"></code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Sets the currently rendered range of indices.</p>
 
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-parameters-header-row">
-      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+      </td>
+    </tr><thead>
+      <tr class="docs-api-method-parameters-header-row">
+        <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+      </tr>
+    </thead>
+    
+    <tr class="docs-api-method-parameter-row">
+      <td class="docs-api-method-parameter-cell">
+        <p class="docs-api-method-parameter-name">
+          range</p>
+        <code class="docs-api-method-parameter-type">ListRange</code>
+      </td>
+      <td class="docs-api-method-parameter-description-cell">
+        <p class="docs-api-method-parameter-description">
+          
+        </p>
+      </td>
     </tr>
-  </thead>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        range</p>
-      <code class="docs-api-method-parameter-type">ListRange</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        
-      </p>
-    </td>
-  </tr>
-  </table>
+    </table>
+</div>
 
 
   
     
 
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">setTotalContentSize
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Sets the total size of all content (in pixels), including content that is not currently
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell">setTotalContentSize
+          (<span class="docs-api-method-parameter-name">size:
+            </span>
+            <code class="docs-api-method-parameter-type">number</code>): <code class="docs-api-method-returns-type"></code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Sets the total size of all content (in pixels), including content that is not currently
 rendered.</p>
 
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-parameters-header-row">
-      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+      </td>
+    </tr><thead>
+      <tr class="docs-api-method-parameters-header-row">
+        <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+      </tr>
+    </thead>
+    
+    <tr class="docs-api-method-parameter-row">
+      <td class="docs-api-method-parameter-cell">
+        <p class="docs-api-method-parameter-name">
+          size</p>
+        <code class="docs-api-method-parameter-type">number</code>
+      </td>
+      <td class="docs-api-method-parameter-description-cell">
+        <p class="docs-api-method-parameter-description">
+          
+        </p>
+      </td>
     </tr>
-  </thead>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        size</p>
-      <code class="docs-api-method-parameter-type">number</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        
-      </p>
-    </td>
-  </tr>
-  </table>
+    </table>
+</div>
 
 
   
@@ -1217,219 +1341,237 @@ can be listened to through the service.</p>
     <span class="docs-api-class-selector-name">[cdkScrollable]</span>
   
 </p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
-  <table class="docs-api-properties-table">
-    <tr class="docs-api-properties-header-row">
-      <th class="docs-api-properties-th">Name</th>
-      <th class="docs-api-properties-th">Description</th>
-    </tr>
-    
+  <div class="docs-api-properties-card">
+    <table class="docs-api-properties-table">
+      <tr class="docs-api-properties-header-row">
+        <th class="docs-api-properties-th">Name</th>
+        <th class="docs-api-properties-th">Description</th>
+      </tr>
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>dir: inject(Directionality, { optional: true })</code>
+      <code>dir: <code class="docs-api-property-type">inject(Directionality, { optional: true })</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"></td>
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>elementRef: inject&lt;ElementRef&lt;HTMLElement&gt;&gt;(ElementRef)</code>
+      <code>elementRef: <code class="docs-api-property-type">inject&lt;ElementRef&lt;HTMLElement&gt;&gt;(ElementRef)</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"></td>
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>ngZone: inject(NgZone)</code>
+      <code>ngZone: <code class="docs-api-property-type">inject(NgZone)</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"></td>
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>scrollDispatcher: inject(ScrollDispatcher)</code>
+      <code>scrollDispatcher: <code class="docs-api-property-type">inject(ScrollDispatcher)</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"></td>
 </tr>
 
 
-    
-  </table>
+      
+    </table>
+  </div>
 
 
 <h5 class="docs-api-h5 docs-api-method-header">Methods</h5>
   
     
 
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">elementScrolled
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Returns observable that emits when a scroll event is fired on the host element.</p>
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell">elementScrolled
+          (): <code class="docs-api-method-returns-type">Observable&lt;Event&gt;</code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Returns observable that emits when a scroll event is fired on the host element.</p>
 
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
-    </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">Observable&lt;Event&gt;</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        
-      </p>
-    </td>
-  </tr></table>
-
-
-  
-    
-
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">getElementRef
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets the ElementRef for the viewport.</p>
-
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
-    </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">ElementRef&lt;HTMLElement&gt;</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        
-      </p>
-    </td>
-  </tr></table>
+      </td>
+    </tr><thead>
+      <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+      </tr>
+    </thead>
+    <tr>
+      <td class="docs-api-method-returns-type-cell">
+        <code class="docs-api-method-returns-type">Observable&lt;Event&gt;</code>
+      </td>
+      <td class="docs-api-method-returns-description-cell">
+        <p class="docs-api-method-returns-description">
+          
+        </p>
+      </td>
+    </tr></table>
+</div>
 
 
   
     
 
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">measureScrollOffset
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Measures the scroll offset relative to the specified edge of the viewport. This method can be
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell">getElementRef
+          (): <code class="docs-api-method-returns-type">ElementRef&lt;HTMLElement&gt;</code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Gets the ElementRef for the viewport.</p>
+
+      </td>
+    </tr><thead>
+      <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+      </tr>
+    </thead>
+    <tr>
+      <td class="docs-api-method-returns-type-cell">
+        <code class="docs-api-method-returns-type">ElementRef&lt;HTMLElement&gt;</code>
+      </td>
+      <td class="docs-api-method-returns-description-cell">
+        <p class="docs-api-method-returns-description">
+          
+        </p>
+      </td>
+    </tr></table>
+</div>
+
+
+  
+    
+
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell">measureScrollOffset
+          (<span class="docs-api-method-parameter-name">from:
+            </span>
+            <code class="docs-api-method-parameter-type">&quot;left&quot; | &quot;right&quot; | &quot;start&quot; | &quot;end&quot; | &quot;top&quot; | &quot;bottom&quot;</code>): <code class="docs-api-method-returns-type">number</code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Measures the scroll offset relative to the specified edge of the viewport. This method can be
 used instead of directly checking scrollLeft or scrollTop, since browsers are not consistent
 about what scrollLeft means in RTL. The values returned by this method are normalized such that
 left and right always refer to the left and right side of the scrolling container irrespective
 of the layout direction. start and end refer to left and right in an LTR context and vice-versa
 in an RTL context.</p>
 
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-parameters-header-row">
-      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
-    </tr>
-  </thead>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        from</p>
-      <code class="docs-api-method-parameter-type">&quot;left&quot; | &quot;right&quot; | &quot;start&quot; | &quot;end&quot; | &quot;top&quot; | &quot;bottom&quot;</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        <p>The edge to measure from.</p>
+      </td>
+    </tr><thead>
+      <tr class="docs-api-method-parameters-header-row">
+        <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+      </tr>
+    </thead>
+    
+    <tr class="docs-api-method-parameter-row">
+      <td class="docs-api-method-parameter-cell">
+        <p class="docs-api-method-parameter-name">
+          from</p>
+        <code class="docs-api-method-parameter-type">&quot;left&quot; | &quot;right&quot; | &quot;start&quot; | &quot;end&quot; | &quot;top&quot; | &quot;bottom&quot;</code>
+      </td>
+      <td class="docs-api-method-parameter-description-cell">
+        <p class="docs-api-method-parameter-description">
+          <p>The edge to measure from.</p>
 
-      </p>
-    </td>
-  </tr>
-  <thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+        </p>
+      </td>
     </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">number</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        
-      </p>
-    </td>
-  </tr></table>
+    <thead>
+      <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+      </tr>
+    </thead>
+    <tr>
+      <td class="docs-api-method-returns-type-cell">
+        <code class="docs-api-method-returns-type">number</code>
+      </td>
+      <td class="docs-api-method-returns-description-cell">
+        <p class="docs-api-method-returns-description">
+          
+        </p>
+      </td>
+    </tr></table>
+</div>
 
 
   
     
 
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">scrollTo
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Scrolls to the specified offsets. This is a normalized version of the browser&#39;s native scrollTo
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell">scrollTo
+          (<span class="docs-api-method-parameter-name">options:
+            </span>
+            <code class="docs-api-method-parameter-type">ExtendedScrollToOptions</code>): <code class="docs-api-method-returns-type">void</code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Scrolls to the specified offsets. This is a normalized version of the browser&#39;s native scrollTo
 method, since browsers are not consistent about what scrollLeft means in RTL. For this method
 left and right always refer to the left and right side of the scrolling container irrespective
 of the layout direction. start and end refer to left and right in an LTR context and vice-versa
 in an RTL context.</p>
 
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-parameters-header-row">
-      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
-    </tr>
-  </thead>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        options</p>
-      <code class="docs-api-method-parameter-type">ExtendedScrollToOptions</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        <p>specified the offsets to scroll to.</p>
+      </td>
+    </tr><thead>
+      <tr class="docs-api-method-parameters-header-row">
+        <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+      </tr>
+    </thead>
+    
+    <tr class="docs-api-method-parameter-row">
+      <td class="docs-api-method-parameter-cell">
+        <p class="docs-api-method-parameter-name">
+          options</p>
+        <code class="docs-api-method-parameter-type">ExtendedScrollToOptions</code>
+      </td>
+      <td class="docs-api-method-parameter-description-cell">
+        <p class="docs-api-method-parameter-description">
+          <p>specified the offsets to scroll to.</p>
 
-      </p>
-    </td>
-  </tr>
-  </table>
+        </p>
+      </td>
+    </tr>
+    </table>
+</div>
 
 
   
@@ -1450,18 +1592,19 @@ in an RTL context.</p>
     <span class="docs-api-class-selector-name">cdk-virtual-scroll-viewport[itemSize]</span>
   
 </p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
-  <table class="docs-api-properties-table">
-    <tr class="docs-api-properties-header-row">
-      <th class="docs-api-properties-th">Name</th>
-      <th class="docs-api-properties-th">Description</th>
-    </tr>
-    
+  <div class="docs-api-properties-card">
+    <table class="docs-api-properties-table">
+      <tr class="docs-api-properties-header-row">
+        <th class="docs-api-properties-th">Name</th>
+        <th class="docs-api-properties-th">Description</th>
+      </tr>
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
           @Input()</div><p class="docs-api-property-name">
-      <code>itemSize: number</code>
+      <code>itemSize: <code class="docs-api-property-type">number</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>The size of the items in the list (in pixels).</p>
@@ -1469,13 +1612,13 @@ in an RTL context.</p>
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
           @Input()</div><p class="docs-api-property-name">
-      <code>maxBufferPx: number</code>
+      <code>maxBufferPx: <code class="docs-api-property-type">number</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>The number of pixels worth of buffer to render for when rendering new items. Defaults to 200px.</p>
@@ -1483,13 +1626,13 @@ in an RTL context.</p>
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
           @Input()</div><p class="docs-api-property-name">
-      <code>minBufferPx: number</code>
+      <code>minBufferPx: <code class="docs-api-property-type">number</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>The minimum amount of buffer rendered beyond the viewport (in pixels).
@@ -1498,8 +1641,9 @@ If the amount of buffer dips below this number, more items will be rendered. Def
 </tr>
 
 
-    
-  </table>
+      
+    </table>
+  </div>
 
 
 
@@ -1521,18 +1665,19 @@ container.</p>
     <span class="docs-api-class-selector-name">[cdkVirtualFor][cdkVirtualForOf]</span>
   
 </p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
-  <table class="docs-api-properties-table">
-    <tr class="docs-api-properties-header-row">
-      <th class="docs-api-properties-th">Name</th>
-      <th class="docs-api-properties-th">Description</th>
-    </tr>
-    
+  <div class="docs-api-properties-card">
+    <table class="docs-api-properties-table">
+      <tr class="docs-api-properties-header-row">
+        <th class="docs-api-properties-th">Name</th>
+        <th class="docs-api-properties-th">Description</th>
+      </tr>
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
           @Input()</div><p class="docs-api-property-name">
-      <code>cdkVirtualForOf: DataSource&lt;T&gt; | Observable&lt;T[]&gt; | NgIterable&lt;T&gt; | null | undefined</code>
+      <code>cdkVirtualForOf: <code class="docs-api-property-type">DataSource&lt;T&gt; | Observable&lt;T[]&gt; | NgIterable&lt;T&gt; | null | undefined</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>The DataSource to display.</p>
@@ -1540,13 +1685,13 @@ container.</p>
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
           @Input()</div><p class="docs-api-property-name">
-      <code>cdkVirtualForTemplate: TemplateRef&lt;CdkVirtualForOfContext&lt;T&gt;&gt;</code>
+      <code>cdkVirtualForTemplate: <code class="docs-api-property-type">TemplateRef&lt;CdkVirtualForOfContext&lt;T&gt;&gt;</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>The template used to stamp out new elements.</p>
@@ -1554,13 +1699,13 @@ container.</p>
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
           @Input()</div><p class="docs-api-property-name">
-      <code>cdkVirtualForTemplateCacheSize: number</code>
+      <code>cdkVirtualForTemplateCacheSize: <code class="docs-api-property-type">number</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>The size of the cache used to store templates that are not being used for re-use later.
@@ -1569,13 +1714,13 @@ Setting the cache size to <code>0</code> will disable caching. Defaults to 20 te
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
           @Input()</div><p class="docs-api-property-name">
-      <code>cdkVirtualForTrackBy: TrackByFunction&lt;T&gt; | undefined</code>
+      <code>cdkVirtualForTrackBy: <code class="docs-api-property-type">TrackByFunction&lt;T&gt; | undefined</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>The <code>TrackByFunction</code> to use for tracking changes. The <code>TrackByFunction</code> takes the index and
@@ -1584,12 +1729,12 @@ the item and produces a value to be used as the item&#39;s identity when trackin
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>dataStream: Observable&lt;readonly T[]&gt;</code>
+      <code>dataStream: <code class="docs-api-property-type">Observable&lt;readonly T[]&gt;</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Emits whenever the data in the current DataSource changes.</p>
@@ -1597,12 +1742,12 @@ the item and produces a value to be used as the item&#39;s identity when trackin
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>viewChange: Subject&lt;ListRange&gt;</code>
+      <code>viewChange: <code class="docs-api-property-type">Subject&lt;ListRange&gt;</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Emits when the rendered view of the data changes.</p>
@@ -1610,132 +1755,147 @@ the item and produces a value to be used as the item&#39;s identity when trackin
 </tr>
 
 
-    
-  </table>
+      
+    </table>
+  </div>
 
 
 <h5 class="docs-api-h5 docs-api-method-header">Methods</h5>
   
     
 
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">measureRangeSize
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Measures the combined size (width for horizontal orientation, height for vertical) of all items
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell">measureRangeSize
+          (<span class="docs-api-method-parameter-name">range:
+            </span>
+            <code class="docs-api-method-parameter-type">ListRange</code>, <span class="docs-api-method-parameter-name">orientation:
+            </span>
+            <code class="docs-api-method-parameter-type">&quot;horizontal&quot; | &quot;vertical&quot;</code>): <code class="docs-api-method-returns-type">number</code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Measures the combined size (width for horizontal orientation, height for vertical) of all items
 in the specified range. Throws an error if the range includes items that are not currently
 rendered.</p>
 
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-parameters-header-row">
-      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+      </td>
+    </tr><thead>
+      <tr class="docs-api-method-parameters-header-row">
+        <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+      </tr>
+    </thead>
+    
+    <tr class="docs-api-method-parameter-row">
+      <td class="docs-api-method-parameter-cell">
+        <p class="docs-api-method-parameter-name">
+          range</p>
+        <code class="docs-api-method-parameter-type">ListRange</code>
+      </td>
+      <td class="docs-api-method-parameter-description-cell">
+        <p class="docs-api-method-parameter-description">
+          
+        </p>
+      </td>
     </tr>
-  </thead>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        range</p>
-      <code class="docs-api-method-parameter-type">ListRange</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        
-      </p>
-    </td>
-  </tr>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        orientation</p>
-      <code class="docs-api-method-parameter-type">&quot;horizontal&quot; | &quot;vertical&quot;</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        
-      </p>
-    </td>
-  </tr>
-  <thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    
+    <tr class="docs-api-method-parameter-row">
+      <td class="docs-api-method-parameter-cell">
+        <p class="docs-api-method-parameter-name">
+          orientation</p>
+        <code class="docs-api-method-parameter-type">&quot;horizontal&quot; | &quot;vertical&quot;</code>
+      </td>
+      <td class="docs-api-method-parameter-description-cell">
+        <p class="docs-api-method-parameter-description">
+          
+        </p>
+      </td>
     </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">number</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        
-      </p>
-    </td>
-  </tr></table>
+    <thead>
+      <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+      </tr>
+    </thead>
+    <tr>
+      <td class="docs-api-method-returns-type-cell">
+        <code class="docs-api-method-returns-type">number</code>
+      </td>
+      <td class="docs-api-method-returns-description-cell">
+        <p class="docs-api-method-returns-description">
+          
+        </p>
+      </td>
+    </tr></table>
+</div>
 
 
   
     
 
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
-          static
-        </div>ngTemplateContextGuard
-      </th>
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
+            static
+          </div>ngTemplateContextGuard
+          (<span class="docs-api-method-parameter-name">directive:
+            </span>
+            <code class="docs-api-method-parameter-type">CdkVirtualForOf&lt;T&gt;</code>, <span class="docs-api-method-parameter-name">context:
+            </span>
+            <code class="docs-api-method-parameter-type">unknown</code>): <code class="docs-api-method-returns-type">context is CdkVirtualForOfContext&lt;T&gt;</code>
+        </th>
+      </tr>
+    </thead><thead>
+      <tr class="docs-api-method-parameters-header-row">
+        <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+      </tr>
+    </thead>
+    
+    <tr class="docs-api-method-parameter-row">
+      <td class="docs-api-method-parameter-cell">
+        <p class="docs-api-method-parameter-name">
+          directive</p>
+        <code class="docs-api-method-parameter-type">CdkVirtualForOf&lt;T&gt;</code>
+      </td>
+      <td class="docs-api-method-parameter-description-cell">
+        <p class="docs-api-method-parameter-description">
+          
+        </p>
+      </td>
     </tr>
-  </thead><thead>
-    <tr class="docs-api-method-parameters-header-row">
-      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+    
+    <tr class="docs-api-method-parameter-row">
+      <td class="docs-api-method-parameter-cell">
+        <p class="docs-api-method-parameter-name">
+          context</p>
+        <code class="docs-api-method-parameter-type">unknown</code>
+      </td>
+      <td class="docs-api-method-parameter-description-cell">
+        <p class="docs-api-method-parameter-description">
+          
+        </p>
+      </td>
     </tr>
-  </thead>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        directive</p>
-      <code class="docs-api-method-parameter-type">CdkVirtualForOf&lt;T&gt;</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        
-      </p>
-    </td>
-  </tr>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        context</p>
-      <code class="docs-api-method-parameter-type">unknown</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        
-      </p>
-    </td>
-  </tr>
-  <thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
-    </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">context is CdkVirtualForOfContext&lt;T&gt;</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        
-      </p>
-    </td>
-  </tr></table>
+    <thead>
+      <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+      </tr>
+    </thead>
+    <tr>
+      <td class="docs-api-method-returns-type-cell">
+        <code class="docs-api-method-returns-type">context is CdkVirtualForOfContext&lt;T&gt;</code>
+      </td>
+      <td class="docs-api-method-returns-description-cell">
+        <p class="docs-api-method-returns-description">
+          
+        </p>
+      </td>
+    </tr></table>
+</div>
 
 
   
@@ -1769,238 +1929,264 @@ rendered.</p>
   
     
 
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">elementScrolled
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Returns observable that emits when a scroll event is fired on the host element.</p>
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell">elementScrolled
+          (): <code class="docs-api-method-returns-type">Observable&lt;Event&gt;</code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Returns observable that emits when a scroll event is fired on the host element.</p>
 
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
-    </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">Observable&lt;Event&gt;</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        
-      </p>
-    </td>
-  </tr></table>
-
-
-  
-    
-
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">getElementRef
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets the ElementRef for the viewport.</p>
-
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
-    </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">ElementRef&lt;HTMLElement&gt;</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        
-      </p>
-    </td>
-  </tr></table>
+      </td>
+    </tr><thead>
+      <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+      </tr>
+    </thead>
+    <tr>
+      <td class="docs-api-method-returns-type-cell">
+        <code class="docs-api-method-returns-type">Observable&lt;Event&gt;</code>
+      </td>
+      <td class="docs-api-method-returns-description-cell">
+        <p class="docs-api-method-returns-description">
+          
+        </p>
+      </td>
+    </tr></table>
+</div>
 
 
   
     
 
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">measureBoundingClientRectWithScrollOffset
-      </th>
-    </tr>
-  </thead><thead>
-    <tr class="docs-api-method-parameters-header-row">
-      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
-    </tr>
-  </thead>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        from</p>
-      <code class="docs-api-method-parameter-type">&quot;left&quot; | &quot;right&quot; | &quot;top&quot; | &quot;bottom&quot;</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        
-      </p>
-    </td>
-  </tr>
-  <thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
-    </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">number</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        
-      </p>
-    </td>
-  </tr></table>
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell">getElementRef
+          (): <code class="docs-api-method-returns-type">ElementRef&lt;HTMLElement&gt;</code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Gets the ElementRef for the viewport.</p>
+
+      </td>
+    </tr><thead>
+      <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+      </tr>
+    </thead>
+    <tr>
+      <td class="docs-api-method-returns-type-cell">
+        <code class="docs-api-method-returns-type">ElementRef&lt;HTMLElement&gt;</code>
+      </td>
+      <td class="docs-api-method-returns-description-cell">
+        <p class="docs-api-method-returns-description">
+          
+        </p>
+      </td>
+    </tr></table>
+</div>
 
 
   
     
 
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">measureScrollOffset
-      </th>
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell">measureBoundingClientRectWithScrollOffset
+          (<span class="docs-api-method-parameter-name">from:
+            </span>
+            <code class="docs-api-method-parameter-type">&quot;left&quot; | &quot;right&quot; | &quot;top&quot; | &quot;bottom&quot;</code>): <code class="docs-api-method-returns-type">number</code>
+        </th>
+      </tr>
+    </thead><thead>
+      <tr class="docs-api-method-parameters-header-row">
+        <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+      </tr>
+    </thead>
+    
+    <tr class="docs-api-method-parameter-row">
+      <td class="docs-api-method-parameter-cell">
+        <p class="docs-api-method-parameter-name">
+          from</p>
+        <code class="docs-api-method-parameter-type">&quot;left&quot; | &quot;right&quot; | &quot;top&quot; | &quot;bottom&quot;</code>
+      </td>
+      <td class="docs-api-method-parameter-description-cell">
+        <p class="docs-api-method-parameter-description">
+          
+        </p>
+      </td>
     </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Measures the scroll offset relative to the specified edge of the viewport. This method can be
+    <thead>
+      <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+      </tr>
+    </thead>
+    <tr>
+      <td class="docs-api-method-returns-type-cell">
+        <code class="docs-api-method-returns-type">number</code>
+      </td>
+      <td class="docs-api-method-returns-description-cell">
+        <p class="docs-api-method-returns-description">
+          
+        </p>
+      </td>
+    </tr></table>
+</div>
+
+
+  
+    
+
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell">measureScrollOffset
+          (<span class="docs-api-method-parameter-name">from:
+            </span>
+            <code class="docs-api-method-parameter-type">&quot;left&quot; | &quot;right&quot; | &quot;start&quot; | &quot;end&quot; | &quot;top&quot; | &quot;bottom&quot;</code>): <code class="docs-api-method-returns-type">number</code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Measures the scroll offset relative to the specified edge of the viewport. This method can be
 used instead of directly checking scrollLeft or scrollTop, since browsers are not consistent
 about what scrollLeft means in RTL. The values returned by this method are normalized such that
 left and right always refer to the left and right side of the scrolling container irrespective
 of the layout direction. start and end refer to left and right in an LTR context and vice-versa
 in an RTL context.</p>
 
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-parameters-header-row">
-      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
-    </tr>
-  </thead>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        from</p>
-      <code class="docs-api-method-parameter-type">&quot;left&quot; | &quot;right&quot; | &quot;start&quot; | &quot;end&quot; | &quot;top&quot; | &quot;bottom&quot;</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        <p>The edge to measure from.</p>
+      </td>
+    </tr><thead>
+      <tr class="docs-api-method-parameters-header-row">
+        <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+      </tr>
+    </thead>
+    
+    <tr class="docs-api-method-parameter-row">
+      <td class="docs-api-method-parameter-cell">
+        <p class="docs-api-method-parameter-name">
+          from</p>
+        <code class="docs-api-method-parameter-type">&quot;left&quot; | &quot;right&quot; | &quot;start&quot; | &quot;end&quot; | &quot;top&quot; | &quot;bottom&quot;</code>
+      </td>
+      <td class="docs-api-method-parameter-description-cell">
+        <p class="docs-api-method-parameter-description">
+          <p>The edge to measure from.</p>
 
-      </p>
-    </td>
-  </tr>
-  <thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+        </p>
+      </td>
     </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">number</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        
-      </p>
-    </td>
-  </tr></table>
+    <thead>
+      <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+      </tr>
+    </thead>
+    <tr>
+      <td class="docs-api-method-returns-type-cell">
+        <code class="docs-api-method-returns-type">number</code>
+      </td>
+      <td class="docs-api-method-returns-description-cell">
+        <p class="docs-api-method-returns-description">
+          
+        </p>
+      </td>
+    </tr></table>
+</div>
 
 
   
     
 
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">measureViewportSize
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Measure the viewport size for the provided orientation.</p>
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell">measureViewportSize
+          (<span class="docs-api-method-parameter-name">orientation:
+            </span>
+            <code class="docs-api-method-parameter-type">&quot;horizontal&quot; | &quot;vertical&quot;</code>): <code class="docs-api-method-returns-type"></code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Measure the viewport size for the provided orientation.</p>
 
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-parameters-header-row">
-      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
-    </tr>
-  </thead>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        orientation</p>
-      <code class="docs-api-method-parameter-type">&quot;horizontal&quot; | &quot;vertical&quot;</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        <p>The orientation to measure the size from.</p>
+      </td>
+    </tr><thead>
+      <tr class="docs-api-method-parameters-header-row">
+        <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+      </tr>
+    </thead>
+    
+    <tr class="docs-api-method-parameter-row">
+      <td class="docs-api-method-parameter-cell">
+        <p class="docs-api-method-parameter-name">
+          orientation</p>
+        <code class="docs-api-method-parameter-type">&quot;horizontal&quot; | &quot;vertical&quot;</code>
+      </td>
+      <td class="docs-api-method-parameter-description-cell">
+        <p class="docs-api-method-parameter-description">
+          <p>The orientation to measure the size from.</p>
 
-      </p>
-    </td>
-  </tr>
-  </table>
+        </p>
+      </td>
+    </tr>
+    </table>
+</div>
 
 
   
     
 
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">scrollTo
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Scrolls to the specified offsets. This is a normalized version of the browser&#39;s native scrollTo
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell">scrollTo
+          (<span class="docs-api-method-parameter-name">options:
+            </span>
+            <code class="docs-api-method-parameter-type">ExtendedScrollToOptions</code>): <code class="docs-api-method-returns-type">void</code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Scrolls to the specified offsets. This is a normalized version of the browser&#39;s native scrollTo
 method, since browsers are not consistent about what scrollLeft means in RTL. For this method
 left and right always refer to the left and right side of the scrolling container irrespective
 of the layout direction. start and end refer to left and right in an LTR context and vice-versa
 in an RTL context.</p>
 
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-parameters-header-row">
-      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
-    </tr>
-  </thead>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        options</p>
-      <code class="docs-api-method-parameter-type">ExtendedScrollToOptions</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        <p>specified the offsets to scroll to.</p>
+      </td>
+    </tr><thead>
+      <tr class="docs-api-method-parameters-header-row">
+        <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+      </tr>
+    </thead>
+    
+    <tr class="docs-api-method-parameter-row">
+      <td class="docs-api-method-parameter-cell">
+        <p class="docs-api-method-parameter-name">
+          options</p>
+        <code class="docs-api-method-parameter-type">ExtendedScrollToOptions</code>
+      </td>
+      <td class="docs-api-method-parameter-description-cell">
+        <p class="docs-api-method-parameter-description">
+          <p>specified the offsets to scroll to.</p>
 
-      </p>
-    </td>
-  </tr>
-  </table>
+        </p>
+      </td>
+    </tr>
+    </table>
+</div>
 
 
   
@@ -2034,238 +2220,264 @@ in an RTL context.</p>
   
     
 
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">elementScrolled
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Returns observable that emits when a scroll event is fired on the host element.</p>
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell">elementScrolled
+          (): <code class="docs-api-method-returns-type">Observable&lt;Event&gt;</code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Returns observable that emits when a scroll event is fired on the host element.</p>
 
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
-    </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">Observable&lt;Event&gt;</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        
-      </p>
-    </td>
-  </tr></table>
-
-
-  
-    
-
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">getElementRef
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets the ElementRef for the viewport.</p>
-
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
-    </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">ElementRef&lt;HTMLElement&gt;</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        
-      </p>
-    </td>
-  </tr></table>
+      </td>
+    </tr><thead>
+      <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+      </tr>
+    </thead>
+    <tr>
+      <td class="docs-api-method-returns-type-cell">
+        <code class="docs-api-method-returns-type">Observable&lt;Event&gt;</code>
+      </td>
+      <td class="docs-api-method-returns-description-cell">
+        <p class="docs-api-method-returns-description">
+          
+        </p>
+      </td>
+    </tr></table>
+</div>
 
 
   
     
 
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">measureBoundingClientRectWithScrollOffset
-      </th>
-    </tr>
-  </thead><thead>
-    <tr class="docs-api-method-parameters-header-row">
-      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
-    </tr>
-  </thead>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        from</p>
-      <code class="docs-api-method-parameter-type">&quot;left&quot; | &quot;right&quot; | &quot;top&quot; | &quot;bottom&quot;</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        
-      </p>
-    </td>
-  </tr>
-  <thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
-    </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">number</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        
-      </p>
-    </td>
-  </tr></table>
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell">getElementRef
+          (): <code class="docs-api-method-returns-type">ElementRef&lt;HTMLElement&gt;</code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Gets the ElementRef for the viewport.</p>
+
+      </td>
+    </tr><thead>
+      <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+      </tr>
+    </thead>
+    <tr>
+      <td class="docs-api-method-returns-type-cell">
+        <code class="docs-api-method-returns-type">ElementRef&lt;HTMLElement&gt;</code>
+      </td>
+      <td class="docs-api-method-returns-description-cell">
+        <p class="docs-api-method-returns-description">
+          
+        </p>
+      </td>
+    </tr></table>
+</div>
 
 
   
     
 
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">measureScrollOffset
-      </th>
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell">measureBoundingClientRectWithScrollOffset
+          (<span class="docs-api-method-parameter-name">from:
+            </span>
+            <code class="docs-api-method-parameter-type">&quot;left&quot; | &quot;right&quot; | &quot;top&quot; | &quot;bottom&quot;</code>): <code class="docs-api-method-returns-type">number</code>
+        </th>
+      </tr>
+    </thead><thead>
+      <tr class="docs-api-method-parameters-header-row">
+        <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+      </tr>
+    </thead>
+    
+    <tr class="docs-api-method-parameter-row">
+      <td class="docs-api-method-parameter-cell">
+        <p class="docs-api-method-parameter-name">
+          from</p>
+        <code class="docs-api-method-parameter-type">&quot;left&quot; | &quot;right&quot; | &quot;top&quot; | &quot;bottom&quot;</code>
+      </td>
+      <td class="docs-api-method-parameter-description-cell">
+        <p class="docs-api-method-parameter-description">
+          
+        </p>
+      </td>
     </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Measures the scroll offset relative to the specified edge of the viewport. This method can be
+    <thead>
+      <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+      </tr>
+    </thead>
+    <tr>
+      <td class="docs-api-method-returns-type-cell">
+        <code class="docs-api-method-returns-type">number</code>
+      </td>
+      <td class="docs-api-method-returns-description-cell">
+        <p class="docs-api-method-returns-description">
+          
+        </p>
+      </td>
+    </tr></table>
+</div>
+
+
+  
+    
+
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell">measureScrollOffset
+          (<span class="docs-api-method-parameter-name">from:
+            </span>
+            <code class="docs-api-method-parameter-type">&quot;left&quot; | &quot;right&quot; | &quot;start&quot; | &quot;end&quot; | &quot;top&quot; | &quot;bottom&quot;</code>): <code class="docs-api-method-returns-type">number</code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Measures the scroll offset relative to the specified edge of the viewport. This method can be
 used instead of directly checking scrollLeft or scrollTop, since browsers are not consistent
 about what scrollLeft means in RTL. The values returned by this method are normalized such that
 left and right always refer to the left and right side of the scrolling container irrespective
 of the layout direction. start and end refer to left and right in an LTR context and vice-versa
 in an RTL context.</p>
 
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-parameters-header-row">
-      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
-    </tr>
-  </thead>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        from</p>
-      <code class="docs-api-method-parameter-type">&quot;left&quot; | &quot;right&quot; | &quot;start&quot; | &quot;end&quot; | &quot;top&quot; | &quot;bottom&quot;</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        <p>The edge to measure from.</p>
+      </td>
+    </tr><thead>
+      <tr class="docs-api-method-parameters-header-row">
+        <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+      </tr>
+    </thead>
+    
+    <tr class="docs-api-method-parameter-row">
+      <td class="docs-api-method-parameter-cell">
+        <p class="docs-api-method-parameter-name">
+          from</p>
+        <code class="docs-api-method-parameter-type">&quot;left&quot; | &quot;right&quot; | &quot;start&quot; | &quot;end&quot; | &quot;top&quot; | &quot;bottom&quot;</code>
+      </td>
+      <td class="docs-api-method-parameter-description-cell">
+        <p class="docs-api-method-parameter-description">
+          <p>The edge to measure from.</p>
 
-      </p>
-    </td>
-  </tr>
-  <thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+        </p>
+      </td>
     </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">number</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        
-      </p>
-    </td>
-  </tr></table>
+    <thead>
+      <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+      </tr>
+    </thead>
+    <tr>
+      <td class="docs-api-method-returns-type-cell">
+        <code class="docs-api-method-returns-type">number</code>
+      </td>
+      <td class="docs-api-method-returns-description-cell">
+        <p class="docs-api-method-returns-description">
+          
+        </p>
+      </td>
+    </tr></table>
+</div>
 
 
   
     
 
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">measureViewportSize
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Measure the viewport size for the provided orientation.</p>
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell">measureViewportSize
+          (<span class="docs-api-method-parameter-name">orientation:
+            </span>
+            <code class="docs-api-method-parameter-type">&quot;horizontal&quot; | &quot;vertical&quot;</code>): <code class="docs-api-method-returns-type"></code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Measure the viewport size for the provided orientation.</p>
 
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-parameters-header-row">
-      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
-    </tr>
-  </thead>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        orientation</p>
-      <code class="docs-api-method-parameter-type">&quot;horizontal&quot; | &quot;vertical&quot;</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        <p>The orientation to measure the size from.</p>
+      </td>
+    </tr><thead>
+      <tr class="docs-api-method-parameters-header-row">
+        <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+      </tr>
+    </thead>
+    
+    <tr class="docs-api-method-parameter-row">
+      <td class="docs-api-method-parameter-cell">
+        <p class="docs-api-method-parameter-name">
+          orientation</p>
+        <code class="docs-api-method-parameter-type">&quot;horizontal&quot; | &quot;vertical&quot;</code>
+      </td>
+      <td class="docs-api-method-parameter-description-cell">
+        <p class="docs-api-method-parameter-description">
+          <p>The orientation to measure the size from.</p>
 
-      </p>
-    </td>
-  </tr>
-  </table>
+        </p>
+      </td>
+    </tr>
+    </table>
+</div>
 
 
   
     
 
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">scrollTo
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Scrolls to the specified offsets. This is a normalized version of the browser&#39;s native scrollTo
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell">scrollTo
+          (<span class="docs-api-method-parameter-name">options:
+            </span>
+            <code class="docs-api-method-parameter-type">ExtendedScrollToOptions</code>): <code class="docs-api-method-returns-type">void</code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Scrolls to the specified offsets. This is a normalized version of the browser&#39;s native scrollTo
 method, since browsers are not consistent about what scrollLeft means in RTL. For this method
 left and right always refer to the left and right side of the scrolling container irrespective
 of the layout direction. start and end refer to left and right in an LTR context and vice-versa
 in an RTL context.</p>
 
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-parameters-header-row">
-      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
-    </tr>
-  </thead>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        options</p>
-      <code class="docs-api-method-parameter-type">ExtendedScrollToOptions</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        <p>specified the offsets to scroll to.</p>
+      </td>
+    </tr><thead>
+      <tr class="docs-api-method-parameters-header-row">
+        <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+      </tr>
+    </thead>
+    
+    <tr class="docs-api-method-parameter-row">
+      <td class="docs-api-method-parameter-cell">
+        <p class="docs-api-method-parameter-name">
+          options</p>
+        <code class="docs-api-method-parameter-type">ExtendedScrollToOptions</code>
+      </td>
+      <td class="docs-api-method-parameter-description-cell">
+        <p class="docs-api-method-parameter-description">
+          <p>specified the offsets to scroll to.</p>
 
-      </p>
-    </td>
-  </tr>
-  </table>
+        </p>
+      </td>
+    </tr>
+    </table>
+</div>
 
 
   
@@ -2291,168 +2503,192 @@ in an RTL context.</p>
   
     
 
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">attach
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Attaches this scroll strategy to a viewport.</p>
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell">attach
+          (<span class="docs-api-method-parameter-name">viewport:
+            </span>
+            <code class="docs-api-method-parameter-type">CdkVirtualScrollViewport</code>): <code class="docs-api-method-returns-type"></code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Attaches this scroll strategy to a viewport.</p>
 
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-parameters-header-row">
-      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
-    </tr>
-  </thead>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        viewport</p>
-      <code class="docs-api-method-parameter-type">CdkVirtualScrollViewport</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        <p>The viewport to attach this strategy to.</p>
+      </td>
+    </tr><thead>
+      <tr class="docs-api-method-parameters-header-row">
+        <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+      </tr>
+    </thead>
+    
+    <tr class="docs-api-method-parameter-row">
+      <td class="docs-api-method-parameter-cell">
+        <p class="docs-api-method-parameter-name">
+          viewport</p>
+        <code class="docs-api-method-parameter-type">CdkVirtualScrollViewport</code>
+      </td>
+      <td class="docs-api-method-parameter-description-cell">
+        <p class="docs-api-method-parameter-description">
+          <p>The viewport to attach this strategy to.</p>
 
-      </p>
-    </td>
-  </tr>
-  </table>
+        </p>
+      </td>
+    </tr>
+    </table>
+</div>
 
 
   
     
 
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">detach
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Detaches this scroll strategy from the currently attached viewport.</p>
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell">detach
+          (): <code class="docs-api-method-returns-type"></code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Detaches this scroll strategy from the currently attached viewport.</p>
 
-    </td>
-  </tr></table>
-
-
-  
-    
-
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">scrollToIndex
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Scroll to the offset for the given index.</p>
-
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-parameters-header-row">
-      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
-    </tr>
-  </thead>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        index</p>
-      <code class="docs-api-method-parameter-type">number</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        <p>The index of the element to scroll to.</p>
-
-      </p>
-    </td>
-  </tr>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        behavior</p>
-      <code class="docs-api-method-parameter-type">ScrollBehavior</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        <p>The ScrollBehavior to use when scrolling.</p>
-
-      </p>
-    </td>
-  </tr>
-  </table>
+      </td>
+    </tr></table>
+</div>
 
 
   
     
 
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">updateItemAndBufferSize
-      </th>
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell">scrollToIndex
+          (<span class="docs-api-method-parameter-name">index:
+            </span>
+            <code class="docs-api-method-parameter-type">number</code>, <span class="docs-api-method-parameter-name">behavior:
+            </span>
+            <code class="docs-api-method-parameter-type">ScrollBehavior</code>): <code class="docs-api-method-returns-type">void</code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Scroll to the offset for the given index.</p>
+
+      </td>
+    </tr><thead>
+      <tr class="docs-api-method-parameters-header-row">
+        <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+      </tr>
+    </thead>
+    
+    <tr class="docs-api-method-parameter-row">
+      <td class="docs-api-method-parameter-cell">
+        <p class="docs-api-method-parameter-name">
+          index</p>
+        <code class="docs-api-method-parameter-type">number</code>
+      </td>
+      <td class="docs-api-method-parameter-description-cell">
+        <p class="docs-api-method-parameter-description">
+          <p>The index of the element to scroll to.</p>
+
+        </p>
+      </td>
     </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Update the item size and buffer size.</p>
+    
+    <tr class="docs-api-method-parameter-row">
+      <td class="docs-api-method-parameter-cell">
+        <p class="docs-api-method-parameter-name">
+          behavior</p>
+        <code class="docs-api-method-parameter-type">ScrollBehavior</code>
+      </td>
+      <td class="docs-api-method-parameter-description-cell">
+        <p class="docs-api-method-parameter-description">
+          <p>The ScrollBehavior to use when scrolling.</p>
 
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-parameters-header-row">
-      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+        </p>
+      </td>
     </tr>
-  </thead>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        itemSize</p>
-      <code class="docs-api-method-parameter-type">number</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        <p>The size of the items in the virtually scrolling list.</p>
+    </table>
+</div>
 
-      </p>
-    </td>
-  </tr>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        minBufferPx</p>
-      <code class="docs-api-method-parameter-type">number</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        <p>The minimum amount of buffer (in pixels) before needing to render more</p>
 
-      </p>
-    </td>
-  </tr>
   
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        maxBufferPx</p>
-      <code class="docs-api-method-parameter-type">number</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        <p>The amount of buffer (in pixels) to render when rendering more.</p>
+    
 
-      </p>
-    </td>
-  </tr>
-  </table>
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell">updateItemAndBufferSize
+          (<span class="docs-api-method-parameter-name">itemSize:
+            </span>
+            <code class="docs-api-method-parameter-type">number</code>, <span class="docs-api-method-parameter-name">minBufferPx:
+            </span>
+            <code class="docs-api-method-parameter-type">number</code>, <span class="docs-api-method-parameter-name">maxBufferPx:
+            </span>
+            <code class="docs-api-method-parameter-type">number</code>): <code class="docs-api-method-returns-type"></code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Update the item size and buffer size.</p>
+
+      </td>
+    </tr><thead>
+      <tr class="docs-api-method-parameters-header-row">
+        <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+      </tr>
+    </thead>
+    
+    <tr class="docs-api-method-parameter-row">
+      <td class="docs-api-method-parameter-cell">
+        <p class="docs-api-method-parameter-name">
+          itemSize</p>
+        <code class="docs-api-method-parameter-type">number</code>
+      </td>
+      <td class="docs-api-method-parameter-description-cell">
+        <p class="docs-api-method-parameter-description">
+          <p>The size of the items in the virtually scrolling list.</p>
+
+        </p>
+      </td>
+    </tr>
+    
+    <tr class="docs-api-method-parameter-row">
+      <td class="docs-api-method-parameter-cell">
+        <p class="docs-api-method-parameter-name">
+          minBufferPx</p>
+        <code class="docs-api-method-parameter-type">number</code>
+      </td>
+      <td class="docs-api-method-parameter-description-cell">
+        <p class="docs-api-method-parameter-description">
+          <p>The minimum amount of buffer (in pixels) before needing to render more</p>
+
+        </p>
+      </td>
+    </tr>
+    
+    <tr class="docs-api-method-parameter-row">
+      <td class="docs-api-method-parameter-cell">
+        <p class="docs-api-method-parameter-name">
+          maxBufferPx</p>
+        <code class="docs-api-method-parameter-type">number</code>
+      </td>
+      <td class="docs-api-method-parameter-description-cell">
+        <p class="docs-api-method-parameter-description">
+          <p>The amount of buffer (in pixels) to render when rendering more.</p>
+
+        </p>
+      </td>
+    </tr>
+    </table>
+</div>
 
 
   
@@ -2481,244 +2717,270 @@ in an RTL context.</p>
   
     
 
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">elementScrolled
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Returns observable that emits when a scroll event is fired on the host element.</p>
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell">elementScrolled
+          (): <code class="docs-api-method-returns-type">Observable&lt;Event&gt;</code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Returns observable that emits when a scroll event is fired on the host element.</p>
 
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
-    </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">Observable&lt;Event&gt;</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        
-      </p>
-    </td>
-  </tr></table>
-
-
-  
-    
-
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">getElementRef
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets the ElementRef for the viewport.</p>
-
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
-    </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">ElementRef&lt;HTMLElement&gt;</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        
-      </p>
-    </td>
-  </tr></table>
+      </td>
+    </tr><thead>
+      <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+      </tr>
+    </thead>
+    <tr>
+      <td class="docs-api-method-returns-type-cell">
+        <code class="docs-api-method-returns-type">Observable&lt;Event&gt;</code>
+      </td>
+      <td class="docs-api-method-returns-description-cell">
+        <p class="docs-api-method-returns-description">
+          
+        </p>
+      </td>
+    </tr></table>
+</div>
 
 
   
     
 
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">measureBoundingClientRectWithScrollOffset
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Measure the bounding DOMRect size including the scroll offset.</p>
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell">getElementRef
+          (): <code class="docs-api-method-returns-type">ElementRef&lt;HTMLElement&gt;</code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Gets the ElementRef for the viewport.</p>
 
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-parameters-header-row">
-      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
-    </tr>
-  </thead>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        from</p>
-      <code class="docs-api-method-parameter-type">&quot;left&quot; | &quot;right&quot; | &quot;top&quot; | &quot;bottom&quot;</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        <p>The edge to measure from.</p>
-
-      </p>
-    </td>
-  </tr>
-  <thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
-    </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">number</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        
-      </p>
-    </td>
-  </tr></table>
+      </td>
+    </tr><thead>
+      <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+      </tr>
+    </thead>
+    <tr>
+      <td class="docs-api-method-returns-type-cell">
+        <code class="docs-api-method-returns-type">ElementRef&lt;HTMLElement&gt;</code>
+      </td>
+      <td class="docs-api-method-returns-description-cell">
+        <p class="docs-api-method-returns-description">
+          
+        </p>
+      </td>
+    </tr></table>
+</div>
 
 
   
     
 
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">measureScrollOffset
-      </th>
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell">measureBoundingClientRectWithScrollOffset
+          (<span class="docs-api-method-parameter-name">from:
+            </span>
+            <code class="docs-api-method-parameter-type">&quot;left&quot; | &quot;right&quot; | &quot;top&quot; | &quot;bottom&quot;</code>): <code class="docs-api-method-returns-type">number</code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Measure the bounding DOMRect size including the scroll offset.</p>
+
+      </td>
+    </tr><thead>
+      <tr class="docs-api-method-parameters-header-row">
+        <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+      </tr>
+    </thead>
+    
+    <tr class="docs-api-method-parameter-row">
+      <td class="docs-api-method-parameter-cell">
+        <p class="docs-api-method-parameter-name">
+          from</p>
+        <code class="docs-api-method-parameter-type">&quot;left&quot; | &quot;right&quot; | &quot;top&quot; | &quot;bottom&quot;</code>
+      </td>
+      <td class="docs-api-method-parameter-description-cell">
+        <p class="docs-api-method-parameter-description">
+          <p>The edge to measure from.</p>
+
+        </p>
+      </td>
     </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Measures the scroll offset relative to the specified edge of the viewport. This method can be
+    <thead>
+      <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+      </tr>
+    </thead>
+    <tr>
+      <td class="docs-api-method-returns-type-cell">
+        <code class="docs-api-method-returns-type">number</code>
+      </td>
+      <td class="docs-api-method-returns-description-cell">
+        <p class="docs-api-method-returns-description">
+          
+        </p>
+      </td>
+    </tr></table>
+</div>
+
+
+  
+    
+
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell">measureScrollOffset
+          (<span class="docs-api-method-parameter-name">from:
+            </span>
+            <code class="docs-api-method-parameter-type">&quot;left&quot; | &quot;right&quot; | &quot;start&quot; | &quot;end&quot; | &quot;top&quot; | &quot;bottom&quot;</code>): <code class="docs-api-method-returns-type">number</code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Measures the scroll offset relative to the specified edge of the viewport. This method can be
 used instead of directly checking scrollLeft or scrollTop, since browsers are not consistent
 about what scrollLeft means in RTL. The values returned by this method are normalized such that
 left and right always refer to the left and right side of the scrolling container irrespective
 of the layout direction. start and end refer to left and right in an LTR context and vice-versa
 in an RTL context.</p>
 
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-parameters-header-row">
-      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
-    </tr>
-  </thead>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        from</p>
-      <code class="docs-api-method-parameter-type">&quot;left&quot; | &quot;right&quot; | &quot;start&quot; | &quot;end&quot; | &quot;top&quot; | &quot;bottom&quot;</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        <p>The edge to measure from.</p>
+      </td>
+    </tr><thead>
+      <tr class="docs-api-method-parameters-header-row">
+        <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+      </tr>
+    </thead>
+    
+    <tr class="docs-api-method-parameter-row">
+      <td class="docs-api-method-parameter-cell">
+        <p class="docs-api-method-parameter-name">
+          from</p>
+        <code class="docs-api-method-parameter-type">&quot;left&quot; | &quot;right&quot; | &quot;start&quot; | &quot;end&quot; | &quot;top&quot; | &quot;bottom&quot;</code>
+      </td>
+      <td class="docs-api-method-parameter-description-cell">
+        <p class="docs-api-method-parameter-description">
+          <p>The edge to measure from.</p>
 
-      </p>
-    </td>
-  </tr>
-  <thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+        </p>
+      </td>
     </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">number</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        
-      </p>
-    </td>
-  </tr></table>
+    <thead>
+      <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+      </tr>
+    </thead>
+    <tr>
+      <td class="docs-api-method-returns-type-cell">
+        <code class="docs-api-method-returns-type">number</code>
+      </td>
+      <td class="docs-api-method-returns-description-cell">
+        <p class="docs-api-method-returns-description">
+          
+        </p>
+      </td>
+    </tr></table>
+</div>
 
 
   
     
 
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">measureViewportSize
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Measure the viewport size for the provided orientation.</p>
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell">measureViewportSize
+          (<span class="docs-api-method-parameter-name">orientation:
+            </span>
+            <code class="docs-api-method-parameter-type">&quot;horizontal&quot; | &quot;vertical&quot;</code>): <code class="docs-api-method-returns-type"></code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Measure the viewport size for the provided orientation.</p>
 
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-parameters-header-row">
-      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
-    </tr>
-  </thead>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        orientation</p>
-      <code class="docs-api-method-parameter-type">&quot;horizontal&quot; | &quot;vertical&quot;</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        <p>The orientation to measure the size from.</p>
+      </td>
+    </tr><thead>
+      <tr class="docs-api-method-parameters-header-row">
+        <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+      </tr>
+    </thead>
+    
+    <tr class="docs-api-method-parameter-row">
+      <td class="docs-api-method-parameter-cell">
+        <p class="docs-api-method-parameter-name">
+          orientation</p>
+        <code class="docs-api-method-parameter-type">&quot;horizontal&quot; | &quot;vertical&quot;</code>
+      </td>
+      <td class="docs-api-method-parameter-description-cell">
+        <p class="docs-api-method-parameter-description">
+          <p>The orientation to measure the size from.</p>
 
-      </p>
-    </td>
-  </tr>
-  </table>
+        </p>
+      </td>
+    </tr>
+    </table>
+</div>
 
 
   
     
 
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">scrollTo
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Scrolls to the specified offsets. This is a normalized version of the browser&#39;s native scrollTo
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell">scrollTo
+          (<span class="docs-api-method-parameter-name">options:
+            </span>
+            <code class="docs-api-method-parameter-type">ExtendedScrollToOptions</code>): <code class="docs-api-method-returns-type">void</code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Scrolls to the specified offsets. This is a normalized version of the browser&#39;s native scrollTo
 method, since browsers are not consistent about what scrollLeft means in RTL. For this method
 left and right always refer to the left and right side of the scrolling container irrespective
 of the layout direction. start and end refer to left and right in an LTR context and vice-versa
 in an RTL context.</p>
 
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-parameters-header-row">
-      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
-    </tr>
-  </thead>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        options</p>
-      <code class="docs-api-method-parameter-type">ExtendedScrollToOptions</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        <p>specified the offsets to scroll to.</p>
+      </td>
+    </tr><thead>
+      <tr class="docs-api-method-parameters-header-row">
+        <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+      </tr>
+    </thead>
+    
+    <tr class="docs-api-method-parameter-row">
+      <td class="docs-api-method-parameter-cell">
+        <p class="docs-api-method-parameter-name">
+          options</p>
+        <code class="docs-api-method-parameter-type">ExtendedScrollToOptions</code>
+      </td>
+      <td class="docs-api-method-parameter-description-cell">
+        <p class="docs-api-method-parameter-description">
+          <p>specified the offsets to scroll to.</p>
 
-      </p>
-    </td>
-  </tr>
-  </table>
+        </p>
+      </td>
+    </tr>
+    </table>
+</div>
 
 
   
@@ -2737,37 +2999,39 @@ in an RTL context.</p>
   <code>ViewportScrollPosition</code>
 </h4><p class="docs-api-interface-description"><p>Object that holds the scroll position of the viewport in each direction.</p>
 </p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
-  <table class="docs-api-properties-table">
-    <tr class="docs-api-properties-header-row">
-      <th class="docs-api-properties-th">Name</th>
-      <th class="docs-api-properties-th">Description</th>
-    </tr>
-    
+  <div class="docs-api-properties-card">
+    <table class="docs-api-properties-table">
+      <tr class="docs-api-properties-header-row">
+        <th class="docs-api-properties-th">Name</th>
+        <th class="docs-api-properties-th">Description</th>
+      </tr>
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>left: number</code>
+      <code>left: <code class="docs-api-property-type">number</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"></td>
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>top: number</code>
+      <code>top: <code class="docs-api-property-type">number</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"></td>
 </tr>
 
 
-    
-  </table>
+      
+    </table>
+  </div>
 
 
 
@@ -2782,17 +3046,18 @@ in an RTL context.</p>
   <code>VirtualScrollStrategy</code>
 </h4><p class="docs-api-interface-description"><p>A strategy that dictates which items should be rendered in the viewport.</p>
 </p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
-  <table class="docs-api-properties-table">
-    <tr class="docs-api-properties-header-row">
-      <th class="docs-api-properties-th">Name</th>
-      <th class="docs-api-properties-th">Description</th>
-    </tr>
-    
+  <div class="docs-api-properties-card">
+    <table class="docs-api-properties-table">
+      <tr class="docs-api-properties-header-row">
+        <th class="docs-api-properties-th">Name</th>
+        <th class="docs-api-properties-th">Description</th>
+      </tr>
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>scrolledIndexChange: Observable&lt;number&gt;</code>
+      <code>scrolledIndexChange: <code class="docs-api-property-type">Observable&lt;number&gt;</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Emits when the index of the first element visible in the viewport changes.</p>
@@ -2800,180 +3065,208 @@ in an RTL context.</p>
 </tr>
 
 
-    
-  </table>
+      
+    </table>
+  </div>
 
 
 <h5 class="docs-api-h5 docs-api-method-header">Methods</h5>
   
     
 
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">attach
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Attaches this scroll strategy to a viewport.</p>
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell">attach
+          (<span class="docs-api-method-parameter-name">viewport:
+            </span>
+            <code class="docs-api-method-parameter-type">CdkVirtualScrollViewport</code>): <code class="docs-api-method-returns-type">void</code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Attaches this scroll strategy to a viewport.</p>
 
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-parameters-header-row">
-      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
-    </tr>
-  </thead>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        viewport</p>
-      <code class="docs-api-method-parameter-type">CdkVirtualScrollViewport</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        <p>The viewport to attach this strategy to.</p>
+      </td>
+    </tr><thead>
+      <tr class="docs-api-method-parameters-header-row">
+        <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+      </tr>
+    </thead>
+    
+    <tr class="docs-api-method-parameter-row">
+      <td class="docs-api-method-parameter-cell">
+        <p class="docs-api-method-parameter-name">
+          viewport</p>
+        <code class="docs-api-method-parameter-type">CdkVirtualScrollViewport</code>
+      </td>
+      <td class="docs-api-method-parameter-description-cell">
+        <p class="docs-api-method-parameter-description">
+          <p>The viewport to attach this strategy to.</p>
 
-      </p>
-    </td>
-  </tr>
-  </table>
+        </p>
+      </td>
+    </tr>
+    </table>
+</div>
 
 
   
     
 
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">detach
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Detaches this scroll strategy from the currently attached viewport.</p>
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell">detach
+          (): <code class="docs-api-method-returns-type">void</code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Detaches this scroll strategy from the currently attached viewport.</p>
 
-    </td>
-  </tr></table>
-
-
-  
-    
-
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">onContentRendered
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Called when the range of items rendered in the DOM has changed.</p>
-
-    </td>
-  </tr></table>
+      </td>
+    </tr></table>
+</div>
 
 
   
     
 
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">onContentScrolled
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Called when the viewport is scrolled (debounced using requestAnimationFrame).</p>
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell">onContentRendered
+          (): <code class="docs-api-method-returns-type">void</code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Called when the range of items rendered in the DOM has changed.</p>
 
-    </td>
-  </tr></table>
-
-
-  
-    
-
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">onDataLengthChanged
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Called when the length of the data changes.</p>
-
-    </td>
-  </tr></table>
+      </td>
+    </tr></table>
+</div>
 
 
   
     
 
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">onRenderedOffsetChanged
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Called when the offset of the rendered items changed.</p>
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell">onContentScrolled
+          (): <code class="docs-api-method-returns-type">void</code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Called when the viewport is scrolled (debounced using requestAnimationFrame).</p>
 
-    </td>
-  </tr></table>
+      </td>
+    </tr></table>
+</div>
 
 
   
     
 
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">scrollToIndex
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Scroll to the offset for the given index.</p>
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell">onDataLengthChanged
+          (): <code class="docs-api-method-returns-type">void</code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Called when the length of the data changes.</p>
 
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-parameters-header-row">
-      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
-    </tr>
-  </thead>
+      </td>
+    </tr></table>
+</div>
+
+
   
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        index</p>
-      <code class="docs-api-method-parameter-type">number</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        <p>The index of the element to scroll to.</p>
+    
 
-      </p>
-    </td>
-  </tr>
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell">onRenderedOffsetChanged
+          (): <code class="docs-api-method-returns-type">void</code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Called when the offset of the rendered items changed.</p>
+
+      </td>
+    </tr></table>
+</div>
+
+
   
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        behavior</p>
-      <code class="docs-api-method-parameter-type">ScrollBehavior</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        <p>The ScrollBehavior to use when scrolling.</p>
+    
 
-      </p>
-    </td>
-  </tr>
-  </table>
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell">scrollToIndex
+          (<span class="docs-api-method-parameter-name">index:
+            </span>
+            <code class="docs-api-method-parameter-type">number</code>, <span class="docs-api-method-parameter-name">behavior:
+            </span>
+            <code class="docs-api-method-parameter-type">ScrollBehavior</code>): <code class="docs-api-method-returns-type">void</code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Scroll to the offset for the given index.</p>
+
+      </td>
+    </tr><thead>
+      <tr class="docs-api-method-parameters-header-row">
+        <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+      </tr>
+    </thead>
+    
+    <tr class="docs-api-method-parameter-row">
+      <td class="docs-api-method-parameter-cell">
+        <p class="docs-api-method-parameter-name">
+          index</p>
+        <code class="docs-api-method-parameter-type">number</code>
+      </td>
+      <td class="docs-api-method-parameter-description-cell">
+        <p class="docs-api-method-parameter-description">
+          <p>The index of the element to scroll to.</p>
+
+        </p>
+      </td>
+    </tr>
+    
+    <tr class="docs-api-method-parameter-row">
+      <td class="docs-api-method-parameter-cell">
+        <p class="docs-api-method-parameter-name">
+          behavior</p>
+        <code class="docs-api-method-parameter-type">ScrollBehavior</code>
+      </td>
+      <td class="docs-api-method-parameter-description-cell">
+        <p class="docs-api-method-parameter-description">
+          <p>The ScrollBehavior to use when scrolling.</p>
+
+        </p>
+      </td>
+    </tr>
+    </table>
+</div>
 
 
   
@@ -2988,83 +3281,92 @@ in an RTL context.</p>
   <code>CdkVirtualScrollRepeater</code>
 </h4><p class="docs-api-interface-description"><p>An item to be repeated by the VirtualScrollViewport</p>
 </p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
-  <table class="docs-api-properties-table">
-    <tr class="docs-api-properties-header-row">
-      <th class="docs-api-properties-th">Name</th>
-      <th class="docs-api-properties-th">Description</th>
-    </tr>
-    
+  <div class="docs-api-properties-card">
+    <table class="docs-api-properties-table">
+      <tr class="docs-api-properties-header-row">
+        <th class="docs-api-properties-th">Name</th>
+        <th class="docs-api-properties-th">Description</th>
+      </tr>
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>dataStream: Observable&lt;readonly T[]&gt;</code>
+      <code>dataStream: <code class="docs-api-property-type">Observable&lt;readonly T[]&gt;</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"></td>
 </tr>
 
 
-    
-  </table>
+      
+    </table>
+  </div>
 
 
 <h5 class="docs-api-h5 docs-api-method-header">Methods</h5>
   
     
 
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">measureRangeSize
-      </th>
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell">measureRangeSize
+          (<span class="docs-api-method-parameter-name">range:
+            </span>
+            <code class="docs-api-method-parameter-type">ListRange</code>, <span class="docs-api-method-parameter-name">orientation:
+            </span>
+            <code class="docs-api-method-parameter-type">&quot;horizontal&quot; | &quot;vertical&quot;</code>): <code class="docs-api-method-returns-type">number</code>
+        </th>
+      </tr>
+    </thead><thead>
+      <tr class="docs-api-method-parameters-header-row">
+        <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+      </tr>
+    </thead>
+    
+    <tr class="docs-api-method-parameter-row">
+      <td class="docs-api-method-parameter-cell">
+        <p class="docs-api-method-parameter-name">
+          range</p>
+        <code class="docs-api-method-parameter-type">ListRange</code>
+      </td>
+      <td class="docs-api-method-parameter-description-cell">
+        <p class="docs-api-method-parameter-description">
+          
+        </p>
+      </td>
     </tr>
-  </thead><thead>
-    <tr class="docs-api-method-parameters-header-row">
-      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+    
+    <tr class="docs-api-method-parameter-row">
+      <td class="docs-api-method-parameter-cell">
+        <p class="docs-api-method-parameter-name">
+          orientation</p>
+        <code class="docs-api-method-parameter-type">&quot;horizontal&quot; | &quot;vertical&quot;</code>
+      </td>
+      <td class="docs-api-method-parameter-description-cell">
+        <p class="docs-api-method-parameter-description">
+          
+        </p>
+      </td>
     </tr>
-  </thead>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        range</p>
-      <code class="docs-api-method-parameter-type">ListRange</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        
-      </p>
-    </td>
-  </tr>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        orientation</p>
-      <code class="docs-api-method-parameter-type">&quot;horizontal&quot; | &quot;vertical&quot;</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        
-      </p>
-    </td>
-  </tr>
-  <thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
-    </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">number</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        
-      </p>
-    </td>
-  </tr></table>
+    <thead>
+      <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+      </tr>
+    </thead>
+    <tr>
+      <td class="docs-api-method-returns-type-cell">
+        <code class="docs-api-method-returns-type">number</code>
+      </td>
+      <td class="docs-api-method-returns-description-cell">
+        <p class="docs-api-method-returns-description">
+          
+        </p>
+      </td>
+    </tr></table>
+</div>
 
 
   

@@ -47,17 +47,18 @@
   
 </h4><p class="docs-api-class-description"><p>Harness for interacting with a standard <code>MatGridTitle</code> in tests.</p>
 </p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
-  <table class="docs-api-properties-table">
-    <tr class="docs-api-properties-header-row">
-      <th class="docs-api-properties-th">Name</th>
-      <th class="docs-api-properties-th">Description</th>
-    </tr>
-    
+  <div class="docs-api-properties-card">
+    <table class="docs-api-properties-table">
+      <tr class="docs-api-properties-header-row">
+        <th class="docs-api-properties-th">Name</th>
+        <th class="docs-api-properties-th">Description</th>
+      </tr>
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>static&nbsp;hostSelector: &#39;.mat-grid-tile&#39;</code>
+      <code>static&nbsp;hostSelector: <code class="docs-api-property-type">&#39;.mat-grid-tile&#39;</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>The selector for the host element of a <code>MatGridTile</code> instance.</p>
@@ -65,769 +66,841 @@
 </tr>
 
 
-    
-  </table>
+      
+    </table>
+  </div>
 
 
 <h5 class="docs-api-h5 docs-api-method-header">Methods</h5>
   
     
 
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
-          async
-        </div>countHarnesses
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Returns the number of matching harnesses for the given query within the current harness&#39;s
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
+            async
+          </div>countHarnesses
+          (<span class="docs-api-method-parameter-name">query:
+            </span>
+            <code class="docs-api-method-parameter-type">HarnessQuery&lt;T&gt;</code>): <code class="docs-api-method-returns-type">Promise&lt;number&gt;</code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Returns the number of matching harnesses for the given query within the current harness&#39;s
 content.</p>
 
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-parameters-header-row">
-      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
-    </tr>
-  </thead>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        query</p>
-      <code class="docs-api-method-parameter-type">HarnessQuery&lt;T&gt;</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        <p>The harness query to search for.</p>
+      </td>
+    </tr><thead>
+      <tr class="docs-api-method-parameters-header-row">
+        <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+      </tr>
+    </thead>
+    
+    <tr class="docs-api-method-parameter-row">
+      <td class="docs-api-method-parameter-cell">
+        <p class="docs-api-method-parameter-name">
+          query</p>
+        <code class="docs-api-method-parameter-type">HarnessQuery&lt;T&gt;</code>
+      </td>
+      <td class="docs-api-method-parameter-description-cell">
+        <p class="docs-api-method-parameter-description">
+          <p>The harness query to search for.</p>
 
-      </p>
-    </td>
-  </tr>
-  <thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+        </p>
+      </td>
     </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">Promise&lt;number&gt;</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        <p>The number of matching harnesses for the given query.</p>
+    <thead>
+      <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+      </tr>
+    </thead>
+    <tr>
+      <td class="docs-api-method-returns-type-cell">
+        <code class="docs-api-method-returns-type">Promise&lt;number&gt;</code>
+      </td>
+      <td class="docs-api-method-returns-description-cell">
+        <p class="docs-api-method-returns-description">
+          <p>The number of matching harnesses for the given query.</p>
 
-      </p>
-    </td>
-  </tr></table>
+        </p>
+      </td>
+    </tr></table>
+</div>
 
 
   
     
 
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
-          async
-        </div>getAllChildLoaders
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets a list of <code>HarnessLoader</code> for each element matching the given selector under the current
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
+            async
+          </div>getAllChildLoaders
+          (<span class="docs-api-method-parameter-name">selector:
+            </span>
+            <code class="docs-api-method-parameter-type">S</code>): <code class="docs-api-method-returns-type">Promise&lt;HarnessLoader[]&gt;</code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Gets a list of <code>HarnessLoader</code> for each element matching the given selector under the current
 harness&#39;s cotnent that searches for harnesses under that element.</p>
 
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-parameters-header-row">
-      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
-    </tr>
-  </thead>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        selector</p>
-      <code class="docs-api-method-parameter-type">S</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        <p>The selector for elements in the component&#39;s content.</p>
+      </td>
+    </tr><thead>
+      <tr class="docs-api-method-parameters-header-row">
+        <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+      </tr>
+    </thead>
+    
+    <tr class="docs-api-method-parameter-row">
+      <td class="docs-api-method-parameter-cell">
+        <p class="docs-api-method-parameter-name">
+          selector</p>
+        <code class="docs-api-method-parameter-type">S</code>
+      </td>
+      <td class="docs-api-method-parameter-description-cell">
+        <p class="docs-api-method-parameter-description">
+          <p>The selector for elements in the component&#39;s content.</p>
 
-      </p>
-    </td>
-  </tr>
-  <thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+        </p>
+      </td>
     </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">Promise&lt;HarnessLoader[]&gt;</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        <p>A list of <code>HarnessLoader</code> for each element matching the given selector.</p>
+    <thead>
+      <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+      </tr>
+    </thead>
+    <tr>
+      <td class="docs-api-method-returns-type-cell">
+        <code class="docs-api-method-returns-type">Promise&lt;HarnessLoader[]&gt;</code>
+      </td>
+      <td class="docs-api-method-returns-description-cell">
+        <p class="docs-api-method-returns-description">
+          <p>A list of <code>HarnessLoader</code> for each element matching the given selector.</p>
 
-      </p>
-    </td>
-  </tr></table>
+        </p>
+      </td>
+    </tr></table>
+</div>
 
 
   
     
 
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
-          async
-        </div>getAllHarnesses
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets all matching harnesses for the given query within the current harness&#39;s content.</p>
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
+            async
+          </div>getAllHarnesses
+          (<span class="docs-api-method-parameter-name">query:
+            </span>
+            <code class="docs-api-method-parameter-type">HarnessQuery&lt;T&gt;</code>): <code class="docs-api-method-returns-type">Promise&lt;T[]&gt;</code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Gets all matching harnesses for the given query within the current harness&#39;s content.</p>
 
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-parameters-header-row">
-      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
-    </tr>
-  </thead>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        query</p>
-      <code class="docs-api-method-parameter-type">HarnessQuery&lt;T&gt;</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        <p>The harness query to search for.</p>
+      </td>
+    </tr><thead>
+      <tr class="docs-api-method-parameters-header-row">
+        <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+      </tr>
+    </thead>
+    
+    <tr class="docs-api-method-parameter-row">
+      <td class="docs-api-method-parameter-cell">
+        <p class="docs-api-method-parameter-name">
+          query</p>
+        <code class="docs-api-method-parameter-type">HarnessQuery&lt;T&gt;</code>
+      </td>
+      <td class="docs-api-method-parameter-description-cell">
+        <p class="docs-api-method-parameter-description">
+          <p>The harness query to search for.</p>
 
-      </p>
-    </td>
-  </tr>
-  <thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+        </p>
+      </td>
     </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">Promise&lt;T[]&gt;</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        <p>The list of harness matching the given query.</p>
+    <thead>
+      <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+      </tr>
+    </thead>
+    <tr>
+      <td class="docs-api-method-returns-type-cell">
+        <code class="docs-api-method-returns-type">Promise&lt;T[]&gt;</code>
+      </td>
+      <td class="docs-api-method-returns-description-cell">
+        <p class="docs-api-method-returns-description">
+          <p>The list of harness matching the given query.</p>
 
-      </p>
-    </td>
-  </tr></table>
+        </p>
+      </td>
+    </tr></table>
+</div>
 
 
   
     
 
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
-          async
-        </div>getChildLoader
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets a <code>HarnessLoader</code> that searches for harnesses under the first element matching the given
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
+            async
+          </div>getChildLoader
+          (<span class="docs-api-method-parameter-name">selector:
+            </span>
+            <code class="docs-api-method-parameter-type">S</code>): <code class="docs-api-method-returns-type">Promise&lt;HarnessLoader&gt;</code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Gets a <code>HarnessLoader</code> that searches for harnesses under the first element matching the given
 selector within the current harness&#39;s content.</p>
 
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-parameters-header-row">
-      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
-    </tr>
-  </thead>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        selector</p>
-      <code class="docs-api-method-parameter-type">S</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        <p>The selector for an element in the component&#39;s content.</p>
+      </td>
+    </tr><thead>
+      <tr class="docs-api-method-parameters-header-row">
+        <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+      </tr>
+    </thead>
+    
+    <tr class="docs-api-method-parameter-row">
+      <td class="docs-api-method-parameter-cell">
+        <p class="docs-api-method-parameter-name">
+          selector</p>
+        <code class="docs-api-method-parameter-type">S</code>
+      </td>
+      <td class="docs-api-method-parameter-description-cell">
+        <p class="docs-api-method-parameter-description">
+          <p>The selector for an element in the component&#39;s content.</p>
 
-      </p>
-    </td>
-  </tr>
-  <thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+        </p>
+      </td>
     </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">Promise&lt;HarnessLoader&gt;</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        <p>A <code>HarnessLoader</code> that searches for harnesses under the given selector.</p>
+    <thead>
+      <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+      </tr>
+    </thead>
+    <tr>
+      <td class="docs-api-method-returns-type-cell">
+        <code class="docs-api-method-returns-type">Promise&lt;HarnessLoader&gt;</code>
+      </td>
+      <td class="docs-api-method-returns-description-cell">
+        <p class="docs-api-method-returns-description">
+          <p>A <code>HarnessLoader</code> that searches for harnesses under the given selector.</p>
 
-      </p>
-    </td>
-  </tr></table>
+        </p>
+      </td>
+    </tr></table>
+</div>
 
 
   
     
 
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
-          async
-        </div>getColspan
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets the amount of columns that the grid-tile takes up.</p>
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
+            async
+          </div>getColspan
+          (): <code class="docs-api-method-returns-type">Promise&lt;number&gt;</code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Gets the amount of columns that the grid-tile takes up.</p>
 
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
-    </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">Promise&lt;number&gt;</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        
-      </p>
-    </td>
-  </tr></table>
-
-
-  
-    
-
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
-          async
-        </div>getFooterText
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets the text of the footer if present.</p>
-
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
-    </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">Promise&lt;string | null&gt;</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        
-      </p>
-    </td>
-  </tr></table>
+      </td>
+    </tr><thead>
+      <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+      </tr>
+    </thead>
+    <tr>
+      <td class="docs-api-method-returns-type-cell">
+        <code class="docs-api-method-returns-type">Promise&lt;number&gt;</code>
+      </td>
+      <td class="docs-api-method-returns-description-cell">
+        <p class="docs-api-method-returns-description">
+          
+        </p>
+      </td>
+    </tr></table>
+</div>
 
 
   
     
 
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
-          async
-        </div>getHarness
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets the first matching harness for the given query within the current harness&#39;s content.</p>
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
+            async
+          </div>getFooterText
+          (): <code class="docs-api-method-returns-type">Promise&lt;string | null&gt;</code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Gets the text of the footer if present.</p>
 
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-parameters-header-row">
-      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
-    </tr>
-  </thead>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        query</p>
-      <code class="docs-api-method-parameter-type">HarnessQuery&lt;T&gt;</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        <p>The harness query to search for.</p>
-
-      </p>
-    </td>
-  </tr>
-  <thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
-    </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">Promise&lt;T&gt;</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        <p>The first harness matching the given query.</p>
-
-      </p>
-    </td>
-  </tr></table>
+      </td>
+    </tr><thead>
+      <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+      </tr>
+    </thead>
+    <tr>
+      <td class="docs-api-method-returns-type-cell">
+        <code class="docs-api-method-returns-type">Promise&lt;string | null&gt;</code>
+      </td>
+      <td class="docs-api-method-returns-description-cell">
+        <p class="docs-api-method-returns-description">
+          
+        </p>
+      </td>
+    </tr></table>
+</div>
 
 
   
     
 
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
-          async
-        </div>getHarnessAtIndex
-      </th>
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
+            async
+          </div>getHarness
+          (<span class="docs-api-method-parameter-name">query:
+            </span>
+            <code class="docs-api-method-parameter-type">HarnessQuery&lt;T&gt;</code>): <code class="docs-api-method-returns-type">Promise&lt;T&gt;</code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Gets the first matching harness for the given query within the current harness&#39;s content.</p>
+
+      </td>
+    </tr><thead>
+      <tr class="docs-api-method-parameters-header-row">
+        <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+      </tr>
+    </thead>
+    
+    <tr class="docs-api-method-parameter-row">
+      <td class="docs-api-method-parameter-cell">
+        <p class="docs-api-method-parameter-name">
+          query</p>
+        <code class="docs-api-method-parameter-type">HarnessQuery&lt;T&gt;</code>
+      </td>
+      <td class="docs-api-method-parameter-description-cell">
+        <p class="docs-api-method-parameter-description">
+          <p>The harness query to search for.</p>
+
+        </p>
+      </td>
     </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets a matching harness for the given query and index within the current harness&#39;s content.</p>
+    <thead>
+      <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+      </tr>
+    </thead>
+    <tr>
+      <td class="docs-api-method-returns-type-cell">
+        <code class="docs-api-method-returns-type">Promise&lt;T&gt;</code>
+      </td>
+      <td class="docs-api-method-returns-description-cell">
+        <p class="docs-api-method-returns-description">
+          <p>The first harness matching the given query.</p>
 
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-parameters-header-row">
-      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
-    </tr>
-  </thead>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        query</p>
-      <code class="docs-api-method-parameter-type">HarnessQuery&lt;T&gt;</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        <p>The harness query to search for.</p>
-
-      </p>
-    </td>
-  </tr>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        index</p>
-      <code class="docs-api-method-parameter-type">number</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        <p>The zero-indexed offset of the component to find.</p>
-
-      </p>
-    </td>
-  </tr>
-  <thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
-    </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">Promise&lt;T&gt;</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        <p>The first harness matching the given query.</p>
-
-      </p>
-    </td>
-  </tr></table>
+        </p>
+      </td>
+    </tr></table>
+</div>
 
 
   
     
 
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
-          async
-        </div>getHarnessOrNull
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets the first matching harness for the given query within the current harness&#39;s content.</p>
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
+            async
+          </div>getHarnessAtIndex
+          (<span class="docs-api-method-parameter-name">query:
+            </span>
+            <code class="docs-api-method-parameter-type">HarnessQuery&lt;T&gt;</code>, <span class="docs-api-method-parameter-name">index:
+            </span>
+            <code class="docs-api-method-parameter-type">number</code>): <code class="docs-api-method-returns-type">Promise&lt;T&gt;</code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Gets a matching harness for the given query and index within the current harness&#39;s content.</p>
 
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-parameters-header-row">
-      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
-    </tr>
-  </thead>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        query</p>
-      <code class="docs-api-method-parameter-type">HarnessQuery&lt;T&gt;</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        <p>The harness query to search for.</p>
+      </td>
+    </tr><thead>
+      <tr class="docs-api-method-parameters-header-row">
+        <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+      </tr>
+    </thead>
+    
+    <tr class="docs-api-method-parameter-row">
+      <td class="docs-api-method-parameter-cell">
+        <p class="docs-api-method-parameter-name">
+          query</p>
+        <code class="docs-api-method-parameter-type">HarnessQuery&lt;T&gt;</code>
+      </td>
+      <td class="docs-api-method-parameter-description-cell">
+        <p class="docs-api-method-parameter-description">
+          <p>The harness query to search for.</p>
 
-      </p>
-    </td>
-  </tr>
-  <thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+        </p>
+      </td>
     </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">Promise&lt;T | null&gt;</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        <p>The first harness matching the given query, or null if none is found.</p>
+    
+    <tr class="docs-api-method-parameter-row">
+      <td class="docs-api-method-parameter-cell">
+        <p class="docs-api-method-parameter-name">
+          index</p>
+        <code class="docs-api-method-parameter-type">number</code>
+      </td>
+      <td class="docs-api-method-parameter-description-cell">
+        <p class="docs-api-method-parameter-description">
+          <p>The zero-indexed offset of the component to find.</p>
 
-      </p>
-    </td>
-  </tr></table>
+        </p>
+      </td>
+    </tr>
+    <thead>
+      <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+      </tr>
+    </thead>
+    <tr>
+      <td class="docs-api-method-returns-type-cell">
+        <code class="docs-api-method-returns-type">Promise&lt;T&gt;</code>
+      </td>
+      <td class="docs-api-method-returns-description-cell">
+        <p class="docs-api-method-returns-description">
+          <p>The first harness matching the given query.</p>
+
+        </p>
+      </td>
+    </tr></table>
+</div>
 
 
   
     
 
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
-          async
-        </div>getHeaderText
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets the text of the header if present.</p>
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
+            async
+          </div>getHarnessOrNull
+          (<span class="docs-api-method-parameter-name">query:
+            </span>
+            <code class="docs-api-method-parameter-type">HarnessQuery&lt;T&gt;</code>): <code class="docs-api-method-returns-type">Promise&lt;T | null&gt;</code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Gets the first matching harness for the given query within the current harness&#39;s content.</p>
 
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+      </td>
+    </tr><thead>
+      <tr class="docs-api-method-parameters-header-row">
+        <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+      </tr>
+    </thead>
+    
+    <tr class="docs-api-method-parameter-row">
+      <td class="docs-api-method-parameter-cell">
+        <p class="docs-api-method-parameter-name">
+          query</p>
+        <code class="docs-api-method-parameter-type">HarnessQuery&lt;T&gt;</code>
+      </td>
+      <td class="docs-api-method-parameter-description-cell">
+        <p class="docs-api-method-parameter-description">
+          <p>The harness query to search for.</p>
+
+        </p>
+      </td>
     </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">Promise&lt;string | null&gt;</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        
-      </p>
-    </td>
-  </tr></table>
+    <thead>
+      <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+      </tr>
+    </thead>
+    <tr>
+      <td class="docs-api-method-returns-type-cell">
+        <code class="docs-api-method-returns-type">Promise&lt;T | null&gt;</code>
+      </td>
+      <td class="docs-api-method-returns-description-cell">
+        <p class="docs-api-method-returns-description">
+          <p>The first harness matching the given query, or null if none is found.</p>
+
+        </p>
+      </td>
+    </tr></table>
+</div>
 
 
   
     
 
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
-          async
-        </div>getRowspan
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets the amount of rows that the grid-tile takes up.</p>
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
+            async
+          </div>getHeaderText
+          (): <code class="docs-api-method-returns-type">Promise&lt;string | null&gt;</code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Gets the text of the header if present.</p>
 
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
-    </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">Promise&lt;number&gt;</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        
-      </p>
-    </td>
-  </tr></table>
-
-
-  
-    
-
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
-          async
-        </div>hasAvatar
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Whether the grid-tile has an avatar.</p>
-
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
-    </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">Promise&lt;boolean&gt;</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        
-      </p>
-    </td>
-  </tr></table>
+      </td>
+    </tr><thead>
+      <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+      </tr>
+    </thead>
+    <tr>
+      <td class="docs-api-method-returns-type-cell">
+        <code class="docs-api-method-returns-type">Promise&lt;string | null&gt;</code>
+      </td>
+      <td class="docs-api-method-returns-description-cell">
+        <p class="docs-api-method-returns-description">
+          
+        </p>
+      </td>
+    </tr></table>
+</div>
 
 
   
     
 
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
-          async
-        </div>hasFooter
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Whether the grid-tile has a footer.</p>
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
+            async
+          </div>getRowspan
+          (): <code class="docs-api-method-returns-type">Promise&lt;number&gt;</code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Gets the amount of rows that the grid-tile takes up.</p>
 
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
-    </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">Promise&lt;boolean&gt;</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        
-      </p>
-    </td>
-  </tr></table>
+      </td>
+    </tr><thead>
+      <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+      </tr>
+    </thead>
+    <tr>
+      <td class="docs-api-method-returns-type-cell">
+        <code class="docs-api-method-returns-type">Promise&lt;number&gt;</code>
+      </td>
+      <td class="docs-api-method-returns-description-cell">
+        <p class="docs-api-method-returns-description">
+          
+        </p>
+      </td>
+    </tr></table>
+</div>
 
 
   
     
 
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
-          async
-        </div>hasHarness
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Checks whether there is a matching harnesses for the given query within the current harness&#39;s
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
+            async
+          </div>hasAvatar
+          (): <code class="docs-api-method-returns-type">Promise&lt;boolean&gt;</code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Whether the grid-tile has an avatar.</p>
+
+      </td>
+    </tr><thead>
+      <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+      </tr>
+    </thead>
+    <tr>
+      <td class="docs-api-method-returns-type-cell">
+        <code class="docs-api-method-returns-type">Promise&lt;boolean&gt;</code>
+      </td>
+      <td class="docs-api-method-returns-description-cell">
+        <p class="docs-api-method-returns-description">
+          
+        </p>
+      </td>
+    </tr></table>
+</div>
+
+
+  
+    
+
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
+            async
+          </div>hasFooter
+          (): <code class="docs-api-method-returns-type">Promise&lt;boolean&gt;</code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Whether the grid-tile has a footer.</p>
+
+      </td>
+    </tr><thead>
+      <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+      </tr>
+    </thead>
+    <tr>
+      <td class="docs-api-method-returns-type-cell">
+        <code class="docs-api-method-returns-type">Promise&lt;boolean&gt;</code>
+      </td>
+      <td class="docs-api-method-returns-description-cell">
+        <p class="docs-api-method-returns-description">
+          
+        </p>
+      </td>
+    </tr></table>
+</div>
+
+
+  
+    
+
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
+            async
+          </div>hasHarness
+          (<span class="docs-api-method-parameter-name">query:
+            </span>
+            <code class="docs-api-method-parameter-type">HarnessQuery&lt;T&gt;</code>): <code class="docs-api-method-returns-type">Promise&lt;boolean&gt;</code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Checks whether there is a matching harnesses for the given query within the current harness&#39;s
 content.</p>
 
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-parameters-header-row">
-      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
-    </tr>
-  </thead>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        query</p>
-      <code class="docs-api-method-parameter-type">HarnessQuery&lt;T&gt;</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        <p>The harness query to search for.</p>
+      </td>
+    </tr><thead>
+      <tr class="docs-api-method-parameters-header-row">
+        <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+      </tr>
+    </thead>
+    
+    <tr class="docs-api-method-parameter-row">
+      <td class="docs-api-method-parameter-cell">
+        <p class="docs-api-method-parameter-name">
+          query</p>
+        <code class="docs-api-method-parameter-type">HarnessQuery&lt;T&gt;</code>
+      </td>
+      <td class="docs-api-method-parameter-description-cell">
+        <p class="docs-api-method-parameter-description">
+          <p>The harness query to search for.</p>
 
-      </p>
-    </td>
-  </tr>
-  <thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+        </p>
+      </td>
     </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">Promise&lt;boolean&gt;</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        <p>Whether there is matching harnesses for the given query.</p>
+    <thead>
+      <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+      </tr>
+    </thead>
+    <tr>
+      <td class="docs-api-method-returns-type-cell">
+        <code class="docs-api-method-returns-type">Promise&lt;boolean&gt;</code>
+      </td>
+      <td class="docs-api-method-returns-description-cell">
+        <p class="docs-api-method-returns-description">
+          <p>Whether there is matching harnesses for the given query.</p>
 
-      </p>
-    </td>
-  </tr></table>
+        </p>
+      </td>
+    </tr></table>
+</div>
 
 
   
     
 
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
-          async
-        </div>hasHeader
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Whether the grid-tile has a header.</p>
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
+            async
+          </div>hasHeader
+          (): <code class="docs-api-method-returns-type">Promise&lt;boolean&gt;</code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Whether the grid-tile has a header.</p>
 
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
-    </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">Promise&lt;boolean&gt;</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        
-      </p>
-    </td>
-  </tr></table>
-
-
-  
-    
-
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
-          async
-        </div>host
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets a <code>Promise</code> for the <code>TestElement</code> representing the host element of the component.</p>
-
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
-    </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">Promise&lt;TestElement&gt;</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        
-      </p>
-    </td>
-  </tr></table>
+      </td>
+    </tr><thead>
+      <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+      </tr>
+    </thead>
+    <tr>
+      <td class="docs-api-method-returns-type-cell">
+        <code class="docs-api-method-returns-type">Promise&lt;boolean&gt;</code>
+      </td>
+      <td class="docs-api-method-returns-description-cell">
+        <p class="docs-api-method-returns-description">
+          
+        </p>
+      </td>
+    </tr></table>
+</div>
 
 
   
     
 
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
-          static
-        </div>with
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets a <code>HarnessPredicate</code> that can be used to search for a <code>MatGridTileHarness</code>
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
+            async
+          </div>host
+          (): <code class="docs-api-method-returns-type">Promise&lt;TestElement&gt;</code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Gets a <code>Promise</code> for the <code>TestElement</code> representing the host element of the component.</p>
+
+      </td>
+    </tr><thead>
+      <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+      </tr>
+    </thead>
+    <tr>
+      <td class="docs-api-method-returns-type-cell">
+        <code class="docs-api-method-returns-type">Promise&lt;TestElement&gt;</code>
+      </td>
+      <td class="docs-api-method-returns-description-cell">
+        <p class="docs-api-method-returns-description">
+          
+        </p>
+      </td>
+    </tr></table>
+</div>
+
+
+  
+    
+
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
+            static
+          </div>with
+          (<span class="docs-api-method-parameter-name">options:
+            </span>
+            <code class="docs-api-method-parameter-type">GridTileHarnessFilters = {}</code>): <code class="docs-api-method-returns-type">HarnessPredicate&lt;MatGridTileHarness&gt;</code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Gets a <code>HarnessPredicate</code> that can be used to search for a <code>MatGridTileHarness</code>
 that meets certain criteria.</p>
 
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-parameters-header-row">
-      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
-    </tr>
-  </thead>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        options</p>
-      <code class="docs-api-method-parameter-type">GridTileHarnessFilters = {}</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        <p>Options for filtering which dialog instances are considered a match.</p>
+      </td>
+    </tr><thead>
+      <tr class="docs-api-method-parameters-header-row">
+        <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+      </tr>
+    </thead>
+    
+    <tr class="docs-api-method-parameter-row">
+      <td class="docs-api-method-parameter-cell">
+        <p class="docs-api-method-parameter-name">
+          options</p>
+        <code class="docs-api-method-parameter-type">GridTileHarnessFilters = {}</code>
+      </td>
+      <td class="docs-api-method-parameter-description-cell">
+        <p class="docs-api-method-parameter-description">
+          <p>Options for filtering which dialog instances are considered a match.</p>
 
-      </p>
-    </td>
-  </tr>
-  <thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+        </p>
+      </td>
     </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">HarnessPredicate&lt;MatGridTileHarness&gt;</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        <p>a <code>HarnessPredicate</code> configured with the given options.</p>
+    <thead>
+      <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+      </tr>
+    </thead>
+    <tr>
+      <td class="docs-api-method-returns-type-cell">
+        <code class="docs-api-method-returns-type">HarnessPredicate&lt;MatGridTileHarness&gt;</code>
+      </td>
+      <td class="docs-api-method-returns-description-cell">
+        <p class="docs-api-method-returns-description">
+          <p>a <code>HarnessPredicate</code> configured with the given options.</p>
 
-      </p>
-    </td>
-  </tr></table>
+        </p>
+      </td>
+    </tr></table>
+</div>
 
 
   
@@ -850,17 +923,18 @@ that meets certain criteria.</p>
   
 </h4><p class="docs-api-class-description"><p>Harness for interacting with a standard <code>MatGridList</code> in tests.</p>
 </p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
-  <table class="docs-api-properties-table">
-    <tr class="docs-api-properties-header-row">
-      <th class="docs-api-properties-th">Name</th>
-      <th class="docs-api-properties-th">Description</th>
-    </tr>
-    
+  <div class="docs-api-properties-card">
+    <table class="docs-api-properties-table">
+      <tr class="docs-api-properties-header-row">
+        <th class="docs-api-properties-th">Name</th>
+        <th class="docs-api-properties-th">Description</th>
+      </tr>
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>static&nbsp;hostSelector: &#39;.mat-grid-list&#39;</code>
+      <code>static&nbsp;hostSelector: <code class="docs-api-property-type">&#39;.mat-grid-list&#39;</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>The selector for the host element of a <code>MatGridList</code> instance.</p>
@@ -868,259 +942,285 @@ that meets certain criteria.</p>
 </tr>
 
 
-    
-  </table>
+      
+    </table>
+  </div>
 
 
 <h5 class="docs-api-h5 docs-api-method-header">Methods</h5>
   
     
 
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
-          async
-        </div>getColumns
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets the amount of columns of the grid-list.</p>
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
+            async
+          </div>getColumns
+          (): <code class="docs-api-method-returns-type">Promise&lt;number&gt;</code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Gets the amount of columns of the grid-list.</p>
 
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
-    </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">Promise&lt;number&gt;</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        
-      </p>
-    </td>
-  </tr></table>
-
-
-  
-    
-
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
-          async
-        </div>getTileAtPosition
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets a tile of the grid-list that is located at the given location.</p>
-
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-parameters-header-row">
-      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
-    </tr>
-  </thead>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        row</p>
-      <code class="docs-api-method-parameter-type"></code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        <p>Zero-based row index.</p>
-
-      </p>
-    </td>
-  </tr>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        column</p>
-      <code class="docs-api-method-parameter-type"></code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        <p>Zero-based column index.</p>
-
-      </p>
-    </td>
-  </tr>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        __0</p>
-      <code class="docs-api-method-parameter-type">{ row: number; column: number; }</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        
-      </p>
-    </td>
-  </tr>
-  <thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
-    </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">Promise&lt;MatGridTileHarness&gt;</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        
-      </p>
-    </td>
-  </tr></table>
+      </td>
+    </tr><thead>
+      <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+      </tr>
+    </thead>
+    <tr>
+      <td class="docs-api-method-returns-type-cell">
+        <code class="docs-api-method-returns-type">Promise&lt;number&gt;</code>
+      </td>
+      <td class="docs-api-method-returns-description-cell">
+        <p class="docs-api-method-returns-description">
+          
+        </p>
+      </td>
+    </tr></table>
+</div>
 
 
   
     
 
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
-          async
-        </div>getTiles
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets all tiles of the grid-list.</p>
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
+            async
+          </div>getTileAtPosition
+          (<span class="docs-api-method-parameter-name">row:
+            </span>
+            <code class="docs-api-method-parameter-type"></code>, <span class="docs-api-method-parameter-name">column:
+            </span>
+            <code class="docs-api-method-parameter-type"></code>, <span class="docs-api-method-parameter-name">__0:
+            </span>
+            <code class="docs-api-method-parameter-type">{ row: number; column: number; }</code>): <code class="docs-api-method-returns-type">Promise&lt;MatGridTileHarness&gt;</code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Gets a tile of the grid-list that is located at the given location.</p>
 
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-parameters-header-row">
-      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+      </td>
+    </tr><thead>
+      <tr class="docs-api-method-parameters-header-row">
+        <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+      </tr>
+    </thead>
+    
+    <tr class="docs-api-method-parameter-row">
+      <td class="docs-api-method-parameter-cell">
+        <p class="docs-api-method-parameter-name">
+          row</p>
+        <code class="docs-api-method-parameter-type"></code>
+      </td>
+      <td class="docs-api-method-parameter-description-cell">
+        <p class="docs-api-method-parameter-description">
+          <p>Zero-based row index.</p>
+
+        </p>
+      </td>
     </tr>
-  </thead>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        filters</p>
-      <code class="docs-api-method-parameter-type">GridTileHarnessFilters = {}</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        
-      </p>
-    </td>
-  </tr>
-  <thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    
+    <tr class="docs-api-method-parameter-row">
+      <td class="docs-api-method-parameter-cell">
+        <p class="docs-api-method-parameter-name">
+          column</p>
+        <code class="docs-api-method-parameter-type"></code>
+      </td>
+      <td class="docs-api-method-parameter-description-cell">
+        <p class="docs-api-method-parameter-description">
+          <p>Zero-based column index.</p>
+
+        </p>
+      </td>
     </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">Promise&lt;MatGridTileHarness[]&gt;</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        
-      </p>
-    </td>
-  </tr></table>
+    
+    <tr class="docs-api-method-parameter-row">
+      <td class="docs-api-method-parameter-cell">
+        <p class="docs-api-method-parameter-name">
+          __0</p>
+        <code class="docs-api-method-parameter-type">{ row: number; column: number; }</code>
+      </td>
+      <td class="docs-api-method-parameter-description-cell">
+        <p class="docs-api-method-parameter-description">
+          
+        </p>
+      </td>
+    </tr>
+    <thead>
+      <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+      </tr>
+    </thead>
+    <tr>
+      <td class="docs-api-method-returns-type-cell">
+        <code class="docs-api-method-returns-type">Promise&lt;MatGridTileHarness&gt;</code>
+      </td>
+      <td class="docs-api-method-returns-description-cell">
+        <p class="docs-api-method-returns-description">
+          
+        </p>
+      </td>
+    </tr></table>
+</div>
 
 
   
     
 
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
-          async
-        </div>host
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets a <code>Promise</code> for the <code>TestElement</code> representing the host element of the component.</p>
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
+            async
+          </div>getTiles
+          (<span class="docs-api-method-parameter-name">filters:
+            </span>
+            <code class="docs-api-method-parameter-type">GridTileHarnessFilters = {}</code>): <code class="docs-api-method-returns-type">Promise&lt;MatGridTileHarness[]&gt;</code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Gets all tiles of the grid-list.</p>
 
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+      </td>
+    </tr><thead>
+      <tr class="docs-api-method-parameters-header-row">
+        <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+      </tr>
+    </thead>
+    
+    <tr class="docs-api-method-parameter-row">
+      <td class="docs-api-method-parameter-cell">
+        <p class="docs-api-method-parameter-name">
+          filters</p>
+        <code class="docs-api-method-parameter-type">GridTileHarnessFilters = {}</code>
+      </td>
+      <td class="docs-api-method-parameter-description-cell">
+        <p class="docs-api-method-parameter-description">
+          
+        </p>
+      </td>
     </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">Promise&lt;TestElement&gt;</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        
-      </p>
-    </td>
-  </tr></table>
+    <thead>
+      <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+      </tr>
+    </thead>
+    <tr>
+      <td class="docs-api-method-returns-type-cell">
+        <code class="docs-api-method-returns-type">Promise&lt;MatGridTileHarness[]&gt;</code>
+      </td>
+      <td class="docs-api-method-returns-description-cell">
+        <p class="docs-api-method-returns-description">
+          
+        </p>
+      </td>
+    </tr></table>
+</div>
 
 
   
     
 
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
-          static
-        </div>with
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets a <code>HarnessPredicate</code> that can be used to search for a <code>MatGridListHarness</code>
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
+            async
+          </div>host
+          (): <code class="docs-api-method-returns-type">Promise&lt;TestElement&gt;</code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Gets a <code>Promise</code> for the <code>TestElement</code> representing the host element of the component.</p>
+
+      </td>
+    </tr><thead>
+      <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+      </tr>
+    </thead>
+    <tr>
+      <td class="docs-api-method-returns-type-cell">
+        <code class="docs-api-method-returns-type">Promise&lt;TestElement&gt;</code>
+      </td>
+      <td class="docs-api-method-returns-description-cell">
+        <p class="docs-api-method-returns-description">
+          
+        </p>
+      </td>
+    </tr></table>
+</div>
+
+
+  
+    
+
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
+            static
+          </div>with
+          (<span class="docs-api-method-parameter-name">options:
+            </span>
+            <code class="docs-api-method-parameter-type">GridListHarnessFilters = {}</code>): <code class="docs-api-method-returns-type">HarnessPredicate&lt;MatGridListHarness&gt;</code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Gets a <code>HarnessPredicate</code> that can be used to search for a <code>MatGridListHarness</code>
 that meets certain criteria.</p>
 
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-parameters-header-row">
-      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
-    </tr>
-  </thead>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        options</p>
-      <code class="docs-api-method-parameter-type">GridListHarnessFilters = {}</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        <p>Options for filtering which dialog instances are considered a match.</p>
+      </td>
+    </tr><thead>
+      <tr class="docs-api-method-parameters-header-row">
+        <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+      </tr>
+    </thead>
+    
+    <tr class="docs-api-method-parameter-row">
+      <td class="docs-api-method-parameter-cell">
+        <p class="docs-api-method-parameter-name">
+          options</p>
+        <code class="docs-api-method-parameter-type">GridListHarnessFilters = {}</code>
+      </td>
+      <td class="docs-api-method-parameter-description-cell">
+        <p class="docs-api-method-parameter-description">
+          <p>Options for filtering which dialog instances are considered a match.</p>
 
-      </p>
-    </td>
-  </tr>
-  <thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+        </p>
+      </td>
     </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">HarnessPredicate&lt;MatGridListHarness&gt;</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        <p>a <code>HarnessPredicate</code> configured with the given options.</p>
+    <thead>
+      <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+      </tr>
+    </thead>
+    <tr>
+      <td class="docs-api-method-returns-type-cell">
+        <code class="docs-api-method-returns-type">HarnessPredicate&lt;MatGridListHarness&gt;</code>
+      </td>
+      <td class="docs-api-method-returns-description-cell">
+        <p class="docs-api-method-returns-description">
+          <p>a <code>HarnessPredicate</code> configured with the given options.</p>
 
-      </p>
-    </td>
-  </tr></table>
+        </p>
+      </td>
+    </tr></table>
+</div>
 
 
   
@@ -1153,17 +1253,18 @@ that meets certain criteria.</p>
   <code>GridTileHarnessFilters</code>
 </h4><p class="docs-api-interface-description"><p>A set of criteria that can be used to filter a list of <code>MatTileHarness</code> instances.</p>
 </p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
-  <table class="docs-api-properties-table">
-    <tr class="docs-api-properties-header-row">
-      <th class="docs-api-properties-th">Name</th>
-      <th class="docs-api-properties-th">Description</th>
-    </tr>
-    
+  <div class="docs-api-properties-card">
+    <table class="docs-api-properties-table">
+      <tr class="docs-api-properties-header-row">
+        <th class="docs-api-properties-th">Name</th>
+        <th class="docs-api-properties-th">Description</th>
+      </tr>
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>footerText: string | RegExp</code>
+      <code>footerText: <code class="docs-api-property-type">string | RegExp</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Text the grid-tile footer should match.</p>
@@ -1171,12 +1272,12 @@ that meets certain criteria.</p>
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>headerText: string | RegExp</code>
+      <code>headerText: <code class="docs-api-property-type">string | RegExp</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Text the grid-tile header should match.</p>
@@ -1184,8 +1285,9 @@ that meets certain criteria.</p>
 </tr>
 
 
-    
-  </table>
+      
+    </table>
+  </div>
 
 
 

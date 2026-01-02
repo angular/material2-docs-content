@@ -54,17 +54,18 @@ the directive instance itself can be attached to a host, enabling declarative us
   
 </p><span class="docs-api-class-export-label">Exported as:</span>
 <span class="docs-api-class-export-name">cdkPortal</span><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
-  <table class="docs-api-properties-table">
-    <tr class="docs-api-properties-header-row">
-      <th class="docs-api-properties-th">Name</th>
-      <th class="docs-api-properties-th">Description</th>
-    </tr>
-    
+  <div class="docs-api-properties-card">
+    <table class="docs-api-properties-table">
+      <tr class="docs-api-properties-header-row">
+        <th class="docs-api-properties-th">Name</th>
+        <th class="docs-api-properties-th">Description</th>
+      </tr>
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>context: C</code>
+      <code>context: <code class="docs-api-property-type">C</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Contextual data to be passed in to the embedded view.</p>
@@ -72,12 +73,12 @@ the directive instance itself can be attached to a host, enabling declarative us
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>injector: Injector</code>
+      <code>injector: <code class="docs-api-property-type">Injector</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>The injector to use for the embedded view.</p>
@@ -85,12 +86,12 @@ the directive instance itself can be attached to a host, enabling declarative us
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>isAttached: boolean</code>
+      <code>isAttached: <code class="docs-api-property-type">boolean</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Whether this portal is attached to a host.</p>
@@ -98,24 +99,24 @@ the directive instance itself can be attached to a host, enabling declarative us
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>origin: ElementRef</code>
+      <code>origin: <code class="docs-api-property-type">ElementRef</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"></td>
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>templateRef: TemplateRef&lt;C&gt;</code>
+      <code>templateRef: <code class="docs-api-property-type">TemplateRef&lt;C&gt;</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>The embedded template that will be used to instantiate an embedded View in the host.</p>
@@ -123,12 +124,12 @@ the directive instance itself can be attached to a host, enabling declarative us
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>viewContainerRef: ViewContainerRef</code>
+      <code>viewContainerRef: <code class="docs-api-property-type">ViewContainerRef</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Reference to the ViewContainer into which the template will be stamped out.</p>
@@ -136,121 +137,137 @@ the directive instance itself can be attached to a host, enabling declarative us
 </tr>
 
 
-    
-  </table>
+      
+    </table>
+  </div>
 
 
 <h5 class="docs-api-h5 docs-api-method-header">Methods</h5>
   
     
 
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">attach
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Attach the portal to the provided <code>PortalOutlet</code>.
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell">attach
+          (<span class="docs-api-method-parameter-name">host:
+            </span>
+            <code class="docs-api-method-parameter-type">PortalOutlet</code>, <span class="docs-api-method-parameter-name">context:
+            </span>
+            <code class="docs-api-method-parameter-type">C = this.context</code>): <code class="docs-api-method-returns-type">EmbeddedViewRef&lt;C&gt;</code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Attach the portal to the provided <code>PortalOutlet</code>.
 When a context is provided it will override the <code>context</code> property of the <code>TemplatePortal</code>
 instance.</p>
 
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-parameters-header-row">
-      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+      </td>
+    </tr><thead>
+      <tr class="docs-api-method-parameters-header-row">
+        <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+      </tr>
+    </thead>
+    
+    <tr class="docs-api-method-parameter-row">
+      <td class="docs-api-method-parameter-cell">
+        <p class="docs-api-method-parameter-name">
+          host</p>
+        <code class="docs-api-method-parameter-type">PortalOutlet</code>
+      </td>
+      <td class="docs-api-method-parameter-description-cell">
+        <p class="docs-api-method-parameter-description">
+          
+        </p>
+      </td>
     </tr>
-  </thead>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        host</p>
-      <code class="docs-api-method-parameter-type">PortalOutlet</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        
-      </p>
-    </td>
-  </tr>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        context</p>
-      <code class="docs-api-method-parameter-type">C = this.context</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        
-      </p>
-    </td>
-  </tr>
-  <thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    
+    <tr class="docs-api-method-parameter-row">
+      <td class="docs-api-method-parameter-cell">
+        <p class="docs-api-method-parameter-name">
+          context</p>
+        <code class="docs-api-method-parameter-type">C = this.context</code>
+      </td>
+      <td class="docs-api-method-parameter-description-cell">
+        <p class="docs-api-method-parameter-description">
+          
+        </p>
+      </td>
     </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">EmbeddedViewRef&lt;C&gt;</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        
-      </p>
-    </td>
-  </tr></table>
+    <thead>
+      <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+      </tr>
+    </thead>
+    <tr>
+      <td class="docs-api-method-returns-type-cell">
+        <code class="docs-api-method-returns-type">EmbeddedViewRef&lt;C&gt;</code>
+      </td>
+      <td class="docs-api-method-returns-description-cell">
+        <p class="docs-api-method-returns-description">
+          
+        </p>
+      </td>
+    </tr></table>
+</div>
 
 
   
     
 
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">detach
-      </th>
-    </tr>
-  </thead></table>
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell">detach
+          (): <code class="docs-api-method-returns-type">void</code>
+        </th>
+      </tr>
+    </thead></table>
+</div>
 
 
   
     
 
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">setAttachedHost
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Sets the PortalOutlet reference without performing <code>attach()</code>. This is used directly by
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell">setAttachedHost
+          (<span class="docs-api-method-parameter-name">host:
+            </span>
+            <code class="docs-api-method-parameter-type">PortalOutlet</code>): <code class="docs-api-method-returns-type"></code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Sets the PortalOutlet reference without performing <code>attach()</code>. This is used directly by
 the PortalOutlet when it is performing an <code>attach()</code> or <code>detach()</code>.</p>
 
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-parameters-header-row">
-      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+      </td>
+    </tr><thead>
+      <tr class="docs-api-method-parameters-header-row">
+        <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+      </tr>
+    </thead>
+    
+    <tr class="docs-api-method-parameter-row">
+      <td class="docs-api-method-parameter-cell">
+        <p class="docs-api-method-parameter-name">
+          host</p>
+        <code class="docs-api-method-parameter-type">PortalOutlet</code>
+      </td>
+      <td class="docs-api-method-parameter-description-cell">
+        <p class="docs-api-method-parameter-description">
+          
+        </p>
+      </td>
     </tr>
-  </thead>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        host</p>
-      <code class="docs-api-method-parameter-type">PortalOutlet</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        
-      </p>
-    </td>
-  </tr>
-  </table>
+    </table>
+</div>
 
 
   
@@ -282,18 +299,19 @@ directly attached to it, enabling declarative use.</p>
   
 </p><span class="docs-api-class-export-label">Exported as:</span>
 <span class="docs-api-class-export-name">cdkPortalOutlet</span><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
-  <table class="docs-api-properties-table">
-    <tr class="docs-api-properties-header-row">
-      <th class="docs-api-properties-th">Name</th>
-      <th class="docs-api-properties-th">Description</th>
-    </tr>
-    
+  <div class="docs-api-properties-card">
+    <table class="docs-api-properties-table">
+      <tr class="docs-api-properties-header-row">
+        <th class="docs-api-properties-th">Name</th>
+        <th class="docs-api-properties-th">Description</th>
+      </tr>
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">&#39;cdkPortalOutlet&#39;</span>)
         </div><p class="docs-api-property-name">
-      <code>portal: Portal&lt;any&gt; | null</code>
+      <code>portal: <code class="docs-api-property-type">Portal&lt;any&gt; | null</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Portal associated with the Portal outlet.</p>
@@ -301,13 +319,13 @@ directly attached to it, enabling declarative use.</p>
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><div class="docs-api-output-marker">
           @Output()</div><p class="docs-api-property-name">
-      <code>attached: EventEmitter&lt;CdkPortalOutletAttachedRef&gt;</code>
+      <code>attached: <code class="docs-api-property-type">EventEmitter&lt;CdkPortalOutletAttachedRef&gt;</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Emits when a portal is attached to the outlet.</p>
@@ -315,12 +333,12 @@ directly attached to it, enabling declarative use.</p>
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>attachedRef: CdkPortalOutletAttachedRef</code>
+      <code>attachedRef: <code class="docs-api-property-type">CdkPortalOutletAttachedRef</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Component or view reference that is attached to the portal.</p>
@@ -328,15 +346,15 @@ directly attached to it, enabling declarative use.</p>
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><div class="docs-api-deprecated-marker" deprecated-message="To be turned into a method. Will be removed in v10.0.0 or later."
   >
         Deprecated
       </div><p class="docs-api-property-name">
-      <code>attachDomPortal: (portal: DomPortal) =&gt; {
+      <code>attachDomPortal: <code class="docs-api-property-type">(portal: DomPortal) =&gt; {
     const element = portal.element;
     if (!element.parentNode &amp;&amp; (typeof ngDevMode === &#39;undefined&#39; || ngDevMode)) {
         throw Error(&#39;DOM portal content must be attached to a parent node.&#39;);
@@ -351,7 +369,7 @@ directly attached to it, enabling declarative use.</p>
             anchorNode.parentNode!.replaceChild(element, anchorNode);
         }
     });
-}</code>
+}</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Attaches the given DomPortal to this PortalHost by moving all of the portal content into it.</p>
@@ -359,308 +377,343 @@ directly attached to it, enabling declarative use.</p>
 </tr>
 
 
-    
-  </table>
+      
+    </table>
+  </div>
 
 
 <h5 class="docs-api-h5 docs-api-method-header">Methods</h5>
   
     
 
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">attach
-      </th>
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell">attach
+          (<span class="docs-api-method-parameter-name">portal:
+            </span>
+            <code class="docs-api-method-parameter-type">ComponentPortal&lt;T&gt;</code>): <code class="docs-api-method-returns-type">ComponentRef&lt;T&gt;</code>
+        </th>
+      </tr>
+    </thead><thead>
+      <tr class="docs-api-method-parameters-header-row">
+        <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+      </tr>
+    </thead>
+    
+    <tr class="docs-api-method-parameter-row">
+      <td class="docs-api-method-parameter-cell">
+        <p class="docs-api-method-parameter-name">
+          portal</p>
+        <code class="docs-api-method-parameter-type">ComponentPortal&lt;T&gt;</code>
+      </td>
+      <td class="docs-api-method-parameter-description-cell">
+        <p class="docs-api-method-parameter-description">
+          
+        </p>
+      </td>
     </tr>
-  </thead><thead>
-    <tr class="docs-api-method-parameters-header-row">
-      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
-    </tr>
-  </thead>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        portal</p>
-      <code class="docs-api-method-parameter-type">ComponentPortal&lt;T&gt;</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        
-      </p>
-    </td>
-  </tr>
-  <thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
-    </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">ComponentRef&lt;T&gt;</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        
-      </p>
-    </td>
-  </tr></table>
+    <thead>
+      <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+      </tr>
+    </thead>
+    <tr>
+      <td class="docs-api-method-returns-type-cell">
+        <code class="docs-api-method-returns-type">ComponentRef&lt;T&gt;</code>
+      </td>
+      <td class="docs-api-method-returns-description-cell">
+        <p class="docs-api-method-returns-description">
+          
+        </p>
+      </td>
+    </tr></table>
+</div>
 
 
   
     
 
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">attach
-      </th>
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell">attach
+          (<span class="docs-api-method-parameter-name">portal:
+            </span>
+            <code class="docs-api-method-parameter-type">TemplatePortal&lt;T&gt;</code>): <code class="docs-api-method-returns-type">EmbeddedViewRef&lt;T&gt;</code>
+        </th>
+      </tr>
+    </thead><thead>
+      <tr class="docs-api-method-parameters-header-row">
+        <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+      </tr>
+    </thead>
+    
+    <tr class="docs-api-method-parameter-row">
+      <td class="docs-api-method-parameter-cell">
+        <p class="docs-api-method-parameter-name">
+          portal</p>
+        <code class="docs-api-method-parameter-type">TemplatePortal&lt;T&gt;</code>
+      </td>
+      <td class="docs-api-method-parameter-description-cell">
+        <p class="docs-api-method-parameter-description">
+          
+        </p>
+      </td>
     </tr>
-  </thead><thead>
-    <tr class="docs-api-method-parameters-header-row">
-      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
-    </tr>
-  </thead>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        portal</p>
-      <code class="docs-api-method-parameter-type">TemplatePortal&lt;T&gt;</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        
-      </p>
-    </td>
-  </tr>
-  <thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
-    </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">EmbeddedViewRef&lt;T&gt;</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        
-      </p>
-    </td>
-  </tr></table>
+    <thead>
+      <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+      </tr>
+    </thead>
+    <tr>
+      <td class="docs-api-method-returns-type-cell">
+        <code class="docs-api-method-returns-type">EmbeddedViewRef&lt;T&gt;</code>
+      </td>
+      <td class="docs-api-method-returns-description-cell">
+        <p class="docs-api-method-returns-description">
+          
+        </p>
+      </td>
+    </tr></table>
+</div>
 
 
   
     
 
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">attach
-      </th>
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell">attach
+          (<span class="docs-api-method-parameter-name">portal:
+            </span>
+            <code class="docs-api-method-parameter-type">any</code>): <code class="docs-api-method-returns-type">any</code>
+        </th>
+      </tr>
+    </thead><thead>
+      <tr class="docs-api-method-parameters-header-row">
+        <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+      </tr>
+    </thead>
+    
+    <tr class="docs-api-method-parameter-row">
+      <td class="docs-api-method-parameter-cell">
+        <p class="docs-api-method-parameter-name">
+          portal</p>
+        <code class="docs-api-method-parameter-type">any</code>
+      </td>
+      <td class="docs-api-method-parameter-description-cell">
+        <p class="docs-api-method-parameter-description">
+          
+        </p>
+      </td>
     </tr>
-  </thead><thead>
-    <tr class="docs-api-method-parameters-header-row">
-      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
-    </tr>
-  </thead>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        portal</p>
-      <code class="docs-api-method-parameter-type">any</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        
-      </p>
-    </td>
-  </tr>
-  <thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
-    </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">any</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        
-      </p>
-    </td>
-  </tr></table>
+    <thead>
+      <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+      </tr>
+    </thead>
+    <tr>
+      <td class="docs-api-method-returns-type-cell">
+        <code class="docs-api-method-returns-type">any</code>
+      </td>
+      <td class="docs-api-method-returns-description-cell">
+        <p class="docs-api-method-returns-description">
+          
+        </p>
+      </td>
+    </tr></table>
+</div>
 
 
   
     
 
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">attachComponentPortal
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Attach the given ComponentPortal to this PortalOutlet.</p>
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell">attachComponentPortal
+          (<span class="docs-api-method-parameter-name">portal:
+            </span>
+            <code class="docs-api-method-parameter-type">ComponentPortal&lt;T&gt;</code>): <code class="docs-api-method-returns-type">ComponentRef&lt;T&gt;</code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Attach the given ComponentPortal to this PortalOutlet.</p>
 
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-parameters-header-row">
-      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
-    </tr>
-  </thead>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        portal</p>
-      <code class="docs-api-method-parameter-type">ComponentPortal&lt;T&gt;</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        <p>Portal to be attached to the portal outlet.</p>
+      </td>
+    </tr><thead>
+      <tr class="docs-api-method-parameters-header-row">
+        <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+      </tr>
+    </thead>
+    
+    <tr class="docs-api-method-parameter-row">
+      <td class="docs-api-method-parameter-cell">
+        <p class="docs-api-method-parameter-name">
+          portal</p>
+        <code class="docs-api-method-parameter-type">ComponentPortal&lt;T&gt;</code>
+      </td>
+      <td class="docs-api-method-parameter-description-cell">
+        <p class="docs-api-method-parameter-description">
+          <p>Portal to be attached to the portal outlet.</p>
 
-      </p>
-    </td>
-  </tr>
-  <thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+        </p>
+      </td>
     </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">ComponentRef&lt;T&gt;</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        <p>Reference to the created component.</p>
+    <thead>
+      <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+      </tr>
+    </thead>
+    <tr>
+      <td class="docs-api-method-returns-type-cell">
+        <code class="docs-api-method-returns-type">ComponentRef&lt;T&gt;</code>
+      </td>
+      <td class="docs-api-method-returns-description-cell">
+        <p class="docs-api-method-returns-description">
+          <p>Reference to the created component.</p>
 
-      </p>
-    </td>
-  </tr></table>
+        </p>
+      </td>
+    </tr></table>
+</div>
 
 
   
     
 
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">attachTemplatePortal
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Attach the given TemplatePortal to this PortalHost as an embedded View.</p>
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell">attachTemplatePortal
+          (<span class="docs-api-method-parameter-name">portal:
+            </span>
+            <code class="docs-api-method-parameter-type">TemplatePortal&lt;C&gt;</code>): <code class="docs-api-method-returns-type">EmbeddedViewRef&lt;C&gt;</code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Attach the given TemplatePortal to this PortalHost as an embedded View.</p>
 
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-parameters-header-row">
-      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
-    </tr>
-  </thead>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        portal</p>
-      <code class="docs-api-method-parameter-type">TemplatePortal&lt;C&gt;</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        <p>Portal to be attached.</p>
+      </td>
+    </tr><thead>
+      <tr class="docs-api-method-parameters-header-row">
+        <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+      </tr>
+    </thead>
+    
+    <tr class="docs-api-method-parameter-row">
+      <td class="docs-api-method-parameter-cell">
+        <p class="docs-api-method-parameter-name">
+          portal</p>
+        <code class="docs-api-method-parameter-type">TemplatePortal&lt;C&gt;</code>
+      </td>
+      <td class="docs-api-method-parameter-description-cell">
+        <p class="docs-api-method-parameter-description">
+          <p>Portal to be attached.</p>
 
-      </p>
-    </td>
-  </tr>
-  <thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+        </p>
+      </td>
     </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">EmbeddedViewRef&lt;C&gt;</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        <p>Reference to the created embedded view.</p>
+    <thead>
+      <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+      </tr>
+    </thead>
+    <tr>
+      <td class="docs-api-method-returns-type-cell">
+        <code class="docs-api-method-returns-type">EmbeddedViewRef&lt;C&gt;</code>
+      </td>
+      <td class="docs-api-method-returns-description-cell">
+        <p class="docs-api-method-returns-description">
+          <p>Reference to the created embedded view.</p>
 
-      </p>
-    </td>
-  </tr></table>
+        </p>
+      </td>
+    </tr></table>
+</div>
 
 
   
     
 
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">detach
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Detaches a previously attached portal.</p>
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell">detach
+          (): <code class="docs-api-method-returns-type">void</code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Detaches a previously attached portal.</p>
 
-    </td>
-  </tr></table>
-
-
-  
-    
-
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">dispose
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Permanently dispose of this portal host.</p>
-
-    </td>
-  </tr></table>
+      </td>
+    </tr></table>
+</div>
 
 
   
     
 
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">hasAttached
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Whether this host has an attached portal.</p>
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell">dispose
+          (): <code class="docs-api-method-returns-type">void</code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Permanently dispose of this portal host.</p>
 
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
-    </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">boolean</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        
-      </p>
-    </td>
-  </tr></table>
+      </td>
+    </tr></table>
+</div>
+
+
+  
+    
+
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell">hasAttached
+          (): <code class="docs-api-method-returns-type">boolean</code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Whether this host has an attached portal.</p>
+
+      </td>
+    </tr><thead>
+      <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+      </tr>
+    </thead>
+    <tr>
+      <td class="docs-api-method-returns-type-cell">
+        <code class="docs-api-method-returns-type">boolean</code>
+      </td>
+      <td class="docs-api-method-returns-description-cell">
+        <p class="docs-api-method-returns-description">
+          
+        </p>
+      </td>
+    </tr></table>
+</div>
 
 
   
@@ -681,17 +734,18 @@ directly attached to it, enabling declarative use.</p>
 </h4><p class="docs-api-class-description"><p>A <code>Portal</code> is something that you want to render somewhere else.
 It can be attach to / detached from a <code>PortalOutlet</code>.</p>
 </p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
-  <table class="docs-api-properties-table">
-    <tr class="docs-api-properties-header-row">
-      <th class="docs-api-properties-th">Name</th>
-      <th class="docs-api-properties-th">Description</th>
-    </tr>
-    
+  <div class="docs-api-properties-card">
+    <table class="docs-api-properties-table">
+      <tr class="docs-api-properties-header-row">
+        <th class="docs-api-properties-th">Name</th>
+        <th class="docs-api-properties-th">Description</th>
+      </tr>
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>isAttached: boolean</code>
+      <code>isAttached: <code class="docs-api-property-type">boolean</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Whether this portal is attached to a host.</p>
@@ -699,111 +753,125 @@ It can be attach to / detached from a <code>PortalOutlet</code>.</p>
 </tr>
 
 
-    
-  </table>
+      
+    </table>
+  </div>
 
 
 <h5 class="docs-api-h5 docs-api-method-header">Methods</h5>
   
     
 
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">attach
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Attach this portal to a host.</p>
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell">attach
+          (<span class="docs-api-method-parameter-name">host:
+            </span>
+            <code class="docs-api-method-parameter-type">PortalOutlet</code>): <code class="docs-api-method-returns-type">T</code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Attach this portal to a host.</p>
 
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-parameters-header-row">
-      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+      </td>
+    </tr><thead>
+      <tr class="docs-api-method-parameters-header-row">
+        <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+      </tr>
+    </thead>
+    
+    <tr class="docs-api-method-parameter-row">
+      <td class="docs-api-method-parameter-cell">
+        <p class="docs-api-method-parameter-name">
+          host</p>
+        <code class="docs-api-method-parameter-type">PortalOutlet</code>
+      </td>
+      <td class="docs-api-method-parameter-description-cell">
+        <p class="docs-api-method-parameter-description">
+          
+        </p>
+      </td>
     </tr>
-  </thead>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        host</p>
-      <code class="docs-api-method-parameter-type">PortalOutlet</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        
-      </p>
-    </td>
-  </tr>
-  <thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
-    </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">T</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        
-      </p>
-    </td>
-  </tr></table>
+    <thead>
+      <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+      </tr>
+    </thead>
+    <tr>
+      <td class="docs-api-method-returns-type-cell">
+        <code class="docs-api-method-returns-type">T</code>
+      </td>
+      <td class="docs-api-method-returns-description-cell">
+        <p class="docs-api-method-returns-description">
+          
+        </p>
+      </td>
+    </tr></table>
+</div>
 
 
   
     
 
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">detach
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Detach this portal from its host</p>
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell">detach
+          (): <code class="docs-api-method-returns-type">void</code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Detach this portal from its host</p>
 
-    </td>
-  </tr></table>
+      </td>
+    </tr></table>
+</div>
 
 
   
     
 
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">setAttachedHost
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Sets the PortalOutlet reference without performing <code>attach()</code>. This is used directly by
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell">setAttachedHost
+          (<span class="docs-api-method-parameter-name">host:
+            </span>
+            <code class="docs-api-method-parameter-type">PortalOutlet</code>): <code class="docs-api-method-returns-type"></code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Sets the PortalOutlet reference without performing <code>attach()</code>. This is used directly by
 the PortalOutlet when it is performing an <code>attach()</code> or <code>detach()</code>.</p>
 
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-parameters-header-row">
-      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+      </td>
+    </tr><thead>
+      <tr class="docs-api-method-parameters-header-row">
+        <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+      </tr>
+    </thead>
+    
+    <tr class="docs-api-method-parameter-row">
+      <td class="docs-api-method-parameter-cell">
+        <p class="docs-api-method-parameter-name">
+          host</p>
+        <code class="docs-api-method-parameter-type">PortalOutlet</code>
+      </td>
+      <td class="docs-api-method-parameter-description-cell">
+        <p class="docs-api-method-parameter-description">
+          
+        </p>
+      </td>
     </tr>
-  </thead>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        host</p>
-      <code class="docs-api-method-parameter-type">PortalOutlet</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        
-      </p>
-    </td>
-  </tr>
-  </table>
+    </table>
+</div>
 
 
   
@@ -826,17 +894,18 @@ the PortalOutlet when it is performing an <code>attach()</code> or <code>detach(
   
 </h4><p class="docs-api-class-description"><p>A <code>ComponentPortal</code> is a portal that instantiates some Component upon attachment.</p>
 </p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
-  <table class="docs-api-properties-table">
-    <tr class="docs-api-properties-header-row">
-      <th class="docs-api-properties-th">Name</th>
-      <th class="docs-api-properties-th">Description</th>
-    </tr>
-    
+  <div class="docs-api-properties-card">
+    <table class="docs-api-properties-table">
+      <tr class="docs-api-properties-header-row">
+        <th class="docs-api-properties-th">Name</th>
+        <th class="docs-api-properties-th">Description</th>
+      </tr>
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>component: ComponentType&lt;T&gt;</code>
+      <code>component: <code class="docs-api-property-type">ComponentType&lt;T&gt;</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>The type of the component that will be instantiated for attachment.</p>
@@ -844,12 +913,12 @@ the PortalOutlet when it is performing an <code>attach()</code> or <code>detach(
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>injector: Injector | null</code>
+      <code>injector: <code class="docs-api-property-type">Injector | null</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Injector used for the instantiation of the component.</p>
@@ -857,12 +926,12 @@ the PortalOutlet when it is performing an <code>attach()</code> or <code>detach(
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>isAttached: boolean</code>
+      <code>isAttached: <code class="docs-api-property-type">boolean</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Whether this portal is attached to a host.</p>
@@ -870,12 +939,12 @@ the PortalOutlet when it is performing an <code>attach()</code> or <code>detach(
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>projectableNodes: Node[][] | null</code>
+      <code>projectableNodes: <code class="docs-api-property-type">Node[][] | null</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>List of DOM nodes that should be projected through <code>&lt;ng-content&gt;</code> of the attached component.</p>
@@ -883,12 +952,12 @@ the PortalOutlet when it is performing an <code>attach()</code> or <code>detach(
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>viewContainerRef: ViewContainerRef | null</code>
+      <code>viewContainerRef: <code class="docs-api-property-type">ViewContainerRef | null</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Where the attached component should live in Angular&#39;s <em>logical</em> component tree.
@@ -898,111 +967,125 @@ The origin is necessary when the host is outside of the Angular application cont
 </tr>
 
 
-    
-  </table>
+      
+    </table>
+  </div>
 
 
 <h5 class="docs-api-h5 docs-api-method-header">Methods</h5>
   
     
 
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">attach
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Attach this portal to a host.</p>
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell">attach
+          (<span class="docs-api-method-parameter-name">host:
+            </span>
+            <code class="docs-api-method-parameter-type">PortalOutlet</code>): <code class="docs-api-method-returns-type">T</code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Attach this portal to a host.</p>
 
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-parameters-header-row">
-      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+      </td>
+    </tr><thead>
+      <tr class="docs-api-method-parameters-header-row">
+        <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+      </tr>
+    </thead>
+    
+    <tr class="docs-api-method-parameter-row">
+      <td class="docs-api-method-parameter-cell">
+        <p class="docs-api-method-parameter-name">
+          host</p>
+        <code class="docs-api-method-parameter-type">PortalOutlet</code>
+      </td>
+      <td class="docs-api-method-parameter-description-cell">
+        <p class="docs-api-method-parameter-description">
+          
+        </p>
+      </td>
     </tr>
-  </thead>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        host</p>
-      <code class="docs-api-method-parameter-type">PortalOutlet</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        
-      </p>
-    </td>
-  </tr>
-  <thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
-    </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">T</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        
-      </p>
-    </td>
-  </tr></table>
+    <thead>
+      <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+      </tr>
+    </thead>
+    <tr>
+      <td class="docs-api-method-returns-type-cell">
+        <code class="docs-api-method-returns-type">T</code>
+      </td>
+      <td class="docs-api-method-returns-description-cell">
+        <p class="docs-api-method-returns-description">
+          
+        </p>
+      </td>
+    </tr></table>
+</div>
 
 
   
     
 
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">detach
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Detach this portal from its host</p>
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell">detach
+          (): <code class="docs-api-method-returns-type">void</code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Detach this portal from its host</p>
 
-    </td>
-  </tr></table>
+      </td>
+    </tr></table>
+</div>
 
 
   
     
 
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">setAttachedHost
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Sets the PortalOutlet reference without performing <code>attach()</code>. This is used directly by
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell">setAttachedHost
+          (<span class="docs-api-method-parameter-name">host:
+            </span>
+            <code class="docs-api-method-parameter-type">PortalOutlet</code>): <code class="docs-api-method-returns-type"></code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Sets the PortalOutlet reference without performing <code>attach()</code>. This is used directly by
 the PortalOutlet when it is performing an <code>attach()</code> or <code>detach()</code>.</p>
 
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-parameters-header-row">
-      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+      </td>
+    </tr><thead>
+      <tr class="docs-api-method-parameters-header-row">
+        <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+      </tr>
+    </thead>
+    
+    <tr class="docs-api-method-parameter-row">
+      <td class="docs-api-method-parameter-cell">
+        <p class="docs-api-method-parameter-name">
+          host</p>
+        <code class="docs-api-method-parameter-type">PortalOutlet</code>
+      </td>
+      <td class="docs-api-method-parameter-description-cell">
+        <p class="docs-api-method-parameter-description">
+          
+        </p>
+      </td>
     </tr>
-  </thead>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        host</p>
-      <code class="docs-api-method-parameter-type">PortalOutlet</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        
-      </p>
-    </td>
-  </tr>
-  </table>
+    </table>
+</div>
 
 
   
@@ -1025,17 +1108,18 @@ the PortalOutlet when it is performing an <code>attach()</code> or <code>detach(
   
 </h4><p class="docs-api-class-description"><p>A <code>TemplatePortal</code> is a portal that represents some embedded template (TemplateRef).</p>
 </p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
-  <table class="docs-api-properties-table">
-    <tr class="docs-api-properties-header-row">
-      <th class="docs-api-properties-th">Name</th>
-      <th class="docs-api-properties-th">Description</th>
-    </tr>
-    
+  <div class="docs-api-properties-card">
+    <table class="docs-api-properties-table">
+      <tr class="docs-api-properties-header-row">
+        <th class="docs-api-properties-th">Name</th>
+        <th class="docs-api-properties-th">Description</th>
+      </tr>
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>context: C</code>
+      <code>context: <code class="docs-api-property-type">C</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Contextual data to be passed in to the embedded view.</p>
@@ -1043,12 +1127,12 @@ the PortalOutlet when it is performing an <code>attach()</code> or <code>detach(
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>injector: Injector</code>
+      <code>injector: <code class="docs-api-property-type">Injector</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>The injector to use for the embedded view.</p>
@@ -1056,12 +1140,12 @@ the PortalOutlet when it is performing an <code>attach()</code> or <code>detach(
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>isAttached: boolean</code>
+      <code>isAttached: <code class="docs-api-property-type">boolean</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Whether this portal is attached to a host.</p>
@@ -1069,24 +1153,24 @@ the PortalOutlet when it is performing an <code>attach()</code> or <code>detach(
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>origin: ElementRef</code>
+      <code>origin: <code class="docs-api-property-type">ElementRef</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"></td>
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>templateRef: TemplateRef&lt;C&gt;</code>
+      <code>templateRef: <code class="docs-api-property-type">TemplateRef&lt;C&gt;</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>The embedded template that will be used to instantiate an embedded View in the host.</p>
@@ -1094,12 +1178,12 @@ the PortalOutlet when it is performing an <code>attach()</code> or <code>detach(
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>viewContainerRef: ViewContainerRef</code>
+      <code>viewContainerRef: <code class="docs-api-property-type">ViewContainerRef</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Reference to the ViewContainer into which the template will be stamped out.</p>
@@ -1107,121 +1191,137 @@ the PortalOutlet when it is performing an <code>attach()</code> or <code>detach(
 </tr>
 
 
-    
-  </table>
+      
+    </table>
+  </div>
 
 
 <h5 class="docs-api-h5 docs-api-method-header">Methods</h5>
   
     
 
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">attach
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Attach the portal to the provided <code>PortalOutlet</code>.
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell">attach
+          (<span class="docs-api-method-parameter-name">host:
+            </span>
+            <code class="docs-api-method-parameter-type">PortalOutlet</code>, <span class="docs-api-method-parameter-name">context:
+            </span>
+            <code class="docs-api-method-parameter-type">C = this.context</code>): <code class="docs-api-method-returns-type">EmbeddedViewRef&lt;C&gt;</code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Attach the portal to the provided <code>PortalOutlet</code>.
 When a context is provided it will override the <code>context</code> property of the <code>TemplatePortal</code>
 instance.</p>
 
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-parameters-header-row">
-      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+      </td>
+    </tr><thead>
+      <tr class="docs-api-method-parameters-header-row">
+        <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+      </tr>
+    </thead>
+    
+    <tr class="docs-api-method-parameter-row">
+      <td class="docs-api-method-parameter-cell">
+        <p class="docs-api-method-parameter-name">
+          host</p>
+        <code class="docs-api-method-parameter-type">PortalOutlet</code>
+      </td>
+      <td class="docs-api-method-parameter-description-cell">
+        <p class="docs-api-method-parameter-description">
+          
+        </p>
+      </td>
     </tr>
-  </thead>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        host</p>
-      <code class="docs-api-method-parameter-type">PortalOutlet</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        
-      </p>
-    </td>
-  </tr>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        context</p>
-      <code class="docs-api-method-parameter-type">C = this.context</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        
-      </p>
-    </td>
-  </tr>
-  <thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    
+    <tr class="docs-api-method-parameter-row">
+      <td class="docs-api-method-parameter-cell">
+        <p class="docs-api-method-parameter-name">
+          context</p>
+        <code class="docs-api-method-parameter-type">C = this.context</code>
+      </td>
+      <td class="docs-api-method-parameter-description-cell">
+        <p class="docs-api-method-parameter-description">
+          
+        </p>
+      </td>
     </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">EmbeddedViewRef&lt;C&gt;</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        
-      </p>
-    </td>
-  </tr></table>
+    <thead>
+      <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+      </tr>
+    </thead>
+    <tr>
+      <td class="docs-api-method-returns-type-cell">
+        <code class="docs-api-method-returns-type">EmbeddedViewRef&lt;C&gt;</code>
+      </td>
+      <td class="docs-api-method-returns-description-cell">
+        <p class="docs-api-method-returns-description">
+          
+        </p>
+      </td>
+    </tr></table>
+</div>
 
 
   
     
 
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">detach
-      </th>
-    </tr>
-  </thead></table>
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell">detach
+          (): <code class="docs-api-method-returns-type">void</code>
+        </th>
+      </tr>
+    </thead></table>
+</div>
 
 
   
     
 
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">setAttachedHost
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Sets the PortalOutlet reference without performing <code>attach()</code>. This is used directly by
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell">setAttachedHost
+          (<span class="docs-api-method-parameter-name">host:
+            </span>
+            <code class="docs-api-method-parameter-type">PortalOutlet</code>): <code class="docs-api-method-returns-type"></code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Sets the PortalOutlet reference without performing <code>attach()</code>. This is used directly by
 the PortalOutlet when it is performing an <code>attach()</code> or <code>detach()</code>.</p>
 
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-parameters-header-row">
-      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+      </td>
+    </tr><thead>
+      <tr class="docs-api-method-parameters-header-row">
+        <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+      </tr>
+    </thead>
+    
+    <tr class="docs-api-method-parameter-row">
+      <td class="docs-api-method-parameter-cell">
+        <p class="docs-api-method-parameter-name">
+          host</p>
+        <code class="docs-api-method-parameter-type">PortalOutlet</code>
+      </td>
+      <td class="docs-api-method-parameter-description-cell">
+        <p class="docs-api-method-parameter-description">
+          
+        </p>
+      </td>
     </tr>
-  </thead>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        host</p>
-      <code class="docs-api-method-parameter-type">PortalOutlet</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        
-      </p>
-    </td>
-  </tr>
-  </table>
+    </table>
+</div>
 
 
   
@@ -1246,17 +1346,18 @@ the PortalOutlet when it is performing an <code>attach()</code> or <code>detach(
 in the DOM and moved into a portal outlet, when it is attached. On detach, the content
 will be restored to its original position.</p>
 </p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
-  <table class="docs-api-properties-table">
-    <tr class="docs-api-properties-header-row">
-      <th class="docs-api-properties-th">Name</th>
-      <th class="docs-api-properties-th">Description</th>
-    </tr>
-    
+  <div class="docs-api-properties-card">
+    <table class="docs-api-properties-table">
+      <tr class="docs-api-properties-header-row">
+        <th class="docs-api-properties-th">Name</th>
+        <th class="docs-api-properties-th">Description</th>
+      </tr>
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>element: T</code>
+      <code>element: <code class="docs-api-property-type">T</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>DOM node hosting the portal&#39;s content.</p>
@@ -1264,12 +1365,12 @@ will be restored to its original position.</p>
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>isAttached: boolean</code>
+      <code>isAttached: <code class="docs-api-property-type">boolean</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Whether this portal is attached to a host.</p>
@@ -1277,111 +1378,125 @@ will be restored to its original position.</p>
 </tr>
 
 
-    
-  </table>
+      
+    </table>
+  </div>
 
 
 <h5 class="docs-api-h5 docs-api-method-header">Methods</h5>
   
     
 
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">attach
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Attach this portal to a host.</p>
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell">attach
+          (<span class="docs-api-method-parameter-name">host:
+            </span>
+            <code class="docs-api-method-parameter-type">PortalOutlet</code>): <code class="docs-api-method-returns-type">T</code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Attach this portal to a host.</p>
 
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-parameters-header-row">
-      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+      </td>
+    </tr><thead>
+      <tr class="docs-api-method-parameters-header-row">
+        <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+      </tr>
+    </thead>
+    
+    <tr class="docs-api-method-parameter-row">
+      <td class="docs-api-method-parameter-cell">
+        <p class="docs-api-method-parameter-name">
+          host</p>
+        <code class="docs-api-method-parameter-type">PortalOutlet</code>
+      </td>
+      <td class="docs-api-method-parameter-description-cell">
+        <p class="docs-api-method-parameter-description">
+          
+        </p>
+      </td>
     </tr>
-  </thead>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        host</p>
-      <code class="docs-api-method-parameter-type">PortalOutlet</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        
-      </p>
-    </td>
-  </tr>
-  <thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
-    </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">T</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        
-      </p>
-    </td>
-  </tr></table>
+    <thead>
+      <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+      </tr>
+    </thead>
+    <tr>
+      <td class="docs-api-method-returns-type-cell">
+        <code class="docs-api-method-returns-type">T</code>
+      </td>
+      <td class="docs-api-method-returns-description-cell">
+        <p class="docs-api-method-returns-description">
+          
+        </p>
+      </td>
+    </tr></table>
+</div>
 
 
   
     
 
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">detach
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Detach this portal from its host</p>
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell">detach
+          (): <code class="docs-api-method-returns-type">void</code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Detach this portal from its host</p>
 
-    </td>
-  </tr></table>
+      </td>
+    </tr></table>
+</div>
 
 
   
     
 
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">setAttachedHost
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Sets the PortalOutlet reference without performing <code>attach()</code>. This is used directly by
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell">setAttachedHost
+          (<span class="docs-api-method-parameter-name">host:
+            </span>
+            <code class="docs-api-method-parameter-type">PortalOutlet</code>): <code class="docs-api-method-returns-type"></code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Sets the PortalOutlet reference without performing <code>attach()</code>. This is used directly by
 the PortalOutlet when it is performing an <code>attach()</code> or <code>detach()</code>.</p>
 
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-parameters-header-row">
-      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+      </td>
+    </tr><thead>
+      <tr class="docs-api-method-parameters-header-row">
+        <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+      </tr>
+    </thead>
+    
+    <tr class="docs-api-method-parameter-row">
+      <td class="docs-api-method-parameter-cell">
+        <p class="docs-api-method-parameter-name">
+          host</p>
+        <code class="docs-api-method-parameter-type">PortalOutlet</code>
+      </td>
+      <td class="docs-api-method-parameter-description-cell">
+        <p class="docs-api-method-parameter-description">
+          
+        </p>
+      </td>
     </tr>
-  </thead>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        host</p>
-      <code class="docs-api-method-parameter-type">PortalOutlet</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        
-      </p>
-    </td>
-  </tr>
-  </table>
+    </table>
+</div>
 
 
   
@@ -1398,311 +1513,347 @@ the PortalOutlet when it is performing an <code>attach()</code> or <code>detach(
 </h4><p class="docs-api-class-description"><p>Partial implementation of PortalOutlet that handles attaching
 ComponentPortal and TemplatePortal.</p>
 </p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
-  <table class="docs-api-properties-table">
-    <tr class="docs-api-properties-header-row">
-      <th class="docs-api-properties-th">Name</th>
-      <th class="docs-api-properties-th">Description</th>
-    </tr>
-    
+  <div class="docs-api-properties-card">
+    <table class="docs-api-properties-table">
+      <tr class="docs-api-properties-header-row">
+        <th class="docs-api-properties-th">Name</th>
+        <th class="docs-api-properties-th">Description</th>
+      </tr>
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>attachDomPortal: null | ((portal: DomPortal) =&gt; any)</code>
+      <code>attachDomPortal: <code class="docs-api-property-type">null | ((portal: DomPortal) =&gt; any)</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"></td>
 </tr>
 
 
-    
-  </table>
+      
+    </table>
+  </div>
 
 
 <h5 class="docs-api-h5 docs-api-method-header">Methods</h5>
   
     
 
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">attach
-      </th>
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell">attach
+          (<span class="docs-api-method-parameter-name">portal:
+            </span>
+            <code class="docs-api-method-parameter-type">ComponentPortal&lt;T&gt;</code>): <code class="docs-api-method-returns-type">ComponentRef&lt;T&gt;</code>
+        </th>
+      </tr>
+    </thead><thead>
+      <tr class="docs-api-method-parameters-header-row">
+        <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+      </tr>
+    </thead>
+    
+    <tr class="docs-api-method-parameter-row">
+      <td class="docs-api-method-parameter-cell">
+        <p class="docs-api-method-parameter-name">
+          portal</p>
+        <code class="docs-api-method-parameter-type">ComponentPortal&lt;T&gt;</code>
+      </td>
+      <td class="docs-api-method-parameter-description-cell">
+        <p class="docs-api-method-parameter-description">
+          
+        </p>
+      </td>
     </tr>
-  </thead><thead>
-    <tr class="docs-api-method-parameters-header-row">
-      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
-    </tr>
-  </thead>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        portal</p>
-      <code class="docs-api-method-parameter-type">ComponentPortal&lt;T&gt;</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        
-      </p>
-    </td>
-  </tr>
-  <thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
-    </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">ComponentRef&lt;T&gt;</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        
-      </p>
-    </td>
-  </tr></table>
+    <thead>
+      <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+      </tr>
+    </thead>
+    <tr>
+      <td class="docs-api-method-returns-type-cell">
+        <code class="docs-api-method-returns-type">ComponentRef&lt;T&gt;</code>
+      </td>
+      <td class="docs-api-method-returns-description-cell">
+        <p class="docs-api-method-returns-description">
+          
+        </p>
+      </td>
+    </tr></table>
+</div>
 
 
   
     
 
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">attach
-      </th>
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell">attach
+          (<span class="docs-api-method-parameter-name">portal:
+            </span>
+            <code class="docs-api-method-parameter-type">TemplatePortal&lt;T&gt;</code>): <code class="docs-api-method-returns-type">EmbeddedViewRef&lt;T&gt;</code>
+        </th>
+      </tr>
+    </thead><thead>
+      <tr class="docs-api-method-parameters-header-row">
+        <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+      </tr>
+    </thead>
+    
+    <tr class="docs-api-method-parameter-row">
+      <td class="docs-api-method-parameter-cell">
+        <p class="docs-api-method-parameter-name">
+          portal</p>
+        <code class="docs-api-method-parameter-type">TemplatePortal&lt;T&gt;</code>
+      </td>
+      <td class="docs-api-method-parameter-description-cell">
+        <p class="docs-api-method-parameter-description">
+          
+        </p>
+      </td>
     </tr>
-  </thead><thead>
-    <tr class="docs-api-method-parameters-header-row">
-      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
-    </tr>
-  </thead>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        portal</p>
-      <code class="docs-api-method-parameter-type">TemplatePortal&lt;T&gt;</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        
-      </p>
-    </td>
-  </tr>
-  <thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
-    </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">EmbeddedViewRef&lt;T&gt;</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        
-      </p>
-    </td>
-  </tr></table>
+    <thead>
+      <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+      </tr>
+    </thead>
+    <tr>
+      <td class="docs-api-method-returns-type-cell">
+        <code class="docs-api-method-returns-type">EmbeddedViewRef&lt;T&gt;</code>
+      </td>
+      <td class="docs-api-method-returns-description-cell">
+        <p class="docs-api-method-returns-description">
+          
+        </p>
+      </td>
+    </tr></table>
+</div>
 
 
   
     
 
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">attach
-      </th>
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell">attach
+          (<span class="docs-api-method-parameter-name">portal:
+            </span>
+            <code class="docs-api-method-parameter-type">any</code>): <code class="docs-api-method-returns-type">any</code>
+        </th>
+      </tr>
+    </thead><thead>
+      <tr class="docs-api-method-parameters-header-row">
+        <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+      </tr>
+    </thead>
+    
+    <tr class="docs-api-method-parameter-row">
+      <td class="docs-api-method-parameter-cell">
+        <p class="docs-api-method-parameter-name">
+          portal</p>
+        <code class="docs-api-method-parameter-type">any</code>
+      </td>
+      <td class="docs-api-method-parameter-description-cell">
+        <p class="docs-api-method-parameter-description">
+          
+        </p>
+      </td>
     </tr>
-  </thead><thead>
-    <tr class="docs-api-method-parameters-header-row">
-      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
-    </tr>
-  </thead>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        portal</p>
-      <code class="docs-api-method-parameter-type">any</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        
-      </p>
-    </td>
-  </tr>
-  <thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
-    </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">any</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        
-      </p>
-    </td>
-  </tr></table>
+    <thead>
+      <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+      </tr>
+    </thead>
+    <tr>
+      <td class="docs-api-method-returns-type-cell">
+        <code class="docs-api-method-returns-type">any</code>
+      </td>
+      <td class="docs-api-method-returns-description-cell">
+        <p class="docs-api-method-returns-description">
+          
+        </p>
+      </td>
+    </tr></table>
+</div>
 
 
   
     
 
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">attachComponentPortal
-      </th>
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell">attachComponentPortal
+          (<span class="docs-api-method-parameter-name">portal:
+            </span>
+            <code class="docs-api-method-parameter-type">ComponentPortal&lt;T&gt;</code>): <code class="docs-api-method-returns-type">ComponentRef&lt;T&gt;</code>
+        </th>
+      </tr>
+    </thead><thead>
+      <tr class="docs-api-method-parameters-header-row">
+        <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+      </tr>
+    </thead>
+    
+    <tr class="docs-api-method-parameter-row">
+      <td class="docs-api-method-parameter-cell">
+        <p class="docs-api-method-parameter-name">
+          portal</p>
+        <code class="docs-api-method-parameter-type">ComponentPortal&lt;T&gt;</code>
+      </td>
+      <td class="docs-api-method-parameter-description-cell">
+        <p class="docs-api-method-parameter-description">
+          
+        </p>
+      </td>
     </tr>
-  </thead><thead>
-    <tr class="docs-api-method-parameters-header-row">
-      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
-    </tr>
-  </thead>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        portal</p>
-      <code class="docs-api-method-parameter-type">ComponentPortal&lt;T&gt;</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        
-      </p>
-    </td>
-  </tr>
-  <thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
-    </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">ComponentRef&lt;T&gt;</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        
-      </p>
-    </td>
-  </tr></table>
+    <thead>
+      <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+      </tr>
+    </thead>
+    <tr>
+      <td class="docs-api-method-returns-type-cell">
+        <code class="docs-api-method-returns-type">ComponentRef&lt;T&gt;</code>
+      </td>
+      <td class="docs-api-method-returns-description-cell">
+        <p class="docs-api-method-returns-description">
+          
+        </p>
+      </td>
+    </tr></table>
+</div>
 
 
   
     
 
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">attachTemplatePortal
-      </th>
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell">attachTemplatePortal
+          (<span class="docs-api-method-parameter-name">portal:
+            </span>
+            <code class="docs-api-method-parameter-type">TemplatePortal&lt;C&gt;</code>): <code class="docs-api-method-returns-type">EmbeddedViewRef&lt;C&gt;</code>
+        </th>
+      </tr>
+    </thead><thead>
+      <tr class="docs-api-method-parameters-header-row">
+        <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+      </tr>
+    </thead>
+    
+    <tr class="docs-api-method-parameter-row">
+      <td class="docs-api-method-parameter-cell">
+        <p class="docs-api-method-parameter-name">
+          portal</p>
+        <code class="docs-api-method-parameter-type">TemplatePortal&lt;C&gt;</code>
+      </td>
+      <td class="docs-api-method-parameter-description-cell">
+        <p class="docs-api-method-parameter-description">
+          
+        </p>
+      </td>
     </tr>
-  </thead><thead>
-    <tr class="docs-api-method-parameters-header-row">
-      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
-    </tr>
-  </thead>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        portal</p>
-      <code class="docs-api-method-parameter-type">TemplatePortal&lt;C&gt;</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        
-      </p>
-    </td>
-  </tr>
-  <thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
-    </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">EmbeddedViewRef&lt;C&gt;</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        
-      </p>
-    </td>
-  </tr></table>
+    <thead>
+      <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+      </tr>
+    </thead>
+    <tr>
+      <td class="docs-api-method-returns-type-cell">
+        <code class="docs-api-method-returns-type">EmbeddedViewRef&lt;C&gt;</code>
+      </td>
+      <td class="docs-api-method-returns-description-cell">
+        <p class="docs-api-method-returns-description">
+          
+        </p>
+      </td>
+    </tr></table>
+</div>
 
 
   
     
 
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">detach
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Detaches a previously attached portal.</p>
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell">detach
+          (): <code class="docs-api-method-returns-type">void</code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Detaches a previously attached portal.</p>
 
-    </td>
-  </tr></table>
-
-
-  
-    
-
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">dispose
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Permanently dispose of this portal host.</p>
-
-    </td>
-  </tr></table>
+      </td>
+    </tr></table>
+</div>
 
 
   
     
 
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">hasAttached
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Whether this host has an attached portal.</p>
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell">dispose
+          (): <code class="docs-api-method-returns-type">void</code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Permanently dispose of this portal host.</p>
 
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
-    </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">boolean</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        
-      </p>
-    </td>
-  </tr></table>
+      </td>
+    </tr></table>
+</div>
+
+
+  
+    
+
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell">hasAttached
+          (): <code class="docs-api-method-returns-type">boolean</code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Whether this host has an attached portal.</p>
+
+      </td>
+    </tr><thead>
+      <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+      </tr>
+    </thead>
+    <tr>
+      <td class="docs-api-method-returns-type-cell">
+        <code class="docs-api-method-returns-type">boolean</code>
+      </td>
+      <td class="docs-api-method-returns-description-cell">
+        <p class="docs-api-method-returns-description">
+          
+        </p>
+      </td>
+    </tr></table>
+</div>
 
 
   
@@ -1726,17 +1877,18 @@ ComponentPortal and TemplatePortal.</p>
 </h4><p class="docs-api-class-description"><p>A PortalOutlet for attaching portals to an arbitrary DOM element outside of the Angular
 application context.</p>
 </p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
-  <table class="docs-api-properties-table">
-    <tr class="docs-api-properties-header-row">
-      <th class="docs-api-properties-th">Name</th>
-      <th class="docs-api-properties-th">Description</th>
-    </tr>
-    
+  <div class="docs-api-properties-card">
+    <table class="docs-api-properties-table">
+      <tr class="docs-api-properties-header-row">
+        <th class="docs-api-properties-th">Name</th>
+        <th class="docs-api-properties-th">Description</th>
+      </tr>
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>outletElement: Element</code>
+      <code>outletElement: <code class="docs-api-property-type">Element</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Element into which the content is projected.</p>
@@ -1744,15 +1896,15 @@ application context.</p>
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><div class="docs-api-deprecated-marker" deprecated-message="To be turned into a method. Will be removed in v10.0.0 or later."
   >
         Deprecated
       </div><p class="docs-api-property-name">
-      <code>attachDomPortal: (portal: DomPortal) =&gt; {
+      <code>attachDomPortal: <code class="docs-api-property-type">(portal: DomPortal) =&gt; {
     const element = portal.element;
     if (!element.parentNode &amp;&amp; (typeof ngDevMode === &#39;undefined&#39; || ngDevMode)) {
         throw Error(&#39;DOM portal content must be attached to a parent node.&#39;);
@@ -1766,7 +1918,7 @@ application context.</p>
             anchorNode.parentNode.replaceChild(element, anchorNode);
         }
     });
-}</code>
+}</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Attaches a DOM portal by transferring its content into the outlet.</p>
@@ -1774,308 +1926,343 @@ application context.</p>
 </tr>
 
 
-    
-  </table>
+      
+    </table>
+  </div>
 
 
 <h5 class="docs-api-h5 docs-api-method-header">Methods</h5>
   
     
 
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">attach
-      </th>
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell">attach
+          (<span class="docs-api-method-parameter-name">portal:
+            </span>
+            <code class="docs-api-method-parameter-type">ComponentPortal&lt;T&gt;</code>): <code class="docs-api-method-returns-type">ComponentRef&lt;T&gt;</code>
+        </th>
+      </tr>
+    </thead><thead>
+      <tr class="docs-api-method-parameters-header-row">
+        <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+      </tr>
+    </thead>
+    
+    <tr class="docs-api-method-parameter-row">
+      <td class="docs-api-method-parameter-cell">
+        <p class="docs-api-method-parameter-name">
+          portal</p>
+        <code class="docs-api-method-parameter-type">ComponentPortal&lt;T&gt;</code>
+      </td>
+      <td class="docs-api-method-parameter-description-cell">
+        <p class="docs-api-method-parameter-description">
+          
+        </p>
+      </td>
     </tr>
-  </thead><thead>
-    <tr class="docs-api-method-parameters-header-row">
-      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
-    </tr>
-  </thead>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        portal</p>
-      <code class="docs-api-method-parameter-type">ComponentPortal&lt;T&gt;</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        
-      </p>
-    </td>
-  </tr>
-  <thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
-    </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">ComponentRef&lt;T&gt;</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        
-      </p>
-    </td>
-  </tr></table>
+    <thead>
+      <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+      </tr>
+    </thead>
+    <tr>
+      <td class="docs-api-method-returns-type-cell">
+        <code class="docs-api-method-returns-type">ComponentRef&lt;T&gt;</code>
+      </td>
+      <td class="docs-api-method-returns-description-cell">
+        <p class="docs-api-method-returns-description">
+          
+        </p>
+      </td>
+    </tr></table>
+</div>
 
 
   
     
 
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">attach
-      </th>
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell">attach
+          (<span class="docs-api-method-parameter-name">portal:
+            </span>
+            <code class="docs-api-method-parameter-type">TemplatePortal&lt;T&gt;</code>): <code class="docs-api-method-returns-type">EmbeddedViewRef&lt;T&gt;</code>
+        </th>
+      </tr>
+    </thead><thead>
+      <tr class="docs-api-method-parameters-header-row">
+        <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+      </tr>
+    </thead>
+    
+    <tr class="docs-api-method-parameter-row">
+      <td class="docs-api-method-parameter-cell">
+        <p class="docs-api-method-parameter-name">
+          portal</p>
+        <code class="docs-api-method-parameter-type">TemplatePortal&lt;T&gt;</code>
+      </td>
+      <td class="docs-api-method-parameter-description-cell">
+        <p class="docs-api-method-parameter-description">
+          
+        </p>
+      </td>
     </tr>
-  </thead><thead>
-    <tr class="docs-api-method-parameters-header-row">
-      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
-    </tr>
-  </thead>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        portal</p>
-      <code class="docs-api-method-parameter-type">TemplatePortal&lt;T&gt;</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        
-      </p>
-    </td>
-  </tr>
-  <thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
-    </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">EmbeddedViewRef&lt;T&gt;</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        
-      </p>
-    </td>
-  </tr></table>
+    <thead>
+      <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+      </tr>
+    </thead>
+    <tr>
+      <td class="docs-api-method-returns-type-cell">
+        <code class="docs-api-method-returns-type">EmbeddedViewRef&lt;T&gt;</code>
+      </td>
+      <td class="docs-api-method-returns-description-cell">
+        <p class="docs-api-method-returns-description">
+          
+        </p>
+      </td>
+    </tr></table>
+</div>
 
 
   
     
 
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">attach
-      </th>
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell">attach
+          (<span class="docs-api-method-parameter-name">portal:
+            </span>
+            <code class="docs-api-method-parameter-type">any</code>): <code class="docs-api-method-returns-type">any</code>
+        </th>
+      </tr>
+    </thead><thead>
+      <tr class="docs-api-method-parameters-header-row">
+        <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+      </tr>
+    </thead>
+    
+    <tr class="docs-api-method-parameter-row">
+      <td class="docs-api-method-parameter-cell">
+        <p class="docs-api-method-parameter-name">
+          portal</p>
+        <code class="docs-api-method-parameter-type">any</code>
+      </td>
+      <td class="docs-api-method-parameter-description-cell">
+        <p class="docs-api-method-parameter-description">
+          
+        </p>
+      </td>
     </tr>
-  </thead><thead>
-    <tr class="docs-api-method-parameters-header-row">
-      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
-    </tr>
-  </thead>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        portal</p>
-      <code class="docs-api-method-parameter-type">any</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        
-      </p>
-    </td>
-  </tr>
-  <thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
-    </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">any</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        
-      </p>
-    </td>
-  </tr></table>
+    <thead>
+      <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+      </tr>
+    </thead>
+    <tr>
+      <td class="docs-api-method-returns-type-cell">
+        <code class="docs-api-method-returns-type">any</code>
+      </td>
+      <td class="docs-api-method-returns-description-cell">
+        <p class="docs-api-method-returns-description">
+          
+        </p>
+      </td>
+    </tr></table>
+</div>
 
 
   
     
 
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">attachComponentPortal
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Attach the given ComponentPortal to DOM element.</p>
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell">attachComponentPortal
+          (<span class="docs-api-method-parameter-name">portal:
+            </span>
+            <code class="docs-api-method-parameter-type">ComponentPortal&lt;T&gt;</code>): <code class="docs-api-method-returns-type">ComponentRef&lt;T&gt;</code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Attach the given ComponentPortal to DOM element.</p>
 
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-parameters-header-row">
-      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
-    </tr>
-  </thead>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        portal</p>
-      <code class="docs-api-method-parameter-type">ComponentPortal&lt;T&gt;</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        <p>Portal to be attached</p>
+      </td>
+    </tr><thead>
+      <tr class="docs-api-method-parameters-header-row">
+        <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+      </tr>
+    </thead>
+    
+    <tr class="docs-api-method-parameter-row">
+      <td class="docs-api-method-parameter-cell">
+        <p class="docs-api-method-parameter-name">
+          portal</p>
+        <code class="docs-api-method-parameter-type">ComponentPortal&lt;T&gt;</code>
+      </td>
+      <td class="docs-api-method-parameter-description-cell">
+        <p class="docs-api-method-parameter-description">
+          <p>Portal to be attached</p>
 
-      </p>
-    </td>
-  </tr>
-  <thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+        </p>
+      </td>
     </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">ComponentRef&lt;T&gt;</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        <p>Reference to the created component.</p>
+    <thead>
+      <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+      </tr>
+    </thead>
+    <tr>
+      <td class="docs-api-method-returns-type-cell">
+        <code class="docs-api-method-returns-type">ComponentRef&lt;T&gt;</code>
+      </td>
+      <td class="docs-api-method-returns-description-cell">
+        <p class="docs-api-method-returns-description">
+          <p>Reference to the created component.</p>
 
-      </p>
-    </td>
-  </tr></table>
+        </p>
+      </td>
+    </tr></table>
+</div>
 
 
   
     
 
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">attachTemplatePortal
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Attaches a template portal to the DOM as an embedded view.</p>
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell">attachTemplatePortal
+          (<span class="docs-api-method-parameter-name">portal:
+            </span>
+            <code class="docs-api-method-parameter-type">TemplatePortal&lt;C&gt;</code>): <code class="docs-api-method-returns-type">EmbeddedViewRef&lt;C&gt;</code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Attaches a template portal to the DOM as an embedded view.</p>
 
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-parameters-header-row">
-      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
-    </tr>
-  </thead>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        portal</p>
-      <code class="docs-api-method-parameter-type">TemplatePortal&lt;C&gt;</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        <p>Portal to be attached.</p>
+      </td>
+    </tr><thead>
+      <tr class="docs-api-method-parameters-header-row">
+        <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+      </tr>
+    </thead>
+    
+    <tr class="docs-api-method-parameter-row">
+      <td class="docs-api-method-parameter-cell">
+        <p class="docs-api-method-parameter-name">
+          portal</p>
+        <code class="docs-api-method-parameter-type">TemplatePortal&lt;C&gt;</code>
+      </td>
+      <td class="docs-api-method-parameter-description-cell">
+        <p class="docs-api-method-parameter-description">
+          <p>Portal to be attached.</p>
 
-      </p>
-    </td>
-  </tr>
-  <thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+        </p>
+      </td>
     </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">EmbeddedViewRef&lt;C&gt;</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        <p>Reference to the created embedded view.</p>
+    <thead>
+      <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+      </tr>
+    </thead>
+    <tr>
+      <td class="docs-api-method-returns-type-cell">
+        <code class="docs-api-method-returns-type">EmbeddedViewRef&lt;C&gt;</code>
+      </td>
+      <td class="docs-api-method-returns-description-cell">
+        <p class="docs-api-method-returns-description">
+          <p>Reference to the created embedded view.</p>
 
-      </p>
-    </td>
-  </tr></table>
+        </p>
+      </td>
+    </tr></table>
+</div>
 
 
   
     
 
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">detach
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Detaches a previously attached portal.</p>
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell">detach
+          (): <code class="docs-api-method-returns-type">void</code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Detaches a previously attached portal.</p>
 
-    </td>
-  </tr></table>
-
-
-  
-    
-
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">dispose
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Clears out a portal from the DOM.</p>
-
-    </td>
-  </tr></table>
+      </td>
+    </tr></table>
+</div>
 
 
   
     
 
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">hasAttached
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Whether this host has an attached portal.</p>
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell">dispose
+          (): <code class="docs-api-method-returns-type">void</code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Clears out a portal from the DOM.</p>
 
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
-    </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">boolean</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        
-      </p>
-    </td>
-  </tr></table>
+      </td>
+    </tr></table>
+</div>
+
+
+  
+    
+
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell">hasAttached
+          (): <code class="docs-api-method-returns-type">boolean</code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Whether this host has an attached portal.</p>
+
+      </td>
+    </tr><thead>
+      <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+      </tr>
+    </thead>
+    <tr>
+      <td class="docs-api-method-returns-type-cell">
+        <code class="docs-api-method-returns-type">boolean</code>
+      </td>
+      <td class="docs-api-method-returns-description-cell">
+        <p class="docs-api-method-returns-description">
+          
+        </p>
+      </td>
+    </tr></table>
+</div>
 
 
   
@@ -2100,45 +2287,50 @@ application context.</p>
   
     
 
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">new 
-      </th>
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell">new 
+          (<span class="docs-api-method-parameter-name">...args:
+            </span>
+            <code class="docs-api-method-parameter-type">any[]</code>): <code class="docs-api-method-returns-type">T</code>
+        </th>
+      </tr>
+    </thead><thead>
+      <tr class="docs-api-method-parameters-header-row">
+        <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+      </tr>
+    </thead>
+    
+    <tr class="docs-api-method-parameter-row">
+      <td class="docs-api-method-parameter-cell">
+        <p class="docs-api-method-parameter-name">
+          ...args</p>
+        <code class="docs-api-method-parameter-type">any[]</code>
+      </td>
+      <td class="docs-api-method-parameter-description-cell">
+        <p class="docs-api-method-parameter-description">
+          
+        </p>
+      </td>
     </tr>
-  </thead><thead>
-    <tr class="docs-api-method-parameters-header-row">
-      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
-    </tr>
-  </thead>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        ...args</p>
-      <code class="docs-api-method-parameter-type">any[]</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        
-      </p>
-    </td>
-  </tr>
-  <thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
-    </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">T</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        
-      </p>
-    </td>
-  </tr></table>
+    <thead>
+      <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+      </tr>
+    </thead>
+    <tr>
+      <td class="docs-api-method-returns-type-cell">
+        <code class="docs-api-method-returns-type">T</code>
+      </td>
+      <td class="docs-api-method-returns-description-cell">
+        <p class="docs-api-method-returns-description">
+          
+        </p>
+      </td>
+    </tr></table>
+</div>
 
 
   
@@ -2159,129 +2351,143 @@ application context.</p>
   
     
 
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">attach
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Attaches a portal to this outlet.</p>
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell">attach
+          (<span class="docs-api-method-parameter-name">portal:
+            </span>
+            <code class="docs-api-method-parameter-type">Portal&lt;any&gt;</code>): <code class="docs-api-method-returns-type">any</code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Attaches a portal to this outlet.</p>
 
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-parameters-header-row">
-      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+      </td>
+    </tr><thead>
+      <tr class="docs-api-method-parameters-header-row">
+        <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+      </tr>
+    </thead>
+    
+    <tr class="docs-api-method-parameter-row">
+      <td class="docs-api-method-parameter-cell">
+        <p class="docs-api-method-parameter-name">
+          portal</p>
+        <code class="docs-api-method-parameter-type">Portal&lt;any&gt;</code>
+      </td>
+      <td class="docs-api-method-parameter-description-cell">
+        <p class="docs-api-method-parameter-description">
+          
+        </p>
+      </td>
     </tr>
-  </thead>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        portal</p>
-      <code class="docs-api-method-parameter-type">Portal&lt;any&gt;</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        
-      </p>
-    </td>
-  </tr>
-  <thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
-    </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">any</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        
-      </p>
-    </td>
-  </tr></table>
+    <thead>
+      <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+      </tr>
+    </thead>
+    <tr>
+      <td class="docs-api-method-returns-type-cell">
+        <code class="docs-api-method-returns-type">any</code>
+      </td>
+      <td class="docs-api-method-returns-description-cell">
+        <p class="docs-api-method-returns-description">
+          
+        </p>
+      </td>
+    </tr></table>
+</div>
 
 
   
     
 
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">detach
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Detaches the currently attached portal from this outlet.</p>
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell">detach
+          (): <code class="docs-api-method-returns-type">any</code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Detaches the currently attached portal from this outlet.</p>
 
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
-    </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">any</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        
-      </p>
-    </td>
-  </tr></table>
-
-
-  
-    
-
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">dispose
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Performs cleanup before the outlet is destroyed.</p>
-
-    </td>
-  </tr></table>
+      </td>
+    </tr><thead>
+      <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+      </tr>
+    </thead>
+    <tr>
+      <td class="docs-api-method-returns-type-cell">
+        <code class="docs-api-method-returns-type">any</code>
+      </td>
+      <td class="docs-api-method-returns-description-cell">
+        <p class="docs-api-method-returns-description">
+          
+        </p>
+      </td>
+    </tr></table>
+</div>
 
 
   
     
 
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">hasAttached
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Whether there is currently a portal attached to this outlet.</p>
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell">dispose
+          (): <code class="docs-api-method-returns-type">void</code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Performs cleanup before the outlet is destroyed.</p>
 
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
-    </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">boolean</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        
-      </p>
-    </td>
-  </tr></table>
+      </td>
+    </tr></table>
+</div>
+
+
+  
+    
+
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell">hasAttached
+          (): <code class="docs-api-method-returns-type">boolean</code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Whether there is currently a portal attached to this outlet.</p>
+
+      </td>
+    </tr><thead>
+      <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+      </tr>
+    </thead>
+    <tr>
+      <td class="docs-api-method-returns-type-cell">
+        <code class="docs-api-method-returns-type">boolean</code>
+      </td>
+      <td class="docs-api-method-returns-description-cell">
+        <p class="docs-api-method-returns-description">
+          
+        </p>
+      </td>
+    </tr></table>
+</div>
 
 
   
