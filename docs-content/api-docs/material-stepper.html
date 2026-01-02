@@ -40,17 +40,18 @@
   
 </h4><p class="docs-api-class-description"><p>Stepper data that is required for internationalization.</p>
 </p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
-  <table class="docs-api-properties-table">
-    <tr class="docs-api-properties-header-row">
-      <th class="docs-api-properties-th">Name</th>
-      <th class="docs-api-properties-th">Description</th>
-    </tr>
-    
+  <div class="docs-api-properties-card">
+    <table class="docs-api-properties-table">
+      <tr class="docs-api-properties-header-row">
+        <th class="docs-api-properties-th">Name</th>
+        <th class="docs-api-properties-th">Description</th>
+      </tr>
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>changes: Subject&lt;void&gt;</code>
+      <code>changes: <code class="docs-api-property-type">Subject&lt;void&gt;</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Stream that emits whenever the labels here are changed. Use this to notify
@@ -59,12 +60,12 @@ components if the labels have changed after initialization.</p>
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>completedLabel: string</code>
+      <code>completedLabel: <code class="docs-api-property-type">string</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Label that is used to indicate step as completed to screen readers.</p>
@@ -72,12 +73,12 @@ components if the labels have changed after initialization.</p>
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>editableLabel: string</code>
+      <code>editableLabel: <code class="docs-api-property-type">string</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Label that is used to indicate step as editable to screen readers.</p>
@@ -85,12 +86,12 @@ components if the labels have changed after initialization.</p>
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>optionalLabel: string</code>
+      <code>optionalLabel: <code class="docs-api-property-type">string</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Label that is rendered below optional steps.</p>
@@ -98,8 +99,9 @@ components if the labels have changed after initialization.</p>
 </tr>
 
 
-    
-  </table>
+      
+    </table>
+  </div>
 
 
 
@@ -131,18 +133,19 @@ components if the labels have changed after initialization.</p>
   
 </p><span class="docs-api-class-export-label">Exported as:</span>
 <span class="docs-api-class-export-name">matStep</span><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
-  <table class="docs-api-properties-table">
-    <tr class="docs-api-properties-header-row">
-      <th class="docs-api-properties-th">Name</th>
-      <th class="docs-api-properties-th">Description</th>
-    </tr>
-    
+  <div class="docs-api-properties-card">
+    <table class="docs-api-properties-table">
+      <tr class="docs-api-properties-header-row">
+        <th class="docs-api-properties-th">Name</th>
+        <th class="docs-api-properties-th">Description</th>
+      </tr>
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">&#39;aria-label&#39;</span>)
         </div><p class="docs-api-property-name">
-      <code>ariaLabel: string</code>
+      <code>ariaLabel: <code class="docs-api-property-type">string</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Aria label for the tab.</p>
@@ -150,13 +153,13 @@ components if the labels have changed after initialization.</p>
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">&#39;aria-labelledby&#39;</span>)
         </div><p class="docs-api-property-name">
-      <code>ariaLabelledby: string</code>
+      <code>ariaLabelledby: <code class="docs-api-property-type">string</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Reference to the element that the tab is labelled by.
@@ -165,13 +168,13 @@ Will be cleared if <code>aria-label</code> is set at the same time.</p>
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
           @Input()</div><p class="docs-api-property-name">
-      <code>color: ThemePalette</code>
+      <code>color: <code class="docs-api-property-type">ThemePalette</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Theme color for the particular step. This API is supported in M2 themes
@@ -182,13 +185,13 @@ only, it has no effect in M3 themes. For color customization in M3, see <a href=
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">{ transform: booleanAttribute }</span>)
         </div><p class="docs-api-property-name">
-      <code>completed: boolean</code>
+      <code>completed: <code class="docs-api-property-type">boolean</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Whether step is marked as completed.</p>
@@ -196,13 +199,13 @@ only, it has no effect in M3 themes. For color customization in M3, see <a href=
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">{ transform: booleanAttribute }</span>)
         </div><p class="docs-api-property-name">
-      <code>editable: boolean</code>
+      <code>editable: <code class="docs-api-property-type">boolean</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Whether the user can return to this step once it has been marked as completed.</p>
@@ -210,13 +213,13 @@ only, it has no effect in M3 themes. For color customization in M3, see <a href=
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
           @Input()</div><p class="docs-api-property-name">
-      <code>errorMessage: string</code>
+      <code>errorMessage: <code class="docs-api-property-type">string</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Error message to display when there&#39;s an error.</p>
@@ -224,13 +227,13 @@ only, it has no effect in M3 themes. For color customization in M3, see <a href=
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">{ transform: booleanAttribute }</span>)
         </div><p class="docs-api-property-name">
-      <code>hasError: boolean</code>
+      <code>hasError: <code class="docs-api-property-type">boolean</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Whether step has an error.</p>
@@ -238,13 +241,13 @@ only, it has no effect in M3 themes. For color customization in M3, see <a href=
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
           @Input()</div><p class="docs-api-property-name">
-      <code>label: string</code>
+      <code>label: <code class="docs-api-property-type">string</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Plain text label of the step.</p>
@@ -252,13 +255,13 @@ only, it has no effect in M3 themes. For color customization in M3, see <a href=
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">{ transform: booleanAttribute }</span>)
         </div><p class="docs-api-property-name">
-      <code>optional: boolean</code>
+      <code>optional: <code class="docs-api-property-type">boolean</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Whether the completion of step is optional.</p>
@@ -266,13 +269,13 @@ only, it has no effect in M3 themes. For color customization in M3, see <a href=
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
           @Input()</div><p class="docs-api-property-name">
-      <code>state: StepState</code>
+      <code>state: <code class="docs-api-property-type">StepState</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>State of the step.</p>
@@ -280,13 +283,13 @@ only, it has no effect in M3 themes. For color customization in M3, see <a href=
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
           @Input()</div><p class="docs-api-property-name">
-      <code>stepControl: AbstractControl</code>
+      <code>stepControl: <code class="docs-api-property-type">AbstractControl</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>The top level abstract control of the step.</p>
@@ -294,13 +297,13 @@ only, it has no effect in M3 themes. For color customization in M3, see <a href=
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><div class="docs-api-output-marker">@Output(<span class="docs-api-output-alias">&#39;interacted&#39;</span>)
         </div><p class="docs-api-property-name">
-      <code>interactedStream: EventEmitter&lt;CdkStep&gt;</code>
+      <code>interactedStream: <code class="docs-api-property-type">EventEmitter&lt;CdkStep&gt;</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Emits when the user has attempted to move away from the step.</p>
@@ -308,12 +311,12 @@ only, it has no effect in M3 themes. For color customization in M3, see <a href=
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>content: TemplateRef&lt;any&gt;</code>
+      <code>content: <code class="docs-api-property-type">TemplateRef&lt;any&gt;</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Template for step content.</p>
@@ -321,12 +324,12 @@ only, it has no effect in M3 themes. For color customization in M3, see <a href=
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>index: signal(-1)</code>
+      <code>index: <code class="docs-api-property-type">signal(-1)</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Current index of the step within the stepper.</p>
@@ -334,12 +337,12 @@ only, it has no effect in M3 themes. For color customization in M3, see <a href=
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>indicatorType: computed&lt;StepState&gt;(() =&gt; {
+      <code>indicatorType: <code class="docs-api-property-type">computed&lt;StepState&gt;(() =&gt; {
     const selected = this.isSelected();
     const completed = this.completed;
     const defaultState = this._state() ?? STEP_STATE.NUMBER;
@@ -362,7 +365,7 @@ only, it has no effect in M3 themes. For color customization in M3, see <a href=
         }
         return editable &amp;&amp; selected ? STEP_STATE.EDIT : defaultState;
     }
-})</code>
+})</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Type of indicator that should be shown for the step.</p>
@@ -370,12 +373,12 @@ only, it has no effect in M3 themes. For color customization in M3, see <a href=
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>interacted: boolean</code>
+      <code>interacted: <code class="docs-api-property-type">boolean</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Whether user has attempted to move away from the step.</p>
@@ -383,16 +386,16 @@ only, it has no effect in M3 themes. For color customization in M3, see <a href=
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>isNavigable: computed&lt;boolean&gt;(() =&gt; {
+      <code>isNavigable: <code class="docs-api-property-type">computed&lt;boolean&gt;(() =&gt; {
     const isSelected = this.isSelected();
     const isCompleted = this.completed;
     return isCompleted || isSelected || !this._stepper.linear;
-})</code>
+})</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Whether the user can navigate to the step.</p>
@@ -400,12 +403,12 @@ only, it has no effect in M3 themes. For color customization in M3, see <a href=
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>isSelected: computed&lt;boolean&gt;(() =&gt; this._stepper.selectedIndex === this.index())</code>
+      <code>isSelected: <code class="docs-api-property-type">computed&lt;boolean&gt;(() =&gt; this._stepper.selectedIndex === this.index())</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Whether the step is selected.</p>
@@ -413,12 +416,12 @@ only, it has no effect in M3 themes. For color customization in M3, see <a href=
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>stepLabel: MatStepLabel</code>
+      <code>stepLabel: <code class="docs-api-property-type">MatStepLabel</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Content for step label given by <code>&lt;ng-template matStepLabel&gt;</code>.</p>
@@ -426,105 +429,119 @@ only, it has no effect in M3 themes. For color customization in M3, see <a href=
 </tr>
 
 
-    
-  </table>
+      
+    </table>
+  </div>
 
 
 <h5 class="docs-api-h5 docs-api-method-header">Methods</h5>
   
     
 
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">isErrorState
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Custom error state matcher that additionally checks for validity of interacted form.</p>
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell">isErrorState
+          (<span class="docs-api-method-parameter-name">control:
+            </span>
+            <code class="docs-api-method-parameter-type">AbstractControl&lt;any, any, any&gt;</code>, <span class="docs-api-method-parameter-name">form:
+            </span>
+            <code class="docs-api-method-parameter-type">FormGroupDirective | NgForm</code>): <code class="docs-api-method-returns-type">boolean</code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Custom error state matcher that additionally checks for validity of interacted form.</p>
 
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-parameters-header-row">
-      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+      </td>
+    </tr><thead>
+      <tr class="docs-api-method-parameters-header-row">
+        <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+      </tr>
+    </thead>
+    
+    <tr class="docs-api-method-parameter-row">
+      <td class="docs-api-method-parameter-cell">
+        <p class="docs-api-method-parameter-name">
+          control</p>
+        <code class="docs-api-method-parameter-type">AbstractControl&lt;any, any, any&gt;</code>
+      </td>
+      <td class="docs-api-method-parameter-description-cell">
+        <p class="docs-api-method-parameter-description">
+          
+        </p>
+      </td>
     </tr>
-  </thead>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        control</p>
-      <code class="docs-api-method-parameter-type">AbstractControl&lt;any, any, any&gt;</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        
-      </p>
-    </td>
-  </tr>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        form</p>
-      <code class="docs-api-method-parameter-type">FormGroupDirective | NgForm</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        
-      </p>
-    </td>
-  </tr>
-  <thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    
+    <tr class="docs-api-method-parameter-row">
+      <td class="docs-api-method-parameter-cell">
+        <p class="docs-api-method-parameter-name">
+          form</p>
+        <code class="docs-api-method-parameter-type">FormGroupDirective | NgForm</code>
+      </td>
+      <td class="docs-api-method-parameter-description-cell">
+        <p class="docs-api-method-parameter-description">
+          
+        </p>
+      </td>
     </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">boolean</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        
-      </p>
-    </td>
-  </tr></table>
+    <thead>
+      <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+      </tr>
+    </thead>
+    <tr>
+      <td class="docs-api-method-returns-type-cell">
+        <code class="docs-api-method-returns-type">boolean</code>
+      </td>
+      <td class="docs-api-method-returns-description-cell">
+        <p class="docs-api-method-returns-description">
+          
+        </p>
+      </td>
+    </tr></table>
+</div>
 
 
   
     
 
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">reset
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Resets the step to its initial state. Note that this includes resetting form data.</p>
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell">reset
+          (): <code class="docs-api-method-returns-type">void</code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Resets the step to its initial state. Note that this includes resetting form data.</p>
 
-    </td>
-  </tr></table>
+      </td>
+    </tr></table>
+</div>
 
 
   
     
 
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">select
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Selects this step component.</p>
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell">select
+          (): <code class="docs-api-method-returns-type">void</code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Selects this step component.</p>
 
-    </td>
-  </tr></table>
+      </td>
+    </tr></table>
+</div>
 
 
   
@@ -558,18 +575,19 @@ only, it has no effect in M3 themes. For color customization in M3, see <a href=
   
 </p><span class="docs-api-class-export-label">Exported as:</span>
 <span class="docs-api-class-export-name">matStepper, matVerticalStepper, matHorizontalStepper</span><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
-  <table class="docs-api-properties-table">
-    <tr class="docs-api-properties-header-row">
-      <th class="docs-api-properties-th">Name</th>
-      <th class="docs-api-properties-th">Description</th>
-    </tr>
-    
+  <div class="docs-api-properties-card">
+    <table class="docs-api-properties-table">
+      <tr class="docs-api-properties-header-row">
+        <th class="docs-api-properties-th">Name</th>
+        <th class="docs-api-properties-th">Description</th>
+      </tr>
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
           @Input()</div><p class="docs-api-property-name">
-      <code>animationDuration: string</code>
+      <code>animationDuration: <code class="docs-api-property-type">string</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Duration for the animation. Will be normalized to milliseconds if no units are set.</p>
@@ -577,13 +595,13 @@ only, it has no effect in M3 themes. For color customization in M3, see <a href=
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
           @Input()</div><p class="docs-api-property-name">
-      <code>color: ThemePalette</code>
+      <code>color: <code class="docs-api-property-type">ThemePalette</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Theme color for all of the steps in stepper. This API is supported in M2
@@ -594,13 +612,13 @@ themes only, it has no effect in M3 themes. For color customization in M3, see <
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
           @Input()</div><p class="docs-api-property-name">
-      <code>disableRipple: boolean</code>
+      <code>disableRipple: <code class="docs-api-property-type">boolean</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Whether ripples should be disabled for the step headers.</p>
@@ -608,13 +626,13 @@ themes only, it has no effect in M3 themes. For color customization in M3, see <
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
           @Input()</div><p class="docs-api-property-name">
-      <code>headerPosition: &#39;top&#39; | &#39;bottom&#39;</code>
+      <code>headerPosition: <code class="docs-api-property-type">&#39;top&#39; | &#39;bottom&#39;</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Position of the stepper&#39;s header.
@@ -623,13 +641,13 @@ Only applies in the <code>horizontal</code> orientation.</p>
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
           @Input()</div><p class="docs-api-property-name">
-      <code>labelPosition: &#39;bottom&#39; | &#39;end&#39;</code>
+      <code>labelPosition: <code class="docs-api-property-type">&#39;bottom&#39; | &#39;end&#39;</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Whether the label should display in bottom or end position.
@@ -638,13 +656,13 @@ Only applies in the <code>horizontal</code> orientation.</p>
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">{ transform: booleanAttribute }</span>)
         </div><p class="docs-api-property-name">
-      <code>linear: boolean</code>
+      <code>linear: <code class="docs-api-property-type">boolean</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Whether the validity of previous steps should be checked or not.</p>
@@ -652,13 +670,13 @@ Only applies in the <code>horizontal</code> orientation.</p>
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
           @Input()</div><p class="docs-api-property-name">
-      <code>orientation: StepperOrientation</code>
+      <code>orientation: <code class="docs-api-property-type">StepperOrientation</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Orientation of the stepper.</p>
@@ -666,13 +684,13 @@ Only applies in the <code>horizontal</code> orientation.</p>
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
           @Input()</div><p class="docs-api-property-name">
-      <code>selected: CdkStep | undefined</code>
+      <code>selected: <code class="docs-api-property-type">CdkStep | undefined</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>The step that is selected.</p>
@@ -680,13 +698,13 @@ Only applies in the <code>horizontal</code> orientation.</p>
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">{ transform: numberAttribute }</span>)
         </div><p class="docs-api-property-name">
-      <code>selectedIndex: number</code>
+      <code>selectedIndex: <code class="docs-api-property-type">number</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>The index of the selected step.</p>
@@ -694,13 +712,13 @@ Only applies in the <code>horizontal</code> orientation.</p>
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><div class="docs-api-output-marker">
           @Output()</div><p class="docs-api-property-name">
-      <code>animationDone: EventEmitter&lt;void&gt;</code>
+      <code>animationDone: <code class="docs-api-property-type">EventEmitter&lt;void&gt;</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Event emitted when the current step is done transitioning in.</p>
@@ -708,13 +726,13 @@ Only applies in the <code>horizontal</code> orientation.</p>
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><div class="docs-api-output-marker">
           @Output()</div><p class="docs-api-property-name">
-      <code>selectedIndexChange: EventEmitter&lt;number&gt;</code>
+      <code>selectedIndexChange: <code class="docs-api-property-type">EventEmitter&lt;number&gt;</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Output to support two-way binding on <code>[(selectedIndex)]</code></p>
@@ -722,13 +740,13 @@ Only applies in the <code>horizontal</code> orientation.</p>
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><div class="docs-api-output-marker">
           @Output()</div><p class="docs-api-property-name">
-      <code>selectionChange: EventEmitter&lt;StepperSelectionEvent&gt;</code>
+      <code>selectionChange: <code class="docs-api-property-type">EventEmitter&lt;StepperSelectionEvent&gt;</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Event emitted when the selected step has changed.</p>
@@ -736,12 +754,12 @@ Only applies in the <code>horizontal</code> orientation.</p>
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>headerPrefix: input&lt;TemplateRef&lt;unknown&gt; | null&gt;(null)</code>
+      <code>headerPrefix: <code class="docs-api-property-type">input&lt;TemplateRef&lt;unknown&gt; | null&gt;(null)</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>The content prefix to use in the stepper header.</p>
@@ -749,12 +767,12 @@ Only applies in the <code>horizontal</code> orientation.</p>
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>steps: QueryList&lt;MatStep&gt;</code>
+      <code>steps: <code class="docs-api-property-type">QueryList&lt;MatStep&gt;</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Steps that belong to the current stepper, excluding ones from nested steppers.</p>
@@ -762,60 +780,70 @@ Only applies in the <code>horizontal</code> orientation.</p>
 </tr>
 
 
-    
-  </table>
+      
+    </table>
+  </div>
 
 
 <h5 class="docs-api-h5 docs-api-method-header">Methods</h5>
   
     
 
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">next
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Selects and focuses the next step in list.</p>
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell">next
+          (): <code class="docs-api-method-returns-type">void</code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Selects and focuses the next step in list.</p>
 
-    </td>
-  </tr></table>
-
-
-  
-    
-
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">previous
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Selects and focuses the previous step in list.</p>
-
-    </td>
-  </tr></table>
+      </td>
+    </tr></table>
+</div>
 
 
   
     
 
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">reset
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Resets the stepper to its initial state. Note that this includes clearing form data.</p>
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell">previous
+          (): <code class="docs-api-method-returns-type">void</code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Selects and focuses the previous step in list.</p>
 
-    </td>
-  </tr></table>
+      </td>
+    </tr></table>
+</div>
+
+
+  
+    
+
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell">reset
+          (): <code class="docs-api-method-returns-type">void</code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Resets the stepper to its initial state. Note that this includes clearing form data.</p>
+
+      </td>
+    </tr></table>
+</div>
 
 
   
@@ -842,18 +870,19 @@ Only applies in the <code>horizontal</code> orientation.</p>
     <span class="docs-api-class-selector-name">mat-step-header</span>
   
 </p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
-  <table class="docs-api-properties-table">
-    <tr class="docs-api-properties-header-row">
-      <th class="docs-api-properties-th">Name</th>
-      <th class="docs-api-properties-th">Description</th>
-    </tr>
-    
+  <div class="docs-api-properties-card">
+    <table class="docs-api-properties-table">
+      <tr class="docs-api-properties-header-row">
+        <th class="docs-api-properties-th">Name</th>
+        <th class="docs-api-properties-th">Description</th>
+      </tr>
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
           @Input()</div><p class="docs-api-property-name">
-      <code>active: boolean</code>
+      <code>active: <code class="docs-api-property-type">boolean</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Whether the given step label is active.</p>
@@ -861,13 +890,13 @@ Only applies in the <code>horizontal</code> orientation.</p>
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
           @Input()</div><p class="docs-api-property-name">
-      <code>color: ThemePalette</code>
+      <code>color: <code class="docs-api-property-type">ThemePalette</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Theme color of the step header. This API is supported in M2 themes only, it
@@ -878,13 +907,13 @@ has no effect in M3 themes. For color customization in M3, see <a href="https://
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
           @Input()</div><p class="docs-api-property-name">
-      <code>disableRipple: boolean</code>
+      <code>disableRipple: <code class="docs-api-property-type">boolean</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Whether the ripple should be disabled.</p>
@@ -892,13 +921,13 @@ has no effect in M3 themes. For color customization in M3, see <a href="https://
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
           @Input()</div><p class="docs-api-property-name">
-      <code>errorMessage: string</code>
+      <code>errorMessage: <code class="docs-api-property-type">string</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Error message to display when there&#39;s an error.</p>
@@ -906,15 +935,15 @@ has no effect in M3 themes. For color customization in M3, see <a href="https://
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
           @Input()</div><p class="docs-api-property-name">
-      <code>iconOverrides: {
+      <code>iconOverrides: <code class="docs-api-property-type">{
     [key: string]: TemplateRef&lt;MatStepperIconContext&gt;;
-}</code>
+}</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Overrides for the header icons, passed in via the stepper.</p>
@@ -922,13 +951,13 @@ has no effect in M3 themes. For color customization in M3, see <a href="https://
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
           @Input()</div><p class="docs-api-property-name">
-      <code>index: number</code>
+      <code>index: <code class="docs-api-property-type">number</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Index of the given step.</p>
@@ -936,13 +965,13 @@ has no effect in M3 themes. For color customization in M3, see <a href="https://
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
           @Input()</div><p class="docs-api-property-name">
-      <code>label: MatStepLabel | string</code>
+      <code>label: <code class="docs-api-property-type">MatStepLabel | string</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Label of the given step.</p>
@@ -950,13 +979,13 @@ has no effect in M3 themes. For color customization in M3, see <a href="https://
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
           @Input()</div><p class="docs-api-property-name">
-      <code>optional: boolean</code>
+      <code>optional: <code class="docs-api-property-type">boolean</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Whether the given step is optional.</p>
@@ -964,13 +993,13 @@ has no effect in M3 themes. For color customization in M3, see <a href="https://
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
           @Input()</div><p class="docs-api-property-name">
-      <code>selected: boolean</code>
+      <code>selected: <code class="docs-api-property-type">boolean</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Whether the given step is selected.</p>
@@ -978,13 +1007,13 @@ has no effect in M3 themes. For color customization in M3, see <a href="https://
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
           @Input()</div><p class="docs-api-property-name">
-      <code>state: StepState</code>
+      <code>state: <code class="docs-api-property-type">StepState</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>State of the given step.</p>
@@ -992,57 +1021,65 @@ has no effect in M3 themes. For color customization in M3, see <a href="https://
 </tr>
 
 
-    
-  </table>
+      
+    </table>
+  </div>
 
 
 <h5 class="docs-api-h5 docs-api-method-header">Methods</h5>
   
     
 
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">focus
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Focuses the step header.</p>
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell">focus
+          (<span class="docs-api-method-parameter-name">origin<span class="docs-api-method-parameter-optional-marker">?</span>:
+            </span>
+            <code class="docs-api-method-parameter-type">FocusOrigin</code>, <span class="docs-api-method-parameter-name">options<span class="docs-api-method-parameter-optional-marker">?</span>:
+            </span>
+            <code class="docs-api-method-parameter-type">FocusOptions</code>): <code class="docs-api-method-returns-type"></code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Focuses the step header.</p>
 
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-parameters-header-row">
-      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+      </td>
+    </tr><thead>
+      <tr class="docs-api-method-parameters-header-row">
+        <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+      </tr>
+    </thead>
+    
+    <tr class="docs-api-method-parameter-row">
+      <td class="docs-api-method-parameter-cell">
+        <p class="docs-api-method-parameter-name">
+          origin<span class="docs-api-method-parameter-optional-marker">?</span></p>
+        <code class="docs-api-method-parameter-type">FocusOrigin</code>
+      </td>
+      <td class="docs-api-method-parameter-description-cell">
+        <p class="docs-api-method-parameter-description">
+          
+        </p>
+      </td>
     </tr>
-  </thead>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        origin<span class="docs-api-method-parameter-optional-marker">?</span></p>
-      <code class="docs-api-method-parameter-type">FocusOrigin</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        
-      </p>
-    </td>
-  </tr>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        options<span class="docs-api-method-parameter-optional-marker">?</span></p>
-      <code class="docs-api-method-parameter-type">FocusOptions</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        
-      </p>
-    </td>
-  </tr>
-  </table>
+    
+    <tr class="docs-api-method-parameter-row">
+      <td class="docs-api-method-parameter-cell">
+        <p class="docs-api-method-parameter-name">
+          options<span class="docs-api-method-parameter-optional-marker">?</span></p>
+        <code class="docs-api-method-parameter-type">FocusOptions</code>
+      </td>
+      <td class="docs-api-method-parameter-description-cell">
+        <p class="docs-api-method-parameter-description">
+          
+        </p>
+      </td>
+    </tr>
+    </table>
+</div>
 
 
   
@@ -1073,25 +1110,27 @@ has no effect in M3 themes. For color customization in M3, see <a href="https://
     <span class="docs-api-class-selector-name">[matStepLabel]</span>
   
 </p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
-  <table class="docs-api-properties-table">
-    <tr class="docs-api-properties-header-row">
-      <th class="docs-api-properties-th">Name</th>
-      <th class="docs-api-properties-th">Description</th>
-    </tr>
-    
+  <div class="docs-api-properties-card">
+    <table class="docs-api-properties-table">
+      <tr class="docs-api-properties-header-row">
+        <th class="docs-api-properties-th">Name</th>
+        <th class="docs-api-properties-th">Description</th>
+      </tr>
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>template: inject&lt;TemplateRef&lt;any&gt;&gt;(TemplateRef)</code>
+      <code>template: <code class="docs-api-property-type">inject&lt;TemplateRef&lt;any&gt;&gt;(TemplateRef)</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"></td>
 </tr>
 
 
-    
-  </table>
+      
+    </table>
+  </div>
 
 
 
@@ -1119,18 +1158,19 @@ has no effect in M3 themes. For color customization in M3, see <a href="https://
     <span class="docs-api-class-selector-name">button[matStepperNext]</span>
   
 </p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
-  <table class="docs-api-properties-table">
-    <tr class="docs-api-properties-header-row">
-      <th class="docs-api-properties-th">Name</th>
-      <th class="docs-api-properties-th">Description</th>
-    </tr>
-    
+  <div class="docs-api-properties-card">
+    <table class="docs-api-properties-table">
+      <tr class="docs-api-properties-header-row">
+        <th class="docs-api-properties-th">Name</th>
+        <th class="docs-api-properties-th">Description</th>
+      </tr>
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
           @Input()</div><p class="docs-api-property-name">
-      <code>type: string</code>
+      <code>type: <code class="docs-api-property-type">string</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Type of the next button. Defaults to &quot;submit&quot; if not specified.</p>
@@ -1138,8 +1178,9 @@ has no effect in M3 themes. For color customization in M3, see <a href="https://
 </tr>
 
 
-    
-  </table>
+      
+    </table>
+  </div>
 
 
 
@@ -1167,18 +1208,19 @@ has no effect in M3 themes. For color customization in M3, see <a href="https://
     <span class="docs-api-class-selector-name">button[matStepperPrevious]</span>
   
 </p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
-  <table class="docs-api-properties-table">
-    <tr class="docs-api-properties-header-row">
-      <th class="docs-api-properties-th">Name</th>
-      <th class="docs-api-properties-th">Description</th>
-    </tr>
-    
+  <div class="docs-api-properties-card">
+    <table class="docs-api-properties-table">
+      <tr class="docs-api-properties-header-row">
+        <th class="docs-api-properties-th">Name</th>
+        <th class="docs-api-properties-th">Description</th>
+      </tr>
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
           @Input()</div><p class="docs-api-property-name">
-      <code>type: string</code>
+      <code>type: <code class="docs-api-property-type">string</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Type of the previous button. Defaults to &quot;button&quot; if not specified.</p>
@@ -1186,8 +1228,9 @@ has no effect in M3 themes. For color customization in M3, see <a href="https://
 </tr>
 
 
-    
-  </table>
+      
+    </table>
+  </div>
 
 
 
@@ -1208,18 +1251,19 @@ has no effect in M3 themes. For color customization in M3, see <a href="https://
     <span class="docs-api-class-selector-name">ng-template[matStepperIcon]</span>
   
 </p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
-  <table class="docs-api-properties-table">
-    <tr class="docs-api-properties-header-row">
-      <th class="docs-api-properties-th">Name</th>
-      <th class="docs-api-properties-th">Description</th>
-    </tr>
-    
+  <div class="docs-api-properties-card">
+    <table class="docs-api-properties-table">
+      <tr class="docs-api-properties-header-row">
+        <th class="docs-api-properties-th">Name</th>
+        <th class="docs-api-properties-th">Description</th>
+      </tr>
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">&#39;matStepperIcon&#39;</span>)
         </div><p class="docs-api-property-name">
-      <code>name: StepState</code>
+      <code>name: <code class="docs-api-property-type">StepState</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Name of the icon to be overridden.</p>
@@ -1227,20 +1271,21 @@ has no effect in M3 themes. For color customization in M3, see <a href="https://
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>templateRef: inject&lt;TemplateRef&lt;MatStepperIconContext&gt;&gt;(TemplateRef)</code>
+      <code>templateRef: <code class="docs-api-property-type">inject&lt;TemplateRef&lt;MatStepperIconContext&gt;&gt;(TemplateRef)</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"></td>
 </tr>
 
 
-    
-  </table>
+      
+    </table>
+  </div>
 
 
 
@@ -1279,17 +1324,18 @@ has no effect in M3 themes. For color customization in M3, see <a href="https://
   <code>MatStepperIconContext</code>
 </h4><p class="docs-api-interface-description"><p>Template context available to an attached <code>matStepperIcon</code>.</p>
 </p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
-  <table class="docs-api-properties-table">
-    <tr class="docs-api-properties-header-row">
-      <th class="docs-api-properties-th">Name</th>
-      <th class="docs-api-properties-th">Description</th>
-    </tr>
-    
+  <div class="docs-api-properties-card">
+    <table class="docs-api-properties-table">
+      <tr class="docs-api-properties-header-row">
+        <th class="docs-api-properties-th">Name</th>
+        <th class="docs-api-properties-th">Description</th>
+      </tr>
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>active: boolean</code>
+      <code>active: <code class="docs-api-property-type">boolean</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Whether the step is currently active.</p>
@@ -1297,12 +1343,12 @@ has no effect in M3 themes. For color customization in M3, see <a href="https://
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>index: number</code>
+      <code>index: <code class="docs-api-property-type">number</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Index of the step.</p>
@@ -1310,12 +1356,12 @@ has no effect in M3 themes. For color customization in M3, see <a href="https://
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>optional: boolean</code>
+      <code>optional: <code class="docs-api-property-type">boolean</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Whether the step is optional.</p>
@@ -1323,8 +1369,9 @@ has no effect in M3 themes. For color customization in M3, see <a href="https://
 </tr>
 
 
-    
-  </table>
+      
+    </table>
+  </div>
 
 
 

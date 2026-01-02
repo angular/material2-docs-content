@@ -46,18 +46,19 @@
   
 </p><span class="docs-api-class-export-label">Exported as:</span>
 <span class="docs-api-class-export-name">cdkOption</span><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
-  <table class="docs-api-properties-table">
-    <tr class="docs-api-properties-header-row">
-      <th class="docs-api-properties-th">Name</th>
-      <th class="docs-api-properties-th">Description</th>
-    </tr>
-    
+  <div class="docs-api-properties-card">
+    <table class="docs-api-properties-table">
+      <tr class="docs-api-properties-header-row">
+        <th class="docs-api-properties-th">Name</th>
+        <th class="docs-api-properties-th">Description</th>
+      </tr>
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">{ alias: &#39;cdkOptionDisabled&#39;, transform: booleanAttribute }</span>)
         </div><p class="docs-api-property-name">
-      <code>disabled: boolean</code>
+      <code>disabled: <code class="docs-api-property-type">boolean</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Whether this option is disabled.</p>
@@ -65,8 +66,8 @@
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">{
@@ -74,7 +75,7 @@
     transform: (value: unknown) =&gt; (value == null ? undefined : numberAttribute(value)),
 }</span>)
         </div><p class="docs-api-property-name">
-      <code>enabledTabIndex: </code>
+      <code>enabledTabIndex: <code class="docs-api-property-type"></code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>The tabindex of the option when it is enabled.</p>
@@ -82,13 +83,13 @@
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
           @Input()</div><p class="docs-api-property-name">
-      <code>id: </code>
+      <code>id: <code class="docs-api-property-type"></code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>The id of the option&#39;s host element.</p>
@@ -96,13 +97,13 @@
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">&#39;cdkOptionTypeaheadLabel&#39;</span>)
         </div><p class="docs-api-property-name">
-      <code>typeaheadLabel: string | null</code>
+      <code>typeaheadLabel: <code class="docs-api-property-type">string | null</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>The text used to locate this item during listbox typeahead. If not specified,
@@ -111,13 +112,13 @@ the <code>textContent</code> of the item will be used.</p>
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">&#39;cdkOption&#39;</span>)
         </div><p class="docs-api-property-name">
-      <code>value: T</code>
+      <code>value: <code class="docs-api-property-type">T</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>The value of this option.</p>
@@ -125,12 +126,12 @@ the <code>textContent</code> of the item will be used.</p>
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>destroyed: Subject&lt;void&gt;</code>
+      <code>destroyed: <code class="docs-api-property-type">Subject&lt;void&gt;</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Emits when the option is destroyed.</p>
@@ -138,12 +139,12 @@ the <code>textContent</code> of the item will be used.</p>
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>element: HTMLElement</code>
+      <code>element: <code class="docs-api-property-type">HTMLElement</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>The option&#39;s host element</p>
@@ -151,12 +152,12 @@ the <code>textContent</code> of the item will be used.</p>
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>listbox: CdkListbox&lt;T&gt;</code>
+      <code>listbox: <code class="docs-api-property-type">CdkListbox&lt;T&gt;</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>The parent listbox this option belongs to.</p>
@@ -164,128 +165,150 @@ the <code>textContent</code> of the item will be used.</p>
 </tr>
 
 
-    
-  </table>
+      
+    </table>
+  </div>
 
 
 <h5 class="docs-api-h5 docs-api-method-header">Methods</h5>
   
     
 
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">deselect
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Deselect this option if it is selected.</p>
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell">deselect
+          (): <code class="docs-api-method-returns-type"></code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Deselect this option if it is selected.</p>
 
-    </td>
-  </tr></table>
-
-
-  
-    
-
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">focus
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Focus this option.</p>
-
-    </td>
-  </tr></table>
+      </td>
+    </tr></table>
+</div>
 
 
   
     
 
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">getLabel
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Get the label for this element which is required by the FocusableOption interface.</p>
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell">focus
+          (): <code class="docs-api-method-returns-type"></code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Focus this option.</p>
 
-    </td>
-  </tr></table>
-
-
-  
-    
-
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">isActive
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Whether this option is active.</p>
-
-    </td>
-  </tr></table>
+      </td>
+    </tr></table>
+</div>
 
 
   
     
 
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">isSelected
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Whether this option is selected.</p>
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell">getLabel
+          (): <code class="docs-api-method-returns-type"></code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Get the label for this element which is required by the FocusableOption interface.</p>
 
-    </td>
-  </tr></table>
-
-
-  
-    
-
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">select
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Select this option if it is not selected.</p>
-
-    </td>
-  </tr></table>
+      </td>
+    </tr></table>
+</div>
 
 
   
     
 
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">toggle
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Toggle the selected state of this option.</p>
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell">isActive
+          (): <code class="docs-api-method-returns-type"></code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Whether this option is active.</p>
 
-    </td>
-  </tr></table>
+      </td>
+    </tr></table>
+</div>
+
+
+  
+    
+
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell">isSelected
+          (): <code class="docs-api-method-returns-type"></code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Whether this option is selected.</p>
+
+      </td>
+    </tr></table>
+</div>
+
+
+  
+    
+
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell">select
+          (): <code class="docs-api-method-returns-type"></code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Select this option if it is not selected.</p>
+
+      </td>
+    </tr></table>
+</div>
+
+
+  
+    
+
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell">toggle
+          (): <code class="docs-api-method-returns-type"></code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Toggle the selected state of this option.</p>
+
+      </td>
+    </tr></table>
+</div>
 
 
   
@@ -306,18 +329,19 @@ the <code>textContent</code> of the item will be used.</p>
   
 </p><span class="docs-api-class-export-label">Exported as:</span>
 <span class="docs-api-class-export-name">cdkListbox</span><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
-  <table class="docs-api-properties-table">
-    <tr class="docs-api-properties-header-row">
-      <th class="docs-api-properties-th">Name</th>
-      <th class="docs-api-properties-th">Description</th>
-    </tr>
-    
+  <div class="docs-api-properties-card">
+    <table class="docs-api-properties-table">
+      <tr class="docs-api-properties-header-row">
+        <th class="docs-api-properties-th">Name</th>
+        <th class="docs-api-properties-th">Description</th>
+      </tr>
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">&#39;cdkListboxCompareWith&#39;</span>)
         </div><p class="docs-api-property-name">
-      <code>compareWith: undefined | ((o1: T, o2: T) =&gt; boolean)</code>
+      <code>compareWith: <code class="docs-api-property-type">undefined | ((o1: T, o2: T) =&gt; boolean)</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>The function used to compare option values.</p>
@@ -325,13 +349,13 @@ the <code>textContent</code> of the item will be used.</p>
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">{ alias: &#39;cdkListboxDisabled&#39;, transform: booleanAttribute }</span>)
         </div><p class="docs-api-property-name">
-      <code>disabled: boolean</code>
+      <code>disabled: <code class="docs-api-property-type">boolean</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Whether the listbox is disabled.</p>
@@ -339,13 +363,13 @@ the <code>textContent</code> of the item will be used.</p>
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">&#39;tabindex&#39;</span>)
         </div><p class="docs-api-property-name">
-      <code>enabledTabIndex: </code>
+      <code>enabledTabIndex: <code class="docs-api-property-type"></code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>The tabindex to use when the listbox is enabled.</p>
@@ -353,13 +377,13 @@ the <code>textContent</code> of the item will be used.</p>
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
           @Input()</div><p class="docs-api-property-name">
-      <code>id: </code>
+      <code>id: <code class="docs-api-property-type"></code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>The id of the option&#39;s host element.</p>
@@ -367,13 +391,13 @@ the <code>textContent</code> of the item will be used.</p>
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">{ alias: &#39;cdkListboxMultiple&#39;, transform: booleanAttribute }</span>)
         </div><p class="docs-api-property-name">
-      <code>multiple: boolean</code>
+      <code>multiple: <code class="docs-api-property-type">boolean</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Whether the listbox allows multiple options to be selected. If the value switches from <code>true</code>
@@ -382,13 +406,13 @@ to <code>false</code>, and more than one option is selected, all options are des
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">{ alias: &#39;cdkListboxNavigatesDisabledOptions&#39;, transform: booleanAttribute }</span>)
         </div><p class="docs-api-property-name">
-      <code>navigateDisabledOptions: boolean</code>
+      <code>navigateDisabledOptions: <code class="docs-api-property-type">boolean</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Whether keyboard navigation should skip over disabled items.</p>
@@ -396,13 +420,13 @@ to <code>false</code>, and more than one option is selected, all options are des
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">{ alias: &#39;cdkListboxNavigationWrapDisabled&#39;, transform: booleanAttribute }</span>)
         </div><p class="docs-api-property-name">
-      <code>navigationWrapDisabled: boolean</code>
+      <code>navigationWrapDisabled: <code class="docs-api-property-type">boolean</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Whether the keyboard navigation should wrap when the user presses arrow down on the last item
@@ -411,13 +435,13 @@ or arrow up on the first item.</p>
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">&#39;cdkListboxOrientation&#39;</span>)
         </div><p class="docs-api-property-name">
-      <code>orientation: &quot;horizontal&quot; | &quot;vertical&quot;</code>
+      <code>orientation: <code class="docs-api-property-type">&quot;horizontal&quot; | &quot;vertical&quot;</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>The orientation of the listbox. Only affects keyboard interaction, not visual layout.</p>
@@ -425,13 +449,13 @@ or arrow up on the first item.</p>
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">{ alias: &#39;cdkListboxUseActiveDescendant&#39;, transform: booleanAttribute }</span>)
         </div><p class="docs-api-property-name">
-      <code>useActiveDescendant: boolean</code>
+      <code>useActiveDescendant: <code class="docs-api-property-type">boolean</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Whether the listbox will use active descendant or will move focus onto the options.</p>
@@ -439,13 +463,13 @@ or arrow up on the first item.</p>
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">&#39;cdkListboxValue&#39;</span>)
         </div><p class="docs-api-property-name">
-      <code>value: readonly T[]</code>
+      <code>value: <code class="docs-api-property-type">readonly T[]</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>The value selected in the listbox, represented as an array of option values.</p>
@@ -453,13 +477,13 @@ or arrow up on the first item.</p>
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><div class="docs-api-output-marker">@Output(<span class="docs-api-output-alias">&#39;cdkListboxValueChange&#39;</span>)
         </div><p class="docs-api-property-name">
-      <code>valueChange: Subject&lt;ListboxValueChangeEvent&lt;T&gt;&gt;</code>
+      <code>valueChange: <code class="docs-api-property-type">Subject&lt;ListboxValueChangeEvent&lt;T&gt;&gt;</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Emits when the selected value(s) in the listbox change.</p>
@@ -467,12 +491,12 @@ or arrow up on the first item.</p>
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>changeDetectorRef: inject(ChangeDetectorRef)</code>
+      <code>changeDetectorRef: <code class="docs-api-property-type">inject(ChangeDetectorRef)</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>The change detector for this listbox.</p>
@@ -480,12 +504,12 @@ or arrow up on the first item.</p>
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>destroyed: Subject&lt;void&gt;</code>
+      <code>destroyed: <code class="docs-api-property-type">Subject&lt;void&gt;</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Emits when the listbox is destroyed.</p>
@@ -493,12 +517,12 @@ or arrow up on the first item.</p>
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>element: HTMLElement</code>
+      <code>element: <code class="docs-api-property-type">HTMLElement</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>The host element of the listbox.</p>
@@ -506,12 +530,12 @@ or arrow up on the first item.</p>
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>listKeyManager: ActiveDescendantKeyManager&lt;CdkOption&lt;T&gt;&gt;</code>
+      <code>listKeyManager: <code class="docs-api-property-type">ActiveDescendantKeyManager&lt;CdkOption&lt;T&gt;&gt;</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>The key manager that manages keyboard navigation for this listbox.</p>
@@ -519,12 +543,12 @@ or arrow up on the first item.</p>
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>ngZone: inject(NgZone)</code>
+      <code>ngZone: <code class="docs-api-property-type">inject(NgZone)</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>The Angular zone.</p>
@@ -532,12 +556,12 @@ or arrow up on the first item.</p>
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>options: QueryList&lt;CdkOption&lt;T&gt;&gt;</code>
+      <code>options: <code class="docs-api-property-type">QueryList&lt;CdkOption&lt;T&gt;&gt;</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>The child options in this listbox.</p>
@@ -545,12 +569,12 @@ or arrow up on the first item.</p>
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>selectionModel: ListboxSelectionModel&lt;T&gt;</code>
+      <code>selectionModel: <code class="docs-api-property-type">ListboxSelectionModel&lt;T&gt;</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>The selection model used by the listbox.</p>
@@ -558,519 +582,589 @@ or arrow up on the first item.</p>
 </tr>
 
 
-    
-  </table>
+      
+    </table>
+  </div>
 
 
 <h5 class="docs-api-h5 docs-api-method-header">Methods</h5>
   
     
 
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">deselect
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Deselect the given option.</p>
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell">deselect
+          (<span class="docs-api-method-parameter-name">option:
+            </span>
+            <code class="docs-api-method-parameter-type">CdkOption&lt;T&gt;</code>): <code class="docs-api-method-returns-type"></code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Deselect the given option.</p>
 
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-parameters-header-row">
-      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
-    </tr>
-  </thead>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        option</p>
-      <code class="docs-api-method-parameter-type">CdkOption&lt;T&gt;</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        <p>The option to deselect</p>
+      </td>
+    </tr><thead>
+      <tr class="docs-api-method-parameters-header-row">
+        <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+      </tr>
+    </thead>
+    
+    <tr class="docs-api-method-parameter-row">
+      <td class="docs-api-method-parameter-cell">
+        <p class="docs-api-method-parameter-name">
+          option</p>
+        <code class="docs-api-method-parameter-type">CdkOption&lt;T&gt;</code>
+      </td>
+      <td class="docs-api-method-parameter-description-cell">
+        <p class="docs-api-method-parameter-description">
+          <p>The option to deselect</p>
 
-      </p>
-    </td>
-  </tr>
-  </table>
+        </p>
+      </td>
+    </tr>
+    </table>
+</div>
 
 
   
     
 
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">deselectValue
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Deselect the given value.</p>
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell">deselectValue
+          (<span class="docs-api-method-parameter-name">value:
+            </span>
+            <code class="docs-api-method-parameter-type">T</code>): <code class="docs-api-method-returns-type"></code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Deselect the given value.</p>
 
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-parameters-header-row">
-      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
-    </tr>
-  </thead>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        value</p>
-      <code class="docs-api-method-parameter-type">T</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        <p>The value to deselect</p>
+      </td>
+    </tr><thead>
+      <tr class="docs-api-method-parameters-header-row">
+        <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+      </tr>
+    </thead>
+    
+    <tr class="docs-api-method-parameter-row">
+      <td class="docs-api-method-parameter-cell">
+        <p class="docs-api-method-parameter-name">
+          value</p>
+        <code class="docs-api-method-parameter-type">T</code>
+      </td>
+      <td class="docs-api-method-parameter-description-cell">
+        <p class="docs-api-method-parameter-description">
+          <p>The value to deselect</p>
 
-      </p>
-    </td>
-  </tr>
-  </table>
+        </p>
+      </td>
+    </tr>
+    </table>
+</div>
 
 
   
     
 
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">focus
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Focus the listbox&#39;s host element.</p>
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell">focus
+          (): <code class="docs-api-method-returns-type"></code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Focus the listbox&#39;s host element.</p>
 
-    </td>
-  </tr></table>
-
-
-  
-    
-
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">isActive
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Get whether the given option is active.</p>
-
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-parameters-header-row">
-      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
-    </tr>
-  </thead>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        option</p>
-      <code class="docs-api-method-parameter-type">CdkOption&lt;T&gt;</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        <p>The option to get the active state of</p>
-
-      </p>
-    </td>
-  </tr>
-  <thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
-    </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">boolean</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        
-      </p>
-    </td>
-  </tr></table>
+      </td>
+    </tr></table>
+</div>
 
 
   
     
 
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">isSelected
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Get whether the given option is selected.</p>
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell">isActive
+          (<span class="docs-api-method-parameter-name">option:
+            </span>
+            <code class="docs-api-method-parameter-type">CdkOption&lt;T&gt;</code>): <code class="docs-api-method-returns-type">boolean</code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Get whether the given option is active.</p>
 
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-parameters-header-row">
-      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
-    </tr>
-  </thead>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        option</p>
-      <code class="docs-api-method-parameter-type">CdkOption&lt;T&gt;</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        <p>The option to get the selected state of</p>
+      </td>
+    </tr><thead>
+      <tr class="docs-api-method-parameters-header-row">
+        <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+      </tr>
+    </thead>
+    
+    <tr class="docs-api-method-parameter-row">
+      <td class="docs-api-method-parameter-cell">
+        <p class="docs-api-method-parameter-name">
+          option</p>
+        <code class="docs-api-method-parameter-type">CdkOption&lt;T&gt;</code>
+      </td>
+      <td class="docs-api-method-parameter-description-cell">
+        <p class="docs-api-method-parameter-description">
+          <p>The option to get the active state of</p>
 
-      </p>
-    </td>
-  </tr>
-  </table>
+        </p>
+      </td>
+    </tr>
+    <thead>
+      <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+      </tr>
+    </thead>
+    <tr>
+      <td class="docs-api-method-returns-type-cell">
+        <code class="docs-api-method-returns-type">boolean</code>
+      </td>
+      <td class="docs-api-method-returns-description-cell">
+        <p class="docs-api-method-returns-description">
+          
+        </p>
+      </td>
+    </tr></table>
+</div>
 
 
   
     
 
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">isValueSelected
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Get whether the given value is selected.</p>
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell">isSelected
+          (<span class="docs-api-method-parameter-name">option:
+            </span>
+            <code class="docs-api-method-parameter-type">CdkOption&lt;T&gt;</code>): <code class="docs-api-method-returns-type"></code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Get whether the given option is selected.</p>
 
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-parameters-header-row">
-      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
-    </tr>
-  </thead>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        value</p>
-      <code class="docs-api-method-parameter-type">T</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        <p>The value to get the selected state of</p>
+      </td>
+    </tr><thead>
+      <tr class="docs-api-method-parameters-header-row">
+        <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+      </tr>
+    </thead>
+    
+    <tr class="docs-api-method-parameter-row">
+      <td class="docs-api-method-parameter-cell">
+        <p class="docs-api-method-parameter-name">
+          option</p>
+        <code class="docs-api-method-parameter-type">CdkOption&lt;T&gt;</code>
+      </td>
+      <td class="docs-api-method-parameter-description-cell">
+        <p class="docs-api-method-parameter-description">
+          <p>The option to get the selected state of</p>
 
-      </p>
-    </td>
-  </tr>
-  </table>
+        </p>
+      </td>
+    </tr>
+    </table>
+</div>
 
 
   
     
 
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">select
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Select the given option.</p>
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell">isValueSelected
+          (<span class="docs-api-method-parameter-name">value:
+            </span>
+            <code class="docs-api-method-parameter-type">T</code>): <code class="docs-api-method-returns-type"></code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Get whether the given value is selected.</p>
 
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-parameters-header-row">
-      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
-    </tr>
-  </thead>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        option</p>
-      <code class="docs-api-method-parameter-type">CdkOption&lt;T&gt;</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        <p>The option to select</p>
+      </td>
+    </tr><thead>
+      <tr class="docs-api-method-parameters-header-row">
+        <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+      </tr>
+    </thead>
+    
+    <tr class="docs-api-method-parameter-row">
+      <td class="docs-api-method-parameter-cell">
+        <p class="docs-api-method-parameter-name">
+          value</p>
+        <code class="docs-api-method-parameter-type">T</code>
+      </td>
+      <td class="docs-api-method-parameter-description-cell">
+        <p class="docs-api-method-parameter-description">
+          <p>The value to get the selected state of</p>
 
-      </p>
-    </td>
-  </tr>
-  </table>
+        </p>
+      </td>
+    </tr>
+    </table>
+</div>
 
 
   
     
 
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">selectValue
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Select the given value.</p>
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell">select
+          (<span class="docs-api-method-parameter-name">option:
+            </span>
+            <code class="docs-api-method-parameter-type">CdkOption&lt;T&gt;</code>): <code class="docs-api-method-returns-type"></code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Select the given option.</p>
 
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-parameters-header-row">
-      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
-    </tr>
-  </thead>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        value</p>
-      <code class="docs-api-method-parameter-type">T</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        <p>The value to select</p>
+      </td>
+    </tr><thead>
+      <tr class="docs-api-method-parameters-header-row">
+        <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+      </tr>
+    </thead>
+    
+    <tr class="docs-api-method-parameter-row">
+      <td class="docs-api-method-parameter-cell">
+        <p class="docs-api-method-parameter-name">
+          option</p>
+        <code class="docs-api-method-parameter-type">CdkOption&lt;T&gt;</code>
+      </td>
+      <td class="docs-api-method-parameter-description-cell">
+        <p class="docs-api-method-parameter-description">
+          <p>The option to select</p>
 
-      </p>
-    </td>
-  </tr>
-  </table>
+        </p>
+      </td>
+    </tr>
+    </table>
+</div>
 
 
   
     
 
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">setAllSelected
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Set the selected state of all options.</p>
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell">selectValue
+          (<span class="docs-api-method-parameter-name">value:
+            </span>
+            <code class="docs-api-method-parameter-type">T</code>): <code class="docs-api-method-returns-type"></code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Select the given value.</p>
 
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-parameters-header-row">
-      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
-    </tr>
-  </thead>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        isSelected</p>
-      <code class="docs-api-method-parameter-type">boolean</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        <p>The new selected state to set</p>
+      </td>
+    </tr><thead>
+      <tr class="docs-api-method-parameters-header-row">
+        <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+      </tr>
+    </thead>
+    
+    <tr class="docs-api-method-parameter-row">
+      <td class="docs-api-method-parameter-cell">
+        <p class="docs-api-method-parameter-name">
+          value</p>
+        <code class="docs-api-method-parameter-type">T</code>
+      </td>
+      <td class="docs-api-method-parameter-description-cell">
+        <p class="docs-api-method-parameter-description">
+          <p>The value to select</p>
 
-      </p>
-    </td>
-  </tr>
-  </table>
+        </p>
+      </td>
+    </tr>
+    </table>
+</div>
 
 
   
     
 
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">toggle
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Toggle the selected state of the given option.</p>
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell">setAllSelected
+          (<span class="docs-api-method-parameter-name">isSelected:
+            </span>
+            <code class="docs-api-method-parameter-type">boolean</code>): <code class="docs-api-method-returns-type"></code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Set the selected state of all options.</p>
 
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-parameters-header-row">
-      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
-    </tr>
-  </thead>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        option</p>
-      <code class="docs-api-method-parameter-type">CdkOption&lt;T&gt;</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        <p>The option to toggle</p>
+      </td>
+    </tr><thead>
+      <tr class="docs-api-method-parameters-header-row">
+        <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+      </tr>
+    </thead>
+    
+    <tr class="docs-api-method-parameter-row">
+      <td class="docs-api-method-parameter-cell">
+        <p class="docs-api-method-parameter-name">
+          isSelected</p>
+        <code class="docs-api-method-parameter-type">boolean</code>
+      </td>
+      <td class="docs-api-method-parameter-description-cell">
+        <p class="docs-api-method-parameter-description">
+          <p>The new selected state to set</p>
 
-      </p>
-    </td>
-  </tr>
-  </table>
+        </p>
+      </td>
+    </tr>
+    </table>
+</div>
 
 
   
     
 
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">toggleValue
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Toggle the selected state of the given value.</p>
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell">toggle
+          (<span class="docs-api-method-parameter-name">option:
+            </span>
+            <code class="docs-api-method-parameter-type">CdkOption&lt;T&gt;</code>): <code class="docs-api-method-returns-type"></code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Toggle the selected state of the given option.</p>
 
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-parameters-header-row">
-      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
-    </tr>
-  </thead>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        value</p>
-      <code class="docs-api-method-parameter-type">T</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        <p>The value to toggle</p>
+      </td>
+    </tr><thead>
+      <tr class="docs-api-method-parameters-header-row">
+        <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+      </tr>
+    </thead>
+    
+    <tr class="docs-api-method-parameter-row">
+      <td class="docs-api-method-parameter-cell">
+        <p class="docs-api-method-parameter-name">
+          option</p>
+        <code class="docs-api-method-parameter-type">CdkOption&lt;T&gt;</code>
+      </td>
+      <td class="docs-api-method-parameter-description-cell">
+        <p class="docs-api-method-parameter-description">
+          <p>The option to toggle</p>
 
-      </p>
-    </td>
-  </tr>
-  </table>
+        </p>
+      </td>
+    </tr>
+    </table>
+</div>
 
 
   
     
 
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">triggerOption
-      </th>
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell">toggleValue
+          (<span class="docs-api-method-parameter-name">value:
+            </span>
+            <code class="docs-api-method-parameter-type">T</code>): <code class="docs-api-method-returns-type"></code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Toggle the selected state of the given value.</p>
+
+      </td>
+    </tr><thead>
+      <tr class="docs-api-method-parameters-header-row">
+        <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+      </tr>
+    </thead>
+    
+    <tr class="docs-api-method-parameter-row">
+      <td class="docs-api-method-parameter-cell">
+        <p class="docs-api-method-parameter-name">
+          value</p>
+        <code class="docs-api-method-parameter-type">T</code>
+      </td>
+      <td class="docs-api-method-parameter-description-cell">
+        <p class="docs-api-method-parameter-description">
+          <p>The value to toggle</p>
+
+        </p>
+      </td>
     </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Triggers the given option in response to user interaction.</p>
+    </table>
+</div>
+
+
+  
+    
+
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell">triggerOption
+          (<span class="docs-api-method-parameter-name">option:
+            </span>
+            <code class="docs-api-method-parameter-type">CdkOption&lt;T&gt;</code>): <code class="docs-api-method-returns-type"></code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Triggers the given option in response to user interaction.</p>
 <ul>
 <li>In single selection mode: selects the option and deselects any other selected option.</li>
 <li>In multi selection mode: toggles the selected state of the option.</li>
 </ul>
 
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-parameters-header-row">
-      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
-    </tr>
-  </thead>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        option</p>
-      <code class="docs-api-method-parameter-type">CdkOption&lt;T&gt;</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        <p>The option to trigger</p>
+      </td>
+    </tr><thead>
+      <tr class="docs-api-method-parameters-header-row">
+        <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+      </tr>
+    </thead>
+    
+    <tr class="docs-api-method-parameter-row">
+      <td class="docs-api-method-parameter-cell">
+        <p class="docs-api-method-parameter-name">
+          option</p>
+        <code class="docs-api-method-parameter-type">CdkOption&lt;T&gt;</code>
+      </td>
+      <td class="docs-api-method-parameter-description-cell">
+        <p class="docs-api-method-parameter-description">
+          <p>The option to trigger</p>
 
-      </p>
-    </td>
-  </tr>
-  </table>
+        </p>
+      </td>
+    </tr>
+    </table>
+</div>
 
 
   
     
 
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">triggerRange
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Trigger the given range of options in response to user interaction.
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell">triggerRange
+          (<span class="docs-api-method-parameter-name">trigger:
+            </span>
+            <code class="docs-api-method-parameter-type">CdkOption&lt;T&gt;</code>, <span class="docs-api-method-parameter-name">from:
+            </span>
+            <code class="docs-api-method-parameter-type">number</code>, <span class="docs-api-method-parameter-name">to:
+            </span>
+            <code class="docs-api-method-parameter-type">number</code>, <span class="docs-api-method-parameter-name">on:
+            </span>
+            <code class="docs-api-method-parameter-type">boolean</code>): <code class="docs-api-method-returns-type"></code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Trigger the given range of options in response to user interaction.
 Should only be called in multi-selection mode.</p>
 
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-parameters-header-row">
-      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+      </td>
+    </tr><thead>
+      <tr class="docs-api-method-parameters-header-row">
+        <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+      </tr>
+    </thead>
+    
+    <tr class="docs-api-method-parameter-row">
+      <td class="docs-api-method-parameter-cell">
+        <p class="docs-api-method-parameter-name">
+          trigger</p>
+        <code class="docs-api-method-parameter-type">CdkOption&lt;T&gt;</code>
+      </td>
+      <td class="docs-api-method-parameter-description-cell">
+        <p class="docs-api-method-parameter-description">
+          <p>The option that was triggered</p>
+
+        </p>
+      </td>
     </tr>
-  </thead>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        trigger</p>
-      <code class="docs-api-method-parameter-type">CdkOption&lt;T&gt;</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        <p>The option that was triggered</p>
+    
+    <tr class="docs-api-method-parameter-row">
+      <td class="docs-api-method-parameter-cell">
+        <p class="docs-api-method-parameter-name">
+          from</p>
+        <code class="docs-api-method-parameter-type">number</code>
+      </td>
+      <td class="docs-api-method-parameter-description-cell">
+        <p class="docs-api-method-parameter-description">
+          <p>The start index of the options to toggle</p>
 
-      </p>
-    </td>
-  </tr>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        from</p>
-      <code class="docs-api-method-parameter-type">number</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        <p>The start index of the options to toggle</p>
+        </p>
+      </td>
+    </tr>
+    
+    <tr class="docs-api-method-parameter-row">
+      <td class="docs-api-method-parameter-cell">
+        <p class="docs-api-method-parameter-name">
+          to</p>
+        <code class="docs-api-method-parameter-type">number</code>
+      </td>
+      <td class="docs-api-method-parameter-description-cell">
+        <p class="docs-api-method-parameter-description">
+          <p>The end index of the options to toggle</p>
 
-      </p>
-    </td>
-  </tr>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        to</p>
-      <code class="docs-api-method-parameter-type">number</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        <p>The end index of the options to toggle</p>
+        </p>
+      </td>
+    </tr>
+    
+    <tr class="docs-api-method-parameter-row">
+      <td class="docs-api-method-parameter-cell">
+        <p class="docs-api-method-parameter-name">
+          on</p>
+        <code class="docs-api-method-parameter-type">boolean</code>
+      </td>
+      <td class="docs-api-method-parameter-description-cell">
+        <p class="docs-api-method-parameter-description">
+          <p>Whether to toggle the option range on</p>
 
-      </p>
-    </td>
-  </tr>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        on</p>
-      <code class="docs-api-method-parameter-type">boolean</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        <p>Whether to toggle the option range on</p>
-
-      </p>
-    </td>
-  </tr>
-  </table>
+        </p>
+      </td>
+    </tr>
+    </table>
+</div>
 
 
   
@@ -1089,17 +1183,18 @@ Should only be called in multi-selection mode.</p>
   <code>ListboxValueChangeEvent</code>
 </h4><p class="docs-api-interface-description"><p>Change event that is fired whenever the value of the listbox changes.</p>
 </p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
-  <table class="docs-api-properties-table">
-    <tr class="docs-api-properties-header-row">
-      <th class="docs-api-properties-th">Name</th>
-      <th class="docs-api-properties-th">Description</th>
-    </tr>
-    
+  <div class="docs-api-properties-card">
+    <table class="docs-api-properties-table">
+      <tr class="docs-api-properties-header-row">
+        <th class="docs-api-properties-th">Name</th>
+        <th class="docs-api-properties-th">Description</th>
+      </tr>
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>listbox: CdkListbox&lt;T&gt;</code>
+      <code>listbox: <code class="docs-api-property-type">CdkListbox&lt;T&gt;</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Reference to the listbox that emitted the event.</p>
@@ -1107,12 +1202,12 @@ Should only be called in multi-selection mode.</p>
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>option: CdkOption&lt;T&gt; | null</code>
+      <code>option: <code class="docs-api-property-type">CdkOption&lt;T&gt; | null</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Reference to the option that was triggered.</p>
@@ -1120,12 +1215,12 @@ Should only be called in multi-selection mode.</p>
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>value: readonly T[]</code>
+      <code>value: <code class="docs-api-property-type">readonly T[]</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>The new value of the listbox.</p>
@@ -1133,8 +1228,9 @@ Should only be called in multi-selection mode.</p>
 </tr>
 
 
-    
-  </table>
+      
+    </table>
+  </div>
 
 
 

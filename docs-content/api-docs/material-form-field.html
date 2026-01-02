@@ -46,18 +46,19 @@
   
 </p><span class="docs-api-class-export-label">Exported as:</span>
 <span class="docs-api-class-export-name">matFormField</span><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
-  <table class="docs-api-properties-table">
-    <tr class="docs-api-properties-header-row">
-      <th class="docs-api-properties-th">Name</th>
-      <th class="docs-api-properties-th">Description</th>
-    </tr>
-    
+  <div class="docs-api-properties-card">
+    <table class="docs-api-properties-table">
+      <tr class="docs-api-properties-header-row">
+        <th class="docs-api-properties-th">Name</th>
+        <th class="docs-api-properties-th">Description</th>
+      </tr>
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
           @Input()</div><p class="docs-api-property-name">
-      <code>appearance: MatFormFieldAppearance</code>
+      <code>appearance: <code class="docs-api-property-type">MatFormFieldAppearance</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>The form field appearance style.</p>
@@ -65,13 +66,13 @@
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
           @Input()</div><p class="docs-api-property-name">
-      <code>color: ThemePalette</code>
+      <code>color: <code class="docs-api-property-type">ThemePalette</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Theme color of the form field. This API is supported in M2 themes only, it
@@ -82,13 +83,13 @@ has no effect in M3 themes. For color customization in M3, see <a href="https://
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
           @Input()</div><p class="docs-api-property-name">
-      <code>floatLabel: FloatLabelType</code>
+      <code>floatLabel: <code class="docs-api-property-type">FloatLabelType</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Whether the label should always float or float as the user types.</p>
@@ -96,13 +97,13 @@ has no effect in M3 themes. For color customization in M3, see <a href="https://
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
           @Input()</div><p class="docs-api-property-name">
-      <code>hideRequiredMarker: boolean</code>
+      <code>hideRequiredMarker: <code class="docs-api-property-type">boolean</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Whether the required marker should be hidden.</p>
@@ -110,13 +111,13 @@ has no effect in M3 themes. For color customization in M3, see <a href="https://
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
           @Input()</div><p class="docs-api-property-name">
-      <code>hintLabel: string</code>
+      <code>hintLabel: <code class="docs-api-property-type">string</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Text for the form field hint.</p>
@@ -124,13 +125,13 @@ has no effect in M3 themes. For color customization in M3, see <a href="https://
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
           @Input()</div><p class="docs-api-property-name">
-      <code>subscriptSizing: SubscriptSizing</code>
+      <code>subscriptSizing: <code class="docs-api-property-type">SubscriptSizing</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Whether the form field should reserve space for one line of hint/error text (default)
@@ -140,12 +141,12 @@ Note that when using dynamic sizing, layout shifts will occur when hint/error te
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>getLabelId: computed(() =&gt; (this._hasFloatingLabel() ? this._labelId : null))</code>
+      <code>getLabelId: <code class="docs-api-property-type">computed(() =&gt; (this._hasFloatingLabel() ? this._labelId : null))</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Gets the id of the label element. If no label is present, returns <code>null</code>.</p>
@@ -153,41 +154,45 @@ Note that when using dynamic sizing, layout shifts will occur when hint/error te
 </tr>
 
 
-    
-  </table>
+      
+    </table>
+  </div>
 
 
 <h5 class="docs-api-h5 docs-api-method-header">Methods</h5>
   
     
 
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">getConnectedOverlayOrigin
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets an ElementRef for the element that a overlay attached to the form field
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell">getConnectedOverlayOrigin
+          (): <code class="docs-api-method-returns-type">ElementRef</code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Gets an ElementRef for the element that a overlay attached to the form field
 should be positioned relative to.</p>
 
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
-    </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">ElementRef</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        
-      </p>
-    </td>
-  </tr></table>
+      </td>
+    </tr><thead>
+      <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+      </tr>
+    </thead>
+    <tr>
+      <td class="docs-api-method-returns-type-cell">
+        <code class="docs-api-method-returns-type">ElementRef</code>
+      </td>
+      <td class="docs-api-method-returns-description-cell">
+        <p class="docs-api-method-returns-description">
+          
+        </p>
+      </td>
+    </tr></table>
+</div>
 
 
   
@@ -207,17 +212,18 @@ should be positioned relative to.</p>
   
 </h4><p class="docs-api-class-description"><p>An interface which allows a control to work inside of a <code>MatFormField</code>.</p>
 </p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
-  <table class="docs-api-properties-table">
-    <tr class="docs-api-properties-header-row">
-      <th class="docs-api-properties-th">Name</th>
-      <th class="docs-api-properties-th">Description</th>
-    </tr>
-    
+  <div class="docs-api-properties-card">
+    <table class="docs-api-properties-table">
+      <tr class="docs-api-properties-header-row">
+        <th class="docs-api-properties-th">Name</th>
+        <th class="docs-api-properties-th">Description</th>
+      </tr>
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>autofilled: boolean</code>
+      <code>autofilled: <code class="docs-api-property-type">boolean</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Whether the input is currently in an autofilled state. If property is not present on the
@@ -226,12 +232,12 @@ control it is assumed to be false.</p>
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>controlType: string</code>
+      <code>controlType: <code class="docs-api-property-type">string</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>An optional name for the control type that can be used to distinguish <code>mat-form-field</code> elements
@@ -241,12 +247,12 @@ based on their control type. The form field will add a class,
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>describedByIds: string[]</code>
+      <code>describedByIds: <code class="docs-api-property-type">string[]</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Gets the list of element IDs that currently describe this control.</p>
@@ -254,12 +260,12 @@ based on their control type. The form field will add a class,
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>disableAutomaticLabeling: boolean</code>
+      <code>disableAutomaticLabeling: <code class="docs-api-property-type">boolean</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Whether to automatically assign the ID of the form field as the <code>for</code> attribute
@@ -269,12 +275,12 @@ field from associating the label with non-native elements.</p>
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>disabled: boolean</code>
+      <code>disabled: <code class="docs-api-property-type">boolean</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Whether the control is disabled.</p>
@@ -282,12 +288,12 @@ field from associating the label with non-native elements.</p>
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>empty: boolean</code>
+      <code>empty: <code class="docs-api-property-type">boolean</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Whether the control is empty.</p>
@@ -295,12 +301,12 @@ field from associating the label with non-native elements.</p>
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>errorState: boolean</code>
+      <code>errorState: <code class="docs-api-property-type">boolean</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Whether the control is in an error state.</p>
@@ -308,12 +314,12 @@ field from associating the label with non-native elements.</p>
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>focused: boolean</code>
+      <code>focused: <code class="docs-api-property-type">boolean</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Whether the control is focused.</p>
@@ -321,12 +327,12 @@ field from associating the label with non-native elements.</p>
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>id: string</code>
+      <code>id: <code class="docs-api-property-type">string</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>The element ID for this control.</p>
@@ -334,12 +340,12 @@ field from associating the label with non-native elements.</p>
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>ngControl: NgControl | AbstractControlDirective | null</code>
+      <code>ngControl: <code class="docs-api-property-type">NgControl | AbstractControlDirective | null</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Gets the AbstractControlDirective for this control.</p>
@@ -347,12 +353,12 @@ field from associating the label with non-native elements.</p>
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>placeholder: string</code>
+      <code>placeholder: <code class="docs-api-property-type">string</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>The placeholder for this control.</p>
@@ -360,12 +366,12 @@ field from associating the label with non-native elements.</p>
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>required: boolean</code>
+      <code>required: <code class="docs-api-property-type">boolean</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Whether the control is required.</p>
@@ -373,12 +379,12 @@ field from associating the label with non-native elements.</p>
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>shouldLabelFloat: boolean</code>
+      <code>shouldLabelFloat: <code class="docs-api-property-type">boolean</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Whether the <code>MatFormField</code> label should try to float.</p>
@@ -386,12 +392,12 @@ field from associating the label with non-native elements.</p>
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>stateChanges: Observable&lt;void&gt;</code>
+      <code>stateChanges: <code class="docs-api-property-type">Observable&lt;void&gt;</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Stream that emits whenever the state of the control changes such that the parent <code>MatFormField</code>
@@ -400,12 +406,12 @@ needs to run change detection.</p>
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>userAriaDescribedBy: string</code>
+      <code>userAriaDescribedBy: <code class="docs-api-property-type">string</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Value of <code>aria-describedby</code> that should be merged with the described-by ids
@@ -414,12 +420,12 @@ which are set by the form-field.</p>
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>value: T | null</code>
+      <code>value: <code class="docs-api-property-type">T | null</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>The value of the control.</p>
@@ -427,79 +433,90 @@ which are set by the form-field.</p>
 </tr>
 
 
-    
-  </table>
+      
+    </table>
+  </div>
 
 
 <h5 class="docs-api-h5 docs-api-method-header">Methods</h5>
   
     
 
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">onContainerClick
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Handles a click on the control&#39;s container.</p>
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell">onContainerClick
+          (<span class="docs-api-method-parameter-name">event:
+            </span>
+            <code class="docs-api-method-parameter-type">MouseEvent</code>): <code class="docs-api-method-returns-type">void</code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Handles a click on the control&#39;s container.</p>
 
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-parameters-header-row">
-      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+      </td>
+    </tr><thead>
+      <tr class="docs-api-method-parameters-header-row">
+        <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+      </tr>
+    </thead>
+    
+    <tr class="docs-api-method-parameter-row">
+      <td class="docs-api-method-parameter-cell">
+        <p class="docs-api-method-parameter-name">
+          event</p>
+        <code class="docs-api-method-parameter-type">MouseEvent</code>
+      </td>
+      <td class="docs-api-method-parameter-description-cell">
+        <p class="docs-api-method-parameter-description">
+          
+        </p>
+      </td>
     </tr>
-  </thead>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        event</p>
-      <code class="docs-api-method-parameter-type">MouseEvent</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        
-      </p>
-    </td>
-  </tr>
-  </table>
+    </table>
+</div>
 
 
   
     
 
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">setDescribedByIds
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Sets the list of element IDs that currently describe this control.</p>
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell">setDescribedByIds
+          (<span class="docs-api-method-parameter-name">ids:
+            </span>
+            <code class="docs-api-method-parameter-type">string[]</code>): <code class="docs-api-method-returns-type">void</code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Sets the list of element IDs that currently describe this control.</p>
 
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-parameters-header-row">
-      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+      </td>
+    </tr><thead>
+      <tr class="docs-api-method-parameters-header-row">
+        <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+      </tr>
+    </thead>
+    
+    <tr class="docs-api-method-parameter-row">
+      <td class="docs-api-method-parameter-cell">
+        <p class="docs-api-method-parameter-name">
+          ids</p>
+        <code class="docs-api-method-parameter-type">string[]</code>
+      </td>
+      <td class="docs-api-method-parameter-description-cell">
+        <p class="docs-api-method-parameter-description">
+          
+        </p>
+      </td>
     </tr>
-  </thead>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        ids</p>
-      <code class="docs-api-method-parameter-type">string[]</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        
-      </p>
-    </td>
-  </tr>
-  </table>
+    </table>
+</div>
 
 
   
@@ -519,17 +536,18 @@ which are set by the form-field.</p>
 </h4><p class="docs-api-interface-description"><p>Represents the default options for the form field that can be configured
 using the <code>MAT_FORM_FIELD_DEFAULT_OPTIONS</code> injection token.</p>
 </p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
-  <table class="docs-api-properties-table">
-    <tr class="docs-api-properties-header-row">
-      <th class="docs-api-properties-th">Name</th>
-      <th class="docs-api-properties-th">Description</th>
-    </tr>
-    
+  <div class="docs-api-properties-card">
+    <table class="docs-api-properties-table">
+      <tr class="docs-api-properties-header-row">
+        <th class="docs-api-properties-th">Name</th>
+        <th class="docs-api-properties-th">Description</th>
+      </tr>
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>appearance: MatFormFieldAppearance</code>
+      <code>appearance: <code class="docs-api-property-type">MatFormFieldAppearance</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Default form field appearance style.</p>
@@ -537,12 +555,12 @@ using the <code>MAT_FORM_FIELD_DEFAULT_OPTIONS</code> injection token.</p>
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>color: ThemePalette</code>
+      <code>color: <code class="docs-api-property-type">ThemePalette</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Default theme color of the form field. This API is supported in M2 themes only, it has no
@@ -553,12 +571,12 @@ effect in M3 themes. For color customization in M3, see <a href="https://materia
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>floatLabel: FloatLabelType</code>
+      <code>floatLabel: <code class="docs-api-property-type">FloatLabelType</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Whether the label for form fields should by default float <code>always</code>,
@@ -567,12 +585,12 @@ effect in M3 themes. For color customization in M3, see <a href="https://materia
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>hideRequiredMarker: boolean</code>
+      <code>hideRequiredMarker: <code class="docs-api-property-type">boolean</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Whether the required marker should be hidden by default.</p>
@@ -580,12 +598,12 @@ effect in M3 themes. For color customization in M3, see <a href="https://materia
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>subscriptSizing: SubscriptSizing</code>
+      <code>subscriptSizing: <code class="docs-api-property-type">SubscriptSizing</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Whether the form field should reserve space for one line by default.</p>
@@ -593,8 +611,9 @@ effect in M3 themes. For color customization in M3, see <a href="https://materia
 </tr>
 
 
-    
-  </table>
+      
+    </table>
+  </div>
 
 
 

@@ -39,17 +39,18 @@
   <code>Dialog</code>
   
 </h4><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
-  <table class="docs-api-properties-table">
-    <tr class="docs-api-properties-header-row">
-      <th class="docs-api-properties-th">Name</th>
-      <th class="docs-api-properties-th">Description</th>
-    </tr>
-    
+  <div class="docs-api-properties-card">
+    <table class="docs-api-properties-table">
+      <tr class="docs-api-properties-header-row">
+        <th class="docs-api-properties-th">Name</th>
+        <th class="docs-api-properties-th">Description</th>
+      </tr>
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>afterAllClosed: Observable&lt;void&gt;</code>
+      <code>afterAllClosed: <code class="docs-api-property-type">Observable&lt;void&gt;</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Stream that emits when all open dialog have finished closing.
@@ -58,12 +59,12 @@ Will emit on subscribe if there are no open dialogs to begin with.</p>
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>afterOpened: Subject&lt;DialogRef&lt;any, any&gt;&gt;</code>
+      <code>afterOpened: <code class="docs-api-property-type">Subject&lt;DialogRef&lt;any, any&gt;&gt;</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Stream that emits when a dialog has been opened.</p>
@@ -71,12 +72,12 @@ Will emit on subscribe if there are no open dialogs to begin with.</p>
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>openDialogs: readonly DialogRef&lt;any, any&gt;[]</code>
+      <code>openDialogs: <code class="docs-api-property-type">readonly DialogRef&lt;any, any&gt;[]</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Keeps track of the currently-open dialogs.</p>
@@ -84,263 +85,293 @@ Will emit on subscribe if there are no open dialogs to begin with.</p>
 </tr>
 
 
-    
-  </table>
+      
+    </table>
+  </div>
 
 
 <h5 class="docs-api-h5 docs-api-method-header">Methods</h5>
   
     
 
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">closeAll
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Closes all of the currently-open dialogs.</p>
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell">closeAll
+          (): <code class="docs-api-method-returns-type">void</code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Closes all of the currently-open dialogs.</p>
 
-    </td>
-  </tr></table>
-
-
-  
-    
-
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">getDialogById
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Finds an open dialog by its id.</p>
-
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-parameters-header-row">
-      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
-    </tr>
-  </thead>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        id</p>
-      <code class="docs-api-method-parameter-type">string</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        <p>ID to use when looking up the dialog.</p>
-
-      </p>
-    </td>
-  </tr>
-  <thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
-    </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">DialogRef&lt;R, C&gt; | undefined</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        
-      </p>
-    </td>
-  </tr></table>
+      </td>
+    </tr></table>
+</div>
 
 
   
     
 
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">open
-      </th>
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell">getDialogById
+          (<span class="docs-api-method-parameter-name">id:
+            </span>
+            <code class="docs-api-method-parameter-type">string</code>): <code class="docs-api-method-returns-type">DialogRef&lt;R, C&gt; | undefined</code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Finds an open dialog by its id.</p>
+
+      </td>
+    </tr><thead>
+      <tr class="docs-api-method-parameters-header-row">
+        <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+      </tr>
+    </thead>
+    
+    <tr class="docs-api-method-parameter-row">
+      <td class="docs-api-method-parameter-cell">
+        <p class="docs-api-method-parameter-name">
+          id</p>
+        <code class="docs-api-method-parameter-type">string</code>
+      </td>
+      <td class="docs-api-method-parameter-description-cell">
+        <p class="docs-api-method-parameter-description">
+          <p>ID to use when looking up the dialog.</p>
+
+        </p>
+      </td>
     </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Opens a modal dialog containing the given component.</p>
-
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-parameters-header-row">
-      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
-    </tr>
-  </thead>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        component</p>
-      <code class="docs-api-method-parameter-type">ComponentType&lt;C&gt;</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        <p>Type of the component to load into the dialog.</p>
-
-      </p>
-    </td>
-  </tr>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        config<span class="docs-api-method-parameter-optional-marker">?</span></p>
-      <code class="docs-api-method-parameter-type">DialogConfig&lt;D, DialogRef&lt;R, C&gt;, BasePortalOutlet&gt;</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        <p>Extra configuration options.</p>
-
-      </p>
-    </td>
-  </tr>
-  <thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
-    </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">DialogRef&lt;R, C&gt;</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        <p>Reference to the newly-opened dialog.</p>
-
-      </p>
-    </td>
-  </tr></table>
+    <thead>
+      <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+      </tr>
+    </thead>
+    <tr>
+      <td class="docs-api-method-returns-type-cell">
+        <code class="docs-api-method-returns-type">DialogRef&lt;R, C&gt; | undefined</code>
+      </td>
+      <td class="docs-api-method-returns-description-cell">
+        <p class="docs-api-method-returns-description">
+          
+        </p>
+      </td>
+    </tr></table>
+</div>
 
 
   
     
 
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">open
-      </th>
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell">open
+          (<span class="docs-api-method-parameter-name">component:
+            </span>
+            <code class="docs-api-method-parameter-type">ComponentType&lt;C&gt;</code>, <span class="docs-api-method-parameter-name">config<span class="docs-api-method-parameter-optional-marker">?</span>:
+            </span>
+            <code class="docs-api-method-parameter-type">DialogConfig&lt;D, DialogRef&lt;R, C&gt;, BasePortalOutlet&gt;</code>): <code class="docs-api-method-returns-type">DialogRef&lt;R, C&gt;</code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Opens a modal dialog containing the given component.</p>
+
+      </td>
+    </tr><thead>
+      <tr class="docs-api-method-parameters-header-row">
+        <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+      </tr>
+    </thead>
+    
+    <tr class="docs-api-method-parameter-row">
+      <td class="docs-api-method-parameter-cell">
+        <p class="docs-api-method-parameter-name">
+          component</p>
+        <code class="docs-api-method-parameter-type">ComponentType&lt;C&gt;</code>
+      </td>
+      <td class="docs-api-method-parameter-description-cell">
+        <p class="docs-api-method-parameter-description">
+          <p>Type of the component to load into the dialog.</p>
+
+        </p>
+      </td>
     </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Opens a modal dialog containing the given template.</p>
+    
+    <tr class="docs-api-method-parameter-row">
+      <td class="docs-api-method-parameter-cell">
+        <p class="docs-api-method-parameter-name">
+          config<span class="docs-api-method-parameter-optional-marker">?</span></p>
+        <code class="docs-api-method-parameter-type">DialogConfig&lt;D, DialogRef&lt;R, C&gt;, BasePortalOutlet&gt;</code>
+      </td>
+      <td class="docs-api-method-parameter-description-cell">
+        <p class="docs-api-method-parameter-description">
+          <p>Extra configuration options.</p>
 
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-parameters-header-row">
-      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+        </p>
+      </td>
     </tr>
-  </thead>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        template</p>
-      <code class="docs-api-method-parameter-type">TemplateRef&lt;C&gt;</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        <p>TemplateRef to instantiate as the dialog content.</p>
+    <thead>
+      <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+      </tr>
+    </thead>
+    <tr>
+      <td class="docs-api-method-returns-type-cell">
+        <code class="docs-api-method-returns-type">DialogRef&lt;R, C&gt;</code>
+      </td>
+      <td class="docs-api-method-returns-description-cell">
+        <p class="docs-api-method-returns-description">
+          <p>Reference to the newly-opened dialog.</p>
 
-      </p>
-    </td>
-  </tr>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        config<span class="docs-api-method-parameter-optional-marker">?</span></p>
-      <code class="docs-api-method-parameter-type">DialogConfig&lt;D, DialogRef&lt;R, C&gt;, BasePortalOutlet&gt;</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        <p>Extra configuration options.</p>
-
-      </p>
-    </td>
-  </tr>
-  <thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
-    </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">DialogRef&lt;R, C&gt;</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        <p>Reference to the newly-opened dialog.</p>
-
-      </p>
-    </td>
-  </tr></table>
+        </p>
+      </td>
+    </tr></table>
+</div>
 
 
   
     
 
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">open
-      </th>
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell">open
+          (<span class="docs-api-method-parameter-name">template:
+            </span>
+            <code class="docs-api-method-parameter-type">TemplateRef&lt;C&gt;</code>, <span class="docs-api-method-parameter-name">config<span class="docs-api-method-parameter-optional-marker">?</span>:
+            </span>
+            <code class="docs-api-method-parameter-type">DialogConfig&lt;D, DialogRef&lt;R, C&gt;, BasePortalOutlet&gt;</code>): <code class="docs-api-method-returns-type">DialogRef&lt;R, C&gt;</code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Opens a modal dialog containing the given template.</p>
+
+      </td>
+    </tr><thead>
+      <tr class="docs-api-method-parameters-header-row">
+        <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+      </tr>
+    </thead>
+    
+    <tr class="docs-api-method-parameter-row">
+      <td class="docs-api-method-parameter-cell">
+        <p class="docs-api-method-parameter-name">
+          template</p>
+        <code class="docs-api-method-parameter-type">TemplateRef&lt;C&gt;</code>
+      </td>
+      <td class="docs-api-method-parameter-description-cell">
+        <p class="docs-api-method-parameter-description">
+          <p>TemplateRef to instantiate as the dialog content.</p>
+
+        </p>
+      </td>
     </tr>
-  </thead><thead>
-    <tr class="docs-api-method-parameters-header-row">
-      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+    
+    <tr class="docs-api-method-parameter-row">
+      <td class="docs-api-method-parameter-cell">
+        <p class="docs-api-method-parameter-name">
+          config<span class="docs-api-method-parameter-optional-marker">?</span></p>
+        <code class="docs-api-method-parameter-type">DialogConfig&lt;D, DialogRef&lt;R, C&gt;, BasePortalOutlet&gt;</code>
+      </td>
+      <td class="docs-api-method-parameter-description-cell">
+        <p class="docs-api-method-parameter-description">
+          <p>Extra configuration options.</p>
+
+        </p>
+      </td>
     </tr>
-  </thead>
+    <thead>
+      <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+      </tr>
+    </thead>
+    <tr>
+      <td class="docs-api-method-returns-type-cell">
+        <code class="docs-api-method-returns-type">DialogRef&lt;R, C&gt;</code>
+      </td>
+      <td class="docs-api-method-returns-description-cell">
+        <p class="docs-api-method-returns-description">
+          <p>Reference to the newly-opened dialog.</p>
+
+        </p>
+      </td>
+    </tr></table>
+</div>
+
+
   
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        componentOrTemplateRef</p>
-      <code class="docs-api-method-parameter-type">ComponentType&lt;C&gt; | TemplateRef&lt;C&gt;</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        
-      </p>
-    </td>
-  </tr>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        config<span class="docs-api-method-parameter-optional-marker">?</span></p>
-      <code class="docs-api-method-parameter-type">DialogConfig&lt;D, DialogRef&lt;R, C&gt;, BasePortalOutlet&gt;</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        
-      </p>
-    </td>
-  </tr>
-  <thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    
+
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell">open
+          (<span class="docs-api-method-parameter-name">componentOrTemplateRef:
+            </span>
+            <code class="docs-api-method-parameter-type">ComponentType&lt;C&gt; | TemplateRef&lt;C&gt;</code>, <span class="docs-api-method-parameter-name">config<span class="docs-api-method-parameter-optional-marker">?</span>:
+            </span>
+            <code class="docs-api-method-parameter-type">DialogConfig&lt;D, DialogRef&lt;R, C&gt;, BasePortalOutlet&gt;</code>): <code class="docs-api-method-returns-type">DialogRef&lt;R, C&gt;</code>
+        </th>
+      </tr>
+    </thead><thead>
+      <tr class="docs-api-method-parameters-header-row">
+        <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+      </tr>
+    </thead>
+    
+    <tr class="docs-api-method-parameter-row">
+      <td class="docs-api-method-parameter-cell">
+        <p class="docs-api-method-parameter-name">
+          componentOrTemplateRef</p>
+        <code class="docs-api-method-parameter-type">ComponentType&lt;C&gt; | TemplateRef&lt;C&gt;</code>
+      </td>
+      <td class="docs-api-method-parameter-description-cell">
+        <p class="docs-api-method-parameter-description">
+          
+        </p>
+      </td>
     </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">DialogRef&lt;R, C&gt;</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        
-      </p>
-    </td>
-  </tr></table>
+    
+    <tr class="docs-api-method-parameter-row">
+      <td class="docs-api-method-parameter-cell">
+        <p class="docs-api-method-parameter-name">
+          config<span class="docs-api-method-parameter-optional-marker">?</span></p>
+        <code class="docs-api-method-parameter-type">DialogConfig&lt;D, DialogRef&lt;R, C&gt;, BasePortalOutlet&gt;</code>
+      </td>
+      <td class="docs-api-method-parameter-description-cell">
+        <p class="docs-api-method-parameter-description">
+          
+        </p>
+      </td>
+    </tr>
+    <thead>
+      <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+      </tr>
+    </thead>
+    <tr>
+      <td class="docs-api-method-returns-type-cell">
+        <code class="docs-api-method-returns-type">DialogRef&lt;R, C&gt;</code>
+      </td>
+      <td class="docs-api-method-returns-description-cell">
+        <p class="docs-api-method-returns-description">
+          
+        </p>
+      </td>
+    </tr></table>
+</div>
 
 
   
@@ -360,17 +391,18 @@ Will emit on subscribe if there are no open dialogs to begin with.</p>
   
 </h4><p class="docs-api-class-description"><p>Configuration for opening a modal dialog.</p>
 </p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
-  <table class="docs-api-properties-table">
-    <tr class="docs-api-properties-header-row">
-      <th class="docs-api-properties-th">Name</th>
-      <th class="docs-api-properties-th">Description</th>
-    </tr>
-    
+  <div class="docs-api-properties-card">
+    <table class="docs-api-properties-table">
+      <tr class="docs-api-properties-header-row">
+        <th class="docs-api-properties-th">Name</th>
+        <th class="docs-api-properties-th">Description</th>
+      </tr>
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>ariaDescribedBy: string | null</code>
+      <code>ariaDescribedBy: <code class="docs-api-property-type">string | null</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>ID of the element that describes the dialog.</p>
@@ -378,12 +410,12 @@ Will emit on subscribe if there are no open dialogs to begin with.</p>
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>ariaLabel: string | null</code>
+      <code>ariaLabel: <code class="docs-api-property-type">string | null</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Dialog label applied via <code>aria-label</code></p>
@@ -391,12 +423,12 @@ Will emit on subscribe if there are no open dialogs to begin with.</p>
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>ariaLabelledBy: string | null</code>
+      <code>ariaLabelledBy: <code class="docs-api-property-type">string | null</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>ID of the element that labels the dialog.</p>
@@ -404,12 +436,12 @@ Will emit on subscribe if there are no open dialogs to begin with.</p>
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>ariaModal: boolean</code>
+      <code>ariaModal: <code class="docs-api-property-type">boolean</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Whether this is a modal dialog. Used to set the <code>aria-modal</code> attribute. Off by default,
@@ -419,12 +451,12 @@ it is redundant since the dialog marks all outside content as <code>aria-hidden<
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>autoFocus: AutoFocusTarget | string | boolean</code>
+      <code>autoFocus: <code class="docs-api-property-type">AutoFocusTarget | string | boolean</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Where the dialog should focus on open.</p>
@@ -432,12 +464,12 @@ it is redundant since the dialog marks all outside content as <code>aria-hidden<
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>backdropClass: string | string[]</code>
+      <code>backdropClass: <code class="docs-api-property-type">string | string[]</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Optional CSS class or classes applied to the overlay backdrop.</p>
@@ -445,12 +477,12 @@ it is redundant since the dialog marks all outside content as <code>aria-hidden<
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>closeOnDestroy: boolean</code>
+      <code>closeOnDestroy: <code class="docs-api-property-type">boolean</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Whether the dialog should close when the dialog service is destroyed. This is useful if
@@ -459,12 +491,12 @@ another service is wrapping the dialog and is managing the destruction instead.<
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>closeOnNavigation: boolean</code>
+      <code>closeOnNavigation: <code class="docs-api-property-type">boolean</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Whether the dialog should close when the user navigates backwards or forwards through browser
@@ -474,12 +506,12 @@ routing (<code>HashLocationStrategy</code> in the Angular router).</p>
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>closeOnOverlayDetachments: boolean</code>
+      <code>closeOnOverlayDetachments: <code class="docs-api-property-type">boolean</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Whether the dialog should close when the underlying overlay is detached. This is useful if
@@ -490,12 +522,12 @@ browser location changes.</p>
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>closePredicate: &lt;Result = unknown, Component = unknown, Config extends DialogConfig = DialogConfig&gt;(result: Result | undefined, config: Config, componentInstance: Component | null) =&gt; boolean</code>
+      <code>closePredicate: <code class="docs-api-property-type">&lt;Result = unknown, Component = unknown, Config extends DialogConfig = DialogConfig&gt;(result: Result | undefined, config: Config, componentInstance: Component | null) =&gt; boolean</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Function used to determine whether the dialog is allowed to close.</p>
@@ -503,15 +535,15 @@ browser location changes.</p>
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>container: Type&lt;C&gt; | {
+      <code>container: <code class="docs-api-property-type">Type&lt;C&gt; | {
     type: Type&lt;C&gt;;
     providers: (config: DialogConfig&lt;D, R, C&gt;) =&gt; StaticProvider[];
-}</code>
+}</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Component into which the dialog content will be rendered. Defaults to <code>CdkDialogContainer</code>.
@@ -521,12 +553,12 @@ to the dialog container.</p>
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>data: D | null</code>
+      <code>data: <code class="docs-api-property-type">D | null</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Data being injected into the child component.</p>
@@ -534,12 +566,12 @@ to the dialog container.</p>
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>direction: Direction</code>
+      <code>direction: <code class="docs-api-property-type">Direction</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Layout direction for the dialog&#39;s content.</p>
@@ -547,12 +579,12 @@ to the dialog container.</p>
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>disableAnimations: boolean</code>
+      <code>disableAnimations: <code class="docs-api-property-type">boolean</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Whether the built-in overlay animations should be disabled.</p>
@@ -560,12 +592,12 @@ to the dialog container.</p>
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>disableClose: boolean</code>
+      <code>disableClose: <code class="docs-api-property-type">boolean</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Whether the dialog closes with the escape key or pointer events outside the panel element.</p>
@@ -573,12 +605,12 @@ to the dialog container.</p>
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>hasBackdrop: boolean</code>
+      <code>hasBackdrop: <code class="docs-api-property-type">boolean</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Whether the dialog has a backdrop.</p>
@@ -586,12 +618,12 @@ to the dialog container.</p>
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>height: string</code>
+      <code>height: <code class="docs-api-property-type">string</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Height of the dialog.</p>
@@ -599,12 +631,12 @@ to the dialog container.</p>
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>id: string</code>
+      <code>id: <code class="docs-api-property-type">string</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>ID for the dialog. If omitted, a unique one will be generated.</p>
@@ -612,12 +644,12 @@ to the dialog container.</p>
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>injector: Injector</code>
+      <code>injector: <code class="docs-api-property-type">Injector</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Injector used for the instantiation of the component to be attached. If provided,
@@ -626,12 +658,12 @@ takes precedence over the injector indirectly provided by <code>ViewContainerRef
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>maxHeight: number | string</code>
+      <code>maxHeight: <code class="docs-api-property-type">number | string</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Max-height of the dialog. If a number is provided, assumes pixel units.</p>
@@ -639,12 +671,12 @@ takes precedence over the injector indirectly provided by <code>ViewContainerRef
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>maxWidth: number | string</code>
+      <code>maxWidth: <code class="docs-api-property-type">number | string</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Max-width of the dialog. If a number is provided, assumes pixel units.</p>
@@ -652,12 +684,12 @@ takes precedence over the injector indirectly provided by <code>ViewContainerRef
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>minHeight: number | string</code>
+      <code>minHeight: <code class="docs-api-property-type">number | string</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Min-height of the dialog. If a number is provided, assumes pixel units.</p>
@@ -665,12 +697,12 @@ takes precedence over the injector indirectly provided by <code>ViewContainerRef
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>minWidth: number | string</code>
+      <code>minWidth: <code class="docs-api-property-type">number | string</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Min-width of the dialog. If a number is provided, assumes pixel units.</p>
@@ -678,12 +710,12 @@ takes precedence over the injector indirectly provided by <code>ViewContainerRef
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>panelClass: string | string[]</code>
+      <code>panelClass: <code class="docs-api-property-type">string | string[]</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Optional CSS class or classes applied to the overlay panel.</p>
@@ -691,12 +723,12 @@ takes precedence over the injector indirectly provided by <code>ViewContainerRef
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>positionStrategy: PositionStrategy</code>
+      <code>positionStrategy: <code class="docs-api-property-type">PositionStrategy</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Strategy to use when positioning the dialog. Defaults to centering it on the page.</p>
@@ -704,12 +736,12 @@ takes precedence over the injector indirectly provided by <code>ViewContainerRef
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>providers: StaticProvider[] | ((dialogRef: R, config: DialogConfig&lt;D, R, C&gt;, container: C) =&gt; StaticProvider[])</code>
+      <code>providers: <code class="docs-api-property-type">StaticProvider[] | ((dialogRef: R, config: DialogConfig&lt;D, R, C&gt;, container: C) =&gt; StaticProvider[])</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Providers that will be exposed to the contents of the dialog. Can also
@@ -718,12 +750,12 @@ be provided as a function in order to generate the providers lazily.</p>
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>restoreFocus: boolean | string | HTMLElement</code>
+      <code>restoreFocus: <code class="docs-api-property-type">boolean | string | HTMLElement</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Whether the dialog should restore focus to the previously-focused element upon closing.
@@ -738,12 +770,12 @@ Has the following behavior based on the type that is passed in:</p>
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>role: DialogRole</code>
+      <code>role: <code class="docs-api-property-type">DialogRole</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>The ARIA role of the dialog element.</p>
@@ -751,12 +783,12 @@ Has the following behavior based on the type that is passed in:</p>
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>scrollStrategy: ScrollStrategy</code>
+      <code>scrollStrategy: <code class="docs-api-property-type">ScrollStrategy</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Scroll strategy to be used for the dialog. This determines how
@@ -765,12 +797,12 @@ the dialog responds to scrolling underneath the panel element.</p>
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>templateContext: Record&lt;string, any&gt; | (() =&gt; Record&lt;string, any&gt;)</code>
+      <code>templateContext: <code class="docs-api-property-type">Record&lt;string, any&gt; | (() =&gt; Record&lt;string, any&gt;)</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Context that will be passed to template-based dialogs.
@@ -779,12 +811,12 @@ A function can be passed in to resolve the context lazily.</p>
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>viewContainerRef: ViewContainerRef</code>
+      <code>viewContainerRef: <code class="docs-api-property-type">ViewContainerRef</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Where the attached component should live in Angular&#39;s <em>logical</em> component tree.
@@ -795,12 +827,12 @@ content will be rendered.</p>
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>width: string</code>
+      <code>width: <code class="docs-api-property-type">string</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Width of the dialog.</p>
@@ -808,8 +840,9 @@ content will be rendered.</p>
 </tr>
 
 
-    
-  </table>
+      
+    </table>
+  </div>
 
 
 
@@ -825,17 +858,18 @@ content will be rendered.</p>
   
 </h4><p class="docs-api-class-description"><p>Reference to a dialog opened via the Dialog service.</p>
 </p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
-  <table class="docs-api-properties-table">
-    <tr class="docs-api-properties-header-row">
-      <th class="docs-api-properties-th">Name</th>
-      <th class="docs-api-properties-th">Description</th>
-    </tr>
-    
+  <div class="docs-api-properties-card">
+    <table class="docs-api-properties-table">
+      <tr class="docs-api-properties-header-row">
+        <th class="docs-api-properties-th">Name</th>
+        <th class="docs-api-properties-th">Description</th>
+      </tr>
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>backdropClick: Observable&lt;MouseEvent&gt;</code>
+      <code>backdropClick: <code class="docs-api-property-type">Observable&lt;MouseEvent&gt;</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Emits when the backdrop of the dialog is clicked.</p>
@@ -843,12 +877,12 @@ content will be rendered.</p>
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>closed: Observable&lt;R | undefined&gt;</code>
+      <code>closed: <code class="docs-api-property-type">Observable&lt;R | undefined&gt;</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Emits when the dialog has been closed.</p>
@@ -856,12 +890,12 @@ content will be rendered.</p>
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>componentInstance: C | null</code>
+      <code>componentInstance: <code class="docs-api-property-type">C | null</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Instance of component opened into the dialog. Will be
@@ -870,12 +904,12 @@ null when the dialog is opened using a <code>TemplateRef</code>.</p>
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>componentRef: ComponentRef&lt;C&gt; | null</code>
+      <code>componentRef: <code class="docs-api-property-type">ComponentRef&lt;C&gt; | null</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p><code>ComponentRef</code> of the component opened into the dialog. Will be
@@ -884,24 +918,24 @@ null when the dialog is opened using a <code>TemplateRef</code>.</p>
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>config: DialogConfig&lt;any, DialogRef&lt;R, C&gt;, DialogContainer&gt;</code>
+      <code>config: <code class="docs-api-property-type">DialogConfig&lt;any, DialogRef&lt;R, C&gt;, DialogContainer&gt;</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"></td>
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>containerInstance: DialogContainer</code>
+      <code>containerInstance: <code class="docs-api-property-type">DialogContainer</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Instance of the container that is rendering out the dialog content.</p>
@@ -909,12 +943,12 @@ null when the dialog is opened using a <code>TemplateRef</code>.</p>
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>disableClose: boolean | undefined</code>
+      <code>disableClose: <code class="docs-api-property-type">boolean | undefined</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Whether the user is allowed to close the dialog.</p>
@@ -922,12 +956,12 @@ null when the dialog is opened using a <code>TemplateRef</code>.</p>
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>id: string</code>
+      <code>id: <code class="docs-api-property-type">string</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Unique ID for the dialog.</p>
@@ -935,12 +969,12 @@ null when the dialog is opened using a <code>TemplateRef</code>.</p>
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>keydownEvents: Observable&lt;KeyboardEvent&gt;</code>
+      <code>keydownEvents: <code class="docs-api-property-type">Observable&lt;KeyboardEvent&gt;</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Emits when on keyboard events within the dialog.</p>
@@ -948,12 +982,12 @@ null when the dialog is opened using a <code>TemplateRef</code>.</p>
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>outsidePointerEvents: Observable&lt;MouseEvent&gt;</code>
+      <code>outsidePointerEvents: <code class="docs-api-property-type">Observable&lt;MouseEvent&gt;</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Emits on pointer events that happen outside of the dialog.</p>
@@ -961,264 +995,292 @@ null when the dialog is opened using a <code>TemplateRef</code>.</p>
 </tr>
 
 
-    
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>overlayRef: OverlayRef</code>
+      <code>overlayRef: <code class="docs-api-property-type">OverlayRef</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"></td>
 </tr>
 
 
-    
-  </table>
+      
+    </table>
+  </div>
 
 
 <h5 class="docs-api-h5 docs-api-method-header">Methods</h5>
   
     
 
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">addPanelClass
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Add a CSS class or an array of classes to the overlay pane.</p>
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell">addPanelClass
+          (<span class="docs-api-method-parameter-name">classes:
+            </span>
+            <code class="docs-api-method-parameter-type">string | string[]</code>): <code class="docs-api-method-returns-type">this</code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Add a CSS class or an array of classes to the overlay pane.</p>
 
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-parameters-header-row">
-      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+      </td>
+    </tr><thead>
+      <tr class="docs-api-method-parameters-header-row">
+        <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+      </tr>
+    </thead>
+    
+    <tr class="docs-api-method-parameter-row">
+      <td class="docs-api-method-parameter-cell">
+        <p class="docs-api-method-parameter-name">
+          classes</p>
+        <code class="docs-api-method-parameter-type">string | string[]</code>
+      </td>
+      <td class="docs-api-method-parameter-description-cell">
+        <p class="docs-api-method-parameter-description">
+          
+        </p>
+      </td>
     </tr>
-  </thead>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        classes</p>
-      <code class="docs-api-method-parameter-type">string | string[]</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        
-      </p>
-    </td>
-  </tr>
-  <thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
-    </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">this</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        
-      </p>
-    </td>
-  </tr></table>
+    <thead>
+      <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+      </tr>
+    </thead>
+    <tr>
+      <td class="docs-api-method-returns-type-cell">
+        <code class="docs-api-method-returns-type">this</code>
+      </td>
+      <td class="docs-api-method-returns-description-cell">
+        <p class="docs-api-method-returns-description">
+          
+        </p>
+      </td>
+    </tr></table>
+</div>
 
 
   
     
 
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">close
-      </th>
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell">close
+          (<span class="docs-api-method-parameter-name">result<span class="docs-api-method-parameter-optional-marker">?</span>:
+            </span>
+            <code class="docs-api-method-parameter-type">R</code>, <span class="docs-api-method-parameter-name">options<span class="docs-api-method-parameter-optional-marker">?</span>:
+            </span>
+            <code class="docs-api-method-parameter-type">DialogCloseOptions</code>): <code class="docs-api-method-returns-type">void</code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Close the dialog.</p>
+
+      </td>
+    </tr><thead>
+      <tr class="docs-api-method-parameters-header-row">
+        <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+      </tr>
+    </thead>
+    
+    <tr class="docs-api-method-parameter-row">
+      <td class="docs-api-method-parameter-cell">
+        <p class="docs-api-method-parameter-name">
+          result<span class="docs-api-method-parameter-optional-marker">?</span></p>
+        <code class="docs-api-method-parameter-type">R</code>
+      </td>
+      <td class="docs-api-method-parameter-description-cell">
+        <p class="docs-api-method-parameter-description">
+          <p>Optional result to return to the dialog opener.</p>
+
+        </p>
+      </td>
     </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Close the dialog.</p>
+    
+    <tr class="docs-api-method-parameter-row">
+      <td class="docs-api-method-parameter-cell">
+        <p class="docs-api-method-parameter-name">
+          options<span class="docs-api-method-parameter-optional-marker">?</span></p>
+        <code class="docs-api-method-parameter-type">DialogCloseOptions</code>
+      </td>
+      <td class="docs-api-method-parameter-description-cell">
+        <p class="docs-api-method-parameter-description">
+          <p>Additional options to customize the closing behavior.</p>
 
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-parameters-header-row">
-      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+        </p>
+      </td>
     </tr>
-  </thead>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        result<span class="docs-api-method-parameter-optional-marker">?</span></p>
-      <code class="docs-api-method-parameter-type">R</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        <p>Optional result to return to the dialog opener.</p>
-
-      </p>
-    </td>
-  </tr>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        options<span class="docs-api-method-parameter-optional-marker">?</span></p>
-      <code class="docs-api-method-parameter-type">DialogCloseOptions</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        <p>Additional options to customize the closing behavior.</p>
-
-      </p>
-    </td>
-  </tr>
-  </table>
+    </table>
+</div>
 
 
   
     
 
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">removePanelClass
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Remove a CSS class or an array of classes from the overlay pane.</p>
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell">removePanelClass
+          (<span class="docs-api-method-parameter-name">classes:
+            </span>
+            <code class="docs-api-method-parameter-type">string | string[]</code>): <code class="docs-api-method-returns-type">this</code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Remove a CSS class or an array of classes from the overlay pane.</p>
 
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-parameters-header-row">
-      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+      </td>
+    </tr><thead>
+      <tr class="docs-api-method-parameters-header-row">
+        <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+      </tr>
+    </thead>
+    
+    <tr class="docs-api-method-parameter-row">
+      <td class="docs-api-method-parameter-cell">
+        <p class="docs-api-method-parameter-name">
+          classes</p>
+        <code class="docs-api-method-parameter-type">string | string[]</code>
+      </td>
+      <td class="docs-api-method-parameter-description-cell">
+        <p class="docs-api-method-parameter-description">
+          
+        </p>
+      </td>
     </tr>
-  </thead>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        classes</p>
-      <code class="docs-api-method-parameter-type">string | string[]</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        
-      </p>
-    </td>
-  </tr>
-  <thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
-    </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">this</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        
-      </p>
-    </td>
-  </tr></table>
+    <thead>
+      <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+      </tr>
+    </thead>
+    <tr>
+      <td class="docs-api-method-returns-type-cell">
+        <code class="docs-api-method-returns-type">this</code>
+      </td>
+      <td class="docs-api-method-returns-description-cell">
+        <p class="docs-api-method-returns-description">
+          
+        </p>
+      </td>
+    </tr></table>
+</div>
 
 
   
     
 
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">updatePosition
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Updates the position of the dialog based on the current position strategy.</p>
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell">updatePosition
+          (): <code class="docs-api-method-returns-type">this</code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Updates the position of the dialog based on the current position strategy.</p>
 
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
-    </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">this</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        
-      </p>
-    </td>
-  </tr></table>
+      </td>
+    </tr><thead>
+      <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+      </tr>
+    </thead>
+    <tr>
+      <td class="docs-api-method-returns-type-cell">
+        <code class="docs-api-method-returns-type">this</code>
+      </td>
+      <td class="docs-api-method-returns-description-cell">
+        <p class="docs-api-method-returns-description">
+          
+        </p>
+      </td>
+    </tr></table>
+</div>
 
 
   
     
 
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">updateSize
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Updates the dialog&#39;s width and height.</p>
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell">updateSize
+          (<span class="docs-api-method-parameter-name">width:
+            </span>
+            <code class="docs-api-method-parameter-type">string | number = &#39;&#39;</code>, <span class="docs-api-method-parameter-name">height:
+            </span>
+            <code class="docs-api-method-parameter-type">string | number = &#39;&#39;</code>): <code class="docs-api-method-returns-type">this</code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Updates the dialog&#39;s width and height.</p>
 
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-parameters-header-row">
-      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
-    </tr>
-  </thead>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        width</p>
-      <code class="docs-api-method-parameter-type">string | number = &#39;&#39;</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        <p>New width of the dialog.</p>
+      </td>
+    </tr><thead>
+      <tr class="docs-api-method-parameters-header-row">
+        <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+      </tr>
+    </thead>
+    
+    <tr class="docs-api-method-parameter-row">
+      <td class="docs-api-method-parameter-cell">
+        <p class="docs-api-method-parameter-name">
+          width</p>
+        <code class="docs-api-method-parameter-type">string | number = &#39;&#39;</code>
+      </td>
+      <td class="docs-api-method-parameter-description-cell">
+        <p class="docs-api-method-parameter-description">
+          <p>New width of the dialog.</p>
 
-      </p>
-    </td>
-  </tr>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        height</p>
-      <code class="docs-api-method-parameter-type">string | number = &#39;&#39;</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        <p>New height of the dialog.</p>
-
-      </p>
-    </td>
-  </tr>
-  <thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+        </p>
+      </td>
     </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">this</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        
-      </p>
-    </td>
-  </tr></table>
+    
+    <tr class="docs-api-method-parameter-row">
+      <td class="docs-api-method-parameter-cell">
+        <p class="docs-api-method-parameter-name">
+          height</p>
+        <code class="docs-api-method-parameter-type">string | number = &#39;&#39;</code>
+      </td>
+      <td class="docs-api-method-parameter-description-cell">
+        <p class="docs-api-method-parameter-description">
+          <p>New height of the dialog.</p>
+
+        </p>
+      </td>
+    </tr>
+    <thead>
+      <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+      </tr>
+    </thead>
+    <tr>
+      <td class="docs-api-method-returns-type-cell">
+        <code class="docs-api-method-returns-type">this</code>
+      </td>
+      <td class="docs-api-method-returns-description-cell">
+        <p class="docs-api-method-returns-description">
+          
+        </p>
+      </td>
+    </tr></table>
+</div>
 
 
   
@@ -1237,17 +1299,18 @@ null when the dialog is opened using a <code>TemplateRef</code>.</p>
   <code>DialogCloseOptions</code>
 </h4><p class="docs-api-interface-description"><p>Additional options that can be passed in when closing a dialog.</p>
 </p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
-  <table class="docs-api-properties-table">
-    <tr class="docs-api-properties-header-row">
-      <th class="docs-api-properties-th">Name</th>
-      <th class="docs-api-properties-th">Description</th>
-    </tr>
-    
+  <div class="docs-api-properties-card">
+    <table class="docs-api-properties-table">
+      <tr class="docs-api-properties-header-row">
+        <th class="docs-api-properties-th">Name</th>
+        <th class="docs-api-properties-th">Description</th>
+      </tr>
       
+        
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>focusOrigin: FocusOrigin</code>
+      <code>focusOrigin: <code class="docs-api-property-type">FocusOrigin</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Focus original to use when restoring focus.</p>
@@ -1255,8 +1318,9 @@ null when the dialog is opened using a <code>TemplateRef</code>.</p>
 </tr>
 
 
-    
-  </table>
+      
+    </table>
+  </div>
 
 
 
@@ -1271,13 +1335,16 @@ null when the dialog is opened using a <code>TemplateRef</code>.</p>
       
       
 
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">throwDialogContentAlreadyAttachedError
-      </th>
-    </tr>
-  </thead></table>
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell">throwDialogContentAlreadyAttachedError
+          (): <code class="docs-api-method-returns-type"></code>
+        </th>
+      </tr>
+    </thead></table>
+</div>
 
 
     <h3 id="cdk-dialog-type_aliases" class="docs-header-link docs-api-h3">
