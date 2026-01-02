@@ -328,6 +328,22 @@ showing on touch devices.</li>
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>detectHoverCapability: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Whether the tooltip should use a media query to detect if the device is able to hover.
+Note that this may affect tests that run in a headless browser which reports that it&#39;s
+unable to hover. In such cases you may need to include an additional timeout, because
+the tooltip will fall back to treating the device as a touch screen.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
       <code>disableTooltipInteractivity: boolean</code>
     </p>
   </td>
