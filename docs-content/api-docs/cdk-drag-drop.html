@@ -39,7 +39,11 @@
   <code>DragDrop</code>
   
 </h4><p class="docs-api-class-description"><p>Service that allows for drag-and-drop functionality to be attached to DOM elements.</p>
-</p>
+</p><div class="docs-api-class-deprecated-marker" deprecated-message="Use the `createDragRef` or `createDropListRef` function for better tree shaking.
+Will be removed in v23. Will be removed in v23.0.0 or later."
+  >
+  Deprecated
+</div>
 
 
 <h5 class="docs-api-h5 docs-api-method-header">Methods</h5>
@@ -50,12 +54,15 @@
   <table class="docs-api-method-table">
     <thead>
       <tr class="docs-api-method-name-row">
-        <th colspan="2" class="docs-api-method-name-cell">createDrag
+        <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-deprecated-marker" deprecated-message="Use the `createDragRef` function that provides better tree shaking. Will be removed in v23.0.0 or later."
+  >
+              Deprecated
+            </div>createDrag
           (<span class="docs-api-method-parameter-name">element:
             </span>
-            <code class="docs-api-method-parameter-type">HTMLElement | ElementRef&lt;HTMLElement&gt;</code>, <span class="docs-api-method-parameter-name">config:
+            <code class="docs-api-method-parameter-type">HTMLElement | ElementRef&lt;HTMLElement&gt;</code>, <span class="docs-api-method-parameter-name">config<span class="docs-api-method-parameter-optional-marker">?</span>:
             </span>
-            <code class="docs-api-method-parameter-type">DragRefConfig = DEFAULT_CONFIG</code>): <code class="docs-api-method-returns-type">DragRef&lt;T&gt;</code>
+            <code class="docs-api-method-parameter-type">DragRefConfig</code>): <code class="docs-api-method-returns-type">DragRef&lt;T&gt;</code>
         </th>
       </tr>
     </thead><tr class="docs-api-method-description-row">
@@ -86,8 +93,8 @@
     <tr class="docs-api-method-parameter-row">
       <td class="docs-api-method-parameter-cell">
         <p class="docs-api-method-parameter-name">
-          config</p>
-        <code class="docs-api-method-parameter-type">DragRefConfig = DEFAULT_CONFIG</code>
+          config<span class="docs-api-method-parameter-optional-marker">?</span></p>
+        <code class="docs-api-method-parameter-type">DragRefConfig</code>
       </td>
       <td class="docs-api-method-parameter-description-cell">
         <p class="docs-api-method-parameter-description">
@@ -121,7 +128,10 @@
   <table class="docs-api-method-table">
     <thead>
       <tr class="docs-api-method-name-row">
-        <th colspan="2" class="docs-api-method-name-cell">createDropList
+        <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-deprecated-marker" deprecated-message="Use the `createDropListRef` function that provides better tree shaking. Will be removed in v23.0.0 or later."
+  >
+              Deprecated
+            </div>createDropList
           (<span class="docs-api-method-parameter-name">element:
             </span>
             <code class="docs-api-method-parameter-type">HTMLElement | ElementRef&lt;HTMLElement&gt;</code>): <code class="docs-api-method-returns-type">DropListRef&lt;T&gt;</code>
@@ -4461,6 +4471,172 @@ items and drop lists within a module or a component.</p>
       <span header-link="functions"></span>
       Functions
     </h3>
+    
+      
+      
+
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell">createDragRef
+          (<span class="docs-api-method-parameter-name">injector:
+            </span>
+            <code class="docs-api-method-parameter-type">Injector</code>, <span class="docs-api-method-parameter-name">element:
+            </span>
+            <code class="docs-api-method-parameter-type">HTMLElement | ElementRef&lt;HTMLElement&gt;</code>, <span class="docs-api-method-parameter-name">config:
+            </span>
+            <code class="docs-api-method-parameter-type">DragRefConfig = {
+    dragStartThreshold: 5,
+    pointerDirectionChangeThreshold: 5,
+}</code>): <code class="docs-api-method-returns-type">DragRef&lt;T&gt;</code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Creates a <code>DragRef</code> for an element, turning it into a draggable item.</p>
+
+      </td>
+    </tr><thead>
+      <tr class="docs-api-method-parameters-header-row">
+        <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+      </tr>
+    </thead>
+    
+    <tr class="docs-api-method-parameter-row">
+      <td class="docs-api-method-parameter-cell">
+        <p class="docs-api-method-parameter-name">
+          injector</p>
+        <code class="docs-api-method-parameter-type">Injector</code>
+      </td>
+      <td class="docs-api-method-parameter-description-cell">
+        <p class="docs-api-method-parameter-description">
+          <p>Injector used to resolve dependencies.</p>
+
+        </p>
+      </td>
+    </tr>
+    
+    <tr class="docs-api-method-parameter-row">
+      <td class="docs-api-method-parameter-cell">
+        <p class="docs-api-method-parameter-name">
+          element</p>
+        <code class="docs-api-method-parameter-type">HTMLElement | ElementRef&lt;HTMLElement&gt;</code>
+      </td>
+      <td class="docs-api-method-parameter-description-cell">
+        <p class="docs-api-method-parameter-description">
+          <p>Element to which to attach the dragging functionality.</p>
+
+        </p>
+      </td>
+    </tr>
+    
+    <tr class="docs-api-method-parameter-row">
+      <td class="docs-api-method-parameter-cell">
+        <p class="docs-api-method-parameter-name">
+          config</p>
+        <code class="docs-api-method-parameter-type">DragRefConfig = {
+    dragStartThreshold: 5,
+    pointerDirectionChangeThreshold: 5,
+}</code>
+      </td>
+      <td class="docs-api-method-parameter-description-cell">
+        <p class="docs-api-method-parameter-description">
+          <p>Object used to configure the dragging behavior.</p>
+
+        </p>
+      </td>
+    </tr>
+    <thead>
+      <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+      </tr>
+    </thead>
+    <tr>
+      <td class="docs-api-method-returns-type-cell">
+        <code class="docs-api-method-returns-type">DragRef&lt;T&gt;</code>
+      </td>
+      <td class="docs-api-method-returns-description-cell">
+        <p class="docs-api-method-returns-description">
+          
+        </p>
+      </td>
+    </tr></table>
+</div>
+
+
+    
+      
+      
+
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell">createDropListRef
+          (<span class="docs-api-method-parameter-name">injector:
+            </span>
+            <code class="docs-api-method-parameter-type">Injector</code>, <span class="docs-api-method-parameter-name">element:
+            </span>
+            <code class="docs-api-method-parameter-type">HTMLElement | ElementRef&lt;HTMLElement&gt;</code>): <code class="docs-api-method-returns-type">DropListRef&lt;T&gt;</code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Creates a <code>DropListRef</code> for an element, turning it into a drop list.</p>
+
+      </td>
+    </tr><thead>
+      <tr class="docs-api-method-parameters-header-row">
+        <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+      </tr>
+    </thead>
+    
+    <tr class="docs-api-method-parameter-row">
+      <td class="docs-api-method-parameter-cell">
+        <p class="docs-api-method-parameter-name">
+          injector</p>
+        <code class="docs-api-method-parameter-type">Injector</code>
+      </td>
+      <td class="docs-api-method-parameter-description-cell">
+        <p class="docs-api-method-parameter-description">
+          <p>Injector used to resolve dependencies.</p>
+
+        </p>
+      </td>
+    </tr>
+    
+    <tr class="docs-api-method-parameter-row">
+      <td class="docs-api-method-parameter-cell">
+        <p class="docs-api-method-parameter-name">
+          element</p>
+        <code class="docs-api-method-parameter-type">HTMLElement | ElementRef&lt;HTMLElement&gt;</code>
+      </td>
+      <td class="docs-api-method-parameter-description-cell">
+        <p class="docs-api-method-parameter-description">
+          <p>Element to which to attach the drop list functionality.</p>
+
+        </p>
+      </td>
+    </tr>
+    <thead>
+      <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+      </tr>
+    </thead>
+    <tr>
+      <td class="docs-api-method-returns-type-cell">
+        <code class="docs-api-method-returns-type">DropListRef&lt;T&gt;</code>
+      </td>
+      <td class="docs-api-method-returns-description-cell">
+        <p class="docs-api-method-returns-description">
+          
+        </p>
+      </td>
+    </tr></table>
+</div>
+
+
     
       
       
