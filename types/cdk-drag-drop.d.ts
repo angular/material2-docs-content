@@ -1,7 +1,6 @@
 import * as i0 from '@angular/core';
 import { AfterViewInit, OnDestroy, TemplateRef } from '@angular/core';
 import { CdkDragDrop, CdkDrag } from '@angular/cdk/drag-drop';
-import { MatTable } from '@angular/material/table';
 
 /**
  * @title Drag&Drop position locking
@@ -194,25 +193,6 @@ declare class CdkDragDropSortPredicateExample {
     static ɵcmp: i0.ɵɵComponentDeclaration<CdkDragDropSortPredicateExample, "cdk-drag-drop-sort-predicate-example", never, {}, {}, never, never, true, never>;
 }
 
-interface PeriodicElement {
-    name: string;
-    position: number;
-    weight: number;
-    symbol: string;
-    quantity: number;
-}
-/**
- * @title Drag&Drop table
- */
-declare class CdkDragDropTableExample {
-    table: MatTable<PeriodicElement>;
-    displayedColumns: string[];
-    dataSource: PeriodicElement[];
-    drop(event: CdkDragDrop<string>): void;
-    static ɵfac: i0.ɵɵFactoryDeclaration<CdkDragDropTableExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<CdkDragDropTableExample, "cdk-drag-drop-table-example", never, {}, {}, never, never, true, never>;
-}
-
 /**
  * @title Drag&Drop horizontal wrapping list
  */
@@ -221,17 +201,6 @@ declare class CdkDragDropMixedSortingExample {
     drop(event: CdkDragDrop<string[]>): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<CdkDragDropMixedSortingExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<CdkDragDropMixedSortingExample, "cdk-drag-drop-mixed-sorting-example", never, {}, {}, never, never, true, never>;
-}
-
-/**
- * @title Drag&Drop tabs
- */
-declare class CdkDragDropTabsExample {
-    protected tabs: string[];
-    protected selectedTabIndex: number;
-    drop(event: CdkDragDrop<string[]>): void;
-    static ɵfac: i0.ɵɵFactoryDeclaration<CdkDragDropTabsExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<CdkDragDropTabsExample, "cdk-drag-drop-tabs-example", never, {}, {}, never, never, true, never>;
 }
 
 /**
@@ -255,4 +224,4 @@ declare class CdkDragDropScrollableExample {
     static ɵcmp: i0.ɵɵComponentDeclaration<CdkDragDropScrollableExample, "cdk-drag-drop-scrollable-example", never, {}, {}, never, never, true, never>;
 }
 
-export { CdkDragDropAxisLockExample, CdkDragDropBoundaryExample, CdkDragDropConnectedSortingExample, CdkDragDropConnectedSortingGroupExample, CdkDragDropCopyListExample, CdkDragDropCustomPlaceholderExample, CdkDragDropCustomPreviewExample, CdkDragDropDelayExample, CdkDragDropDisabledExample, CdkDragDropDisabledSortingExample, CdkDragDropEnterPredicateExample, CdkDragDropFreeDragPositionExample, CdkDragDropHandleExample, CdkDragDropHorizontalSortingExample, CdkDragDropMixedSortingExample, CdkDragDropOverviewExample, CdkDragDropRootElementExample, CdkDragDropScrollableExample, CdkDragDropSortPredicateExample, CdkDragDropSortingExample, CdkDragDropTableExample, CdkDragDropTabsExample };
+export { CdkDragDropAxisLockExample, CdkDragDropBoundaryExample, CdkDragDropConnectedSortingExample, CdkDragDropConnectedSortingGroupExample, CdkDragDropCopyListExample, CdkDragDropCustomPlaceholderExample, CdkDragDropCustomPreviewExample, CdkDragDropDelayExample, CdkDragDropDisabledExample, CdkDragDropDisabledSortingExample, CdkDragDropEnterPredicateExample, CdkDragDropFreeDragPositionExample, CdkDragDropHandleExample, CdkDragDropHorizontalSortingExample, CdkDragDropMixedSortingExample, CdkDragDropOverviewExample, CdkDragDropRootElementExample, CdkDragDropScrollableExample, CdkDragDropSortPredicateExample, CdkDragDropSortingExample };

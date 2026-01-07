@@ -349,26 +349,6 @@ const EXAMPLE_COMPONENTS = {
     "primaryFile": "cdk-drag-drop-sorting-example.ts",
     "importPath": "cdk/drag-drop"
   },
-  "cdk-drag-drop-table": {
-    "packagePath": "cdk/drag-drop/cdk-drag-drop-table",
-    "title": "Drag&Drop table",
-    "componentName": "CdkDragDropTableExample",
-    "files": ["cdk-drag-drop-table-example.ts", "cdk-drag-drop-table-example.html", "cdk-drag-drop-table-example.css"],
-    "selector": "cdk-drag-drop-table-example",
-    "additionalComponents": [],
-    "primaryFile": "cdk-drag-drop-table-example.ts",
-    "importPath": "cdk/drag-drop"
-  },
-  "cdk-drag-drop-tabs": {
-    "packagePath": "cdk/drag-drop/cdk-drag-drop-tabs",
-    "title": "Drag&Drop tabs",
-    "componentName": "CdkDragDropTabsExample",
-    "files": ["cdk-drag-drop-tabs-example.ts", "cdk-drag-drop-tabs-example.html", "cdk-drag-drop-tabs-example.css"],
-    "selector": "cdk-drag-drop-tabs-example",
-    "additionalComponents": [],
-    "primaryFile": "cdk-drag-drop-tabs-example.ts",
-    "importPath": "cdk/drag-drop"
-  },
   "breakpoint-observer-overview": {
     "packagePath": "cdk/layout/breakpoint-observer-overview",
     "title": "Respond to viewport changes with BreakpointObserver",
@@ -2899,6 +2879,16 @@ const EXAMPLE_COMPONENTS = {
     "primaryFile": "table-column-styling-example.ts",
     "importPath": "material/table"
   },
+  "table-drag-drop": {
+    "packagePath": "material/table/table-drag-drop",
+    "title": "Table with drag&drop support",
+    "componentName": "TableDragDropExample",
+    "files": ["table-drag-drop-example.ts", "table-drag-drop-example.html", "table-drag-drop-example.css"],
+    "selector": "table-drag-drop-example",
+    "additionalComponents": [],
+    "primaryFile": "table-drag-drop-example.ts",
+    "importPath": "material/table"
+  },
   "table-dynamic-array-data": {
     "packagePath": "material/table/table-dynamic-array-data",
     "title": "Adding and removing data when using an array-based datasource.",
@@ -3257,6 +3247,16 @@ const EXAMPLE_COMPONENTS = {
     "selector": "tab-group-custom-label-example",
     "additionalComponents": [],
     "primaryFile": "tab-group-custom-label-example.ts",
+    "importPath": "material/tabs"
+  },
+  "tab-group-drag-drop": {
+    "packagePath": "material/tabs/tab-group-drag-drop",
+    "title": "Tabs with drag*drop integration.",
+    "componentName": "TabGroupDragDropExample",
+    "files": ["tab-group-drag-drop-example.ts", "tab-group-drag-drop-example.html", "tab-group-drag-drop-example.css"],
+    "selector": "tab-group-drag-drop-example",
+    "additionalComponents": [],
+    "primaryFile": "tab-group-drag-drop-example.ts",
     "importPath": "material/tabs"
   },
   "tab-group-dynamic-height": {
@@ -3751,10 +3751,6 @@ async function loadExample(id) {
     case 'cdk-drag-drop-sort-predicate':
       return import('@angular/components-examples/cdk/drag-drop');
     case 'cdk-drag-drop-sorting':
-      return import('@angular/components-examples/cdk/drag-drop');
-    case 'cdk-drag-drop-table':
-      return import('@angular/components-examples/cdk/drag-drop');
-    case 'cdk-drag-drop-tabs':
       return import('@angular/components-examples/cdk/drag-drop');
     case 'breakpoint-observer-overview':
       return import('@angular/components-examples/cdk/layout');
@@ -4262,6 +4258,8 @@ async function loadExample(id) {
       return import('@angular/components-examples/material/table');
     case 'table-column-styling':
       return import('@angular/components-examples/material/table');
+    case 'table-drag-drop':
+      return import('@angular/components-examples/material/table');
     case 'table-dynamic-array-data':
       return import('@angular/components-examples/material/table');
     case 'table-dynamic-columns':
@@ -4333,6 +4331,8 @@ async function loadExample(id) {
     case 'tab-group-basic':
       return import('@angular/components-examples/material/tabs');
     case 'tab-group-custom-label':
+      return import('@angular/components-examples/material/tabs');
+    case 'tab-group-drag-drop':
       return import('@angular/components-examples/material/tabs');
     case 'tab-group-dynamic-height':
       return import('@angular/components-examples/material/tabs');

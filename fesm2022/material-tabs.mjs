@@ -1,5 +1,5 @@
 import * as i0 from '@angular/core';
-import { Component } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 import * as i1 from '@angular/material/tabs';
 import { MatTabsModule } from '@angular/material/tabs';
 import { Observable } from 'rxjs';
@@ -16,6 +16,7 @@ import * as i2 from '@angular/material/input';
 import { MatInputModule } from '@angular/material/input';
 import * as i1$1 from '@angular/material/form-field';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { moveItemInArray, CdkDrag, CdkDropList } from '@angular/cdk/drag-drop';
 
 class TabGroupAlignExample {
   static ɵfac = i0.ɵɵngDeclareFactory({
@@ -948,5 +949,85 @@ i0.ɵɵngDeclareClassMetadata({
   }]
 });
 
-export { TabGroupAlignExample, TabGroupAnimationsExample, TabGroupAsyncExample, TabGroupBasicExample, TabGroupCustomLabelExample, TabGroupDynamicExample, TabGroupDynamicHeightExample, TabGroupHarnessExample, TabGroupHeaderBelowExample, TabGroupInkBarExample, TabGroupLazyLoadedExample, TabGroupPaginatedExample, TabGroupPreserveContentExample, TabGroupStretchedExample, TabNavBarBasicExample };
+class TabGroupDragDropExample {
+  tabs = ['One', 'Two', 'Three', 'Four', 'Five'];
+  selectedTabIndex = 0;
+  drop(event) {
+    const prevActive = this.tabs[this.selectedTabIndex];
+    moveItemInArray(this.tabs, event.previousIndex, event.currentIndex);
+    this.selectedTabIndex = this.tabs.indexOf(prevActive);
+  }
+  static ɵfac = i0.ɵɵngDeclareFactory({
+    minVersion: "12.0.0",
+    version: "21.0.3",
+    ngImport: i0,
+    type: TabGroupDragDropExample,
+    deps: [],
+    target: i0.ɵɵFactoryTarget.Component
+  });
+  static ɵcmp = i0.ɵɵngDeclareComponent({
+    minVersion: "17.0.0",
+    version: "21.0.3",
+    type: TabGroupDragDropExample,
+    isStandalone: true,
+    selector: "tab-group-drag-drop-example",
+    ngImport: i0,
+    template: "<mat-tab-group\n  cdkDropList\n  cdkDropListOrientation=\"horizontal\"\n  (cdkDropListDropped)=\"drop($event)\"\n  cdkDropListElementContainer=\".mat-mdc-tab-labels\"\n  class=\"example-drag-tabs\"\n  [(selectedIndex)]=\"selectedTabIndex\"\n  animationDuration=\"0\">\n  @for (tab of tabs; track $index) {\n    <mat-tab>\n      <ng-template mat-tab-label>\n        <span\n          cdkDrag\n          cdkDragPreviewClass=\"example-drag-tabs-preview\"\n          cdkDragRootElement=\".mat-mdc-tab\">{{tab}}</span>\n      </ng-template>\n\n      <h3>Content for {{tab}}</h3>\n\n      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem perspiciatis in delectus\n      reprehenderit, molestias ullam nostrum odit, modi consequatur harum beatae? Sapiente\n      voluptatibus illo natus assumenda hic quasi dolor et laborum veniam! Molestiae architecto\n      nesciunt est quo nisi? Nostrum repellendus quibusdam laudantium? Optio architecto explicabo\n      labore sapiente cum alias nobis!\n    </mat-tab>\n  }\n</mat-tab-group>\n",
+    styles: [".example-drag-tabs.cdk-drop-list-dragging {\n  pointer-events: none;\n}\n\n.example-drag-tabs-preview.cdk-drag-animating {\n  transition: all 250ms cubic-bezier(0, 0, 0.2, 1);\n}\n\n.mat-mdc-tab.example-drag-tabs-preview {\n  outline: dashed 1px #ccc;\n  outline-offset: 4px;\n}\n\n.example-drag-tabs .cdk-drag-placeholder {\n  opacity: 0.5;\n}\n\n"],
+    dependencies: [{
+      kind: "directive",
+      type: CdkDrag,
+      selector: "[cdkDrag]",
+      inputs: ["cdkDragData", "cdkDragLockAxis", "cdkDragRootElement", "cdkDragBoundary", "cdkDragStartDelay", "cdkDragFreeDragPosition", "cdkDragDisabled", "cdkDragConstrainPosition", "cdkDragPreviewClass", "cdkDragPreviewContainer", "cdkDragScale"],
+      outputs: ["cdkDragStarted", "cdkDragReleased", "cdkDragEnded", "cdkDragEntered", "cdkDragExited", "cdkDragDropped", "cdkDragMoved"],
+      exportAs: ["cdkDrag"]
+    }, {
+      kind: "directive",
+      type: CdkDropList,
+      selector: "[cdkDropList], cdk-drop-list",
+      inputs: ["cdkDropListConnectedTo", "cdkDropListData", "cdkDropListOrientation", "id", "cdkDropListLockAxis", "cdkDropListDisabled", "cdkDropListSortingDisabled", "cdkDropListEnterPredicate", "cdkDropListSortPredicate", "cdkDropListAutoScrollDisabled", "cdkDropListAutoScrollStep", "cdkDropListElementContainer", "cdkDropListHasAnchor"],
+      outputs: ["cdkDropListDropped", "cdkDropListEntered", "cdkDropListExited", "cdkDropListSorted"],
+      exportAs: ["cdkDropList"]
+    }, {
+      kind: "ngmodule",
+      type: MatTabsModule
+    }, {
+      kind: "directive",
+      type: i1.MatTabLabel,
+      selector: "[mat-tab-label], [matTabLabel]"
+    }, {
+      kind: "component",
+      type: i1.MatTab,
+      selector: "mat-tab",
+      inputs: ["disabled", "label", "aria-label", "aria-labelledby", "labelClass", "bodyClass", "id"],
+      exportAs: ["matTab"]
+    }, {
+      kind: "component",
+      type: i1.MatTabGroup,
+      selector: "mat-tab-group",
+      inputs: ["color", "fitInkBarToContent", "mat-stretch-tabs", "mat-align-tabs", "dynamicHeight", "selectedIndex", "headerPosition", "animationDuration", "contentTabIndex", "disablePagination", "disableRipple", "preserveContent", "backgroundColor", "aria-label", "aria-labelledby"],
+      outputs: ["selectedIndexChange", "focusChange", "animationDone", "selectedTabChange"],
+      exportAs: ["matTabGroup"]
+    }],
+    encapsulation: i0.ViewEncapsulation.None
+  });
+}
+i0.ɵɵngDeclareClassMetadata({
+  minVersion: "12.0.0",
+  version: "21.0.3",
+  ngImport: i0,
+  type: TabGroupDragDropExample,
+  decorators: [{
+    type: Component,
+    args: [{
+      selector: 'tab-group-drag-drop-example',
+      imports: [CdkDrag, CdkDropList, MatTabsModule],
+      encapsulation: ViewEncapsulation.None,
+      template: "<mat-tab-group\n  cdkDropList\n  cdkDropListOrientation=\"horizontal\"\n  (cdkDropListDropped)=\"drop($event)\"\n  cdkDropListElementContainer=\".mat-mdc-tab-labels\"\n  class=\"example-drag-tabs\"\n  [(selectedIndex)]=\"selectedTabIndex\"\n  animationDuration=\"0\">\n  @for (tab of tabs; track $index) {\n    <mat-tab>\n      <ng-template mat-tab-label>\n        <span\n          cdkDrag\n          cdkDragPreviewClass=\"example-drag-tabs-preview\"\n          cdkDragRootElement=\".mat-mdc-tab\">{{tab}}</span>\n      </ng-template>\n\n      <h3>Content for {{tab}}</h3>\n\n      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem perspiciatis in delectus\n      reprehenderit, molestias ullam nostrum odit, modi consequatur harum beatae? Sapiente\n      voluptatibus illo natus assumenda hic quasi dolor et laborum veniam! Molestiae architecto\n      nesciunt est quo nisi? Nostrum repellendus quibusdam laudantium? Optio architecto explicabo\n      labore sapiente cum alias nobis!\n    </mat-tab>\n  }\n</mat-tab-group>\n",
+      styles: [".example-drag-tabs.cdk-drop-list-dragging {\n  pointer-events: none;\n}\n\n.example-drag-tabs-preview.cdk-drag-animating {\n  transition: all 250ms cubic-bezier(0, 0, 0.2, 1);\n}\n\n.mat-mdc-tab.example-drag-tabs-preview {\n  outline: dashed 1px #ccc;\n  outline-offset: 4px;\n}\n\n.example-drag-tabs .cdk-drag-placeholder {\n  opacity: 0.5;\n}\n\n"]
+    }]
+  }]
+});
+
+export { TabGroupAlignExample, TabGroupAnimationsExample, TabGroupAsyncExample, TabGroupBasicExample, TabGroupCustomLabelExample, TabGroupDragDropExample, TabGroupDynamicExample, TabGroupDynamicHeightExample, TabGroupHarnessExample, TabGroupHeaderBelowExample, TabGroupInkBarExample, TabGroupLazyLoadedExample, TabGroupPaginatedExample, TabGroupPreserveContentExample, TabGroupStretchedExample, TabNavBarBasicExample };
 //# sourceMappingURL=material-tabs.mjs.map

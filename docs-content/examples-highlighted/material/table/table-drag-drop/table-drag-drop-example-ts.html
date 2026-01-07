@@ -25,15 +25,15 @@
 ];
 
 <span class="hljs-comment">/**
- * <span class="hljs-doctag">@title</span> Drag&amp;Drop table
+ * <span class="hljs-doctag">@title</span> Table with drag&amp;drop support
  */</span>
 <span class="hljs-meta">@Component</span>({
-  <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;cdk-drag-drop-table-example&#x27;</span>,
-  <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;cdk-drag-drop-table-example.html&#x27;</span>,
-  <span class="hljs-attr">styleUrl</span>: <span class="hljs-string">&#x27;cdk-drag-drop-table-example.css&#x27;</span>,
+  <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;table-drag-drop-example&#x27;</span>,
+  <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;table-drag-drop-example.html&#x27;</span>,
+  <span class="hljs-attr">styleUrl</span>: <span class="hljs-string">&#x27;table-drag-drop-example.css&#x27;</span>,
   <span class="hljs-attr">imports</span>: [<span class="hljs-title class_">CdkDropList</span>, <span class="hljs-title class_">CdkDrag</span>, <span class="hljs-title class_">MatTableModule</span>, <span class="hljs-title class_">MatIconModule</span>],
 })
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">CdkDragDropTableExample</span> {
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">TableDragDropExample</span> {
   <span class="hljs-meta">@ViewChild</span>(<span class="hljs-string">&#x27;table&#x27;</span>, {<span class="hljs-attr">static</span>: <span class="hljs-literal">true</span>}) table!: <span class="hljs-title class_">MatTable</span>&lt;<span class="hljs-title class_">PeriodicElement</span>&gt;;
 
   <span class="hljs-attr">displayedColumns</span>: <span class="hljs-built_in">string</span>[] = [<span class="hljs-string">&#x27;position&#x27;</span>, <span class="hljs-string">&#x27;name&#x27;</span>, <span class="hljs-string">&#x27;weight&#x27;</span>, <span class="hljs-string">&#x27;symbol&#x27;</span>, <span class="hljs-string">&#x27;quantity&#x27;</span>];

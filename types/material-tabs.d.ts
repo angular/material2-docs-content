@@ -1,6 +1,7 @@
 import * as i0 from '@angular/core';
 import { Observable } from 'rxjs';
 import { FormControl } from '@angular/forms';
+import { CdkDragDrop } from '@angular/cdk/drag-drop';
 
 /**
  * @title Tab group with aligned labels
@@ -138,4 +139,15 @@ declare class TabNavBarBasicExample {
     static ɵcmp: i0.ɵɵComponentDeclaration<TabNavBarBasicExample, "tab-nav-bar-basic-example", never, {}, {}, never, never, true, never>;
 }
 
-export { TabGroupAlignExample, TabGroupAnimationsExample, TabGroupAsyncExample, TabGroupBasicExample, TabGroupCustomLabelExample, TabGroupDynamicExample, TabGroupDynamicHeightExample, TabGroupHarnessExample, TabGroupHeaderBelowExample, TabGroupInkBarExample, TabGroupLazyLoadedExample, TabGroupPaginatedExample, TabGroupPreserveContentExample, TabGroupStretchedExample, TabNavBarBasicExample };
+/**
+ * @title Tabs with drag*drop integration.
+ */
+declare class TabGroupDragDropExample {
+    protected tabs: string[];
+    protected selectedTabIndex: number;
+    drop(event: CdkDragDrop<string[]>): void;
+    static ɵfac: i0.ɵɵFactoryDeclaration<TabGroupDragDropExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TabGroupDragDropExample, "tab-group-drag-drop-example", never, {}, {}, never, never, true, never>;
+}
+
+export { TabGroupAlignExample, TabGroupAnimationsExample, TabGroupAsyncExample, TabGroupBasicExample, TabGroupCustomLabelExample, TabGroupDragDropExample, TabGroupDynamicExample, TabGroupDynamicHeightExample, TabGroupHarnessExample, TabGroupHeaderBelowExample, TabGroupInkBarExample, TabGroupLazyLoadedExample, TabGroupPaginatedExample, TabGroupPreserveContentExample, TabGroupStretchedExample, TabNavBarBasicExample };
