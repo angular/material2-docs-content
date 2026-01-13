@@ -1,6 +1,6 @@
 {
   "name": "@angular/components-examples",
-  "version": "21.1.0-next.4+sha-fa13870",
+  "version": "21.1.0-next.4+sha-17c910e",
   "description": "Angular Components Examples",
   "private": true,
   "repository": {
@@ -47,10 +47,6 @@
     "./cdk/dialog": {
       "types": "./types/cdk-dialog.d.ts",
       "default": "./fesm2022/cdk-dialog.mjs"
-    },
-    "./cdk/drag-drop": {
-      "types": "./types/cdk-drag-drop.d.ts",
-      "default": "./fesm2022/cdk-drag-drop.mjs"
     },
     "./cdk/layout": {
       "types": "./types/cdk-layout.d.ts",
@@ -259,15 +255,15 @@
   },
   "homepage": "https://github.com/angular/components#readme",
   "peerDependencies": {
-    "@angular/aria": "21.1.0-next.4+sha-fa13870",
-    "@angular/cdk": "21.1.0-next.4+sha-fa13870",
-    "@angular/cdk-experimental": "21.1.0-next.4+sha-fa13870",
+    "@angular/aria": "21.1.0-next.4+sha-17c910e",
+    "@angular/cdk": "21.1.0-next.4+sha-17c910e",
+    "@angular/cdk-experimental": "21.1.0-next.4+sha-17c910e",
     "@angular/core": "^21.0.0-0 || ^21.1.0-0 || ^21.2.0-0 || ^21.3.0-0 || ^22.0.0-0",
     "@angular/common": "^21.0.0-0 || ^21.1.0-0 || ^21.2.0-0 || ^21.3.0-0 || ^22.0.0-0",
-    "@angular/material": "21.1.0-next.4+sha-fa13870",
-    "@angular/material-experimental": "21.1.0-next.4+sha-fa13870",
-    "@angular/material-luxon-adapter": "21.1.0-next.4+sha-fa13870",
-    "@angular/material-date-fns-adapter": "21.1.0-next.4+sha-fa13870"
+    "@angular/material": "21.1.0-next.4+sha-17c910e",
+    "@angular/material-experimental": "21.1.0-next.4+sha-17c910e",
+    "@angular/material-luxon-adapter": "21.1.0-next.4+sha-17c910e",
+    "@angular/material-date-fns-adapter": "21.1.0-next.4+sha-17c910e"
   },
   "devDependencies": {
     "@angular/aria": "workspace:*",
