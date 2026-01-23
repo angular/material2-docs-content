@@ -149,6 +149,11 @@ you don&#39;t need these features, you can instruct the table to cache and recyc
       <p>If you&#39;re showing a large amount of data in your table, you can use virtual scrolling to ensure a
 smooth experience for the user. To enable virtual scrolling, you have to wrap the CDK table in a
 <code>cdk-virtual-scroll-viewport</code> element and add some CSS to make it scrollable.</p>
+<p><strong>Note:</strong> tables with virtual scrolling have the following limitations:</p>
+<ul>
+<li><code>fixedLayout</code> is always enabled, in order to prevent jumping when rows are swapped out.</li>
+<li>Conditional templates via the <code>when</code> input are <a href="https://github.com/angular/components/issues/32670">not supported at the moment</a>.</li>
+</ul>
 </div><div material-docs-example="cdk-table-virtual-scroll"></div><div class="docs-markdown">
 
 
