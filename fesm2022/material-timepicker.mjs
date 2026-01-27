@@ -68,7 +68,7 @@ class TimepickerOverviewExample {
       kind: "component",
       type: i3.MatTimepicker,
       selector: "mat-timepicker",
-      inputs: ["interval", "options", "disableRipple", "aria-label", "aria-labelledby"],
+      inputs: ["interval", "options", "disableRipple", "aria-label", "aria-labelledby", "panelClass"],
       outputs: ["selected", "opened", "closed"],
       exportAs: ["matTimepicker"]
     }, {
@@ -163,7 +163,7 @@ class TimepickerFormsExample {
       kind: "component",
       type: i3.MatTimepicker,
       selector: "mat-timepicker",
-      inputs: ["interval", "options", "disableRipple", "aria-label", "aria-labelledby"],
+      inputs: ["interval", "options", "disableRipple", "aria-label", "aria-labelledby", "panelClass"],
       outputs: ["selected", "opened", "closed"],
       exportAs: ["matTimepicker"]
     }, {
@@ -273,7 +273,7 @@ class TimepickerDatepickerIntegrationExample {
       kind: "component",
       type: i3.MatTimepicker,
       selector: "mat-timepicker",
-      inputs: ["interval", "options", "disableRipple", "aria-label", "aria-labelledby"],
+      inputs: ["interval", "options", "disableRipple", "aria-label", "aria-labelledby", "panelClass"],
       outputs: ["selected", "opened", "closed"],
       exportAs: ["matTimepicker"]
     }, {
@@ -408,7 +408,7 @@ class TimepickerValidationExample {
       kind: "component",
       type: i3.MatTimepicker,
       selector: "mat-timepicker",
-      inputs: ["interval", "options", "disableRipple", "aria-label", "aria-labelledby"],
+      inputs: ["interval", "options", "disableRipple", "aria-label", "aria-labelledby", "panelClass"],
       outputs: ["selected", "opened", "closed"],
       exportAs: ["matTimepicker"]
     }, {
@@ -530,7 +530,7 @@ class TimepickerOptionsExample {
       kind: "component",
       type: i3.MatTimepicker,
       selector: "mat-timepicker",
-      inputs: ["interval", "options", "disableRipple", "aria-label", "aria-labelledby"],
+      inputs: ["interval", "options", "disableRipple", "aria-label", "aria-labelledby", "panelClass"],
       outputs: ["selected", "opened", "closed"],
       exportAs: ["matTimepicker"]
     }, {
@@ -619,7 +619,7 @@ class TimepickerCustomIconExample {
       kind: "component",
       type: i3.MatTimepicker,
       selector: "mat-timepicker",
-      inputs: ["interval", "options", "disableRipple", "aria-label", "aria-labelledby"],
+      inputs: ["interval", "options", "disableRipple", "aria-label", "aria-labelledby", "panelClass"],
       outputs: ["selected", "opened", "closed"],
       exportAs: ["matTimepicker"]
     }, {
@@ -719,7 +719,7 @@ class TimepickerLocaleExample {
       kind: "component",
       type: i3.MatTimepicker,
       selector: "mat-timepicker",
-      inputs: ["interval", "options", "disableRipple", "aria-label", "aria-labelledby"],
+      inputs: ["interval", "options", "disableRipple", "aria-label", "aria-labelledby", "panelClass"],
       outputs: ["selected", "opened", "closed"],
       exportAs: ["matTimepicker"]
     }, {
@@ -815,7 +815,7 @@ class TimepickerHarnessExample {
       kind: "component",
       type: i3.MatTimepicker,
       selector: "mat-timepicker",
-      inputs: ["interval", "options", "disableRipple", "aria-label", "aria-labelledby"],
+      inputs: ["interval", "options", "disableRipple", "aria-label", "aria-labelledby", "panelClass"],
       outputs: ["selected", "opened", "closed"],
       exportAs: ["matTimepicker"]
     }, {
