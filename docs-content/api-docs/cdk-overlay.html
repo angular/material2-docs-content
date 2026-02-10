@@ -1346,6 +1346,19 @@ Used to manipulate or dispose of said overlay.</p>
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>eventPredicate: <code class="docs-api-property-type">((event: Event) =&gt; boolean) | null</code></code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Function that determines if this overlay should receive a specific event.</p>
+</td>
+</tr>
+
+
+      
+        
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
       <code>hostElement: <code class="docs-api-property-type">HTMLElement</code></code>
     </p>
   </td>
@@ -3669,6 +3682,20 @@ is passed in, the overlay will handle changes to its value automatically.</p>
   <td class="docs-api-property-description"><p>Whether the overlay should be disposed of when the user goes backwards/forwards in history.
 Note that this usually doesn&#39;t include clicking on links (unless the user is using
 the <code>HashLocationStrategy</code>).</p>
+</td>
+</tr>
+
+
+      
+        
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>eventPredicate: <code class="docs-api-property-type">(event: Event) =&gt; boolean</code></code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Function that determines if the overlay should receive a specific
+event or if the event should go to the next overlay in the stack.</p>
 </td>
 </tr>
 
