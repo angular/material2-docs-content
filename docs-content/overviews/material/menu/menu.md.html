@@ -65,6 +65,9 @@ clicking on a trigger element. It is re-positioned if the user right-clicks some
 area and will be closed if the user clicks away.</p>
 <p>You can set up a <code>mat-menu</code> as a context menu by adding the <code>matContextMenuTriggerFor</code> directive
 to your container and binding it to a menu instance.</p>
+<p>Note that by default context menus don&#39;t create a backdrop element in order to allow the user to
+right click somewhere else. You can opt into the backdrop by explicitly setting
+<code>[hasBackdrop]=&quot;true&quot;</code> on the menu.</p>
 </div><div material-docs-example="context-menu"></div><div class="docs-markdown">
 
 
