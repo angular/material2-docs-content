@@ -1,0 +1,29 @@
+<span class="hljs-tag">&lt;<span class="hljs-name">section</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-checkbox</span>
+    (<span class="hljs-attr">change</span>)=<span class="hljs-string">&quot;toggleShowProgress()&quot;</span>
+  &gt;</span>
+    Show the progress indicator
+  <span class="hljs-tag">&lt;/<span class="hljs-name">mat-checkbox</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">section</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">h3</span>&gt;</span>Button with a MatProgressSpinner<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">matButton</span>=<span class="hljs-string">&quot;outlined&quot;</span> [<span class="hljs-attr">showProgress</span>]=<span class="hljs-string">&quot;showProgress()&quot;</span>&gt;</span>
+      Download
+      <span class="hljs-tag">&lt;<span class="hljs-name">mat-progress-spinner</span>
+        <span class="hljs-attr">progressIndicator</span>
+        <span class="hljs-attr">mode</span>=<span class="hljs-string">&quot;indeterminate&quot;</span>
+        <span class="hljs-attr">diameter</span>=<span class="hljs-string">&quot;20&quot;</span>
+        <span class="hljs-attr">aria-label</span>=<span class="hljs-string">&quot;Loading&quot;</span>
+        <span class="hljs-attr">tabindex</span>=<span class="hljs-string">&quot;&quot;</span>
+      /&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">section</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">h3</span>&gt;</span>Button with a custom progress indicator<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">matButton</span>=<span class="hljs-string">&quot;outlined&quot;</span> [<span class="hljs-attr">showProgress</span>]=<span class="hljs-string">&quot;showProgress()&quot;</span>&gt;</span>
+      Download
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">progressIndicator</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;progressbar&quot;</span> <span class="hljs-attr">aria-valuemin</span>=<span class="hljs-string">&quot;0&quot;</span> <span class="hljs-attr">aria-valuemax</span>=<span class="hljs-string">&quot;100&quot;</span>&gt;</span>
+        Loading...
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>

@@ -959,6 +959,16 @@ const EXAMPLE_COMPONENTS = {
     "primaryFile": "button-overview-example.ts",
     "importPath": "material/button"
   },
+  "button-progress-indicator": {
+    "packagePath": "material/button/button-progress-indicator",
+    "title": "Buttons with progress indicators",
+    "componentName": "ButtonProgressIndicatorExample",
+    "files": ["button-progress-indicator-example.ts", "button-progress-indicator-example.html"],
+    "selector": "button-progress-indicator-example",
+    "additionalComponents": [],
+    "primaryFile": "button-progress-indicator-example.ts",
+    "importPath": "material/button"
+  },
   "card-actions": {
     "packagePath": "material/card/card-actions",
     "title": "Card with actions alignment option",
@@ -3673,6 +3683,8 @@ async function loadExample(id) {
     case 'button-harness':
       return import('@angular/components-examples/material/button');
     case 'button-overview':
+      return import('@angular/components-examples/material/button');
+    case 'button-progress-indicator':
       return import('@angular/components-examples/material/button');
     case 'card-actions':
       return import('@angular/components-examples/material/card');

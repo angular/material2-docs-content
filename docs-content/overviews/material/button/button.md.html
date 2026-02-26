@@ -88,6 +88,14 @@ guard against such cases in your component.</p>
 </div><div material-docs-example="button-disabled-interactive"></div><div class="docs-markdown">
 
 
+        <h3 id="buttons-with-progress-indicators" class="docs-header-link">
+          <span header-link="buttons-with-progress-indicators"></span>
+          Buttons with progress indicators
+        </h3>
+      <p>An element with the <code>progressIndicator</code> attribute may be projected into the button element. When the <code>showProgress</code> input is <code>true</code> this element will be shown over the content of the button and the content of the button will be made invisible.</p>
+</div><div material-docs-example="button-progress-indicator"></div><div class="docs-markdown">
+
+
         <h3 id="accessibility" class="docs-header-link">
           <span header-link="accessibility"></span>
           Accessibility
@@ -129,4 +137,10 @@ information on using icons in buttons. Additionally, to be fully accessible the 
         </h4>
       <p><a href="https://material.angular.dev/components/button-toggle">See the documentation for <code>MatButtonToggle</code></a>
 for information on stateful toggle buttons.</p>
+
+        <h4 id="buttons-with-progress-indicators" class="docs-header-link">
+          <span header-link="buttons-with-progress-indicators"></span>
+          Buttons with progress indicators
+        </h4>
+      <p>The element projected using the <code>progressIndicator</code> attribute must not be interactable. When using <code>MatProgressSpinner</code> set <code>tabindex=&quot;&quot;</code> to remove the progress indicator for the tab order.</p>
 </div>

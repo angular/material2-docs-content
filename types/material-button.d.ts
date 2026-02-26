@@ -25,4 +25,14 @@ declare class ButtonHarnessExample {
     static ɵcmp: i0.ɵɵComponentDeclaration<ButtonHarnessExample, "button-harness-example", never, {}, {}, never, never, true, never>;
 }
 
-export { ButtonDisabledInteractiveExample, ButtonHarnessExample, ButtonOverviewExample };
+/**
+ * @title Buttons with progress indicators
+ */
+declare class ButtonProgressIndicatorExample {
+    protected readonly showProgress: i0.WritableSignal<boolean>;
+    protected toggleShowProgress(): void;
+    static ɵfac: i0.ɵɵFactoryDeclaration<ButtonProgressIndicatorExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<ButtonProgressIndicatorExample, "button-progress-indicator-example", never, {}, {}, never, never, true, never>;
+}
+
+export { ButtonDisabledInteractiveExample, ButtonHarnessExample, ButtonOverviewExample, ButtonProgressIndicatorExample };
