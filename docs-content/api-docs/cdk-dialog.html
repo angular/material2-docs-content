@@ -755,17 +755,10 @@ be provided as a function in order to generate the providers lazily.</p>
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>restoreFocus: <code class="docs-api-property-type">boolean | string | HTMLElement</code></code>
+      <code>restoreFocus: <code class="docs-api-property-type">RestoreFocusValue</code></code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Whether the dialog should restore focus to the previously-focused element upon closing.
-Has the following behavior based on the type that is passed in:</p>
-<ul>
-<li><code>boolean</code> - when true, will return focus to the element that was focused before the dialog
- was opened, otherwise won&#39;t restore focus at all.</li>
-<li><code>string</code> - focus will be restored to the first element that matches the CSS selector.</li>
-<li><code>HTMLElement</code> - focus will be restored to the specific element.</li>
-</ul>
+  <td class="docs-api-property-description"><p>Configures the focus restoration behavior. See <code>RestoreFocusValue</code> for more information.</p>
 </td>
 </tr>
 
@@ -1361,6 +1354,27 @@ null when the dialog is opened using a <code>TemplateRef</code>.</p>
 </p><div class="docs-markdown">
 <pre class="docs-markdown-pre">
 <code class="docs-markdown-code">type AutoFocusTarget = 'dialog' | 'first-tabbable' | 'first-heading';</code>
+</pre>
+</div>
+
+
+    
+      
+
+<h4 id="RestoreFocusValue" class="docs-header-link docs-api-h4 docs-api-type-alias-name">
+  <span header-link="RestoreFocusValue"></span>
+  <code>RestoreFocusValue</code>
+</h4><p class="docs-api-type-alias-description"><p>Value that determines the focus restoration behavior for a dialog.
+The values represent the following behaviors:</p>
+<ul>
+<li><code>boolean</code> - when true, will return focus to the element that was focused before the dialog
+ was opened, otherwise won&#39;t restore focus at all.</li>
+<li><code>string</code> - focus will be restored to the first element that matches the CSS selector.</li>
+<li><code>HTMLElement</code> - focus will be restored to the specific element.</li>
+</ul>
+</p><div class="docs-markdown">
+<pre class="docs-markdown-pre">
+<code class="docs-markdown-code">type RestoreFocusValue = boolean | string | HTMLElement;</code>
 </pre>
 </div>
 
