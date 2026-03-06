@@ -155,7 +155,7 @@ the directive instance itself can be attached to a host, enabling declarative us
             </span>
             <code class="docs-api-method-parameter-type">PortalOutlet</code>, <span class="docs-api-method-parameter-name">context:
             </span>
-            <code class="docs-api-method-parameter-type">C = this.context</code>): <code class="docs-api-method-returns-type">EmbeddedViewRef&lt;C&gt;</code>
+            <code class="docs-api-method-parameter-type">C | undefined = this.context</code>): <code class="docs-api-method-returns-type">EmbeddedViewRef&lt;C&gt;</code>
         </th>
       </tr>
     </thead><tr class="docs-api-method-description-row">
@@ -188,7 +188,7 @@ instance.</p>
       <td class="docs-api-method-parameter-cell">
         <p class="docs-api-method-parameter-name">
           context</p>
-        <code class="docs-api-method-parameter-type">C = this.context</code>
+        <code class="docs-api-method-parameter-type">C | undefined = this.context</code>
       </td>
       <td class="docs-api-method-parameter-description-cell">
         <p class="docs-api-method-parameter-description">
@@ -239,7 +239,7 @@ instance.</p>
         <th colspan="2" class="docs-api-method-name-cell">setAttachedHost
           (<span class="docs-api-method-parameter-name">host:
             </span>
-            <code class="docs-api-method-parameter-type">PortalOutlet</code>): <code class="docs-api-method-returns-type"></code>
+            <code class="docs-api-method-parameter-type">PortalOutlet | null</code>): <code class="docs-api-method-returns-type"></code>
         </th>
       </tr>
     </thead><tr class="docs-api-method-description-row">
@@ -258,7 +258,7 @@ the PortalOutlet when it is performing an <code>attach()</code> or <code>detach(
       <td class="docs-api-method-parameter-cell">
         <p class="docs-api-method-parameter-name">
           host</p>
-        <code class="docs-api-method-parameter-type">PortalOutlet</code>
+        <code class="docs-api-method-parameter-type">PortalOutlet | null</code>
       </td>
       <td class="docs-api-method-parameter-description-cell">
         <p class="docs-api-method-parameter-description">
@@ -843,7 +843,7 @@ It can be attach to / detached from a <code>PortalOutlet</code>.</p>
         <th colspan="2" class="docs-api-method-name-cell">setAttachedHost
           (<span class="docs-api-method-parameter-name">host:
             </span>
-            <code class="docs-api-method-parameter-type">PortalOutlet</code>): <code class="docs-api-method-returns-type"></code>
+            <code class="docs-api-method-parameter-type">PortalOutlet | null</code>): <code class="docs-api-method-returns-type"></code>
         </th>
       </tr>
     </thead><tr class="docs-api-method-description-row">
@@ -862,7 +862,7 @@ the PortalOutlet when it is performing an <code>attach()</code> or <code>detach(
       <td class="docs-api-method-parameter-cell">
         <p class="docs-api-method-parameter-name">
           host</p>
-        <code class="docs-api-method-parameter-type">PortalOutlet</code>
+        <code class="docs-api-method-parameter-type">PortalOutlet | null</code>
       </td>
       <td class="docs-api-method-parameter-description-cell">
         <p class="docs-api-method-parameter-description">
@@ -1070,7 +1070,7 @@ The origin is necessary when the host is outside of the Angular application cont
         <th colspan="2" class="docs-api-method-name-cell">setAttachedHost
           (<span class="docs-api-method-parameter-name">host:
             </span>
-            <code class="docs-api-method-parameter-type">PortalOutlet</code>): <code class="docs-api-method-returns-type"></code>
+            <code class="docs-api-method-parameter-type">PortalOutlet | null</code>): <code class="docs-api-method-returns-type"></code>
         </th>
       </tr>
     </thead><tr class="docs-api-method-description-row">
@@ -1089,7 +1089,7 @@ the PortalOutlet when it is performing an <code>attach()</code> or <code>detach(
       <td class="docs-api-method-parameter-cell">
         <p class="docs-api-method-parameter-name">
           host</p>
-        <code class="docs-api-method-parameter-type">PortalOutlet</code>
+        <code class="docs-api-method-parameter-type">PortalOutlet | null</code>
       </td>
       <td class="docs-api-method-parameter-description-cell">
         <p class="docs-api-method-parameter-description">
@@ -1222,7 +1222,7 @@ the PortalOutlet when it is performing an <code>attach()</code> or <code>detach(
             </span>
             <code class="docs-api-method-parameter-type">PortalOutlet</code>, <span class="docs-api-method-parameter-name">context:
             </span>
-            <code class="docs-api-method-parameter-type">C = this.context</code>): <code class="docs-api-method-returns-type">EmbeddedViewRef&lt;C&gt;</code>
+            <code class="docs-api-method-parameter-type">C | undefined = this.context</code>): <code class="docs-api-method-returns-type">EmbeddedViewRef&lt;C&gt;</code>
         </th>
       </tr>
     </thead><tr class="docs-api-method-description-row">
@@ -1255,7 +1255,7 @@ instance.</p>
       <td class="docs-api-method-parameter-cell">
         <p class="docs-api-method-parameter-name">
           context</p>
-        <code class="docs-api-method-parameter-type">C = this.context</code>
+        <code class="docs-api-method-parameter-type">C | undefined = this.context</code>
       </td>
       <td class="docs-api-method-parameter-description-cell">
         <p class="docs-api-method-parameter-description">
@@ -1306,7 +1306,7 @@ instance.</p>
         <th colspan="2" class="docs-api-method-name-cell">setAttachedHost
           (<span class="docs-api-method-parameter-name">host:
             </span>
-            <code class="docs-api-method-parameter-type">PortalOutlet</code>): <code class="docs-api-method-returns-type"></code>
+            <code class="docs-api-method-parameter-type">PortalOutlet | null</code>): <code class="docs-api-method-returns-type"></code>
         </th>
       </tr>
     </thead><tr class="docs-api-method-description-row">
@@ -1325,7 +1325,7 @@ the PortalOutlet when it is performing an <code>attach()</code> or <code>detach(
       <td class="docs-api-method-parameter-cell">
         <p class="docs-api-method-parameter-name">
           host</p>
-        <code class="docs-api-method-parameter-type">PortalOutlet</code>
+        <code class="docs-api-method-parameter-type">PortalOutlet | null</code>
       </td>
       <td class="docs-api-method-parameter-description-cell">
         <p class="docs-api-method-parameter-description">
@@ -1481,7 +1481,7 @@ will be restored to its original position.</p>
         <th colspan="2" class="docs-api-method-name-cell">setAttachedHost
           (<span class="docs-api-method-parameter-name">host:
             </span>
-            <code class="docs-api-method-parameter-type">PortalOutlet</code>): <code class="docs-api-method-returns-type"></code>
+            <code class="docs-api-method-parameter-type">PortalOutlet | null</code>): <code class="docs-api-method-returns-type"></code>
         </th>
       </tr>
     </thead><tr class="docs-api-method-description-row">
@@ -1500,7 +1500,7 @@ the PortalOutlet when it is performing an <code>attach()</code> or <code>detach(
       <td class="docs-api-method-parameter-cell">
         <p class="docs-api-method-parameter-name">
           host</p>
-        <code class="docs-api-method-parameter-type">PortalOutlet</code>
+        <code class="docs-api-method-parameter-type">PortalOutlet | null</code>
       </td>
       <td class="docs-api-method-parameter-description-cell">
         <p class="docs-api-method-parameter-description">

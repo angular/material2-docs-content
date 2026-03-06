@@ -1283,7 +1283,7 @@ page.</p>
             </span>
             <code class="docs-api-method-parameter-type">PortalOutlet</code>, <span class="docs-api-method-parameter-name">context:
             </span>
-            <code class="docs-api-method-parameter-type">C = this.context</code>): <code class="docs-api-method-returns-type">EmbeddedViewRef&lt;C&gt;</code>
+            <code class="docs-api-method-parameter-type">C | undefined = this.context</code>): <code class="docs-api-method-returns-type">EmbeddedViewRef&lt;C&gt;</code>
         </th>
       </tr>
     </thead><tr class="docs-api-method-description-row">
@@ -1316,7 +1316,7 @@ instance.</p>
       <td class="docs-api-method-parameter-cell">
         <p class="docs-api-method-parameter-name">
           context</p>
-        <code class="docs-api-method-parameter-type">C = this.context</code>
+        <code class="docs-api-method-parameter-type">C | undefined = this.context</code>
       </td>
       <td class="docs-api-method-parameter-description-cell">
         <p class="docs-api-method-parameter-description">
@@ -1367,7 +1367,7 @@ instance.</p>
         <th colspan="2" class="docs-api-method-name-cell">setAttachedHost
           (<span class="docs-api-method-parameter-name">host:
             </span>
-            <code class="docs-api-method-parameter-type">PortalOutlet</code>): <code class="docs-api-method-returns-type"></code>
+            <code class="docs-api-method-parameter-type">PortalOutlet | null</code>): <code class="docs-api-method-returns-type"></code>
         </th>
       </tr>
     </thead><tr class="docs-api-method-description-row">
@@ -1386,7 +1386,7 @@ the PortalOutlet when it is performing an <code>attach()</code> or <code>detach(
       <td class="docs-api-method-parameter-cell">
         <p class="docs-api-method-parameter-name">
           host</p>
-        <code class="docs-api-method-parameter-type">PortalOutlet</code>
+        <code class="docs-api-method-parameter-type">PortalOutlet | null</code>
       </td>
       <td class="docs-api-method-parameter-description-cell">
         <p class="docs-api-method-parameter-description">

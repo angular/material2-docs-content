@@ -2430,7 +2430,7 @@ respectively when the Home or End key is pressed.</p>
         <th colspan="2" class="docs-api-method-name-cell">withHorizontalOrientation
           (<span class="docs-api-method-parameter-name">direction:
             </span>
-            <code class="docs-api-method-parameter-type">&quot;ltr&quot; | &quot;rtl&quot;</code>): <code class="docs-api-method-returns-type">this</code>
+            <code class="docs-api-method-parameter-type">&quot;ltr&quot; | &quot;rtl&quot; | null</code>): <code class="docs-api-method-returns-type">this</code>
         </th>
       </tr>
     </thead><tr class="docs-api-method-description-row">
@@ -2449,7 +2449,7 @@ Passing in <code>null</code> will disable horizontal movement.</p>
       <td class="docs-api-method-parameter-cell">
         <p class="docs-api-method-parameter-name">
           direction</p>
-        <code class="docs-api-method-parameter-type">&quot;ltr&quot; | &quot;rtl&quot;</code>
+        <code class="docs-api-method-parameter-type">&quot;ltr&quot; | &quot;rtl&quot; | null</code>
       </td>
       <td class="docs-api-method-parameter-description-cell">
         <p class="docs-api-method-parameter-description">
@@ -3445,7 +3445,7 @@ respectively when the Home or End key is pressed.</p>
         <th colspan="2" class="docs-api-method-name-cell">withHorizontalOrientation
           (<span class="docs-api-method-parameter-name">direction:
             </span>
-            <code class="docs-api-method-parameter-type">&quot;ltr&quot; | &quot;rtl&quot;</code>): <code class="docs-api-method-returns-type">this</code>
+            <code class="docs-api-method-parameter-type">&quot;ltr&quot; | &quot;rtl&quot; | null</code>): <code class="docs-api-method-returns-type">this</code>
         </th>
       </tr>
     </thead><tr class="docs-api-method-description-row">
@@ -3464,7 +3464,7 @@ Passing in <code>null</code> will disable horizontal movement.</p>
       <td class="docs-api-method-parameter-cell">
         <p class="docs-api-method-parameter-name">
           direction</p>
-        <code class="docs-api-method-parameter-type">&quot;ltr&quot; | &quot;rtl&quot;</code>
+        <code class="docs-api-method-parameter-type">&quot;ltr&quot; | &quot;rtl&quot; | null</code>
       </td>
       <td class="docs-api-method-parameter-description-cell">
         <p class="docs-api-method-parameter-description">
@@ -4399,7 +4399,7 @@ respectively when the Home or End key is pressed.</p>
         <th colspan="2" class="docs-api-method-name-cell">withHorizontalOrientation
           (<span class="docs-api-method-parameter-name">direction:
             </span>
-            <code class="docs-api-method-parameter-type">&quot;ltr&quot; | &quot;rtl&quot;</code>): <code class="docs-api-method-returns-type">this</code>
+            <code class="docs-api-method-parameter-type">&quot;ltr&quot; | &quot;rtl&quot; | null</code>): <code class="docs-api-method-returns-type">this</code>
         </th>
       </tr>
     </thead><tr class="docs-api-method-description-row">
@@ -4418,7 +4418,7 @@ Passing in <code>null</code> will disable horizontal movement.</p>
       <td class="docs-api-method-parameter-cell">
         <p class="docs-api-method-parameter-name">
           direction</p>
-        <code class="docs-api-method-parameter-type">&quot;ltr&quot; | &quot;rtl&quot;</code>
+        <code class="docs-api-method-parameter-type">&quot;ltr&quot; | &quot;rtl&quot; | null</code>
       </td>
       <td class="docs-api-method-parameter-description-cell">
         <p class="docs-api-method-parameter-description">
@@ -4755,7 +4755,7 @@ keyboard events occur.</p>
             </span>
             <code class="docs-api-method-parameter-type">number</code>, <span class="docs-api-method-parameter-name">options<span class="docs-api-method-parameter-optional-marker">?</span>:
             </span>
-            <code class="docs-api-method-parameter-type">{ emitChangeEvent?: boolean; }</code>): <code class="docs-api-method-returns-type">void</code>
+            <code class="docs-api-method-parameter-type">{ emitChangeEvent?: boolean | undefined; }</code>): <code class="docs-api-method-returns-type">void</code>
         </th>
       </tr>
     </thead><tr class="docs-api-method-description-row">
@@ -4787,7 +4787,7 @@ keyboard events occur.</p>
       <td class="docs-api-method-parameter-cell">
         <p class="docs-api-method-parameter-name">
           options<span class="docs-api-method-parameter-optional-marker">?</span></p>
-        <code class="docs-api-method-parameter-type">{ emitChangeEvent?: boolean; }</code>
+        <code class="docs-api-method-parameter-type">{ emitChangeEvent?: boolean | undefined; }</code>
       </td>
       <td class="docs-api-method-parameter-description-cell">
         <p class="docs-api-method-parameter-description">
@@ -4812,7 +4812,7 @@ keyboard events occur.</p>
             </span>
             <code class="docs-api-method-parameter-type">T</code>, <span class="docs-api-method-parameter-name">options<span class="docs-api-method-parameter-optional-marker">?</span>:
             </span>
-            <code class="docs-api-method-parameter-type">{ emitChangeEvent?: boolean; }</code>): <code class="docs-api-method-returns-type">void</code>
+            <code class="docs-api-method-parameter-type">{ emitChangeEvent?: boolean | undefined; }</code>): <code class="docs-api-method-returns-type">void</code>
         </th>
       </tr>
     </thead><thead>
@@ -4838,7 +4838,7 @@ keyboard events occur.</p>
       <td class="docs-api-method-parameter-cell">
         <p class="docs-api-method-parameter-name">
           options<span class="docs-api-method-parameter-optional-marker">?</span></p>
-        <code class="docs-api-method-parameter-type">{ emitChangeEvent?: boolean; }</code>
+        <code class="docs-api-method-parameter-type">{ emitChangeEvent?: boolean | undefined; }</code>
       </td>
       <td class="docs-api-method-parameter-description-cell">
         <p class="docs-api-method-parameter-description">
@@ -4862,7 +4862,7 @@ keyboard events occur.</p>
             </span>
             <code class="docs-api-method-parameter-type">number | T</code>, <span class="docs-api-method-parameter-name">options<span class="docs-api-method-parameter-optional-marker">?</span>:
             </span>
-            <code class="docs-api-method-parameter-type">{ emitChangeEvent?: boolean; }</code>): <code class="docs-api-method-returns-type">void</code>
+            <code class="docs-api-method-parameter-type">{ emitChangeEvent?: boolean | undefined; }</code>): <code class="docs-api-method-returns-type">void</code>
         </th>
       </tr>
     </thead><thead>
@@ -4888,7 +4888,7 @@ keyboard events occur.</p>
       <td class="docs-api-method-parameter-cell">
         <p class="docs-api-method-parameter-name">
           options<span class="docs-api-method-parameter-optional-marker">?</span></p>
-        <code class="docs-api-method-parameter-type">{ emitChangeEvent?: boolean; }</code>
+        <code class="docs-api-method-parameter-type">{ emitChangeEvent?: boolean | undefined; }</code>
       </td>
       <td class="docs-api-method-parameter-description-cell">
         <p class="docs-api-method-parameter-description">
@@ -6886,7 +6886,7 @@ setting the active item. If <code>true</code> is provided, the default interval 
             </span>
             <code class="docs-api-method-parameter-type">number</code>, <span class="docs-api-method-parameter-name">options<span class="docs-api-method-parameter-optional-marker">?</span>:
             </span>
-            <code class="docs-api-method-parameter-type">{ emitChangeEvent?: boolean; }</code>): <code class="docs-api-method-returns-type">void</code>
+            <code class="docs-api-method-parameter-type">{ emitChangeEvent?: boolean | undefined; }</code>): <code class="docs-api-method-returns-type">void</code>
         </th>
       </tr>
     </thead><tr class="docs-api-method-description-row">
@@ -6920,7 +6920,7 @@ Changes.</p>
       <td class="docs-api-method-parameter-cell">
         <p class="docs-api-method-parameter-name">
           options<span class="docs-api-method-parameter-optional-marker">?</span></p>
-        <code class="docs-api-method-parameter-type">{ emitChangeEvent?: boolean; }</code>
+        <code class="docs-api-method-parameter-type">{ emitChangeEvent?: boolean | undefined; }</code>
       </td>
       <td class="docs-api-method-parameter-description-cell">
         <p class="docs-api-method-parameter-description">
@@ -7846,7 +7846,7 @@ options.</p>
   <code>LIVE_ANNOUNCER_ELEMENT_TOKEN</code>
 </h4><div class="docs-markdown">
 <pre class="docs-markdown-pre">
-<code class="docs-markdown-code">const LIVE_ANNOUNCER_ELEMENT_TOKEN: InjectionToken<HTMLElement>;</code>
+<code class="docs-markdown-code">const LIVE_ANNOUNCER_ELEMENT_TOKEN: InjectionToken<HTMLElement | null>;</code>
 </pre>
 </div>
 

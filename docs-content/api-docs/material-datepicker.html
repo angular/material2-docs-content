@@ -118,7 +118,7 @@
         <th colspan="2" class="docs-api-method-name-cell">createPreview
           (<span class="docs-api-method-parameter-name">activeDate:
             </span>
-            <code class="docs-api-method-parameter-type">D</code>, <span class="docs-api-method-parameter-name">currentRange:
+            <code class="docs-api-method-parameter-type">D | null</code>, <span class="docs-api-method-parameter-name">currentRange:
             </span>
             <code class="docs-api-method-parameter-type">DateRange&lt;D&gt;</code>): <code class="docs-api-method-returns-type"></code>
         </th>
@@ -133,7 +133,7 @@
       <td class="docs-api-method-parameter-cell">
         <p class="docs-api-method-parameter-name">
           activeDate</p>
-        <code class="docs-api-method-parameter-type">D</code>
+        <code class="docs-api-method-parameter-type">D | null</code>
       </td>
       <td class="docs-api-method-parameter-description-cell">
         <p class="docs-api-method-parameter-description">
@@ -2400,7 +2400,7 @@ This doesn&#39;t imply a change on the selected date.</p>
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
           @Input()</div><p class="docs-api-property-name">
-      <code>dateFilter: <code class="docs-api-property-type">DateFilterFn&lt;D&gt;</code></code>
+      <code>dateFilter: <code class="docs-api-property-type">DateFilterFn&lt;D&gt; | null | undefined</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Function that can be used to filter out dates within the date range picker.</p>
@@ -2796,7 +2796,7 @@ to the bottom of a datepicker or date range picker.</p>
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">&#39;matDatepickerFilter&#39;</span>)
         </div><p class="docs-api-property-name">
-      <code>dateFilter: <code class="docs-api-property-type">DateFilterFn&lt;D&gt;</code></code>
+      <code>dateFilter: <code class="docs-api-property-type">DateFilterFn&lt;D | null&gt; | null | undefined</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Function that can be used to filter out dates within the datepicker.</p>
@@ -2824,7 +2824,7 @@ to the bottom of a datepicker or date range picker.</p>
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
           @Input()</div><p class="docs-api-property-name">
-      <code>matDatepicker: <code class="docs-api-property-type">MatDatepickerPanel&lt;MatDatepickerControl&lt;D&gt;, D, D&gt;</code></code>
+      <code>matDatepicker: <code class="docs-api-property-type">MatDatepickerPanel&lt;MatDatepickerControl&lt;D&gt;, D | null, D&gt;</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>The datepicker that this input is associated with.</p>
@@ -3858,7 +3858,7 @@ date. Returns the date updated range that should result from this interaction.</
         <th colspan="2" class="docs-api-method-name-cell">createPreview
           (<span class="docs-api-method-parameter-name">activeDate:
             </span>
-            <code class="docs-api-method-parameter-type">D</code>, <span class="docs-api-method-parameter-name">currentRange:
+            <code class="docs-api-method-parameter-type">D | null</code>, <span class="docs-api-method-parameter-name">currentRange:
             </span>
             <code class="docs-api-method-parameter-type">DateRange&lt;D&gt;</code>, <span class="docs-api-method-parameter-name">event:
             </span>
@@ -3881,7 +3881,7 @@ it or moving focus) and the calendar tries to display a date range.</p>
       <td class="docs-api-method-parameter-cell">
         <p class="docs-api-method-parameter-name">
           activeDate</p>
-        <code class="docs-api-method-parameter-type">D</code>
+        <code class="docs-api-method-parameter-type">D | null</code>
       </td>
       <td class="docs-api-method-parameter-description-cell">
         <p class="docs-api-method-parameter-description">
@@ -3948,7 +3948,7 @@ it or moving focus) and the calendar tries to display a date range.</p>
         <th colspan="2" class="docs-api-method-name-cell">selectionFinished
           (<span class="docs-api-method-parameter-name">date:
             </span>
-            <code class="docs-api-method-parameter-type">D</code>, <span class="docs-api-method-parameter-name">currentRange:
+            <code class="docs-api-method-parameter-type">D | null</code>, <span class="docs-api-method-parameter-name">currentRange:
             </span>
             <code class="docs-api-method-parameter-type">DateRange&lt;D&gt;</code>, <span class="docs-api-method-parameter-name">event:
             </span>
@@ -3970,7 +3970,7 @@ it or moving focus) and the calendar tries to display a date range.</p>
       <td class="docs-api-method-parameter-cell">
         <p class="docs-api-method-parameter-name">
           date</p>
-        <code class="docs-api-method-parameter-type">D</code>
+        <code class="docs-api-method-parameter-type">D | null</code>
       </td>
       <td class="docs-api-method-parameter-description-cell">
         <p class="docs-api-method-parameter-description">

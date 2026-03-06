@@ -1147,7 +1147,7 @@ filter instances of the class to be matched.</p>
             </span>
             <code class="docs-api-method-parameter-type">string</code>, <span class="docs-api-method-parameter-name">option:
             </span>
-            <code class="docs-api-method-parameter-type">O</code>, <span class="docs-api-method-parameter-name">predicate:
+            <code class="docs-api-method-parameter-type">O | undefined</code>, <span class="docs-api-method-parameter-name">predicate:
             </span>
             <code class="docs-api-method-parameter-type">AsyncOptionPredicate&lt;T, O&gt;</code>): <code class="docs-api-method-returns-type"></code>
         </th>
@@ -1182,7 +1182,7 @@ harnesses. If the option value is undefined, the predicate will be ignored.</p>
       <td class="docs-api-method-parameter-cell">
         <p class="docs-api-method-parameter-name">
           option</p>
-        <code class="docs-api-method-parameter-type">O</code>
+        <code class="docs-api-method-parameter-type">O | undefined</code>
       </td>
       <td class="docs-api-method-parameter-description-cell">
         <p class="docs-api-method-parameter-description">
@@ -1380,9 +1380,9 @@ harnesses. If the option value is undefined, the predicate will be ignored.</p>
           </div>stringMatches
           (<span class="docs-api-method-parameter-name">value:
             </span>
-            <code class="docs-api-method-parameter-type">string | Promise&lt;string&gt;</code>, <span class="docs-api-method-parameter-name">pattern:
+            <code class="docs-api-method-parameter-type">string | Promise&lt;string | null&gt; | null</code>, <span class="docs-api-method-parameter-name">pattern:
             </span>
-            <code class="docs-api-method-parameter-type">string | RegExp</code>): <code class="docs-api-method-returns-type">Promise&lt;boolean&gt;</code>
+            <code class="docs-api-method-parameter-type">string | RegExp | null</code>): <code class="docs-api-method-returns-type">Promise&lt;boolean&gt;</code>
         </th>
       </tr>
     </thead><tr class="docs-api-method-description-row">
@@ -1400,7 +1400,7 @@ harnesses. If the option value is undefined, the predicate will be ignored.</p>
       <td class="docs-api-method-parameter-cell">
         <p class="docs-api-method-parameter-name">
           value</p>
-        <code class="docs-api-method-parameter-type">string | Promise&lt;string&gt;</code>
+        <code class="docs-api-method-parameter-type">string | Promise&lt;string | null&gt; | null</code>
       </td>
       <td class="docs-api-method-parameter-description-cell">
         <p class="docs-api-method-parameter-description">
@@ -1415,7 +1415,7 @@ harnesses. If the option value is undefined, the predicate will be ignored.</p>
       <td class="docs-api-method-parameter-cell">
         <p class="docs-api-method-parameter-name">
           pattern</p>
-        <code class="docs-api-method-parameter-type">string | RegExp</code>
+        <code class="docs-api-method-parameter-type">string | RegExp | null</code>
       </td>
       <td class="docs-api-method-parameter-description-cell">
         <p class="docs-api-method-parameter-description">

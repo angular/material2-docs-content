@@ -463,7 +463,7 @@ no subheaders it is represented as a single <code>ListSection</code> with an und
         <th colspan="2" class="docs-api-method-name-cell">getItemsWithSubheadersAndDividers
           (<span class="docs-api-method-parameter-name">filters:
             </span>
-            <code class="docs-api-method-parameter-type">{ item?: false | F; subheader: false; divider: false; }</code>): <code class="docs-api-method-returns-type">Promise&lt;C[]&gt;</code>
+            <code class="docs-api-method-parameter-type">{ item?: false | F | undefined; subheader: false; divider: false; }</code>): <code class="docs-api-method-returns-type">Promise&lt;C[]&gt;</code>
         </th>
       </tr>
     </thead><thead>
@@ -476,7 +476,7 @@ no subheaders it is represented as a single <code>ListSection</code> with an und
       <td class="docs-api-method-parameter-cell">
         <p class="docs-api-method-parameter-name">
           filters</p>
-        <code class="docs-api-method-parameter-type">{ item?: false | F; subheader: false; divider: false; }</code>
+        <code class="docs-api-method-parameter-type">{ item?: false | F | undefined; subheader: false; divider: false; }</code>
       </td>
       <td class="docs-api-method-parameter-description-cell">
         <p class="docs-api-method-parameter-description">
@@ -512,7 +512,7 @@ no subheaders it is represented as a single <code>ListSection</code> with an und
         <th colspan="2" class="docs-api-method-name-cell">getItemsWithSubheadersAndDividers
           (<span class="docs-api-method-parameter-name">filters:
             </span>
-            <code class="docs-api-method-parameter-type">{ item: false; subheader?: false | SubheaderHarnessFilters; divider: false; }</code>): <code class="docs-api-method-returns-type">Promise&lt;MatSubheaderHarness[]&gt;</code>
+            <code class="docs-api-method-parameter-type">{ item: false; subheader?: false | SubheaderHarnessFilters | undefined; divider: false; }</code>): <code class="docs-api-method-returns-type">Promise&lt;MatSubheaderHarness[]&gt;</code>
         </th>
       </tr>
     </thead><thead>
@@ -525,7 +525,7 @@ no subheaders it is represented as a single <code>ListSection</code> with an und
       <td class="docs-api-method-parameter-cell">
         <p class="docs-api-method-parameter-name">
           filters</p>
-        <code class="docs-api-method-parameter-type">{ item: false; subheader?: false | SubheaderHarnessFilters; divider: false; }</code>
+        <code class="docs-api-method-parameter-type">{ item: false; subheader?: false | SubheaderHarnessFilters | undefined; divider: false; }</code>
       </td>
       <td class="docs-api-method-parameter-description-cell">
         <p class="docs-api-method-parameter-description">
@@ -561,7 +561,7 @@ no subheaders it is represented as a single <code>ListSection</code> with an und
         <th colspan="2" class="docs-api-method-name-cell">getItemsWithSubheadersAndDividers
           (<span class="docs-api-method-parameter-name">filters:
             </span>
-            <code class="docs-api-method-parameter-type">{ item: false; subheader: false; divider?: false | DividerHarnessFilters; }</code>): <code class="docs-api-method-returns-type">Promise&lt;MatDividerHarness[]&gt;</code>
+            <code class="docs-api-method-parameter-type">{ item: false; subheader: false; divider?: false | DividerHarnessFilters | undefined; }</code>): <code class="docs-api-method-returns-type">Promise&lt;MatDividerHarness[]&gt;</code>
         </th>
       </tr>
     </thead><thead>
@@ -574,7 +574,7 @@ no subheaders it is represented as a single <code>ListSection</code> with an und
       <td class="docs-api-method-parameter-cell">
         <p class="docs-api-method-parameter-name">
           filters</p>
-        <code class="docs-api-method-parameter-type">{ item: false; subheader: false; divider?: false | DividerHarnessFilters; }</code>
+        <code class="docs-api-method-parameter-type">{ item: false; subheader: false; divider?: false | DividerHarnessFilters | undefined; }</code>
       </td>
       <td class="docs-api-method-parameter-description-cell">
         <p class="docs-api-method-parameter-description">
@@ -610,7 +610,7 @@ no subheaders it is represented as a single <code>ListSection</code> with an und
         <th colspan="2" class="docs-api-method-name-cell">getItemsWithSubheadersAndDividers
           (<span class="docs-api-method-parameter-name">filters:
             </span>
-            <code class="docs-api-method-parameter-type">{ item?: false | F; subheader?: false | SubheaderHarnessFilters; divider: false; }</code>): <code class="docs-api-method-returns-type">Promise&lt;(C | MatSubheaderHarness)[]&gt;</code>
+            <code class="docs-api-method-parameter-type">{ item?: false | F | undefined; subheader?: false | SubheaderHarnessFilters | undefined; divider: false; }</code>): <code class="docs-api-method-returns-type">Promise&lt;(C | MatSubheaderHarness)[]&gt;</code>
         </th>
       </tr>
     </thead><thead>
@@ -623,7 +623,7 @@ no subheaders it is represented as a single <code>ListSection</code> with an und
       <td class="docs-api-method-parameter-cell">
         <p class="docs-api-method-parameter-name">
           filters</p>
-        <code class="docs-api-method-parameter-type">{ item?: false | F; subheader?: false | SubheaderHarnessFilters; divider: false; }</code>
+        <code class="docs-api-method-parameter-type">{ item?: false | F | undefined; subheader?: false | SubheaderHarnessFilters | undefined; divider: false; }</code>
       </td>
       <td class="docs-api-method-parameter-description-cell">
         <p class="docs-api-method-parameter-description">
@@ -659,7 +659,7 @@ no subheaders it is represented as a single <code>ListSection</code> with an und
         <th colspan="2" class="docs-api-method-name-cell">getItemsWithSubheadersAndDividers
           (<span class="docs-api-method-parameter-name">filters:
             </span>
-            <code class="docs-api-method-parameter-type">{ item?: false | F; subheader: false; divider?: false | DividerHarnessFilters; }</code>): <code class="docs-api-method-returns-type">Promise&lt;(C | MatDividerHarness)[]&gt;</code>
+            <code class="docs-api-method-parameter-type">{ item?: false | F | undefined; subheader: false; divider?: false | DividerHarnessFilters | undefined; }</code>): <code class="docs-api-method-returns-type">Promise&lt;(C | MatDividerHarness)[]&gt;</code>
         </th>
       </tr>
     </thead><thead>
@@ -672,7 +672,7 @@ no subheaders it is represented as a single <code>ListSection</code> with an und
       <td class="docs-api-method-parameter-cell">
         <p class="docs-api-method-parameter-name">
           filters</p>
-        <code class="docs-api-method-parameter-type">{ item?: false | F; subheader: false; divider?: false | DividerHarnessFilters; }</code>
+        <code class="docs-api-method-parameter-type">{ item?: false | F | undefined; subheader: false; divider?: false | DividerHarnessFilters | undefined; }</code>
       </td>
       <td class="docs-api-method-parameter-description-cell">
         <p class="docs-api-method-parameter-description">
@@ -708,7 +708,7 @@ no subheaders it is represented as a single <code>ListSection</code> with an und
         <th colspan="2" class="docs-api-method-name-cell">getItemsWithSubheadersAndDividers
           (<span class="docs-api-method-parameter-name">filters:
             </span>
-            <code class="docs-api-method-parameter-type">{ item: false; subheader?: false | SubheaderHarnessFilters; divider?: false | DividerHarnessFilters; }</code>): <code class="docs-api-method-returns-type">Promise&lt;(MatSubheaderHarness | MatDividerHarness)[]&gt;</code>
+            <code class="docs-api-method-parameter-type">{ item: false; subheader?: false | SubheaderHarnessFilters | undefined; divider?: false | DividerHarnessFilters | undefined; }</code>): <code class="docs-api-method-returns-type">Promise&lt;(MatSubheaderHarness | MatDividerHarness)[]&gt;</code>
         </th>
       </tr>
     </thead><thead>
@@ -721,7 +721,7 @@ no subheaders it is represented as a single <code>ListSection</code> with an und
       <td class="docs-api-method-parameter-cell">
         <p class="docs-api-method-parameter-name">
           filters</p>
-        <code class="docs-api-method-parameter-type">{ item: false; subheader?: false | SubheaderHarnessFilters; divider?: false | DividerHarnessFilters; }</code>
+        <code class="docs-api-method-parameter-type">{ item: false; subheader?: false | SubheaderHarnessFilters | undefined; divider?: false | DividerHarnessFilters | undefined; }</code>
       </td>
       <td class="docs-api-method-parameter-description-cell">
         <p class="docs-api-method-parameter-description">
@@ -757,7 +757,7 @@ no subheaders it is represented as a single <code>ListSection</code> with an und
         <th colspan="2" class="docs-api-method-name-cell">getItemsWithSubheadersAndDividers
           (<span class="docs-api-method-parameter-name">filters<span class="docs-api-method-parameter-optional-marker">?</span>:
             </span>
-            <code class="docs-api-method-parameter-type">{ item?: false | F; subheader?: false | SubheaderHarnessFilters; divider?: false | DividerHarnessFilters; }</code>): <code class="docs-api-method-returns-type">Promise&lt;(C | MatSubheaderHarness | MatDividerHarness)[]&gt;</code>
+            <code class="docs-api-method-parameter-type">{ item?: false | F | undefined; subheader?: false | SubheaderHarnessFilters | undefined; divider?: false | DividerHarnessFilters | undefined; }</code>): <code class="docs-api-method-returns-type">Promise&lt;(C | MatSubheaderHarness | MatDividerHarness)[]&gt;</code>
         </th>
       </tr>
     </thead><thead>
@@ -770,7 +770,7 @@ no subheaders it is represented as a single <code>ListSection</code> with an und
       <td class="docs-api-method-parameter-cell">
         <p class="docs-api-method-parameter-name">
           filters<span class="docs-api-method-parameter-optional-marker">?</span></p>
-        <code class="docs-api-method-parameter-type">{ item?: false | F; subheader?: false | SubheaderHarnessFilters; divider?: false | DividerHarnessFilters; }</code>
+        <code class="docs-api-method-parameter-type">{ item?: false | F | undefined; subheader?: false | SubheaderHarnessFilters | undefined; divider?: false | DividerHarnessFilters | undefined; }</code>
       </td>
       <td class="docs-api-method-parameter-description-cell">
         <p class="docs-api-method-parameter-description">
@@ -2237,7 +2237,7 @@ no subheaders it is represented as a single <code>ListSection</code> with an und
         <th colspan="2" class="docs-api-method-name-cell">getItemsWithSubheadersAndDividers
           (<span class="docs-api-method-parameter-name">filters:
             </span>
-            <code class="docs-api-method-parameter-type">{ item?: false | F; subheader: false; divider: false; }</code>): <code class="docs-api-method-returns-type">Promise&lt;C[]&gt;</code>
+            <code class="docs-api-method-parameter-type">{ item?: false | F | undefined; subheader: false; divider: false; }</code>): <code class="docs-api-method-returns-type">Promise&lt;C[]&gt;</code>
         </th>
       </tr>
     </thead><thead>
@@ -2250,7 +2250,7 @@ no subheaders it is represented as a single <code>ListSection</code> with an und
       <td class="docs-api-method-parameter-cell">
         <p class="docs-api-method-parameter-name">
           filters</p>
-        <code class="docs-api-method-parameter-type">{ item?: false | F; subheader: false; divider: false; }</code>
+        <code class="docs-api-method-parameter-type">{ item?: false | F | undefined; subheader: false; divider: false; }</code>
       </td>
       <td class="docs-api-method-parameter-description-cell">
         <p class="docs-api-method-parameter-description">
@@ -2286,7 +2286,7 @@ no subheaders it is represented as a single <code>ListSection</code> with an und
         <th colspan="2" class="docs-api-method-name-cell">getItemsWithSubheadersAndDividers
           (<span class="docs-api-method-parameter-name">filters:
             </span>
-            <code class="docs-api-method-parameter-type">{ item: false; subheader?: false | SubheaderHarnessFilters; divider: false; }</code>): <code class="docs-api-method-returns-type">Promise&lt;MatSubheaderHarness[]&gt;</code>
+            <code class="docs-api-method-parameter-type">{ item: false; subheader?: false | SubheaderHarnessFilters | undefined; divider: false; }</code>): <code class="docs-api-method-returns-type">Promise&lt;MatSubheaderHarness[]&gt;</code>
         </th>
       </tr>
     </thead><thead>
@@ -2299,7 +2299,7 @@ no subheaders it is represented as a single <code>ListSection</code> with an und
       <td class="docs-api-method-parameter-cell">
         <p class="docs-api-method-parameter-name">
           filters</p>
-        <code class="docs-api-method-parameter-type">{ item: false; subheader?: false | SubheaderHarnessFilters; divider: false; }</code>
+        <code class="docs-api-method-parameter-type">{ item: false; subheader?: false | SubheaderHarnessFilters | undefined; divider: false; }</code>
       </td>
       <td class="docs-api-method-parameter-description-cell">
         <p class="docs-api-method-parameter-description">
@@ -2335,7 +2335,7 @@ no subheaders it is represented as a single <code>ListSection</code> with an und
         <th colspan="2" class="docs-api-method-name-cell">getItemsWithSubheadersAndDividers
           (<span class="docs-api-method-parameter-name">filters:
             </span>
-            <code class="docs-api-method-parameter-type">{ item: false; subheader: false; divider?: false | DividerHarnessFilters; }</code>): <code class="docs-api-method-returns-type">Promise&lt;MatDividerHarness[]&gt;</code>
+            <code class="docs-api-method-parameter-type">{ item: false; subheader: false; divider?: false | DividerHarnessFilters | undefined; }</code>): <code class="docs-api-method-returns-type">Promise&lt;MatDividerHarness[]&gt;</code>
         </th>
       </tr>
     </thead><thead>
@@ -2348,7 +2348,7 @@ no subheaders it is represented as a single <code>ListSection</code> with an und
       <td class="docs-api-method-parameter-cell">
         <p class="docs-api-method-parameter-name">
           filters</p>
-        <code class="docs-api-method-parameter-type">{ item: false; subheader: false; divider?: false | DividerHarnessFilters; }</code>
+        <code class="docs-api-method-parameter-type">{ item: false; subheader: false; divider?: false | DividerHarnessFilters | undefined; }</code>
       </td>
       <td class="docs-api-method-parameter-description-cell">
         <p class="docs-api-method-parameter-description">
@@ -2384,7 +2384,7 @@ no subheaders it is represented as a single <code>ListSection</code> with an und
         <th colspan="2" class="docs-api-method-name-cell">getItemsWithSubheadersAndDividers
           (<span class="docs-api-method-parameter-name">filters:
             </span>
-            <code class="docs-api-method-parameter-type">{ item?: false | F; subheader?: false | SubheaderHarnessFilters; divider: false; }</code>): <code class="docs-api-method-returns-type">Promise&lt;(C | MatSubheaderHarness)[]&gt;</code>
+            <code class="docs-api-method-parameter-type">{ item?: false | F | undefined; subheader?: false | SubheaderHarnessFilters | undefined; divider: false; }</code>): <code class="docs-api-method-returns-type">Promise&lt;(C | MatSubheaderHarness)[]&gt;</code>
         </th>
       </tr>
     </thead><thead>
@@ -2397,7 +2397,7 @@ no subheaders it is represented as a single <code>ListSection</code> with an und
       <td class="docs-api-method-parameter-cell">
         <p class="docs-api-method-parameter-name">
           filters</p>
-        <code class="docs-api-method-parameter-type">{ item?: false | F; subheader?: false | SubheaderHarnessFilters; divider: false; }</code>
+        <code class="docs-api-method-parameter-type">{ item?: false | F | undefined; subheader?: false | SubheaderHarnessFilters | undefined; divider: false; }</code>
       </td>
       <td class="docs-api-method-parameter-description-cell">
         <p class="docs-api-method-parameter-description">
@@ -2433,7 +2433,7 @@ no subheaders it is represented as a single <code>ListSection</code> with an und
         <th colspan="2" class="docs-api-method-name-cell">getItemsWithSubheadersAndDividers
           (<span class="docs-api-method-parameter-name">filters:
             </span>
-            <code class="docs-api-method-parameter-type">{ item?: false | F; subheader: false; divider?: false | DividerHarnessFilters; }</code>): <code class="docs-api-method-returns-type">Promise&lt;(C | MatDividerHarness)[]&gt;</code>
+            <code class="docs-api-method-parameter-type">{ item?: false | F | undefined; subheader: false; divider?: false | DividerHarnessFilters | undefined; }</code>): <code class="docs-api-method-returns-type">Promise&lt;(C | MatDividerHarness)[]&gt;</code>
         </th>
       </tr>
     </thead><thead>
@@ -2446,7 +2446,7 @@ no subheaders it is represented as a single <code>ListSection</code> with an und
       <td class="docs-api-method-parameter-cell">
         <p class="docs-api-method-parameter-name">
           filters</p>
-        <code class="docs-api-method-parameter-type">{ item?: false | F; subheader: false; divider?: false | DividerHarnessFilters; }</code>
+        <code class="docs-api-method-parameter-type">{ item?: false | F | undefined; subheader: false; divider?: false | DividerHarnessFilters | undefined; }</code>
       </td>
       <td class="docs-api-method-parameter-description-cell">
         <p class="docs-api-method-parameter-description">
@@ -2482,7 +2482,7 @@ no subheaders it is represented as a single <code>ListSection</code> with an und
         <th colspan="2" class="docs-api-method-name-cell">getItemsWithSubheadersAndDividers
           (<span class="docs-api-method-parameter-name">filters:
             </span>
-            <code class="docs-api-method-parameter-type">{ item: false; subheader?: false | SubheaderHarnessFilters; divider?: false | DividerHarnessFilters; }</code>): <code class="docs-api-method-returns-type">Promise&lt;(MatSubheaderHarness | MatDividerHarness)[]&gt;</code>
+            <code class="docs-api-method-parameter-type">{ item: false; subheader?: false | SubheaderHarnessFilters | undefined; divider?: false | DividerHarnessFilters | undefined; }</code>): <code class="docs-api-method-returns-type">Promise&lt;(MatSubheaderHarness | MatDividerHarness)[]&gt;</code>
         </th>
       </tr>
     </thead><thead>
@@ -2495,7 +2495,7 @@ no subheaders it is represented as a single <code>ListSection</code> with an und
       <td class="docs-api-method-parameter-cell">
         <p class="docs-api-method-parameter-name">
           filters</p>
-        <code class="docs-api-method-parameter-type">{ item: false; subheader?: false | SubheaderHarnessFilters; divider?: false | DividerHarnessFilters; }</code>
+        <code class="docs-api-method-parameter-type">{ item: false; subheader?: false | SubheaderHarnessFilters | undefined; divider?: false | DividerHarnessFilters | undefined; }</code>
       </td>
       <td class="docs-api-method-parameter-description-cell">
         <p class="docs-api-method-parameter-description">
@@ -2531,7 +2531,7 @@ no subheaders it is represented as a single <code>ListSection</code> with an und
         <th colspan="2" class="docs-api-method-name-cell">getItemsWithSubheadersAndDividers
           (<span class="docs-api-method-parameter-name">filters<span class="docs-api-method-parameter-optional-marker">?</span>:
             </span>
-            <code class="docs-api-method-parameter-type">{ item?: false | F; subheader?: false | SubheaderHarnessFilters; divider?: false | DividerHarnessFilters; }</code>): <code class="docs-api-method-returns-type">Promise&lt;(C | MatSubheaderHarness | MatDividerHarness)[]&gt;</code>
+            <code class="docs-api-method-parameter-type">{ item?: false | F | undefined; subheader?: false | SubheaderHarnessFilters | undefined; divider?: false | DividerHarnessFilters | undefined; }</code>): <code class="docs-api-method-returns-type">Promise&lt;(C | MatSubheaderHarness | MatDividerHarness)[]&gt;</code>
         </th>
       </tr>
     </thead><thead>
@@ -2544,7 +2544,7 @@ no subheaders it is represented as a single <code>ListSection</code> with an und
       <td class="docs-api-method-parameter-cell">
         <p class="docs-api-method-parameter-name">
           filters<span class="docs-api-method-parameter-optional-marker">?</span></p>
-        <code class="docs-api-method-parameter-type">{ item?: false | F; subheader?: false | SubheaderHarnessFilters; divider?: false | DividerHarnessFilters; }</code>
+        <code class="docs-api-method-parameter-type">{ item?: false | F | undefined; subheader?: false | SubheaderHarnessFilters | undefined; divider?: false | DividerHarnessFilters | undefined; }</code>
       </td>
       <td class="docs-api-method-parameter-description-cell">
         <p class="docs-api-method-parameter-description">
@@ -3862,7 +3862,7 @@ no subheaders it is represented as a single <code>ListSection</code> with an und
         <th colspan="2" class="docs-api-method-name-cell">getItemsWithSubheadersAndDividers
           (<span class="docs-api-method-parameter-name">filters:
             </span>
-            <code class="docs-api-method-parameter-type">{ item?: false | F; subheader: false; divider: false; }</code>): <code class="docs-api-method-returns-type">Promise&lt;C[]&gt;</code>
+            <code class="docs-api-method-parameter-type">{ item?: false | F | undefined; subheader: false; divider: false; }</code>): <code class="docs-api-method-returns-type">Promise&lt;C[]&gt;</code>
         </th>
       </tr>
     </thead><thead>
@@ -3875,7 +3875,7 @@ no subheaders it is represented as a single <code>ListSection</code> with an und
       <td class="docs-api-method-parameter-cell">
         <p class="docs-api-method-parameter-name">
           filters</p>
-        <code class="docs-api-method-parameter-type">{ item?: false | F; subheader: false; divider: false; }</code>
+        <code class="docs-api-method-parameter-type">{ item?: false | F | undefined; subheader: false; divider: false; }</code>
       </td>
       <td class="docs-api-method-parameter-description-cell">
         <p class="docs-api-method-parameter-description">
@@ -3911,7 +3911,7 @@ no subheaders it is represented as a single <code>ListSection</code> with an und
         <th colspan="2" class="docs-api-method-name-cell">getItemsWithSubheadersAndDividers
           (<span class="docs-api-method-parameter-name">filters:
             </span>
-            <code class="docs-api-method-parameter-type">{ item: false; subheader?: false | SubheaderHarnessFilters; divider: false; }</code>): <code class="docs-api-method-returns-type">Promise&lt;MatSubheaderHarness[]&gt;</code>
+            <code class="docs-api-method-parameter-type">{ item: false; subheader?: false | SubheaderHarnessFilters | undefined; divider: false; }</code>): <code class="docs-api-method-returns-type">Promise&lt;MatSubheaderHarness[]&gt;</code>
         </th>
       </tr>
     </thead><thead>
@@ -3924,7 +3924,7 @@ no subheaders it is represented as a single <code>ListSection</code> with an und
       <td class="docs-api-method-parameter-cell">
         <p class="docs-api-method-parameter-name">
           filters</p>
-        <code class="docs-api-method-parameter-type">{ item: false; subheader?: false | SubheaderHarnessFilters; divider: false; }</code>
+        <code class="docs-api-method-parameter-type">{ item: false; subheader?: false | SubheaderHarnessFilters | undefined; divider: false; }</code>
       </td>
       <td class="docs-api-method-parameter-description-cell">
         <p class="docs-api-method-parameter-description">
@@ -3960,7 +3960,7 @@ no subheaders it is represented as a single <code>ListSection</code> with an und
         <th colspan="2" class="docs-api-method-name-cell">getItemsWithSubheadersAndDividers
           (<span class="docs-api-method-parameter-name">filters:
             </span>
-            <code class="docs-api-method-parameter-type">{ item: false; subheader: false; divider?: false | DividerHarnessFilters; }</code>): <code class="docs-api-method-returns-type">Promise&lt;MatDividerHarness[]&gt;</code>
+            <code class="docs-api-method-parameter-type">{ item: false; subheader: false; divider?: false | DividerHarnessFilters | undefined; }</code>): <code class="docs-api-method-returns-type">Promise&lt;MatDividerHarness[]&gt;</code>
         </th>
       </tr>
     </thead><thead>
@@ -3973,7 +3973,7 @@ no subheaders it is represented as a single <code>ListSection</code> with an und
       <td class="docs-api-method-parameter-cell">
         <p class="docs-api-method-parameter-name">
           filters</p>
-        <code class="docs-api-method-parameter-type">{ item: false; subheader: false; divider?: false | DividerHarnessFilters; }</code>
+        <code class="docs-api-method-parameter-type">{ item: false; subheader: false; divider?: false | DividerHarnessFilters | undefined; }</code>
       </td>
       <td class="docs-api-method-parameter-description-cell">
         <p class="docs-api-method-parameter-description">
@@ -4009,7 +4009,7 @@ no subheaders it is represented as a single <code>ListSection</code> with an und
         <th colspan="2" class="docs-api-method-name-cell">getItemsWithSubheadersAndDividers
           (<span class="docs-api-method-parameter-name">filters:
             </span>
-            <code class="docs-api-method-parameter-type">{ item?: false | F; subheader?: false | SubheaderHarnessFilters; divider: false; }</code>): <code class="docs-api-method-returns-type">Promise&lt;(C | MatSubheaderHarness)[]&gt;</code>
+            <code class="docs-api-method-parameter-type">{ item?: false | F | undefined; subheader?: false | SubheaderHarnessFilters | undefined; divider: false; }</code>): <code class="docs-api-method-returns-type">Promise&lt;(C | MatSubheaderHarness)[]&gt;</code>
         </th>
       </tr>
     </thead><thead>
@@ -4022,7 +4022,7 @@ no subheaders it is represented as a single <code>ListSection</code> with an und
       <td class="docs-api-method-parameter-cell">
         <p class="docs-api-method-parameter-name">
           filters</p>
-        <code class="docs-api-method-parameter-type">{ item?: false | F; subheader?: false | SubheaderHarnessFilters; divider: false; }</code>
+        <code class="docs-api-method-parameter-type">{ item?: false | F | undefined; subheader?: false | SubheaderHarnessFilters | undefined; divider: false; }</code>
       </td>
       <td class="docs-api-method-parameter-description-cell">
         <p class="docs-api-method-parameter-description">
@@ -4058,7 +4058,7 @@ no subheaders it is represented as a single <code>ListSection</code> with an und
         <th colspan="2" class="docs-api-method-name-cell">getItemsWithSubheadersAndDividers
           (<span class="docs-api-method-parameter-name">filters:
             </span>
-            <code class="docs-api-method-parameter-type">{ item?: false | F; subheader: false; divider?: false | DividerHarnessFilters; }</code>): <code class="docs-api-method-returns-type">Promise&lt;(C | MatDividerHarness)[]&gt;</code>
+            <code class="docs-api-method-parameter-type">{ item?: false | F | undefined; subheader: false; divider?: false | DividerHarnessFilters | undefined; }</code>): <code class="docs-api-method-returns-type">Promise&lt;(C | MatDividerHarness)[]&gt;</code>
         </th>
       </tr>
     </thead><thead>
@@ -4071,7 +4071,7 @@ no subheaders it is represented as a single <code>ListSection</code> with an und
       <td class="docs-api-method-parameter-cell">
         <p class="docs-api-method-parameter-name">
           filters</p>
-        <code class="docs-api-method-parameter-type">{ item?: false | F; subheader: false; divider?: false | DividerHarnessFilters; }</code>
+        <code class="docs-api-method-parameter-type">{ item?: false | F | undefined; subheader: false; divider?: false | DividerHarnessFilters | undefined; }</code>
       </td>
       <td class="docs-api-method-parameter-description-cell">
         <p class="docs-api-method-parameter-description">
@@ -4107,7 +4107,7 @@ no subheaders it is represented as a single <code>ListSection</code> with an und
         <th colspan="2" class="docs-api-method-name-cell">getItemsWithSubheadersAndDividers
           (<span class="docs-api-method-parameter-name">filters:
             </span>
-            <code class="docs-api-method-parameter-type">{ item: false; subheader?: false | SubheaderHarnessFilters; divider?: false | DividerHarnessFilters; }</code>): <code class="docs-api-method-returns-type">Promise&lt;(MatSubheaderHarness | MatDividerHarness)[]&gt;</code>
+            <code class="docs-api-method-parameter-type">{ item: false; subheader?: false | SubheaderHarnessFilters | undefined; divider?: false | DividerHarnessFilters | undefined; }</code>): <code class="docs-api-method-returns-type">Promise&lt;(MatSubheaderHarness | MatDividerHarness)[]&gt;</code>
         </th>
       </tr>
     </thead><thead>
@@ -4120,7 +4120,7 @@ no subheaders it is represented as a single <code>ListSection</code> with an und
       <td class="docs-api-method-parameter-cell">
         <p class="docs-api-method-parameter-name">
           filters</p>
-        <code class="docs-api-method-parameter-type">{ item: false; subheader?: false | SubheaderHarnessFilters; divider?: false | DividerHarnessFilters; }</code>
+        <code class="docs-api-method-parameter-type">{ item: false; subheader?: false | SubheaderHarnessFilters | undefined; divider?: false | DividerHarnessFilters | undefined; }</code>
       </td>
       <td class="docs-api-method-parameter-description-cell">
         <p class="docs-api-method-parameter-description">
@@ -4156,7 +4156,7 @@ no subheaders it is represented as a single <code>ListSection</code> with an und
         <th colspan="2" class="docs-api-method-name-cell">getItemsWithSubheadersAndDividers
           (<span class="docs-api-method-parameter-name">filters<span class="docs-api-method-parameter-optional-marker">?</span>:
             </span>
-            <code class="docs-api-method-parameter-type">{ item?: false | F; subheader?: false | SubheaderHarnessFilters; divider?: false | DividerHarnessFilters; }</code>): <code class="docs-api-method-returns-type">Promise&lt;(C | MatSubheaderHarness | MatDividerHarness)[]&gt;</code>
+            <code class="docs-api-method-parameter-type">{ item?: false | F | undefined; subheader?: false | SubheaderHarnessFilters | undefined; divider?: false | DividerHarnessFilters | undefined; }</code>): <code class="docs-api-method-returns-type">Promise&lt;(C | MatSubheaderHarness | MatDividerHarness)[]&gt;</code>
         </th>
       </tr>
     </thead><thead>
@@ -4169,7 +4169,7 @@ no subheaders it is represented as a single <code>ListSection</code> with an und
       <td class="docs-api-method-parameter-cell">
         <p class="docs-api-method-parameter-name">
           filters<span class="docs-api-method-parameter-optional-marker">?</span></p>
-        <code class="docs-api-method-parameter-type">{ item?: false | F; subheader?: false | SubheaderHarnessFilters; divider?: false | DividerHarnessFilters; }</code>
+        <code class="docs-api-method-parameter-type">{ item?: false | F | undefined; subheader?: false | SubheaderHarnessFilters | undefined; divider?: false | DividerHarnessFilters | undefined; }</code>
       </td>
       <td class="docs-api-method-parameter-description-cell">
         <p class="docs-api-method-parameter-description">
@@ -5781,7 +5781,7 @@ no subheaders it is represented as a single <code>ListSection</code> with an und
         <th colspan="2" class="docs-api-method-name-cell">getItemsWithSubheadersAndDividers
           (<span class="docs-api-method-parameter-name">filters:
             </span>
-            <code class="docs-api-method-parameter-type">{ item?: false | F; subheader: false; divider: false; }</code>): <code class="docs-api-method-returns-type">Promise&lt;C[]&gt;</code>
+            <code class="docs-api-method-parameter-type">{ item?: false | F | undefined; subheader: false; divider: false; }</code>): <code class="docs-api-method-returns-type">Promise&lt;C[]&gt;</code>
         </th>
       </tr>
     </thead><thead>
@@ -5794,7 +5794,7 @@ no subheaders it is represented as a single <code>ListSection</code> with an und
       <td class="docs-api-method-parameter-cell">
         <p class="docs-api-method-parameter-name">
           filters</p>
-        <code class="docs-api-method-parameter-type">{ item?: false | F; subheader: false; divider: false; }</code>
+        <code class="docs-api-method-parameter-type">{ item?: false | F | undefined; subheader: false; divider: false; }</code>
       </td>
       <td class="docs-api-method-parameter-description-cell">
         <p class="docs-api-method-parameter-description">
@@ -5830,7 +5830,7 @@ no subheaders it is represented as a single <code>ListSection</code> with an und
         <th colspan="2" class="docs-api-method-name-cell">getItemsWithSubheadersAndDividers
           (<span class="docs-api-method-parameter-name">filters:
             </span>
-            <code class="docs-api-method-parameter-type">{ item: false; subheader?: false | SubheaderHarnessFilters; divider: false; }</code>): <code class="docs-api-method-returns-type">Promise&lt;MatSubheaderHarness[]&gt;</code>
+            <code class="docs-api-method-parameter-type">{ item: false; subheader?: false | SubheaderHarnessFilters | undefined; divider: false; }</code>): <code class="docs-api-method-returns-type">Promise&lt;MatSubheaderHarness[]&gt;</code>
         </th>
       </tr>
     </thead><thead>
@@ -5843,7 +5843,7 @@ no subheaders it is represented as a single <code>ListSection</code> with an und
       <td class="docs-api-method-parameter-cell">
         <p class="docs-api-method-parameter-name">
           filters</p>
-        <code class="docs-api-method-parameter-type">{ item: false; subheader?: false | SubheaderHarnessFilters; divider: false; }</code>
+        <code class="docs-api-method-parameter-type">{ item: false; subheader?: false | SubheaderHarnessFilters | undefined; divider: false; }</code>
       </td>
       <td class="docs-api-method-parameter-description-cell">
         <p class="docs-api-method-parameter-description">
@@ -5879,7 +5879,7 @@ no subheaders it is represented as a single <code>ListSection</code> with an und
         <th colspan="2" class="docs-api-method-name-cell">getItemsWithSubheadersAndDividers
           (<span class="docs-api-method-parameter-name">filters:
             </span>
-            <code class="docs-api-method-parameter-type">{ item: false; subheader: false; divider?: false | DividerHarnessFilters; }</code>): <code class="docs-api-method-returns-type">Promise&lt;MatDividerHarness[]&gt;</code>
+            <code class="docs-api-method-parameter-type">{ item: false; subheader: false; divider?: false | DividerHarnessFilters | undefined; }</code>): <code class="docs-api-method-returns-type">Promise&lt;MatDividerHarness[]&gt;</code>
         </th>
       </tr>
     </thead><thead>
@@ -5892,7 +5892,7 @@ no subheaders it is represented as a single <code>ListSection</code> with an und
       <td class="docs-api-method-parameter-cell">
         <p class="docs-api-method-parameter-name">
           filters</p>
-        <code class="docs-api-method-parameter-type">{ item: false; subheader: false; divider?: false | DividerHarnessFilters; }</code>
+        <code class="docs-api-method-parameter-type">{ item: false; subheader: false; divider?: false | DividerHarnessFilters | undefined; }</code>
       </td>
       <td class="docs-api-method-parameter-description-cell">
         <p class="docs-api-method-parameter-description">
@@ -5928,7 +5928,7 @@ no subheaders it is represented as a single <code>ListSection</code> with an und
         <th colspan="2" class="docs-api-method-name-cell">getItemsWithSubheadersAndDividers
           (<span class="docs-api-method-parameter-name">filters:
             </span>
-            <code class="docs-api-method-parameter-type">{ item?: false | F; subheader?: false | SubheaderHarnessFilters; divider: false; }</code>): <code class="docs-api-method-returns-type">Promise&lt;(C | MatSubheaderHarness)[]&gt;</code>
+            <code class="docs-api-method-parameter-type">{ item?: false | F | undefined; subheader?: false | SubheaderHarnessFilters | undefined; divider: false; }</code>): <code class="docs-api-method-returns-type">Promise&lt;(C | MatSubheaderHarness)[]&gt;</code>
         </th>
       </tr>
     </thead><thead>
@@ -5941,7 +5941,7 @@ no subheaders it is represented as a single <code>ListSection</code> with an und
       <td class="docs-api-method-parameter-cell">
         <p class="docs-api-method-parameter-name">
           filters</p>
-        <code class="docs-api-method-parameter-type">{ item?: false | F; subheader?: false | SubheaderHarnessFilters; divider: false; }</code>
+        <code class="docs-api-method-parameter-type">{ item?: false | F | undefined; subheader?: false | SubheaderHarnessFilters | undefined; divider: false; }</code>
       </td>
       <td class="docs-api-method-parameter-description-cell">
         <p class="docs-api-method-parameter-description">
@@ -5977,7 +5977,7 @@ no subheaders it is represented as a single <code>ListSection</code> with an und
         <th colspan="2" class="docs-api-method-name-cell">getItemsWithSubheadersAndDividers
           (<span class="docs-api-method-parameter-name">filters:
             </span>
-            <code class="docs-api-method-parameter-type">{ item?: false | F; subheader: false; divider?: false | DividerHarnessFilters; }</code>): <code class="docs-api-method-returns-type">Promise&lt;(C | MatDividerHarness)[]&gt;</code>
+            <code class="docs-api-method-parameter-type">{ item?: false | F | undefined; subheader: false; divider?: false | DividerHarnessFilters | undefined; }</code>): <code class="docs-api-method-returns-type">Promise&lt;(C | MatDividerHarness)[]&gt;</code>
         </th>
       </tr>
     </thead><thead>
@@ -5990,7 +5990,7 @@ no subheaders it is represented as a single <code>ListSection</code> with an und
       <td class="docs-api-method-parameter-cell">
         <p class="docs-api-method-parameter-name">
           filters</p>
-        <code class="docs-api-method-parameter-type">{ item?: false | F; subheader: false; divider?: false | DividerHarnessFilters; }</code>
+        <code class="docs-api-method-parameter-type">{ item?: false | F | undefined; subheader: false; divider?: false | DividerHarnessFilters | undefined; }</code>
       </td>
       <td class="docs-api-method-parameter-description-cell">
         <p class="docs-api-method-parameter-description">
@@ -6026,7 +6026,7 @@ no subheaders it is represented as a single <code>ListSection</code> with an und
         <th colspan="2" class="docs-api-method-name-cell">getItemsWithSubheadersAndDividers
           (<span class="docs-api-method-parameter-name">filters:
             </span>
-            <code class="docs-api-method-parameter-type">{ item: false; subheader?: false | SubheaderHarnessFilters; divider?: false | DividerHarnessFilters; }</code>): <code class="docs-api-method-returns-type">Promise&lt;(MatSubheaderHarness | MatDividerHarness)[]&gt;</code>
+            <code class="docs-api-method-parameter-type">{ item: false; subheader?: false | SubheaderHarnessFilters | undefined; divider?: false | DividerHarnessFilters | undefined; }</code>): <code class="docs-api-method-returns-type">Promise&lt;(MatSubheaderHarness | MatDividerHarness)[]&gt;</code>
         </th>
       </tr>
     </thead><thead>
@@ -6039,7 +6039,7 @@ no subheaders it is represented as a single <code>ListSection</code> with an und
       <td class="docs-api-method-parameter-cell">
         <p class="docs-api-method-parameter-name">
           filters</p>
-        <code class="docs-api-method-parameter-type">{ item: false; subheader?: false | SubheaderHarnessFilters; divider?: false | DividerHarnessFilters; }</code>
+        <code class="docs-api-method-parameter-type">{ item: false; subheader?: false | SubheaderHarnessFilters | undefined; divider?: false | DividerHarnessFilters | undefined; }</code>
       </td>
       <td class="docs-api-method-parameter-description-cell">
         <p class="docs-api-method-parameter-description">
@@ -6075,7 +6075,7 @@ no subheaders it is represented as a single <code>ListSection</code> with an und
         <th colspan="2" class="docs-api-method-name-cell">getItemsWithSubheadersAndDividers
           (<span class="docs-api-method-parameter-name">filters<span class="docs-api-method-parameter-optional-marker">?</span>:
             </span>
-            <code class="docs-api-method-parameter-type">{ item?: false | F; subheader?: false | SubheaderHarnessFilters; divider?: false | DividerHarnessFilters; }</code>): <code class="docs-api-method-returns-type">Promise&lt;(C | MatSubheaderHarness | MatDividerHarness)[]&gt;</code>
+            <code class="docs-api-method-parameter-type">{ item?: false | F | undefined; subheader?: false | SubheaderHarnessFilters | undefined; divider?: false | DividerHarnessFilters | undefined; }</code>): <code class="docs-api-method-returns-type">Promise&lt;(C | MatSubheaderHarness | MatDividerHarness)[]&gt;</code>
         </th>
       </tr>
     </thead><thead>
@@ -6088,7 +6088,7 @@ no subheaders it is represented as a single <code>ListSection</code> with an und
       <td class="docs-api-method-parameter-cell">
         <p class="docs-api-method-parameter-name">
           filters<span class="docs-api-method-parameter-optional-marker">?</span></p>
-        <code class="docs-api-method-parameter-type">{ item?: false | F; subheader?: false | SubheaderHarnessFilters; divider?: false | DividerHarnessFilters; }</code>
+        <code class="docs-api-method-parameter-type">{ item?: false | F | undefined; subheader?: false | SubheaderHarnessFilters | undefined; divider?: false | DividerHarnessFilters | undefined; }</code>
       </td>
       <td class="docs-api-method-parameter-description-cell">
         <p class="docs-api-method-parameter-description">
