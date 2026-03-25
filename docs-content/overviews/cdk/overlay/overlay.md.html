@@ -94,9 +94,7 @@ so that an overlay is never clipped by an <code>overflow: hidden</code> parent.<
       <p>The <code>FullscreenOverlayContainer</code> is an alternative to <code>OverlayContainer</code> that supports correct
 displaying of overlay elements in
 <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/requestFullScreen">fullscreen mode</a>.</p>
-<p><code>FullscreenOverlayContainer</code> can be enabled by providing it in your <code>NgModule</code>:</p>
-<pre><code class="language-ts"><span class="hljs-meta">@NgModule</span>({
-  <span class="hljs-attr">providers</span>: [{<span class="hljs-attr">provide</span>: <span class="hljs-title class_">OverlayContainer</span>, <span class="hljs-attr">useClass</span>: <span class="hljs-title class_">FullscreenOverlayContainer</span>}],
-  <span class="hljs-comment">// ...</span>
-})
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">MyModule</span> { }</code></pre></div>
+<p><code>FullscreenOverlayContainer</code> can be enabled by providing it in your app config:</p>
+<pre><code class="language-ts"><span class="hljs-title function_">bootstrapApplication</span>(<span class="hljs-title class_">MyApp</span>, {
+  <span class="hljs-attr">providers</span>: [{<span class="hljs-attr">provide</span>: <span class="hljs-title class_">OverlayContainer</span>, <span class="hljs-attr">useClass</span>: <span class="hljs-title class_">FullscreenOverlayContainer</span>}]
+});</code></pre></div>

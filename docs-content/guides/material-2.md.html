@@ -1281,9 +1281,19 @@ for how to read values from an M3 theme).</p>
           <span header-link="pass-a-new-m3-theme-in-your-global-theme-styles"></span>
           Pass a new M3 theme in your global theme styles
         </h3>
-      <p>Create a new M3 theme object using <code>define-theme</code> and pass it everywhere you were previously passing
-your M2 theme. All Angular Material mixins that take an M2 theme are compatible with M3 themes as
-well.</p>
+      <p>Replace your M2 theme with an M3 theme. For v19 and later, use the <code>mat.theme</code>
+mixin as described in the <a href="https://material.angular.dev/guide/theming">theming guide</a>:</p>
+<pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;@angular/material&#x27;</span> as mat;
+
+<span class="hljs-selector-tag">html</span> {
+  <span class="hljs-keyword">@include</span> mat.theme((
+    <span class="hljs-attribute">color</span>: mat.<span class="hljs-variable">$violet-palette</span>,
+    <span class="hljs-attribute">typography</span>: Roboto,
+    <span class="hljs-attribute">density</span>: <span class="hljs-number">0</span>,
+  ));
+}</code></pre><p>Alternatively, you can create a theme object with <code>mat.define-theme</code> and pass it
+to individual component theme mixins. This approach is needed for backwards
+compatibility helpers such as <code>color-variants-backwards-compatibility</code>.</p>
 
         <h3 id="update-usages-of-apis-that-are-not-supported-for-material-3-themes" class="docs-header-link">
           <span header-link="update-usages-of-apis-that-are-not-supported-for-material-3-themes"></span>

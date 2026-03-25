@@ -1,12 +1,12 @@
-<span class="hljs-comment">&lt;!-- This button triggers the overlay and is it&#x27;s origin --&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">button</span> (<span class="hljs-attr">click</span>)=<span class="hljs-string">&quot;isOpen = !isOpen&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">cdkOverlayOrigin</span> #<span class="hljs-attr">trigger</span>=<span class="hljs-string">&quot;cdkOverlayOrigin&quot;</span>&gt;</span>
+<span class="hljs-comment">&lt;!-- This button is the origin to which the overlay is attached --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> (<span class="hljs-attr">click</span>)=<span class="hljs-string">&quot;isOpen = !isOpen&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">cdkOverlayOrigin</span> #<span class="hljs-attr">origin</span>=<span class="hljs-string">&quot;cdkOverlayOrigin&quot;</span>&gt;</span>
   {{isOpen ? &quot;Close&quot; : &quot;Open&quot;}}
 <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
 
 <span class="hljs-comment">&lt;!-- This template displays the overlay content and is connected to the button --&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">ng-template</span>
   <span class="hljs-attr">cdkConnectedOverlay</span>
-  [<span class="hljs-attr">cdkConnectedOverlayOrigin</span>]=<span class="hljs-string">&quot;trigger&quot;</span>
+  [<span class="hljs-attr">cdkConnectedOverlayOrigin</span>]=<span class="hljs-string">&quot;origin&quot;</span>
   [<span class="hljs-attr">cdkConnectedOverlayOpen</span>]=<span class="hljs-string">&quot;isOpen&quot;</span>
   (<span class="hljs-attr">detach</span>)=<span class="hljs-string">&quot;isOpen = false&quot;</span>
 &gt;</span>

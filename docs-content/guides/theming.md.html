@@ -184,6 +184,83 @@ pop-up contexts, such as the date picker. The Material Design density guidance
 explicitly discourages changes to density for such interactions because they
 don&#39;t compete for space in the application&#39;s layout.</p>
 
+        <h2 id="prebuilt-themes" class="docs-header-link">
+          <span header-link="prebuilt-themes"></span>
+          Prebuilt Themes
+        </h2>
+      <p>Angular Material includes eight prebuilt theme CSS files as an alternative to
+defining a custom theme with Sass. Four of these themes use the current Material
+3 design system, while the other four use the older Material 2 design system.</p>
+<p>If you want your application to follow the modern Material 3 design language,
+make sure to use one of the M3 themes. The M2 themes are provided for backwards
+compatibility and will be removed in a future version.</p>
+<table>
+<thead>
+<tr>
+<th>Theme</th>
+<th>Design system</th>
+<th>Light or dark?</th>
+<th>Palettes (primary, tertiary)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>azure-blue.css</code></td>
+<td><strong>M3</strong></td>
+<td>Light</td>
+<td>azure, blue</td>
+</tr>
+<tr>
+<td><code>rose-red.css</code></td>
+<td><strong>M3</strong></td>
+<td>Light</td>
+<td>rose, red</td>
+</tr>
+<tr>
+<td><code>cyan-orange.css</code></td>
+<td><strong>M3</strong></td>
+<td>Dark</td>
+<td>cyan, orange</td>
+</tr>
+<tr>
+<td><code>magenta-violet.css</code></td>
+<td><strong>M3</strong></td>
+<td>Dark</td>
+<td>magenta, violet</td>
+</tr>
+<tr>
+<td><code>deeppurple-amber.css</code></td>
+<td>M2</td>
+<td>Light</td>
+<td>deep-purple, amber</td>
+</tr>
+<tr>
+<td><code>indigo-pink.css</code></td>
+<td>M2</td>
+<td>Light</td>
+<td>indigo, pink</td>
+</tr>
+<tr>
+<td><code>pink-bluegrey.css</code></td>
+<td>M2</td>
+<td>Dark</td>
+<td>pink, blue-grey</td>
+</tr>
+<tr>
+<td><code>purple-green.css</code></td>
+<td>M2</td>
+<td>Dark</td>
+<td>purple, green</td>
+</tr>
+</tbody></table>
+<p>You can find the prebuilt theme files in the <code>prebuilt-themes</code> directory of
+Angular Material’s npm package (<code>@angular/material/prebuilt-themes</code>). To include
+a prebuilt theme in your application, add the chosen CSS file to the <code>styles</code>
+array of your project’s <code>angular.json</code> file:</p>
+<pre><code class="language-json"><span class="hljs-attr">&quot;styles&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span>
+  <span class="hljs-string">&quot;@angular/material/prebuilt-themes/azure-blue.css&quot;</span>
+<span class="hljs-punctuation">]</span></code></pre><p>You can <a href="https://github.com/angular/components/blob/main/src/material/core/theming/prebuilt">reference the source code for these prebuilt themes</a> to see
+examples of complete theme definitions.</p>
+
         <h2 id="color-palettes" class="docs-header-link">
           <span header-link="color-palettes"></span>
           Color Palettes
