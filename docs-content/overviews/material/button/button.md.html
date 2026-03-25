@@ -73,6 +73,30 @@ the <code>extended</code> attribute, mini FABs do not.</p>
   <span class="hljs-tag">&lt;<span class="hljs-name">mat-icon</span>&gt;</span>home<span class="hljs-tag">&lt;/<span class="hljs-name">mat-icon</span>&gt;</span>
   Home
 <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></code></pre>
+        <h3 id="icon-positioning" class="docs-header-link">
+          <span header-link="icon-positioning"></span>
+          Icon positioning
+        </h3>
+      <p>Buttons can contain icons alongside text. By default, icons (<code>mat-icon</code>, <code>.material-icons</code>, or
+elements with the <code>matButtonIcon</code> attribute) are projected <strong>before</strong> the button label.</p>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">matButton</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-icon</span>&gt;</span>favorite<span class="hljs-tag">&lt;/<span class="hljs-name">mat-icon</span>&gt;</span>
+  Like
+<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></code></pre><p>To place an icon <strong>after</strong> the button label, add the <code>iconPositionEnd</code> attribute to the icon element:</p>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">matButton</span>&gt;</span>
+  Send
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-icon</span> <span class="hljs-attr">iconPositionEnd</span>&gt;</span>send<span class="hljs-tag">&lt;/<span class="hljs-name">mat-icon</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></code></pre><p>You can also use both positions at once:</p>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">matButton</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-icon</span>&gt;</span>arrow_back<span class="hljs-tag">&lt;/<span class="hljs-name">mat-icon</span>&gt;</span>
+  Navigate
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-icon</span> <span class="hljs-attr">iconPositionEnd</span>&gt;</span>arrow_forward<span class="hljs-tag">&lt;/<span class="hljs-name">mat-icon</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></code></pre><p>If you are using a custom icon element that is not a <code>mat-icon</code> or <code>.material-icons</code>, add the
+<code>matButtonIcon</code> attribute so that the button can project it into the correct slot:</p>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">matButton</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">my-custom-icon</span> <span class="hljs-attr">matButtonIcon</span>&gt;</span>custom<span class="hljs-tag">&lt;/<span class="hljs-name">my-custom-icon</span>&gt;</span>
+  Action
+<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></code></pre>
         <h3 id="interactive-disabled-buttons" class="docs-header-link">
           <span header-link="interactive-disabled-buttons"></span>
           Interactive disabled buttons
