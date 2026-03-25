@@ -26,7 +26,7 @@ class AutocompleteAutoActiveFirstOptionExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.0.0-next.1",
+    version: "22.0.0-next.4",
     ngImport: i0,
     type: AutocompleteAutoActiveFirstOptionExample,
     deps: [],
@@ -34,7 +34,7 @@ class AutocompleteAutoActiveFirstOptionExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "22.0.0-next.1",
+    version: "22.0.0-next.4",
     type: AutocompleteAutoActiveFirstOptionExample,
     isStandalone: true,
     selector: "autocomplete-auto-active-first-option-example",
@@ -51,7 +51,7 @@ class AutocompleteAutoActiveFirstOptionExample {
     }, {
       kind: "directive",
       type: i3.DefaultValueAccessor,
-      selector: "input:not([type=checkbox])[formControlName],textarea[formControlName],input:not([type=checkbox])[formControl],textarea[formControl],input:not([type=checkbox])[ngModel],textarea[ngModel],[ngDefaultControl]"
+      selector: "input:not([type=checkbox]):not([ngNoCva])[formControlName],textarea:not([ngNoCva])[formControlName],input:not([type=checkbox]):not([ngNoCva])[formControl],textarea:not([ngNoCva])[formControl],input:not([type=checkbox]):not([ngNoCva])[ngModel],textarea:not([ngNoCva])[ngModel],[ngDefaultControl]"
     }, {
       kind: "directive",
       type: i3.NgControlStatus,
@@ -131,7 +131,7 @@ class AutocompleteAutoActiveFirstOptionExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.0.0-next.1",
+  version: "22.0.0-next.4",
   ngImport: i0,
   type: AutocompleteAutoActiveFirstOptionExample,
   decorators: [{
@@ -171,7 +171,7 @@ class AutocompleteDisplayExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.0.0-next.1",
+    version: "22.0.0-next.4",
     ngImport: i0,
     type: AutocompleteDisplayExample,
     deps: [],
@@ -179,7 +179,7 @@ class AutocompleteDisplayExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "22.0.0-next.1",
+    version: "22.0.0-next.4",
     type: AutocompleteDisplayExample,
     isStandalone: true,
     selector: "autocomplete-display-example",
@@ -196,7 +196,7 @@ class AutocompleteDisplayExample {
     }, {
       kind: "directive",
       type: i3.DefaultValueAccessor,
-      selector: "input:not([type=checkbox])[formControlName],textarea[formControlName],input:not([type=checkbox])[formControl],textarea[formControl],input:not([type=checkbox])[ngModel],textarea[ngModel],[ngDefaultControl]"
+      selector: "input:not([type=checkbox]):not([ngNoCva])[formControlName],textarea:not([ngNoCva])[formControlName],input:not([type=checkbox]):not([ngNoCva])[formControl],textarea:not([ngNoCva])[formControl],input:not([type=checkbox]):not([ngNoCva])[ngModel],textarea:not([ngNoCva])[ngModel],[ngDefaultControl]"
     }, {
       kind: "directive",
       type: i3.NgControlStatus,
@@ -276,7 +276,7 @@ class AutocompleteDisplayExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.0.0-next.1",
+  version: "22.0.0-next.4",
   ngImport: i0,
   type: AutocompleteDisplayExample,
   decorators: [{
@@ -304,7 +304,7 @@ class AutocompleteFilterExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.0.0-next.1",
+    version: "22.0.0-next.4",
     ngImport: i0,
     type: AutocompleteFilterExample,
     deps: [],
@@ -312,7 +312,7 @@ class AutocompleteFilterExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "22.0.0-next.1",
+    version: "22.0.0-next.4",
     type: AutocompleteFilterExample,
     isStandalone: true,
     selector: "autocomplete-filter-example",
@@ -329,7 +329,7 @@ class AutocompleteFilterExample {
     }, {
       kind: "directive",
       type: i3.DefaultValueAccessor,
-      selector: "input:not([type=checkbox])[formControlName],textarea[formControlName],input:not([type=checkbox])[formControl],textarea[formControl],input:not([type=checkbox])[ngModel],textarea[ngModel],[ngDefaultControl]"
+      selector: "input:not([type=checkbox]):not([ngNoCva])[formControlName],textarea:not([ngNoCva])[formControlName],input:not([type=checkbox]):not([ngNoCva])[formControl],textarea:not([ngNoCva])[formControl],input:not([type=checkbox]):not([ngNoCva])[ngModel],textarea:not([ngNoCva])[ngModel],[ngDefaultControl]"
     }, {
       kind: "directive",
       type: i3.NgControlStatus,
@@ -409,7 +409,7 @@ class AutocompleteFilterExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.0.0-next.1",
+  version: "22.0.0-next.4",
   ngImport: i0,
   type: AutocompleteFilterExample,
   decorators: [{
@@ -506,7 +506,7 @@ class AutocompleteOptgroupExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.0.0-next.1",
+    version: "22.0.0-next.4",
     ngImport: i0,
     type: AutocompleteOptgroupExample,
     deps: [],
@@ -514,7 +514,7 @@ class AutocompleteOptgroupExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "22.0.0-next.1",
+    version: "22.0.0-next.4",
     type: AutocompleteOptgroupExample,
     isStandalone: true,
     selector: "autocomplete-optgroup-example",
@@ -530,7 +530,7 @@ class AutocompleteOptgroupExample {
     }, {
       kind: "directive",
       type: i3.DefaultValueAccessor,
-      selector: "input:not([type=checkbox])[formControlName],textarea[formControlName],input:not([type=checkbox])[formControl],textarea[formControl],input:not([type=checkbox])[ngModel],textarea[ngModel],[ngDefaultControl]"
+      selector: "input:not([type=checkbox]):not([ngNoCva])[formControlName],textarea:not([ngNoCva])[formControlName],input:not([type=checkbox]):not([ngNoCva])[formControl],textarea:not([ngNoCva])[formControl],input:not([type=checkbox]):not([ngNoCva])[ngModel],textarea:not([ngNoCva])[ngModel],[ngDefaultControl]"
     }, {
       kind: "directive",
       type: i3.NgControlStatus,
@@ -620,7 +620,7 @@ class AutocompleteOptgroupExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.0.0-next.1",
+  version: "22.0.0-next.4",
   ngImport: i0,
   type: AutocompleteOptgroupExample,
   decorators: [{
@@ -663,7 +663,7 @@ class AutocompleteOverviewExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.0.0-next.1",
+    version: "22.0.0-next.4",
     ngImport: i0,
     type: AutocompleteOverviewExample,
     deps: [],
@@ -671,7 +671,7 @@ class AutocompleteOverviewExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "22.0.0-next.1",
+    version: "22.0.0-next.4",
     type: AutocompleteOverviewExample,
     isStandalone: true,
     selector: "autocomplete-overview-example",
@@ -688,7 +688,7 @@ class AutocompleteOverviewExample {
     }, {
       kind: "directive",
       type: i3.DefaultValueAccessor,
-      selector: "input:not([type=checkbox])[formControlName],textarea[formControlName],input:not([type=checkbox])[formControl],textarea[formControl],input:not([type=checkbox])[ngModel],textarea[ngModel],[ngDefaultControl]"
+      selector: "input:not([type=checkbox]):not([ngNoCva])[formControlName],textarea:not([ngNoCva])[formControlName],input:not([type=checkbox]):not([ngNoCva])[formControl],textarea:not([ngNoCva])[formControl],input:not([type=checkbox]):not([ngNoCva])[ngModel],textarea:not([ngNoCva])[ngModel],[ngDefaultControl]"
     }, {
       kind: "directive",
       type: i3.NgControlStatus,
@@ -778,7 +778,7 @@ class AutocompleteOverviewExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.0.0-next.1",
+  version: "22.0.0-next.4",
   ngImport: i0,
   type: AutocompleteOverviewExample,
   decorators: [{
@@ -809,7 +809,7 @@ class AutocompletePlainInputExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.0.0-next.1",
+    version: "22.0.0-next.4",
     ngImport: i0,
     type: AutocompletePlainInputExample,
     deps: [],
@@ -817,7 +817,7 @@ class AutocompletePlainInputExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "22.0.0-next.1",
+    version: "22.0.0-next.4",
     type: AutocompletePlainInputExample,
     isStandalone: true,
     selector: "autocomplete-plain-input-example",
@@ -834,7 +834,7 @@ class AutocompletePlainInputExample {
     }, {
       kind: "directive",
       type: i3.DefaultValueAccessor,
-      selector: "input:not([type=checkbox])[formControlName],textarea[formControlName],input:not([type=checkbox])[formControl],textarea[formControl],input:not([type=checkbox])[ngModel],textarea[ngModel],[ngDefaultControl]"
+      selector: "input:not([type=checkbox]):not([ngNoCva])[formControlName],textarea:not([ngNoCva])[formControlName],input:not([type=checkbox]):not([ngNoCva])[formControl],textarea:not([ngNoCva])[formControl],input:not([type=checkbox]):not([ngNoCva])[ngModel],textarea:not([ngNoCva])[ngModel],[ngDefaultControl]"
     }, {
       kind: "directive",
       type: i3.NgControlStatus,
@@ -892,7 +892,7 @@ class AutocompletePlainInputExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.0.0-next.1",
+  version: "22.0.0-next.4",
   ngImport: i0,
   type: AutocompletePlainInputExample,
   decorators: [{
@@ -912,7 +912,7 @@ class AutocompleteSimpleExample {
   options = ['One', 'Two', 'Three'];
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.0.0-next.1",
+    version: "22.0.0-next.4",
     ngImport: i0,
     type: AutocompleteSimpleExample,
     deps: [],
@@ -920,7 +920,7 @@ class AutocompleteSimpleExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "22.0.0-next.1",
+    version: "22.0.0-next.4",
     type: AutocompleteSimpleExample,
     isStandalone: true,
     selector: "autocomplete-simple-example",
@@ -937,7 +937,7 @@ class AutocompleteSimpleExample {
     }, {
       kind: "directive",
       type: i3.DefaultValueAccessor,
-      selector: "input:not([type=checkbox])[formControlName],textarea[formControlName],input:not([type=checkbox])[formControl],textarea[formControl],input:not([type=checkbox])[ngModel],textarea[ngModel],[ngDefaultControl]"
+      selector: "input:not([type=checkbox]):not([ngNoCva])[formControlName],textarea:not([ngNoCva])[formControlName],input:not([type=checkbox]):not([ngNoCva])[formControl],textarea:not([ngNoCva])[formControl],input:not([type=checkbox]):not([ngNoCva])[ngModel],textarea:not([ngNoCva])[ngModel],[ngDefaultControl]"
     }, {
       kind: "directive",
       type: i3.NgControlStatus,
@@ -1013,7 +1013,7 @@ class AutocompleteSimpleExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.0.0-next.1",
+  version: "22.0.0-next.4",
   ngImport: i0,
   type: AutocompleteSimpleExample,
   decorators: [{
@@ -1038,7 +1038,7 @@ class AutocompleteRequireSelectionExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.0.0-next.1",
+    version: "22.0.0-next.4",
     ngImport: i0,
     type: AutocompleteRequireSelectionExample,
     deps: [],
@@ -1046,7 +1046,7 @@ class AutocompleteRequireSelectionExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "22.0.0-next.1",
+    version: "22.0.0-next.4",
     type: AutocompleteRequireSelectionExample,
     isStandalone: true,
     selector: "autocomplete-require-selection-example",
@@ -1069,7 +1069,7 @@ class AutocompleteRequireSelectionExample {
     }, {
       kind: "directive",
       type: i3.DefaultValueAccessor,
-      selector: "input:not([type=checkbox])[formControlName],textarea[formControlName],input:not([type=checkbox])[formControl],textarea[formControl],input:not([type=checkbox])[ngModel],textarea[ngModel],[ngDefaultControl]"
+      selector: "input:not([type=checkbox]):not([ngNoCva])[formControlName],textarea:not([ngNoCva])[formControlName],input:not([type=checkbox]):not([ngNoCva])[formControl],textarea:not([ngNoCva])[formControl],input:not([type=checkbox]):not([ngNoCva])[ngModel],textarea:not([ngNoCva])[ngModel],[ngDefaultControl]"
     }, {
       kind: "directive",
       type: i3.NgControlStatus,
@@ -1145,7 +1145,7 @@ class AutocompleteRequireSelectionExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.0.0-next.1",
+  version: "22.0.0-next.4",
   ngImport: i0,
   type: AutocompleteRequireSelectionExample,
   decorators: [{
@@ -1202,7 +1202,7 @@ class AutocompleteHarnessExample {
   }];
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.0.0-next.1",
+    version: "22.0.0-next.4",
     ngImport: i0,
     type: AutocompleteHarnessExample,
     deps: [],
@@ -1210,7 +1210,7 @@ class AutocompleteHarnessExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "22.0.0-next.1",
+    version: "22.0.0-next.4",
     type: AutocompleteHarnessExample,
     isStandalone: true,
     selector: "autocomplete-harness-example",
@@ -1244,7 +1244,7 @@ class AutocompleteHarnessExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.0.0-next.1",
+  version: "22.0.0-next.4",
   ngImport: i0,
   type: AutocompleteHarnessExample,
   decorators: [{

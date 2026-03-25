@@ -22,7 +22,7 @@ class SnackBarComponentExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.0.0-next.1",
+    version: "22.0.0-next.4",
     ngImport: i0,
     type: SnackBarComponentExample,
     deps: [],
@@ -30,7 +30,7 @@ class SnackBarComponentExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.0.0-next.1",
+    version: "22.0.0-next.4",
     type: SnackBarComponentExample,
     isStandalone: true,
     selector: "snack-bar-component-example",
@@ -56,11 +56,11 @@ class SnackBarComponentExample {
     }, {
       kind: "directive",
       type: i3.DefaultValueAccessor,
-      selector: "input:not([type=checkbox])[formControlName],textarea[formControlName],input:not([type=checkbox])[formControl],textarea[formControl],input:not([type=checkbox])[ngModel],textarea[ngModel],[ngDefaultControl]"
+      selector: "input:not([type=checkbox]):not([ngNoCva])[formControlName],textarea:not([ngNoCva])[formControlName],input:not([type=checkbox]):not([ngNoCva])[formControl],textarea:not([ngNoCva])[formControl],input:not([type=checkbox]):not([ngNoCva])[ngModel],textarea:not([ngNoCva])[ngModel],[ngDefaultControl]"
     }, {
       kind: "directive",
       type: i3.NumberValueAccessor,
-      selector: "input[type=number][formControlName],input[type=number][formControl],input[type=number][ngModel]"
+      selector: "input[type=number]:not([ngNoCva])[formControlName],input[type=number]:not([ngNoCva])[formControl],input[type=number]:not([ngNoCva])[ngModel]"
     }, {
       kind: "directive",
       type: i3.NgControlStatus,
@@ -95,7 +95,7 @@ class SnackBarComponentExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.0.0-next.1",
+  version: "22.0.0-next.4",
   ngImport: i0,
   type: SnackBarComponentExample,
   decorators: [{
@@ -111,7 +111,7 @@ i0.ɵɵngDeclareClassMetadata({
 class PizzaPartyComponent {
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.0.0-next.1",
+    version: "22.0.0-next.4",
     ngImport: i0,
     type: PizzaPartyComponent,
     deps: [],
@@ -119,7 +119,7 @@ class PizzaPartyComponent {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.0.0-next.1",
+    version: "22.0.0-next.4",
     type: PizzaPartyComponent,
     isStandalone: true,
     selector: "snack-bar-component-example-snack",
@@ -130,7 +130,7 @@ class PizzaPartyComponent {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.0.0-next.1",
+  version: "22.0.0-next.4",
   ngImport: i0,
   type: PizzaPartyComponent,
   decorators: [{
@@ -153,7 +153,7 @@ class SnackBarAnnotatedComponentExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.0.0-next.1",
+    version: "22.0.0-next.4",
     ngImport: i0,
     type: SnackBarAnnotatedComponentExample,
     deps: [],
@@ -161,7 +161,7 @@ class SnackBarAnnotatedComponentExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.0.0-next.1",
+    version: "22.0.0-next.4",
     type: SnackBarAnnotatedComponentExample,
     isStandalone: true,
     selector: "snack-bar-annotated-component-example",
@@ -187,11 +187,11 @@ class SnackBarAnnotatedComponentExample {
     }, {
       kind: "directive",
       type: i3.DefaultValueAccessor,
-      selector: "input:not([type=checkbox])[formControlName],textarea[formControlName],input:not([type=checkbox])[formControl],textarea[formControl],input:not([type=checkbox])[ngModel],textarea[ngModel],[ngDefaultControl]"
+      selector: "input:not([type=checkbox]):not([ngNoCva])[formControlName],textarea:not([ngNoCva])[formControlName],input:not([type=checkbox]):not([ngNoCva])[formControl],textarea:not([ngNoCva])[formControl],input:not([type=checkbox]):not([ngNoCva])[ngModel],textarea:not([ngNoCva])[ngModel],[ngDefaultControl]"
     }, {
       kind: "directive",
       type: i3.NumberValueAccessor,
-      selector: "input[type=number][formControlName],input[type=number][formControl],input[type=number][ngModel]"
+      selector: "input[type=number]:not([ngNoCva])[formControlName],input[type=number]:not([ngNoCva])[formControl],input[type=number]:not([ngNoCva])[ngModel]"
     }, {
       kind: "directive",
       type: i3.NgControlStatus,
@@ -226,7 +226,7 @@ class SnackBarAnnotatedComponentExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.0.0-next.1",
+  version: "22.0.0-next.4",
   ngImport: i0,
   type: SnackBarAnnotatedComponentExample,
   decorators: [{
@@ -243,7 +243,7 @@ class PizzaPartyAnnotatedComponent {
   snackBarRef = inject(MatSnackBarRef);
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.0.0-next.1",
+    version: "22.0.0-next.4",
     ngImport: i0,
     type: PizzaPartyAnnotatedComponent,
     deps: [],
@@ -251,7 +251,7 @@ class PizzaPartyAnnotatedComponent {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.0.0-next.1",
+    version: "22.0.0-next.4",
     type: PizzaPartyAnnotatedComponent,
     isStandalone: true,
     selector: "snack-bar-annotated-component-example-snack",
@@ -284,7 +284,7 @@ class PizzaPartyAnnotatedComponent {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.0.0-next.1",
+  version: "22.0.0-next.4",
   ngImport: i0,
   type: PizzaPartyAnnotatedComponent,
   decorators: [{
@@ -305,7 +305,7 @@ class SnackBarOverviewExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.0.0-next.1",
+    version: "22.0.0-next.4",
     ngImport: i0,
     type: SnackBarOverviewExample,
     deps: [],
@@ -313,7 +313,7 @@ class SnackBarOverviewExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.0.0-next.1",
+    version: "22.0.0-next.4",
     type: SnackBarOverviewExample,
     isStandalone: true,
     selector: "snack-bar-overview-example",
@@ -356,7 +356,7 @@ class SnackBarOverviewExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.0.0-next.1",
+  version: "22.0.0-next.4",
   ngImport: i0,
   type: SnackBarOverviewExample,
   decorators: [{
@@ -382,7 +382,7 @@ class SnackBarPositionExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.0.0-next.1",
+    version: "22.0.0-next.4",
     ngImport: i0,
     type: SnackBarPositionExample,
     deps: [],
@@ -390,7 +390,7 @@ class SnackBarPositionExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.0.0-next.1",
+    version: "22.0.0-next.4",
     type: SnackBarPositionExample,
     isStandalone: true,
     selector: "snack-bar-position-example",
@@ -441,7 +441,7 @@ class SnackBarPositionExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.0.0-next.1",
+  version: "22.0.0-next.4",
   ngImport: i0,
   type: SnackBarPositionExample,
   decorators: [{
@@ -462,7 +462,7 @@ class SnackBarHarnessExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.0.0-next.1",
+    version: "22.0.0-next.4",
     ngImport: i0,
     type: SnackBarHarnessExample,
     deps: [],
@@ -470,7 +470,7 @@ class SnackBarHarnessExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.0.0-next.1",
+    version: "22.0.0-next.4",
     type: SnackBarHarnessExample,
     isStandalone: true,
     selector: "snack-bar-harness-example",
@@ -480,7 +480,7 @@ class SnackBarHarnessExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.0.0-next.1",
+  version: "22.0.0-next.4",
   ngImport: i0,
   type: SnackBarHarnessExample,
   decorators: [{

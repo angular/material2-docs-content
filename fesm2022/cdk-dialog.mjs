@@ -16,7 +16,7 @@ class CdkDialogDataExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.0.0-next.1",
+    version: "22.0.0-next.4",
     ngImport: i0,
     type: CdkDialogDataExample,
     deps: [],
@@ -24,7 +24,7 @@ class CdkDialogDataExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.0.0-next.1",
+    version: "22.0.0-next.4",
     type: CdkDialogDataExample,
     isStandalone: true,
     selector: "cdk-dialog-data-example",
@@ -38,7 +38,7 @@ class CdkDialogDataExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.0.0-next.1",
+  version: "22.0.0-next.4",
   ngImport: i0,
   type: CdkDialogDataExample,
   decorators: [{
@@ -54,7 +54,7 @@ class CdkDialogDataExampleDialog {
   data = inject(DIALOG_DATA);
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.0.0-next.1",
+    version: "22.0.0-next.4",
     ngImport: i0,
     type: CdkDialogDataExampleDialog,
     deps: [],
@@ -62,7 +62,7 @@ class CdkDialogDataExampleDialog {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "22.0.0-next.1",
+    version: "22.0.0-next.4",
     type: CdkDialogDataExampleDialog,
     isStandalone: true,
     selector: "cdk-dialog-data-example-dialog",
@@ -73,7 +73,7 @@ class CdkDialogDataExampleDialog {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.0.0-next.1",
+  version: "22.0.0-next.4",
   ngImport: i0,
   type: CdkDialogDataExampleDialog,
   decorators: [{
@@ -105,7 +105,7 @@ class CdkDialogOverviewExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.0.0-next.1",
+    version: "22.0.0-next.4",
     ngImport: i0,
     type: CdkDialogOverviewExample,
     deps: [],
@@ -113,7 +113,7 @@ class CdkDialogOverviewExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "22.0.0-next.1",
+    version: "22.0.0-next.4",
     type: CdkDialogOverviewExample,
     isStandalone: true,
     selector: "cdk-dialog-overview-example",
@@ -125,7 +125,7 @@ class CdkDialogOverviewExample {
     }, {
       kind: "directive",
       type: i3.DefaultValueAccessor,
-      selector: "input:not([type=checkbox])[formControlName],textarea[formControlName],input:not([type=checkbox])[formControl],textarea[formControl],input:not([type=checkbox])[ngModel],textarea[ngModel],[ngDefaultControl]"
+      selector: "input:not([type=checkbox]):not([ngNoCva])[formControlName],textarea:not([ngNoCva])[formControlName],input:not([type=checkbox]):not([ngNoCva])[formControl],textarea:not([ngNoCva])[formControl],input:not([type=checkbox]):not([ngNoCva])[ngModel],textarea:not([ngNoCva])[ngModel],[ngDefaultControl]"
     }, {
       kind: "directive",
       type: i3.NgControlStatus,
@@ -145,7 +145,7 @@ class CdkDialogOverviewExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.0.0-next.1",
+  version: "22.0.0-next.4",
   ngImport: i0,
   type: CdkDialogOverviewExample,
   decorators: [{
@@ -162,7 +162,7 @@ class CdkDialogOverviewExampleDialog {
   data = inject(DIALOG_DATA);
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.0.0-next.1",
+    version: "22.0.0-next.4",
     ngImport: i0,
     type: CdkDialogOverviewExampleDialog,
     deps: [],
@@ -170,7 +170,7 @@ class CdkDialogOverviewExampleDialog {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.0.0-next.1",
+    version: "22.0.0-next.4",
     type: CdkDialogOverviewExampleDialog,
     isStandalone: true,
     selector: "cdk-dialog-overview-example-dialog",
@@ -183,7 +183,7 @@ class CdkDialogOverviewExampleDialog {
     }, {
       kind: "directive",
       type: i3.DefaultValueAccessor,
-      selector: "input:not([type=checkbox])[formControlName],textarea[formControlName],input:not([type=checkbox])[formControl],textarea[formControl],input:not([type=checkbox])[ngModel],textarea[ngModel],[ngDefaultControl]"
+      selector: "input:not([type=checkbox]):not([ngNoCva])[formControlName],textarea:not([ngNoCva])[formControlName],input:not([type=checkbox]):not([ngNoCva])[formControl],textarea:not([ngNoCva])[formControl],input:not([type=checkbox]):not([ngNoCva])[ngModel],textarea:not([ngNoCva])[ngModel],[ngDefaultControl]"
     }, {
       kind: "directive",
       type: i3.NgControlStatus,
@@ -200,7 +200,7 @@ class CdkDialogOverviewExampleDialog {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.0.0-next.1",
+  version: "22.0.0-next.4",
   ngImport: i0,
   type: CdkDialogOverviewExampleDialog,
   decorators: [{
@@ -221,7 +221,7 @@ class CdkDialogStylingExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.0.0-next.1",
+    version: "22.0.0-next.4",
     ngImport: i0,
     type: CdkDialogStylingExample,
     deps: [],
@@ -229,7 +229,7 @@ class CdkDialogStylingExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.0.0-next.1",
+    version: "22.0.0-next.4",
     type: CdkDialogStylingExample,
     isStandalone: true,
     selector: "cdk-dialog-styling-example",
@@ -243,7 +243,7 @@ class CdkDialogStylingExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.0.0-next.1",
+  version: "22.0.0-next.4",
   ngImport: i0,
   type: CdkDialogStylingExample,
   decorators: [{
@@ -259,7 +259,7 @@ class CdkDialogStylingExampleDialog {
   dialogRef = inject(DialogRef);
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.0.0-next.1",
+    version: "22.0.0-next.4",
     ngImport: i0,
     type: CdkDialogStylingExampleDialog,
     deps: [],
@@ -267,7 +267,7 @@ class CdkDialogStylingExampleDialog {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.0.0-next.1",
+    version: "22.0.0-next.4",
     type: CdkDialogStylingExampleDialog,
     isStandalone: true,
     selector: "cdk-dialog-styling-example-dialog",
@@ -278,7 +278,7 @@ class CdkDialogStylingExampleDialog {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.0.0-next.1",
+  version: "22.0.0-next.4",
   ngImport: i0,
   type: CdkDialogStylingExampleDialog,
   decorators: [{

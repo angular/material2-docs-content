@@ -16,7 +16,7 @@ class ProgressSpinnerConfigurableExample {
   value = 50;
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.0.0-next.1",
+    version: "22.0.0-next.4",
     ngImport: i0,
     type: ProgressSpinnerConfigurableExample,
     deps: [],
@@ -24,7 +24,7 @@ class ProgressSpinnerConfigurableExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "22.0.0-next.1",
+    version: "22.0.0-next.4",
     type: ProgressSpinnerConfigurableExample,
     isStandalone: true,
     selector: "progress-spinner-configurable-example",
@@ -67,11 +67,11 @@ class ProgressSpinnerConfigurableExample {
     }, {
       kind: "directive",
       type: i3.DefaultValueAccessor,
-      selector: "input:not([type=checkbox])[formControlName],textarea[formControlName],input:not([type=checkbox])[formControl],textarea[formControl],input:not([type=checkbox])[ngModel],textarea[ngModel],[ngDefaultControl]"
+      selector: "input:not([type=checkbox]):not([ngNoCva])[formControlName],textarea:not([ngNoCva])[formControlName],input:not([type=checkbox]):not([ngNoCva])[formControl],textarea:not([ngNoCva])[formControl],input:not([type=checkbox]):not([ngNoCva])[ngModel],textarea:not([ngNoCva])[ngModel],[ngDefaultControl]"
     }, {
       kind: "directive",
       type: i3.RangeValueAccessor,
-      selector: "input[type=range][formControlName],input[type=range][formControl],input[type=range][ngModel]"
+      selector: "input[type=range]:not([ngNoCva])[formControlName],input[type=range]:not([ngNoCva])[formControl],input[type=range]:not([ngNoCva])[ngModel]"
     }, {
       kind: "directive",
       type: i3.NgControlStatus,
@@ -113,7 +113,7 @@ class ProgressSpinnerConfigurableExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.0.0-next.1",
+  version: "22.0.0-next.4",
   ngImport: i0,
   type: ProgressSpinnerConfigurableExample,
   decorators: [{
@@ -130,7 +130,7 @@ i0.ɵɵngDeclareClassMetadata({
 class ProgressSpinnerOverviewExample {
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.0.0-next.1",
+    version: "22.0.0-next.4",
     ngImport: i0,
     type: ProgressSpinnerOverviewExample,
     deps: [],
@@ -138,7 +138,7 @@ class ProgressSpinnerOverviewExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.0.0-next.1",
+    version: "22.0.0-next.4",
     type: ProgressSpinnerOverviewExample,
     isStandalone: true,
     selector: "progress-spinner-overview-example",
@@ -158,7 +158,7 @@ class ProgressSpinnerOverviewExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.0.0-next.1",
+  version: "22.0.0-next.4",
   ngImport: i0,
   type: ProgressSpinnerOverviewExample,
   decorators: [{
@@ -177,7 +177,7 @@ class ProgressSpinnerHarnessExample {
   }] : []));
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.0.0-next.1",
+    version: "22.0.0-next.4",
     ngImport: i0,
     type: ProgressSpinnerHarnessExample,
     deps: [],
@@ -185,7 +185,7 @@ class ProgressSpinnerHarnessExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.0.0-next.1",
+    version: "22.0.0-next.4",
     type: ProgressSpinnerHarnessExample,
     isStandalone: true,
     selector: "progress-spinner-harness-example",
@@ -205,7 +205,7 @@ class ProgressSpinnerHarnessExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.0.0-next.1",
+  version: "22.0.0-next.4",
   ngImport: i0,
   type: ProgressSpinnerHarnessExample,
   decorators: [{

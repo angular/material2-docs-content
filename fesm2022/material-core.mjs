@@ -17,7 +17,7 @@ class ElevationOverviewExample {
   isActive = false;
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.0.0-next.1",
+    version: "22.0.0-next.4",
     ngImport: i0,
     type: ElevationOverviewExample,
     deps: [],
@@ -25,7 +25,7 @@ class ElevationOverviewExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.0.0-next.1",
+    version: "22.0.0-next.4",
     type: ElevationOverviewExample,
     isStandalone: true,
     selector: "elevation-overview-example",
@@ -46,7 +46,7 @@ class ElevationOverviewExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.0.0-next.1",
+  version: "22.0.0-next.4",
   ngImport: i0,
   type: ElevationOverviewExample,
   decorators: [{
@@ -68,7 +68,7 @@ class RippleOverviewExample {
   color;
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.0.0-next.1",
+    version: "22.0.0-next.4",
     ngImport: i0,
     type: RippleOverviewExample,
     deps: [],
@@ -76,7 +76,7 @@ class RippleOverviewExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.0.0-next.1",
+    version: "22.0.0-next.4",
     type: RippleOverviewExample,
     isStandalone: true,
     selector: "ripple-overview-example",
@@ -99,11 +99,11 @@ class RippleOverviewExample {
     }, {
       kind: "directive",
       type: i3.DefaultValueAccessor,
-      selector: "input:not([type=checkbox])[formControlName],textarea[formControlName],input:not([type=checkbox])[formControl],textarea[formControl],input:not([type=checkbox])[ngModel],textarea[ngModel],[ngDefaultControl]"
+      selector: "input:not([type=checkbox]):not([ngNoCva])[formControlName],textarea:not([ngNoCva])[formControlName],input:not([type=checkbox]):not([ngNoCva])[formControl],textarea:not([ngNoCva])[formControl],input:not([type=checkbox]):not([ngNoCva])[ngModel],textarea:not([ngNoCva])[ngModel],[ngDefaultControl]"
     }, {
       kind: "directive",
       type: i3.NumberValueAccessor,
-      selector: "input[type=number][formControlName],input[type=number][formControl],input[type=number][ngModel]"
+      selector: "input[type=number]:not([ngNoCva])[formControlName],input[type=number]:not([ngNoCva])[formControl],input[type=number]:not([ngNoCva])[ngModel]"
     }, {
       kind: "directive",
       type: i3.NgControlStatus,
@@ -151,7 +151,7 @@ class RippleOverviewExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.0.0-next.1",
+  version: "22.0.0-next.4",
   ngImport: i0,
   type: RippleOverviewExample,
   decorators: [{

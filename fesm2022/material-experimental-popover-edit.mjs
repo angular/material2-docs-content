@@ -84,7 +84,7 @@ class PopoverEditCellSpanMatTableExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.0.0-next.1",
+    version: "22.0.0-next.4",
     ngImport: i0,
     type: PopoverEditCellSpanMatTableExample,
     deps: [],
@@ -92,7 +92,7 @@ class PopoverEditCellSpanMatTableExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.0.0-next.1",
+    version: "22.0.0-next.4",
     type: PopoverEditCellSpanMatTableExample,
     isStandalone: true,
     selector: "popover-edit-cell-span-mat-table-example",
@@ -174,7 +174,7 @@ class PopoverEditCellSpanMatTableExample {
     }, {
       kind: "directive",
       type: i3.DefaultValueAccessor,
-      selector: "input:not([type=checkbox])[formControlName],textarea[formControlName],input:not([type=checkbox])[formControl],textarea[formControl],input:not([type=checkbox])[ngModel],textarea[ngModel],[ngDefaultControl]"
+      selector: "input:not([type=checkbox]):not([ngNoCva])[formControlName],textarea:not([ngNoCva])[formControlName],input:not([type=checkbox]):not([ngNoCva])[formControl],textarea:not([ngNoCva])[formControl],input:not([type=checkbox]):not([ngNoCva])[ngModel],textarea:not([ngNoCva])[ngModel],[ngDefaultControl]"
     }, {
       kind: "directive",
       type: i3.NgControlStatus,
@@ -270,7 +270,7 @@ class PopoverEditCellSpanMatTableExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.0.0-next.1",
+  version: "22.0.0-next.4",
   ngImport: i0,
   type: PopoverEditCellSpanMatTableExample,
   decorators: [{
@@ -411,7 +411,7 @@ class PopoverEditMatTableFlexExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.0.0-next.1",
+    version: "22.0.0-next.4",
     ngImport: i0,
     type: PopoverEditMatTableFlexExample,
     deps: [],
@@ -419,7 +419,7 @@ class PopoverEditMatTableFlexExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.0.0-next.1",
+    version: "22.0.0-next.4",
     type: PopoverEditMatTableFlexExample,
     isStandalone: true,
     selector: "popover-edit-mat-table-flex-example",
@@ -485,11 +485,11 @@ class PopoverEditMatTableFlexExample {
     }, {
       kind: "directive",
       type: i3.DefaultValueAccessor,
-      selector: "input:not([type=checkbox])[formControlName],textarea[formControlName],input:not([type=checkbox])[formControl],textarea[formControl],input:not([type=checkbox])[ngModel],textarea[ngModel],[ngDefaultControl]"
+      selector: "input:not([type=checkbox]):not([ngNoCva])[formControlName],textarea:not([ngNoCva])[formControlName],input:not([type=checkbox]):not([ngNoCva])[formControl],textarea:not([ngNoCva])[formControl],input:not([type=checkbox]):not([ngNoCva])[ngModel],textarea:not([ngNoCva])[ngModel],[ngDefaultControl]"
     }, {
       kind: "directive",
       type: i3.NumberValueAccessor,
-      selector: "input[type=number][formControlName],input[type=number][formControl],input[type=number][ngModel]"
+      selector: "input[type=number]:not([ngNoCva])[formControlName],input[type=number]:not([ngNoCva])[formControl],input[type=number]:not([ngNoCva])[ngModel]"
     }, {
       kind: "directive",
       type: i3.NgControlStatus,
@@ -597,7 +597,7 @@ class PopoverEditMatTableFlexExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.0.0-next.1",
+  version: "22.0.0-next.4",
   ngImport: i0,
   type: PopoverEditMatTableFlexExample,
   decorators: [{
@@ -808,7 +808,7 @@ class PopoverEditMatTableExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.0.0-next.1",
+    version: "22.0.0-next.4",
     ngImport: i0,
     type: PopoverEditMatTableExample,
     deps: [],
@@ -816,7 +816,7 @@ class PopoverEditMatTableExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "22.0.0-next.1",
+    version: "22.0.0-next.4",
     type: PopoverEditMatTableExample,
     isStandalone: true,
     selector: "popover-edit-mat-table-example",
@@ -889,11 +889,11 @@ class PopoverEditMatTableExample {
     }, {
       kind: "directive",
       type: i3.DefaultValueAccessor,
-      selector: "input:not([type=checkbox])[formControlName],textarea[formControlName],input:not([type=checkbox])[formControl],textarea[formControl],input:not([type=checkbox])[ngModel],textarea[ngModel],[ngDefaultControl]"
+      selector: "input:not([type=checkbox]):not([ngNoCva])[formControlName],textarea:not([ngNoCva])[formControlName],input:not([type=checkbox]):not([ngNoCva])[formControl],textarea:not([ngNoCva])[formControl],input:not([type=checkbox]):not([ngNoCva])[ngModel],textarea:not([ngNoCva])[ngModel],[ngDefaultControl]"
     }, {
       kind: "directive",
       type: i3.NumberValueAccessor,
-      selector: "input[type=number][formControlName],input[type=number][formControl],input[type=number][ngModel]"
+      selector: "input[type=number]:not([ngNoCva])[formControlName],input[type=number]:not([ngNoCva])[formControl],input[type=number]:not([ngNoCva])[ngModel]"
     }, {
       kind: "directive",
       type: i3.NgControlStatus,
@@ -1024,7 +1024,7 @@ class PopoverEditMatTableExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.0.0-next.1",
+  version: "22.0.0-next.4",
   ngImport: i0,
   type: PopoverEditMatTableExample,
   decorators: [{
@@ -1165,7 +1165,7 @@ class PopoverEditTabOutMatTableExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.0.0-next.1",
+    version: "22.0.0-next.4",
     ngImport: i0,
     type: PopoverEditTabOutMatTableExample,
     deps: [],
@@ -1173,7 +1173,7 @@ class PopoverEditTabOutMatTableExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.0.0-next.1",
+    version: "22.0.0-next.4",
     type: PopoverEditTabOutMatTableExample,
     isStandalone: true,
     selector: "popover-edit-tab-out-mat-table-example",
@@ -1239,11 +1239,11 @@ class PopoverEditTabOutMatTableExample {
     }, {
       kind: "directive",
       type: i3.DefaultValueAccessor,
-      selector: "input:not([type=checkbox])[formControlName],textarea[formControlName],input:not([type=checkbox])[formControl],textarea[formControl],input:not([type=checkbox])[ngModel],textarea[ngModel],[ngDefaultControl]"
+      selector: "input:not([type=checkbox]):not([ngNoCva])[formControlName],textarea:not([ngNoCva])[formControlName],input:not([type=checkbox]):not([ngNoCva])[formControl],textarea:not([ngNoCva])[formControl],input:not([type=checkbox]):not([ngNoCva])[ngModel],textarea:not([ngNoCva])[ngModel],[ngDefaultControl]"
     }, {
       kind: "directive",
       type: i3.NumberValueAccessor,
-      selector: "input[type=number][formControlName],input[type=number][formControl],input[type=number][ngModel]"
+      selector: "input[type=number]:not([ngNoCva])[formControlName],input[type=number]:not([ngNoCva])[formControl],input[type=number]:not([ngNoCva])[ngModel]"
     }, {
       kind: "directive",
       type: i3.NgControlStatus,
@@ -1330,7 +1330,7 @@ class PopoverEditTabOutMatTableExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.0.0-next.1",
+  version: "22.0.0-next.4",
   ngImport: i0,
   type: PopoverEditTabOutMatTableExample,
   decorators: [{

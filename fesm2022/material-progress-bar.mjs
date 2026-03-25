@@ -14,7 +14,7 @@ import { MatCardModule } from '@angular/material/card';
 class ProgressBarBufferExample {
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.0.0-next.1",
+    version: "22.0.0-next.4",
     ngImport: i0,
     type: ProgressBarBufferExample,
     deps: [],
@@ -22,7 +22,7 @@ class ProgressBarBufferExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.0.0-next.1",
+    version: "22.0.0-next.4",
     type: ProgressBarBufferExample,
     isStandalone: true,
     selector: "progress-bar-buffer-example",
@@ -43,7 +43,7 @@ class ProgressBarBufferExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.0.0-next.1",
+  version: "22.0.0-next.4",
   ngImport: i0,
   type: ProgressBarBufferExample,
   decorators: [{
@@ -62,7 +62,7 @@ class ProgressBarConfigurableExample {
   bufferValue = 75;
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.0.0-next.1",
+    version: "22.0.0-next.4",
     ngImport: i0,
     type: ProgressBarConfigurableExample,
     deps: [],
@@ -70,7 +70,7 @@ class ProgressBarConfigurableExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "22.0.0-next.1",
+    version: "22.0.0-next.4",
     type: ProgressBarConfigurableExample,
     isStandalone: true,
     selector: "progress-bar-configurable-example",
@@ -113,11 +113,11 @@ class ProgressBarConfigurableExample {
     }, {
       kind: "directive",
       type: i3.DefaultValueAccessor,
-      selector: "input:not([type=checkbox])[formControlName],textarea[formControlName],input:not([type=checkbox])[formControl],textarea[formControl],input:not([type=checkbox])[ngModel],textarea[ngModel],[ngDefaultControl]"
+      selector: "input:not([type=checkbox]):not([ngNoCva])[formControlName],textarea:not([ngNoCva])[formControlName],input:not([type=checkbox]):not([ngNoCva])[formControl],textarea:not([ngNoCva])[formControl],input:not([type=checkbox]):not([ngNoCva])[ngModel],textarea:not([ngNoCva])[ngModel],[ngDefaultControl]"
     }, {
       kind: "directive",
       type: i3.RangeValueAccessor,
-      selector: "input[type=range][formControlName],input[type=range][formControl],input[type=range][ngModel]"
+      selector: "input[type=range]:not([ngNoCva])[formControlName],input[type=range]:not([ngNoCva])[formControl],input[type=range]:not([ngNoCva])[ngModel]"
     }, {
       kind: "directive",
       type: i3.NgControlStatus,
@@ -160,7 +160,7 @@ class ProgressBarConfigurableExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.0.0-next.1",
+  version: "22.0.0-next.4",
   ngImport: i0,
   type: ProgressBarConfigurableExample,
   decorators: [{
@@ -177,7 +177,7 @@ i0.ɵɵngDeclareClassMetadata({
 class ProgressBarDeterminateExample {
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.0.0-next.1",
+    version: "22.0.0-next.4",
     ngImport: i0,
     type: ProgressBarDeterminateExample,
     deps: [],
@@ -185,7 +185,7 @@ class ProgressBarDeterminateExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.0.0-next.1",
+    version: "22.0.0-next.4",
     type: ProgressBarDeterminateExample,
     isStandalone: true,
     selector: "progress-bar-determinate-example",
@@ -206,7 +206,7 @@ class ProgressBarDeterminateExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.0.0-next.1",
+  version: "22.0.0-next.4",
   ngImport: i0,
   type: ProgressBarDeterminateExample,
   decorators: [{
@@ -222,7 +222,7 @@ i0.ɵɵngDeclareClassMetadata({
 class ProgressBarIndeterminateExample {
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.0.0-next.1",
+    version: "22.0.0-next.4",
     ngImport: i0,
     type: ProgressBarIndeterminateExample,
     deps: [],
@@ -230,7 +230,7 @@ class ProgressBarIndeterminateExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.0.0-next.1",
+    version: "22.0.0-next.4",
     type: ProgressBarIndeterminateExample,
     isStandalone: true,
     selector: "progress-bar-indeterminate-example",
@@ -251,7 +251,7 @@ class ProgressBarIndeterminateExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.0.0-next.1",
+  version: "22.0.0-next.4",
   ngImport: i0,
   type: ProgressBarIndeterminateExample,
   decorators: [{
@@ -267,7 +267,7 @@ i0.ɵɵngDeclareClassMetadata({
 class ProgressBarQueryExample {
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.0.0-next.1",
+    version: "22.0.0-next.4",
     ngImport: i0,
     type: ProgressBarQueryExample,
     deps: [],
@@ -275,7 +275,7 @@ class ProgressBarQueryExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.0.0-next.1",
+    version: "22.0.0-next.4",
     type: ProgressBarQueryExample,
     isStandalone: true,
     selector: "progress-bar-query-example",
@@ -296,7 +296,7 @@ class ProgressBarQueryExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.0.0-next.1",
+  version: "22.0.0-next.4",
   ngImport: i0,
   type: ProgressBarQueryExample,
   decorators: [{
@@ -315,7 +315,7 @@ class ProgressBarHarnessExample {
   }] : []));
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.0.0-next.1",
+    version: "22.0.0-next.4",
     ngImport: i0,
     type: ProgressBarHarnessExample,
     deps: [],
@@ -323,7 +323,7 @@ class ProgressBarHarnessExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.0.0-next.1",
+    version: "22.0.0-next.4",
     type: ProgressBarHarnessExample,
     isStandalone: true,
     selector: "progress-bar-harness-example",
@@ -344,7 +344,7 @@ class ProgressBarHarnessExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.0.0-next.1",
+  version: "22.0.0-next.4",
   ngImport: i0,
   type: ProgressBarHarnessExample,
   decorators: [{
