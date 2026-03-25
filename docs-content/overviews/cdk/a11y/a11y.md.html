@@ -93,7 +93,7 @@ active item. Only the HTML node corresponding to the active item should have a <
 be used to create accessible experience for components like
 <a href="https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/">modal dialogs</a>, where focus must be
 constrained.</p>
-<p>This directive is declared in <code>A11yModule</code>.</p>
+<p>Import <code>CdkTrapFocus</code> in your component to use this directive.</p>
 
         <h4 id="example" class="docs-header-link">
           <span header-link="example"></span>
@@ -143,10 +143,11 @@ for more information on aria-live regions.</p>
         </h4>
       <pre><code class="language-ts"><span class="hljs-meta">@Component</span>({...})
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">MyComponent</span> {
+  <span class="hljs-keyword">private</span> liveAnnouncer = <span class="hljs-title function_">inject</span>(<span class="hljs-title class_">LiveAnnouncer</span>);
 
- <span class="hljs-title function_">constructor</span>(<span class="hljs-params"><span class="hljs-attr">liveAnnouncer</span>: <span class="hljs-title class_">LiveAnnouncer</span></span>) {
-   liveAnnouncer.<span class="hljs-title function_">announce</span>(<span class="hljs-string">&quot;Hey Google&quot;</span>);
- }
+  <span class="hljs-title function_">announceMessage</span>(<span class="hljs-params"></span>) {
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">liveAnnouncer</span>.<span class="hljs-title function_">announce</span>(<span class="hljs-string">&quot;Hey Google&quot;</span>);
+  }
 }</code></pre>
         <h3 id="focusmonitor" class="docs-header-link">
           <span header-link="focusmonitor"></span>

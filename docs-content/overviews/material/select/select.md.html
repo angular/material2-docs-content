@@ -155,11 +155,11 @@ should not.)</p>
 <p>A global error state matcher can be specified by setting the <code>ErrorStateMatcher</code> provider. This
 applies to all inputs. For convenience, <code>ShowOnDirtyErrorStateMatcher</code> is available in order to
 globally cause input errors to show when the input is dirty and invalid.</p>
-<pre><code class="language-ts"><span class="hljs-meta">@NgModule</span>({
+<pre><code class="language-ts"><span class="hljs-title function_">bootstrapApplication</span>(<span class="hljs-title class_">MyApp</span>, {
   <span class="hljs-attr">providers</span>: [
     {<span class="hljs-attr">provide</span>: <span class="hljs-title class_">ErrorStateMatcher</span>, <span class="hljs-attr">useClass</span>: <span class="hljs-title class_">ShowOnDirtyErrorStateMatcher</span>}
   ]
-})</code></pre>
+});</code></pre>
         <h3 id="keyboard-interaction" class="docs-header-link">
           <span header-link="keyboard-interaction"></span>
           Keyboard interaction

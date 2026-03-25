@@ -25,11 +25,11 @@ around.</p>
 <p>Out of the box, if you do not specify an <code>appearance</code> for the <code>&lt;mat-form-field&gt;</code> it will default to
 <code>fill</code>. However, this can be configured using a global provider to choose a different default
 appearance for your app.</p>
-<pre><code class="language-ts"><span class="hljs-meta">@NgModule</span>({
+<pre><code class="language-ts"><span class="hljs-title function_">bootstrapApplication</span>(<span class="hljs-title class_">MyApp</span>, {
   <span class="hljs-attr">providers</span>: [
     {<span class="hljs-attr">provide</span>: <span class="hljs-variable constant_">MAT_FORM_FIELD_DEFAULT_OPTIONS</span>, <span class="hljs-attr">useValue</span>: {<span class="hljs-attr">appearance</span>: <span class="hljs-string">&#x27;outline&#x27;</span>}}
   ]
-})</code></pre></div><div material-docs-example="form-field-appearance"></div><div class="docs-markdown">
+});</code></pre></div><div material-docs-example="form-field-appearance"></div><div class="docs-markdown">
 
 
         <h3 id="floating-label" class="docs-header-link">
@@ -49,13 +49,13 @@ field control, or to <code>auto</code> to restore the default behavior.</p>
 </div><div material-docs-example="form-field-label"></div><div class="docs-markdown">
 
 <p>The floating label behavior can be adjusted globally by providing a value for
-<code>MAT_FORM_FIELD_DEFAULT_OPTIONS</code> in your application&#39;s root module. Like the <code>floatLabel</code> input,
+<code>MAT_FORM_FIELD_DEFAULT_OPTIONS</code> in your app config. Like the <code>floatLabel</code> input,
 the option can be either set to <code>always</code> or <code>auto</code>.</p>
-<pre><code class="language-ts"><span class="hljs-meta">@NgModule</span>({
+<pre><code class="language-ts"><span class="hljs-title function_">bootstrapApplication</span>(<span class="hljs-title class_">MyApp</span>, {
   <span class="hljs-attr">providers</span>: [
     {<span class="hljs-attr">provide</span>: <span class="hljs-variable constant_">MAT_FORM_FIELD_DEFAULT_OPTIONS</span>, <span class="hljs-attr">useValue</span>: {<span class="hljs-attr">floatLabel</span>: <span class="hljs-string">&#x27;always&#x27;</span>}}
   ]
-})</code></pre>
+});</code></pre>
         <h3 id="hint-labels" class="docs-header-link">
           <span header-link="hint-labels"></span>
           Hint labels

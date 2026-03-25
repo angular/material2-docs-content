@@ -189,15 +189,15 @@ However, it can be overridden the same way as mentioned above.</p>
 
 <p>In order to use the custom step states, you must add the <code>displayDefaultIndicatorType</code> option to
 the global default stepper options which can be specified by providing a value for
-<code>STEPPER_GLOBAL_OPTIONS</code> in your application&#39;s root module.</p>
-<pre><code class="language-ts"><span class="hljs-meta">@NgModule</span>({
+<code>STEPPER_GLOBAL_OPTIONS</code> in your app config.</p>
+<pre><code class="language-ts"><span class="hljs-title function_">bootstrapApplication</span>(<span class="hljs-title class_">MyApp</span>, {
   <span class="hljs-attr">providers</span>: [
     {
       <span class="hljs-attr">provide</span>: <span class="hljs-variable constant_">STEPPER_GLOBAL_OPTIONS</span>,
       <span class="hljs-attr">useValue</span>: { <span class="hljs-attr">displayDefaultIndicatorType</span>: <span class="hljs-literal">false</span> }
     }
   ]
-})</code></pre></div><div material-docs-example="stepper-states"></div><div class="docs-markdown">
+});</code></pre></div><div material-docs-example="stepper-states"></div><div class="docs-markdown">
 
 
         <h3 id="error-state" class="docs-header-link">
@@ -209,14 +209,14 @@ you can set the error message through the <code>errorMessage</code> input and co
 errors via the <code>showError</code> option in the <code>STEPPER_GLOBAL_OPTIONS</code> injection token. Note that since
 <code>linear</code> steppers prevent a user from advancing past an invalid step to begin with, this setting
 will not affect steppers marked as <code>linear</code>.</p>
-<pre><code class="language-ts"><span class="hljs-meta">@NgModule</span>({
+<pre><code class="language-ts"><span class="hljs-title function_">bootstrapApplication</span>(<span class="hljs-title class_">MyApp</span>, {
   <span class="hljs-attr">providers</span>: [
     {
       <span class="hljs-attr">provide</span>: <span class="hljs-variable constant_">STEPPER_GLOBAL_OPTIONS</span>,
       <span class="hljs-attr">useValue</span>: { <span class="hljs-attr">showError</span>: <span class="hljs-literal">true</span> }
     }
   ]
-})</code></pre></div><div material-docs-example="stepper-errors"></div><div class="docs-markdown">
+});</code></pre></div><div material-docs-example="stepper-errors"></div><div class="docs-markdown">
 
 
         <h3 id="lazy-rendering" class="docs-header-link">
@@ -273,14 +273,12 @@ viewport.</p>
           Localizing labels
         </h3>
       <p>Labels used by the stepper are provided through <code>MatStepperIntl</code>. Localization of these messages
-can be done by providing a subclass with translated values in your application root module.</p>
-<pre><code class="language-ts"><span class="hljs-meta">@NgModule</span>({
-  <span class="hljs-attr">imports</span>: [<span class="hljs-title class_">MatStepperModule</span>],
+can be done by providing a subclass with translated values in your app config.</p>
+<pre><code class="language-ts"><span class="hljs-title function_">bootstrapApplication</span>(<span class="hljs-title class_">MyApp</span>, {
   <span class="hljs-attr">providers</span>: [
     {<span class="hljs-attr">provide</span>: <span class="hljs-title class_">MatStepperIntl</span>, <span class="hljs-attr">useClass</span>: <span class="hljs-title class_">MyIntl</span>},
-  ],
-})
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">MyApp</span> {}</code></pre></div><div material-docs-example="stepper-intl"></div><div class="docs-markdown">
+  ]
+});</code></pre></div><div material-docs-example="stepper-intl"></div><div class="docs-markdown">
 
 
         <h3 id="accessibility" class="docs-header-link">

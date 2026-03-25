@@ -119,16 +119,16 @@ and <code>ReactiveFormsModule</code>.</p>
           Specifying global configuration defaults
         </h3>
       <p>Use the <code>MAT_CHIPS_DEFAULT_OPTIONS</code> token to specify default options for the chips module.</p>
-<pre><code class="language-html">@NgModule({
-  providers: [
+<pre><code class="language-ts"><span class="hljs-title function_">bootstrapApplication</span>(<span class="hljs-title class_">MyApp</span>, {
+  <span class="hljs-attr">providers</span>: [
     {
-      provide: MAT_CHIPS_DEFAULT_OPTIONS,
-      useValue: {
-        separatorKeyCodes: [COMMA, SPACE]
+      <span class="hljs-attr">provide</span>: <span class="hljs-variable constant_">MAT_CHIPS_DEFAULT_OPTIONS</span>,
+      <span class="hljs-attr">useValue</span>: {
+        <span class="hljs-attr">separatorKeyCodes</span>: [<span class="hljs-variable constant_">COMMA</span>, <span class="hljs-variable constant_">SPACE</span>]
       }
     }
   ]
-})</code></pre>
+});</code></pre>
         <h3 id="interaction-patterns" class="docs-header-link">
           <span header-link="interaction-patterns"></span>
           Interaction Patterns

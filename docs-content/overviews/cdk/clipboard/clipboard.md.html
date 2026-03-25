@@ -19,7 +19,7 @@ directly to place it on the clipboard.</p>
 <pre><code class="language-typescript"><span class="hljs-keyword">import</span> {<span class="hljs-title class_">Clipboard</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/clipboard&#x27;</span>;
 
 <span class="hljs-keyword">class</span> <span class="hljs-title class_">HeroProfile</span> {
-  <span class="hljs-title function_">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">private</span> <span class="hljs-attr">clipboard</span>: <span class="hljs-title class_">Clipboard</span></span>) {}
+  <span class="hljs-keyword">private</span> clipboard = <span class="hljs-title function_">inject</span>(<span class="hljs-title class_">Clipboard</span>);
 
   <span class="hljs-title function_">copyHeroName</span>(<span class="hljs-params"></span>) {
     <span class="hljs-variable language_">this</span>.<span class="hljs-property">clipboard</span>.<span class="hljs-title function_">copy</span>(<span class="hljs-string">&#x27;Alphonso&#x27;</span>);
@@ -32,9 +32,9 @@ the text that was buffered. Please note, if you call <code>beginCopy</code>, you
 <pre><code class="language-typescript"><span class="hljs-keyword">import</span> {<span class="hljs-title class_">Clipboard</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/clipboard&#x27;</span>;
 
 <span class="hljs-keyword">class</span> <span class="hljs-title class_">HeroProfile</span> {
-  <span class="hljs-attr">lifetimeAchievements</span>: <span class="hljs-built_in">string</span>;
+  <span class="hljs-keyword">private</span> clipboard = <span class="hljs-title function_">inject</span>(<span class="hljs-title class_">Clipboard</span>);
 
-  <span class="hljs-title function_">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">private</span> <span class="hljs-attr">clipboard</span>: <span class="hljs-title class_">Clipboard</span></span>) {}
+  <span class="hljs-attr">lifetimeAchievements</span>: <span class="hljs-built_in">string</span>;
 
   <span class="hljs-title function_">copyAchievements</span>(<span class="hljs-params"></span>) {
     <span class="hljs-keyword">const</span> pending = <span class="hljs-variable language_">this</span>.<span class="hljs-property">clipboard</span>.<span class="hljs-title function_">beginCopy</span>(<span class="hljs-variable language_">this</span>.<span class="hljs-property">lifetimeAchievements</span>);

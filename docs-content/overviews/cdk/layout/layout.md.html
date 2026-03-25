@@ -123,7 +123,6 @@ The <code>matchMedia</code> method can be used to get a native
 <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaQueryList"><code>MediaQueryList</code></a>.</p>
 <pre><code class="language-ts"><span class="hljs-meta">@Component</span>({...})
 <span class="hljs-keyword">class</span> <span class="hljs-title class_">MyComponent</span> {
-  <span class="hljs-title function_">constructor</span>(<span class="hljs-params"><span class="hljs-attr">mediaMatcher</span>: <span class="hljs-title class_">MediaMatcher</span></span>) {
-    <span class="hljs-keyword">const</span> mediaQueryList = mediaMatcher.<span class="hljs-title function_">matchMedia</span>(<span class="hljs-string">&#x27;(min-width: 1px)&#x27;</span>);
-  }
+  <span class="hljs-keyword">private</span> mediaMatcher = <span class="hljs-title function_">inject</span>(<span class="hljs-title class_">MediaMatcher</span>);
+  <span class="hljs-keyword">private</span> mediaQueryList = <span class="hljs-variable language_">this</span>.<span class="hljs-property">mediaMatcher</span>.<span class="hljs-title function_">matchMedia</span>(<span class="hljs-string">&#x27;(min-width: 1px)&#x27;</span>);
 }</code></pre></div>
