@@ -4,7 +4,7 @@ import * as _angular_material_paginator from '@angular/material/paginator';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource, MatHeaderRowDef, MatRowDef, MatColumnDef, MatNoDataRow, MatTable } from '@angular/material/table';
 import { HttpClient } from '@angular/common/http';
-import { MatSort, SortDirection, Sort } from '@angular/material/sort';
+import { SortDirection, MatSort, Sort } from '@angular/material/sort';
 import { Observable } from 'rxjs';
 import { SelectionModel, DataSource } from '@angular/cdk/collections';
 import { MatButtonToggleGroup } from '@angular/material/button-toggle';

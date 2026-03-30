@@ -1,5 +1,5 @@
 import * as i0 from '@angular/core';
-import { Component, ChangeDetectionStrategy } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { MatDividerModule } from '@angular/material/divider';
 import * as i1 from '@angular/material/list';
 import { MatListModule } from '@angular/material/list';
@@ -7,7 +7,7 @@ import { MatListModule } from '@angular/material/list';
 class DividerOverviewExample {
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.0.0-next.1",
+    version: "22.0.0-next.5",
     ngImport: i0,
     type: DividerOverviewExample,
     deps: [],
@@ -15,7 +15,7 @@ class DividerOverviewExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.0.0-next.1",
+    version: "22.0.0-next.5",
     type: DividerOverviewExample,
     isStandalone: true,
     selector: "divider-overview-example",
@@ -49,7 +49,7 @@ class DividerOverviewExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.0.0-next.1",
+  version: "22.0.0-next.5",
   ngImport: i0,
   type: DividerOverviewExample,
   decorators: [{
@@ -66,7 +66,7 @@ i0.ɵɵngDeclareClassMetadata({
 class DividerHarnessExample {
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.0.0-next.1",
+    version: "22.0.0-next.5",
     ngImport: i0,
     type: DividerHarnessExample,
     deps: [],
@@ -74,7 +74,7 @@ class DividerHarnessExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.0.0-next.1",
+    version: "22.0.0-next.5",
     type: DividerHarnessExample,
     isStandalone: true,
     selector: "divider-harness-example",
@@ -94,7 +94,7 @@ class DividerHarnessExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.0.0-next.1",
+  version: "22.0.0-next.5",
   ngImport: i0,
   type: DividerHarnessExample,
   decorators: [{
