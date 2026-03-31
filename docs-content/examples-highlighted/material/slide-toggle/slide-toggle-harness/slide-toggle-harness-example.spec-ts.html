@@ -40,8 +40,7 @@
   });
 
   <span class="hljs-title function_">it</span>(<span class="hljs-string">&#x27;should toggle slide-toggle&#x27;</span>, <span class="hljs-title function_">async</span> () =&gt; {
-    fixture.<span class="hljs-property">componentInstance</span>.<span class="hljs-property">disabled</span> = <span class="hljs-literal">false</span>;
-    fixture.<span class="hljs-property">changeDetectorRef</span>.<span class="hljs-title function_">markForCheck</span>();
+    fixture.<span class="hljs-property">componentInstance</span>.<span class="hljs-property">disabled</span>.<span class="hljs-title function_">set</span>(<span class="hljs-literal">false</span>);
     <span class="hljs-keyword">const</span> [checkedToggle, uncheckedToggle] = <span class="hljs-keyword">await</span> loader.<span class="hljs-title function_">getAllHarnesses</span>(<span class="hljs-title class_">MatSlideToggleHarness</span>);
     <span class="hljs-keyword">await</span> checkedToggle.<span class="hljs-title function_">toggle</span>();
     <span class="hljs-keyword">await</span> uncheckedToggle.<span class="hljs-title function_">toggle</span>();

@@ -1,5 +1,5 @@
 import * as i0 from '@angular/core';
-import { Component, inject } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
 import * as i1$1 from '@angular/material/slide-toggle';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import * as i2 from '@angular/material/checkbox';
@@ -17,7 +17,7 @@ class SlideToggleConfigurableExample {
   disabled = false;
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.0.0-next.4",
+    version: "22.0.0-next.5",
     ngImport: i0,
     type: SlideToggleConfigurableExample,
     deps: [],
@@ -25,7 +25,7 @@ class SlideToggleConfigurableExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.0.0-next.4",
+    version: "22.0.0-next.5",
     type: SlideToggleConfigurableExample,
     isStandalone: true,
     selector: "slide-toggle-configurable-example",
@@ -87,7 +87,7 @@ class SlideToggleConfigurableExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.0.0-next.4",
+  version: "22.0.0-next.5",
   ngImport: i0,
   type: SlideToggleConfigurableExample,
   decorators: [{
@@ -113,7 +113,7 @@ class SlideToggleFormsExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.0.0-next.4",
+    version: "22.0.0-next.5",
     ngImport: i0,
     type: SlideToggleFormsExample,
     deps: [],
@@ -121,7 +121,7 @@ class SlideToggleFormsExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.0.0-next.4",
+    version: "22.0.0-next.5",
     type: SlideToggleFormsExample,
     isStandalone: true,
     selector: "slide-toggle-forms-example",
@@ -202,7 +202,7 @@ class SlideToggleFormsExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.0.0-next.4",
+  version: "22.0.0-next.5",
   ngImport: i0,
   type: SlideToggleFormsExample,
   decorators: [{
@@ -219,7 +219,7 @@ i0.ɵɵngDeclareClassMetadata({
 class SlideToggleOverviewExample {
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.0.0-next.4",
+    version: "22.0.0-next.5",
     ngImport: i0,
     type: SlideToggleOverviewExample,
     deps: [],
@@ -227,7 +227,7 @@ class SlideToggleOverviewExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.0.0-next.4",
+    version: "22.0.0-next.5",
     type: SlideToggleOverviewExample,
     isStandalone: true,
     selector: "slide-toggle-overview-example",
@@ -248,7 +248,7 @@ class SlideToggleOverviewExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.0.0-next.4",
+  version: "22.0.0-next.5",
   ngImport: i0,
   type: SlideToggleOverviewExample,
   decorators: [{
@@ -262,11 +262,13 @@ i0.ɵɵngDeclareClassMetadata({
 });
 
 class SlideToggleHarnessExample {
-  disabled = true;
+  disabled = signal(true, ...(ngDevMode ? [{
+    debugName: "disabled"
+  }] : []));
   ctrl = new FormControl(true);
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.0.0-next.4",
+    version: "22.0.0-next.5",
     ngImport: i0,
     type: SlideToggleHarnessExample,
     deps: [],
@@ -274,12 +276,12 @@ class SlideToggleHarnessExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.0.0-next.4",
+    version: "22.0.0-next.5",
     type: SlideToggleHarnessExample,
     isStandalone: true,
     selector: "slide-toggle-harness-example",
     ngImport: i0,
-    template: "<mat-slide-toggle\n    [formControl]=\"ctrl\"\n    name=\"first-name\">\n  First\n</mat-slide-toggle>\n<mat-slide-toggle [disabled]=\"disabled\">\n  Second\n</mat-slide-toggle>\n",
+    template: "<mat-slide-toggle\n    [formControl]=\"ctrl\"\n    name=\"first-name\">\n  First\n</mat-slide-toggle>\n<mat-slide-toggle [disabled]=\"disabled()\">\n  Second\n</mat-slide-toggle>\n",
     dependencies: [{
       kind: "ngmodule",
       type: MatSlideToggleModule
@@ -312,7 +314,7 @@ class SlideToggleHarnessExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.0.0-next.4",
+  version: "22.0.0-next.5",
   ngImport: i0,
   type: SlideToggleHarnessExample,
   decorators: [{
@@ -320,7 +322,7 @@ i0.ɵɵngDeclareClassMetadata({
     args: [{
       selector: 'slide-toggle-harness-example',
       imports: [MatSlideToggleModule, FormsModule, ReactiveFormsModule],
-      template: "<mat-slide-toggle\n    [formControl]=\"ctrl\"\n    name=\"first-name\">\n  First\n</mat-slide-toggle>\n<mat-slide-toggle [disabled]=\"disabled\">\n  Second\n</mat-slide-toggle>\n"
+      template: "<mat-slide-toggle\n    [formControl]=\"ctrl\"\n    name=\"first-name\">\n  First\n</mat-slide-toggle>\n<mat-slide-toggle [disabled]=\"disabled()\">\n  Second\n</mat-slide-toggle>\n"
     }]
   }]
 });
