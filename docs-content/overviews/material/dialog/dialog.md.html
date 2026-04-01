@@ -36,7 +36,15 @@ value is forwarded as the result of the <code>afterClosed</code> Observable.</p>
   <span class="hljs-attr">providers</span>: [
     {<span class="hljs-attr">provide</span>: <span class="hljs-variable constant_">MAT_DIALOG_DEFAULT_OPTIONS</span>, <span class="hljs-attr">useValue</span>: {<span class="hljs-attr">hasBackdrop</span>: <span class="hljs-literal">false</span>}}
   ]
-});</code></pre>
+});</code></pre><blockquote>
+<p><strong>Note:</strong> The value provided for <code>MAT_DIALOG_DEFAULT_OPTIONS</code> <strong>replaces</strong> the built-in defaults
+entirely rather than merging with them. For example, providing <code>{disableClose: true}</code> means that
+all other defaults (such as <code>hasBackdrop</code>) will be <code>undefined</code>. If you only want to override
+specific properties, spread the defaults first:</p>
+<pre><code class="language-ts">{<span class="hljs-attr">provide</span>: <span class="hljs-variable constant_">MAT_DIALOG_DEFAULT_OPTIONS</span>, <span class="hljs-attr">useValue</span>: {...<span class="hljs-keyword">new</span> <span class="hljs-title class_">MatDialogConfig</span>(), <span class="hljs-attr">disableClose</span>: <span class="hljs-literal">true</span>}}</code></pre><p>When you call <code>dialog.open()</code> with a config, that config is merged on top of these defaults, so
+per-dialog options always take precedence.</p>
+</blockquote>
+
         <h3 id="sharing-data-with-the-dialog-component" class="docs-header-link">
           <span header-link="sharing-data-with-the-dialog-component"></span>
           Sharing data with the Dialog component.
