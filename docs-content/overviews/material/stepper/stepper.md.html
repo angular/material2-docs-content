@@ -9,11 +9,7 @@ styling.</p>
         </h3>
       <p>There are two stepper variants: <code>horizontal</code> and <code>vertical</code>. You can switch between the two using
 the <code>orientation</code> attribute.</p>
-</div><div material-docs-example="stepper-overview"></div><div class="docs-markdown">
-
-</div><div material-docs-example="stepper-vertical"></div><div class="docs-markdown">
-
-
+</div><div material-docs-example="stepper-overview"></div><div class="docs-markdown"></div><div material-docs-example="stepper-vertical"></div><div class="docs-markdown">
         <h3 id="labels" class="docs-header-link">
           <span header-link="labels"></span>
           Labels
@@ -21,15 +17,11 @@ the <code>orientation</code> attribute.</p>
       <p>If a step&#39;s label is only text, then the <code>label</code> attribute can be used.</p>
 </div><div material-docs-example="stepper-overview"
                              file="stepper-overview-example.html"
-                             region="label"></div><div class="docs-markdown">
-
-<p>For more complex labels, add a template with the <code>matStepLabel</code> directive inside the
+                             region="label"></div><div class="docs-markdown"><p>For more complex labels, add a template with the <code>matStepLabel</code> directive inside the
 <code>mat-step</code>.</p>
 </div><div material-docs-example="stepper-editable"
                              file="stepper-editable-example.html"
                              region="step-label"></div><div class="docs-markdown">
-
-
         <h4 id="label-position" class="docs-header-link">
           <span header-link="label-position"></span>
           Label position
@@ -40,8 +32,6 @@ This behaviour is controlled by <code>labelPosition</code> property.</p>
 </div><div material-docs-example="stepper-label-position-bottom"
                              file="stepper-label-position-bottom-example.html"
                              region="label-position"></div><div class="docs-markdown">
-
-
         <h4 id="header-position" class="docs-header-link">
           <span header-link="header-position"></span>
           Header position
@@ -50,8 +40,6 @@ This behaviour is controlled by <code>labelPosition</code> property.</p>
 using the <code>headerPosition</code> input. By default it&#39;s on top of the content, but it can also be placed
 under it.</p>
 </div><div material-docs-example="stepper-header-position"></div><div class="docs-markdown">
-
-
         <h3 id="stepper-buttons" class="docs-header-link">
           <span header-link="stepper-buttons"></span>
           Stepper buttons
@@ -61,8 +49,6 @@ under it.</p>
 </div><div material-docs-example="stepper-label-position-bottom"
                              file="stepper-label-position-bottom-example.html"
                              region="buttons"></div><div class="docs-markdown">
-
-
         <h3 id="linear-stepper" class="docs-header-link">
           <span header-link="linear-stepper"></span>
           Linear stepper
@@ -132,9 +118,6 @@ on <code>mat-step</code>.</p>
 </div><div material-docs-example="stepper-optional"
                              file="stepper-optional-example.html"
                              region="optional"></div><div class="docs-markdown">
-
-
-
         <h4 id="editable-step" class="docs-header-link">
           <span header-link="editable-step"></span>
           Editable step
@@ -144,8 +127,6 @@ edit their responses. <code>editable=&quot;false&quot;</code> can be set on <cod
 </div><div material-docs-example="stepper-editable"
                              file="stepper-editable-example.html"
                              region="editable"></div><div class="docs-markdown">
-
-
         <h4 id="completed-step" class="docs-header-link">
           <span header-link="completed-step"></span>
           Completed step
@@ -164,9 +145,7 @@ by placing a <code>matStepperIcon</code> for each of the icons that you want to 
 <code>active</code>, and <code>optional</code> values of the individual steps are available through template variables:</p>
 </div><div material-docs-example="stepper-states"
                              file="stepper-states-example.html"
-                             region="override-icons"></div><div class="docs-markdown">
-
-<p>Note that you aren&#39;t limited to using the <code>mat-icon</code> component when providing custom icons.</p>
+                             region="override-icons"></div><div class="docs-markdown"><p>Note that you aren&#39;t limited to using the <code>mat-icon</code> component when providing custom icons.</p>
 
         <h3 id="controlling-the-stepper-animation" class="docs-header-link">
           <span header-link="controlling-the-stepper-animation"></span>
@@ -175,8 +154,6 @@ by placing a <code>matStepperIcon</code> for each of the icons that you want to 
       <p>You can control the duration of the stepper&#39;s animation using the <code>animationDuration</code> input. If you
 want to disable the animation completely, you can do so by setting the properties to <code>0ms</code>.</p>
 </div><div material-docs-example="stepper-animations"></div><div class="docs-markdown">
-
-
         <h4 id="step-states" class="docs-header-link">
           <span header-link="step-states"></span>
           Step States
@@ -185,9 +162,7 @@ want to disable the animation completely, you can do so by setting the propertie
 However, it can be overridden the same way as mentioned above.</p>
 </div><div material-docs-example="stepper-states"
                              file="stepper-states-example.html"
-                             region="states"></div><div class="docs-markdown">
-
-<p>In order to use the custom step states, you must add the <code>displayDefaultIndicatorType</code> option to
+                             region="states"></div><div class="docs-markdown"><p>In order to use the custom step states, you must add the <code>displayDefaultIndicatorType</code> option to
 the global default stepper options which can be specified by providing a value for
 <code>STEPPER_GLOBAL_OPTIONS</code> in your app config.</p>
 <pre><code class="language-ts"><span class="hljs-title function_">bootstrapApplication</span>(<span class="hljs-title class_">MyApp</span>, {
@@ -198,8 +173,6 @@ the global default stepper options which can be specified by providing a value f
     }
   ]
 });</code></pre></div><div material-docs-example="stepper-states"></div><div class="docs-markdown">
-
-
         <h3 id="error-state" class="docs-header-link">
           <span header-link="error-state"></span>
           Error State
@@ -217,8 +190,6 @@ will not affect steppers marked as <code>linear</code>.</p>
     }
   ]
 });</code></pre></div><div material-docs-example="stepper-errors"></div><div class="docs-markdown">
-
-
         <h3 id="lazy-rendering" class="docs-header-link">
           <span header-link="lazy-rendering"></span>
           Lazy rendering
@@ -227,8 +198,6 @@ will not affect steppers marked as <code>linear</code>.</p>
 content that you want to defer until the particular step is opened, you can put it inside
 an <code>ng-template</code> with the <code>matStepContent</code> attribute.</p>
 </div><div material-docs-example="stepper-lazy-content"></div><div class="docs-markdown">
-
-
         <h3 id="responsive-stepper" class="docs-header-link">
           <span header-link="responsive-stepper"></span>
           Responsive stepper
@@ -237,8 +206,6 @@ an <code>ng-template</code> with the <code>matStepContent</code> attribute.</p>
 screen size, you can control its <code>orientation</code> dynamically to change the layout based on the
 viewport.</p>
 </div><div material-docs-example="stepper-responsive"></div><div class="docs-markdown">
-
-
         <h3 id="keyboard-interaction" class="docs-header-link">
           <span header-link="keyboard-interaction"></span>
           Keyboard interaction
@@ -279,8 +246,6 @@ can be done by providing a subclass with translated values in your app config.</
     {<span class="hljs-attr">provide</span>: <span class="hljs-title class_">MatStepperIntl</span>, <span class="hljs-attr">useClass</span>: <span class="hljs-title class_">MyIntl</span>},
   ]
 });</code></pre></div><div material-docs-example="stepper-intl"></div><div class="docs-markdown">
-
-
         <h3 id="accessibility" class="docs-header-link">
           <span header-link="accessibility"></span>
           Accessibility

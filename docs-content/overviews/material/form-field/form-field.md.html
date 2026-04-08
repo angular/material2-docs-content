@@ -12,8 +12,6 @@ underline, floating label, and hint messages.</p>
 <li><a href="https://material.angular.dev/components/chips/overview"><code>&lt;mat-chip-set&gt;</code></a></li>
 </ul>
 </div><div material-docs-example="form-field-overview"></div><div class="docs-markdown">
-
-
         <h3 id="form-field-appearance-variants" class="docs-header-link">
           <span header-link="form-field-appearance-variants"></span>
           Form field appearance variants
@@ -30,8 +28,6 @@ appearance for your app.</p>
     {<span class="hljs-attr">provide</span>: <span class="hljs-variable constant_">MAT_FORM_FIELD_DEFAULT_OPTIONS</span>, <span class="hljs-attr">useValue</span>: {<span class="hljs-attr">appearance</span>: <span class="hljs-string">&#x27;outline&#x27;</span>}}
   ]
 });</code></pre></div><div material-docs-example="form-field-appearance"></div><div class="docs-markdown">
-
-
         <h3 id="floating-label" class="docs-header-link">
           <span header-link="floating-label"></span>
           Floating label
@@ -46,9 +42,7 @@ setting the <code>hideRequiredMarker</code> property on <code>&lt;mat-form-field
 <p>The <code>floatLabel</code> property of <code>&lt;mat-form-field&gt;</code> can be used to change this default floating
 behavior. It can be set to <code>always</code> to float the label even when no text is present in the form
 field control, or to <code>auto</code> to restore the default behavior.</p>
-</div><div material-docs-example="form-field-label"></div><div class="docs-markdown">
-
-<p>The floating label behavior can be adjusted globally by providing a value for
+</div><div material-docs-example="form-field-label"></div><div class="docs-markdown"><p>The floating label behavior can be adjusted globally by providing a value for
 <code>MAT_FORM_FIELD_DEFAULT_OPTIONS</code> in your app config. Like the <code>floatLabel</code> input,
 the option can be either set to <code>always</code> or <code>auto</code>.</p>
 <pre><code class="language-ts"><span class="hljs-title function_">bootstrapApplication</span>(<span class="hljs-title class_">MyApp</span>, {
@@ -70,8 +64,6 @@ via the <code>hintLabel</code> property, it will be treated as the start hint. H
 <code>&lt;mat-hint&gt;</code> to either <code>start</code> or <code>end</code>. Attempting to add multiple hints to the same side will
 raise an error.</p>
 </div><div material-docs-example="form-field-hint"></div><div class="docs-markdown">
-
-
         <h3 id="error-messages" class="docs-header-link">
           <span header-link="error-messages"></span>
           Error messages
@@ -86,8 +78,6 @@ messages can be shown at the same time if desired, but the <code>&lt;mat-form-fi
 space to display one error message at a time. Ensuring that enough space is available to display
 multiple errors is up to the user.</p>
 </div><div material-docs-example="form-field-error"></div><div class="docs-markdown">
-
-
         <h3 id="prefix-and-suffix" class="docs-header-link">
           <span header-link="prefix-and-suffix"></span>
           Prefix &amp; suffix
@@ -99,8 +89,6 @@ the prefix. Similarly, adding <code>matSuffix</code> will designate it as the su
 <p>If the prefix/suffix content is purely text-based, it is recommended to use the <code>matTextPrefix</code> or
 <code>matTextSuffix</code> directives which ensure that the text is aligned with the form control.</p>
 </div><div material-docs-example="form-field-prefix-suffix"></div><div class="docs-markdown">
-
-
         <h3 id="custom-form-field-controls" class="docs-header-link">
           <span header-link="custom-form-field-controls"></span>
           Custom form field controls

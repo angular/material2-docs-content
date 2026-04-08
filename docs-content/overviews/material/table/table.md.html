@@ -11,8 +11,6 @@ the table is implemented, see the
           Getting Started
         </h3>
       </div><div material-docs-example="table-basic"></div><div class="docs-markdown">
-
-
         <h4 id="1-write-your-mat-table-and-provide-data" class="docs-header-link">
           <span header-link="1-write-your-mat-table-and-provide-data"></span>
           1. Write your mat-table and provide data
@@ -112,8 +110,6 @@ respect Typescript&#39;s restriction to only implement one base class.</p>
 generated class is <code>mat-column-NAME</code>. For example, cells in a column named &quot;symbol&quot; can be targeted with the
 selector <code>.mat-column-symbol</code>.</p>
 </div><div material-docs-example="table-column-styling"></div><div class="docs-markdown">
-
-
         <h3 id="row-templates" class="docs-header-link">
           <span header-link="row-templates"></span>
           Row Templates
@@ -121,8 +117,6 @@ selector <code>.mat-column-symbol</code>.</p>
       <p>Event handlers and property binding on the row templates will be applied to each row rendered by the table. For example,
 adding a <code>(click)</code> handler to the row template will cause each individual row to call the handler when clicked.</p>
 </div><div material-docs-example="table-row-binding"></div><div class="docs-markdown">
-
-
         <h3 id="features" class="docs-header-link">
           <span header-link="features"></span>
           Features
@@ -154,8 +148,6 @@ paginator&#39;s <code>(page)</code> output and pass the right slice of data to y
 option. In fact, the table can work with any custom pagination UI or strategy since the <code>MatTable</code>
 and its interface is not tied to any one specific implementation.</p>
 </div><div material-docs-example="table-pagination"></div><div class="docs-markdown">
-
-
         <h4 id="virtual-scrolling" class="docs-header-link">
           <span header-link="virtual-scrolling"></span>
           Virtual scrolling
@@ -170,8 +162,6 @@ element and add CSS to make the viewport scrollable.</p>
 <li>Conditional templates via the <code>when</code> input are <a href="https://github.com/angular/components/issues/32670">not supported at the moment</a>.</li>
 </ul>
 </div><div material-docs-example="table-virtual-scroll"></div><div class="docs-markdown">
-
-
         <h4 id="sorting" class="docs-header-link">
           <span header-link="sorting"></span>
           Sorting
@@ -196,9 +186,7 @@ default data accessor on the <code>MatTableDataSource</code>.</p>
 data, listen to the sort&#39;s <code>(matSortChange)</code> event and re-order your data according to the sort state.
 If you are providing a data array directly to the table, don&#39;t forget to call <code>renderRows()</code> on the
 table, since it will not automatically check the array for changes.</p>
-</div><div material-docs-example="table-sorting"></div><div class="docs-markdown">
-
-<p>For more information on using and configuring the sorting behavior, check out the
+</div><div material-docs-example="table-sorting"></div><div class="docs-markdown"><p>For more information on using and configuring the sorting behavior, check out the
 <a href="https://material.angular.dev/components/sort/overview">matSort docs</a>.</p>
 <p>The <code>MatSort</code> is one provided solution to sorting your table&#39;s data, but it is not the only option.
 In fact, the table can work with any custom sorting UI or strategy since the <code>MatTable</code> and
@@ -224,8 +212,6 @@ takes a data object and filter string and returns true if the data object is con
 <p>If you want to show a message when not data matches the filter, you can use the <code>*matNoDataRow</code>
 directive.</p>
 </div><div material-docs-example="table-filtering"></div><div class="docs-markdown">
-
-
         <h4 id="drag-and-drop" class="docs-header-link">
           <span header-link="drag-and-drop"></span>
           Drag and drop
@@ -234,8 +220,6 @@ directive.</p>
 either columns or rows.</p>
 </div><div material-docs-example="table-reorderable"></div><div class="docs-markdown">
 </div><div material-docs-example="table-drag-drop"></div><div class="docs-markdown">
-
-
         <h4 id="selection" class="docs-header-link">
           <span header-link="selection"></span>
           Selection
@@ -302,8 +286,6 @@ the ripple effect to extend beyond the cell.</p>
 <pre><code class="language-css"><span class="hljs-selector-class">.mat-column-select</span> {
   <span class="hljs-attribute">overflow</span>: initial;
 }</code></pre><!--- example(table-selection) -->
-
-
         <h4 id="footer-row" class="docs-header-link">
           <span header-link="footer-row"></span>
           Footer row
@@ -322,8 +304,6 @@ data rows.</p>
 <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">mat-header-row</span> *<span class="hljs-attr">matHeaderRowDef</span>=<span class="hljs-string">&quot;columnsToDisplay&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">mat-row</span> *<span class="hljs-attr">matRowDef</span>=<span class="hljs-string">&quot;let myRowData; columns: columnsToDisplay&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">mat-footer-row</span> *<span class="hljs-attr">matFooterRowDef</span>=<span class="hljs-string">&quot;columnsToDisplay&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span></code></pre><!--- example(table-footer-row) -->
-
-
         <h4 id="sticky-rows-and-columns" class="docs-header-link">
           <span header-link="sticky-rows-and-columns"></span>
           Sticky Rows and Columns
@@ -333,18 +313,12 @@ leave the viewport even when scrolled. The table provides inputs that will autom
 correct CSS styling so that the rows and columns become sticky.</p>
 <p>In order to fix the header row to the top of the scrolling viewport containing the table, you can
 add a <code>sticky</code> input to the <code>matHeaderRowDef</code>.</p>
-<!--- example(table-sticky-header) -->
-
-<p>Similarly, this can also be applied to the table&#39;s footer row. Note that if you are using the native
+<!--- example(table-sticky-header) --><p>Similarly, this can also be applied to the table&#39;s footer row. Note that if you are using the native
 <code>&lt;table&gt;</code> and using Safari, then the footer will only stick if <code>sticky</code> is applied to all the
 rendered footer rows.</p>
-<!--- example(table-sticky-footer) -->
-
-<p>It is also possible to fix cell columns to the start or end of the horizontally scrolling viewport.
+<!--- example(table-sticky-footer) --><p>It is also possible to fix cell columns to the start or end of the horizontally scrolling viewport.
 To do this, add the <code>sticky</code> or <code>stickyEnd</code> directive to the <code>ng-container</code> column definition.</p>
-<!--- example(table-sticky-columns) -->
-
-<p>Note that on Safari mobile when using the flex-based table, a cell stuck in more than one direction
+<!--- example(table-sticky-columns) --><p>Note that on Safari mobile when using the flex-based table, a cell stuck in more than one direction
 will struggle to stay in the correct position as you scroll. For example, if a header row is stuck
 to the top and the first column is stuck, then the top-left-most cell will appear jittery as you
 scroll.</p>
@@ -359,8 +333,6 @@ to resolve this.</p>
         </h4>
       <p>When using the <code>multiTemplateDataRows</code> directive to support multiple rows for each data object, the context of <code>*matRowDef</code> is the same except that the <code>index</code> value is replaced by <code>dataIndex</code> and <code>renderIndex</code>.</p>
 <!--- example(table-multiple-row-template) -->
-
-
         <h3 id="accessibility" class="docs-header-link">
           <span header-link="accessibility"></span>
           Accessibility
@@ -415,7 +387,5 @@ or have columns that resize themselves based on their content.</p>
 added to table rows by using the <code>MatRipple</code> directive from <code>@angular/material/core</code>. Due to
 limitations in browsers, ripples cannot be applied native <code>th</code> or <code>tr</code> elements. The recommended
 approach for setting up ripples is using the non-native <code>display: flex</code> variant of <code>MatTable</code>.</p>
-<!--- example(table-with-ripples) -->
-
-<p>More details about ripples on native table rows and their limitations can be found <a href="https://github.com/angular/components/issues/11883#issuecomment-634942981">in this issue</a>.</p>
+<!--- example(table-with-ripples) --><p>More details about ripples on native table rows and their limitations can be found <a href="https://github.com/angular/components/issues/11883#issuecomment-634942981">in this issue</a>.</p>
 </div>

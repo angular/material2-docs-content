@@ -127,9 +127,7 @@ menus. You can then apply menu directives to build your custom menu. A typical m
 </ul>
 </div><div material-docs-example="cdk-menu-standalone-menu"
                              file="cdk-menu-standalone-menu-example.html"
-                             ></div><div class="docs-markdown">
-
-<p>Most menu interactions consist of two parts: a trigger and a menu panel.</p>
+                             ></div><div class="docs-markdown"><p>Most menu interactions consist of two parts: a trigger and a menu panel.</p>
 
         <h4 id="triggers" class="docs-header-link">
           <span header-link="triggers"></span>
@@ -141,14 +139,10 @@ the template containing the menu it should open. Users can toggle the associated
 or keyboard.</p>
 </div><div material-docs-example="cdk-menu-standalone-menu"
                              file="cdk-menu-standalone-menu-example.html"
-                             region="trigger"></div><div class="docs-markdown">
-
-<p>When creating a submenu trigger, add both <code>cdkMenuItem</code> and <code>cdkMenuTriggerFor</code> like so,</p>
+                             region="trigger"></div><div class="docs-markdown"><p>When creating a submenu trigger, add both <code>cdkMenuItem</code> and <code>cdkMenuTriggerFor</code> like so,</p>
 </div><div material-docs-example="cdk-menu-menubar"
                              file="cdk-menu-menubar-example.html"
                              region="file-trigger"></div><div class="docs-markdown">
-
-
         <h4 id="menu-content" class="docs-header-link">
           <span header-link="menu-content"></span>
           Menu content
@@ -177,8 +171,6 @@ you want to serve as the menu content.</p>
 </div><div material-docs-example="cdk-menu-inline"
                              file="cdk-menu-inline-example.html"
                              ></div><div class="docs-markdown">
-
-
         <h3 id="pop-up-menus" class="docs-header-link">
           <span header-link="pop-up-menus"></span>
           Pop-up Menus
@@ -190,8 +182,6 @@ will allow the trigger to show and hide the menu content as needed.</p>
 </div><div material-docs-example="cdk-menu-standalone-menu"
                              file="cdk-menu-standalone-menu-example.html"
                              ></div><div class="docs-markdown">
-
-
         <h3 id="menu-bars" class="docs-header-link">
           <span header-link="menu-bars"></span>
           Menu Bars
@@ -202,8 +192,6 @@ bar consists of at least one <code>cdkMenuItem</code> that triggers a submenu.</
 </div><div material-docs-example="cdk-menu-menubar"
                              file="cdk-menu-menubar-example.html"
                              ></div><div class="docs-markdown">
-
-
         <h3 id="context-menus" class="docs-header-link">
           <span header-link="context-menus"></span>
           Context Menus
@@ -215,15 +203,11 @@ that it responds to the browser&#39;s native <code>contextmenu</code> event. Cus
 the cursor, similarly to native context menus.</p>
 </div><div material-docs-example="cdk-menu-context"
                              file="cdk-menu-context-example.html"
-                             ></div><div class="docs-markdown">
-
-<p>You can nest context menu container elements. Upon right-click, the menu associated with the closest
+                             ></div><div class="docs-markdown"><p>You can nest context menu container elements. Upon right-click, the menu associated with the closest
 container element will open.</p>
 </div><div material-docs-example="cdk-menu-nested-context"
                              file="cdk-menu-nested-context-example.html"
-                             region="triggers"></div><div class="docs-markdown">
-
-<p>In the example above, right-clicking on &quot;Inner context menu&quot; will open up the &quot;inner&quot; menu and
+                             region="triggers"></div><div class="docs-markdown"><p>In the example above, right-clicking on &quot;Inner context menu&quot; will open up the &quot;inner&quot; menu and
 right-clicking inside &quot;Outer context menu&quot; will open up the &quot;outer&quot; menu.</p>
 
         <h3 id="menu-items" class="docs-header-link">
@@ -234,14 +218,10 @@ right-clicking inside &quot;Outer context menu&quot; will open up the &quot;oute
 You can add a custom action to a menu item with the <code>cdkMenuItemTriggered</code> output.</p>
 </div><div material-docs-example="cdk-menu-standalone-stateful-menu"
                              file="cdk-menu-standalone-stateful-menu-example.html"
-                             region="reset-item"></div><div class="docs-markdown">
-
-<p>You can create nested menus by using a menu item as the trigger for another menu.</p>
+                             region="reset-item"></div><div class="docs-markdown"><p>You can create nested menus by using a menu item as the trigger for another menu.</p>
 </div><div material-docs-example="cdk-menu-menubar"
                              file="cdk-menu-menubar-example.html"
                              region="file-trigger"></div><div class="docs-markdown">
-
-
         <h4 id="menu-item-checkboxes" class="docs-header-link">
           <span header-link="menu-item-checkboxes"></span>
           Menu Item Checkboxes
@@ -255,8 +235,6 @@ don&#39;t bind the state it will reset when the menu is closed and re-opened.</p
 </div><div material-docs-example="cdk-menu-standalone-stateful-menu"
                              file="cdk-menu-standalone-stateful-menu-example.html"
                              region="bold-item"></div><div class="docs-markdown">
-
-
         <h4 id="menu-item-radios" class="docs-header-link">
           <span header-link="menu-item-radios"></span>
           Menu Item Radios
@@ -270,8 +248,6 @@ selection will reset when the menu is closed and reopened.</p>
 </div><div material-docs-example="cdk-menu-standalone-stateful-menu"
                              file="cdk-menu-standalone-stateful-menu-example.html"
                              region="size-items"></div><div class="docs-markdown">
-
-
         <h4 id="groups" class="docs-header-link">
           <span header-link="groups"></span>
           Groups
@@ -284,8 +260,6 @@ can have the checked state.</p>
 </div><div material-docs-example="cdk-menu-standalone-stateful-menu"
                              file="cdk-menu-standalone-stateful-menu-example.html"
                              ></div><div class="docs-markdown">
-
-
         <h3 id="smart-menu-aim" class="docs-header-link">
           <span header-link="smart-menu-aim"></span>
           Smart Menu Aim
@@ -315,6 +289,4 @@ in the <a href="https://www.w3.org/TR/wai-aria-practices-1.1/#menu" title="ARIA 
 layouts and opened appropriately. You should however add any necessary CSS styles. Menu items should
 always have meaningful labels, whether through text content, <code>aria-label</code>, or <code>aria-labelledby</code>.
 Finally, keyboard interaction is supported as defined in the <a href="https://www.w3.org/TR/wai-aria-practices-1.1/#keyboard-interaction-12" title="ARIA Menubar Keyboard Interaction">ARIA menubar keyboard interaction spec</a>.</p>
-<!-- links -->
-
-</div>
+<!-- links --></div>

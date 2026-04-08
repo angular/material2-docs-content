@@ -2,9 +2,7 @@
 .docs-markdown pre {
   margin: 24px;
 }
-</style>
-
-<h1>Theming your components</h1><p>Angular Material provides two approaches to styling custom components to match the application&#39;s
+</style><h1>Theming your components</h1><p>Angular Material provides two approaches to styling custom components to match the application&#39;s
 theme:</p>
 <ul>
 <li><strong>CSS variables</strong> included by <code>mat.theme()</code>. These are prefixed with <code>--mat-sys</code> and can be used
@@ -35,9 +33,7 @@ about its use and purpose.</p>
 also makes it easy to ensure your application can correctly handle both light and dark mode
 automatically.</p>
 <details>
-  <summary>Expand to view all available color system tokens</summary>
-
-<pre><code class="language-css"><span class="hljs-comment">/* Primary */</span>
+  <summary>Expand to view all available color system tokens</summary><pre><code class="language-css"><span class="hljs-comment">/* Primary */</span>
 <span class="hljs-attr">--mat-sys-primary</span>
 <span class="hljs-attr">--mat-sys-on-primary</span>
 <span class="hljs-attr">--mat-sys-primary-container</span>
@@ -99,15 +95,11 @@ automatically.</p>
 <span class="hljs-attr">--mat-sys-outline-variant</span>
 <span class="hljs-attr">--mat-sys-scrim</span>
 <span class="hljs-attr">--mat-sys-shadow</span></code></pre></details>
-
-
         <h3 id="background" class="docs-header-link">
           <span header-link="background"></span>
           Background
         </h3>
-      <h4>Primary</h4>
-
-<p>A primary background is useful for key components across the UI, such as buttons that have greater
+      <h4>Primary</h4><p>A primary background is useful for key components across the UI, such as buttons that have greater
 importance on the page. In Angular Material, this is used for the selected date in a datepicker, the
 handle of a slider, and the background of a checkbox.</p>
 <p>Text and icons should use the <code>on-primary</code> system color token ensure good contrast and
@@ -116,19 +108,13 @@ accessibility (see <a href="#text">Text</a> below).</p>
 .mat-bg-primary {
   background-color: var(--mat-sys-primary);
 }
-</pre>
-
-<p>A primary container color background is useful for filling components that should stand out on a
+</pre><p>A primary container color background is useful for filling components that should stand out on a
 surface. In Angular Material, this is used for the container of a floating action button.</p>
 <pre class="mat-bg-primary-container mat-text-on-primary-container">
 .mat-bg-primary-container {
   background-color: var(--mat-sys-primary-container);
 }
-</pre>
-
-<h4>Secondary</h4>
-
-<p>A secondary background is useful for less prominent components in the UI that have a different color
+</pre><h4>Secondary</h4><p>A secondary background is useful for less prominent components in the UI that have a different color
 scheme than the primary.</p>
 <p>Text and icons should use the <code>on-secondary</code> system color token ensure good contrast and
 accessibility (see <a href="#text">Text</a> below).</p>
@@ -136,20 +122,14 @@ accessibility (see <a href="#text">Text</a> below).</p>
 .mat-bg-secondary {
   background-color: var(--mat-sys-secondary);
 }
-</pre>
-
-<p>A secondary container color background is useful for components that need less emphasis than
+</pre><p>A secondary container color background is useful for components that need less emphasis than
 secondary, such as filter chips. In Angular Material, this is used for selected items in a list and
 the container of a tonal button.</p>
 <pre class="mat-bg-secondary-container mat-text-on-secondary-container">
 .mat-bg-secondary-container {
   background-color: var(--mat-sys-secondary-container);
 }
-</pre>
-
-<h4>Error</h4>
-
-<p>An error background is useful for indicating an error state, such as an invalid text field, or for
+</pre><h4>Error</h4><p>An error background is useful for indicating an error state, such as an invalid text field, or for
 the background of an important notification. In Angular Material, this is used for the background of
 a badge.</p>
 <p>Text and icons should use the <code>on-error</code> system color token ensure good contrast and accessibility (
@@ -158,19 +138,13 @@ see <a href="#text">Text</a> below).</p>
 .mat-bg-error {
   background-color: var(--mat-sys-error);
 }
-</pre>
-
-<p>An error container color background is useful for components that need less emphasis than error,
+</pre><p>An error container color background is useful for components that need less emphasis than error,
 such as a container for error text.</p>
 <pre class="mat-bg-error-container mat-text-on-error-container">
 .mat-bg-error-container {
   background-color: var(--mat-sys-error-container);
 }
-</pre>
-
-<h4>Surfaces</h4>
-
-<p>When using surface backgrounds, text and icons should use the <code>on-surface</code> or <code>on-surface-variant</code>
+</pre><h4>Surfaces</h4><p>When using surface backgrounds, text and icons should use the <code>on-surface</code> or <code>on-surface-variant</code>
 system color tokens ensure good contrast and accessibility (see <a href="#text">Text</a> below).</p>
 <p>A surface background is useful for general surfaces of components. In Angular Material, this is used
 for the background of many components, like tables, dialogs, menus, and toolbars.</p>
@@ -178,59 +152,45 @@ for the background of many components, like tables, dialogs, menus, and toolbars
 .mat-bg-surface {
   background-color: var(--mat-sys-surface);
 }
-</pre>
-
-<p>A surface variant background is useful for surfaces that need to stand out from the main surface
+</pre><p>A surface variant background is useful for surfaces that need to stand out from the main surface
 color. In Angular Material, this is used for the background of a filled form field and the track of
 a progress bar.</p>
 <pre class="mat-bg-surface-variant mat-text-on-surface">
 .mat-bg-surface-variant {
   background-color: var(--mat-sys-surface-variant);
 }
-</pre>
-
-<p>The &quot;highest&quot; surface container background is useful for surfaces that need the most emphasis
+</pre><p>The &quot;highest&quot; surface container background is useful for surfaces that need the most emphasis
 against the main surface color. In Angular Material, this is used for the background of a filled
 card.</p>
 <pre class="mat-bg-surface-container-highest mat-text-on-surface">
 .mat-bg-surface-container-highest {
   background-color: var(--mat-sys-surface-container-highest);
 }
-</pre>
-
-<p>A &quot;high&quot; surface container background is useful for surfaces that need more emphasis against the
+</pre><p>A &quot;high&quot; surface container background is useful for surfaces that need more emphasis against the
 main surface color. In Angular Material, this is used for the background of a datepicker.</p>
 <pre class="mat-bg-surface-container-high mat-text-on-surface">
 .mat-bg-surface-container-high {
   background-color: var(--mat-sys-surface-container-high);
 }
-</pre>
-
-<p>A surface container background is useful for surfaces that need to stand out from the main surface
+</pre><p>A surface container background is useful for surfaces that need to stand out from the main surface
 color. In Angular Material, this is used for the background of a menu.</p>
 <pre class="mat-bg-surface-container mat-text-on-surface">
 .mat-bg-surface-container {
   background-color: var(--mat-sys-surface-container);
 }
-</pre>
-
-<p>A &quot;low&quot; surface container background is useful for surfaces that need less emphasis against the main
+</pre><p>A &quot;low&quot; surface container background is useful for surfaces that need less emphasis against the main
 surface color. In Angular Material, this is used for the background of a bottom sheet.</p>
 <pre class="mat-bg-surface-container-low mat-text-on-surface">
 .mat-bg-surface-container-low {
   background-color: var(--mat-sys-surface-container-low);
 }
-</pre>
-
-<p>The &quot;lowest&quot; surface container background is useful for surfaces that need the least emphasis
+</pre><p>The &quot;lowest&quot; surface container background is useful for surfaces that need the least emphasis
 against the main surface color.</p>
 <pre class="mat-bg-surface-container-lowest mat-text-on-surface">
 .mat-bg-surface-container-lowest {
   background-color: var(--mat-sys-surface-container-lowest);
 }
-</pre>
-
-<p>An inverse surface color background is useful for making elements stand out against the default
+</pre><p>An inverse surface color background is useful for making elements stand out against the default
 color scheme. It is good for temporary notifications that appear above your content. In Angular
 Material, this is used for the background of a snackbar and a tooltip.</p>
 <p>When using the inverse surface background, text and icons should use the <code>inverse-on-surface</code> system
@@ -239,11 +199,7 @@ color token ensure good contrast and accessibility (see <a href="#text">Text</a>
 .mat-bg-inverse-surface {
   background-color: var(--mat-sys-inverse-surface);
 }
-</pre>
-
-<h4>Disabled</h4>
-
-<p>A disabled color background is useful for disabled components. In Angular Material, this is used for
+</pre><h4>Disabled</h4><p>A disabled color background is useful for disabled components. In Angular Material, this is used for
 components generally filled with the primary color but are currently disabled.</p>
 <p>In Angular Material, text and icons often use a 38% color mix of the surface color to strongly
 convey
@@ -253,164 +209,84 @@ the disabled state. This is described with the <code>mat-text-disabled</code> cl
   background-color: color-mix(in srgb, var(--mat-sys-on-surface) 12%, transparent);
 }
 </pre>
-
-
         <h3 id="text" class="docs-header-link">
           <span header-link="text"></span>
           Text
         </h3>
-      <h4>Primary</h4>
-
-<p>Use the primary color for text that needs to stand out. In Angular Material, this is used for the
+      <h4>Primary</h4><p>Use the primary color for text that needs to stand out. In Angular Material, this is used for the
 text of a text button and the selected tab label.</p>
 <pre>
 .mat-text-primary {
   color: var(--mat-sys-primary);
 }
-</pre>
-
-<pre class="mat-text-primary mat-corner-sm mat-border mat-bg-surface-container-low">Example text: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</pre>
-
-<h4>Secondary</h4>
-
-<p>Use the secondary color for text that needs to stand out apart from the main theme color.</p>
+</pre><pre class="mat-text-primary mat-corner-sm mat-border mat-bg-surface-container-low">Example text: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</pre><h4>Secondary</h4><p>Use the secondary color for text that needs to stand out apart from the main theme color.</p>
 <pre>
 .mat-text-secondary {
   color: var(--mat-sys-secondary);
 }
-</pre>
-
-<pre class="mat-text-secondary mat-corner-sm mat-border mat-bg-surface-container-low">Example text: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</pre>
-
-<h4>Error</h4>
-
-<p>Use the error color for text that indicates an issue or warning, such as validation messages. In
+</pre><pre class="mat-text-secondary mat-corner-sm mat-border mat-bg-surface-container-low">Example text: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</pre><h4>Error</h4><p>Use the error color for text that indicates an issue or warning, such as validation messages. In
 Angular Material, this is used for the error text in a form field.</p>
 <pre>
 .mat-text-error {
   color: var(--mat-sys-error);
 }
-</pre>
-
-<pre class="mat-text-error mat-corner-sm mat-border mat-bg-surface-container-low">Example text: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</pre>
-
-<h4>Disabled</h4>
-
-<p>Use the disabled text color for elements that are disabled on either the disabled or surface
+</pre><pre class="mat-text-error mat-corner-sm mat-border mat-bg-surface-container-low">Example text: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</pre><h4>Disabled</h4><p>Use the disabled text color for elements that are disabled on either the disabled or surface
 background.</p>
 <pre>
 .mat-text-disabled {
   color: color-mix(in srgb, var(--mat-sys-on-surface) 38%, transparent);
 }
-</pre>
-
-<pre class="mat-text-disabled mat-corner-sm mat-border mat-bg-surface-container-low">Example text: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</pre>
-
-<h4>On Surface Variant</h4>
-
-<p>Use the on-surface-variant color for text that should have a lower emphasis than the surrounding
+</pre><pre class="mat-text-disabled mat-corner-sm mat-border mat-bg-surface-container-low">Example text: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</pre><h4>On Surface Variant</h4><p>Use the on-surface-variant color for text that should have a lower emphasis than the surrounding
 text. This can include subheading, captions, and hint text.</p>
 <pre>
 .mat-text-on-surface-variant {
   color: var(--mat-sys-on-surface-variant);
 }
-</pre>
-
-<pre class="mat-text-on-surface-variant mat-corner-sm mat-border mat-bg-surface-container-low">Example text: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</pre>
-
-<h4>On Primary</h4>
-
-<p>Use the on-primary color for text and icons appearing on primary backgrounds to ensure good contrast
+</pre><pre class="mat-text-on-surface-variant mat-corner-sm mat-border mat-bg-surface-container-low">Example text: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</pre><h4>On Primary</h4><p>Use the on-primary color for text and icons appearing on primary backgrounds to ensure good contrast
 and accessibility.</p>
 <pre>
 .mat-text-on-primary {
   color: var(--mat-sys-on-primary);
 }
-</pre>
-
-<pre class="mat-text-on-primary mat-bg-primary mat-corner-sm mat-border">Example text: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</pre>
-
-<h4>On Primary Container</h4>
-
-<p>Use the on-primary-container color for text and icons appearing on primary-container backgrounds to
+</pre><pre class="mat-text-on-primary mat-bg-primary mat-corner-sm mat-border">Example text: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</pre><h4>On Primary Container</h4><p>Use the on-primary-container color for text and icons appearing on primary-container backgrounds to
 ensure good contrast and accessibility.</p>
 <pre>
 .mat-text-on-primary-container {
   color: var(--mat-sys-on-primary-container);
 }
-</pre>
-
-<pre class="mat-text-on-primary-container mat-bg-primary-container mat-corner-sm mat-border">Example text: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</pre>
-
-<h4>On Secondary</h4>
-
-<p>Use the on-secondary color for text and icons appearing on secondary backgrounds to ensure good
+</pre><pre class="mat-text-on-primary-container mat-bg-primary-container mat-corner-sm mat-border">Example text: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</pre><h4>On Secondary</h4><p>Use the on-secondary color for text and icons appearing on secondary backgrounds to ensure good
 contrast and accessibility.</p>
 <pre>
 .mat-text-on-secondary {
   color: var(--mat-sys-on-secondary);
 }
-</pre>
-
-<pre class="mat-text-on-secondary mat-bg-secondary mat-corner-sm mat-border">Example text: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</pre>
-
-<h4>On Secondary Container</h4>
-
-<p>Use the on-secondary-container color for text that contrasts well against a secondary-container
+</pre><pre class="mat-text-on-secondary mat-bg-secondary mat-corner-sm mat-border">Example text: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</pre><h4>On Secondary Container</h4><p>Use the on-secondary-container color for text that contrasts well against a secondary-container
 background.</p>
 <pre>
 .mat-text-on-secondary-container {
   color: var(--mat-sys-on-secondary-container);
 }
-</pre>
-
-<pre class="mat-text-on-secondary-container mat-bg-secondary-container mat-corner-sm mat-border">Example text: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</pre>
-
-<h4>On Error</h4>
-
-<p>Use the on-error color for text that contrasts well against an error background.</p>
+</pre><pre class="mat-text-on-secondary-container mat-bg-secondary-container mat-corner-sm mat-border">Example text: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</pre><h4>On Error</h4><p>Use the on-error color for text that contrasts well against an error background.</p>
 <pre>
 .mat-text-on-error {
   color: var(--mat-sys-on-error);
 }
-</pre>
-
-<pre class="mat-text-on-error mat-bg-error mat-corner-sm mat-border">Example text: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</pre>
-
-<h4>On Error Container</h4>
-
-<p>Use the on-error-container color for text that contrasts well against an error-container background.</p>
+</pre><pre class="mat-text-on-error mat-bg-error mat-corner-sm mat-border">Example text: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</pre><h4>On Error Container</h4><p>Use the on-error-container color for text that contrasts well against an error-container background.</p>
 <pre>
 .mat-text-on-error-container {
   color: var(--mat-sys-on-error-container);
 }
-</pre>
-
-<pre class="mat-text-on-error-container mat-bg-error-container mat-corner-sm mat-border">Example text: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</pre>
-
-<h4>On Surface</h4>
-
-<p>Use the on-surface color for text that contrasts well against a surface background.</p>
+</pre><pre class="mat-text-on-error-container mat-bg-error-container mat-corner-sm mat-border">Example text: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</pre><h4>On Surface</h4><p>Use the on-surface color for text that contrasts well against a surface background.</p>
 <pre>
 .mat-text-on-surface {
   color: var(--mat-sys-on-surface);
 }
-</pre>
-
-<pre class="mat-text-on-surface mat-bg-surface mat-corner-sm mat-border">Example text: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</pre>
-
-<h4>Inverse On Surface</h4>
-
-<p>Use the inverse-on-surface color for text that contrasts well against an inverse-surface background.</p>
+</pre><pre class="mat-text-on-surface mat-bg-surface mat-corner-sm mat-border">Example text: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</pre><h4>Inverse On Surface</h4><p>Use the inverse-on-surface color for text that contrasts well against an inverse-surface background.</p>
 <pre>
 .mat-text-inverse-on-surface {
   color: var(--mat-sys-inverse-on-surface);
 }
-</pre>
-
-<pre class="mat-text-inverse-on-surface mat-bg-inverse-surface mat-corner-sm mat-border">Example text: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</pre>
-
-
+</pre><pre class="mat-text-inverse-on-surface mat-bg-inverse-surface mat-corner-sm mat-border">Example text: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</pre>
         <h2 id="typography" class="docs-header-link">
           <span header-link="typography"></span>
           Typography
@@ -420,9 +296,7 @@ Each category has three sizes: small, medium, and large. Learn more about how th
 their sizes should be used in your application by visiting Material
 Design&#39;s <a href="https://m3.material.io/styles/typography/applying-type">Applying Type</a> documentation.</p>
 <details>
-  <summary>Expand to view all available typography system tokens</summary>
-
-<pre><code class="language-css"><span class="hljs-attr">--mat-sys-body-large</span>
+  <summary>Expand to view all available typography system tokens</summary><pre><code class="language-css"><span class="hljs-attr">--mat-sys-body-large</span>
 <span class="hljs-attr">--mat-sys-body-large-font</span>
 <span class="hljs-attr">--mat-sys-body-large-line-height</span>
 <span class="hljs-attr">--mat-sys-body-large-size</span>
@@ -527,184 +401,107 @@ Design&#39;s <a href="https://m3.material.io/styles/typography/applying-type">Ap
 <span class="hljs-attr">--mat-sys-title-small-line-height</span>
 <span class="hljs-attr">--mat-sys-title-small-size</span>
 <span class="hljs-attr">--mat-sys-title-small-tracking</span>
-<span class="hljs-attr">--mat-sys-title-small-weight</span></code></pre></details>
-
-<h3> Body </h3>
-
-
-<p>The small body typeface is useful for captions. In Angular Material, this is used for the subscript
+<span class="hljs-attr">--mat-sys-title-small-weight</span></code></pre></details><h3> Body </h3><p>The small body typeface is useful for captions. In Angular Material, this is used for the subscript
 text in a form field and the text in a paginator.</p>
 <pre>
 .mat-font-body-sm {
   font: var(--mat-sys-body-small);
   letter-spacing: var(--mat-sys-body-small-tracking);
 }
-</pre>
-
-<pre class="mat-font-body-sm mat-corner-sm mat-border mat-bg-surface-container-low">Example text: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</pre>
-
-<p>The medium body typeface is the default body font. In Angular Material, this is used for the text in
+</pre><pre class="mat-font-body-sm mat-corner-sm mat-border mat-bg-surface-container-low">Example text: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</pre><p>The medium body typeface is the default body font. In Angular Material, this is used for the text in
 a table row and the supporting text in a dialog.</p>
 <pre>
 .mat-font-body-md {
   font: var(--mat-sys-body-medium);
   letter-spacing: var(--mat-sys-body-medium-tracking);
 }
-</pre>
-
-<pre class="mat-font-body-md mat-corner-sm mat-border mat-bg-surface-container-low">Example text: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</pre>
-
-<p>The large body typeface is useful for an introductory paragraph. In Angular Material, this is used
+</pre><pre class="mat-font-body-md mat-corner-sm mat-border mat-bg-surface-container-low">Example text: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</pre><p>The large body typeface is useful for an introductory paragraph. In Angular Material, this is used
 for the text in a list item and the text in a select trigger.</p>
 <pre>
 .mat-font-body-lg {
   font: var(--mat-sys-body-large);
   letter-spacing: var(--mat-sys-body-large-tracking);
 }
-</pre>
-
-<pre class="mat-font-body-lg mat-corner-sm mat-border mat-bg-surface-container-low">Example text: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</pre>
-
-<h3> Display </h3>
-
-
-<p>The small display typeface is useful for short, important text or numerals, such as in hero sections
+</pre><pre class="mat-font-body-lg mat-corner-sm mat-border mat-bg-surface-container-low">Example text: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</pre><h3> Display </h3><p>The small display typeface is useful for short, important text or numerals, such as in hero sections
 or for marking key information.</p>
 <pre>
 .mat-font-display-sm {
   font: var(--mat-sys-display-small);
   letter-spacing: var(--mat-sys-display-small-tracking);
 }
-</pre>
-
-<pre class="mat-font-display-sm mat-corner-sm mat-border mat-bg-surface-container-low">Example text: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</pre>
-
-<p>The medium display typeface is useful for short, impactful text in hero sections or titles on larger
+</pre><pre class="mat-font-display-sm mat-corner-sm mat-border mat-bg-surface-container-low">Example text: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</pre><p>The medium display typeface is useful for short, impactful text in hero sections or titles on larger
 screens.</p>
 <pre>
 .mat-font-display-md {
   font: var(--mat-sys-display-medium);
   letter-spacing: var(--mat-sys-display-medium-tracking);
 }
-</pre>
-
-<pre class="mat-font-display-md mat-corner-sm mat-border mat-bg-surface-container-low">Example text: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</pre>
-
-<p>The large display typeface is useful for short, high-emphasis text in hero sections or titles on
+</pre><pre class="mat-font-display-md mat-corner-sm mat-border mat-bg-surface-container-low">Example text: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</pre><p>The large display typeface is useful for short, high-emphasis text in hero sections or titles on
 larger screens, providing the most visual weight.</p>
 <pre>
 .mat-font-display-lg {
   font: var(--mat-sys-display-large);
   letter-spacing: var(--mat-sys-display-large-tracking);
 }
-</pre>
-
-<pre class="mat-font-display-lg mat-corner-sm mat-border mat-bg-surface-container-low">Example text: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</pre>
-
-<h3> Headline </h3>
-
-
-<p>The small headline typeface is useful for a page title. In Angular Material, this is used for the
+</pre><pre class="mat-font-display-lg mat-corner-sm mat-border mat-bg-surface-container-low">Example text: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</pre><h3> Headline </h3><p>The small headline typeface is useful for a page title. In Angular Material, this is used for the
 headline in a dialog.</p>
 <pre>
 .mat-font-headline-sm {
   font: var(--mat-sys-headline-small);
   letter-spacing: var(--mat-sys-headline-small-tracking);
 }
-</pre>
-
-<pre class="mat-font-headline-sm mat-corner-sm mat-border mat-bg-surface-container-low">Example text: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</pre>
-
-<p>The medium headline typeface is useful for a section title.</p>
+</pre><pre class="mat-font-headline-sm mat-corner-sm mat-border mat-bg-surface-container-low">Example text: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</pre><p>The medium headline typeface is useful for a section title.</p>
 <pre>
 .mat-font-headline-md {
   font: var(--mat-sys-headline-medium);
   letter-spacing: var(--mat-sys-headline-medium-tracking);
 }
-</pre>
-
-<pre class="mat-font-headline-md mat-corner-sm mat-border mat-bg-surface-container-low">Example text: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</pre>
-
-<p>The large headline typeface is useful for a page title on a large screen.</p>
+</pre><pre class="mat-font-headline-md mat-corner-sm mat-border mat-bg-surface-container-low">Example text: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</pre><p>The large headline typeface is useful for a page title on a large screen.</p>
 <pre>
 .mat-font-headline-lg {
   font: var(--mat-sys-headline-large);
   letter-spacing: var(--mat-sys-headline-large-tracking);
 }
-</pre>
-
-<pre class="mat-font-headline-lg mat-corner-sm mat-border mat-bg-surface-container-low">Example text: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</pre>
-
-<h3> Label </h3>
-
-
-<p>The small label typeface is useful for text in a badge.</p>
+</pre><pre class="mat-font-headline-lg mat-corner-sm mat-border mat-bg-surface-container-low">Example text: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</pre><h3> Label </h3><p>The small label typeface is useful for text in a badge.</p>
 <pre>
 .mat-font-label-sm {
   font: var(--mat-sys-label-small);
   letter-spacing: var(--mat-sys-label-small-tracking);
 }
-</pre>
-
-<pre class="mat-font-label-sm mat-corner-sm mat-border mat-bg-surface-container-low">Example text: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</pre>
-
-<p>The medium label typeface is useful for the slider label.</p>
+</pre><pre class="mat-font-label-sm mat-corner-sm mat-border mat-bg-surface-container-low">Example text: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</pre><p>The medium label typeface is useful for the slider label.</p>
 <pre>
 .mat-font-label-md {
   font: var(--mat-sys-label-medium);
   letter-spacing: var(--mat-sys-label-medium-tracking);
 }
-</pre>
-
-<pre class="mat-font-label-md mat-corner-sm mat-border mat-bg-surface-container-low">Example text: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</pre>
-
-<p>The large label typeface is useful for buttons, chips, and menu labels.</p>
+</pre><pre class="mat-font-label-md mat-corner-sm mat-border mat-bg-surface-container-low">Example text: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</pre><p>The large label typeface is useful for buttons, chips, and menu labels.</p>
 <pre>
 .mat-font-label-lg {
   font: var(--mat-sys-label-large);
   letter-spacing: var(--mat-sys-label-large-tracking);
 }
-</pre>
-
-<pre class="mat-font-label-lg mat-corner-sm mat-border mat-bg-surface-container-low">Example text: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</pre>
-
-<h3> Title </h3>
-
-
-<p>The small title typeface is useful for a card title. In Angular Material, this is used for the
+</pre><pre class="mat-font-label-lg mat-corner-sm mat-border mat-bg-surface-container-low">Example text: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</pre><h3> Title </h3><p>The small title typeface is useful for a card title. In Angular Material, this is used for the
 header of a table and the label of an option group.</p>
 <pre>
 .mat-font-title-sm {
   font: var(--mat-sys-title-small);
   letter-spacing: var(--mat-sys-title-small-tracking);
 }
-</pre>
-
-<pre class="mat-font-title-sm mat-corner-sm mat-border mat-bg-surface-container-low">Example text: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</pre>
-
-<p>The medium title typeface is useful for a dialog title or the primary text in a list item. In
+</pre><pre class="mat-font-title-sm mat-corner-sm mat-border mat-bg-surface-container-low">Example text: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</pre><p>The medium title typeface is useful for a dialog title or the primary text in a list item. In
 Angular Material, this is used for the subtitle of a card and the header of an expansion panel.</p>
 <pre>
 .mat-font-title-md {
   font: var(--mat-sys-title-medium);
   letter-spacing: var(--mat-sys-title-medium-tracking);
 }
-</pre>
-
-<pre class="mat-font-title-md mat-corner-sm mat-border mat-bg-surface-container-low">Example text: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</pre>
-
-<p>The large title typeface is useful for a page title on a small screen. In Angular Material, this is
+</pre><pre class="mat-font-title-md mat-corner-sm mat-border mat-bg-surface-container-low">Example text: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</pre><p>The large title typeface is useful for a page title on a small screen. In Angular Material, this is
 used for the title of a card and the title of a toolbar.</p>
 <pre>
 .mat-font-title-lg {
   font: var(--mat-sys-title-large);
   letter-spacing: var(--mat-sys-title-large-tracking);
 }
-</pre>
-
-<pre class="mat-font-title-lg mat-corner-sm mat-border mat-bg-surface-container-low">Example text: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</pre>
-
-
+</pre><pre class="mat-font-title-lg mat-corner-sm mat-border mat-bg-surface-container-low">Example text: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</pre>
         <h2 id="shape" class="docs-header-link">
           <span header-link="shape"></span>
           Shape
@@ -717,9 +514,7 @@ documentation to learn more.</p>
 demonstrate the levels of roundness. Their border sizes are increased to <code>2px</code> to clearly show the
 border radii.</p>
 <details>
-  <summary>Expand to view all available corner shape system tokens</summary>
-
-<pre><code class="language-css"><span class="hljs-attr">--mat-sys-corner-extra-large</span>: <span class="hljs-number">28px</span>;
+  <summary>Expand to view all available corner shape system tokens</summary><pre><code class="language-css"><span class="hljs-attr">--mat-sys-corner-extra-large</span>: <span class="hljs-number">28px</span>;
 <span class="hljs-attr">--mat-sys-corner-extra-large-top</span>: <span class="hljs-number">28px</span> <span class="hljs-number">28px</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span>;
 <span class="hljs-attr">--mat-sys-corner-extra-small</span>: <span class="hljs-number">4px</span>;
 <span class="hljs-attr">--mat-sys-corner-extra-small-top</span>: <span class="hljs-number">4px</span> <span class="hljs-number">4px</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span>;
@@ -730,9 +525,7 @@ border radii.</p>
 <span class="hljs-attr">--mat-sys-corner-large-top</span>: <span class="hljs-number">16px</span> <span class="hljs-number">16px</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span>;
 <span class="hljs-attr">--mat-sys-corner-medium</span>: <span class="hljs-number">12px</span>;
 <span class="hljs-attr">--mat-sys-corner-none</span>: <span class="hljs-number">0</span>;
-<span class="hljs-attr">--mat-sys-corner-small</span>: <span class="hljs-number">8px</span>;</code></pre></details>
-
-<p>The extra small border radius is useful for components that need a small amount of rounding, such as
+<span class="hljs-attr">--mat-sys-corner-small</span>: <span class="hljs-number">8px</span>;</code></pre></details><p>The extra small border radius is useful for components that need a small amount of rounding, such as
 a chip. In Angular Material, this is used for the shape of a snackbar and a tooltip.</p>
 <pre class="mat-border mat-bg-surface-container-low" style="border-width: 2px; border-radius: var(--mat-sys-corner-extra-small);">
 .mat-corner-xs {
@@ -774,8 +567,6 @@ Material, this is used for the shape of a badge and the shape of a button.</p>
   border-radius: var(--mat-sys-corner-full);
 }
 </pre>
-
-
         <h2 id="elevation" class="docs-header-link">
           <span header-link="elevation"></span>
           Elevation
@@ -783,83 +574,57 @@ Material, this is used for the shape of a badge and the shape of a button.</p>
       <p>Material Design uses borders and shadows to create a sense of depth and hierarchy in the UI. See
 Material Design&#39;s <a href="https://m3.material.io/styles/elevation/applying-elevation">Applying Elevation</a>
 documentation to learn more.</p>
-<h3> Border </h3>
-
-<details>
-  <summary>Expand to view the outline system tokens</summary>
-
-<pre><code class="language-css"><span class="hljs-attr">--mat-sys-outline</span>
-<span class="hljs-attr">--mat-sys-outline-variant</span></code></pre></details>
-
-<p>The Material Design border is useful for components that need a visible boundary. In Angular
+<h3> Border </h3><details>
+  <summary>Expand to view the outline system tokens</summary><pre><code class="language-css"><span class="hljs-attr">--mat-sys-outline</span>
+<span class="hljs-attr">--mat-sys-outline-variant</span></code></pre></details><p>The Material Design border is useful for components that need a visible boundary. In Angular
 Material, this is used for the outline of an outlined button.</p>
 <pre class="mat-bg-surface-container-low" style="border: 1px solid var(--mat-sys-outline);">
 .mat-border {
   border: 1px solid var(--mat-sys-outline);
 }
-</pre>
-
-<p>The subtle outline variant is useful for components that need a less obvious boundary. In Angular
+</pre><p>The subtle outline variant is useful for components that need a less obvious boundary. In Angular
 Material, this is used for the outline of an outlined card and the color of the divider.</p>
 <pre class="mat-bg-surface-container-low" style="border: 1px solid var(--mat-sys-outline-variant);">
 .mat-border-subtle {
   border: 1px solid var(--mat-sys-outline-variant);
 }
-</pre>
-
-<h3> Shadow </h3>
-
-<details>
-  <summary>Expand to view all available elevation system tokens</summary>
-
-<pre><code class="language-css"><span class="hljs-attr">--mat-sys-level0</span>: <span class="hljs-number">0px</span> <span class="hljs-number">0px</span> <span class="hljs-number">0px</span> <span class="hljs-number">0px</span> <span class="hljs-built_in">rgba</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, .<span class="hljs-number">2</span>), <span class="hljs-number">0px</span> <span class="hljs-number">0px</span> <span class="hljs-number">0px</span> <span class="hljs-number">0px</span> <span class="hljs-built_in">rgba</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, .<span class="hljs-number">14</span>), <span class="hljs-number">0px</span> <span class="hljs-number">0px</span> <span class="hljs-number">0px</span> <span class="hljs-number">0px</span> <span class="hljs-built_in">rgba</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, .<span class="hljs-number">12</span>);
+</pre><h3> Shadow </h3><details>
+  <summary>Expand to view all available elevation system tokens</summary><pre><code class="language-css"><span class="hljs-attr">--mat-sys-level0</span>: <span class="hljs-number">0px</span> <span class="hljs-number">0px</span> <span class="hljs-number">0px</span> <span class="hljs-number">0px</span> <span class="hljs-built_in">rgba</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, .<span class="hljs-number">2</span>), <span class="hljs-number">0px</span> <span class="hljs-number">0px</span> <span class="hljs-number">0px</span> <span class="hljs-number">0px</span> <span class="hljs-built_in">rgba</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, .<span class="hljs-number">14</span>), <span class="hljs-number">0px</span> <span class="hljs-number">0px</span> <span class="hljs-number">0px</span> <span class="hljs-number">0px</span> <span class="hljs-built_in">rgba</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, .<span class="hljs-number">12</span>);
 <span class="hljs-attr">--mat-sys-level1</span>: <span class="hljs-number">0px</span> <span class="hljs-number">2px</span> <span class="hljs-number">1px</span> -<span class="hljs-number">1px</span> <span class="hljs-built_in">rgba</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, .<span class="hljs-number">2</span>), <span class="hljs-number">0px</span> <span class="hljs-number">1px</span> <span class="hljs-number">1px</span> <span class="hljs-number">0px</span> <span class="hljs-built_in">rgba</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, .<span class="hljs-number">14</span>), <span class="hljs-number">0px</span> <span class="hljs-number">1px</span> <span class="hljs-number">3px</span> <span class="hljs-number">0px</span> <span class="hljs-built_in">rgba</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, .<span class="hljs-number">12</span>);
 <span class="hljs-attr">--mat-sys-level2</span>: <span class="hljs-number">0px</span> <span class="hljs-number">3px</span> <span class="hljs-number">3px</span> -<span class="hljs-number">2px</span> <span class="hljs-built_in">rgba</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, .<span class="hljs-number">2</span>), <span class="hljs-number">0px</span> <span class="hljs-number">3px</span> <span class="hljs-number">4px</span> <span class="hljs-number">0px</span> <span class="hljs-built_in">rgba</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, .<span class="hljs-number">14</span>), <span class="hljs-number">0px</span> <span class="hljs-number">1px</span> <span class="hljs-number">8px</span> <span class="hljs-number">0px</span> <span class="hljs-built_in">rgba</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, .<span class="hljs-number">12</span>);
 <span class="hljs-attr">--mat-sys-level3</span>: <span class="hljs-number">0px</span> <span class="hljs-number">3px</span> <span class="hljs-number">5px</span> -<span class="hljs-number">1px</span> <span class="hljs-built_in">rgba</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, .<span class="hljs-number">2</span>), <span class="hljs-number">0px</span> <span class="hljs-number">6px</span> <span class="hljs-number">10px</span> <span class="hljs-number">0px</span> <span class="hljs-built_in">rgba</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, .<span class="hljs-number">14</span>), <span class="hljs-number">0px</span> <span class="hljs-number">1px</span> <span class="hljs-number">18px</span> <span class="hljs-number">0px</span> <span class="hljs-built_in">rgba</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, .<span class="hljs-number">12</span>);
 <span class="hljs-attr">--mat-sys-level4</span>: <span class="hljs-number">0px</span> <span class="hljs-number">5px</span> <span class="hljs-number">5px</span> -<span class="hljs-number">3px</span> <span class="hljs-built_in">rgba</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, .<span class="hljs-number">2</span>), <span class="hljs-number">0px</span> <span class="hljs-number">8px</span> <span class="hljs-number">10px</span> <span class="hljs-number">1px</span> <span class="hljs-built_in">rgba</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, .<span class="hljs-number">14</span>), <span class="hljs-number">0px</span> <span class="hljs-number">3px</span> <span class="hljs-number">14px</span> <span class="hljs-number">2px</span> <span class="hljs-built_in">rgba</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, .<span class="hljs-number">12</span>);
-<span class="hljs-attr">--mat-sys-level5</span>: <span class="hljs-number">0px</span> <span class="hljs-number">7px</span> <span class="hljs-number">8px</span> -<span class="hljs-number">4px</span> <span class="hljs-built_in">rgba</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, .<span class="hljs-number">2</span>), <span class="hljs-number">0px</span> <span class="hljs-number">12px</span> <span class="hljs-number">17px</span> <span class="hljs-number">2px</span> <span class="hljs-built_in">rgba</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, .<span class="hljs-number">14</span>), <span class="hljs-number">0px</span> <span class="hljs-number">5px</span> <span class="hljs-number">22px</span> <span class="hljs-number">4px</span> <span class="hljs-built_in">rgba</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, .<span class="hljs-number">12</span>);</code></pre></details>
-
-<p>Level 1 elevation can be used to slightly raise the appearance of a surface. In Angular Material,
+<span class="hljs-attr">--mat-sys-level5</span>: <span class="hljs-number">0px</span> <span class="hljs-number">7px</span> <span class="hljs-number">8px</span> -<span class="hljs-number">4px</span> <span class="hljs-built_in">rgba</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, .<span class="hljs-number">2</span>), <span class="hljs-number">0px</span> <span class="hljs-number">12px</span> <span class="hljs-number">17px</span> <span class="hljs-number">2px</span> <span class="hljs-built_in">rgba</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, .<span class="hljs-number">14</span>), <span class="hljs-number">0px</span> <span class="hljs-number">5px</span> <span class="hljs-number">22px</span> <span class="hljs-number">4px</span> <span class="hljs-built_in">rgba</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, .<span class="hljs-number">12</span>);</code></pre></details><p>Level 1 elevation can be used to slightly raise the appearance of a surface. In Angular Material,
 this is used for the elevation of an elevated card and the handle of a slider.</p>
 <pre class="mat-shadow-1 mat-bg-surface-container-low">
 .mat-shadow-1 {
   box-shadow: var(--mat-sys-level1);
 }
-</pre>
-
-<p>Level 2 elevation can be used to raise the appearance of a surface. In Angular Material, this is
+</pre><p>Level 2 elevation can be used to raise the appearance of a surface. In Angular Material, this is
 used for the elevation of a menu and a select panel.</p>
 <pre class="mat-shadow-2 mat-bg-surface-container-low">
 .mat-shadow-2 {
   box-shadow: var(--mat-sys-level2);
 }
-</pre>
-
-<p>Level 3 elevation is used to raise the appearance of a surface. In Angular Material, this is used
+</pre><p>Level 3 elevation is used to raise the appearance of a surface. In Angular Material, this is used
 for the elevation of a floating action button.</p>
 <pre class="mat-shadow-3 mat-bg-surface-container-low">
 .mat-shadow-3 {
   box-shadow: var(--mat-sys-level3);
 }
-</pre>
-
-<p>Level 4 elevation is generally reserved for elevation changes due to interaction like focus and
+</pre><p>Level 4 elevation is generally reserved for elevation changes due to interaction like focus and
 hover. In Angular Material, this is used for the elevation of a hovered floating action button.</p>
 <pre class="mat-shadow-4 mat-bg-surface-container-low">
 .mat-shadow-4 {
   box-shadow: var(--mat-sys-level4);
 }
-</pre>
-
-<p>Level 5 elevation is used to greatly raise the appearance of a surface and is generally reserved for
+</pre><p>Level 5 elevation is used to greatly raise the appearance of a surface and is generally reserved for
 elevation changes due to interaction like focus and hover.</p>
 <pre class="mat-shadow-5 mat-bg-surface-container-low">
 .mat-shadow-5 {
   box-shadow: var(--mat-sys-level5);
 }
 </pre>
-
-
         <h2 id="material-design-2-support" class="docs-header-link">
           <span header-link="material-design-2-support"></span>
           Material Design 2 Support

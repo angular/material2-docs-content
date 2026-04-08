@@ -5,8 +5,6 @@ of the header, pagination controls appear to let the user scroll left and right 
 <p>The active tab may be set using the <code>selectedIndex</code> input or when the user selects one of the
 tab labels in the header.</p>
 </div><div material-docs-example="tab-group-basic"></div><div class="docs-markdown">
-
-
         <h3 id="events" class="docs-header-link">
           <span header-link="events"></span>
           Events
@@ -22,14 +20,10 @@ the header, usually through keyboard navigation.</p>
       <p>If a tab&#39;s label is only text then the simple tab-group API can be used.</p>
 </div><div material-docs-example="tab-group-basic"
                              file="tab-group-basic-example.html"
-                             ></div><div class="docs-markdown">
-
-<p>For more complex labels, add a template with the <code>mat-tab-label</code> directive inside the <code>mat-tab</code>.</p>
+                             ></div><div class="docs-markdown"><p>For more complex labels, add a template with the <code>mat-tab-label</code> directive inside the <code>mat-tab</code>.</p>
 </div><div material-docs-example="tab-group-custom-label"
                              file="tab-group-custom-label-example.html"
                              region="label-directive"></div><div class="docs-markdown">
-
-
         <h3 id="dynamic-height" class="docs-header-link">
           <span header-link="dynamic-height"></span>
           Dynamic Height
@@ -40,8 +34,6 @@ change this, set the <code>dynamicHeight</code> input to true. The tab body will
  </div><div material-docs-example="tab-group-dynamic-height"
                              file="tab-group-dynamic-height-example.html"
                              region="dynamic-height"></div><div class="docs-markdown">
-
-
         <h3 id="tabs-and-navigation" class="docs-header-link">
           <span header-link="tabs-and-navigation"></span>
           Tabs and navigation
@@ -50,9 +42,7 @@ change this, set the <code>dynamicHeight</code> input to true. The tab body will
 provides a tab-like UI for navigating between routes.</p>
  </div><div material-docs-example="tab-nav-bar-basic"
                              file="tab-nav-bar-basic-example.html"
-                             region="mat-tab-nav"></div><div class="docs-markdown">
-
-<p>The <code>mat-tab-nav-bar</code> is not tied to any particular router; it works with normal <code>&lt;a&gt;</code> elements and
+                             region="mat-tab-nav"></div><div class="docs-markdown"><p>The <code>mat-tab-nav-bar</code> is not tied to any particular router; it works with normal <code>&lt;a&gt;</code> elements and
 uses the <code>active</code> property to determine which tab is currently active. The corresponding
 <code>&lt;router-outlet&gt;</code> must be wrapped in an <code>&lt;mat-tab-nav-panel&gt;</code> component and should typically be
 placed relatively close to the <code>mat-tab-nav-bar</code> (see <a href="#accessibility">Accessibility</a>).</p>
@@ -72,8 +62,6 @@ with the <code>matTabContent</code> attribute.</p>
  </div><div material-docs-example="tab-group-lazy-loaded"
                              file="tab-group-lazy-loaded-example.html"
                              region="mat-tab-content"></div><div class="docs-markdown">
-
-
         <h3 id="label-alignment" class="docs-header-link">
           <span header-link="label-alignment"></span>
           Label alignment
@@ -83,8 +71,6 @@ do so using the <code>[mat-align-tabs]</code> attribute.</p>
  </div><div material-docs-example="tab-group-align"
                              file="tab-group-align-example.html"
                              region="align-start"></div><div class="docs-markdown">
-
-
         <h3 id="controlling-the-tab-animation" class="docs-header-link">
           <span header-link="controlling-the-tab-animation"></span>
           Controlling the tab animation
@@ -95,8 +81,6 @@ duration can be configured globally using the <code>MAT_TABS_CONFIG</code> injec
  </div><div material-docs-example="tab-group-animations"
                              file="tab-group-animations-example.html"
                              region="slow-animation-duration"></div><div class="docs-markdown">
-
-
         <h3 id="keeping-the-tab-content-inside-the-dom-while-its-off-screen" class="docs-header-link">
           <span header-link="keeping-the-tab-content-inside-the-dom-while-its-off-screen"></span>
           Keeping the tab content inside the DOM while it&#39;s off-screen
@@ -107,16 +91,12 @@ isn&#39;t great for others like when a tab has an <code>&lt;audio&gt;</code> or 
 will be re-initialized whenever the user navigates to the tab. If you want to keep the content of
 off-screen tabs in the DOM, you can set the <code>preserveContent</code> input to <code>true</code>.</p>
 </div><div material-docs-example="tab-group-preserve-content"></div><div class="docs-markdown">
-
-
         <h3 id="sortable-tabs" class="docs-header-link">
           <span header-link="sortable-tabs"></span>
           Sortable tabs
         </h3>
       <p>The <code>mat-tab-group</code> component can be integrated with the <code>@angular/cdk/drag-drop</code> module.</p>
 </div><div material-docs-example="tab-group-drag-drop"></div><div class="docs-markdown">
-
-
         <h3 id="accessibility" class="docs-header-link">
           <span header-link="accessibility"></span>
           Accessibility
