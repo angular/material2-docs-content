@@ -12,7 +12,7 @@ import { MatProgressSpinner } from '@angular/material/progress-spinner';
 class ButtonOverviewExample {
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.0.0-next.8",
+    version: "22.0.0-next.9",
     ngImport: i0,
     type: ButtonOverviewExample,
     deps: [],
@@ -20,7 +20,7 @@ class ButtonOverviewExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.0.0-next.8",
+    version: "22.0.0-next.9",
     type: ButtonOverviewExample,
     isStandalone: true,
     selector: "button-overview-example",
@@ -74,7 +74,7 @@ class ButtonOverviewExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.0.0-next.8",
+  version: "22.0.0-next.9",
   ngImport: i0,
   type: ButtonOverviewExample,
   decorators: [{
@@ -91,7 +91,7 @@ i0.ɵɵngDeclareClassMetadata({
 class ButtonDisabledInteractiveExample {
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.0.0-next.8",
+    version: "22.0.0-next.9",
     ngImport: i0,
     type: ButtonDisabledInteractiveExample,
     deps: [],
@@ -99,7 +99,7 @@ class ButtonDisabledInteractiveExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.0.0-next.8",
+    version: "22.0.0-next.9",
     type: ButtonDisabledInteractiveExample,
     isStandalone: true,
     selector: "button-disabled-interactive-example",
@@ -123,7 +123,7 @@ class ButtonDisabledInteractiveExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.0.0-next.8",
+  version: "22.0.0-next.9",
   ngImport: i0,
   type: ButtonDisabledInteractiveExample,
   decorators: [{
@@ -141,7 +141,7 @@ class ButtonHarnessExample {
   clicked = false;
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.0.0-next.8",
+    version: "22.0.0-next.9",
     ngImport: i0,
     type: ButtonHarnessExample,
     deps: [],
@@ -149,7 +149,7 @@ class ButtonHarnessExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.0.0-next.8",
+    version: "22.0.0-next.9",
     type: ButtonHarnessExample,
     isStandalone: true,
     selector: "button-harness-example",
@@ -169,7 +169,7 @@ class ButtonHarnessExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.0.0-next.8",
+  version: "22.0.0-next.9",
   ngImport: i0,
   type: ButtonHarnessExample,
   decorators: [{
@@ -191,7 +191,7 @@ class ButtonProgressIndicatorExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.0.0-next.8",
+    version: "22.0.0-next.9",
     ngImport: i0,
     type: ButtonProgressIndicatorExample,
     deps: [],
@@ -199,7 +199,7 @@ class ButtonProgressIndicatorExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.0.0-next.8",
+    version: "22.0.0-next.9",
     type: ButtonProgressIndicatorExample,
     isStandalone: true,
     selector: "button-progress-indicator-example",
@@ -222,7 +222,7 @@ class ButtonProgressIndicatorExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.0.0-next.8",
+  version: "22.0.0-next.9",
   ngImport: i0,
   type: ButtonProgressIndicatorExample,
   decorators: [{
