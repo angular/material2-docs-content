@@ -117,7 +117,7 @@ provider and update the desired options.</p>
 <p>There are various ways of injecting the global options. In order to make it easier to
 inject and update options at runtime, it&#39;s recommended to create a service that implements
 the <code>RippleGlobalOptions</code> interface.</p>
-<pre><code class="language-ts"><span class="hljs-meta">@Injectable</span>({<span class="hljs-attr">providedIn</span>: <span class="hljs-string">&#x27;root&#x27;</span>})
+<pre><code class="language-ts"><span class="hljs-meta">@Service</span>()
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">AppGlobalRippleOptions</span> <span class="hljs-keyword">implements</span> <span class="hljs-title class_">RippleGlobalOptions</span> {
   <span class="hljs-comment">/** Whether ripples should be disabled globally. */</span>
   <span class="hljs-attr">disabled</span>: <span class="hljs-built_in">boolean</span> = <span class="hljs-literal">false</span>;

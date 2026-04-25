@@ -1,5 +1,5 @@
 import * as i0 from '@angular/core';
-import { Component, Injectable } from '@angular/core';
+import { Component, Service } from '@angular/core';
 import * as i1$2 from '@angular/material/paginator';
 import { MatPaginatorModule, MatPaginatorIntl } from '@angular/material/paginator';
 import { JsonPipe } from '@angular/common';
@@ -258,13 +258,14 @@ class MyCustomPaginatorIntl {
     ngImport: i0,
     type: MyCustomPaginatorIntl,
     deps: [],
-    target: i0.ɵɵFactoryTarget.Injectable
+    target: i0.ɵɵFactoryTarget.Service
   });
-  static ɵprov = i0.ɵɵngDeclareInjectable({
-    minVersion: "12.0.0",
+  static ɵprov = i0.ɵɵngDeclareService({
+    minVersion: "22.0.0",
     version: "22.0.0-next.9",
     ngImport: i0,
-    type: MyCustomPaginatorIntl
+    type: MyCustomPaginatorIntl,
+    autoProvided: false
   });
 }
 i0.ɵɵngDeclareClassMetadata({
@@ -273,7 +274,10 @@ i0.ɵɵngDeclareClassMetadata({
   ngImport: i0,
   type: MyCustomPaginatorIntl,
   decorators: [{
-    type: Injectable
+    type: Service,
+    args: [{
+      autoProvided: false
+    }]
   }]
 });
 class PaginatorIntlExample {
