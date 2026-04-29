@@ -34,134 +34,6 @@
     
       
 
-<h4 id="InputModalityDetector" class="docs-header-link docs-api-h4 docs-api-class-name">
-  <span header-link="InputModalityDetector"></span>
-  <code>InputModalityDetector</code>
-  
-</h4><p class="docs-api-class-description"><p>Service that detects the user&#39;s input modality.</p>
-<p>This service does not update the input modality when a user navigates with a screen reader
-(e.g. linear navigation with VoiceOver, object navigation / browse mode with NVDA, virtual PC
-cursor mode with JAWS). This is in part due to technical limitations (i.e. keyboard events do not
-fire as expected in these modes) but is also arguably the correct behavior. Navigating with a
-screen reader is akin to visually scanning a page, and should not be interpreted as actual user
-input interaction.</p>
-<p>When a user is not navigating but <em>interacting</em> with a screen reader, this service attempts to
-update the input modality to keyboard, but in general this service&#39;s behavior is largely
-undefined.</p>
-</p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
-  <div class="docs-api-properties-card">
-    <table class="docs-api-properties-table">
-      <tr class="docs-api-properties-header-row">
-        <th class="docs-api-properties-th">Name</th>
-        <th class="docs-api-properties-th">Description</th>
-      </tr>
-      
-        
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>modalityChanged: <code class="docs-api-property-type">Observable&lt;InputModality&gt;</code></code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Emits when the input modality changes.</p>
-</td>
-</tr>
-
-
-      
-        
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>modalityDetected: <code class="docs-api-property-type">Observable&lt;InputModality&gt;</code></code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Emits whenever an input modality is detected.</p>
-</td>
-</tr>
-
-
-      
-        
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>mostRecentModality: <code class="docs-api-property-type">InputModality</code></code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>The most recently detected input modality.</p>
-</td>
-</tr>
-
-
-      
-    </table>
-  </div>
-
-
-
-
-
-
-    
-      
-
-<h4 id="HighContrastModeDetector" class="docs-header-link docs-api-h4 docs-api-class-name">
-  <span header-link="HighContrastModeDetector"></span>
-  <code>HighContrastModeDetector</code>
-  
-</h4><p class="docs-api-class-description"><p>Service to determine whether the browser is currently in a high-contrast-mode environment.</p>
-<p>Microsoft Windows supports an accessibility feature called &quot;High Contrast Mode&quot;. This mode
-changes the appearance of all applications, including web applications, to dramatically increase
-contrast.</p>
-<p>IE, Edge, and Firefox currently support this mode. Chrome does not support Windows High Contrast
-Mode. This service does not detect high-contrast mode as added by the Chrome &quot;High Contrast&quot;
-browser extension.</p>
-</p>
-
-
-<h5 class="docs-api-h5 docs-api-method-header">Methods</h5>
-  
-    
-
-<div class="docs-api-method-card">
-  <table class="docs-api-method-table">
-    <thead>
-      <tr class="docs-api-method-name-row">
-        <th colspan="2" class="docs-api-method-name-cell">getHighContrastMode
-          (): <code class="docs-api-method-returns-type">HighContrastMode</code>
-        </th>
-      </tr>
-    </thead><tr class="docs-api-method-description-row">
-      <td colspan="2" class="docs-api-method-description-cell">
-        <p>Gets the current high-contrast-mode for the page.</p>
-
-      </td>
-    </tr><thead>
-      <tr class="docs-api-method-returns-header-row">
-        <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
-      </tr>
-    </thead>
-    <tr>
-      <td class="docs-api-method-returns-type-cell">
-        <code class="docs-api-method-returns-type">HighContrastMode</code>
-      </td>
-      <td class="docs-api-method-returns-description-cell">
-        <p class="docs-api-method-returns-description">
-          
-        </p>
-      </td>
-    </tr></table>
-</div>
-
-
-  
-
-
-
-    
-      
-
 <h4 id="AriaDescriber" class="docs-header-link docs-api-h4 docs-api-class-name">
   <span header-link="AriaDescriber"></span>
   <code>AriaDescriber</code>
@@ -372,6 +244,134 @@ message element.</p>
     
       
 
+<h4 id="InputModalityDetector" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="InputModalityDetector"></span>
+  <code>InputModalityDetector</code>
+  
+</h4><p class="docs-api-class-description"><p>Service that detects the user&#39;s input modality.</p>
+<p>This service does not update the input modality when a user navigates with a screen reader
+(e.g. linear navigation with VoiceOver, object navigation / browse mode with NVDA, virtual PC
+cursor mode with JAWS). This is in part due to technical limitations (i.e. keyboard events do not
+fire as expected in these modes) but is also arguably the correct behavior. Navigating with a
+screen reader is akin to visually scanning a page, and should not be interpreted as actual user
+input interaction.</p>
+<p>When a user is not navigating but <em>interacting</em> with a screen reader, this service attempts to
+update the input modality to keyboard, but in general this service&#39;s behavior is largely
+undefined.</p>
+</p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
+  <div class="docs-api-properties-card">
+    <table class="docs-api-properties-table">
+      <tr class="docs-api-properties-header-row">
+        <th class="docs-api-properties-th">Name</th>
+        <th class="docs-api-properties-th">Description</th>
+      </tr>
+      
+        
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>modalityChanged: <code class="docs-api-property-type">Observable&lt;InputModality&gt;</code></code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Emits when the input modality changes.</p>
+</td>
+</tr>
+
+
+      
+        
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>modalityDetected: <code class="docs-api-property-type">Observable&lt;InputModality&gt;</code></code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Emits whenever an input modality is detected.</p>
+</td>
+</tr>
+
+
+      
+        
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>mostRecentModality: <code class="docs-api-property-type">InputModality</code></code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>The most recently detected input modality.</p>
+</td>
+</tr>
+
+
+      
+    </table>
+  </div>
+
+
+
+
+
+
+    
+      
+
+<h4 id="HighContrastModeDetector" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="HighContrastModeDetector"></span>
+  <code>HighContrastModeDetector</code>
+  
+</h4><p class="docs-api-class-description"><p>Service to determine whether the browser is currently in a high-contrast-mode environment.</p>
+<p>Microsoft Windows supports an accessibility feature called &quot;High Contrast Mode&quot;. This mode
+changes the appearance of all applications, including web applications, to dramatically increase
+contrast.</p>
+<p>IE, Edge, and Firefox currently support this mode. Chrome does not support Windows High Contrast
+Mode. This service does not detect high-contrast mode as added by the Chrome &quot;High Contrast&quot;
+browser extension.</p>
+</p>
+
+
+<h5 class="docs-api-h5 docs-api-method-header">Methods</h5>
+  
+    
+
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell">getHighContrastMode
+          (): <code class="docs-api-method-returns-type">HighContrastMode</code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Gets the current high-contrast-mode for the page.</p>
+
+      </td>
+    </tr><thead>
+      <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+      </tr>
+    </thead>
+    <tr>
+      <td class="docs-api-method-returns-type-cell">
+        <code class="docs-api-method-returns-type">HighContrastMode</code>
+      </td>
+      <td class="docs-api-method-returns-description-cell">
+        <p class="docs-api-method-returns-description">
+          
+        </p>
+      </td>
+    </tr></table>
+</div>
+
+
+  
+
+
+
+    
+      
+
 <h4 id="ConfigurableFocusTrapFactory" class="docs-header-link docs-api-h4 docs-api-class-name">
   <span header-link="ConfigurableFocusTrapFactory"></span>
   <code>ConfigurableFocusTrapFactory</code>
@@ -447,73 +447,6 @@ message element.</p>
         <p class="docs-api-method-returns-description">
           <p>The created focus trap instance.</p>
 
-        </p>
-      </td>
-    </tr></table>
-</div>
-
-
-  
-    
-
-<div class="docs-api-method-card">
-  <table class="docs-api-method-table">
-    <thead>
-      <tr class="docs-api-method-name-row">
-        <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-deprecated-marker" deprecated-message="Pass a config object instead of the `deferCaptureElements` flag. Will be removed in v11.0.0 or later."
-  >
-              Deprecated
-            </div>create
-          (<span class="docs-api-method-parameter-name">element:
-            </span>
-            <code class="docs-api-method-parameter-type">HTMLElement</code>, <span class="docs-api-method-parameter-name">deferCaptureElements:
-            </span>
-            <code class="docs-api-method-parameter-type">boolean</code>): <code class="docs-api-method-returns-type">ConfigurableFocusTrap</code>
-        </th>
-      </tr>
-    </thead><thead>
-      <tr class="docs-api-method-parameters-header-row">
-        <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
-      </tr>
-    </thead>
-    
-    <tr class="docs-api-method-parameter-row">
-      <td class="docs-api-method-parameter-cell">
-        <p class="docs-api-method-parameter-name">
-          element</p>
-        <code class="docs-api-method-parameter-type">HTMLElement</code>
-      </td>
-      <td class="docs-api-method-parameter-description-cell">
-        <p class="docs-api-method-parameter-description">
-          
-        </p>
-      </td>
-    </tr>
-    
-    <tr class="docs-api-method-parameter-row">
-      <td class="docs-api-method-parameter-cell">
-        <p class="docs-api-method-parameter-name">
-          deferCaptureElements</p>
-        <code class="docs-api-method-parameter-type">boolean</code>
-      </td>
-      <td class="docs-api-method-parameter-description-cell">
-        <p class="docs-api-method-parameter-description">
-          
-        </p>
-      </td>
-    </tr>
-    <thead>
-      <tr class="docs-api-method-returns-header-row">
-        <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
-      </tr>
-    </thead>
-    <tr>
-      <td class="docs-api-method-returns-type-cell">
-        <code class="docs-api-method-returns-type">ConfigurableFocusTrap</code>
-      </td>
-      <td class="docs-api-method-returns-description-cell">
-        <p class="docs-api-method-returns-description">
-          
         </p>
       </td>
     </tr></table>
@@ -6186,42 +6119,6 @@ on whether focus was moved successfully.</p>
     
       
 
-<h4 id="InputModalityDetectorOptions" class="docs-header-link docs-api-h4 docs-api-interface-name">
-  <span header-link="InputModalityDetectorOptions"></span>
-  <code>InputModalityDetectorOptions</code>
-</h4><p class="docs-api-interface-description"><p>Options to configure the behavior of the InputModalityDetector.</p>
-</p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
-  <div class="docs-api-properties-card">
-    <table class="docs-api-properties-table">
-      <tr class="docs-api-properties-header-row">
-        <th class="docs-api-properties-th">Name</th>
-        <th class="docs-api-properties-th">Description</th>
-      </tr>
-      
-        
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>ignoreKeys: <code class="docs-api-property-type">number[]</code></code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Keys to ignore when detecting keyboard input modality.</p>
-</td>
-</tr>
-
-
-      
-    </table>
-  </div>
-
-
-
-
-
-
-    
-      
-
 <h4 id="RegisteredMessage" class="docs-header-link docs-api-h4 docs-api-interface-name">
   <span header-link="RegisteredMessage"></span>
   <code>RegisteredMessage</code>
@@ -6256,6 +6153,42 @@ the same message and the reference to the message element used for the <code>ari
     </p>
   </td>
   <td class="docs-api-property-description"><p>The number of elements that reference this message element via <code>aria-describedby</code>.</p>
+</td>
+</tr>
+
+
+      
+    </table>
+  </div>
+
+
+
+
+
+
+    
+      
+
+<h4 id="InputModalityDetectorOptions" class="docs-header-link docs-api-h4 docs-api-interface-name">
+  <span header-link="InputModalityDetectorOptions"></span>
+  <code>InputModalityDetectorOptions</code>
+</h4><p class="docs-api-interface-description"><p>Options to configure the behavior of the InputModalityDetector.</p>
+</p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
+  <div class="docs-api-properties-card">
+    <table class="docs-api-properties-table">
+      <tr class="docs-api-properties-header-row">
+        <th class="docs-api-properties-th">Name</th>
+        <th class="docs-api-properties-th">Description</th>
+      </tr>
+      
+        
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>ignoreKeys: <code class="docs-api-property-type">number[]</code></code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Keys to ignore when detecting keyboard input modality.</p>
 </td>
 </tr>
 
@@ -7755,57 +7688,6 @@ options.</p>
 </p><div class="docs-markdown">
 <pre class="docs-markdown-pre">
 <code class="docs-markdown-code">const INPUT_MODALITY_DETECTOR_OPTIONS: InjectionToken<InputModalityDetectorOptions>;</code>
-</pre>
-</div>
-
-
-    
-      
-
-<h4 id="MESSAGES_CONTAINER_ID" class="docs-header-link docs-api-h4 docs-api-constant-name">
-  <span header-link="MESSAGES_CONTAINER_ID"></span>
-  <code>MESSAGES_CONTAINER_ID</code>
-</h4><div class="docs-api-constant-deprecated-marker" deprecated-message="No longer being used. To be removed. Will be removed in v14.0.0 or later."
-  >
-  Deprecated
-</div><p class="docs-api-constant-description"><p>ID used for the body container where all messages are appended.</p>
-</p><div class="docs-markdown">
-<pre class="docs-markdown-pre">
-<code class="docs-markdown-code">const MESSAGES_CONTAINER_ID: "cdk-describedby-message-container";</code>
-</pre>
-</div>
-
-
-    
-      
-
-<h4 id="CDK_DESCRIBEDBY_ID_PREFIX" class="docs-header-link docs-api-h4 docs-api-constant-name">
-  <span header-link="CDK_DESCRIBEDBY_ID_PREFIX"></span>
-  <code>CDK_DESCRIBEDBY_ID_PREFIX</code>
-</h4><div class="docs-api-constant-deprecated-marker" deprecated-message="To be turned into a private variable. Will be removed in v14.0.0 or later."
-  >
-  Deprecated
-</div><p class="docs-api-constant-description"><p>ID prefix used for each created message element.</p>
-</p><div class="docs-markdown">
-<pre class="docs-markdown-pre">
-<code class="docs-markdown-code">const CDK_DESCRIBEDBY_ID_PREFIX: "cdk-describedby-message";</code>
-</pre>
-</div>
-
-
-    
-      
-
-<h4 id="CDK_DESCRIBEDBY_HOST_ATTRIBUTE" class="docs-header-link docs-api-h4 docs-api-constant-name">
-  <span header-link="CDK_DESCRIBEDBY_HOST_ATTRIBUTE"></span>
-  <code>CDK_DESCRIBEDBY_HOST_ATTRIBUTE</code>
-</h4><div class="docs-api-constant-deprecated-marker" deprecated-message="To be turned into a private variable. Will be removed in v14.0.0 or later."
-  >
-  Deprecated
-</div><p class="docs-api-constant-description"><p>Attribute given to each host element that is described by a message element.</p>
-</p><div class="docs-markdown">
-<pre class="docs-markdown-pre">
-<code class="docs-markdown-code">const CDK_DESCRIBEDBY_HOST_ATTRIBUTE: "cdk-describedby-host";</code>
 </pre>
 </div>
 

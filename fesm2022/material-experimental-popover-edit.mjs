@@ -1016,7 +1016,7 @@ class PopoverEditMatTableExample {
       kind: "component",
       type: i1$4.MatListOption,
       selector: "mat-list-option",
-      inputs: ["togglePosition", "checkboxPosition", "color", "value", "selected"],
+      inputs: ["togglePosition", "color", "value", "selected"],
       outputs: ["selectedChange"],
       exportAs: ["matListOption"]
     }]

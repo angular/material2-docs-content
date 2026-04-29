@@ -195,7 +195,7 @@ class ListSelectionExample {
       kind: "component",
       type: i1.MatListOption,
       selector: "mat-list-option",
-      inputs: ["togglePosition", "checkboxPosition", "color", "value", "selected"],
+      inputs: ["togglePosition", "color", "value", "selected"],
       outputs: ["selectedChange"],
       exportAs: ["matListOption"]
     }]
@@ -248,7 +248,7 @@ class ListSingleSelectionExample {
       kind: "component",
       type: i1.MatListOption,
       selector: "mat-list-option",
-      inputs: ["togglePosition", "checkboxPosition", "color", "value", "selected"],
+      inputs: ["togglePosition", "color", "value", "selected"],
       outputs: ["selectedChange"],
       exportAs: ["matListOption"]
     }]
@@ -323,7 +323,7 @@ class ListSingleSelectionReactiveFormExample {
       kind: "component",
       type: i1.MatListOption,
       selector: "mat-list-option",
-      inputs: ["togglePosition", "checkboxPosition", "color", "value", "selected"],
+      inputs: ["togglePosition", "color", "value", "selected"],
       outputs: ["selectedChange"],
       exportAs: ["matListOption"]
     }, {
@@ -588,7 +588,7 @@ class ListAvatarExample {
       kind: "component",
       type: i1.MatListOption,
       selector: "mat-list-option",
-      inputs: ["togglePosition", "checkboxPosition", "color", "value", "selected"],
+      inputs: ["togglePosition", "color", "value", "selected"],
       outputs: ["selectedChange"],
       exportAs: ["matListOption"]
     }, {
