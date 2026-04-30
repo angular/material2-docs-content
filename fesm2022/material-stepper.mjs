@@ -30,7 +30,7 @@ class StepperEditableExample {
   isEditable = false;
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.0.0-next.9",
+    version: "22.0.0-next.10",
     ngImport: i0,
     type: StepperEditableExample,
     deps: [],
@@ -38,7 +38,7 @@ class StepperEditableExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.0.0-next.9",
+    version: "22.0.0-next.10",
     type: StepperEditableExample,
     isStandalone: true,
     selector: "stepper-editable-example",
@@ -149,7 +149,7 @@ class StepperEditableExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.0.0-next.9",
+  version: "22.0.0-next.10",
   ngImport: i0,
   type: StepperEditableExample,
   decorators: [{
@@ -173,7 +173,7 @@ class StepperErrorsExample {
   });
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.0.0-next.9",
+    version: "22.0.0-next.10",
     ngImport: i0,
     type: StepperErrorsExample,
     deps: [],
@@ -181,7 +181,7 @@ class StepperErrorsExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.0.0-next.9",
+    version: "22.0.0-next.10",
     type: StepperErrorsExample,
     isStandalone: true,
     selector: "stepper-errors-example",
@@ -298,7 +298,7 @@ class StepperErrorsExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.0.0-next.9",
+  version: "22.0.0-next.10",
   ngImport: i0,
   type: StepperErrorsExample,
   decorators: [{
@@ -328,7 +328,7 @@ class StepperLabelPositionBottomExample {
   });
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.0.0-next.9",
+    version: "22.0.0-next.10",
     ngImport: i0,
     type: StepperLabelPositionBottomExample,
     deps: [],
@@ -336,7 +336,7 @@ class StepperLabelPositionBottomExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.0.0-next.9",
+    version: "22.0.0-next.10",
     type: StepperLabelPositionBottomExample,
     isStandalone: true,
     selector: "stepper-label-position-bottom-example",
@@ -447,7 +447,7 @@ class StepperLabelPositionBottomExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.0.0-next.9",
+  version: "22.0.0-next.10",
   ngImport: i0,
   type: StepperLabelPositionBottomExample,
   decorators: [{
@@ -472,7 +472,7 @@ class StepperOptionalExample {
   isOptional = false;
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.0.0-next.9",
+    version: "22.0.0-next.10",
     ngImport: i0,
     type: StepperOptionalExample,
     deps: [],
@@ -480,7 +480,7 @@ class StepperOptionalExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.0.0-next.9",
+    version: "22.0.0-next.10",
     type: StepperOptionalExample,
     isStandalone: true,
     selector: "stepper-optional-example",
@@ -591,7 +591,7 @@ class StepperOptionalExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.0.0-next.9",
+  version: "22.0.0-next.10",
   ngImport: i0,
   type: StepperOptionalExample,
   decorators: [{
@@ -616,7 +616,7 @@ class StepperOverviewExample {
   isLinear = false;
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.0.0-next.9",
+    version: "22.0.0-next.10",
     ngImport: i0,
     type: StepperOverviewExample,
     deps: [],
@@ -624,7 +624,7 @@ class StepperOverviewExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.0.0-next.9",
+    version: "22.0.0-next.10",
     type: StepperOverviewExample,
     isStandalone: true,
     selector: "stepper-overview-example",
@@ -735,7 +735,7 @@ class StepperOverviewExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.0.0-next.9",
+  version: "22.0.0-next.10",
   ngImport: i0,
   type: StepperOverviewExample,
   decorators: [{
@@ -759,7 +759,7 @@ class StepperStatesExample {
   });
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.0.0-next.9",
+    version: "22.0.0-next.10",
     ngImport: i0,
     type: StepperStatesExample,
     deps: [],
@@ -767,7 +767,7 @@ class StepperStatesExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.0.0-next.9",
+    version: "22.0.0-next.10",
     type: StepperStatesExample,
     isStandalone: true,
     selector: "stepper-states-example",
@@ -898,7 +898,7 @@ class StepperStatesExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.0.0-next.9",
+  version: "22.0.0-next.10",
   ngImport: i0,
   type: StepperStatesExample,
   decorators: [{
@@ -929,7 +929,7 @@ class StepperVerticalExample {
   isLinear = false;
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.0.0-next.9",
+    version: "22.0.0-next.10",
     ngImport: i0,
     type: StepperVerticalExample,
     deps: [],
@@ -937,7 +937,7 @@ class StepperVerticalExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.0.0-next.9",
+    version: "22.0.0-next.10",
     type: StepperVerticalExample,
     isStandalone: true,
     selector: "stepper-vertical-example",
@@ -1048,7 +1048,7 @@ class StepperVerticalExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.0.0-next.9",
+  version: "22.0.0-next.10",
   ngImport: i0,
   type: StepperVerticalExample,
   decorators: [{
@@ -1065,7 +1065,7 @@ i0.ɵɵngDeclareClassMetadata({
 class StepperHarnessExample {
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.0.0-next.9",
+    version: "22.0.0-next.10",
     ngImport: i0,
     type: StepperHarnessExample,
     deps: [],
@@ -1073,7 +1073,7 @@ class StepperHarnessExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.0.0-next.9",
+    version: "22.0.0-next.10",
     type: StepperHarnessExample,
     isStandalone: true,
     selector: "stepper-harness-example",
@@ -1112,7 +1112,7 @@ class StepperHarnessExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.0.0-next.9",
+  version: "22.0.0-next.10",
   ngImport: i0,
   type: StepperHarnessExample,
   decorators: [{
@@ -1129,7 +1129,7 @@ class StepperIntl extends MatStepperIntl {
   optionalLabel = 'Optional Label';
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.0.0-next.9",
+    version: "22.0.0-next.10",
     ngImport: i0,
     type: StepperIntl,
     deps: [],
@@ -1137,7 +1137,7 @@ class StepperIntl extends MatStepperIntl {
   });
   static ɵprov = i0.ɵɵngDeclareService({
     minVersion: "22.0.0",
-    version: "22.0.0-next.9",
+    version: "22.0.0-next.10",
     ngImport: i0,
     type: StepperIntl,
     autoProvided: false
@@ -1145,7 +1145,7 @@ class StepperIntl extends MatStepperIntl {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.0.0-next.9",
+  version: "22.0.0-next.10",
   ngImport: i0,
   type: StepperIntl,
   decorators: [{
@@ -1172,7 +1172,7 @@ class StepperIntlExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.0.0-next.9",
+    version: "22.0.0-next.10",
     ngImport: i0,
     type: StepperIntlExample,
     deps: [],
@@ -1180,7 +1180,7 @@ class StepperIntlExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "22.0.0-next.9",
+    version: "22.0.0-next.10",
     type: StepperIntlExample,
     isStandalone: true,
     selector: "stepper-intl-example",
@@ -1319,7 +1319,7 @@ class StepperIntlExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.0.0-next.9",
+  version: "22.0.0-next.10",
   ngImport: i0,
   type: StepperIntlExample,
   decorators: [{
@@ -1340,7 +1340,7 @@ i0.ɵɵngDeclareClassMetadata({
 class StepperLazyContentExample {
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.0.0-next.9",
+    version: "22.0.0-next.10",
     ngImport: i0,
     type: StepperLazyContentExample,
     deps: [],
@@ -1348,7 +1348,7 @@ class StepperLazyContentExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.0.0-next.9",
+    version: "22.0.0-next.10",
     type: StepperLazyContentExample,
     isStandalone: true,
     selector: "stepper-lazy-content-example",
@@ -1400,7 +1400,7 @@ class StepperLazyContentExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.0.0-next.9",
+  version: "22.0.0-next.10",
   ngImport: i0,
   type: StepperLazyContentExample,
   decorators: [{
@@ -1433,7 +1433,7 @@ class StepperResponsiveExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.0.0-next.9",
+    version: "22.0.0-next.10",
     ngImport: i0,
     type: StepperResponsiveExample,
     deps: [],
@@ -1441,7 +1441,7 @@ class StepperResponsiveExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "22.0.0-next.9",
+    version: "22.0.0-next.10",
     type: StepperResponsiveExample,
     isStandalone: true,
     selector: "stepper-responsive-example",
@@ -1556,7 +1556,7 @@ class StepperResponsiveExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.0.0-next.9",
+  version: "22.0.0-next.10",
   ngImport: i0,
   type: StepperResponsiveExample,
   decorators: [{
@@ -1581,7 +1581,7 @@ class StepperHeaderPositionExample {
   });
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.0.0-next.9",
+    version: "22.0.0-next.10",
     ngImport: i0,
     type: StepperHeaderPositionExample,
     deps: [],
@@ -1589,7 +1589,7 @@ class StepperHeaderPositionExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.0.0-next.9",
+    version: "22.0.0-next.10",
     type: StepperHeaderPositionExample,
     isStandalone: true,
     selector: "stepper-header-position-example",
@@ -1695,7 +1695,7 @@ class StepperHeaderPositionExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.0.0-next.9",
+  version: "22.0.0-next.10",
   ngImport: i0,
   type: StepperHeaderPositionExample,
   decorators: [{
@@ -1718,7 +1718,7 @@ class StepperAnimationsExample {
   });
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.0.0-next.9",
+    version: "22.0.0-next.10",
     ngImport: i0,
     type: StepperAnimationsExample,
     deps: [],
@@ -1726,7 +1726,7 @@ class StepperAnimationsExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.0.0-next.9",
+    version: "22.0.0-next.10",
     type: StepperAnimationsExample,
     isStandalone: true,
     selector: "stepper-animations-example",
@@ -1833,7 +1833,7 @@ class StepperAnimationsExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.0.0-next.9",
+  version: "22.0.0-next.10",
   ngImport: i0,
   type: StepperAnimationsExample,
   decorators: [{

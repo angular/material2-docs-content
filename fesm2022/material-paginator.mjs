@@ -36,7 +36,7 @@ class PaginatorConfigurableExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.0.0-next.9",
+    version: "22.0.0-next.10",
     ngImport: i0,
     type: PaginatorConfigurableExample,
     deps: [],
@@ -44,7 +44,7 @@ class PaginatorConfigurableExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.0.0-next.9",
+    version: "22.0.0-next.10",
     type: PaginatorConfigurableExample,
     isStandalone: true,
     selector: "paginator-configurable-example",
@@ -124,7 +124,7 @@ class PaginatorConfigurableExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.0.0-next.9",
+  version: "22.0.0-next.10",
   ngImport: i0,
   type: PaginatorConfigurableExample,
   decorators: [{
@@ -141,7 +141,7 @@ i0.ɵɵngDeclareClassMetadata({
 class PaginatorOverviewExample {
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.0.0-next.9",
+    version: "22.0.0-next.10",
     ngImport: i0,
     type: PaginatorOverviewExample,
     deps: [],
@@ -149,7 +149,7 @@ class PaginatorOverviewExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.0.0-next.9",
+    version: "22.0.0-next.10",
     type: PaginatorOverviewExample,
     isStandalone: true,
     selector: "paginator-overview-example",
@@ -170,7 +170,7 @@ class PaginatorOverviewExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.0.0-next.9",
+  version: "22.0.0-next.10",
   ngImport: i0,
   type: PaginatorOverviewExample,
   decorators: [{
@@ -196,7 +196,7 @@ class PaginatorHarnessExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.0.0-next.9",
+    version: "22.0.0-next.10",
     ngImport: i0,
     type: PaginatorHarnessExample,
     deps: [],
@@ -204,7 +204,7 @@ class PaginatorHarnessExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.0.0-next.9",
+    version: "22.0.0-next.10",
     type: PaginatorHarnessExample,
     isStandalone: true,
     selector: "paginator-harness-example",
@@ -225,7 +225,7 @@ class PaginatorHarnessExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.0.0-next.9",
+  version: "22.0.0-next.10",
   ngImport: i0,
   type: PaginatorHarnessExample,
   decorators: [{
@@ -254,7 +254,7 @@ class MyCustomPaginatorIntl {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.0.0-next.9",
+    version: "22.0.0-next.10",
     ngImport: i0,
     type: MyCustomPaginatorIntl,
     deps: [],
@@ -262,7 +262,7 @@ class MyCustomPaginatorIntl {
   });
   static ɵprov = i0.ɵɵngDeclareService({
     minVersion: "22.0.0",
-    version: "22.0.0-next.9",
+    version: "22.0.0-next.10",
     ngImport: i0,
     type: MyCustomPaginatorIntl,
     autoProvided: false
@@ -270,7 +270,7 @@ class MyCustomPaginatorIntl {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.0.0-next.9",
+  version: "22.0.0-next.10",
   ngImport: i0,
   type: MyCustomPaginatorIntl,
   decorators: [{
@@ -283,7 +283,7 @@ i0.ɵɵngDeclareClassMetadata({
 class PaginatorIntlExample {
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.0.0-next.9",
+    version: "22.0.0-next.10",
     ngImport: i0,
     type: PaginatorIntlExample,
     deps: [],
@@ -291,7 +291,7 @@ class PaginatorIntlExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.0.0-next.9",
+    version: "22.0.0-next.10",
     type: PaginatorIntlExample,
     isStandalone: true,
     selector: "paginator-intl-example",
@@ -316,7 +316,7 @@ class PaginatorIntlExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.0.0-next.9",
+  version: "22.0.0-next.10",
   ngImport: i0,
   type: PaginatorIntlExample,
   decorators: [{
