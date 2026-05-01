@@ -98,11 +98,10 @@ declare class ChipsFormControlExample {
  * @title Chips in reactive forms
  */
 declare class ChipsReactiveFormExample {
-    readonly reactiveKeywords: i0.WritableSignal<string[]>;
-    readonly formControl: FormControl<string[] | null>;
-    announcer: LiveAnnouncer;
-    removeReactiveKeyword(keyword: string): void;
-    addReactiveKeyword(event: MatChipInputEvent): void;
+    private _announcer;
+    readonly formControl: FormControl<string[]>;
+    addKeyword(event: MatChipInputEvent): void;
+    removeKeyword(keyword: string): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<ChipsReactiveFormExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<ChipsReactiveFormExample, "chips-reactive-form-example", never, {}, {}, never, never, true, never>;
 }
@@ -111,10 +110,10 @@ declare class ChipsReactiveFormExample {
  * @title Chips in template-driven forms
  */
 declare class ChipsTemplateFormExample {
-    readonly templateKeywords: i0.WritableSignal<string[]>;
-    announcer: LiveAnnouncer;
-    removeTemplateKeyword(keyword: string): void;
-    addTemplateKeyword(event: MatChipInputEvent): void;
+    private _announcer;
+    readonly keywords: i0.WritableSignal<string[]>;
+    addKeyword(event: MatChipInputEvent): void;
+    removeKeyword(keyword: string): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<ChipsTemplateFormExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<ChipsTemplateFormExample, "chips-template-form-example", never, {}, {}, never, never, true, never>;
 }

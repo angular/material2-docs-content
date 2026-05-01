@@ -1,5 +1,5 @@
 <span class="hljs-keyword">import</span> {<span class="hljs-title class_">LiveAnnouncer</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/a11y&#x27;</span>;
-<span class="hljs-keyword">import</span> {<span class="hljs-title class_">ChangeDetectionStrategy</span>, <span class="hljs-title class_">Component</span>, inject, signal} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">ChangeDetectionStrategy</span>, <span class="hljs-title class_">Component</span>, inject} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
 <span class="hljs-keyword">import</span> {<span class="hljs-title class_">FormControl</span>, <span class="hljs-title class_">ReactiveFormsModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/forms&#x27;</span>;
 <span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatButtonModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/button&#x27;</span>;
 <span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatChipInputEvent</span>, <span class="hljs-title class_">MatChipsModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/chips&#x27;</span>;
@@ -23,34 +23,31 @@
   <span class="hljs-attr">changeDetection</span>: <span class="hljs-title class_">ChangeDetectionStrategy</span>.<span class="hljs-property">OnPush</span>,
 })
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">ChipsReactiveFormExample</span> {
-  <span class="hljs-keyword">readonly</span> reactiveKeywords = <span class="hljs-title function_">signal</span>([<span class="hljs-string">&#x27;angular&#x27;</span>, <span class="hljs-string">&#x27;how-to&#x27;</span>, <span class="hljs-string">&#x27;tutorial&#x27;</span>, <span class="hljs-string">&#x27;accessibility&#x27;</span>]);
-  <span class="hljs-keyword">readonly</span> formControl = <span class="hljs-keyword">new</span> <span class="hljs-title class_">FormControl</span>([<span class="hljs-string">&#x27;angular&#x27;</span>]);
+  <span class="hljs-keyword">private</span> _announcer = <span class="hljs-title function_">inject</span>(<span class="hljs-title class_">LiveAnnouncer</span>);
 
-  announcer = <span class="hljs-title function_">inject</span>(<span class="hljs-title class_">LiveAnnouncer</span>);
+  <span class="hljs-keyword">readonly</span> formControl = <span class="hljs-keyword">new</span> <span class="hljs-title class_">FormControl</span>([<span class="hljs-string">&#x27;angular&#x27;</span>, <span class="hljs-string">&#x27;how-to&#x27;</span>, <span class="hljs-string">&#x27;tutorial&#x27;</span>, <span class="hljs-string">&#x27;accessibility&#x27;</span>], {
+    <span class="hljs-attr">nonNullable</span>: <span class="hljs-literal">true</span>,
+  });
 
-  <span class="hljs-title function_">removeReactiveKeyword</span>(<span class="hljs-params"><span class="hljs-attr">keyword</span>: <span class="hljs-built_in">string</span></span>) {
-    <span class="hljs-variable language_">this</span>.<span class="hljs-property">reactiveKeywords</span>.<span class="hljs-title function_">update</span>(<span class="hljs-function"><span class="hljs-params">keywords</span> =&gt;</span> {
-      <span class="hljs-keyword">const</span> index = keywords.<span class="hljs-title function_">indexOf</span>(keyword);
-      <span class="hljs-keyword">if</span> (index &lt; <span class="hljs-number">0</span>) {
-        <span class="hljs-keyword">return</span> keywords;
-      }
-
-      keywords.<span class="hljs-title function_">splice</span>(index, <span class="hljs-number">1</span>);
-      <span class="hljs-variable language_">this</span>.<span class="hljs-property">announcer</span>.<span class="hljs-title function_">announce</span>(<span class="hljs-string">`removed <span class="hljs-subst">${keyword}</span> from reactive form`</span>);
-      <span class="hljs-keyword">return</span> [...keywords];
-    });
-  }
-
-  <span class="hljs-title function_">addReactiveKeyword</span>(<span class="hljs-attr">event</span>: <span class="hljs-title class_">MatChipInputEvent</span>): <span class="hljs-built_in">void</span> {
+  <span class="hljs-title function_">addKeyword</span>(<span class="hljs-attr">event</span>: <span class="hljs-title class_">MatChipInputEvent</span>): <span class="hljs-built_in">void</span> {
     <span class="hljs-keyword">const</span> value = (event.<span class="hljs-property">value</span> || <span class="hljs-string">&#x27;&#x27;</span>).<span class="hljs-title function_">trim</span>();
 
-    <span class="hljs-comment">// Add our keyword</span>
     <span class="hljs-keyword">if</span> (value) {
-      <span class="hljs-variable language_">this</span>.<span class="hljs-property">reactiveKeywords</span>.<span class="hljs-title function_">update</span>(<span class="hljs-function"><span class="hljs-params">keywords</span> =&gt;</span> [...keywords, value]);
-      <span class="hljs-variable language_">this</span>.<span class="hljs-property">announcer</span>.<span class="hljs-title function_">announce</span>(<span class="hljs-string">`added <span class="hljs-subst">${value}</span> to reactive form`</span>);
+      <span class="hljs-variable language_">this</span>.<span class="hljs-property">formControl</span>.<span class="hljs-title function_">setValue</span>([...<span class="hljs-variable language_">this</span>.<span class="hljs-property">formControl</span>.<span class="hljs-property">value</span>, value]);
+      <span class="hljs-variable language_">this</span>.<span class="hljs-property">_announcer</span>.<span class="hljs-title function_">announce</span>(<span class="hljs-string">`added <span class="hljs-subst">${value}</span> to reactive form`</span>);
     }
 
-    <span class="hljs-comment">// Clear the input value</span>
-    event.<span class="hljs-property">chipInput</span>!.<span class="hljs-title function_">clear</span>();
+    event.<span class="hljs-property">chipInput</span>.<span class="hljs-title function_">clear</span>();
+  }
+
+  <span class="hljs-title function_">removeKeyword</span>(<span class="hljs-params"><span class="hljs-attr">keyword</span>: <span class="hljs-built_in">string</span></span>) {
+    <span class="hljs-keyword">const</span> keywords = <span class="hljs-variable language_">this</span>.<span class="hljs-property">formControl</span>.<span class="hljs-property">value</span>;
+    <span class="hljs-keyword">const</span> index = keywords.<span class="hljs-title function_">lastIndexOf</span>(keyword);
+
+    <span class="hljs-keyword">if</span> (index &gt; -<span class="hljs-number">1</span>) {
+      keywords.<span class="hljs-title function_">splice</span>(index, <span class="hljs-number">1</span>);
+      <span class="hljs-variable language_">this</span>.<span class="hljs-property">formControl</span>.<span class="hljs-title function_">setValue</span>([...keywords]);
+      <span class="hljs-variable language_">this</span>.<span class="hljs-property">_announcer</span>.<span class="hljs-title function_">announce</span>(<span class="hljs-string">`removed <span class="hljs-subst">${keyword}</span> from reactive form`</span>);
+    }
   }
 }

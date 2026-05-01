@@ -17,33 +17,30 @@
   <span class="hljs-attr">changeDetection</span>: <span class="hljs-title class_">ChangeDetectionStrategy</span>.<span class="hljs-property">OnPush</span>,
 })
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">ChipsTemplateFormExample</span> {
-  <span class="hljs-keyword">readonly</span> templateKeywords = <span class="hljs-title function_">signal</span>([<span class="hljs-string">&#x27;angular&#x27;</span>, <span class="hljs-string">&#x27;how-to&#x27;</span>, <span class="hljs-string">&#x27;tutorial&#x27;</span>, <span class="hljs-string">&#x27;accessibility&#x27;</span>]);
+  <span class="hljs-keyword">private</span> _announcer = <span class="hljs-title function_">inject</span>(<span class="hljs-title class_">LiveAnnouncer</span>);
+  <span class="hljs-keyword">readonly</span> keywords = <span class="hljs-title function_">signal</span>([<span class="hljs-string">&#x27;angular&#x27;</span>, <span class="hljs-string">&#x27;how-to&#x27;</span>, <span class="hljs-string">&#x27;tutorial&#x27;</span>, <span class="hljs-string">&#x27;accessibility&#x27;</span>]);
 
-  announcer = <span class="hljs-title function_">inject</span>(<span class="hljs-title class_">LiveAnnouncer</span>);
+  <span class="hljs-title function_">addKeyword</span>(<span class="hljs-attr">event</span>: <span class="hljs-title class_">MatChipInputEvent</span>): <span class="hljs-built_in">void</span> {
+    <span class="hljs-keyword">const</span> value = (event.<span class="hljs-property">value</span> || <span class="hljs-string">&#x27;&#x27;</span>).<span class="hljs-title function_">trim</span>();
 
-  <span class="hljs-title function_">removeTemplateKeyword</span>(<span class="hljs-params"><span class="hljs-attr">keyword</span>: <span class="hljs-built_in">string</span></span>) {
-    <span class="hljs-variable language_">this</span>.<span class="hljs-property">templateKeywords</span>.<span class="hljs-title function_">update</span>(<span class="hljs-function"><span class="hljs-params">keywords</span> =&gt;</span> {
+    <span class="hljs-keyword">if</span> (value) {
+      <span class="hljs-variable language_">this</span>.<span class="hljs-property">keywords</span>.<span class="hljs-title function_">update</span>(<span class="hljs-function"><span class="hljs-params">keywords</span> =&gt;</span> [...keywords, value]);
+      <span class="hljs-variable language_">this</span>.<span class="hljs-property">_announcer</span>.<span class="hljs-title function_">announce</span>(<span class="hljs-string">`added <span class="hljs-subst">${value}</span> to template form`</span>);
+    }
+
+    event.<span class="hljs-property">chipInput</span>.<span class="hljs-title function_">clear</span>();
+  }
+
+  <span class="hljs-title function_">removeKeyword</span>(<span class="hljs-params"><span class="hljs-attr">keyword</span>: <span class="hljs-built_in">string</span></span>) {
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">keywords</span>.<span class="hljs-title function_">update</span>(<span class="hljs-function"><span class="hljs-params">keywords</span> =&gt;</span> {
       <span class="hljs-keyword">const</span> index = keywords.<span class="hljs-title function_">indexOf</span>(keyword);
       <span class="hljs-keyword">if</span> (index &lt; <span class="hljs-number">0</span>) {
         <span class="hljs-keyword">return</span> keywords;
       }
 
       keywords.<span class="hljs-title function_">splice</span>(index, <span class="hljs-number">1</span>);
-      <span class="hljs-variable language_">this</span>.<span class="hljs-property">announcer</span>.<span class="hljs-title function_">announce</span>(<span class="hljs-string">`removed <span class="hljs-subst">${keyword}</span> from template form`</span>);
+      <span class="hljs-variable language_">this</span>.<span class="hljs-property">_announcer</span>.<span class="hljs-title function_">announce</span>(<span class="hljs-string">`removed <span class="hljs-subst">${keyword}</span> from template form`</span>);
       <span class="hljs-keyword">return</span> [...keywords];
     });
-  }
-
-  <span class="hljs-title function_">addTemplateKeyword</span>(<span class="hljs-attr">event</span>: <span class="hljs-title class_">MatChipInputEvent</span>): <span class="hljs-built_in">void</span> {
-    <span class="hljs-keyword">const</span> value = (event.<span class="hljs-property">value</span> || <span class="hljs-string">&#x27;&#x27;</span>).<span class="hljs-title function_">trim</span>();
-
-    <span class="hljs-comment">// Add our keyword</span>
-    <span class="hljs-keyword">if</span> (value) {
-      <span class="hljs-variable language_">this</span>.<span class="hljs-property">templateKeywords</span>.<span class="hljs-title function_">update</span>(<span class="hljs-function"><span class="hljs-params">keywords</span> =&gt;</span> [...keywords, value]);
-      <span class="hljs-variable language_">this</span>.<span class="hljs-property">announcer</span>.<span class="hljs-title function_">announce</span>(<span class="hljs-string">`added <span class="hljs-subst">${value}</span> to template form`</span>);
-    }
-
-    <span class="hljs-comment">// Clear the input value</span>
-    event.<span class="hljs-property">chipInput</span>!.<span class="hljs-title function_">clear</span>();
   }
 }
