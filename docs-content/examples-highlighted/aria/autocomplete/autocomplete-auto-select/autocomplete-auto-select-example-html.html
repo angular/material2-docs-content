@@ -1,0 +1,46 @@
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-combobox-container&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> #<span class="hljs-attr">origin</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-autocomplete&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-search-icon material-symbols-outlined&quot;</span> <span class="hljs-attr">translate</span>=<span class="hljs-string">&quot;no&quot;</span>&gt;</span>search<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span>
+      <span class="hljs-attr">ngCombobox</span>
+      #<span class="hljs-attr">combobox</span>=<span class="hljs-string">&quot;ngCombobox&quot;</span>
+      <span class="hljs-attr">aria-label</span>=<span class="hljs-string">&quot;Label dropdown&quot;</span>
+      <span class="hljs-attr">placeholder</span>=<span class="hljs-string">&quot;Select a country&quot;</span>
+      [(<span class="hljs-attr">value</span>)]=<span class="hljs-string">&quot;searchString&quot;</span>
+      [(<span class="hljs-attr">expanded</span>)]=<span class="hljs-string">&quot;popupExpanded&quot;</span>
+      (<span class="hljs-attr">click</span>)=<span class="hljs-string">&quot;popupExpanded.set(true)&quot;</span>
+    /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">button</span>
+      <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-clear-button&quot;</span>
+      <span class="hljs-attr">aria-label</span>=<span class="hljs-string">&quot;Clear&quot;</span>
+      (<span class="hljs-attr">keydown</span>)=<span class="hljs-string">&quot;onKeydown($event)&quot;</span>
+      (<span class="hljs-attr">click</span>)=<span class="hljs-string">&quot;clear()&quot;</span>
+    &gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">&quot;true&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-clear-icon material-symbols-outlined&quot;</span>&gt;</span>close<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">aria-live</span>=<span class="hljs-string">&quot;polite&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;cdk-visually-hidden&quot;</span>&gt;</span>
+    {{countries().length === 0 ? &#x27;No results found for &#x27; + query() : &#x27;&#x27;}}
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">ng-template</span> [<span class="hljs-attr">cdkConnectedOverlay</span>]=<span class="hljs-string">&quot;{origin, usePopover: &#x27;inline&#x27;, matchWidth: true}&quot;</span> [<span class="hljs-attr">cdkConnectedOverlayOpen</span>]=<span class="hljs-string">&quot;popupExpanded()&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">ng-template</span> <span class="hljs-attr">ngComboboxPopup</span> [<span class="hljs-attr">combobox</span>]=<span class="hljs-string">&quot;combobox&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-popup&quot;</span>&gt;</span>
+        @if (countries().length === 0) {
+          <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-no-results&quot;</span>&gt;</span>No results found<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        }
+
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">ngListbox</span> <span class="hljs-attr">ngComboboxWidget</span> <span class="hljs-attr">focusMode</span>=<span class="hljs-string">&quot;activedescendant&quot;</span> [<span class="hljs-attr">tabindex</span>]=<span class="hljs-string">&quot;-1&quot;</span> [(<span class="hljs-attr">value</span>)]=<span class="hljs-string">&quot;selectedOption&quot;</span>
+          (<span class="hljs-attr">click</span>)=<span class="hljs-string">&quot;onCommit()&quot;</span> (<span class="hljs-attr">keydown.enter</span>)=<span class="hljs-string">&quot;onCommit()&quot;</span>&gt;</span>
+          @for (country of countries(); track country) {
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">ngOption</span> [<span class="hljs-attr">value</span>]=<span class="hljs-string">&quot;country&quot;</span> [<span class="hljs-attr">label</span>]=<span class="hljs-string">&quot;country&quot;</span> [<span class="hljs-attr">disabled</span>]=<span class="hljs-string">&quot;country === &#x27;Brazil&#x27;&quot;</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-option-label&quot;</span>&gt;</span>{{country}}<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-check-icon material-symbols-outlined&quot;</span> <span class="hljs-attr">translate</span>=<span class="hljs-string">&quot;no&quot;</span>&gt;</span>check<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+          }
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">ng-template</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">ng-template</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>

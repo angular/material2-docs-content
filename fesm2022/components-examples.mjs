@@ -1,4 +1,44 @@
 const EXAMPLE_COMPONENTS = {
+  "autocomplete-auto-select": {
+    "packagePath": "aria/autocomplete/autocomplete-auto-select",
+    "title": "Autocomplete with auto-select filtering.",
+    "componentName": "AutocompleteAutoSelectExample",
+    "files": ["autocomplete-auto-select-example.ts", "autocomplete-auto-select-example.html", "../autocomplete.css"],
+    "selector": "autocomplete-auto-select-example",
+    "additionalComponents": [],
+    "primaryFile": "autocomplete-auto-select-example.ts",
+    "importPath": "aria/autocomplete"
+  },
+  "autocomplete-disabled": {
+    "packagePath": "aria/autocomplete/autocomplete-disabled",
+    "title": "Disabled autocomplete.",
+    "componentName": "AutocompleteDisabledExample",
+    "files": ["autocomplete-disabled-example.ts", "autocomplete-disabled-example.html", "../autocomplete.css"],
+    "selector": "autocomplete-disabled-example",
+    "additionalComponents": [],
+    "primaryFile": "autocomplete-disabled-example.ts",
+    "importPath": "aria/autocomplete"
+  },
+  "autocomplete-highlight": {
+    "packagePath": "aria/autocomplete/autocomplete-highlight",
+    "title": "Autocomplete with highlighted filtering.",
+    "componentName": "AutocompleteHighlightExample",
+    "files": ["autocomplete-highlight-example.ts", "autocomplete-highlight-example.html", "../autocomplete.css"],
+    "selector": "autocomplete-highlight-example",
+    "additionalComponents": [],
+    "primaryFile": "autocomplete-highlight-example.ts",
+    "importPath": "aria/autocomplete"
+  },
+  "autocomplete-manual": {
+    "packagePath": "aria/autocomplete/autocomplete-manual",
+    "title": "Combobox Autocomplete with manual filtering.",
+    "componentName": "AutocompleteManualExample",
+    "files": ["autocomplete-manual-example.ts", "autocomplete-manual-example.html", "../autocomplete.css"],
+    "selector": "autocomplete-manual-example",
+    "additionalComponents": [],
+    "primaryFile": "autocomplete-manual-example.ts",
+    "importPath": "aria/autocomplete"
+  },
   "cdk-popover-edit-cdk-table-flex": {
     "packagePath": "cdk-experimental/popover-edit/cdk-popover-edit-cdk-table-flex",
     "title": "CDK Popover Edit on a flex cdk-table.",
@@ -3492,6 +3532,14 @@ const EXAMPLE_COMPONENTS = {
 };
 async function loadExample(id) {
   switch (id) {
+    case 'autocomplete-auto-select':
+      return import('@angular/components-examples/aria/autocomplete');
+    case 'autocomplete-disabled':
+      return import('@angular/components-examples/aria/autocomplete');
+    case 'autocomplete-highlight':
+      return import('@angular/components-examples/aria/autocomplete');
+    case 'autocomplete-manual':
+      return import('@angular/components-examples/aria/autocomplete');
     case 'cdk-popover-edit-cdk-table-flex':
       return import('@angular/components-examples/cdk-experimental/popover-edit');
     case 'cdk-popover-edit-cdk-table':
