@@ -56,7 +56,7 @@ class AutocompleteAutoSelectExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.0.0-next.10",
+    version: "22.0.0-next.12",
     ngImport: i0,
     type: AutocompleteAutoSelectExample,
     deps: [],
@@ -64,7 +64,7 @@ class AutocompleteAutoSelectExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "22.0.0-next.10",
+    version: "22.0.0-next.12",
     type: AutocompleteAutoSelectExample,
     isStandalone: true,
     selector: "autocomplete-auto-select-example",
@@ -135,7 +135,7 @@ class AutocompleteAutoSelectExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.0.0-next.10",
+  version: "22.0.0-next.12",
   ngImport: i0,
   type: AutocompleteAutoSelectExample,
   decorators: [{
@@ -194,7 +194,7 @@ class AutocompleteDisabledExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.0.0-next.10",
+    version: "22.0.0-next.12",
     ngImport: i0,
     type: AutocompleteDisabledExample,
     deps: [],
@@ -202,7 +202,7 @@ class AutocompleteDisabledExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "22.0.0-next.10",
+    version: "22.0.0-next.12",
     type: AutocompleteDisabledExample,
     isStandalone: true,
     selector: "autocomplete-disabled-example",
@@ -273,7 +273,7 @@ class AutocompleteDisabledExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.0.0-next.10",
+  version: "22.0.0-next.12",
   ngImport: i0,
   type: AutocompleteDisabledExample,
   decorators: [{
@@ -359,7 +359,7 @@ class AutocompleteHighlightExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.0.0-next.10",
+    version: "22.0.0-next.12",
     ngImport: i0,
     type: AutocompleteHighlightExample,
     deps: [],
@@ -367,7 +367,7 @@ class AutocompleteHighlightExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "22.0.0-next.10",
+    version: "22.0.0-next.12",
     type: AutocompleteHighlightExample,
     isStandalone: true,
     selector: "autocomplete-highlight-example",
@@ -438,7 +438,7 @@ class AutocompleteHighlightExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.0.0-next.10",
+  version: "22.0.0-next.12",
   ngImport: i0,
   type: AutocompleteHighlightExample,
   decorators: [{
@@ -516,7 +516,7 @@ class AutocompleteManualExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.0.0-next.10",
+    version: "22.0.0-next.12",
     ngImport: i0,
     type: AutocompleteManualExample,
     deps: [],
@@ -524,7 +524,7 @@ class AutocompleteManualExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "22.0.0-next.10",
+    version: "22.0.0-next.12",
     type: AutocompleteManualExample,
     isStandalone: true,
     selector: "autocomplete-manual-example",
@@ -595,7 +595,7 @@ class AutocompleteManualExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.0.0-next.10",
+  version: "22.0.0-next.12",
   ngImport: i0,
   type: AutocompleteManualExample,
   decorators: [{
