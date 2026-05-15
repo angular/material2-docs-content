@@ -769,7 +769,7 @@ class TooltipPositionAtOriginExample {
     selector: "tooltip-position-at-origin-example",
     ngImport: i0,
     template: "<button matButton=\"elevated\"\n        class=\"demo-button\"\n        matTooltip=\"Info about the action\"\n        [matTooltipPositionAtOrigin]=\"enabled.value\"\n        aria-label=\"Button that displays a tooltip when focused or hovered over\">\n  Action\n</button>\n\n<mat-checkbox [formControl]=\"enabled\" class=\"example-enabled-checkbox\">\n  Position at origin enabled\n</mat-checkbox>\n",
-    styles: ["button.demo-button {\n  width: 500px;\n  height: 500px;\n}\n\n.example-enabled-checkbox {\n  margin-left: 8px;\n}\n"],
+    styles: ["button.demo-button {\n  width: 200px;\n  height: 200px;\n  margin: 0 8px 8px 0;\n}\n"],
     dependencies: [{
       kind: "ngmodule",
       type: MatButtonModule
@@ -829,7 +829,7 @@ i0.ɵɵngDeclareClassMetadata({
       selector: 'tooltip-position-at-origin-example',
       imports: [MatButtonModule, MatTooltipModule, MatCheckboxModule, FormsModule, ReactiveFormsModule],
       template: "<button matButton=\"elevated\"\n        class=\"demo-button\"\n        matTooltip=\"Info about the action\"\n        [matTooltipPositionAtOrigin]=\"enabled.value\"\n        aria-label=\"Button that displays a tooltip when focused or hovered over\">\n  Action\n</button>\n\n<mat-checkbox [formControl]=\"enabled\" class=\"example-enabled-checkbox\">\n  Position at origin enabled\n</mat-checkbox>\n",
-      styles: ["button.demo-button {\n  width: 500px;\n  height: 500px;\n}\n\n.example-enabled-checkbox {\n  margin-left: 8px;\n}\n"]
+      styles: ["button.demo-button {\n  width: 200px;\n  height: 200px;\n  margin: 0 8px 8px 0;\n}\n"]
     }]
   }]
 });
