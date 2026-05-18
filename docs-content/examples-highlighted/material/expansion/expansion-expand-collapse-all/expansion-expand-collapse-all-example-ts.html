@@ -1,4 +1,4 @@
-<span class="hljs-keyword">import</span> {<span class="hljs-title class_">ChangeDetectionStrategy</span>, <span class="hljs-title class_">Component</span>, viewChild} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">Component</span>, viewChild} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
 <span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatButtonModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/button&#x27;</span>;
 <span class="hljs-keyword">import</span> {provideNativeDateAdapter} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/core&#x27;</span>;
 <span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatDatepickerModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/datepicker&#x27;</span>;
@@ -23,7 +23,6 @@
     <span class="hljs-title class_">MatInputModule</span>,
     <span class="hljs-title class_">MatDatepickerModule</span>,
   ],
-  <span class="hljs-attr">changeDetection</span>: <span class="hljs-title class_">ChangeDetectionStrategy</span>.<span class="hljs-property">OnPush</span>,
 })
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">ExpansionExpandCollapseAllExample</span> {
   accordion = viewChild.<span class="hljs-title function_">required</span>(<span class="hljs-title class_">MatAccordion</span>);

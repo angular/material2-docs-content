@@ -1,5 +1,5 @@
 import * as i0 from '@angular/core';
-import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import * as i1 from '@angular/material/button-toggle';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import * as i3 from '@angular/forms';
@@ -42,8 +42,7 @@ class ButtonToggleAppearanceExample {
       inputs: ["aria-label", "aria-labelledby", "id", "name", "value", "tabIndex", "disableRipple", "appearance", "checked", "disabled", "disabledInteractive"],
       outputs: ["change"],
       exportAs: ["matButtonToggle"]
-    }],
-    changeDetection: i0.ChangeDetectionStrategy.OnPush
+    }]
   });
 }
 i0.ɵɵngDeclareClassMetadata({
@@ -56,7 +55,6 @@ i0.ɵɵngDeclareClassMetadata({
     args: [{
       selector: 'button-toggle-appearance-example',
       imports: [MatButtonToggleModule],
-      changeDetection: ChangeDetectionStrategy.OnPush,
       template: "<p>\n  Default appearance:\n  <mat-button-toggle-group name=\"fontStyle\" aria-label=\"Font Style\">\n    <mat-button-toggle value=\"bold\">Bold</mat-button-toggle>\n    <mat-button-toggle value=\"italic\">Italic</mat-button-toggle>\n    <mat-button-toggle value=\"underline\">Underline</mat-button-toggle>\n  </mat-button-toggle-group>\n</p>\n\n<p>\n  Legacy appearance:\n  <mat-button-toggle-group appearance=\"legacy\" name=\"fontStyle\" aria-label=\"Font Style\">\n    <mat-button-toggle value=\"bold\">Bold</mat-button-toggle>\n    <mat-button-toggle value=\"italic\">Italic</mat-button-toggle>\n    <mat-button-toggle value=\"underline\">Underline</mat-button-toggle>\n  </mat-button-toggle-group>\n</p>\n",
       styles: ["mat-button-toggle-group {\n  margin-left: 12px;\n}\n"]
     }]
@@ -155,8 +153,7 @@ class ButtonToggleHarnessExample {
       inputs: ["aria-label", "aria-labelledby", "id", "name", "value", "tabIndex", "disableRipple", "appearance", "checked", "disabled", "disabledInteractive"],
       outputs: ["change"],
       exportAs: ["matButtonToggle"]
-    }],
-    changeDetection: i0.ChangeDetectionStrategy.OnPush
+    }]
   });
 }
 i0.ɵɵngDeclareClassMetadata({
@@ -169,7 +166,6 @@ i0.ɵɵngDeclareClassMetadata({
     args: [{
       selector: 'button-toggle-harness-example',
       imports: [MatButtonToggleModule],
-      changeDetection: ChangeDetectionStrategy.OnPush,
       template: "<mat-button-toggle-group [disabled]=\"disabled()\" [appearance]=\"appearance()\">\n  <mat-button-toggle value=\"1\">One</mat-button-toggle>\n  <mat-button-toggle value=\"2\">Two</mat-button-toggle>\n</mat-button-toggle-group>\n"
     }]
   }]
@@ -235,8 +231,7 @@ class ButtonToggleFormsExample {
       inputs: ["formControl", "disabled", "ngModel"],
       outputs: ["ngModelChange"],
       exportAs: ["ngForm"]
-    }],
-    changeDetection: i0.ChangeDetectionStrategy.OnPush
+    }]
   });
 }
 i0.ɵɵngDeclareClassMetadata({
@@ -249,7 +244,6 @@ i0.ɵɵngDeclareClassMetadata({
     args: [{
       selector: 'button-toggle-forms-example',
       imports: [MatButtonToggleModule, FormsModule, ReactiveFormsModule],
-      changeDetection: ChangeDetectionStrategy.OnPush,
       template: "<section>\n  <h4>Button Toggle inside of a Template-driven form</h4>\n  <mat-button-toggle-group [(ngModel)]=\"fontStyle\" aria-label=\"Font Style\">\n    <mat-button-toggle value=\"bold\">Bold</mat-button-toggle>\n    <mat-button-toggle value=\"italic\">Italic</mat-button-toggle>\n    <mat-button-toggle value=\"underline\">Underline</mat-button-toggle>\n  </mat-button-toggle-group>\n  <p>Chosen value is {{fontStyle}}</p>\n</section>\n\n<section>\n  <h4>Button Toggle inside of a Reactive form</h4>\n  <mat-button-toggle-group [formControl]=\"fontStyleControl\" aria-label=\"Font Style\">\n    <mat-button-toggle value=\"bold\">Bold</mat-button-toggle>\n    <mat-button-toggle value=\"italic\">Italic</mat-button-toggle>\n    <mat-button-toggle value=\"underline\">Underline</mat-button-toggle>\n  </mat-button-toggle-group>\n  <p>Chosen value is {{fontStyleControl.value}}</p>\n</section>\n\n"
     }]
   }]
@@ -311,8 +305,7 @@ class ButtonToggleModeExample {
       inputs: ["aria-label", "aria-labelledby", "aria-describedby", "aria-expanded", "aria-controls", "aria-owns", "id", "required", "labelPosition", "name", "value", "disableRipple", "tabIndex", "color", "disabledInteractive", "checked", "disabled", "indeterminate"],
       outputs: ["change", "indeterminateChange"],
       exportAs: ["matCheckbox"]
-    }],
-    changeDetection: i0.ChangeDetectionStrategy.OnPush
+    }]
   });
 }
 i0.ɵɵngDeclareClassMetadata({
@@ -325,7 +318,6 @@ i0.ɵɵngDeclareClassMetadata({
     args: [{
       selector: 'button-toggle-mode-example',
       imports: [MatButtonToggleModule, MatCheckboxModule],
-      changeDetection: ChangeDetectionStrategy.OnPush,
       template: "<section>\n  <mat-checkbox\n    [checked]=\"hideSingleSelectionIndicator()\"\n    (change)=\"toggleSingleSelectionIndicator()\"\n  >\n    Hide Single Selection Indicator\n  </mat-checkbox>\n  <mat-checkbox\n    [checked]=\"hideMultipleSelectionIndicator()\"\n    (change)=\"toggleMultipleSelectionIndicator()\"\n  >\n    Hide Multiple Selection Indicator\n  </mat-checkbox>\n</section>\n<section>\n  <h3>Single selection</h3>\n  <mat-button-toggle-group\n    name=\"favoriteColor\"\n    aria-label=\"Favorite Color\"\n    [hideSingleSelectionIndicator]=\"hideSingleSelectionIndicator()\"\n  >\n    <mat-button-toggle value=\"red\">Red</mat-button-toggle>\n    <mat-button-toggle value=\"green\">Green</mat-button-toggle>\n    <mat-button-toggle value=\"blue\">Blue</mat-button-toggle>\n  </mat-button-toggle-group>\n</section>\n<section>\n  <h3>Multiple selection</h3>\n  <mat-button-toggle-group\n    name=\"ingredients\"\n    aria-label=\"Ingredients\"\n    [hideMultipleSelectionIndicator]=\"hideMultipleSelectionIndicator()\"\n    multiple\n  >\n    <mat-button-toggle value=\"flour\">Flour</mat-button-toggle>\n    <mat-button-toggle value=\"eggs\">Eggs</mat-button-toggle>\n    <mat-button-toggle value=\"sugar\">Sugar</mat-button-toggle>\n  </mat-button-toggle-group>\n</section>\n"
     }]
   }]

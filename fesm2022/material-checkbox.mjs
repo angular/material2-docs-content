@@ -1,5 +1,5 @@
 import * as i0 from '@angular/core';
-import { model, ChangeDetectionStrategy, Component, input, signal, computed, inject } from '@angular/core';
+import { model, Component, input, signal, computed, inject } from '@angular/core';
 import * as i3 from '@angular/forms';
 import { FormsModule, FormBuilder, ReactiveFormsModule } from '@angular/forms';
 import * as i1 from '@angular/material/card';
@@ -130,8 +130,7 @@ class CheckboxConfigurableExample {
       inputs: ["id", "name", "aria-label", "aria-labelledby", "aria-describedby", "disableRipple", "tabIndex", "checked", "value", "labelPosition", "disabled", "required", "color", "disabledInteractive"],
       outputs: ["change"],
       exportAs: ["matRadioButton"]
-    }],
-    changeDetection: i0.ChangeDetectionStrategy.OnPush
+    }]
   });
 }
 i0.ɵɵngDeclareClassMetadata({
@@ -144,7 +143,6 @@ i0.ɵɵngDeclareClassMetadata({
     args: [{
       selector: 'checkbox-configurable-example',
       imports: [MatCardModule, MatCheckboxModule, FormsModule, MatRadioModule],
-      changeDetection: ChangeDetectionStrategy.OnPush,
       template: "<mat-card>\n  <mat-card-content>\n    <h2 class=\"example-h2\">Checkbox configuration</h2>\n\n    <section class=\"example-section\">\n      <mat-checkbox class=\"example-margin\" [(ngModel)]=\"checked\">Checked</mat-checkbox>\n      <mat-checkbox class=\"example-margin\" [(ngModel)]=\"indeterminate\">Indeterminate</mat-checkbox>\n    </section>\n\n    <section class=\"example-section\">\n      <label class=\"example-margin\">Align:</label>\n      <mat-radio-group [(ngModel)]=\"labelPosition\">\n        <mat-radio-button class=\"example-margin\" value=\"after\">After</mat-radio-button>\n        <mat-radio-button class=\"example-margin\" value=\"before\">Before</mat-radio-button>\n      </mat-radio-group>\n    </section>\n\n    <section class=\"example-section\">\n      <mat-checkbox class=\"example-margin\" [(ngModel)]=\"disabled\">Disabled</mat-checkbox>\n    </section>\n  </mat-card-content>\n</mat-card>\n\n<mat-card class=\"result\">\n  <mat-card-content>\n    <h2 class=\"example-h2\">Result</h2>\n\n    <section class=\"example-section\">\n      <mat-checkbox\n        class=\"example-margin\"\n        [(ngModel)]=\"checked\"\n        [(indeterminate)]=\"indeterminate\"\n        [labelPosition]=\"labelPosition()\"\n        [disabled]=\"disabled()\"\n      >\n        I'm a checkbox\n      </mat-checkbox>\n    </section>\n  </mat-card-content>\n</mat-card>\n",
       styles: [".example-h2 {\n  margin: 10px;\n}\n\n.example-section {\n  display: flex;\n  align-content: center;\n  align-items: center;\n  height: 60px;\n}\n\n.example-margin {\n  margin: 0 10px;\n}\n"]
     }]
@@ -236,8 +234,7 @@ class CheckboxHarnessExample {
       inputs: ["aria-label", "aria-labelledby", "aria-describedby", "aria-expanded", "aria-controls", "aria-owns", "id", "required", "labelPosition", "name", "value", "disableRipple", "tabIndex", "color", "disabledInteractive", "checked", "disabled", "indeterminate"],
       outputs: ["change", "indeterminateChange"],
       exportAs: ["matCheckbox"]
-    }],
-    changeDetection: i0.ChangeDetectionStrategy.OnPush
+    }]
   });
 }
 i0.ɵɵngDeclareClassMetadata({
@@ -250,7 +247,6 @@ i0.ɵɵngDeclareClassMetadata({
     args: [{
       selector: 'checkbox-harness-example',
       imports: [MatCheckboxModule],
-      changeDetection: ChangeDetectionStrategy.OnPush,
       template: "<mat-checkbox\n  required\n  [checked]=\"true\"\n  name=\"first-name\"\n  value=\"first-value\"\n  aria-label=\"First checkbox\"\n>\n  First\n</mat-checkbox>\n<mat-checkbox indeterminate=\"true\" [disabled]=\"disabled()\" aria-label=\"Second checkbox\">\n  Second\n</mat-checkbox>\n"
     }]
   }],
@@ -336,8 +332,7 @@ class CheckboxOverviewExample {
     }, {
       kind: "ngmodule",
       type: FormsModule
-    }],
-    changeDetection: i0.ChangeDetectionStrategy.OnPush
+    }]
   });
 }
 i0.ɵɵngDeclareClassMetadata({
@@ -350,7 +345,6 @@ i0.ɵɵngDeclareClassMetadata({
     args: [{
       selector: 'checkbox-overview-example',
       imports: [MatCheckboxModule, FormsModule],
-      changeDetection: ChangeDetectionStrategy.OnPush,
       template: "<section class=\"example-section\">\n  <mat-checkbox class=\"example-margin\">Check me!</mat-checkbox>\n  <mat-checkbox class=\"example-margin\" [disabled]=\"true\">Disabled</mat-checkbox>\n</section>\n\n<section class=\"example-section\">\n  <span class=\"example-list-section\">\n    <mat-checkbox\n      class=\"example-margin\"\n      [checked]=\"task().completed\"\n      [indeterminate]=\"partiallyComplete()\"\n      (change)=\"update($event.checked)\"\n    >\n      {{task().name}}\n    </mat-checkbox>\n  </span>\n  <span class=\"example-list-section\">\n    <ul>\n      @for (subtask of task().subtasks; track subtask; let i = $index) {\n        <li>\n          <mat-checkbox [checked]=\"subtask.completed\" (change)=\"update($event.checked, i)\">\n            {{subtask.name}}\n          </mat-checkbox>\n        </li>\n      }\n    </ul>\n  </span>\n</section>\n",
       styles: [".example-section {\n  margin: 12px 0;\n}\n\n.example-margin {\n  margin: 0 12px;\n}\n\nul {\n  list-style-type: none;\n  margin-top: 4px;\n}\n"]
     }]
@@ -422,8 +416,7 @@ class CheckboxReactiveFormsExample {
       kind: "pipe",
       type: JsonPipe,
       name: "json"
-    }],
-    changeDetection: i0.ChangeDetectionStrategy.OnPush
+    }]
   });
 }
 i0.ɵɵngDeclareClassMetadata({
@@ -436,7 +429,6 @@ i0.ɵɵngDeclareClassMetadata({
     args: [{
       selector: 'checkbox-reactive-forms-example',
       imports: [FormsModule, ReactiveFormsModule, MatCheckboxModule, JsonPipe],
-      changeDetection: ChangeDetectionStrategy.OnPush,
       template: "<section class=\"example-section\" [formGroup]=\"toppings\">\n  <h4>Select your toppings:</h4>\n  <p><mat-checkbox formControlName=\"pepperoni\">Pepperoni</mat-checkbox></p>\n  <p><mat-checkbox formControlName=\"extracheese\">Extra Cheese</mat-checkbox></p>\n  <p><mat-checkbox formControlName=\"mushroom\">Mushroom</mat-checkbox></p>\n</section>\n\n<section class=\"example-section\" [formGroup]=\"toppings\">\n  <h4>You chose:</h4>\n  {{toppings.value | json}}\n</section>\n",
       styles: [".example-section {\n  margin: 12px 0;\n}\n"]
     }]

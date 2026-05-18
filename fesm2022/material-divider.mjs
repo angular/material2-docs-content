@@ -1,5 +1,5 @@
 import * as i0 from '@angular/core';
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { Component } from '@angular/core';
 import { MatDividerModule } from '@angular/material/divider';
 import * as i1 from '@angular/material/list';
 import { MatListModule } from '@angular/material/list';
@@ -43,8 +43,7 @@ class DividerOverviewExample {
     }, {
       kind: "ngmodule",
       type: MatDividerModule
-    }],
-    changeDetection: i0.ChangeDetectionStrategy.OnPush
+    }]
   });
 }
 i0.ɵɵngDeclareClassMetadata({
@@ -57,7 +56,6 @@ i0.ɵɵngDeclareClassMetadata({
     args: [{
       selector: 'divider-overview-example',
       imports: [MatListModule, MatDividerModule],
-      changeDetection: ChangeDetectionStrategy.OnPush,
       template: "<mat-list>\n  <mat-list-item>Item 1</mat-list-item>\n  <mat-divider></mat-divider>\n  <mat-list-item>Item 2</mat-list-item>\n  <mat-divider></mat-divider>\n  <mat-list-item>Item 3</mat-list-item>\n</mat-list>\n"
     }]
   }]
@@ -88,8 +86,7 @@ class DividerHarnessExample {
       type: i1.MatDivider,
       selector: "mat-divider",
       inputs: ["vertical", "inset"]
-    }],
-    changeDetection: i0.ChangeDetectionStrategy.OnPush
+    }]
   });
 }
 i0.ɵɵngDeclareClassMetadata({
@@ -102,7 +99,6 @@ i0.ɵɵngDeclareClassMetadata({
     args: [{
       selector: 'divider-harness-example',
       imports: [MatDividerModule],
-      changeDetection: ChangeDetectionStrategy.OnPush,
       template: "<mat-divider></mat-divider>\n<mat-divider inset vertical></mat-divider>\n"
     }]
   }]

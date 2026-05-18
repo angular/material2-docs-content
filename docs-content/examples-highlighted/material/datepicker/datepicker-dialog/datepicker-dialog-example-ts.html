@@ -1,4 +1,4 @@
-<span class="hljs-keyword">import</span> {<span class="hljs-title class_">ChangeDetectionStrategy</span>, <span class="hljs-title class_">Component</span>, model, inject} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">Component</span>, model, inject} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
 <span class="hljs-keyword">import</span> {<span class="hljs-title class_">FormControl</span>, <span class="hljs-title class_">ReactiveFormsModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/forms&#x27;</span>;
 <span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatButtonModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/button&#x27;</span>;
 <span class="hljs-keyword">import</span> {
@@ -20,7 +20,6 @@
   <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;datepicker-dialog-example&#x27;</span>,
   <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;datepicker-dialog-example.html&#x27;</span>,
   <span class="hljs-attr">imports</span>: [<span class="hljs-title class_">MatButtonModule</span>],
-  <span class="hljs-attr">changeDetection</span>: <span class="hljs-title class_">ChangeDetectionStrategy</span>.<span class="hljs-property">OnPush</span>,
 })
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">DatepickerDialogExample</span> {
   dialog = <span class="hljs-title function_">inject</span>(<span class="hljs-title class_">MatDialog</span>);

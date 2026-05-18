@@ -1,5 +1,5 @@
 import * as i0 from '@angular/core';
-import { viewChild, ChangeDetectionStrategy, Component, signal } from '@angular/core';
+import { viewChild, Component, signal } from '@angular/core';
 import * as i1 from '@angular/material/button';
 import { MatButtonModule } from '@angular/material/button';
 import { provideNativeDateAdapter } from '@angular/material/core';
@@ -124,8 +124,7 @@ class ExpansionExpandCollapseAllExample {
       selector: "input[matDatepicker]",
       inputs: ["matDatepicker", "min", "max", "matDatepickerFilter"],
       exportAs: ["matDatepickerInput"]
-    }],
-    changeDetection: i0.ChangeDetectionStrategy.OnPush
+    }]
   });
 }
 i0.ɵɵngDeclareClassMetadata({
@@ -139,7 +138,6 @@ i0.ɵɵngDeclareClassMetadata({
       selector: 'expansion-expand-collapse-all-example',
       providers: [provideNativeDateAdapter()],
       imports: [MatButtonModule, MatExpansionModule, MatIconModule, MatFormFieldModule, MatInputModule, MatDatepickerModule],
-      changeDetection: ChangeDetectionStrategy.OnPush,
       template: "<div class=\"example-action-buttons\">\n  <button matButton (click)=\"accordion().openAll()\">Expand All</button>\n  <button matButton (click)=\"accordion().closeAll()\">Collapse All</button>\n</div>\n<!-- #docregion multi -->\n<mat-accordion class=\"example-headers-align\" multi>\n  <!-- #enddocregion multi -->\n  <mat-expansion-panel>\n    <mat-expansion-panel-header>\n      <mat-panel-title> Personal data </mat-panel-title>\n      <mat-panel-description>\n        Type your name and age\n        <mat-icon>account_circle</mat-icon>\n      </mat-panel-description>\n    </mat-expansion-panel-header>\n\n    <mat-form-field>\n      <mat-label>First name</mat-label>\n      <input matInput />\n    </mat-form-field>\n\n    <mat-form-field>\n      <mat-label>Age</mat-label>\n      <input matInput type=\"number\" min=\"1\" />\n    </mat-form-field>\n  </mat-expansion-panel>\n  <!-- #docregion disabled -->\n  <mat-expansion-panel disabled>\n    <!-- #enddocregion disabled -->\n    <mat-expansion-panel-header>\n      <mat-panel-title> Destination </mat-panel-title>\n      <mat-panel-description>\n        Type the country name\n        <mat-icon>map</mat-icon>\n      </mat-panel-description>\n    </mat-expansion-panel-header>\n\n    <mat-form-field>\n      <mat-label>Country</mat-label>\n      <input matInput />\n    </mat-form-field>\n  </mat-expansion-panel>\n\n  <mat-expansion-panel>\n    <mat-expansion-panel-header>\n      <mat-panel-title> Day of the trip </mat-panel-title>\n      <mat-panel-description>\n        Inform the date you wish to travel\n        <mat-icon>date_range</mat-icon>\n      </mat-panel-description>\n    </mat-expansion-panel-header>\n\n    <mat-form-field>\n      <mat-label>Date</mat-label>\n      <input matInput [matDatepicker]=\"picker\" (focus)=\"picker.open()\" readonly />\n    </mat-form-field>\n    <mat-datepicker #picker></mat-datepicker>\n  </mat-expansion-panel>\n</mat-accordion>\n",
       styles: [".example-action-buttons {\n  padding-bottom: 20px;\n}\n\n.example-headers-align .mat-expansion-panel-header-description {\n  justify-content: space-between;\n  align-items: center;\n}\n\n.example-headers-align .mat-mdc-form-field + .mat-mdc-form-field {\n  margin-left: 8px;\n}\n"]
     }]
@@ -203,8 +201,7 @@ class ExpansionOverviewExample {
       kind: "directive",
       type: i1$1.MatExpansionPanelDescription,
       selector: "mat-panel-description"
-    }],
-    changeDetection: i0.ChangeDetectionStrategy.OnPush
+    }]
   });
 }
 i0.ɵɵngDeclareClassMetadata({
@@ -217,7 +214,6 @@ i0.ɵɵngDeclareClassMetadata({
     args: [{
       selector: 'expansion-overview-example',
       imports: [MatExpansionModule],
-      changeDetection: ChangeDetectionStrategy.OnPush,
       template: "<mat-accordion>\n  <!-- #docregion basic-panel -->\n  <!-- #docregion hide-toggle -->\n  <mat-expansion-panel hideToggle>\n    <!-- #enddocregion hide-toggle -->\n    <mat-expansion-panel-header>\n      <mat-panel-title> This is the expansion title </mat-panel-title>\n      <mat-panel-description> This is a summary of the content </mat-panel-description>\n    </mat-expansion-panel-header>\n    <p>This is the primary content of the panel.</p>\n  </mat-expansion-panel>\n  <!-- #enddocregion basic-panel -->\n  <mat-expansion-panel (opened)=\"panelOpenState.set(true)\" (closed)=\"panelOpenState.set(false)\">\n    <mat-expansion-panel-header>\n      <mat-panel-title> Self aware panel </mat-panel-title>\n      <mat-panel-description>\n        Currently I am {{panelOpenState() ? 'open' : 'closed'}}\n      </mat-panel-description>\n    </mat-expansion-panel-header>\n    <p>I'm visible because I am open</p>\n  </mat-expansion-panel>\n</mat-accordion>\n"
     }]
   }]
@@ -341,8 +337,7 @@ class ExpansionStepsExample {
       selector: "input[matDatepicker]",
       inputs: ["matDatepicker", "min", "max", "matDatepickerFilter"],
       exportAs: ["matDatepickerInput"]
-    }],
-    changeDetection: i0.ChangeDetectionStrategy.OnPush
+    }]
   });
 }
 i0.ɵɵngDeclareClassMetadata({
@@ -356,7 +351,6 @@ i0.ɵɵngDeclareClassMetadata({
       selector: 'expansion-steps-example',
       providers: [provideNativeDateAdapter()],
       imports: [MatExpansionModule, MatIconModule, MatFormFieldModule, MatInputModule, MatButtonModule, MatDatepickerModule],
-      changeDetection: ChangeDetectionStrategy.OnPush,
       template: "<mat-accordion class=\"example-headers-align\">\n  <mat-expansion-panel [expanded]=\"step() === 0\" (opened)=\"setStep(0)\" hideToggle>\n    <mat-expansion-panel-header>\n      <mat-panel-title> Personal data </mat-panel-title>\n      <mat-panel-description>\n        Type your name and age\n        <mat-icon>account_circle</mat-icon>\n      </mat-panel-description>\n    </mat-expansion-panel-header>\n\n    <mat-form-field>\n      <mat-label>First name</mat-label>\n      <input matInput />\n    </mat-form-field>\n\n    <mat-form-field>\n      <mat-label>Age</mat-label>\n      <input matInput type=\"number\" min=\"1\" />\n    </mat-form-field>\n    <!-- #docregion action-bar -->\n    <mat-action-row>\n      <button matButton (click)=\"nextStep()\">Next</button>\n    </mat-action-row>\n    <!-- #enddocregion action-bar -->\n  </mat-expansion-panel>\n\n  <mat-expansion-panel [expanded]=\"step() === 1\" (opened)=\"setStep(1)\" hideToggle>\n    <mat-expansion-panel-header>\n      <mat-panel-title> Destination </mat-panel-title>\n      <mat-panel-description>\n        Type the country name\n        <mat-icon>map</mat-icon>\n      </mat-panel-description>\n    </mat-expansion-panel-header>\n\n    <mat-form-field>\n      <mat-label>Country</mat-label>\n      <input matInput />\n    </mat-form-field>\n\n    <mat-action-row>\n      <button matButton (click)=\"prevStep()\">Previous</button>\n      <button matButton (click)=\"nextStep()\">Next</button>\n    </mat-action-row>\n  </mat-expansion-panel>\n\n  <mat-expansion-panel [expanded]=\"step() === 2\" (opened)=\"setStep(2)\" hideToggle>\n    <mat-expansion-panel-header>\n      <mat-panel-title> Day of the trip </mat-panel-title>\n      <mat-panel-description>\n        Inform the date you wish to travel\n        <mat-icon>date_range</mat-icon>\n      </mat-panel-description>\n    </mat-expansion-panel-header>\n\n    <mat-form-field>\n      <mat-label>Date</mat-label>\n      <input matInput [matDatepicker]=\"picker\" (focus)=\"picker.open()\" readonly />\n    </mat-form-field>\n    <mat-datepicker #picker></mat-datepicker>\n\n    <mat-action-row>\n      <button matButton (click)=\"prevStep()\">Previous</button>\n      <button matButton (click)=\"nextStep()\">End</button>\n    </mat-action-row>\n  </mat-expansion-panel>\n</mat-accordion>\n",
       styles: [".example-headers-align .mat-expansion-panel-header-description {\n  justify-content: space-between;\n  align-items: center;\n}\n\n.example-headers-align .mat-mdc-form-field + .mat-mdc-form-field {\n  margin-left: 8px;\n}\n"]
     }]
@@ -405,8 +399,7 @@ class ExpansionHarnessExample {
       kind: "directive",
       type: i1$1.MatExpansionPanelTitle,
       selector: "mat-panel-title"
-    }],
-    changeDetection: i0.ChangeDetectionStrategy.OnPush
+    }]
   });
 }
 i0.ɵɵngDeclareClassMetadata({
@@ -419,7 +412,6 @@ i0.ɵɵngDeclareClassMetadata({
     args: [{
       selector: 'expansion-harness-example',
       imports: [MatExpansionModule],
-      changeDetection: ChangeDetectionStrategy.OnPush,
       template: "<mat-accordion>\n  <mat-expansion-panel>\n    <mat-expansion-panel-header>\n      <mat-panel-title>\n        Welcome\n      </mat-panel-title>\n    </mat-expansion-panel-header>\n    <p>I am the content!</p>\n  </mat-expansion-panel>\n</mat-accordion>\n"
     }]
   }]

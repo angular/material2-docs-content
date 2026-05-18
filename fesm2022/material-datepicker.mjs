@@ -1,5 +1,5 @@
 import * as i0 from '@angular/core';
-import { ChangeDetectionStrategy, Component, inject, Service, signal, ViewEncapsulation, model, computed } from '@angular/core';
+import { Component, inject, Service, signal, ViewEncapsulation, model, computed } from '@angular/core';
 import * as i3$1 from '@angular/forms';
 import { FormGroup, FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { provideNativeDateAdapter, DateAdapter, MAT_DATE_FORMATS, MAT_DATE_LOCALE, MAT_NATIVE_DATE_FORMATS } from '@angular/material/core';
@@ -137,8 +137,7 @@ class DateRangePickerComparisonExample {
       selector: "[formControlName]",
       inputs: ["formControlName", "disabled", "ngModel"],
       outputs: ["ngModelChange"]
-    }],
-    changeDetection: i0.ChangeDetectionStrategy.OnPush
+    }]
   });
 }
 i0.ɵɵngDeclareClassMetadata({
@@ -152,7 +151,6 @@ i0.ɵɵngDeclareClassMetadata({
       selector: 'date-range-picker-comparison-example',
       providers: [provideNativeDateAdapter()],
       imports: [MatFormFieldModule, MatDatepickerModule, FormsModule, ReactiveFormsModule],
-      changeDetection: ChangeDetectionStrategy.OnPush,
       template: "<mat-form-field class=\"example-form-field\">\n  <mat-label>First campaign</mat-label>\n  <mat-date-range-input\n    [formGroup]=\"campaignOne\"\n    [rangePicker]=\"campaignOnePicker\"\n    [comparisonStart]=\"campaignTwo.value.start\"\n    [comparisonEnd]=\"campaignTwo.value.end\">\n    <input matStartDate placeholder=\"Start date\" formControlName=\"start\">\n    <input matEndDate placeholder=\"End date\" formControlName=\"end\">\n  </mat-date-range-input>\n  <mat-hint>MM/DD/YYYY \u2013 MM/DD/YYYY</mat-hint>\n  <mat-datepicker-toggle matIconSuffix [for]=\"campaignOnePicker\"></mat-datepicker-toggle>\n  <mat-date-range-picker #campaignOnePicker></mat-date-range-picker>\n</mat-form-field>\n\n<mat-form-field class=\"example-form-field\">\n  <mat-label>Second campaign</mat-label>\n  <mat-date-range-input\n    [formGroup]=\"campaignTwo\"\n    [rangePicker]=\"campaignTwoPicker\"\n    [comparisonStart]=\"campaignOne.value.start\"\n    [comparisonEnd]=\"campaignOne.value.end\">\n    <input matStartDate placeholder=\"Start date\" formControlName=\"start\">\n    <input matEndDate placeholder=\"End date\" formControlName=\"end\">\n  </mat-date-range-input>\n  <mat-datepicker-toggle matIconSuffix [for]=\"campaignTwoPicker\"></mat-datepicker-toggle>\n  <mat-hint>MM/DD/YYYY \u2013 MM/DD/YYYY</mat-hint>\n  <mat-date-range-picker #campaignTwoPicker></mat-date-range-picker>\n</mat-form-field>\n",
       styles: [".example-form-field {\n  margin: 0 8px 16px 0;\n}\n"]
     }]
@@ -274,8 +272,7 @@ class DateRangePickerFormsExample {
       kind: "pipe",
       type: JsonPipe,
       name: "json"
-    }],
-    changeDetection: i0.ChangeDetectionStrategy.OnPush
+    }]
   });
 }
 i0.ɵɵngDeclareClassMetadata({
@@ -289,7 +286,6 @@ i0.ɵɵngDeclareClassMetadata({
       selector: 'date-range-picker-forms-example',
       providers: [provideNativeDateAdapter()],
       imports: [MatFormFieldModule, MatDatepickerModule, FormsModule, ReactiveFormsModule, JsonPipe],
-      changeDetection: ChangeDetectionStrategy.OnPush,
       template: "<mat-form-field>\n  <mat-label>Enter a date range</mat-label>\n  <mat-date-range-input [formGroup]=\"range\" [rangePicker]=\"picker\">\n    <input matStartDate formControlName=\"start\" placeholder=\"Start date\">\n    <input matEndDate formControlName=\"end\" placeholder=\"End date\">\n  </mat-date-range-input>\n  <mat-hint>MM/DD/YYYY \u2013 MM/DD/YYYY</mat-hint>\n  <mat-datepicker-toggle matIconSuffix [for]=\"picker\"></mat-datepicker-toggle>\n  <mat-date-range-picker #picker></mat-date-range-picker>\n\n  @if (range.controls.start.hasError('matStartDateInvalid')) {\n    <mat-error>Invalid start date</mat-error>\n  }\n  @if (range.controls.end.hasError('matEndDateInvalid')) {\n    <mat-error>Invalid end date</mat-error>\n  }\n</mat-form-field>\n\n<p>Selected range: {{range.value | json}}</p>\n"
     }]
   }]
@@ -366,8 +362,7 @@ class DateRangePickerOverviewExample {
       type: i3.MatDateRangePicker,
       selector: "mat-date-range-picker",
       exportAs: ["matDateRangePicker"]
-    }],
-    changeDetection: i0.ChangeDetectionStrategy.OnPush
+    }]
   });
 }
 i0.ɵɵngDeclareClassMetadata({
@@ -381,7 +376,6 @@ i0.ɵɵngDeclareClassMetadata({
       selector: 'date-range-picker-overview-example',
       imports: [MatFormFieldModule, MatDatepickerModule],
       providers: [provideNativeDateAdapter()],
-      changeDetection: ChangeDetectionStrategy.OnPush,
       template: "<mat-form-field>\n  <mat-label>Enter a date range</mat-label>\n  <mat-date-range-input [rangePicker]=\"picker\">\n    <input matStartDate placeholder=\"Start date\">\n    <input matEndDate placeholder=\"End date\">\n  </mat-date-range-input>\n  <mat-hint>MM/DD/YYYY \u2013 MM/DD/YYYY</mat-hint>\n  <mat-datepicker-toggle matIconSuffix [for]=\"picker\"></mat-datepicker-toggle>\n  <mat-date-range-picker #picker></mat-date-range-picker>\n</mat-form-field>\n"
     }]
   }]
@@ -505,8 +499,7 @@ class DateRangePickerSelectionStrategyExample {
       type: i3.MatDateRangePicker,
       selector: "mat-date-range-picker",
       exportAs: ["matDateRangePicker"]
-    }],
-    changeDetection: i0.ChangeDetectionStrategy.OnPush
+    }]
   });
 }
 i0.ɵɵngDeclareClassMetadata({
@@ -523,7 +516,6 @@ i0.ɵɵngDeclareClassMetadata({
         useClass: FiveDayRangeSelectionStrategy
       }, provideNativeDateAdapter()],
       imports: [MatFormFieldModule, MatDatepickerModule],
-      changeDetection: ChangeDetectionStrategy.OnPush,
       template: "<mat-form-field>\n  <mat-label>Enter a date range</mat-label>\n  <mat-date-range-input [rangePicker]=\"picker\">\n    <input matStartDate placeholder=\"Start date\">\n    <input matEndDate placeholder=\"End date\">\n  </mat-date-range-input>\n  <mat-hint>MM/DD/YYYY \u2013 MM/DD/YYYY</mat-hint>\n  <mat-datepicker-toggle matIconSuffix [for]=\"picker\"></mat-datepicker-toggle>\n  <mat-date-range-picker #picker></mat-date-range-picker>\n</mat-form-field>\n"
     }]
   }]
@@ -642,8 +634,7 @@ class DatepickerActionsExample {
       selector: "    button[matButton], a[matButton], button[mat-button], button[mat-raised-button],    button[mat-flat-button], button[mat-stroked-button], a[mat-button], a[mat-raised-button],    a[mat-flat-button], a[mat-stroked-button]  ",
       inputs: ["matButton"],
       exportAs: ["matButton", "matAnchor"]
-    }],
-    changeDetection: i0.ChangeDetectionStrategy.OnPush
+    }]
   });
 }
 i0.ɵɵngDeclareClassMetadata({
@@ -657,7 +648,6 @@ i0.ɵɵngDeclareClassMetadata({
       selector: 'datepicker-actions-example',
       providers: [provideNativeDateAdapter()],
       imports: [MatFormFieldModule, MatInputModule, MatDatepickerModule, MatButtonModule],
-      changeDetection: ChangeDetectionStrategy.OnPush,
       template: "<mat-form-field class=\"example-form-field\">\n  <mat-label>Choose a date</mat-label>\n  <input matInput [matDatepicker]=\"datepicker\" />\n  <mat-hint>MM/DD/YYYY</mat-hint>\n  <mat-datepicker-toggle matIconSuffix [for]=\"datepicker\"></mat-datepicker-toggle>\n  <!-- #docregion datepicker-actions -->\n  <mat-datepicker #datepicker>\n    <mat-datepicker-actions>\n      <button matButton matDatepickerCancel>Cancel</button>\n      <button matButton=\"elevated\" matDatepickerApply>Apply</button>\n    </mat-datepicker-actions>\n  </mat-datepicker>\n  <!-- #enddocregion datepicker-actions -->\n</mat-form-field>\n\n<mat-form-field class=\"example-form-field\">\n  <mat-label>Enter a date range</mat-label>\n  <mat-date-range-input [rangePicker]=\"rangePicker\">\n    <input matStartDate placeholder=\"Start date\" />\n    <input matEndDate placeholder=\"End date\" />\n  </mat-date-range-input>\n  <mat-hint>MM/DD/YYYY \u2013 MM/DD/YYYY</mat-hint>\n  <mat-datepicker-toggle matIconSuffix [for]=\"rangePicker\"></mat-datepicker-toggle>\n  <!-- #docregion date-range-picker-actions -->\n  <mat-date-range-picker #rangePicker>\n    <mat-date-range-picker-actions>\n      <button matButton matDateRangePickerCancel>Cancel</button>\n      <button matButton=\"elevated\" matDateRangePickerApply>Apply</button>\n    </mat-date-range-picker-actions>\n  </mat-date-range-picker>\n  <!-- #enddocregion date-range-picker-actions -->\n</mat-form-field>\n",
       styles: [".example-form-field {\n  margin-right: 20px;\n}\n"]
     }]
@@ -733,8 +723,7 @@ class DatepickerApiExample {
       selector: "    button[matButton], a[matButton], button[mat-button], button[mat-raised-button],    button[mat-flat-button], button[mat-stroked-button], a[mat-button], a[mat-raised-button],    a[mat-flat-button], a[mat-stroked-button]  ",
       inputs: ["matButton"],
       exportAs: ["matButton", "matAnchor"]
-    }],
-    changeDetection: i0.ChangeDetectionStrategy.OnPush
+    }]
   });
 }
 i0.ɵɵngDeclareClassMetadata({
@@ -748,7 +737,6 @@ i0.ɵɵngDeclareClassMetadata({
       selector: 'datepicker-api-example',
       providers: [provideNativeDateAdapter()],
       imports: [MatFormFieldModule, MatInputModule, MatDatepickerModule, MatButtonModule],
-      changeDetection: ChangeDetectionStrategy.OnPush,
       template: "<mat-form-field class=\"example-full-width\">\n  <mat-label>Choose a date</mat-label>\n  <input matInput [matDatepicker]=\"picker\">\n  <mat-hint>MM/DD/YYYY</mat-hint>\n  <mat-datepicker #picker></mat-datepicker>\n</mat-form-field>\n<button matButton=\"elevated\" (click)=\"picker.open()\">Open</button>\n",
       styles: ["mat-form-field {\n  margin-right: 12px;\n}\n"]
     }]
@@ -826,8 +814,7 @@ class DatepickerCustomHeaderExample {
       selector: "mat-datepicker-toggle",
       inputs: ["for", "tabIndex", "aria-label", "disabled", "disableRipple"],
       exportAs: ["matDatepickerToggle"]
-    }],
-    changeDetection: i0.ChangeDetectionStrategy.OnPush
+    }]
   });
 }
 i0.ɵɵngDeclareClassMetadata({
@@ -841,7 +828,6 @@ i0.ɵɵngDeclareClassMetadata({
       selector: 'datepicker-custom-header-example',
       providers: [provideNativeDateAdapter()],
       imports: [MatFormFieldModule, MatInputModule, MatDatepickerModule],
-      changeDetection: ChangeDetectionStrategy.OnPush,
       template: "<mat-form-field>\n  <mat-label>Custom calendar header</mat-label>\n  <input matInput [matDatepicker]=\"picker\">\n  <mat-hint>MM/DD/YYYY</mat-hint>\n  <mat-datepicker-toggle matIconSuffix [for]=\"picker\"></mat-datepicker-toggle>\n  <mat-datepicker #picker [calendarHeaderComponent]=\"exampleHeader\"></mat-datepicker>\n</mat-form-field>\n"
     }]
   }]
@@ -920,8 +906,7 @@ class ExampleHeader {
       selector: "mat-icon",
       inputs: ["color", "inline", "svgIcon", "fontSet", "fontIcon"],
       exportAs: ["matIcon"]
-    }],
-    changeDetection: i0.ChangeDetectionStrategy.OnPush
+    }]
   });
 }
 i0.ɵɵngDeclareClassMetadata({
@@ -951,7 +936,6 @@ i0.ɵɵngDeclareClassMetadata({
     </div>
   `,
       imports: [MatButtonModule, MatIconModule],
-      changeDetection: ChangeDetectionStrategy.OnPush,
       styles: ["\n    .example-header {\n      display: flex;\n      align-items: center;\n      padding: 0.5em;\n    }\n\n    .example-header-label {\n      flex: 1;\n      height: 1em;\n      font-weight: 500;\n      text-align: center;\n    }\n  "]
     }]
   }],
@@ -1041,8 +1025,7 @@ class DatepickerCustomIconExample {
       selector: "mat-icon",
       inputs: ["color", "inline", "svgIcon", "fontSet", "fontIcon"],
       exportAs: ["matIcon"]
-    }],
-    changeDetection: i0.ChangeDetectionStrategy.OnPush
+    }]
   });
 }
 i0.ɵɵngDeclareClassMetadata({
@@ -1056,7 +1039,6 @@ i0.ɵɵngDeclareClassMetadata({
       selector: 'datepicker-custom-icon-example',
       providers: [provideNativeDateAdapter()],
       imports: [MatFormFieldModule, MatInputModule, MatDatepickerModule, MatIconModule],
-      changeDetection: ChangeDetectionStrategy.OnPush,
       template: "<mat-form-field class=\"example-full-width\">\n  <mat-label>Choose a date</mat-label>\n  <input matInput [matDatepicker]=\"picker\">\n  <mat-hint>MM/DD/YYYY</mat-hint>\n  <mat-datepicker-toggle matIconSuffix [for]=\"picker\">\n    <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>\n  </mat-datepicker-toggle>\n  <mat-datepicker #picker></mat-datepicker>\n</mat-form-field>\n"
     }]
   }]
@@ -1141,7 +1123,6 @@ class DatepickerDateClassExample {
       inputs: ["for", "tabIndex", "aria-label", "disabled", "disableRipple"],
       exportAs: ["matDatepickerToggle"]
     }],
-    changeDetection: i0.ChangeDetectionStrategy.OnPush,
     encapsulation: i0.ViewEncapsulation.None
   });
 }
@@ -1157,7 +1138,6 @@ i0.ɵɵngDeclareClassMetadata({
       encapsulation: ViewEncapsulation.None,
       providers: [provideNativeDateAdapter()],
       imports: [MatFormFieldModule, MatInputModule, MatDatepickerModule],
-      changeDetection: ChangeDetectionStrategy.OnPush,
       template: "<mat-form-field class=\"example-full-width\">\n  <mat-label>Choose a date</mat-label>\n  <input matInput [matDatepicker]=\"picker\">\n  <mat-hint>MM/DD/YYYY</mat-hint>\n  <mat-datepicker-toggle matIconSuffix [for]=\"picker\"></mat-datepicker-toggle>\n  <mat-datepicker [dateClass]=\"dateClass\" #picker></mat-datepicker>\n</mat-form-field>\n",
       styles: ["button.example-custom-date-class {\n  background: orange;\n  border-radius: 100%;\n}\n"]
     }]
@@ -1234,8 +1214,7 @@ class DatepickerDisabledExample {
       selector: "mat-datepicker-toggle",
       inputs: ["for", "tabIndex", "aria-label", "disabled", "disableRipple"],
       exportAs: ["matDatepickerToggle"]
-    }],
-    changeDetection: i0.ChangeDetectionStrategy.OnPush
+    }]
   });
 }
 i0.ɵɵngDeclareClassMetadata({
@@ -1249,7 +1228,6 @@ i0.ɵɵngDeclareClassMetadata({
       selector: 'datepicker-disabled-example',
       providers: [provideNativeDateAdapter()],
       imports: [MatFormFieldModule, MatInputModule, MatDatepickerModule],
-      changeDetection: ChangeDetectionStrategy.OnPush,
       template: "<p>\n  <mat-form-field>\n    <mat-label>Completely disabled</mat-label>\n    <input matInput [matDatepicker]=\"dp1\" disabled>\n    <mat-hint>MM/DD/YYYY</mat-hint>\n    <mat-datepicker-toggle matIconSuffix [for]=\"dp1\"></mat-datepicker-toggle>\n    <mat-datepicker #dp1></mat-datepicker>\n  </mat-form-field>\n</p>\n\n<p>\n  <mat-form-field>\n    <mat-label>Popup disabled</mat-label>\n    <input matInput [matDatepicker]=\"dp2\">\n    <mat-hint>MM/DD/YYYY</mat-hint>\n    <mat-datepicker-toggle matIconSuffix [for]=\"dp2\" disabled></mat-datepicker-toggle>\n    <mat-datepicker #dp2></mat-datepicker>\n  </mat-form-field>\n</p>\n\n<p>\n  <mat-form-field>\n    <mat-label>Input disabled</mat-label>\n    <input matInput [matDatepicker]=\"dp3\" disabled>\n    <mat-hint>MM/DD/YYYY</mat-hint>\n    <mat-datepicker-toggle matIconSuffix [for]=\"dp3\"></mat-datepicker-toggle>\n    <mat-datepicker #dp3 disabled=\"false\"></mat-datepicker>\n  </mat-form-field>\n</p>\n"
     }]
   }]
@@ -1332,8 +1310,7 @@ class DatepickerEventsExample {
       selector: "mat-datepicker-toggle",
       inputs: ["for", "tabIndex", "aria-label", "disabled", "disableRipple"],
       exportAs: ["matDatepickerToggle"]
-    }],
-    changeDetection: i0.ChangeDetectionStrategy.OnPush
+    }]
   });
 }
 i0.ɵɵngDeclareClassMetadata({
@@ -1347,7 +1324,6 @@ i0.ɵɵngDeclareClassMetadata({
       selector: 'datepicker-events-example',
       providers: [provideNativeDateAdapter()],
       imports: [MatFormFieldModule, MatInputModule, MatDatepickerModule],
-      changeDetection: ChangeDetectionStrategy.OnPush,
       template: "<mat-form-field>\n  <mat-label>Input & change events</mat-label>\n  <input\n    matInput\n    [matDatepicker]=\"picker\"\n    (dateInput)=\"addEvent('input', $event)\"\n    (dateChange)=\"addEvent('change', $event)\"\n  />\n  <mat-hint>MM/DD/YYYY</mat-hint>\n  <mat-datepicker-toggle matIconSuffix [for]=\"picker\"></mat-datepicker-toggle>\n  <mat-datepicker #picker></mat-datepicker>\n</mat-form-field>\n\n<div class=\"example-events\">\n  @for (e of events(); track e) {\n    <div>{{e}}</div>\n  }\n</div>\n",
       styles: [".example-events {\n  height: 200px;\n  border: 1px solid #555;\n  overflow: auto;\n}\n"]
     }]
@@ -1428,8 +1404,7 @@ class DatepickerFilterExample {
       selector: "mat-datepicker-toggle",
       inputs: ["for", "tabIndex", "aria-label", "disabled", "disableRipple"],
       exportAs: ["matDatepickerToggle"]
-    }],
-    changeDetection: i0.ChangeDetectionStrategy.OnPush
+    }]
   });
 }
 i0.ɵɵngDeclareClassMetadata({
@@ -1443,7 +1418,6 @@ i0.ɵɵngDeclareClassMetadata({
       selector: 'datepicker-filter-example',
       providers: [provideNativeDateAdapter()],
       imports: [MatFormFieldModule, MatInputModule, MatDatepickerModule],
-      changeDetection: ChangeDetectionStrategy.OnPush,
       template: "<mat-form-field class=\"example-full-width\">\n  <mat-label>Choose a date</mat-label>\n  <input matInput [matDatepickerFilter]=\"myFilter\" [matDatepicker]=\"picker\">\n  <mat-hint>MM/DD/YYYY</mat-hint>\n  <mat-datepicker-toggle matIconSuffix [for]=\"picker\"></mat-datepicker-toggle>\n  <mat-datepicker #picker></mat-datepicker>\n</mat-form-field>\n"
     }]
   }]
@@ -1552,8 +1526,7 @@ class DatepickerFormatsExample {
       inputs: ["formControl", "disabled", "ngModel"],
       outputs: ["ngModelChange"],
       exportAs: ["ngForm"]
-    }],
-    changeDetection: i0.ChangeDetectionStrategy.OnPush
+    }]
   });
 }
 i0.ɵɵngDeclareClassMetadata({
@@ -1567,7 +1540,6 @@ i0.ɵɵngDeclareClassMetadata({
       selector: 'datepicker-formats-example',
       providers: [provideLuxonDateAdapter(MY_FORMATS$1)],
       imports: [MatFormFieldModule, MatInputModule, MatDatepickerModule, FormsModule, ReactiveFormsModule],
-      changeDetection: ChangeDetectionStrategy.OnPush,
       template: "<mat-form-field>\n  <mat-label>Verbose datepicker</mat-label>\n  <input matInput [matDatepicker]=\"dp\" [formControl]=\"date\">\n  <mat-hint>MMMM DD, YYYY</mat-hint>\n  <mat-datepicker-toggle matIconSuffix [for]=\"dp\"></mat-datepicker-toggle>\n  <mat-datepicker #dp></mat-datepicker>\n</mat-form-field>\n"
     }]
   }]
@@ -1650,8 +1622,7 @@ class DatepickerHarnessExample {
       inputs: ["name", "disabled", "ngModel", "ngModelOptions"],
       outputs: ["ngModelChange"],
       exportAs: ["ngModel"]
-    }],
-    changeDetection: i0.ChangeDetectionStrategy.OnPush
+    }]
   });
 }
 i0.ɵɵngDeclareClassMetadata({
@@ -1665,7 +1636,6 @@ i0.ɵɵngDeclareClassMetadata({
       selector: 'datepicker-harness-example',
       providers: [provideNativeDateAdapter()],
       imports: [MatInputModule, MatDatepickerModule, FormsModule],
-      changeDetection: ChangeDetectionStrategy.OnPush,
       template: "<input matInput [matDatepicker]=\"picker\" [(ngModel)]=\"date\" [min]=\"minDate()\" />\n<mat-datepicker #picker></mat-datepicker>\n"
     }]
   }],
@@ -1737,8 +1707,7 @@ class DatepickerInlineCalendarExample {
       inputs: ["headerComponent", "startAt", "startView", "selected", "minDate", "maxDate", "dateFilter", "dateClass", "comparisonStart", "comparisonEnd", "startDateAccessibleName", "endDateAccessibleName"],
       outputs: ["selectedChange", "yearSelected", "monthSelected", "viewChanged", "_userSelection", "_userDragDrop"],
       exportAs: ["matCalendar"]
-    }],
-    changeDetection: i0.ChangeDetectionStrategy.OnPush
+    }]
   });
 }
 i0.ɵɵngDeclareClassMetadata({
@@ -1752,7 +1721,6 @@ i0.ɵɵngDeclareClassMetadata({
       selector: 'datepicker-inline-calendar-example',
       providers: [provideNativeDateAdapter()],
       imports: [MatCardModule, MatDatepickerModule],
-      changeDetection: ChangeDetectionStrategy.OnPush,
       template: "<mat-card class=\"demo-inline-calendar-card\">\n  <mat-calendar [(selected)]=\"selected\"></mat-calendar>\n</mat-card>\n<p>Selected date: {{selected()}}</p>\n",
       styles: [".demo-inline-calendar-card {\n  width: 300px;\n}\n"]
     }]
@@ -1882,8 +1850,7 @@ class DatepickerLocaleExample {
       selector: "    button[matButton], a[matButton], button[mat-button], button[mat-raised-button],    button[mat-flat-button], button[mat-stroked-button], a[mat-button], a[mat-raised-button],    a[mat-flat-button], a[mat-stroked-button]  ",
       inputs: ["matButton"],
       exportAs: ["matButton", "matAnchor"]
-    }],
-    changeDetection: i0.ChangeDetectionStrategy.OnPush
+    }]
   });
 }
 i0.ɵɵngDeclareClassMetadata({
@@ -1900,7 +1867,6 @@ i0.ɵɵngDeclareClassMetadata({
         useValue: 'ja-JP'
       }, provideLuxonDateAdapter()],
       imports: [MatFormFieldModule, MatInputModule, MatDatepickerModule, MatButtonModule],
-      changeDetection: ChangeDetectionStrategy.OnPush,
       template: "<mat-form-field>\n  <mat-label>Different locale</mat-label>\n  <input matInput [matDatepicker]=\"dp\" />\n  <mat-hint>{{dateFormatString()}}</mat-hint>\n  <mat-datepicker-toggle matIconSuffix [for]=\"dp\"></mat-datepicker-toggle>\n  <mat-datepicker #dp></mat-datepicker>\n</mat-form-field>\n<button matButton (click)=\"french()\">Dynamically switch to French</button>\n",
       styles: ["mat-form-field {\n  margin-right: 12px;\n}\n"]
     }]
@@ -1980,8 +1946,7 @@ class DatepickerMinMaxExample {
       selector: "mat-datepicker-toggle",
       inputs: ["for", "tabIndex", "aria-label", "disabled", "disableRipple"],
       exportAs: ["matDatepickerToggle"]
-    }],
-    changeDetection: i0.ChangeDetectionStrategy.OnPush
+    }]
   });
 }
 i0.ɵɵngDeclareClassMetadata({
@@ -1995,7 +1960,6 @@ i0.ɵɵngDeclareClassMetadata({
       selector: 'datepicker-min-max-example',
       providers: [provideNativeDateAdapter()],
       imports: [MatFormFieldModule, MatInputModule, MatDatepickerModule],
-      changeDetection: ChangeDetectionStrategy.OnPush,
       template: "<mat-form-field class=\"example-full-width\">\n  <mat-label>Choose a date</mat-label>\n  <input matInput [min]=\"minDate\" [max]=\"maxDate\" [matDatepicker]=\"picker\" />\n  <mat-hint>MM/DD/YYYY</mat-hint>\n  <mat-datepicker-toggle matIconSuffix [for]=\"picker\"></mat-datepicker-toggle>\n  <mat-datepicker #picker></mat-datepicker>\n</mat-form-field>\n"
     }]
   }]
@@ -2093,8 +2057,7 @@ class DatepickerLuxonExample {
       inputs: ["formControl", "disabled", "ngModel"],
       outputs: ["ngModelChange"],
       exportAs: ["ngForm"]
-    }],
-    changeDetection: i0.ChangeDetectionStrategy.OnPush
+    }]
   });
 }
 i0.ɵɵngDeclareClassMetadata({
@@ -2108,7 +2071,6 @@ i0.ɵɵngDeclareClassMetadata({
       selector: 'datepicker-luxon-example',
       providers: [provideLuxonDateAdapter()],
       imports: [MatFormFieldModule, MatInputModule, MatDatepickerModule, FormsModule, ReactiveFormsModule],
-      changeDetection: ChangeDetectionStrategy.OnPush,
       template: "<mat-form-field>\n  <mat-label>Luxon datepicker</mat-label>\n  <input matInput [matDatepicker]=\"dp\" [formControl]=\"date\">\n  <mat-hint>MM/DD/YYYY</mat-hint>\n  <mat-datepicker-toggle matIconSuffix [for]=\"dp\"></mat-datepicker-toggle>\n  <mat-datepicker #dp></mat-datepicker>\n</mat-form-field>\n"
     }]
   }]
@@ -2184,8 +2146,7 @@ class DatepickerOverviewExample {
       selector: "mat-datepicker-toggle",
       inputs: ["for", "tabIndex", "aria-label", "disabled", "disableRipple"],
       exportAs: ["matDatepickerToggle"]
-    }],
-    changeDetection: i0.ChangeDetectionStrategy.OnPush
+    }]
   });
 }
 i0.ɵɵngDeclareClassMetadata({
@@ -2199,7 +2160,6 @@ i0.ɵɵngDeclareClassMetadata({
       selector: 'datepicker-overview-example',
       providers: [provideNativeDateAdapter()],
       imports: [MatFormFieldModule, MatInputModule, MatDatepickerModule],
-      changeDetection: ChangeDetectionStrategy.OnPush,
       template: "<mat-form-field>\n  <mat-label>Choose a date</mat-label>\n<!-- #docregion toggle -->\n  <input matInput [matDatepicker]=\"picker\">\n  <mat-hint>MM/DD/YYYY</mat-hint>\n  <mat-datepicker-toggle matIconSuffix [for]=\"picker\"></mat-datepicker-toggle>\n  <mat-datepicker #picker></mat-datepicker>\n<!-- #enddocregion toggle -->\n</mat-form-field>\n"
     }]
   }]
@@ -2276,8 +2236,7 @@ class DatepickerStartViewExample {
       selector: "mat-datepicker-toggle",
       inputs: ["for", "tabIndex", "aria-label", "disabled", "disableRipple"],
       exportAs: ["matDatepickerToggle"]
-    }],
-    changeDetection: i0.ChangeDetectionStrategy.OnPush
+    }]
   });
 }
 i0.ɵɵngDeclareClassMetadata({
@@ -2291,7 +2250,6 @@ i0.ɵɵngDeclareClassMetadata({
       selector: 'datepicker-start-view-example',
       providers: [provideNativeDateAdapter()],
       imports: [MatFormFieldModule, MatInputModule, MatDatepickerModule],
-      changeDetection: ChangeDetectionStrategy.OnPush,
       template: "<mat-form-field>\n  <mat-label>Choose a date</mat-label>\n  <input matInput [matDatepicker]=\"picker\">\n  <mat-hint>MM/DD/YYYY</mat-hint>\n  <mat-datepicker-toggle matIconSuffix [for]=\"picker\"></mat-datepicker-toggle>\n  <mat-datepicker #picker startView=\"year\" [startAt]=\"startDate\"></mat-datepicker>\n</mat-form-field>\n"
     }]
   }]
@@ -2367,8 +2325,7 @@ class DatepickerTouchExample {
       selector: "mat-datepicker-toggle",
       inputs: ["for", "tabIndex", "aria-label", "disabled", "disableRipple"],
       exportAs: ["matDatepickerToggle"]
-    }],
-    changeDetection: i0.ChangeDetectionStrategy.OnPush
+    }]
   });
 }
 i0.ɵɵngDeclareClassMetadata({
@@ -2382,7 +2339,6 @@ i0.ɵɵngDeclareClassMetadata({
       selector: 'datepicker-touch-example',
       providers: [provideNativeDateAdapter()],
       imports: [MatFormFieldModule, MatInputModule, MatDatepickerModule],
-      changeDetection: ChangeDetectionStrategy.OnPush,
       template: "<mat-form-field class=\"example-full-width\">\n  <mat-label>Choose a date</mat-label>\n  <input matInput [matDatepicker]=\"picker\">\n  <mat-hint>MM/DD/YYYY</mat-hint>\n  <mat-datepicker-toggle matIconSuffix [for]=\"picker\"></mat-datepicker-toggle>\n  <mat-datepicker touchUi #picker></mat-datepicker>\n</mat-form-field>\n"
     }]
   }]
@@ -2482,8 +2438,7 @@ class DatepickerValueExample {
       inputs: ["formControl", "disabled", "ngModel"],
       outputs: ["ngModelChange"],
       exportAs: ["ngForm"]
-    }],
-    changeDetection: i0.ChangeDetectionStrategy.OnPush
+    }]
   });
 }
 i0.ɵɵngDeclareClassMetadata({
@@ -2497,7 +2452,6 @@ i0.ɵɵngDeclareClassMetadata({
       selector: 'datepicker-value-example',
       providers: [provideNativeDateAdapter()],
       imports: [MatFormFieldModule, MatInputModule, MatDatepickerModule, FormsModule, ReactiveFormsModule],
-      changeDetection: ChangeDetectionStrategy.OnPush,
       template: "<mat-form-field>\n  <mat-label>Angular forms</mat-label>\n  <input matInput [matDatepicker]=\"picker1\" [formControl]=\"date\">\n  <mat-hint>MM/DD/YYYY</mat-hint>\n  <mat-datepicker-toggle matIconSuffix [for]=\"picker1\"></mat-datepicker-toggle>\n  <mat-datepicker #picker1></mat-datepicker>\n</mat-form-field>\n\n<mat-form-field>\n  <mat-label>Angular forms (w/ deserialization)</mat-label>\n  <input matInput [matDatepicker]=\"picker2\"\n         [formControl]=\"serializedDate\">\n  <mat-hint>MM/DD/YYYY</mat-hint>\n  <mat-datepicker-toggle matIconSuffix [for]=\"picker2\"></mat-datepicker-toggle>\n  <mat-datepicker #picker2></mat-datepicker>\n</mat-form-field>\n\n<mat-form-field>\n  <mat-label>Value binding</mat-label>\n  <input matInput [matDatepicker]=\"picker3\" [value]=\"date.value\">\n  <mat-hint>MM/DD/YYYY</mat-hint>\n  <mat-datepicker-toggle matIconSuffix [for]=\"picker3\"></mat-datepicker-toggle>\n  <mat-datepicker #picker3></mat-datepicker>\n</mat-form-field>\n",
       styles: ["mat-form-field {\n  margin-right: 12px;\n}\n"]
     }]
@@ -2617,7 +2571,6 @@ class DatepickerViewsSelectionExample {
       outputs: ["ngModelChange"],
       exportAs: ["ngForm"]
     }],
-    changeDetection: i0.ChangeDetectionStrategy.OnPush,
     encapsulation: i0.ViewEncapsulation.None
   });
 }
@@ -2633,7 +2586,6 @@ i0.ɵɵngDeclareClassMetadata({
       providers: [provideLuxonDateAdapter(MY_FORMATS)],
       encapsulation: ViewEncapsulation.None,
       imports: [MatFormFieldModule, MatInputModule, MatDatepickerModule, FormsModule, ReactiveFormsModule],
-      changeDetection: ChangeDetectionStrategy.OnPush,
       template: "<mat-form-field>\n  <mat-label>Month and Year</mat-label>\n  <input matInput [matDatepicker]=\"dp\" [formControl]=\"date\">\n  <mat-hint>MM/YYYY</mat-hint>\n  <mat-datepicker-toggle matIconSuffix [for]=\"dp\"></mat-datepicker-toggle>\n  <mat-datepicker #dp\n                  startView=\"multi-year\"\n                  (monthSelected)=\"setMonthAndYear($event, dp)\"\n                  panelClass=\"example-month-picker\">\n  </mat-datepicker>\n</mat-form-field>\n",
       styles: [".example-month-picker .mat-calendar-period-button {\n  pointer-events: none;\n}\n\n.example-month-picker .mat-calendar-arrow {\n  display: none;\n}\n"]
     }]
@@ -2692,8 +2644,7 @@ class DatepickerDialogExample {
       selector: "    button[matButton], a[matButton], button[mat-button], button[mat-raised-button],    button[mat-flat-button], button[mat-stroked-button], a[mat-button], a[mat-raised-button],    a[mat-flat-button], a[mat-stroked-button]  ",
       inputs: ["matButton"],
       exportAs: ["matButton", "matAnchor"]
-    }],
-    changeDetection: i0.ChangeDetectionStrategy.OnPush
+    }]
   });
 }
 i0.ɵɵngDeclareClassMetadata({
@@ -2706,7 +2657,6 @@ i0.ɵɵngDeclareClassMetadata({
     args: [{
       selector: 'datepicker-dialog-example',
       imports: [MatButtonModule],
-      changeDetection: ChangeDetectionStrategy.OnPush,
       template: "<p>Selected date: {{selectedDate()}}</p>\n<button matButton=\"filled\" color=\"primary\" (click)=\"openDialog()\">Open Dialog</button>\n"
     }]
   }],

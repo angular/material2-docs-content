@@ -1,5 +1,5 @@
 import * as i0 from '@angular/core';
-import { ChangeDetectionStrategy, Component, ViewEncapsulation, input } from '@angular/core';
+import { Component, ViewEncapsulation, input } from '@angular/core';
 import * as i1 from '@angular/cdk/scrolling';
 import { ScrollingModule, VIRTUAL_SCROLL_STRATEGY, FixedSizeVirtualScrollStrategy } from '@angular/cdk/scrolling';
 import { DataSource } from '@angular/cdk/collections';
@@ -45,8 +45,7 @@ class CdkVirtualScrollAppendOnlyExample {
       selector: "cdk-virtual-scroll-viewport",
       inputs: ["orientation", "appendOnly"],
       outputs: ["scrolledIndexChange"]
-    }],
-    changeDetection: i0.ChangeDetectionStrategy.OnPush
+    }]
   });
 }
 i0.ɵɵngDeclareClassMetadata({
@@ -58,7 +57,6 @@ i0.ɵɵngDeclareClassMetadata({
     type: Component,
     args: [{
       selector: 'cdk-virtual-scroll-append-only-example',
-      changeDetection: ChangeDetectionStrategy.OnPush,
       imports: [ScrollingModule],
       template: "<cdk-virtual-scroll-viewport appendOnly itemSize=\"50\" class=\"example-viewport\">\n  <div *cdkVirtualFor=\"let item of items\" class=\"example-item\">{{item}}</div>\n</cdk-virtual-scroll-viewport>\n",
       styles: [".example-viewport {\n  height: 200px;\n  width: 200px;\n  border: 1px solid black;\n}\n\n.example-item {\n  height: 50px;\n}\n"]
@@ -106,8 +104,7 @@ class CdkVirtualScrollContextExample {
       selector: "cdk-virtual-scroll-viewport",
       inputs: ["orientation", "appendOnly"],
       outputs: ["scrolledIndexChange"]
-    }],
-    changeDetection: i0.ChangeDetectionStrategy.OnPush
+    }]
   });
 }
 i0.ɵɵngDeclareClassMetadata({
@@ -119,7 +116,6 @@ i0.ɵɵngDeclareClassMetadata({
     type: Component,
     args: [{
       selector: 'cdk-virtual-scroll-context-example',
-      changeDetection: ChangeDetectionStrategy.OnPush,
       imports: [ScrollingModule],
       template: "<cdk-virtual-scroll-viewport [itemSize]=\"18 * 7\" class=\"example-viewport\">\n  <div *cdkVirtualFor=\"let item of items;\n                       let index = index;\n                       let count = count;\n                       let first = first;\n                       let last = last;\n                       let even = even;\n                       let odd = odd;\" [class.example-alternate]=\"odd\">\n    <div class=\"example-item-detail\">Item: {{item}}</div>\n    <div class=\"example-item-detail\">Index: {{index}}</div>\n    <div class=\"example-item-detail\">Count: {{count}}</div>\n    <div class=\"example-item-detail\">First: {{first ? 'Yes' : 'No'}}</div>\n    <div class=\"example-item-detail\">Last: {{last ? 'Yes' : 'No'}}</div>\n    <div class=\"example-item-detail\">Even: {{even ? 'Yes' : 'No'}}</div>\n    <div class=\"example-item-detail\">Odd: {{odd ? 'Yes' : 'No'}}</div>\n  </div>\n</cdk-virtual-scroll-viewport>\n",
       styles: [".example-viewport {\n  height: 200px;\n  width: 200px;\n  border: 1px solid black;\n}\n\n.example-item-detail {\n  height: 18px;\n}\n\n.example-alternate {\n  background: rgba(127, 127, 127, 0.3);\n}\n"]
@@ -171,8 +167,7 @@ class CdkVirtualScrollCustomStrategyExample {
       selector: "cdk-virtual-scroll-viewport",
       inputs: ["orientation", "appendOnly"],
       outputs: ["scrolledIndexChange"]
-    }],
-    changeDetection: i0.ChangeDetectionStrategy.OnPush
+    }]
   });
 }
 i0.ɵɵngDeclareClassMetadata({
@@ -184,7 +179,6 @@ i0.ɵɵngDeclareClassMetadata({
     type: Component,
     args: [{
       selector: 'cdk-virtual-scroll-custom-strategy-example',
-      changeDetection: ChangeDetectionStrategy.OnPush,
       providers: [{
         provide: VIRTUAL_SCROLL_STRATEGY,
         useClass: CustomVirtualScrollStrategy
@@ -234,8 +228,7 @@ class CdkVirtualScrollDataSourceExample {
       selector: "cdk-virtual-scroll-viewport",
       inputs: ["orientation", "appendOnly"],
       outputs: ["scrolledIndexChange"]
-    }],
-    changeDetection: i0.ChangeDetectionStrategy.OnPush
+    }]
   });
 }
 i0.ɵɵngDeclareClassMetadata({
@@ -247,7 +240,6 @@ i0.ɵɵngDeclareClassMetadata({
     type: Component,
     args: [{
       selector: 'cdk-virtual-scroll-data-source-example',
-      changeDetection: ChangeDetectionStrategy.OnPush,
       imports: [ScrollingModule],
       template: "<cdk-virtual-scroll-viewport itemSize=\"50\" class=\"example-viewport\">\n  <div *cdkVirtualFor=\"let item of ds\" class=\"example-item\">{{item || 'Loading...'}}</div>\n</cdk-virtual-scroll-viewport>\n",
       styles: [".example-viewport {\n  height: 200px;\n  width: 200px;\n  border: 1px solid black;\n}\n\n.example-item {\n  height: 50px;\n}\n"]
@@ -481,8 +473,7 @@ class CdkVirtualScrollDlExample {
       selector: "cdk-virtual-scroll-viewport",
       inputs: ["orientation", "appendOnly"],
       outputs: ["scrolledIndexChange"]
-    }],
-    changeDetection: i0.ChangeDetectionStrategy.OnPush
+    }]
   });
 }
 i0.ɵɵngDeclareClassMetadata({
@@ -494,7 +485,6 @@ i0.ɵɵngDeclareClassMetadata({
     type: Component,
     args: [{
       selector: 'cdk-virtual-scroll-dl-example',
-      changeDetection: ChangeDetectionStrategy.OnPush,
       imports: [ScrollingModule],
       template: "<cdk-virtual-scroll-viewport class=\"example-viewport\" itemSize=\"60\">\n  <dl class=\"example-dl\">\n    <ng-container *cdkVirtualFor=\"let state of states\">\n      <dt class=\"example-dt\">{{state.name}}</dt>\n      <dd class=\"example-dd\">{{state.capital}}</dd>\n    </ng-container>\n  </dl>\n</cdk-virtual-scroll-viewport>\n",
       styles: [".example-viewport {\n  height: 200px;\n  width: 200px;\n  border: 1px solid black;\n}\n\n.example-dt {\n  height: 30px;\n  font-weight: bold;\n}\n\n.example-dd {\n  height: 30px;\n}\n"]
@@ -542,8 +532,7 @@ class CdkVirtualScrollFixedBufferExample {
       selector: "cdk-virtual-scroll-viewport",
       inputs: ["orientation", "appendOnly"],
       outputs: ["scrolledIndexChange"]
-    }],
-    changeDetection: i0.ChangeDetectionStrategy.OnPush
+    }]
   });
 }
 i0.ɵɵngDeclareClassMetadata({
@@ -555,7 +544,6 @@ i0.ɵɵngDeclareClassMetadata({
     type: Component,
     args: [{
       selector: 'cdk-virtual-scroll-fixed-buffer-example',
-      changeDetection: ChangeDetectionStrategy.OnPush,
       imports: [ScrollingModule],
       template: "<cdk-virtual-scroll-viewport itemSize=\"50\" minBufferPx=\"200\" maxBufferPx=\"400\"\n                             class=\"example-viewport\">\n  <div *cdkVirtualFor=\"let item of items\" class=\"example-item\">{{item}}</div>\n</cdk-virtual-scroll-viewport>\n",
       styles: [".example-viewport {\n  height: 200px;\n  width: 200px;\n  border: 1px solid black;\n}\n\n.example-item {\n  height: 50px;\n}\n"]
@@ -604,7 +592,6 @@ class CdkVirtualScrollHorizontalExample {
       inputs: ["orientation", "appendOnly"],
       outputs: ["scrolledIndexChange"]
     }],
-    changeDetection: i0.ChangeDetectionStrategy.OnPush,
     encapsulation: i0.ViewEncapsulation.None
   });
 }
@@ -618,7 +605,6 @@ i0.ɵɵngDeclareClassMetadata({
     args: [{
       selector: 'cdk-virtual-scroll-horizontal-example',
       encapsulation: ViewEncapsulation.None,
-      changeDetection: ChangeDetectionStrategy.OnPush,
       imports: [ScrollingModule],
       template: "<div class=\"cdk-virtual-scroll-data-source-example\">\n  <cdk-virtual-scroll-viewport orientation=\"horizontal\" itemSize=\"50\" class=\"example-viewport\">\n    <div *cdkVirtualFor=\"let item of items\" class=\"example-item\">{{item}}</div>\n  </cdk-virtual-scroll-viewport>\n</div>\n",
       styles: [".cdk-virtual-scroll-data-source-example .example-viewport {\n  height: 200px;\n  width: 200px;\n  border: 1px solid black;\n}\n\n.cdk-virtual-scroll-data-source-example .example-viewport .cdk-virtual-scroll-content-wrapper {\n  display: flex;\n  flex-direction: row;\n}\n\n.cdk-virtual-scroll-data-source-example .example-item {\n  width: 50px;\n  height: 100%;\n  writing-mode: vertical-lr;\n}\n"]
@@ -666,8 +652,7 @@ class CdkVirtualScrollOverviewExample {
       selector: "cdk-virtual-scroll-viewport",
       inputs: ["orientation", "appendOnly"],
       outputs: ["scrolledIndexChange"]
-    }],
-    changeDetection: i0.ChangeDetectionStrategy.OnPush
+    }]
   });
 }
 i0.ɵɵngDeclareClassMetadata({
@@ -679,7 +664,6 @@ i0.ɵɵngDeclareClassMetadata({
     type: Component,
     args: [{
       selector: 'cdk-virtual-scroll-overview-example',
-      changeDetection: ChangeDetectionStrategy.OnPush,
       imports: [ScrollingModule],
       template: "<cdk-virtual-scroll-viewport itemSize=\"50\" class=\"example-viewport\">\n  <div *cdkVirtualFor=\"let item of items\" class=\"example-item\">{{item}}</div>\n</cdk-virtual-scroll-viewport>\n",
       styles: [".example-viewport {\n  height: 200px;\n  width: 200px;\n  border: 1px solid black;\n}\n\n.example-item {\n  height: 50px;\n}\n"]
@@ -731,8 +715,7 @@ class CdkVirtualScrollParentScrollingExample {
       kind: "directive",
       type: i1.CdkVirtualScrollableElement,
       selector: "[cdkVirtualScrollingElement]"
-    }],
-    changeDetection: i0.ChangeDetectionStrategy.OnPush
+    }]
   });
 }
 i0.ɵɵngDeclareClassMetadata({
@@ -744,7 +727,6 @@ i0.ɵɵngDeclareClassMetadata({
     type: Component,
     args: [{
       selector: 'cdk-virtual-scroll-parent-scrolling-example',
-      changeDetection: ChangeDetectionStrategy.OnPush,
       imports: [ScrollingModule],
       template: "<div class=\"example-viewport\" cdkVirtualScrollingElement>\n  <div class=\"example-header\">Content before</div>\n  <cdk-virtual-scroll-viewport itemSize=\"50\">\n    <div *cdkVirtualFor=\"let item of items\" class=\"example-item\">{{item}}</div>\n  </cdk-virtual-scroll-viewport>\n  <div class=\"example-footer\">Content after</div>\n</div>\n",
       styles: [".example-viewport {\n  flex: 1;\n  width: 200px;\n  min-height: 200px;\n  border: 1px solid black;\n}\n\n.example-item {\n  height: 50px;\n}\n\n.example-header,\n.example-footer {\n  height: 100px;\n  background: lightgray;\n}\n"]
@@ -792,8 +774,7 @@ class CdkVirtualScrollTemplateCacheExample {
       selector: "cdk-virtual-scroll-viewport",
       inputs: ["orientation", "appendOnly"],
       outputs: ["scrolledIndexChange"]
-    }],
-    changeDetection: i0.ChangeDetectionStrategy.OnPush
+    }]
   });
 }
 i0.ɵɵngDeclareClassMetadata({
@@ -805,7 +786,6 @@ i0.ɵɵngDeclareClassMetadata({
     type: Component,
     args: [{
       selector: 'cdk-virtual-scroll-template-cache-example',
-      changeDetection: ChangeDetectionStrategy.OnPush,
       imports: [ScrollingModule],
       template: "<cdk-virtual-scroll-viewport itemSize=\"50\" class=\"example-viewport\">\n  <div *cdkVirtualFor=\"let item of items; templateCacheSize: 0\" class=\"example-item\">{{item}}</div>\n</cdk-virtual-scroll-viewport>\n",
       styles: [".example-viewport {\n  height: 200px;\n  width: 200px;\n  border: 1px solid black;\n}\n\n.example-item {\n  height: 50px;\n}\n"]
@@ -869,8 +849,7 @@ class CdkVirtualScrollWindowScrollingExample {
       kind: "directive",
       type: i1.CdkVirtualScrollableWindow,
       selector: "cdk-virtual-scroll-viewport[scrollWindow]"
-    }],
-    changeDetection: i0.ChangeDetectionStrategy.OnPush
+    }]
   });
 }
 i0.ɵɵngDeclareClassMetadata({
@@ -882,7 +861,6 @@ i0.ɵɵngDeclareClassMetadata({
     type: Component,
     args: [{
       selector: 'cdk-virtual-scroll-window-scrolling-example',
-      changeDetection: ChangeDetectionStrategy.OnPush,
       imports: [ScrollingModule],
       template: "@if (shouldRun()) {\n  <div class=\"example-header\">Content before</div>\n  <cdk-virtual-scroll-viewport scrollWindow itemSize=\"50\">\n    <div *cdkVirtualFor=\"let item of items\" class=\"example-item\">{{item}}</div>\n  </cdk-virtual-scroll-viewport>\n  <div class=\"example-footer\">Content after</div>\n}\n\n@if (!shouldRun()) {\n  <div>Please open on StackBlitz to see result</div>\n}\n",
       styles: [".example-item {\n  height: 50px;\n}\n\n.example-header,\n.example-footer {\n  height: 100px;\n  background: lightgray;\n}\n"]

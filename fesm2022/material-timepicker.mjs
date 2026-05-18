@@ -1,5 +1,5 @@
 import * as i0 from '@angular/core';
-import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
 import * as i3 from '@angular/material/timepicker';
 import { MatTimepickerModule } from '@angular/material/timepicker';
 import * as i2 from '@angular/material/input';
@@ -84,8 +84,7 @@ class TimepickerOverviewExample {
       selector: "mat-timepicker-toggle",
       inputs: ["for", "aria-label", "aria-labelledby", "disabled", "tabIndex", "disableRipple"],
       exportAs: ["matTimepickerToggle"]
-    }],
-    changeDetection: i0.ChangeDetectionStrategy.OnPush
+    }]
   });
 }
 i0.ɵɵngDeclareClassMetadata({
@@ -99,7 +98,6 @@ i0.ɵɵngDeclareClassMetadata({
       selector: 'timepicker-overview-example',
       providers: [provideNativeDateAdapter()],
       imports: [MatFormFieldModule, MatInputModule, MatTimepickerModule],
-      changeDetection: ChangeDetectionStrategy.OnPush,
       template: "<mat-form-field>\n  <mat-label>Pick a time</mat-label>\n<!-- #docregion minimum-setup -->\n  <input matInput [matTimepicker]=\"picker\">\n  <mat-timepicker-toggle matIconSuffix [for]=\"picker\"/>\n  <mat-timepicker #picker/>\n<!-- #enddocregion minimum-setup -->\n</mat-form-field>\n"
     }]
   }]
@@ -197,8 +195,7 @@ class TimepickerFormsExample {
       inputs: ["formControl", "disabled", "ngModel"],
       outputs: ["ngModelChange"],
       exportAs: ["ngForm"]
-    }],
-    changeDetection: i0.ChangeDetectionStrategy.OnPush
+    }]
   });
 }
 i0.ɵɵngDeclareClassMetadata({
@@ -212,7 +209,6 @@ i0.ɵɵngDeclareClassMetadata({
       selector: 'timepicker-forms-example',
       providers: [provideNativeDateAdapter()],
       imports: [MatFormFieldModule, MatInputModule, MatTimepickerModule, ReactiveFormsModule],
-      changeDetection: ChangeDetectionStrategy.OnPush,
       template: "<mat-form-field>\n  <mat-label>Pick a time</mat-label>\n  <input matInput [formControl]=\"formControl\" [matTimepicker]=\"picker\">\n  <mat-timepicker-toggle matIconSuffix [for]=\"picker\"/>\n  <mat-timepicker #picker/>\n</mat-form-field>\n\n<p>Value: {{formControl.value}}</p>\n<p>Touched: {{formControl.touched}}</p>\n<p>Dirty: {{formControl.dirty}}</p>\n"
     }]
   }],
@@ -327,8 +323,7 @@ class TimepickerDatepickerIntegrationExample {
       inputs: ["name", "disabled", "ngModel", "ngModelOptions"],
       outputs: ["ngModelChange"],
       exportAs: ["ngModel"]
-    }],
-    changeDetection: i0.ChangeDetectionStrategy.OnPush
+    }]
   });
 }
 i0.ɵɵngDeclareClassMetadata({
@@ -342,7 +337,6 @@ i0.ɵɵngDeclareClassMetadata({
       selector: 'timepicker-datepicker-integration-example',
       providers: [provideNativeDateAdapter()],
       imports: [MatFormFieldModule, MatInputModule, MatTimepickerModule, MatDatepickerModule, FormsModule],
-      changeDetection: ChangeDetectionStrategy.OnPush,
       template: "<mat-form-field>\n  <mat-label>Meeting date</mat-label>\n  <input matInput [matDatepicker]=\"datepicker\" [(ngModel)]=\"value\">\n  <mat-datepicker #datepicker/>\n  <mat-datepicker-toggle [for]=\"datepicker\" matSuffix/>\n</mat-form-field>\n\n<mat-form-field>\n  <mat-label>Meeting time</mat-label>\n  <input matInput\n    [matTimepicker]=\"timepicker\"\n    [(ngModel)]=\"value\"\n    [ngModelOptions]=\"{updateOn: 'blur'}\">\n  <mat-timepicker #timepicker/>\n  <mat-timepicker-toggle [for]=\"timepicker\" matSuffix/>\n</mat-form-field>\n\n<p>Value: {{value}}</p>\n",
       styles: ["mat-form-field {\n  margin-right: 16px;\n}\n"]
     }]
@@ -446,8 +440,7 @@ class TimepickerValidationExample {
       kind: "pipe",
       type: JsonPipe,
       name: "json"
-    }],
-    changeDetection: i0.ChangeDetectionStrategy.OnPush
+    }]
   });
 }
 i0.ɵɵngDeclareClassMetadata({
@@ -461,7 +454,6 @@ i0.ɵɵngDeclareClassMetadata({
       selector: 'timepicker-validation-example',
       providers: [provideNativeDateAdapter()],
       imports: [MatFormFieldModule, MatInputModule, MatTimepickerModule, ReactiveFormsModule, JsonPipe],
-      changeDetection: ChangeDetectionStrategy.OnPush,
       template: "<mat-form-field>\n  <mat-label>Pick a time</mat-label>\n  <input\n    matInput\n    [formControl]=\"formControl\"\n    [matTimepicker]=\"picker\"\n    matTimepickerMin=\"12:30\"\n    matTimepickerMax=\"17:30\">\n  <mat-timepicker-toggle matIconSuffix [for]=\"picker\"/>\n  <mat-timepicker #picker/>\n\n  @if (formControl.errors?.['matTimepickerParse']) {\n    <mat-error>Value isn't a valid time</mat-error>\n  }\n\n  @if (formControl.errors?.['matTimepickerMin']) {\n    <mat-error>Value is too early</mat-error>\n  }\n\n  @if (formControl.errors?.['matTimepickerMax']) {\n    <mat-error>Value is too late</mat-error>\n  }\n</mat-form-field>\n\n<p>Enter a value before 12:30 PM or after 5:30 PM to see the errors</p>\n<p>Errors: {{formControl.errors | json}}</p>\n",
       styles: ["mat-form-field {\n  margin-bottom: 30px;\n}\n"]
     }]
@@ -546,8 +538,7 @@ class TimepickerOptionsExample {
       selector: "mat-timepicker-toggle",
       inputs: ["for", "aria-label", "aria-labelledby", "disabled", "tabIndex", "disableRipple"],
       exportAs: ["matTimepickerToggle"]
-    }],
-    changeDetection: i0.ChangeDetectionStrategy.OnPush
+    }]
   });
 }
 i0.ɵɵngDeclareClassMetadata({
@@ -561,7 +552,6 @@ i0.ɵɵngDeclareClassMetadata({
       selector: 'timepicker-options-example',
       providers: [provideNativeDateAdapter()],
       imports: [MatFormFieldModule, MatInputModule, MatTimepickerModule],
-      changeDetection: ChangeDetectionStrategy.OnPush,
       template: "<h3>Interval examples</h3>\n\n<div>\n  <mat-form-field>\n    <mat-label>Every 45 minutes</mat-label>\n    <input matInput [matTimepicker]=\"minutesPicker\">\n    <mat-timepicker-toggle matIconSuffix [for]=\"minutesPicker\"/>\n    <mat-timepicker interval=\"45min\" #minutesPicker/>\n  </mat-form-field>\n</div>\n\n<div>\n  <mat-form-field>\n    <mat-label>Every 3.5 hours</mat-label>\n    <input matInput [matTimepicker]=\"hoursPicker\">\n    <mat-timepicker-toggle matIconSuffix [for]=\"hoursPicker\"/>\n    <mat-timepicker interval=\"3.5h\" #hoursPicker/>\n  </mat-form-field>\n</div>\n\n<h3>Custom list of options</h3>\n\n<div>\n  <mat-form-field>\n    <mat-label>Pick a time of day</mat-label>\n    <input matInput [matTimepicker]=\"customPicker\">\n    <mat-timepicker-toggle matIconSuffix [for]=\"customPicker\"/>\n    <mat-timepicker [options]=\"customOptions\" #customPicker/>\n  </mat-form-field>\n</div>\n"
     }]
   }]
@@ -641,8 +631,7 @@ class TimepickerCustomIconExample {
       selector: "mat-icon",
       inputs: ["color", "inline", "svgIcon", "fontSet", "fontIcon"],
       exportAs: ["matIcon"]
-    }],
-    changeDetection: i0.ChangeDetectionStrategy.OnPush
+    }]
   });
 }
 i0.ɵɵngDeclareClassMetadata({
@@ -656,7 +645,6 @@ i0.ɵɵngDeclareClassMetadata({
       selector: 'timepicker-custom-icon-example',
       providers: [provideNativeDateAdapter()],
       imports: [MatFormFieldModule, MatInputModule, MatTimepickerModule, MatIcon],
-      changeDetection: ChangeDetectionStrategy.OnPush,
       template: "<mat-form-field>\n  <mat-label>Pick a time</mat-label>\n  <input matInput [matTimepicker]=\"picker\">\n  <mat-timepicker-toggle matIconSuffix [for]=\"picker\">\n    <mat-icon matTimepickerToggleIcon>keyboard_arrow_down</mat-icon>\n  </mat-timepicker-toggle>\n  <mat-timepicker #picker/>\n</mat-form-field>\n"
     }]
   }]
@@ -762,8 +750,7 @@ class TimepickerLocaleExample {
       selector: "    button[matButton], a[matButton], button[mat-button], button[mat-raised-button],    button[mat-flat-button], button[mat-stroked-button], a[mat-button], a[mat-raised-button],    a[mat-flat-button], a[mat-stroked-button]  ",
       inputs: ["matButton"],
       exportAs: ["matButton", "matAnchor"]
-    }],
-    changeDetection: i0.ChangeDetectionStrategy.OnPush
+    }]
   });
 }
 i0.ɵɵngDeclareClassMetadata({
@@ -777,7 +764,6 @@ i0.ɵɵngDeclareClassMetadata({
       selector: 'timepicker-locale-example',
       providers: [provideNativeDateAdapter()],
       imports: [MatFormFieldModule, MatInputModule, MatTimepickerModule, FormsModule, MatButtonModule],
-      changeDetection: ChangeDetectionStrategy.OnPush,
       template: "<mat-form-field>\n  <mat-label>Pick a time</mat-label>\n  <input matInput [(ngModel)]=\"value\" [matTimepicker]=\"picker\">\n  <mat-timepicker-toggle matIconSuffix [for]=\"picker\"/>\n  <mat-timepicker #picker/>\n</mat-form-field>\n\n<button matButton (click)=\"switchLocale()\">Dynamically switch to Bulgarian</button>\n"
     }]
   }]
@@ -825,8 +811,7 @@ class TimepickerHarnessExample {
       inputs: ["value", "matTimepicker", "matTimepickerMin", "matTimepickerMax", "matTimepickerOpenOnClick", "disabled"],
       outputs: ["valueChange"],
       exportAs: ["matTimepickerInput"]
-    }],
-    changeDetection: i0.ChangeDetectionStrategy.OnPush
+    }]
   });
 }
 i0.ɵɵngDeclareClassMetadata({
@@ -840,7 +825,6 @@ i0.ɵɵngDeclareClassMetadata({
       selector: 'timepicker-harness-example',
       providers: [provideNativeDateAdapter()],
       imports: [MatTimepickerModule],
-      changeDetection: ChangeDetectionStrategy.OnPush,
       template: "<input [matTimepicker]=\"picker\" [(value)]=\"date\"/>\n<mat-timepicker #picker/>\n"
     }]
   }],

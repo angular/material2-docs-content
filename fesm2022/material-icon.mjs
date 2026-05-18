@@ -1,5 +1,5 @@
 import * as i0 from '@angular/core';
-import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import * as i3 from '@angular/material/icon';
 import { MatIconModule, MatIconRegistry } from '@angular/material/icon';
 import { DomSanitizer } from '@angular/platform-browser';
@@ -30,8 +30,7 @@ class IconOverviewExample {
       selector: "mat-icon",
       inputs: ["color", "inline", "svgIcon", "fontSet", "fontIcon"],
       exportAs: ["matIcon"]
-    }],
-    changeDetection: i0.ChangeDetectionStrategy.OnPush
+    }]
   });
 }
 i0.ɵɵngDeclareClassMetadata({
@@ -44,7 +43,6 @@ i0.ɵɵngDeclareClassMetadata({
     args: [{
       selector: 'icon-overview-example',
       imports: [MatIconModule],
-      changeDetection: ChangeDetectionStrategy.OnPush,
       template: "<mat-icon aria-hidden=\"false\" aria-label=\"Example home icon\" fontIcon=\"home\"></mat-icon>\n"
     }]
   }]
@@ -87,8 +85,7 @@ class IconSvgExample {
       selector: "mat-icon",
       inputs: ["color", "inline", "svgIcon", "fontSet", "fontIcon"],
       exportAs: ["matIcon"]
-    }],
-    changeDetection: i0.ChangeDetectionStrategy.OnPush
+    }]
   });
 }
 i0.ɵɵngDeclareClassMetadata({
@@ -101,7 +98,6 @@ i0.ɵɵngDeclareClassMetadata({
     args: [{
       selector: 'icon-svg-example',
       imports: [MatIconModule],
-      changeDetection: ChangeDetectionStrategy.OnPush,
       template: "<mat-icon svgIcon=\"thumbs-up\" aria-hidden=\"false\" aria-label=\"Example thumbs up SVG icon\"></mat-icon>\n"
     }]
   }],
@@ -134,8 +130,7 @@ class IconHarnessExample {
       selector: "mat-icon",
       inputs: ["color", "inline", "svgIcon", "fontSet", "fontIcon"],
       exportAs: ["matIcon"]
-    }],
-    changeDetection: i0.ChangeDetectionStrategy.OnPush
+    }]
   });
 }
 i0.ɵɵngDeclareClassMetadata({
@@ -148,7 +143,6 @@ i0.ɵɵngDeclareClassMetadata({
     args: [{
       selector: 'icon-harness-example',
       imports: [MatIconModule],
-      changeDetection: ChangeDetectionStrategy.OnPush,
       template: "<mat-icon fontSet=\"fontIcons\" fontIcon=\"fontIcon\"></mat-icon>\n<mat-icon svgIcon=\"svgIcons:svgIcon\"></mat-icon>\n<mat-icon inline>ligature_icon</mat-icon>\n<mat-icon fontIcon=\"ligature_icon_by_attribute\"></mat-icon>\n"
     }]
   }]

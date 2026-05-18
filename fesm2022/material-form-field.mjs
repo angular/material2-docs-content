@@ -1,5 +1,5 @@
 import * as i0 from '@angular/core';
-import { ChangeDetectionStrategy, Component, viewChild, inject, signal, input, booleanAttribute, model, computed, ElementRef, effect, untracked, forwardRef } from '@angular/core';
+import { Component, viewChild, inject, signal, input, booleanAttribute, model, computed, ElementRef, effect, untracked, forwardRef } from '@angular/core';
 import * as i1 from '@angular/material/form-field';
 import { MatFormFieldModule, MAT_FORM_FIELD, MatFormFieldControl } from '@angular/material/form-field';
 import * as i3 from '@angular/material/icon';
@@ -80,8 +80,7 @@ class FormFieldAppearanceExample {
       selector: "mat-icon",
       inputs: ["color", "inline", "svgIcon", "fontSet", "fontIcon"],
       exportAs: ["matIcon"]
-    }],
-    changeDetection: i0.ChangeDetectionStrategy.OnPush
+    }]
   });
 }
 i0.ɵɵngDeclareClassMetadata({
@@ -94,7 +93,6 @@ i0.ɵɵngDeclareClassMetadata({
     args: [{
       selector: 'form-field-appearance-example',
       imports: [MatFormFieldModule, MatInputModule, MatIconModule],
-      changeDetection: ChangeDetectionStrategy.OnPush,
       template: "<p>\n  <mat-form-field appearance=\"fill\">\n    <mat-label>Fill form field</mat-label>\n    <input matInput placeholder=\"Placeholder\">\n    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>\n    <mat-hint>Hint</mat-hint>\n  </mat-form-field>\n</p>\n<p>\n  <mat-form-field appearance=\"outline\">\n    <mat-label>Outline form field</mat-label>\n    <input matInput placeholder=\"Placeholder\">\n    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>\n    <mat-hint>Hint</mat-hint>\n  </mat-form-field>\n</p>\n"
     }]
   }]
@@ -198,8 +196,7 @@ class FormFieldCustomControlExample {
       kind: "pipe",
       type: i0.forwardRef(() => JsonPipe),
       name: "json"
-    }],
-    changeDetection: i0.ChangeDetectionStrategy.OnPush
+    }]
   });
 }
 i0.ɵɵngDeclareClassMetadata({
@@ -212,7 +209,6 @@ i0.ɵɵngDeclareClassMetadata({
     args: [{
       selector: 'form-field-custom-control-example',
       imports: [FormsModule, ReactiveFormsModule, MatFormFieldModule, forwardRef(() => MyTelInput), MatIconModule, AsyncPipe, JsonPipe],
-      changeDetection: ChangeDetectionStrategy.OnPush,
       template: "<div [formGroup]=\"form\">\n  <mat-form-field>\n    <mat-label>Phone number</mat-label>\n    <example-tel-input formControlName=\"tel\" required></example-tel-input>\n    <mat-icon matSuffix>phone</mat-icon>\n    <mat-hint>Include area code</mat-hint>\n  </mat-form-field>\n  <p>Entered value: {{form.valueChanges | async | json}}</p>\n</div>\n"
     }]
   }]
@@ -541,8 +537,7 @@ class MyTelInput {
       selector: "[formControlName]",
       inputs: ["formControlName", "disabled", "ngModel"],
       outputs: ["ngModelChange"]
-    }],
-    changeDetection: i0.ChangeDetectionStrategy.OnPush
+    }]
   });
 }
 i0.ɵɵngDeclareClassMetadata({
@@ -563,7 +558,6 @@ i0.ɵɵngDeclareClassMetadata({
         '[id]': 'id'
       },
       imports: [FormsModule, ReactiveFormsModule],
-      changeDetection: ChangeDetectionStrategy.OnPush,
       template: "<div\n  role=\"group\"\n  class=\"example-tel-input-container\"\n  [formGroup]=\"parts\"\n  [attr.aria-labelledby]=\"_formField?.getLabelId()\"\n  (focusin)=\"onFocusIn()\"\n  (focusout)=\"onFocusOut($event)\"\n>\n  <input\n    class=\"example-tel-input-element\"\n    formControlName=\"area\"\n    size=\"3\"\n    maxLength=\"3\"\n    aria-label=\"Area code\"\n    (input)=\"_handleInput(parts.controls.area, exchange)\"\n    #area\n  />\n  <span class=\"example-tel-input-spacer\">&ndash;</span>\n  <input\n    class=\"example-tel-input-element\"\n    formControlName=\"exchange\"\n    maxLength=\"3\"\n    size=\"3\"\n    aria-label=\"Exchange code\"\n    (input)=\"_handleInput(parts.controls.exchange, subscriber)\"\n    (keyup.backspace)=\"autoFocusPrev(parts.controls.exchange, area)\"\n    #exchange\n  />\n  <span class=\"example-tel-input-spacer\">&ndash;</span>\n  <input\n    class=\"example-tel-input-element\"\n    formControlName=\"subscriber\"\n    maxLength=\"4\"\n    size=\"4\"\n    aria-label=\"Subscriber number\"\n    (input)=\"_handleInput(parts.controls.subscriber)\"\n    (keyup.backspace)=\"autoFocusPrev(parts.controls.subscriber, exchange)\"\n    #subscriber\n  />\n</div>\n",
       styles: [".example-tel-input-container {\n  display: flex;\n}\n\n.example-tel-input-element {\n  border: none;\n  background: none;\n  padding: 0;\n  outline: none;\n  font: inherit;\n  text-align: center;\n  color: currentcolor;\n}\n\n.example-tel-input-spacer {\n  opacity: 0;\n  transition: opacity 200ms;\n}\n\n:host.example-floating .example-tel-input-spacer {\n  opacity: 1;\n}\n"]
     }]
@@ -721,8 +715,7 @@ class FormFieldErrorExample {
       inputs: ["formControl", "disabled", "ngModel"],
       outputs: ["ngModelChange"],
       exportAs: ["ngForm"]
-    }],
-    changeDetection: i0.ChangeDetectionStrategy.OnPush
+    }]
   });
 }
 i0.ɵɵngDeclareClassMetadata({
@@ -735,7 +728,6 @@ i0.ɵɵngDeclareClassMetadata({
     args: [{
       selector: 'form-field-error-example',
       imports: [MatFormFieldModule, MatInputModule, FormsModule, ReactiveFormsModule],
-      changeDetection: ChangeDetectionStrategy.OnPush,
       template: "<div class=\"example-container\">\n  <mat-form-field>\n    <mat-label>Enter your email</mat-label>\n    <input\n      matInput\n      placeholder=\"pat@example.com\"\n      [formControl]=\"email\"\n      (blur)=\"updateErrorMessage()\"\n      required\n    />\n    @if (email.invalid) {\n      <mat-error>{{errorMessage()}}</mat-error>\n    }\n  </mat-form-field>\n</div>\n",
       styles: [".example-container mat-form-field + mat-form-field {\n  margin-left: 8px;\n}\n"]
     }]
@@ -810,8 +802,7 @@ class FormFieldHarnessExample {
       inputs: ["formControl", "disabled", "ngModel"],
       outputs: ["ngModelChange"],
       exportAs: ["ngForm"]
-    }],
-    changeDetection: i0.ChangeDetectionStrategy.OnPush
+    }]
   });
 }
 i0.ɵɵngDeclareClassMetadata({
@@ -824,7 +815,6 @@ i0.ɵɵngDeclareClassMetadata({
     args: [{
       selector: 'form-field-harness-example',
       imports: [MatFormFieldModule, MatInputModule, FormsModule, ReactiveFormsModule],
-      changeDetection: ChangeDetectionStrategy.OnPush,
       template: "<mat-form-field id=\"with-errors\">\n  <span class=\"custom-control\">Custom control harness</span>\n  <input matInput [formControl]=\"requiredControl\">\n\n  <mat-error>Error</mat-error>\n  <mat-hint align=\"start\">Hint</mat-hint>\n</mat-form-field>\n"
     }]
   }]
@@ -898,8 +888,7 @@ class FormFieldHintExample {
       inputs: ["value", "id", "disabled"],
       outputs: ["onSelectionChange"],
       exportAs: ["matOption"]
-    }],
-    changeDetection: i0.ChangeDetectionStrategy.OnPush
+    }]
   });
 }
 i0.ɵɵngDeclareClassMetadata({
@@ -912,7 +901,6 @@ i0.ɵɵngDeclareClassMetadata({
     args: [{
       selector: 'form-field-hint-example',
       imports: [MatFormFieldModule, MatInputModule, MatSelectModule],
-      changeDetection: ChangeDetectionStrategy.OnPush,
       template: "<div class=\"example-container\">\n  <mat-form-field hintLabel=\"Max 10 characters\">\n    <mat-label>Enter some input</mat-label>\n    <input matInput #input maxlength=\"10\" placeholder=\"Ex. Nougat\" (input)=\"onInput($event)\" />\n    <mat-hint align=\"end\">{{value().length}}/10</mat-hint>\n  </mat-form-field>\n\n  <mat-form-field>\n    <mat-label>Select me</mat-label>\n    <mat-select>\n      <mat-option value=\"option\">Option</mat-option>\n    </mat-select>\n    <mat-hint align=\"end\">Here's the dropdown arrow ^</mat-hint>\n  </mat-form-field>\n</div>\n",
       styles: [".example-container mat-form-field + mat-form-field {\n  margin-left: 8px;\n}\n"]
     }]
@@ -1054,8 +1042,7 @@ class FormFieldLabelExample {
       selector: "mat-icon",
       inputs: ["color", "inline", "svgIcon", "fontSet", "fontIcon"],
       exportAs: ["matIcon"]
-    }],
-    changeDetection: i0.ChangeDetectionStrategy.OnPush
+    }]
   });
 }
 i0.ɵɵngDeclareClassMetadata({
@@ -1068,7 +1055,6 @@ i0.ɵɵngDeclareClassMetadata({
     args: [{
       selector: 'form-field-label-example',
       imports: [FormsModule, ReactiveFormsModule, MatCheckboxModule, MatRadioModule, MatFormFieldModule, MatInputModule, MatSelectModule, MatIconModule],
-      changeDetection: ChangeDetectionStrategy.OnPush,
       template: "<div class=\"example-container\">\n  <form [formGroup]=\"options\">\n    <mat-checkbox [formControl]=\"hideRequiredControl\">Hide required marker</mat-checkbox>\n    <div>\n      <label>Float label: </label>\n      <mat-radio-group [formControl]=\"floatLabelControl\">\n        <mat-radio-button value=\"auto\">Auto</mat-radio-button>\n        <mat-radio-button value=\"always\">Always</mat-radio-button>\n      </mat-radio-group>\n    </div>\n\n    <div class=\"example-form-fields\">\n      <mat-form-field [hideRequiredMarker]=\"hideRequired()\" [floatLabel]=\"floatLabel()\">\n        <input matInput placeholder=\"Simple placeholder\" required />\n      </mat-form-field>\n\n      <mat-form-field [floatLabel]=\"floatLabel()\">\n        <mat-label>Both a label and a placeholder</mat-label>\n        <input matInput placeholder=\"Simple placeholder\" />\n      </mat-form-field>\n\n      <mat-form-field [hideRequiredMarker]=\"hideRequired()\" [floatLabel]=\"floatLabel()\">\n        <mat-select required>\n          <mat-option>-- None --</mat-option>\n          <mat-option value=\"option\">Option</mat-option>\n        </mat-select>\n        <mat-label><mat-icon>favorite</mat-icon> <strong> Fancy</strong> <em> label</em></mat-label>\n      </mat-form-field>\n    </div>\n  </form>\n</div>\n",
       styles: [".example-container mat-form-field + mat-form-field {\n  margin-left: 8px;\n}\n\n.example-container mat-form-field {\n  width: 220px;\n}\n\n.example-container form {\n  margin-bottom: 20px;\n}\n\n.example-container form > * {\n  margin: 12px 0;\n}\n\n.example-container .mat-radio-button {\n  margin: 0 12px;\n}\n\n.example-form-fields {\n  display: flex;\n  align-items: flex-start;\n}\n"]
     }]
@@ -1132,8 +1118,7 @@ class FormFieldOverviewExample {
       inputs: ["value", "id", "disabled"],
       outputs: ["onSelectionChange"],
       exportAs: ["matOption"]
-    }],
-    changeDetection: i0.ChangeDetectionStrategy.OnPush
+    }]
   });
 }
 i0.ɵɵngDeclareClassMetadata({
@@ -1146,7 +1131,6 @@ i0.ɵɵngDeclareClassMetadata({
     args: [{
       selector: 'form-field-overview-example',
       imports: [MatFormFieldModule, MatInputModule, MatSelectModule],
-      changeDetection: ChangeDetectionStrategy.OnPush,
       template: "<mat-form-field>\n  <mat-label>Input</mat-label>\n  <input matInput>\n</mat-form-field>\n<mat-form-field>\n  <mat-label>Select</mat-label>\n  <mat-select>\n    <mat-option value=\"one\">First option</mat-option>\n    <mat-option value=\"two\">Second option</mat-option>\n  </mat-select>\n</mat-form-field>\n<mat-form-field>\n  <mat-label>Textarea</mat-label>\n  <textarea matInput></textarea>\n</mat-form-field>\n",
       styles: [":host {\n  display: flex;\n  flex-direction: column;\n  align-items: flex-start;\n}\n"]
     }]
@@ -1227,8 +1211,7 @@ class FormFieldPrefixSuffixExample {
       selector: "mat-icon",
       inputs: ["color", "inline", "svgIcon", "fontSet", "fontIcon"],
       exportAs: ["matIcon"]
-    }],
-    changeDetection: i0.ChangeDetectionStrategy.OnPush
+    }]
   });
 }
 i0.ɵɵngDeclareClassMetadata({
@@ -1241,7 +1224,6 @@ i0.ɵɵngDeclareClassMetadata({
     args: [{
       selector: 'form-field-prefix-suffix-example',
       imports: [MatFormFieldModule, MatInputModule, MatButtonModule, MatIconModule],
-      changeDetection: ChangeDetectionStrategy.OnPush,
       template: "<div class=\"example-container\">\n  <mat-form-field>\n    <mat-label>Enter your password</mat-label>\n    <input matInput [type]=\"hide() ? 'password' : 'text'\" />\n    <button\n      matIconButton\n      matSuffix\n      (click)=\"clickEvent($event)\"\n      [attr.aria-label]=\"'Hide password'\"\n      [attr.aria-pressed]=\"hide()\"\n    >\n      <mat-icon>{{hide() ? 'visibility_off' : 'visibility'}}</mat-icon>\n    </button>\n  </mat-form-field>\n\n  <mat-form-field floatLabel=\"always\">\n    <mat-label>Amount</mat-label>\n    <input matInput type=\"number\" class=\"example-right-align\" placeholder=\"0\" />\n    <span matTextPrefix>$&nbsp;</span>\n    <span matTextSuffix>.00</span>\n  </mat-form-field>\n</div>\n",
       styles: [".example-container mat-form-field + mat-form-field {\n  margin-left: 8px;\n}\n\n.example-right-align {\n  text-align: right;\n}\n\ninput.example-right-align::-webkit-outer-spin-button,\ninput.example-right-align::-webkit-inner-spin-button {\n  display: none;\n}\n\ninput.example-right-align {\n  -moz-appearance: textfield;\n}\n"]
     }]

@@ -1,5 +1,5 @@
 import * as i0 from '@angular/core';
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { Component } from '@angular/core';
 import * as i1$1 from '@angular/material/button';
 import { MatButtonModule } from '@angular/material/button';
 import * as i1 from '@angular/material/card';
@@ -74,8 +74,7 @@ class CardOverviewExample {
       selector: "    button[matButton], a[matButton], button[mat-button], button[mat-raised-button],    button[mat-flat-button], button[mat-stroked-button], a[mat-button], a[mat-raised-button],    a[mat-flat-button], a[mat-stroked-button]  ",
       inputs: ["matButton"],
       exportAs: ["matButton", "matAnchor"]
-    }],
-    changeDetection: i0.ChangeDetectionStrategy.OnPush
+    }]
   });
 }
 i0.ɵɵngDeclareClassMetadata({
@@ -88,7 +87,6 @@ i0.ɵɵngDeclareClassMetadata({
     args: [{
       selector: 'card-overview-example',
       imports: [MatCardModule, MatButtonModule],
-      changeDetection: ChangeDetectionStrategy.OnPush,
       template: "<mat-card class=\"example-card\" appearance=\"outlined\">\n  <mat-card-header>\n    <div mat-card-avatar class=\"example-header-image\"></div>\n    <mat-card-title>Shiba Inu</mat-card-title>\n    <mat-card-subtitle>Dog Breed</mat-card-subtitle>\n  </mat-card-header>\n  <img mat-card-image src=\"https://material.angular.dev/assets/img/examples/shiba2.jpg\" alt=\"Photo of a Shiba Inu\">\n  <mat-card-content>\n    <p>\n      The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.\n      A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally\n      bred for hunting.\n    </p>\n  </mat-card-content>\n  <mat-card-actions>\n    <button matButton>LIKE</button>\n    <button matButton>SHARE</button>\n  </mat-card-actions>\n</mat-card>\n",
       styles: [".example-card {\n  max-width: 400px;\n}\n\n.example-header-image {\n  background-image: url('https://material.angular.dev/assets/img/examples/shiba1.jpg');\n  background-size: cover;\n}\n"]
     }]
@@ -160,8 +158,7 @@ class CardHarnessExample {
       selector: "    button[matButton], a[matButton], button[mat-button], button[mat-raised-button],    button[mat-flat-button], button[mat-stroked-button], a[mat-button], a[mat-raised-button],    a[mat-flat-button], a[mat-stroked-button]  ",
       inputs: ["matButton"],
       exportAs: ["matButton", "matAnchor"]
-    }],
-    changeDetection: i0.ChangeDetectionStrategy.OnPush
+    }]
   });
 }
 i0.ɵɵngDeclareClassMetadata({
@@ -174,7 +171,6 @@ i0.ɵɵngDeclareClassMetadata({
     args: [{
       selector: 'card-harness-example',
       imports: [MatCardModule, MatButtonModule],
-      changeDetection: ChangeDetectionStrategy.OnPush,
       template: "<mat-card>\n</mat-card>\n<mat-card>\n  <mat-card-header>\n    <div mat-card-avatar></div>\n    <mat-card-title>Shiba Inu</mat-card-title>\n    <mat-card-subtitle>Dog Breed</mat-card-subtitle>\n  </mat-card-header>\n  <div mat-card-image></div>\n  <mat-card-content>\n    <p>\n      The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from\n      Japan. A small, agile dog that copes very well with mountainous terrain, the Shiba Inu\n      was originally bred for hunting.\n    </p>\n  </mat-card-content>\n  <mat-card-actions>\n    <button matButton>LIKE</button>\n    <button matButton>SHARE</button>\n  </mat-card-actions>\n</mat-card>\n"
     }]
   }]
@@ -233,8 +229,7 @@ class CardActionsExample {
       selector: "    button[matButton], a[matButton], button[mat-button], button[mat-raised-button],    button[mat-flat-button], button[mat-stroked-button], a[mat-button], a[mat-raised-button],    a[mat-flat-button], a[mat-stroked-button]  ",
       inputs: ["matButton"],
       exportAs: ["matButton", "matAnchor"]
-    }],
-    changeDetection: i0.ChangeDetectionStrategy.OnPush
+    }]
   });
 }
 i0.ɵɵngDeclareClassMetadata({
@@ -247,7 +242,6 @@ i0.ɵɵngDeclareClassMetadata({
     args: [{
       selector: 'card-actions-example',
       imports: [MatCardModule, MatButtonModule],
-      changeDetection: ChangeDetectionStrategy.OnPush,
       template: "<mat-card appearance=\"outlined\">\n  <mat-card-header>\n    <mat-card-title> Australian Shepherd</mat-card-title>\n    <mat-card-subtitle>Herding group</mat-card-subtitle>\n  </mat-card-header>\n  <mat-card-actions>\n    <button matButton>Learn More</button>\n  </mat-card-actions>\n</mat-card>\n<br>\n<mat-card appearance=\"outlined\">\n  <mat-card-header>\n    <mat-card-title>Poodle</mat-card-title>\n    <mat-card-subtitle>Non-sporting group</mat-card-subtitle>\n  </mat-card-header>\n  <mat-card-actions align=\"end\">\n    <button matButton>Learn More</button>\n  </mat-card-actions>\n</mat-card>\n"
     }]
   }]
@@ -319,8 +313,7 @@ class CardMediaSizeExample {
       kind: "directive",
       type: i1.MatCardXlImage,
       selector: "[mat-card-xl-image], [matCardImageXLarge]"
-    }],
-    changeDetection: i0.ChangeDetectionStrategy.OnPush
+    }]
   });
 }
 i0.ɵɵngDeclareClassMetadata({
@@ -333,7 +326,6 @@ i0.ɵɵngDeclareClassMetadata({
     args: [{
       selector: 'card-media-size-example',
       imports: [MatCardModule],
-      changeDetection: ChangeDetectionStrategy.OnPush,
       template: "<!-- Cards with media area -->\n<mat-card class=\"example-card\" appearance=\"outlined\">\n  <mat-card-header>\n    <mat-card-title-group>\n      <mat-card-title>Shiba Inu</mat-card-title>\n      <mat-card-subtitle>Small</mat-card-subtitle>\n      <img mat-card-sm-image src=\"https://material.angular.dev/assets/img/examples/shiba2.jpg\" >\n    </mat-card-title-group>\n  </mat-card-header>\n  <mat-card-content>\n    {{longText}}\n  </mat-card-content>\n</mat-card>\n\n<mat-card class=\"example-card\" appearance=\"outlined\">\n  <mat-card-header>\n    <mat-card-title-group>\n      <mat-card-title>Shiba Inu</mat-card-title>\n      <mat-card-subtitle>Medium</mat-card-subtitle>\n      <img mat-card-md-image src=\"https://material.angular.dev/assets/img/examples/shiba2.jpg\"  alt=\"Image of a Shiba Inu\">\n    </mat-card-title-group>\n  </mat-card-header>\n  <mat-card-content>\n    {{longText}}\n  </mat-card-content>\n</mat-card>\n\n<mat-card class=\"example-card\" appearance=\"outlined\">\n  <mat-card-header>\n    <mat-card-title-group>\n      <mat-card-title>Shiba Inu</mat-card-title>\n      <mat-card-subtitle>Large</mat-card-subtitle>\n      <img mat-card-lg-image src=\"https://material.angular.dev/assets/img/examples/shiba2.jpg\" >\n    </mat-card-title-group>\n  </mat-card-header>\n  <mat-card-content>\n    {{longText}}\n  </mat-card-content>\n</mat-card>\n\n<mat-card class=\"example-card\" appearance=\"outlined\">\n  <mat-card-header>\n    <mat-card-title-group>\n      <mat-card-title>Shiba Inu</mat-card-title>\n      <mat-card-subtitle>Extra large</mat-card-subtitle>\n      <img mat-card-xl-image src=\"https://material.angular.dev/assets/img/examples/shiba2.jpg\" >\n    </mat-card-title-group>\n  </mat-card-header>\n  <mat-card-content>\n    {{longText}}\n  </mat-card-content>\n</mat-card>\n",
       styles: [".example-card {\n  max-width: 400px;\n  margin-bottom: 8px;\n}\n"]
     }]
@@ -404,8 +396,7 @@ class CardFooterExample {
     }, {
       kind: "ngmodule",
       type: MatProgressBarModule
-    }],
-    changeDetection: i0.ChangeDetectionStrategy.OnPush
+    }]
   });
 }
 i0.ɵɵngDeclareClassMetadata({
@@ -418,7 +409,6 @@ i0.ɵɵngDeclareClassMetadata({
     args: [{
       selector: 'card-footer-example',
       imports: [MatCardModule, MatChipsModule, MatProgressBarModule],
-      changeDetection: ChangeDetectionStrategy.OnPush,
       template: "<mat-card class=\"example-card\" appearance=\"outlined\">\n  <mat-card-header>\n    <mat-card-title>Chihuahua</mat-card-title>\n  </mat-card-header>\n  <mat-card-content>\n    <p>{{longText}}</p>\n  </mat-card-content>\n  <mat-card-footer class=\"example-card-footer\">\n    <mat-chip-set aria-label=\"Chihuahua traits\">\n      <mat-chip>charming</mat-chip>\n      <mat-chip>graceful</mat-chip>\n      <mat-chip>sassy</mat-chip>\n    </mat-chip-set>\n  </mat-card-footer>\n</mat-card>\n",
       styles: [".example-card {\n  max-width: 400px;\n}\n\n.example-card-footer {\n  padding: 16px;\n}\n"]
     }]
