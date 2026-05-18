@@ -38,8 +38,8 @@
   <span header-link="ScrollDispatcher"></span>
   <code>ScrollDispatcher</code>
   
-</h4><p class="docs-api-class-description"><p>Service contained all registered Scrollable references and emits an event when any one of the
-Scrollable references emit a scrolled event.</p>
+</h4><p class="docs-api-class-description"><p>Service contained all registered scroll targets and emits
+an event when any one of them emits a scrolled event.</p>
 </p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
   <div class="docs-api-properties-card">
     <table class="docs-api-properties-table">
@@ -52,10 +52,10 @@ Scrollable references emit a scrolled event.</p>
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>scrollContainers: <code class="docs-api-property-type">Map&lt;CdkScrollable, Subscription&gt;</code></code>
+      <code>scrollContainers: <code class="docs-api-property-type">Map&lt;ScrollDispatcherTarget, Subscription&gt;</code></code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Map of all the scrollable references that are registered with the service and their
+  <td class="docs-api-property-description"><p>Map of all the scrollable targets that are registered with the service and their
 scroll event subscriptions.</p>
 </td>
 </tr>
@@ -79,7 +79,7 @@ scroll event subscriptions.</p>
             </span>
             <code class="docs-api-method-parameter-type">HTMLElement | ElementRef&lt;any&gt;</code>, <span class="docs-api-method-parameter-name">auditTimeInMs<span class="docs-api-method-parameter-optional-marker">?</span>:
             </span>
-            <code class="docs-api-method-parameter-type">number</code>): <code class="docs-api-method-returns-type">Observable&lt;CdkScrollable | void&gt;</code>
+            <code class="docs-api-method-parameter-type">number</code>): <code class="docs-api-method-returns-type">Observable&lt;ScrollDispatcherTarget | void&gt;</code>
         </th>
       </tr>
     </thead><tr class="docs-api-method-description-row">
@@ -128,7 +128,7 @@ scrollable ancestors of an element are scrolled.</p>
     </thead>
     <tr>
       <td class="docs-api-method-returns-type-cell">
-        <code class="docs-api-method-returns-type">Observable&lt;CdkScrollable | void&gt;</code>
+        <code class="docs-api-method-returns-type">Observable&lt;ScrollDispatcherTarget | void&gt;</code>
       </td>
       <td class="docs-api-method-returns-description-cell">
         <p class="docs-api-method-returns-description">
@@ -147,9 +147,9 @@ scrollable ancestors of an element are scrolled.</p>
     <thead>
       <tr class="docs-api-method-name-row">
         <th colspan="2" class="docs-api-method-name-cell">deregister
-          (<span class="docs-api-method-parameter-name">scrollable:
+          (<span class="docs-api-method-parameter-name">target:
             </span>
-            <code class="docs-api-method-parameter-type">CdkScrollable</code>): <code class="docs-api-method-returns-type">void</code>
+            <code class="docs-api-method-parameter-type">ScrollDispatcherTarget</code>): <code class="docs-api-method-returns-type">void</code>
         </th>
       </tr>
     </thead><tr class="docs-api-method-description-row">
@@ -166,8 +166,8 @@ scrollable ancestors of an element are scrolled.</p>
     <tr class="docs-api-method-parameter-row">
       <td class="docs-api-method-parameter-cell">
         <p class="docs-api-method-parameter-name">
-          scrollable</p>
-        <code class="docs-api-method-parameter-type">CdkScrollable</code>
+          target</p>
+        <code class="docs-api-method-parameter-type">ScrollDispatcherTarget</code>
       </td>
       <td class="docs-api-method-parameter-description-cell">
         <p class="docs-api-method-parameter-description">
@@ -190,12 +190,12 @@ scrollable ancestors of an element are scrolled.</p>
         <th colspan="2" class="docs-api-method-name-cell">getAncestorScrollContainers
           (<span class="docs-api-method-parameter-name">elementOrElementRef:
             </span>
-            <code class="docs-api-method-parameter-type">HTMLElement | ElementRef&lt;any&gt;</code>): <code class="docs-api-method-returns-type">CdkScrollable[]</code>
+            <code class="docs-api-method-parameter-type">HTMLElement | ElementRef&lt;any&gt;</code>): <code class="docs-api-method-returns-type">ScrollDispatcherTarget[]</code>
         </th>
       </tr>
     </thead><tr class="docs-api-method-description-row">
       <td colspan="2" class="docs-api-method-description-cell">
-        <p>Returns all registered Scrollables that contain the provided element.</p>
+        <p>Returns all registered containers that contain the provided element.</p>
 
       </td>
     </tr><thead>
@@ -223,7 +223,7 @@ scrollable ancestors of an element are scrolled.</p>
     </thead>
     <tr>
       <td class="docs-api-method-returns-type-cell">
-        <code class="docs-api-method-returns-type">CdkScrollable[]</code>
+        <code class="docs-api-method-returns-type">ScrollDispatcherTarget[]</code>
       </td>
       <td class="docs-api-method-returns-description-cell">
         <p class="docs-api-method-returns-description">
@@ -242,9 +242,9 @@ scrollable ancestors of an element are scrolled.</p>
     <thead>
       <tr class="docs-api-method-name-row">
         <th colspan="2" class="docs-api-method-name-cell">register
-          (<span class="docs-api-method-parameter-name">scrollable:
+          (<span class="docs-api-method-parameter-name">target:
             </span>
-            <code class="docs-api-method-parameter-type">CdkScrollable</code>): <code class="docs-api-method-returns-type">void</code>
+            <code class="docs-api-method-parameter-type">ScrollDispatcherTarget</code>): <code class="docs-api-method-returns-type">void</code>
         </th>
       </tr>
     </thead><tr class="docs-api-method-description-row">
@@ -262,8 +262,8 @@ scrollable is scrolled, the service emits the event to its scrolled observable.<
     <tr class="docs-api-method-parameter-row">
       <td class="docs-api-method-parameter-cell">
         <p class="docs-api-method-parameter-name">
-          scrollable</p>
-        <code class="docs-api-method-parameter-type">CdkScrollable</code>
+          target</p>
+        <code class="docs-api-method-parameter-type">ScrollDispatcherTarget</code>
       </td>
       <td class="docs-api-method-parameter-description-cell">
         <p class="docs-api-method-parameter-description">
@@ -286,7 +286,7 @@ scrollable is scrolled, the service emits the event to its scrolled observable.<
         <th colspan="2" class="docs-api-method-name-cell">scrolled
           (<span class="docs-api-method-parameter-name">auditTimeInMs:
             </span>
-            <code class="docs-api-method-parameter-type">number = DEFAULT_SCROLL_TIME</code>): <code class="docs-api-method-returns-type">Observable&lt;CdkScrollable | void&gt;</code>
+            <code class="docs-api-method-parameter-type">number = DEFAULT_SCROLL_TIME</code>): <code class="docs-api-method-returns-type">Observable&lt;ScrollDispatcherTarget | void&gt;</code>
         </th>
       </tr>
     </thead><tr class="docs-api-method-description-row">
@@ -325,7 +325,7 @@ to run the callback using <code>NgZone.run</code>.</p>
     </thead>
     <tr>
       <td class="docs-api-method-returns-type-cell">
-        <code class="docs-api-method-returns-type">Observable&lt;CdkScrollable | void&gt;</code>
+        <code class="docs-api-method-returns-type">Observable&lt;ScrollDispatcherTarget | void&gt;</code>
       </td>
       <td class="docs-api-method-returns-description-cell">
         <p class="docs-api-method-returns-description">
@@ -3004,6 +3004,89 @@ in an RTL context.</p>
       <span header-link="interfaces"></span>
       Interfaces
     </h3>
+    
+      
+
+<h4 id="ScrollDispatcherTarget" class="docs-header-link docs-api-h4 docs-api-interface-name">
+  <span header-link="ScrollDispatcherTarget"></span>
+  <code>ScrollDispatcherTarget</code>
+</h4><p class="docs-api-interface-description"><p>Scrollable instance that can be registered with the <code>ScrollDispatcher</code>.</p>
+</p>
+
+
+<h5 class="docs-api-h5 docs-api-method-header">Methods</h5>
+  
+    
+
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell">elementScrolled
+          (): <code class="docs-api-method-returns-type">Observable&lt;Event&gt;</code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Observable that emits when the element is scrolled.</p>
+
+      </td>
+    </tr><thead>
+      <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+      </tr>
+    </thead>
+    <tr>
+      <td class="docs-api-method-returns-type-cell">
+        <code class="docs-api-method-returns-type">Observable&lt;Event&gt;</code>
+      </td>
+      <td class="docs-api-method-returns-description-cell">
+        <p class="docs-api-method-returns-description">
+          
+        </p>
+      </td>
+    </tr></table>
+</div>
+
+
+  
+    
+
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell">getElementRef
+          (): <code class="docs-api-method-returns-type">ElementRef&lt;HTMLElement&gt;</code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Gets the <code>ElementRef</code> representing the scrollable element.</p>
+
+      </td>
+    </tr><thead>
+      <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+      </tr>
+    </thead>
+    <tr>
+      <td class="docs-api-method-returns-type-cell">
+        <code class="docs-api-method-returns-type">ElementRef&lt;HTMLElement&gt;</code>
+      </td>
+      <td class="docs-api-method-returns-description-cell">
+        <p class="docs-api-method-returns-description">
+          
+        </p>
+      </td>
+    </tr></table>
+</div>
+
+
+  
+
+
+
     
       
 
