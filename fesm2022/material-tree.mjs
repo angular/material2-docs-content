@@ -1,5 +1,5 @@
 import * as i0 from '@angular/core';
-import { inject, signal, Service, ChangeDetectionStrategy, Component } from '@angular/core';
+import { inject, signal, Service, Component } from '@angular/core';
 import * as i1$2 from '@angular/material/progress-bar';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import * as i3 from '@angular/material/icon';
@@ -151,8 +151,7 @@ class TreeDynamicExample {
       inputs: ["color", "value", "bufferValue", "mode"],
       outputs: ["animationEnd"],
       exportAs: ["matProgressBar"]
-    }],
-    changeDetection: i0.ChangeDetectionStrategy.OnPush
+    }]
   });
 }
 i0.ɵɵngDeclareClassMetadata({
@@ -165,7 +164,6 @@ i0.ɵɵngDeclareClassMetadata({
     args: [{
       selector: 'tree-dynamic-example',
       imports: [MatTreeModule, MatButtonModule, MatIconModule, MatProgressBarModule],
-      changeDetection: ChangeDetectionStrategy.OnPush,
       template: "<mat-tree #tree [dataSource]=\"dataSource\" [childrenAccessor]=\"childrenAccessor\">\n  <mat-tree-node *matTreeNodeDef=\"let node\" matTreeNodePadding>\n    <button matIconButton disabled></button>\n    {{node.name}}\n  </mat-tree-node>\n  <mat-tree-node *matTreeNodeDef=\"let node; when: hasChild\" matTreeNodePadding matTreeNodeToggle\n    [cdkTreeNodeTypeaheadLabel]=\"node.name\" (expandedChange)=\"onNodeExpanded(node, $event)\">\n    <button matIconButton [attr.aria-label]=\"'Toggle ' + node.name\" matTreeNodeToggle>\n      <mat-icon class=\"mat-icon-rtl-mirror\">\n        {{tree.isExpanded(node) ? 'expand_more' : 'chevron_right'}}\n      </mat-icon>\n    </button>\n    {{node.name}}\n    @if (node.isLoading()) {\n    <mat-progress-bar mode=\"indeterminate\" class=\"example-tree-progress-bar\"></mat-progress-bar>\n    }\n  </mat-tree-node>\n</mat-tree>",
       styles: [".example-tree-progress-bar {\n  margin-left: 30px;\n}\n"]
     }]
@@ -239,8 +237,7 @@ class TreeFlatOverviewExample {
       selector: "mat-icon",
       inputs: ["color", "inline", "svgIcon", "fontSet", "fontIcon"],
       exportAs: ["matIcon"]
-    }],
-    changeDetection: i0.ChangeDetectionStrategy.OnPush
+    }]
   });
 }
 i0.ɵɵngDeclareClassMetadata({
@@ -253,7 +250,6 @@ i0.ɵɵngDeclareClassMetadata({
     args: [{
       selector: 'tree-flat-overview-example',
       imports: [MatTreeModule, MatButtonModule, MatIconModule],
-      changeDetection: ChangeDetectionStrategy.OnPush,
       template: "<mat-tree #tree [dataSource]=\"dataSource\" [childrenAccessor]=\"childrenAccessor\">\n  <!-- This is the tree node template for leaf nodes -->\n  <mat-tree-node *matTreeNodeDef=\"let node\" matTreeNodePadding>\n    <!-- use a disabled button to provide padding for tree leaf -->\n    <button matIconButton disabled></button>\n    {{node.name}}\n  </mat-tree-node>\n  <!-- This is the tree node template for expandable nodes -->\n  <mat-tree-node *matTreeNodeDef=\"let node;when: hasChild\" matTreeNodePadding matTreeNodeToggle\n                 [cdkTreeNodeTypeaheadLabel]=\"node.name\">\n    <button matIconButton matTreeNodeToggle\n            [attr.aria-label]=\"'Toggle ' + node.name\">\n      <mat-icon class=\"mat-icon-rtl-mirror\">\n        {{tree.isExpanded(node) ? 'expand_more' : 'chevron_right'}}\n      </mat-icon>\n    </button>\n    {{node.name}}\n  </mat-tree-node>\n</mat-tree>\n"
     }]
   }]
@@ -353,8 +349,7 @@ class TreeFlatChildAccessorOverviewExample {
       selector: "mat-icon",
       inputs: ["color", "inline", "svgIcon", "fontSet", "fontIcon"],
       exportAs: ["matIcon"]
-    }],
-    changeDetection: i0.ChangeDetectionStrategy.OnPush
+    }]
   });
 }
 i0.ɵɵngDeclareClassMetadata({
@@ -367,7 +362,6 @@ i0.ɵɵngDeclareClassMetadata({
     args: [{
       selector: 'tree-flat-child-accessor-overview-example',
       imports: [MatTreeModule, MatButtonModule, MatIconModule],
-      changeDetection: ChangeDetectionStrategy.OnPush,
       template: "<mat-tree #tree [dataSource]=\"dataSource\" [childrenAccessor]=\"childrenAccessor\">\n  <!-- This is the tree node template for leaf nodes -->\n  <mat-tree-node *matTreeNodeDef=\"let node\" matTreeNodePadding>\n    <!-- use a disabled button to provide padding for tree leaf -->\n    <button matIconButton disabled></button>\n    {{node.name}}\n  </mat-tree-node>\n  <!-- This is the tree node template for expandable nodes -->\n  <mat-tree-node *matTreeNodeDef=\"let node;when: hasChild\" matTreeNodePadding matTreeNodeToggle\n                 [cdkTreeNodeTypeaheadLabel]=\"node.name\">\n    <button matIconButton matTreeNodeToggle\n            [attr.aria-label]=\"'Toggle ' + node.name\">\n      <mat-icon class=\"mat-icon-rtl-mirror\">\n        {{tree.isExpanded(node) ? 'expand_more' : 'chevron_right'}}\n      </mat-icon>\n    </button>\n    {{node.name}}\n  </mat-tree-node>\n</mat-tree>\n"
     }]
   }]
@@ -467,8 +461,7 @@ class TreeHarnessExample {
       selector: "mat-icon",
       inputs: ["color", "inline", "svgIcon", "fontSet", "fontIcon"],
       exportAs: ["matIcon"]
-    }],
-    changeDetection: i0.ChangeDetectionStrategy.OnPush
+    }]
   });
 }
 i0.ɵɵngDeclareClassMetadata({
@@ -481,7 +474,6 @@ i0.ɵɵngDeclareClassMetadata({
     args: [{
       selector: 'tree-harness-example',
       imports: [MatTreeModule, MatButtonModule, MatIconModule],
-      changeDetection: ChangeDetectionStrategy.OnPush,
       template: "<mat-tree #tree [dataSource]=\"dataSource\" [childrenAccessor]=\"childrenAccessor\">\n  <!-- This is the tree node template for leaf nodes -->\n  <mat-tree-node *matTreeNodeDef=\"let node\" matTreeNodePadding>\n    <!-- use a disabled button to provide padding for tree leaf -->\n    <button matIconButton disabled></button>\n    {{node.name}}\n  </mat-tree-node>\n  <!-- This is the tree node template for expandable nodes -->\n  <mat-tree-node\n    *matTreeNodeDef=\"let node; when: hasChild\"\n    matTreeNodePadding\n    isExpandable\n    matTreeNodeToggle\n    [cdkTreeNodeTypeaheadLabel]=\"node.name\">\n    <button matIconButton matTreeNodeToggle [attr.aria-label]=\"'Toggle ' + node.name\">\n      <mat-icon class=\"mat-icon-rtl-mirror\">\n        {{tree.isExpanded(node) ? 'expand_more' : 'chevron_right'}}\n      </mat-icon>\n    </button>\n    {{node.name}}\n  </mat-tree-node>\n</mat-tree>\n"
     }]
   }]
@@ -678,8 +670,7 @@ class TreeLoadmoreExample {
       selector: "mat-icon",
       inputs: ["color", "inline", "svgIcon", "fontSet", "fontIcon"],
       exportAs: ["matIcon"]
-    }],
-    changeDetection: i0.ChangeDetectionStrategy.OnPush
+    }]
   });
 }
 i0.ɵɵngDeclareClassMetadata({
@@ -693,7 +684,6 @@ i0.ɵɵngDeclareClassMetadata({
       selector: 'tree-loadmore-example',
       providers: [LoadmoreDatabase],
       imports: [MatTreeModule, MatButtonModule, MatIconModule],
-      changeDetection: ChangeDetectionStrategy.OnPush,
       template: "<mat-tree #tree [dataSource]=\"dataSource()\" [childrenAccessor]=\"childrenAccessor\">\n  <!-- Leaf node -->\n  <mat-tree-node *matTreeNodeDef=\"let node\" matTreeNodePadding>\n    <button matIconButton disabled></button>\n    {{node.name}}\n  </mat-tree-node>\n\n  <!-- expandable node -->\n  <mat-tree-node *matTreeNodeDef=\"let node; when: hasChild\" matTreeNodePadding matTreeNodeToggle\n    (expandedChange)=\"loadChildren(node)\" [cdkTreeNodeTypeaheadLabel]=\"node.name\">\n    <button matIconButton [attr.aria-label]=\"'Toggle ' + node.name\" matTreeNodeToggle>\n      <mat-icon class=\"mat-icon-rtl-mirror\">\n        {{tree.isExpanded(node) ? 'expand_more' : 'chevron_right'}}\n      </mat-icon>\n    </button>\n    {{node.name}}\n  </mat-tree-node>\n\n  <mat-tree-node class=\"example-load-more\" *matTreeNodeDef=\"let node; when: isLoadMore\" role=\"treeitem\"\n    (click)=\"loadOnClick($event, node)\" (keydown)=\"loadOnKeypress($event, node)\">\n    Load more of {{node.parent}}...\n  </mat-tree-node>\n</mat-tree>",
       styles: [".example-load-more {\n    border-radius: 10px;\n    padding-left: 15px;\n    padding-right: 15px;\n    cursor: pointer;\n}\n.example-load-more:focus {\n    /*\n      Display a focus state for the \"Load More\" button.\n      0.12 is a common value in Material Design\n    */\n    background: rgba(0, 0, 0, 0.12);\n}\n.example-load-more:hover {\n    /*\n      Display a focus state for the \"Load More\" button.\n      0.04 is a common value in Material Design\n    */\n    background: rgba(0, 0, 0, 0.04);\n}\n"]
     }]
@@ -768,8 +758,7 @@ class TreeNestedOverviewExample {
       selector: "mat-icon",
       inputs: ["color", "inline", "svgIcon", "fontSet", "fontIcon"],
       exportAs: ["matIcon"]
-    }],
-    changeDetection: i0.ChangeDetectionStrategy.OnPush
+    }]
   });
 }
 i0.ɵɵngDeclareClassMetadata({
@@ -782,7 +771,6 @@ i0.ɵɵngDeclareClassMetadata({
     args: [{
       selector: 'tree-nested-overview-example',
       imports: [MatTreeModule, MatButtonModule, MatIconModule],
-      changeDetection: ChangeDetectionStrategy.OnPush,
       template: "<mat-tree #tree [dataSource]=\"dataSource\" [childrenAccessor]=\"childrenAccessor\" class=\"example-tree\">\n  <!-- This is the tree node template for leaf nodes -->\n  <!-- There is inline padding applied to this node using styles.\n    This padding value depends on the matIconButton width. -->\n  <mat-nested-tree-node *matTreeNodeDef=\"let node\">\n    {{node.name}}\n  </mat-nested-tree-node>\n  <!-- This is the tree node template for expandable nodes -->\n  <mat-nested-tree-node *matTreeNodeDef=\"let node; when: hasChild\" matTreeNodeToggle\n    [cdkTreeNodeTypeaheadLabel]=\"node.name\">\n    <div class=\"mat-tree-node\">\n      <button matIconButton matTreeNodeToggle [attr.aria-label]=\"'Toggle ' + node.name\">\n        <mat-icon class=\"mat-icon-rtl-mirror\">\n          {{tree.isExpanded(node) ? 'expand_more' : 'chevron_right'}}\n        </mat-icon>\n      </button>\n      {{node.name}}\n    </div>\n    <!-- There is inline padding applied to this div using styles.\n        This padding value depends on the matIconButton width.  -->\n    <div [class.example-tree-invisible]=\"!tree.isExpanded(node)\" role=\"group\">\n      <ng-container matTreeNodeOutlet></ng-container>\n    </div>\n  </mat-nested-tree-node>\n</mat-tree>",
       styles: [".example-tree-invisible {\n  display: none;\n}\n\n.example-tree ul,\n.example-tree li {\n  margin-top: 0;\n  margin-bottom: 0;\n  list-style-type: none;\n}\n\n/*\n * This padding sets alignment of the nested nodes.\n */\n.example-tree .mat-nested-tree-node div[role=group] {\n  padding-left: 40px;\n}\n\n/*\n * Padding for leaf nodes.\n * Leaf nodes need to have padding so as to align with other non-leaf nodes\n * under the same parent.\n */\n.example-tree div[role=group] > .mat-nested-tree-node {\n  padding-left: 40px;\n}\n"]
     }]
@@ -883,8 +871,7 @@ class TreeNestedChildAccessorOverviewExample {
       selector: "mat-icon",
       inputs: ["color", "inline", "svgIcon", "fontSet", "fontIcon"],
       exportAs: ["matIcon"]
-    }],
-    changeDetection: i0.ChangeDetectionStrategy.OnPush
+    }]
   });
 }
 i0.ɵɵngDeclareClassMetadata({
@@ -897,7 +884,6 @@ i0.ɵɵngDeclareClassMetadata({
     args: [{
       selector: 'tree-nested-child-accessor-overview-example',
       imports: [MatTreeModule, MatButtonModule, MatIconModule],
-      changeDetection: ChangeDetectionStrategy.OnPush,
       template: "<mat-tree #tree [dataSource]=\"dataSource\" [childrenAccessor]=\"childrenAccessor\" class=\"example-tree\">\n  <!-- This is the tree node template for leaf nodes -->\n  <!-- There is inline padding applied to this node using styles.\n    This padding value depends on the matIconButton width. -->\n  <mat-nested-tree-node *matTreeNodeDef=\"let node\">\n    {{node.name}}\n  </mat-nested-tree-node>\n  <!-- This is the tree node template for expandable nodes -->\n  <mat-nested-tree-node\n      *matTreeNodeDef=\"let node; when: hasChild\"\n      matTreeNodeToggle [cdkTreeNodeTypeaheadLabel]=\"node.name\">\n    <div class=\"mat-tree-node\">\n      <button matIconButton matTreeNodeToggle\n              [attr.aria-label]=\"'Toggle ' + node.name\">\n        <mat-icon class=\"mat-icon-rtl-mirror\">\n          {{tree.isExpanded(node) ? 'expand_more' : 'chevron_right'}}\n        </mat-icon>\n      </button>\n      {{node.name}}\n    </div>\n    <!-- There is inline padding applied to this div using styles.\n        This padding value depends on the matIconButton width.  -->\n    <div [class.example-tree-invisible]=\"!tree.isExpanded(node)\"\n        role=\"group\">\n      <ng-container matTreeNodeOutlet></ng-container>\n    </div>\n  </mat-nested-tree-node>\n</mat-tree>\n",
       styles: [".example-tree-invisible {\n  display: none;\n}\n\n.example-tree ul,\n.example-tree li {\n  margin-top: 0;\n  margin-bottom: 0;\n  list-style-type: none;\n}\n\n/*\n * This padding sets alignment of the nested nodes.\n */\n.example-tree .mat-nested-tree-node div[role=group] {\n  padding-left: 40px;\n}\n\n/*\n * Padding for leaf nodes.\n * Leaf nodes need to have padding so as to align with other non-leaf nodes\n * under the same parent.\n */\n.example-tree div[role=group] > .mat-nested-tree-node {\n  padding-left: 40px;\n}\n"]
     }]
@@ -998,8 +984,7 @@ class TreeLegacyKeyboardInterfaceExample {
     }, {
       kind: "ngmodule",
       type: MatIconModule
-    }],
-    changeDetection: i0.ChangeDetectionStrategy.OnPush
+    }]
   });
 }
 i0.ɵɵngDeclareClassMetadata({
@@ -1013,7 +998,6 @@ i0.ɵɵngDeclareClassMetadata({
       selector: 'tree-legacy-keyboard-interface-example',
       imports: [MatTreeModule, MatButtonModule, MatIconModule],
       providers: [NOOP_TREE_KEY_MANAGER_FACTORY_PROVIDER],
-      changeDetection: ChangeDetectionStrategy.OnPush,
       template: "<mat-tree [dataSource]=\"dataSource\" [treeControl]=\"treeControl\">\n  <!-- This is the tree node template for leaf nodes -->\n  <mat-tree-node *matTreeNodeDef=\"let node\" matTreeNodePadding\n                 class=\"example-tree-node\"\n                 tabindex=\"0\">\n    <!-- use a disabled button to provide padding for tree leaf -->\n    <button matIconButton disabled></button>\n    {{node.name}}\n  </mat-tree-node>\n  <!-- This is the tree node template for expandable nodes -->\n  <mat-tree-node *matTreeNodeDef=\"let node; when: hasChild\" matTreeNodePadding\n                 isExpandable\n                 [isExpanded]=\"true\"\n                 class=\"example-tree-node\"\n                 tabindex=\"0\">\n    {{node.name}}\n  </mat-tree-node>\n</mat-tree>\n",
       styles: [".example-tree-node {\n  display: flex;\n  align-items: center;\n}\n"]
     }]

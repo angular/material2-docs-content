@@ -2,7 +2,7 @@ import { ArrayDataSource } from '@angular/cdk/collections';
 import * as i1 from '@angular/cdk/tree';
 import { CdkTreeModule, CdkTree, FlatTreeControl, NestedTreeControl } from '@angular/cdk/tree';
 import * as i0 from '@angular/core';
-import { ViewChild, ChangeDetectionStrategy, Component, QueryList } from '@angular/core';
+import { ViewChild, Component, QueryList } from '@angular/core';
 import * as i1$1 from '@angular/material/button';
 import { MatButtonModule } from '@angular/material/button';
 import * as i3 from '@angular/material/icon';
@@ -120,8 +120,7 @@ class CdkTreeFlatChildrenAccessorExample {
       selector: "mat-icon",
       inputs: ["color", "inline", "svgIcon", "fontSet", "fontIcon"],
       exportAs: ["matIcon"]
-    }],
-    changeDetection: i0.ChangeDetectionStrategy.OnPush
+    }]
   });
 }
 i0.ɵɵngDeclareClassMetadata({
@@ -134,7 +133,6 @@ i0.ɵɵngDeclareClassMetadata({
     args: [{
       selector: 'cdk-tree-flat-children-accessor-example',
       imports: [CdkTreeModule, MatButtonModule, MatIconModule],
-      changeDetection: ChangeDetectionStrategy.OnPush,
       template: "<cdk-tree #tree [dataSource]=\"dataSource\" [childrenAccessor]=\"childrenAccessor\">\n  <!-- This is the tree node template for leaf nodes -->\n  <cdk-tree-node *cdkTreeNodeDef=\"let node\" cdkTreeNodePadding\n                 [style.display]=\"shouldRender(node) ? 'flex' : 'none'\"\n                 [isDisabled]=\"!shouldRender(node)\"\n                 class=\"example-tree-node\">\n    <!-- use a disabled button to provide padding for tree leaf -->\n    <button matIconButton disabled></button>\n    {{node.name}}\n  </cdk-tree-node>\n  <!-- This is the tree node template for expandable nodes -->\n  <cdk-tree-node *cdkTreeNodeDef=\"let node; when: hasChild\" cdkTreeNodePadding\n                 cdkTreeNodeToggle\n                 [cdkTreeNodeTypeaheadLabel]=\"node.name\"\n                 [style.display]=\"shouldRender(node) ? 'flex' : 'none'\"\n                 [isDisabled]=\"!shouldRender(node)\"\n                 [isExpandable]=\"true\"\n                 class=\"example-tree-node\">\n    <button matIconButton cdkTreeNodeToggle [attr.aria-label]=\"'Toggle ' + node.name\">\n      <mat-icon class=\"mat-icon-rtl-mirror\">\n        {{tree.isExpanded(node) ? 'expand_more' : 'chevron_right'}}\n      </mat-icon>\n    </button>\n    {{node.name}}\n  </cdk-tree-node>\n</cdk-tree>\n",
       styles: [".example-tree-node {\n  display: flex;\n  align-items: center;\n}\n"]
     }]
@@ -263,8 +261,7 @@ class CdkTreeFlatLevelAccessorExample {
       selector: "mat-icon",
       inputs: ["color", "inline", "svgIcon", "fontSet", "fontIcon"],
       exportAs: ["matIcon"]
-    }],
-    changeDetection: i0.ChangeDetectionStrategy.OnPush
+    }]
   });
 }
 i0.ɵɵngDeclareClassMetadata({
@@ -277,7 +274,6 @@ i0.ɵɵngDeclareClassMetadata({
     args: [{
       selector: 'cdk-tree-flat-level-accessor-example',
       imports: [CdkTreeModule, MatButtonModule, MatIconModule],
-      changeDetection: ChangeDetectionStrategy.OnPush,
       template: "<cdk-tree #tree [dataSource]=\"dataSource\" [levelAccessor]=\"levelAccessor\">\n  <!-- This is the tree node template for leaf nodes -->\n  <cdk-tree-node *cdkTreeNodeDef=\"let node\" cdkTreeNodePadding\n                 [style.display]=\"shouldRender(node) ? 'flex' : 'none'\"\n                 [isDisabled]=\"!shouldRender(node)\"\n                 class=\"example-tree-node\">\n    <!-- use a disabled button to provide padding for tree leaf -->\n    <button matIconButton disabled></button>\n    {{node.name}}\n  </cdk-tree-node>\n  <!-- This is the tree node template for expandable nodes -->\n  <cdk-tree-node *cdkTreeNodeDef=\"let node; when: hasChild\" cdkTreeNodePadding\n                 cdkTreeNodeToggle\n                 [cdkTreeNodeTypeaheadLabel]=\"node.name\"\n                 [style.display]=\"shouldRender(node) ? 'flex' : 'none'\"\n                 [isDisabled]=\"!shouldRender(node)\"\n                 [isExpandable]=\"node.expandable\"\n                 class=\"example-tree-node\">\n    <button matIconButton cdkTreeNodeToggle\n            [attr.aria-label]=\"'Toggle ' + node.name\"\n            [style.visibility]=\"node.expandable ? 'visible' : 'hidden'\">\n      <mat-icon class=\"mat-icon-rtl-mirror\">\n        {{tree.isExpanded(node) ? 'expand_more' : 'chevron_right'}}\n      </mat-icon>\n    </button>\n    {{node.name}}\n  </cdk-tree-node>\n</cdk-tree>\n",
       styles: [".example-tree-node {\n  display: flex;\n  align-items: center;\n}\n"]
     }]
@@ -423,8 +419,7 @@ class CdkTreeFlatExample {
       selector: "mat-icon",
       inputs: ["color", "inline", "svgIcon", "fontSet", "fontIcon"],
       exportAs: ["matIcon"]
-    }],
-    changeDetection: i0.ChangeDetectionStrategy.OnPush
+    }]
   });
 }
 i0.ɵɵngDeclareClassMetadata({
@@ -437,7 +432,6 @@ i0.ɵɵngDeclareClassMetadata({
     args: [{
       selector: 'cdk-tree-flat-example',
       imports: [CdkTreeModule, MatButtonModule, MatIconModule],
-      changeDetection: ChangeDetectionStrategy.OnPush,
       template: "<cdk-tree [dataSource]=\"dataSource\" [treeControl]=\"treeControl\">\n  <!-- This is the tree node template for leaf nodes -->\n  <cdk-tree-node *cdkTreeNodeDef=\"let node\" cdkTreeNodePadding\n                 [style.display]=\"shouldRender(node) ? 'flex' : 'none'\"\n                 [isDisabled]=\"!shouldRender(node)\"\n                 class=\"example-tree-node\">\n    <!-- use a disabled button to provide padding for tree leaf -->\n    <button matIconButton disabled></button>\n    {{node.name}}\n  </cdk-tree-node>\n  <!-- This is the tree node template for expandable nodes -->\n  <cdk-tree-node *cdkTreeNodeDef=\"let node; when: hasChild\" cdkTreeNodePadding\n                 cdkTreeNodeToggle [cdkTreeNodeTypeaheadLabel]=\"node.name\"\n                 [style.display]=\"shouldRender(node) ? 'flex' : 'none'\"\n                 [isDisabled]=\"!shouldRender(node)\"\n                 (expandedChange)=\"node.isExpanded = $event\"\n                 class=\"example-tree-node\">\n    <button matIconButton cdkTreeNodeToggle\n            [attr.aria-label]=\"'Toggle ' + node.name\"\n            [style.visibility]=\"node.expandable ? 'visible' : 'hidden'\">\n      <mat-icon class=\"mat-icon-rtl-mirror\">\n        {{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}\n      </mat-icon>\n    </button>\n    {{node.name}}\n  </cdk-tree-node>\n</cdk-tree>\n",
       styles: [".example-tree-node {\n  display: flex;\n  align-items: center;\n}\n"]
     }]
@@ -575,8 +569,7 @@ class CdkTreeNestedLevelAccessorExample {
       selector: "mat-icon",
       inputs: ["color", "inline", "svgIcon", "fontSet", "fontIcon"],
       exportAs: ["matIcon"]
-    }],
-    changeDetection: i0.ChangeDetectionStrategy.OnPush
+    }]
   });
 }
 i0.ɵɵngDeclareClassMetadata({
@@ -589,7 +582,6 @@ i0.ɵɵngDeclareClassMetadata({
     args: [{
       selector: 'cdk-tree-nested-level-accessor-example',
       imports: [CdkTreeModule, MatButtonModule, MatIconModule],
-      changeDetection: ChangeDetectionStrategy.OnPush,
       template: "<cdk-tree #tree [dataSource]=\"dataSource\" [levelAccessor]=\"levelAccessor\">\n  <!-- This is the tree node template for leaf nodes -->\n  <cdk-nested-tree-node #treeNode=\"cdkNestedTreeNode\" *cdkTreeNodeDef=\"let node\"\n      class=\"example-tree-node\">\n    <!-- use a disabled button to provide padding for tree leaf -->\n    <button matIconButton disabled></button>\n    {{node.name}}\n  </cdk-nested-tree-node>\n  <!-- This is the tree node template for expandable nodes -->\n  <cdk-nested-tree-node\n    #treeNode=\"cdkNestedTreeNode\"\n    [cdkTreeNodeTypeaheadLabel]=\"node.name\"\n    *cdkTreeNodeDef=\"let node; when: hasChild\"\n    isExpandable\n    class=\"example-tree-node\">\n    <button\n      matIconButton\n      class=\"example-toggle\"\n      [attr.aria-label]=\"'Toggle ' + node.name\"\n      cdkTreeNodeToggle>\n      <mat-icon class=\"mat-icon-rtl-mirror\">\n        {{tree.isExpanded(node) ? 'expand_more' : 'chevron_right'}}\n      </mat-icon>\n    </button>\n    {{node.name}}\n    <div [class.example-tree-invisible]=\"!tree.isExpanded(node)\">\n      <ng-container cdkTreeNodeOutlet></ng-container>\n    </div>\n  </cdk-nested-tree-node>\n</cdk-tree>\n",
       styles: [".example-tree-invisible {\n  display: none;\n}\n\n.example-tree ul,\n.example-tree li {\n  margin-top: 0;\n  margin-bottom: 0;\n  list-style-type: none;\n}\n.example-tree-node {\n  display: block;\n  line-height: 40px;\n}\n\n.example-tree-node .example-tree-node {\n  padding-left: 40px;\n}\n\n.example-toggle {\n  vertical-align: middle;\n}\n"]
     }]
@@ -742,8 +734,7 @@ class CdkTreeNestedChildrenAccessorExample {
       selector: "mat-icon",
       inputs: ["color", "inline", "svgIcon", "fontSet", "fontIcon"],
       exportAs: ["matIcon"]
-    }],
-    changeDetection: i0.ChangeDetectionStrategy.OnPush
+    }]
   });
 }
 i0.ɵɵngDeclareClassMetadata({
@@ -756,7 +747,6 @@ i0.ɵɵngDeclareClassMetadata({
     args: [{
       selector: 'cdk-tree-nested-children-accessor-example',
       imports: [CdkTreeModule, MatButtonModule, MatIconModule],
-      changeDetection: ChangeDetectionStrategy.OnPush,
       template: "<cdk-tree #tree [dataSource]=\"dataSource\" [childrenAccessor]=\"childrenAccessor\">\n  <!-- This is the tree node template for leaf nodes -->\n  <cdk-nested-tree-node #treeNode=\"cdkNestedTreeNode\" *cdkTreeNodeDef=\"let node\"\n      class=\"example-tree-node\">\n    <!-- use a disabled button to provide padding for tree leaf -->\n    <button matIconButton disabled></button>\n    {{node.name}}\n  </cdk-nested-tree-node>\n  <!-- This is the tree node template for expandable nodes -->\n  <cdk-nested-tree-node #treeNode=\"cdkNestedTreeNode\"\n    *cdkTreeNodeDef=\"let node; when: hasChild\"\n    [cdkTreeNodeTypeaheadLabel]=\"node.name\"\n    isExpandable\n    class=\"example-tree-node\">\n    <button\n      matIconButton\n      class=\"example-toggle\"\n      [attr.aria-label]=\"'Toggle ' + node.name\"\n      cdkTreeNodeToggle>\n      <mat-icon class=\"mat-icon-rtl-mirror\">\n        {{tree.isExpanded(node) ? 'expand_more' : 'chevron_right'}}\n      </mat-icon>\n    </button>\n    {{node.name}}\n    <div [class.example-tree-invisible]=\"!tree.isExpanded(node)\">\n      <ng-container cdkTreeNodeOutlet></ng-container>\n    </div>\n  </cdk-nested-tree-node>\n</cdk-tree>\n",
       styles: [".example-tree-invisible {\n  display: none;\n}\n\n.example-tree ul,\n.example-tree li {\n  margin-top: 0;\n  margin-bottom: 0;\n  list-style-type: none;\n}\n.example-tree-node {\n  display: block;\n  line-height: 40px;\n}\n\n.example-tree-node .example-tree-node {\n  padding-left: 40px;\n}\n\n.example-toggle {\n  vertical-align: middle;\n}\n"]
     }]
@@ -862,8 +852,7 @@ class CdkTreeNestedExample {
       selector: "mat-icon",
       inputs: ["color", "inline", "svgIcon", "fontSet", "fontIcon"],
       exportAs: ["matIcon"]
-    }],
-    changeDetection: i0.ChangeDetectionStrategy.OnPush
+    }]
   });
 }
 i0.ɵɵngDeclareClassMetadata({
@@ -876,7 +865,6 @@ i0.ɵɵngDeclareClassMetadata({
     args: [{
       selector: 'cdk-tree-nested-example',
       imports: [CdkTreeModule, MatButtonModule, MatIconModule],
-      changeDetection: ChangeDetectionStrategy.OnPush,
       template: "<cdk-tree [dataSource]=\"dataSource\" [treeControl]=\"treeControl\">\n  <!-- This is the tree node template for leaf nodes -->\n  <cdk-nested-tree-node #treeNode=\"cdkNestedTreeNode\" *cdkTreeNodeDef=\"let node\"\n      class=\"example-tree-node\">\n    <!-- use a disabled button to provide padding for tree leaf -->\n    <button matIconButton disabled></button>\n    {{node.name}}\n  </cdk-nested-tree-node>\n  <!-- This is the tree node template for expandable nodes -->\n  <cdk-nested-tree-node #treeNode=\"cdkNestedTreeNode\"\n    [cdkTreeNodeTypeaheadLabel]=\"node.name\"\n    *cdkTreeNodeDef=\"let node; when: hasChild\"\n    isExpandable\n    class=\"example-tree-node\">\n    <button\n      matIconButton\n      class=\"example-toggle\"\n      [attr.aria-label]=\"'Toggle ' + node.name\"\n      cdkTreeNodeToggle>\n      <mat-icon class=\"mat-icon-rtl-mirror\">\n        {{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}\n      </mat-icon>\n    </button>\n    {{node.name}}\n    <div [class.example-tree-invisible]=\"!treeControl.isExpanded(node)\">\n      <ng-container cdkTreeNodeOutlet></ng-container>\n    </div>\n  </cdk-nested-tree-node>\n</cdk-tree>\n",
       styles: [".example-tree-invisible {\n  display: none;\n}\n\n.example-tree ul,\n.example-tree li {\n  margin-top: 0;\n  margin-bottom: 0;\n  list-style-type: none;\n}\n.example-tree-node {\n  display: block;\n}\n\n.example-tree-node .example-tree-node {\n  padding-left: 40px;\n}\n\n.example-toggle {\n  vertical-align: middle;\n}\n"]
     }]
@@ -1143,8 +1131,7 @@ class CdkTreeComplexExample {
       kind: "pipe",
       type: AsyncPipe,
       name: "async"
-    }],
-    changeDetection: i0.ChangeDetectionStrategy.OnPush
+    }]
   });
 }
 i0.ɵɵngDeclareClassMetadata({
@@ -1157,7 +1144,6 @@ i0.ɵɵngDeclareClassMetadata({
     args: [{
       selector: 'cdk-tree-complex-example',
       imports: [CdkTreeModule, MatButtonModule, MatIconModule, MatProgressSpinnerModule, AsyncPipe],
-      changeDetection: ChangeDetectionStrategy.OnPush,
       template: "@if (areRootsLoading | async) {\n  <mat-spinner></mat-spinner>\n} @else {\n  <cdk-tree\n      #tree\n      [dataSource]=\"roots\"\n      [childrenAccessor]=\"getChildren\"\n      [trackBy]=\"trackBy\"\n      [expansionKey]=\"expansionKey\">\n    <cdk-tree-node\n        *cdkTreeNodeDef=\"let node\"\n        cdkTreeNodePadding\n        [cdkTreeNodeTypeaheadLabel]=\"node.raw.name\"\n        [isExpandable]=\"node.isExpandable()\"\n        (expandedChange)=\"onExpand(node, $event)\">\n      <!-- Spinner when node is loading children; this replaces the expand button. -->\n      @if (node.areChildrenLoading()) {\n        <mat-spinner diameter=\"48\" mode=\"indeterminate\"></mat-spinner>\n      }\n\n      @if (!node.areChildrenLoading() && node.isExpandable()) {\n        <button\n            matIconButton\n            cdkTreeNodeToggle\n            [attr.aria-label]=\"'Toggle ' + node.raw.name\">\n          <mat-icon class=\"mat-icon-rtl-mirror\">\n            {{tree.isExpanded(node) ? 'expand_more' : 'chevron_right'}}\n          </mat-icon>\n        </button>\n      }\n\n      <!-- Spacer for leaf nodes -->\n      @if (node.isLeaf()) {\n        <div class=\"toggle-spacer\"></div>\n      }\n\n      <span>{{node.raw.name}}</span>\n    </cdk-tree-node>\n  </cdk-tree>\n}\n",
       styles: ["cdk-tree-node {\n  display: flex;\n  align-items: center;\n}\n"]
     }]
@@ -1475,8 +1461,7 @@ class CdkTreeCustomKeyManagerExample {
       selector: "mat-icon",
       inputs: ["color", "inline", "svgIcon", "fontSet", "fontIcon"],
       exportAs: ["matIcon"]
-    }],
-    changeDetection: i0.ChangeDetectionStrategy.OnPush
+    }]
   });
 }
 i0.ɵɵngDeclareClassMetadata({
@@ -1490,7 +1475,6 @@ i0.ɵɵngDeclareClassMetadata({
       selector: 'cdk-tree-custom-key-manager-example',
       imports: [CdkTreeModule, MatButtonModule, MatIconModule],
       providers: [VIM_TREE_KEY_MANAGER_PROVIDER],
-      changeDetection: ChangeDetectionStrategy.OnPush,
       template: "<cdk-tree [dataSource]=\"dataSource\" [treeControl]=\"treeControl\">\n  <!-- This is the tree node template for leaf nodes -->\n  <cdk-tree-node *cdkTreeNodeDef=\"let node\" cdkTreeNodePadding\n                 [style.display]=\"shouldRender(node) ? 'flex' : 'none'\"\n                 [isDisabled]=\"!shouldRender(node)\"\n                 class=\"example-tree-node\">\n    <!-- use a disabled button to provide padding for tree leaf -->\n    <button matIconButton disabled></button>\n    {{node.name}}\n  </cdk-tree-node>\n  <!-- This is the tree node template for expandable nodes -->\n  <cdk-tree-node *cdkTreeNodeDef=\"let node; when: hasChild\" cdkTreeNodePadding\n                 cdkTreeNodeToggle\n                 [cdkTreeNodeTypeaheadLabel]=\"node.name\"\n                 [style.display]=\"shouldRender(node) ? 'flex' : 'none'\"\n                 [isDisabled]=\"!shouldRender(node)\"\n                 (expandedChange)=\"node.isExpanded = $event\"\n                 class=\"example-tree-node\"\n                 tabindex=\"0\">\n    <button matIconButton cdkTreeNodeToggle\n            [attr.aria-label]=\"'Toggle ' + node.name\"\n            [style.visibility]=\"node.expandable ? 'visible' : 'hidden'\">\n      <mat-icon class=\"mat-icon-rtl-mirror\">\n        {{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}\n      </mat-icon>\n    </button>\n    {{node.name}}\n  </cdk-tree-node>\n</cdk-tree>\n",
       styles: [".example-tree-node {\n  display: flex;\n  align-items: center;\n}\n"]
     }]

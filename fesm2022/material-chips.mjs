@@ -1,7 +1,7 @@
 import { LiveAnnouncer } from '@angular/cdk/a11y';
 import { ENTER, COMMA } from '@angular/cdk/keycodes';
 import * as i0 from '@angular/core';
-import { model, signal, computed, inject, ChangeDetectionStrategy, Component } from '@angular/core';
+import { model, signal, computed, inject, Component } from '@angular/core';
 import * as i3$1 from '@angular/forms';
 import { FormsModule, FormControl, ReactiveFormsModule } from '@angular/forms';
 import * as i4 from '@angular/material/autocomplete';
@@ -188,8 +188,7 @@ class ChipsAutocompleteExample {
       inputs: ["ngFormOptions"],
       outputs: ["ngSubmit"],
       exportAs: ["ngForm"]
-    }],
-    changeDetection: i0.ChangeDetectionStrategy.OnPush
+    }]
   });
 }
 i0.ɵɵngDeclareClassMetadata({
@@ -202,7 +201,6 @@ i0.ɵɵngDeclareClassMetadata({
     args: [{
       selector: 'chips-autocomplete-example',
       imports: [MatFormFieldModule, MatAutocompleteModule, MatChipsModule, MatIconModule, FormsModule],
-      changeDetection: ChangeDetectionStrategy.OnPush,
       template: "<form>\n  <mat-form-field class=\"example-chip-list\">\n    <mat-label>Favorite Fruits</mat-label>\n    <mat-chip-grid #chipGrid aria-label=\"Fruit selection\">\n      @for (fruit of fruits(); track $index) {\n        <mat-chip-row (removed)=\"remove(fruit)\">\n          {{fruit}}\n          <button matChipRemove [attr.aria-label]=\"'remove ' + fruit\">\n            <mat-icon>cancel</mat-icon>\n          </button>\n        </mat-chip-row>\n      }\n    </mat-chip-grid>\n    <input\n      name=\"currentFruit\"\n      placeholder=\"New Fruit...\"\n      #fruitInput\n      [(ngModel)]=\"currentFruit\"\n      [matChipInputFor]=\"chipGrid\"\n      [matAutocomplete]=\"auto\"\n      [matChipInputSeparatorKeyCodes]=\"separatorKeysCodes\"\n      (matChipInputTokenEnd)=\"add($event)\"\n    />\n    <mat-autocomplete #auto=\"matAutocomplete\" (optionSelected)=\"selected($event); fruitInput.value = ''\">\n      @for (fruit of filteredFruits(); track fruit) {\n        <mat-option [value]=\"fruit\">{{fruit}}</mat-option>\n      }\n    </mat-autocomplete>\n  </mat-form-field>\n</form>\n",
       styles: [".example-chip-list {\n  width: 100%;\n}\n"]
     }]
@@ -290,8 +288,7 @@ class ChipsDragDropExample {
       inputs: ["cdkDragData", "cdkDragLockAxis", "cdkDragRootElement", "cdkDragBoundary", "cdkDragStartDelay", "cdkDragFreeDragPosition", "cdkDragDisabled", "cdkDragConstrainPosition", "cdkDragPreviewClass", "cdkDragPreviewContainer", "cdkDragScale"],
       outputs: ["cdkDragStarted", "cdkDragReleased", "cdkDragEnded", "cdkDragEntered", "cdkDragExited", "cdkDragDropped", "cdkDragMoved"],
       exportAs: ["cdkDrag"]
-    }],
-    changeDetection: i0.ChangeDetectionStrategy.OnPush
+    }]
   });
 }
 i0.ɵɵngDeclareClassMetadata({
@@ -304,7 +301,6 @@ i0.ɵɵngDeclareClassMetadata({
     args: [{
       selector: 'chips-drag-drop-example',
       imports: [MatChipsModule, CdkDropList, CdkDrag],
-      changeDetection: ChangeDetectionStrategy.OnPush,
       template: "<mat-chip-set\n  class=\"example-chip\"\n  cdkDropList\n  cdkDropListOrientation=\"horizontal\"\n  (cdkDropListDropped)=\"drop($event)\"\n>\n  @for (vegetable of vegetables(); track vegetable.name) {\n    <mat-chip class=\"example-box\" cdkDrag>{{vegetable.name}}</mat-chip>\n  }\n</mat-chip-set>\n",
       styles: [".example-box.cdk-drag-animating {\n  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);\n}\n\n.example-chip .cdk-drop-list-dragging {\n  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);\n}\n"]
     }]
@@ -428,8 +424,7 @@ class ChipsInputExample {
       selector: "mat-icon",
       inputs: ["color", "inline", "svgIcon", "fontSet", "fontIcon"],
       exportAs: ["matIcon"]
-    }],
-    changeDetection: i0.ChangeDetectionStrategy.OnPush
+    }]
   });
 }
 i0.ɵɵngDeclareClassMetadata({
@@ -442,7 +437,6 @@ i0.ɵɵngDeclareClassMetadata({
     args: [{
       selector: 'chips-input-example',
       imports: [MatFormFieldModule, MatChipsModule, MatIconModule],
-      changeDetection: ChangeDetectionStrategy.OnPush,
       template: "<mat-form-field class=\"example-chip-list\">\n  <mat-label>Favorite Fruits</mat-label>\n  <mat-chip-grid #chipGrid aria-label=\"Enter fruits\">\n    @for (fruit of fruits(); track fruit) {\n      <mat-chip-row\n        (removed)=\"remove(fruit)\"\n        [editable]=\"true\"\n        (edited)=\"edit(fruit, $event)\"\n        [aria-description]=\"'press enter to edit ' + fruit.name\"\n      >\n        <button matChipEdit [attr.aria-label]=\"'edit ' + fruit.name\">\n          <mat-icon>edit</mat-icon>\n        </button>      \n        {{fruit.name}}\n        <button matChipRemove [attr.aria-label]=\"'remove ' + fruit.name\">\n          <mat-icon>cancel</mat-icon>\n        </button>\n      </mat-chip-row>\n    }\n  </mat-chip-grid>\n  <input\n    placeholder=\"New fruit...\"\n    [matChipInputFor]=\"chipGrid\"\n    [matChipInputSeparatorKeyCodes]=\"separatorKeysCodes\"\n    [matChipInputAddOnBlur]=\"addOnBlur\"\n    (matChipInputTokenEnd)=\"add($event)\"\n  />\n</mat-form-field>\n",
       styles: [".example-chip-list {\n  width: 100%;\n}\n"]
     }]
@@ -481,8 +475,7 @@ class ChipsOverviewExample {
       type: i2.MatChipSet,
       selector: "mat-chip-set",
       inputs: ["disabled", "role", "tabIndex"]
-    }],
-    changeDetection: i0.ChangeDetectionStrategy.OnPush
+    }]
   });
 }
 i0.ɵɵngDeclareClassMetadata({
@@ -495,7 +488,6 @@ i0.ɵɵngDeclareClassMetadata({
     args: [{
       selector: 'chips-overview-example',
       imports: [MatChipsModule],
-      changeDetection: ChangeDetectionStrategy.OnPush,
       template: "<mat-chip-set aria-label=\"Fish selection\">\n  <mat-chip>One fish</mat-chip>\n  <mat-chip>Two fish</mat-chip>\n  <mat-chip>Three fish</mat-chip>\n  <mat-chip disabled>Four fish</mat-chip>\n</mat-chip-set>"
     }]
   }]
@@ -608,8 +600,7 @@ class ChipsHarnessExample {
       selector: "mat-icon",
       inputs: ["color", "inline", "svgIcon", "fontSet", "fontIcon"],
       exportAs: ["matIcon"]
-    }],
-    changeDetection: i0.ChangeDetectionStrategy.OnPush
+    }]
   });
 }
 i0.ɵɵngDeclareClassMetadata({
@@ -622,7 +613,6 @@ i0.ɵɵngDeclareClassMetadata({
     args: [{
       selector: 'chips-harness-example',
       imports: [MatChipsModule, MatIconModule],
-      changeDetection: ChangeDetectionStrategy.OnPush,
       template: "<mat-chip-listbox\n    [disabled]=\"isDisabled()\"\n    [aria-orientation]=\"'horizontal'\">\n  <mat-chip-option (removed)=\"remove()\">Chip 1</mat-chip-option>\n  <mat-chip-option (removed)=\"remove()\">\n    Chip 2\n    <button matChipRemove aria-label=\"remove Chip 2\"><mat-icon>remove_icon</mat-icon></button>\n  </mat-chip-option>\n  <mat-chip-option (removed)=\"remove()\"><mat-chip-avatar>C</mat-chip-avatar>Chip 4</mat-chip-option>\n</mat-chip-listbox>\n"
     }]
   }]
@@ -743,8 +733,7 @@ class ChipsFormControlExample {
       selector: "mat-icon",
       inputs: ["color", "inline", "svgIcon", "fontSet", "fontIcon"],
       exportAs: ["matIcon"]
-    }],
-    changeDetection: i0.ChangeDetectionStrategy.OnPush
+    }]
   });
 }
 i0.ɵɵngDeclareClassMetadata({
@@ -757,7 +746,6 @@ i0.ɵɵngDeclareClassMetadata({
     args: [{
       selector: 'chips-form-control-example',
       imports: [MatButtonModule, MatFormFieldModule, MatChipsModule, FormsModule, ReactiveFormsModule, MatIconModule],
-      changeDetection: ChangeDetectionStrategy.OnPush,
       template: "<div class=\"example-button-container\">\n  <button matButton=\"elevated\" (click)=\"formControl.disable()\">Disable form control</button>\n  <button matButton=\"elevated\" (click)=\"formControl.enable()\">Enable form control</button>\n</div>\n<p>\n  <em>Enter video keywords</em>\n</p>\n<mat-form-field class=\"example-form-field\">\n  <mat-label>Video keywords</mat-label>\n  <mat-chip-grid #chipGrid aria-label=\"Enter keywords\" [formControl]=\"formControl\">\n    @for (keyword of keywords(); track keyword) {\n      <mat-chip-row (removed)=\"removeKeyword(keyword)\">\n        {{keyword}}\n        <button matChipRemove [attr.aria-label]=\"'remove ' + keyword\">\n          <mat-icon>cancel</mat-icon>\n        </button>\n      </mat-chip-row>\n    }\n  </mat-chip-grid>\n  <input\n    placeholder=\"New keyword...\"\n    [matChipInputFor]=\"chipGrid\"\n    (matChipInputTokenEnd)=\"add($event)\"\n  />\n</mat-form-field>\n\n<p><strong>The following keywords are entered:</strong> {{formControl.value}}</p>\n",
       styles: [".example-form-field {\n  width: 100%;\n}\n\n.example-button-container > button {\n  margin: 0 12px;\n}\n"]
     }]
@@ -868,8 +856,7 @@ class ChipsReactiveFormExample {
       selector: "mat-icon",
       inputs: ["color", "inline", "svgIcon", "fontSet", "fontIcon"],
       exportAs: ["matIcon"]
-    }],
-    changeDetection: i0.ChangeDetectionStrategy.OnPush
+    }]
   });
 }
 i0.ɵɵngDeclareClassMetadata({
@@ -882,7 +869,6 @@ i0.ɵɵngDeclareClassMetadata({
     args: [{
       selector: 'chips-reactive-form-example',
       imports: [MatButtonModule, MatFormFieldModule, MatChipsModule, ReactiveFormsModule, MatIconModule],
-      changeDetection: ChangeDetectionStrategy.OnPush,
       template: "<section>\n  <h4>Chips inside of a Reactive form</h4>\n  <mat-form-field class=\"example-form-field\">\n    <mat-label>Video keywords</mat-label>\n    <mat-chip-grid #reactiveChipGrid aria-label=\"Enter reactive form keywords\" [formControl]=\"formControl\">\n    @for (keyword of formControl.value; track keyword) {\n      <mat-chip-row (removed)=\"removeKeyword(keyword)\">\n        {{keyword}}\n      <button matChipRemove [attr.aria-label]=\"'remove reactive form' + keyword\">\n        <mat-icon>cancel</mat-icon>\n      </button>\n      </mat-chip-row>\n    }\n    </mat-chip-grid>\n    <input\n      placeholder=\"New keyword...\"\n      [matChipInputFor]=\"reactiveChipGrid\"\n      (matChipInputTokenEnd)=\"addKeyword($event)\"\n    />\n  </mat-form-field>\n</section>\n",
       styles: [".example-form-field {\n    width: 100%;\n}\n"]
     }]
@@ -995,8 +981,7 @@ class ChipsTemplateFormExample {
       selector: "mat-icon",
       inputs: ["color", "inline", "svgIcon", "fontSet", "fontIcon"],
       exportAs: ["matIcon"]
-    }],
-    changeDetection: i0.ChangeDetectionStrategy.OnPush
+    }]
   });
 }
 i0.ɵɵngDeclareClassMetadata({
@@ -1009,7 +994,6 @@ i0.ɵɵngDeclareClassMetadata({
     args: [{
       selector: 'chips-template-form-example',
       imports: [MatButtonModule, MatFormFieldModule, MatChipsModule, FormsModule, MatIconModule],
-      changeDetection: ChangeDetectionStrategy.OnPush,
       template: "<section>\n  <h4>Chips inside of a Template-driven form</h4>\n  <mat-form-field class=\"example-form-field\">\n    <mat-label>Video keywords</mat-label>\n    <mat-chip-grid #templateChipGrid aria-label=\"Enter template form keywords\" [(ngModel)]=\"keywords\">\n    @for (keyword of keywords(); track keyword) {\n      <mat-chip-row (removed)=\"removeKeyword(keyword)\">\n        {{keyword}}\n      <button matChipRemove [attr.aria-label]=\"'remove template form' + keyword\">\n        <mat-icon>cancel</mat-icon>\n      </button>\n      </mat-chip-row>\n    }\n    </mat-chip-grid>\n    <input\n      placeholder=\"New keyword...\"\n      [matChipInputFor]=\"templateChipGrid\"\n      (matChipInputTokenEnd)=\"addKeyword($event)\"\n    />\n  </mat-form-field>\n</section>\n",
       styles: [".example-form-field {\n    width: 100%;\n}\n"]
     }]
@@ -1053,8 +1037,7 @@ class ChipsAvatarExample {
       type: i2.MatChipSet,
       selector: "mat-chip-set",
       inputs: ["disabled", "role", "tabIndex"]
-    }],
-    changeDetection: i0.ChangeDetectionStrategy.OnPush
+    }]
   });
 }
 i0.ɵɵngDeclareClassMetadata({
@@ -1067,7 +1050,6 @@ i0.ɵɵngDeclareClassMetadata({
     args: [{
       selector: 'chips-avatar-example',
       imports: [MatChipsModule],
-      changeDetection: ChangeDetectionStrategy.OnPush,
       template: "<mat-chip-set aria-label=\"Dog selection\">\n  <mat-chip>\n    <img\n      matChipAvatar\n      src=\"https://material.angular.dev/assets/img/examples/shiba1.jpg\"\n      alt=\"Photo of a Shiba Inu\"\n    />\n    Dog one\n  </mat-chip>\n  <mat-chip>\n    <img\n      matChipAvatar\n      src=\"https://material.angular.dev/assets/img/examples/shiba1.jpg\"\n      alt=\"Photo of a Shiba Inu\"\n    />\n    Dog two\n  </mat-chip>\n  <mat-chip>\n    <img\n      matChipAvatar\n      src=\"https://material.angular.dev/assets/img/examples/shiba1.jpg\"\n      alt=\"Photo of a Shiba Inu\"\n    />\n    Dog three\n  </mat-chip>\n</mat-chip-set>\n"
     }]
   }]
