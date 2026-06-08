@@ -1,5 +1,5 @@
 import * as i0 from '@angular/core';
-import { signal } from '@angular/core';
+import { WritableSignal } from '@angular/core';
 import { ArrayDataSource } from '@angular/cdk/collections';
 import { FlatTreeControl } from '@angular/cdk/tree';
 
@@ -8,7 +8,7 @@ interface DynamicNode {
     name: string;
     level: number;
     expandable: boolean;
-    isLoading: ReturnType<typeof signal<boolean>>;
+    isLoading: WritableSignal<boolean>;
     children?: DynamicNode[];
 }
 /**
@@ -16,9 +16,9 @@ interface DynamicNode {
  */
 declare class TreeDynamicExample {
     private _database;
-    dataSource: DynamicNode[];
-    childrenAccessor: (node: DynamicNode) => DynamicNode[];
-    hasChild: (_: number, node: DynamicNode) => boolean;
+    readonly dataSource: WritableSignal<DynamicNode[]>;
+    readonly childrenAccessor: (node: DynamicNode) => DynamicNode[];
+    readonly hasChild: (_: number, node: DynamicNode) => boolean;
     /**
      * Load children on node expansion.
      * Called from template via (expandedChange) output.

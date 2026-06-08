@@ -1,4 +1,4 @@
-<span class="hljs-keyword">import</span> {<span class="hljs-title class_">Component</span>, <span class="hljs-title class_">Service</span>, inject, signal} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">Component</span>, <span class="hljs-title class_">Service</span>, <span class="hljs-title class_">WritableSignal</span>, inject, signal} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
 <span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatProgressBarModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/progress-bar&#x27;</span>;
 <span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatIconModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/icon&#x27;</span>;
 <span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatButtonModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/button&#x27;</span>;
@@ -9,7 +9,7 @@
   <span class="hljs-attr">name</span>: <span class="hljs-built_in">string</span>;
   <span class="hljs-attr">level</span>: <span class="hljs-built_in">number</span>;
   <span class="hljs-attr">expandable</span>: <span class="hljs-built_in">boolean</span>;
-  <span class="hljs-attr">isLoading</span>: <span class="hljs-title class_">ReturnType</span>&lt;<span class="hljs-keyword">typeof</span> signal&lt;<span class="hljs-built_in">boolean</span>&gt;&gt;;
+  <span class="hljs-attr">isLoading</span>: <span class="hljs-title class_">WritableSignal</span>&lt;<span class="hljs-built_in">boolean</span>&gt;;
   <span class="hljs-attr">children</span>?: <span class="hljs-title class_">DynamicNode</span>[];
 }
 
@@ -63,12 +63,9 @@
 })
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">TreeDynamicExample</span> {
   <span class="hljs-keyword">private</span> _database = <span class="hljs-title function_">inject</span>(<span class="hljs-title class_">DynamicDatabase</span>);
-
-  dataSource = <span class="hljs-variable language_">this</span>.<span class="hljs-property">_database</span>.<span class="hljs-title function_">initialData</span>();
-
-  childrenAccessor = <span class="hljs-function">(<span class="hljs-params"><span class="hljs-attr">node</span>: <span class="hljs-title class_">DynamicNode</span></span>) =&gt;</span> node.<span class="hljs-property">children</span> ?? [];
-
-  hasChild = <span class="hljs-function">(<span class="hljs-params"><span class="hljs-attr">_</span>: <span class="hljs-built_in">number</span>, <span class="hljs-attr">node</span>: <span class="hljs-title class_">DynamicNode</span></span>) =&gt;</span> node.<span class="hljs-property">expandable</span>;
+  <span class="hljs-keyword">readonly</span> dataSource = <span class="hljs-title function_">signal</span>(<span class="hljs-variable language_">this</span>.<span class="hljs-property">_database</span>.<span class="hljs-title function_">initialData</span>());
+  <span class="hljs-keyword">readonly</span> childrenAccessor = <span class="hljs-function">(<span class="hljs-params"><span class="hljs-attr">node</span>: <span class="hljs-title class_">DynamicNode</span></span>) =&gt;</span> node.<span class="hljs-property">children</span> ?? [];
+  <span class="hljs-keyword">readonly</span> hasChild = <span class="hljs-function">(<span class="hljs-params"><span class="hljs-attr">_</span>: <span class="hljs-built_in">number</span>, <span class="hljs-attr">node</span>: <span class="hljs-title class_">DynamicNode</span></span>) =&gt;</span> node.<span class="hljs-property">expandable</span>;
 
   <span class="hljs-comment">/**
    * Load children on node expansion.
@@ -93,6 +90,7 @@
         <span class="hljs-variable language_">this</span>.<span class="hljs-property">_database</span>.<span class="hljs-title function_">createNode</span>(name, node.<span class="hljs-property">level</span> + <span class="hljs-number">1</span>, <span class="hljs-variable language_">this</span>.<span class="hljs-property">_database</span>.<span class="hljs-title function_">isExpandable</span>(name)),
       );
       node.<span class="hljs-property">isLoading</span>.<span class="hljs-title function_">set</span>(<span class="hljs-literal">false</span>);
+      <span class="hljs-variable language_">this</span>.<span class="hljs-property">dataSource</span>.<span class="hljs-title function_">set</span>([...<span class="hljs-variable language_">this</span>.<span class="hljs-title function_">dataSource</span>()]);
     }, <span class="hljs-number">1000</span>);
   }
 }

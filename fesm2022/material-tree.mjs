@@ -60,7 +60,9 @@ i0.ɵɵngDeclareClassMetadata({
 });
 class TreeDynamicExample {
   _database = inject(DynamicDatabase);
-  dataSource = this._database.initialData();
+  dataSource = signal(this._database.initialData(), ...(ngDevMode ? [{
+    debugName: "dataSource"
+  }] : []));
   childrenAccessor = node => node.children ?? [];
   hasChild = (_, node) => node.expandable;
   onNodeExpanded(node, expanded) {
@@ -75,6 +77,7 @@ class TreeDynamicExample {
     setTimeout(() => {
       node.children = childNames.map(name => this._database.createNode(name, node.level + 1, this._database.isExpandable(name)));
       node.isLoading.set(false);
+      this.dataSource.set([...this.dataSource()]);
     }, 1000);
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
@@ -92,7 +95,7 @@ class TreeDynamicExample {
     isStandalone: true,
     selector: "tree-dynamic-example",
     ngImport: i0,
-    template: "<mat-tree #tree [dataSource]=\"dataSource\" [childrenAccessor]=\"childrenAccessor\">\n  <mat-tree-node *matTreeNodeDef=\"let node\" matTreeNodePadding>\n    <button matIconButton disabled></button>\n    {{node.name}}\n  </mat-tree-node>\n  <mat-tree-node *matTreeNodeDef=\"let node; when: hasChild\" matTreeNodePadding matTreeNodeToggle\n    [cdkTreeNodeTypeaheadLabel]=\"node.name\" (expandedChange)=\"onNodeExpanded(node, $event)\">\n    <button matIconButton [attr.aria-label]=\"'Toggle ' + node.name\" matTreeNodeToggle>\n      <mat-icon class=\"mat-icon-rtl-mirror\">\n        {{tree.isExpanded(node) ? 'expand_more' : 'chevron_right'}}\n      </mat-icon>\n    </button>\n    {{node.name}}\n    @if (node.isLoading()) {\n    <mat-progress-bar mode=\"indeterminate\" class=\"example-tree-progress-bar\"></mat-progress-bar>\n    }\n  </mat-tree-node>\n</mat-tree>",
+    template: "<mat-tree #tree [dataSource]=\"dataSource()\" [childrenAccessor]=\"childrenAccessor\">\n  <mat-tree-node *matTreeNodeDef=\"let node\" matTreeNodePadding>\n    <button matIconButton disabled></button>\n    {{node.name}}\n  </mat-tree-node>\n  <mat-tree-node *matTreeNodeDef=\"let node; when: hasChild\" matTreeNodePadding matTreeNodeToggle\n    [cdkTreeNodeTypeaheadLabel]=\"node.name\" (expandedChange)=\"onNodeExpanded(node, $event)\">\n    <button matIconButton [attr.aria-label]=\"'Toggle ' + node.name\" matTreeNodeToggle>\n      <mat-icon class=\"mat-icon-rtl-mirror\">\n        {{tree.isExpanded(node) ? 'expand_more' : 'chevron_right'}}\n      </mat-icon>\n    </button>\n    {{node.name}}\n    @if (node.isLoading()) {\n    <mat-progress-bar mode=\"indeterminate\" class=\"example-tree-progress-bar\"></mat-progress-bar>\n    }\n  </mat-tree-node>\n</mat-tree>\n",
     styles: [".example-tree-progress-bar {\n  margin-left: 30px;\n}\n"],
     dependencies: [{
       kind: "ngmodule",
@@ -164,7 +167,7 @@ i0.ɵɵngDeclareClassMetadata({
     args: [{
       selector: 'tree-dynamic-example',
       imports: [MatTreeModule, MatButtonModule, MatIconModule, MatProgressBarModule],
-      template: "<mat-tree #tree [dataSource]=\"dataSource\" [childrenAccessor]=\"childrenAccessor\">\n  <mat-tree-node *matTreeNodeDef=\"let node\" matTreeNodePadding>\n    <button matIconButton disabled></button>\n    {{node.name}}\n  </mat-tree-node>\n  <mat-tree-node *matTreeNodeDef=\"let node; when: hasChild\" matTreeNodePadding matTreeNodeToggle\n    [cdkTreeNodeTypeaheadLabel]=\"node.name\" (expandedChange)=\"onNodeExpanded(node, $event)\">\n    <button matIconButton [attr.aria-label]=\"'Toggle ' + node.name\" matTreeNodeToggle>\n      <mat-icon class=\"mat-icon-rtl-mirror\">\n        {{tree.isExpanded(node) ? 'expand_more' : 'chevron_right'}}\n      </mat-icon>\n    </button>\n    {{node.name}}\n    @if (node.isLoading()) {\n    <mat-progress-bar mode=\"indeterminate\" class=\"example-tree-progress-bar\"></mat-progress-bar>\n    }\n  </mat-tree-node>\n</mat-tree>",
+      template: "<mat-tree #tree [dataSource]=\"dataSource()\" [childrenAccessor]=\"childrenAccessor\">\n  <mat-tree-node *matTreeNodeDef=\"let node\" matTreeNodePadding>\n    <button matIconButton disabled></button>\n    {{node.name}}\n  </mat-tree-node>\n  <mat-tree-node *matTreeNodeDef=\"let node; when: hasChild\" matTreeNodePadding matTreeNodeToggle\n    [cdkTreeNodeTypeaheadLabel]=\"node.name\" (expandedChange)=\"onNodeExpanded(node, $event)\">\n    <button matIconButton [attr.aria-label]=\"'Toggle ' + node.name\" matTreeNodeToggle>\n      <mat-icon class=\"mat-icon-rtl-mirror\">\n        {{tree.isExpanded(node) ? 'expand_more' : 'chevron_right'}}\n      </mat-icon>\n    </button>\n    {{node.name}}\n    @if (node.isLoading()) {\n    <mat-progress-bar mode=\"indeterminate\" class=\"example-tree-progress-bar\"></mat-progress-bar>\n    }\n  </mat-tree-node>\n</mat-tree>\n",
       styles: [".example-tree-progress-bar {\n  margin-left: 30px;\n}\n"]
     }]
   }]
