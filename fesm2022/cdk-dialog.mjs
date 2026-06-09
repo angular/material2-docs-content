@@ -16,7 +16,7 @@ class CdkDialogDataExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.0.0-rc.2",
+    version: "22.0.0",
     ngImport: i0,
     type: CdkDialogDataExample,
     deps: [],
@@ -24,7 +24,7 @@ class CdkDialogDataExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.0.0-rc.2",
+    version: "22.0.0",
     type: CdkDialogDataExample,
     isStandalone: true,
     selector: "cdk-dialog-data-example",
@@ -38,7 +38,7 @@ class CdkDialogDataExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.0.0-rc.2",
+  version: "22.0.0",
   ngImport: i0,
   type: CdkDialogDataExample,
   decorators: [{
@@ -54,7 +54,7 @@ class CdkDialogDataExampleDialog {
   data = inject(DIALOG_DATA);
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.0.0-rc.2",
+    version: "22.0.0",
     ngImport: i0,
     type: CdkDialogDataExampleDialog,
     deps: [],
@@ -62,18 +62,18 @@ class CdkDialogDataExampleDialog {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "22.0.0-rc.2",
+    version: "22.0.0",
     type: CdkDialogDataExampleDialog,
     isStandalone: true,
     selector: "cdk-dialog-data-example-dialog",
     ngImport: i0,
     template: "<h1>Favorite Animal</h1>\n<div>\n  My favorite animal is:\n  <ul>\n    <li>\n      @if (data.animal === 'panda') {\n        <span>&#10003;</span>\n      } Panda\n    </li>\n    <li>\n      @if (data.animal === 'unicorn') {\n        <span>&#10003;</span>\n      } Unicorn\n    </li>\n    <li>\n      @if (data.animal === 'lion') {\n        <span>&#10003;</span>\n      } Lion\n    </li>\n  </ul>\n</div>\n",
-    styles: [":host {\n  display: block;\n  background: #fff;\n  border-radius: 8px;\n  padding: 8px 16px;\n}\n"]
+    styles: [":host {\n  display: block;\n  background: #fff;\n  color: CanvasText;\n  border-radius: 8px;\n  padding: 8px 16px;\n}\n"]
   });
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.0.0-rc.2",
+  version: "22.0.0",
   ngImport: i0,
   type: CdkDialogDataExampleDialog,
   decorators: [{
@@ -81,7 +81,7 @@ i0.ɵɵngDeclareClassMetadata({
     args: [{
       selector: 'cdk-dialog-data-example-dialog',
       template: "<h1>Favorite Animal</h1>\n<div>\n  My favorite animal is:\n  <ul>\n    <li>\n      @if (data.animal === 'panda') {\n        <span>&#10003;</span>\n      } Panda\n    </li>\n    <li>\n      @if (data.animal === 'unicorn') {\n        <span>&#10003;</span>\n      } Unicorn\n    </li>\n    <li>\n      @if (data.animal === 'lion') {\n        <span>&#10003;</span>\n      } Lion\n    </li>\n  </ul>\n</div>\n",
-      styles: [":host {\n  display: block;\n  background: #fff;\n  border-radius: 8px;\n  padding: 8px 16px;\n}\n"]
+      styles: [":host {\n  display: block;\n  background: #fff;\n  color: CanvasText;\n  border-radius: 8px;\n  padding: 8px 16px;\n}\n"]
     }]
   }]
 });
@@ -105,7 +105,7 @@ class CdkDialogOverviewExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.0.0-rc.2",
+    version: "22.0.0",
     ngImport: i0,
     type: CdkDialogOverviewExample,
     deps: [],
@@ -113,7 +113,7 @@ class CdkDialogOverviewExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "22.0.0-rc.2",
+    version: "22.0.0",
     type: CdkDialogOverviewExample,
     isStandalone: true,
     selector: "cdk-dialog-overview-example",
@@ -145,7 +145,7 @@ class CdkDialogOverviewExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.0.0-rc.2",
+  version: "22.0.0",
   ngImport: i0,
   type: CdkDialogOverviewExample,
   decorators: [{
@@ -162,7 +162,7 @@ class CdkDialogOverviewExampleDialog {
   data = inject(DIALOG_DATA);
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.0.0-rc.2",
+    version: "22.0.0",
     ngImport: i0,
     type: CdkDialogOverviewExampleDialog,
     deps: [],
@@ -170,13 +170,13 @@ class CdkDialogOverviewExampleDialog {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.0.0-rc.2",
+    version: "22.0.0",
     type: CdkDialogOverviewExampleDialog,
     isStandalone: true,
     selector: "cdk-dialog-overview-example-dialog",
     ngImport: i0,
     template: "<h1>Hi {{data.name}}</h1>\n<div>\n  <label id=\"favorite-animal\">What's your favorite animal?</label>\n  <input for=\"favorite-animal\" [(ngModel)]=\"data.animal\" placeholder=\"Enter your name\">\n</div>\n<div>\n  <button (click)=\"dialogRef.close(data.animal)\">OK</button>\n  <button (click)=\"dialogRef.close()\">Cancel</button>\n</div>\n",
-    styles: [":host {\n  display: block;\n  background: #fff;\n  border-radius: 8px;\n  padding: 8px 16px 16px;\n}\n\ninput {\n  margin: 8px 0;\n}\n\nbutton + button {\n  margin-left: 8px;\n}\n"],
+    styles: [":host {\n  display: block;\n  background: #fff;\n  color: CanvasText;\n  border-radius: 8px;\n  padding: 8px 16px 16px;\n}\n\ninput {\n  margin: 8px 0;\n}\n\nbutton + button {\n  margin-left: 8px;\n}\n"],
     dependencies: [{
       kind: "ngmodule",
       type: FormsModule
@@ -200,7 +200,7 @@ class CdkDialogOverviewExampleDialog {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.0.0-rc.2",
+  version: "22.0.0",
   ngImport: i0,
   type: CdkDialogOverviewExampleDialog,
   decorators: [{
@@ -209,7 +209,7 @@ i0.ɵɵngDeclareClassMetadata({
       selector: 'cdk-dialog-overview-example-dialog',
       imports: [FormsModule],
       template: "<h1>Hi {{data.name}}</h1>\n<div>\n  <label id=\"favorite-animal\">What's your favorite animal?</label>\n  <input for=\"favorite-animal\" [(ngModel)]=\"data.animal\" placeholder=\"Enter your name\">\n</div>\n<div>\n  <button (click)=\"dialogRef.close(data.animal)\">OK</button>\n  <button (click)=\"dialogRef.close()\">Cancel</button>\n</div>\n",
-      styles: [":host {\n  display: block;\n  background: #fff;\n  border-radius: 8px;\n  padding: 8px 16px 16px;\n}\n\ninput {\n  margin: 8px 0;\n}\n\nbutton + button {\n  margin-left: 8px;\n}\n"]
+      styles: [":host {\n  display: block;\n  background: #fff;\n  color: CanvasText;\n  border-radius: 8px;\n  padding: 8px 16px 16px;\n}\n\ninput {\n  margin: 8px 0;\n}\n\nbutton + button {\n  margin-left: 8px;\n}\n"]
     }]
   }]
 });
@@ -221,7 +221,7 @@ class CdkDialogStylingExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.0.0-rc.2",
+    version: "22.0.0",
     ngImport: i0,
     type: CdkDialogStylingExample,
     deps: [],
@@ -229,7 +229,7 @@ class CdkDialogStylingExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.0.0-rc.2",
+    version: "22.0.0",
     type: CdkDialogStylingExample,
     isStandalone: true,
     selector: "cdk-dialog-styling-example",
@@ -243,7 +243,7 @@ class CdkDialogStylingExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.0.0-rc.2",
+  version: "22.0.0",
   ngImport: i0,
   type: CdkDialogStylingExample,
   decorators: [{
@@ -259,7 +259,7 @@ class CdkDialogStylingExampleDialog {
   dialogRef = inject(DialogRef);
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.0.0-rc.2",
+    version: "22.0.0",
     ngImport: i0,
     type: CdkDialogStylingExampleDialog,
     deps: [],
@@ -267,18 +267,18 @@ class CdkDialogStylingExampleDialog {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.0.0-rc.2",
+    version: "22.0.0",
     type: CdkDialogStylingExampleDialog,
     isStandalone: true,
     selector: "cdk-dialog-styling-example-dialog",
     ngImport: i0,
     template: "Did you ever hear the tragedy of Darth Plagueis The Wise? I thought not. It's not a story the Jedi\nwould tell you. It's a Sith legend. Darth Plagueis was a Dark Lord of the Sith, so powerful and so\nwise he could use the Force to influence the midichlorians to create life\u2026 He had such a knowledge\nof the dark side that he could even keep the ones he cared about from dying. The dark side of the\nForce is a pathway to many abilities some consider to be unnatural. He became so powerful\u2026 the only\nthing he was afraid of was losing his power, which eventually, of course, he did. Unfortunately,\nhe taught his apprentice everything he knew, then his apprentice killed him in his sleep. Ironic.\nHe could save others from death, but not himself.\n\n<hr>\n\n<button (click)=\"dialogRef.close()\">Close</button>\n",
-    styles: [":host {\n  display: block;\n  background: #fff;\n  border-radius: 8px;\n  padding: 16px;\n  max-width: 500px;\n  animation: custom-dialog-enter 1s ease;\n}\n\n@keyframes custom-dialog-enter {\n  from {\n    transform: scale(0) rotate(360deg);\n  }\n\n  to {\n    transform: none;\n  }\n}\n"]
+    styles: [":host {\n  display: block;\n  background: #fff;\n  color: CanvasText;\n  border-radius: 8px;\n  padding: 16px;\n  max-width: 500px;\n  animation: custom-dialog-enter 1s ease;\n}\n\n@keyframes custom-dialog-enter {\n  from {\n    transform: scale(0) rotate(360deg);\n  }\n\n  to {\n    transform: none;\n  }\n}\n"]
   });
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.0.0-rc.2",
+  version: "22.0.0",
   ngImport: i0,
   type: CdkDialogStylingExampleDialog,
   decorators: [{
@@ -286,7 +286,7 @@ i0.ɵɵngDeclareClassMetadata({
     args: [{
       selector: 'cdk-dialog-styling-example-dialog',
       template: "Did you ever hear the tragedy of Darth Plagueis The Wise? I thought not. It's not a story the Jedi\nwould tell you. It's a Sith legend. Darth Plagueis was a Dark Lord of the Sith, so powerful and so\nwise he could use the Force to influence the midichlorians to create life\u2026 He had such a knowledge\nof the dark side that he could even keep the ones he cared about from dying. The dark side of the\nForce is a pathway to many abilities some consider to be unnatural. He became so powerful\u2026 the only\nthing he was afraid of was losing his power, which eventually, of course, he did. Unfortunately,\nhe taught his apprentice everything he knew, then his apprentice killed him in his sleep. Ironic.\nHe could save others from death, but not himself.\n\n<hr>\n\n<button (click)=\"dialogRef.close()\">Close</button>\n",
-      styles: [":host {\n  display: block;\n  background: #fff;\n  border-radius: 8px;\n  padding: 16px;\n  max-width: 500px;\n  animation: custom-dialog-enter 1s ease;\n}\n\n@keyframes custom-dialog-enter {\n  from {\n    transform: scale(0) rotate(360deg);\n  }\n\n  to {\n    transform: none;\n  }\n}\n"]
+      styles: [":host {\n  display: block;\n  background: #fff;\n  color: CanvasText;\n  border-radius: 8px;\n  padding: 16px;\n  max-width: 500px;\n  animation: custom-dialog-enter 1s ease;\n}\n\n@keyframes custom-dialog-enter {\n  from {\n    transform: scale(0) rotate(360deg);\n  }\n\n  to {\n    transform: none;\n  }\n}\n"]
     }]
   }]
 });
