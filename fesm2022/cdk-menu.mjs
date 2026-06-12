@@ -5,7 +5,7 @@ import { CdkMenuTrigger, CdkMenu, CdkMenuItem, CdkMenuItemCheckbox, CdkMenuGroup
 class CdkMenuStandaloneMenuExample {
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.0.0",
+    version: "22.0.1",
     ngImport: i0,
     type: CdkMenuStandaloneMenuExample,
     deps: [],
@@ -13,13 +13,13 @@ class CdkMenuStandaloneMenuExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.0.0",
+    version: "22.0.1",
     type: CdkMenuStandaloneMenuExample,
     isStandalone: true,
     selector: "cdk-menu-standalone-menu-example",
     ngImport: i0,
     template: "<!-- #docregion trigger -->\n<button [cdkMenuTriggerFor]=\"menu\" class=\"example-standalone-trigger\">Click me!</button>\n<!-- #enddocregion trigger -->\n\n<ng-template #menu>\n  <div class=\"example-menu\" cdkMenu>\n    <button class=\"example-menu-item\" cdkMenuItem>Refresh</button>\n    <button class=\"example-menu-item\" cdkMenuItem>Settings</button>\n    <button class=\"example-menu-item\" cdkMenuItem>Help</button>\n    <button class=\"example-menu-item\" cdkMenuItem>Sign out</button>\n  </div>\n</ng-template>\n",
-    styles: [".example-menu {\n  display: inline-flex;\n  flex-direction: column;\n  min-width: 180px;\n  max-width: 280px;\n  background-color: rgba(255, 255, 255);\n  padding: 6px 0;\n}\n\n.example-menu-item,\n.example-standalone-trigger {\n  background-color: transparent;\n  cursor: pointer;\n  border: none;\n\n  user-select: none;\n  min-width: 64px;\n  line-height: 36px;\n  padding: 0 16px;\n\n  display: flex;\n  align-items: center;\n  flex-direction: row;\n  flex: 1;\n}\n\n.example-menu-item:hover {\n  background-color: rgb(208, 208, 208);\n}\n\n.example-menu-item:active {\n  background-color: rgb(170, 170, 170);\n}\n\n.example-standalone-item {\n  background-color: rgb(239, 239, 239);\n}\n.example-standalone-item:hover {\n  background-color: rgb(208, 208, 208);\n}\n.example-standalone-item[aria-expanded='true'] {\n  background-color: rgb(208, 208, 208);\n}\n"],
+    styles: [".example-menu {\n  display: inline-flex;\n  flex-direction: column;\n  min-width: 180px;\n  max-width: 280px;\n  background-color: rgba(255, 255, 255);\n  padding: 6px 0;\n}\n\n.example-menu-item,\n.example-standalone-trigger {\n  background-color: transparent;\n  cursor: pointer;\n  border: none;\n\n  user-select: none;\n  min-width: 64px;\n  line-height: 36px;\n  padding: 0 16px;\n\n  display: flex;\n  align-items: center;\n  flex-direction: row;\n  flex: 1;\n}\n\n.example-standalone-trigger {\n  background-color: rgb(239, 239, 239);\n}\n\n.example-standalone-trigger:hover {\n  background-color: rgb(208, 208, 208);\n}\n\n.example-standalone-trigger:active {\n  background-color: rgb(170, 170, 170);\n}\n\n.example-menu-item:hover {\n  background-color: rgb(208, 208, 208);\n}\n\n.example-menu-item:active {\n  background-color: rgb(170, 170, 170);\n}\n\n.example-standalone-item {\n  background-color: rgb(239, 239, 239);\n}\n.example-standalone-item:hover {\n  background-color: rgb(208, 208, 208);\n}\n.example-standalone-item[aria-expanded='true'] {\n  background-color: rgb(208, 208, 208);\n}\n"],
     dependencies: [{
       kind: "directive",
       type: CdkMenuTrigger,
@@ -45,7 +45,7 @@ class CdkMenuStandaloneMenuExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.0.0",
+  version: "22.0.1",
   ngImport: i0,
   type: CdkMenuStandaloneMenuExample,
   decorators: [{
@@ -54,7 +54,7 @@ i0.ɵɵngDeclareClassMetadata({
       selector: 'cdk-menu-standalone-menu-example',
       imports: [CdkMenuTrigger, CdkMenu, CdkMenuItem],
       template: "<!-- #docregion trigger -->\n<button [cdkMenuTriggerFor]=\"menu\" class=\"example-standalone-trigger\">Click me!</button>\n<!-- #enddocregion trigger -->\n\n<ng-template #menu>\n  <div class=\"example-menu\" cdkMenu>\n    <button class=\"example-menu-item\" cdkMenuItem>Refresh</button>\n    <button class=\"example-menu-item\" cdkMenuItem>Settings</button>\n    <button class=\"example-menu-item\" cdkMenuItem>Help</button>\n    <button class=\"example-menu-item\" cdkMenuItem>Sign out</button>\n  </div>\n</ng-template>\n",
-      styles: [".example-menu {\n  display: inline-flex;\n  flex-direction: column;\n  min-width: 180px;\n  max-width: 280px;\n  background-color: rgba(255, 255, 255);\n  padding: 6px 0;\n}\n\n.example-menu-item,\n.example-standalone-trigger {\n  background-color: transparent;\n  cursor: pointer;\n  border: none;\n\n  user-select: none;\n  min-width: 64px;\n  line-height: 36px;\n  padding: 0 16px;\n\n  display: flex;\n  align-items: center;\n  flex-direction: row;\n  flex: 1;\n}\n\n.example-menu-item:hover {\n  background-color: rgb(208, 208, 208);\n}\n\n.example-menu-item:active {\n  background-color: rgb(170, 170, 170);\n}\n\n.example-standalone-item {\n  background-color: rgb(239, 239, 239);\n}\n.example-standalone-item:hover {\n  background-color: rgb(208, 208, 208);\n}\n.example-standalone-item[aria-expanded='true'] {\n  background-color: rgb(208, 208, 208);\n}\n"]
+      styles: [".example-menu {\n  display: inline-flex;\n  flex-direction: column;\n  min-width: 180px;\n  max-width: 280px;\n  background-color: rgba(255, 255, 255);\n  padding: 6px 0;\n}\n\n.example-menu-item,\n.example-standalone-trigger {\n  background-color: transparent;\n  cursor: pointer;\n  border: none;\n\n  user-select: none;\n  min-width: 64px;\n  line-height: 36px;\n  padding: 0 16px;\n\n  display: flex;\n  align-items: center;\n  flex-direction: row;\n  flex: 1;\n}\n\n.example-standalone-trigger {\n  background-color: rgb(239, 239, 239);\n}\n\n.example-standalone-trigger:hover {\n  background-color: rgb(208, 208, 208);\n}\n\n.example-standalone-trigger:active {\n  background-color: rgb(170, 170, 170);\n}\n\n.example-menu-item:hover {\n  background-color: rgb(208, 208, 208);\n}\n\n.example-menu-item:active {\n  background-color: rgb(170, 170, 170);\n}\n\n.example-standalone-item {\n  background-color: rgb(239, 239, 239);\n}\n.example-standalone-item:hover {\n  background-color: rgb(208, 208, 208);\n}\n.example-standalone-item[aria-expanded='true'] {\n  background-color: rgb(208, 208, 208);\n}\n"]
     }]
   }]
 });
@@ -71,7 +71,7 @@ class CdkMenuStandaloneStatefulMenuExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.0.0",
+    version: "22.0.1",
     ngImport: i0,
     type: CdkMenuStandaloneStatefulMenuExample,
     deps: [],
@@ -79,7 +79,7 @@ class CdkMenuStandaloneStatefulMenuExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "22.0.0",
+    version: "22.0.1",
     type: CdkMenuStandaloneStatefulMenuExample,
     isStandalone: true,
     selector: "cdk-menu-standalone-stateful-menu-example",
@@ -126,7 +126,7 @@ class CdkMenuStandaloneStatefulMenuExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.0.0",
+  version: "22.0.1",
   ngImport: i0,
   type: CdkMenuStandaloneStatefulMenuExample,
   decorators: [{
@@ -143,7 +143,7 @@ i0.ɵɵngDeclareClassMetadata({
 class CdkMenuMenubarExample {
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.0.0",
+    version: "22.0.1",
     ngImport: i0,
     type: CdkMenuMenubarExample,
     deps: [],
@@ -151,7 +151,7 @@ class CdkMenuMenubarExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.0.0",
+    version: "22.0.1",
     type: CdkMenuMenubarExample,
     isStandalone: true,
     selector: "cdk-menu-menubar-example",
@@ -203,7 +203,7 @@ class CdkMenuMenubarExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.0.0",
+  version: "22.0.1",
   ngImport: i0,
   type: CdkMenuMenubarExample,
   decorators: [{
@@ -220,7 +220,7 @@ i0.ɵɵngDeclareClassMetadata({
 class CdkMenuInlineExample {
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.0.0",
+    version: "22.0.1",
     ngImport: i0,
     type: CdkMenuInlineExample,
     deps: [],
@@ -228,7 +228,7 @@ class CdkMenuInlineExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.0.0",
+    version: "22.0.1",
     type: CdkMenuInlineExample,
     isStandalone: true,
     selector: "cdk-menu-inline-example",
@@ -253,7 +253,7 @@ class CdkMenuInlineExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.0.0",
+  version: "22.0.1",
   ngImport: i0,
   type: CdkMenuInlineExample,
   decorators: [{
@@ -270,7 +270,7 @@ i0.ɵɵngDeclareClassMetadata({
 class CdkMenuContextExample {
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.0.0",
+    version: "22.0.1",
     ngImport: i0,
     type: CdkMenuContextExample,
     deps: [],
@@ -278,7 +278,7 @@ class CdkMenuContextExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.0.0",
+    version: "22.0.1",
     type: CdkMenuContextExample,
     isStandalone: true,
     selector: "cdk-menu-context-example",
@@ -310,7 +310,7 @@ class CdkMenuContextExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.0.0",
+  version: "22.0.1",
   ngImport: i0,
   type: CdkMenuContextExample,
   decorators: [{
@@ -327,7 +327,7 @@ i0.ɵɵngDeclareClassMetadata({
 class CdkMenuNestedContextExample {
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.0.0",
+    version: "22.0.1",
     ngImport: i0,
     type: CdkMenuNestedContextExample,
     deps: [],
@@ -335,13 +335,13 @@ class CdkMenuNestedContextExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.0.0",
+    version: "22.0.1",
     type: CdkMenuNestedContextExample,
     isStandalone: true,
     selector: "cdk-menu-nested-context-example",
     ngImport: i0,
     template: "<!-- #docregion triggers -->\n<div class=\"example-context-area\" [cdkContextMenuTriggerFor]=\"outer\">\n  Outer context menu\n  <div class=\"example-context-area\" [cdkContextMenuTriggerFor]=\"inner\">Inner context menu</div>\n</div>\n<!-- #enddocregion triggers -->\n\n<ng-template #outer>\n  <div class=\"example-menu\" cdkMenu>\n    <button class=\"example-menu-item\" cdkMenuItem>Save</button>\n    <button class=\"example-menu-item\" cdkMenuItem>Exit</button>\n  </div>\n</ng-template>\n\n<ng-template #inner>\n  <div class=\"example-menu\" cdkMenu>\n    <button class=\"example-menu-item\" cdkMenuItem>Cut</button>\n    <button class=\"example-menu-item\" cdkMenuItem>Copy</button>\n    <button class=\"example-menu-item\" cdkMenuItem>Paste</button>\n  </div>\n</ng-template>\n",
-    styles: [".example-context-area {\n  display: inline-grid;\n  border: 2px dashed black;\n}\n\n.example-context-area .example-context-area {\n  margin: 100px;\n  width: 200px;\n  height: 100px;\n}\n\n.example-menu {\n  display: inline-flex;\n  flex-direction: column;\n  min-width: 180px;\n  max-width: 280px;\n  background-color: rgb(255, 255, 255);\n  padding: 6px 0;\n}\n\n.example-menu-item {\n  background-color: transparent;\n  cursor: pointer;\n  border: none;\n\n  user-select: none;\n  min-width: 64px;\n  line-height: 36px;\n  padding: 0 16px;\n\n  display: flex;\n  align-items: center;\n  flex-direction: row;\n  flex: 1;\n}\n\n.example-menu-item:hover {\n  background-color: rgb(208, 208, 208);\n}\n\n.example-menu-item:active {\n  background-color: rgb(170, 170, 170);\n}\n"],
+    styles: [".example-context-area {\n  display: inline-grid;\n  border: 2px dashed white;\n}\n\n.example-context-area .example-context-area {\n  margin: 100px;\n  width: 200px;\n  height: 100px;\n}\n\n.example-menu {\n  display: inline-flex;\n  flex-direction: column;\n  min-width: 180px;\n  max-width: 280px;\n  background-color: rgb(255, 255, 255);\n  padding: 6px 0;\n}\n\n.example-menu-item {\n  background-color: transparent;\n  cursor: pointer;\n  border: none;\n\n  user-select: none;\n  min-width: 64px;\n  line-height: 36px;\n  padding: 0 16px;\n\n  display: flex;\n  align-items: center;\n  flex-direction: row;\n  flex: 1;\n}\n\n.example-menu-item:hover {\n  background-color: rgb(208, 208, 208);\n}\n\n.example-menu-item:active {\n  background-color: rgb(170, 170, 170);\n}\n"],
     dependencies: [{
       kind: "directive",
       type: CdkContextMenuTrigger,
@@ -367,7 +367,7 @@ class CdkMenuNestedContextExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.0.0",
+  version: "22.0.1",
   ngImport: i0,
   type: CdkMenuNestedContextExample,
   decorators: [{
@@ -376,7 +376,7 @@ i0.ɵɵngDeclareClassMetadata({
       selector: 'cdk-menu-nested-context-example',
       imports: [CdkContextMenuTrigger, CdkMenu, CdkMenuItem],
       template: "<!-- #docregion triggers -->\n<div class=\"example-context-area\" [cdkContextMenuTriggerFor]=\"outer\">\n  Outer context menu\n  <div class=\"example-context-area\" [cdkContextMenuTriggerFor]=\"inner\">Inner context menu</div>\n</div>\n<!-- #enddocregion triggers -->\n\n<ng-template #outer>\n  <div class=\"example-menu\" cdkMenu>\n    <button class=\"example-menu-item\" cdkMenuItem>Save</button>\n    <button class=\"example-menu-item\" cdkMenuItem>Exit</button>\n  </div>\n</ng-template>\n\n<ng-template #inner>\n  <div class=\"example-menu\" cdkMenu>\n    <button class=\"example-menu-item\" cdkMenuItem>Cut</button>\n    <button class=\"example-menu-item\" cdkMenuItem>Copy</button>\n    <button class=\"example-menu-item\" cdkMenuItem>Paste</button>\n  </div>\n</ng-template>\n",
-      styles: [".example-context-area {\n  display: inline-grid;\n  border: 2px dashed black;\n}\n\n.example-context-area .example-context-area {\n  margin: 100px;\n  width: 200px;\n  height: 100px;\n}\n\n.example-menu {\n  display: inline-flex;\n  flex-direction: column;\n  min-width: 180px;\n  max-width: 280px;\n  background-color: rgb(255, 255, 255);\n  padding: 6px 0;\n}\n\n.example-menu-item {\n  background-color: transparent;\n  cursor: pointer;\n  border: none;\n\n  user-select: none;\n  min-width: 64px;\n  line-height: 36px;\n  padding: 0 16px;\n\n  display: flex;\n  align-items: center;\n  flex-direction: row;\n  flex: 1;\n}\n\n.example-menu-item:hover {\n  background-color: rgb(208, 208, 208);\n}\n\n.example-menu-item:active {\n  background-color: rgb(170, 170, 170);\n}\n"]
+      styles: [".example-context-area {\n  display: inline-grid;\n  border: 2px dashed white;\n}\n\n.example-context-area .example-context-area {\n  margin: 100px;\n  width: 200px;\n  height: 100px;\n}\n\n.example-menu {\n  display: inline-flex;\n  flex-direction: column;\n  min-width: 180px;\n  max-width: 280px;\n  background-color: rgb(255, 255, 255);\n  padding: 6px 0;\n}\n\n.example-menu-item {\n  background-color: transparent;\n  cursor: pointer;\n  border: none;\n\n  user-select: none;\n  min-width: 64px;\n  line-height: 36px;\n  padding: 0 16px;\n\n  display: flex;\n  align-items: center;\n  flex-direction: row;\n  flex: 1;\n}\n\n.example-menu-item:hover {\n  background-color: rgb(208, 208, 208);\n}\n\n.example-menu-item:active {\n  background-color: rgb(170, 170, 170);\n}\n"]
     }]
   }]
 });
