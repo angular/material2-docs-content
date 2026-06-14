@@ -37,7 +37,7 @@ class DateRangePickerComparisonExample {
   });
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.0.0",
+    version: "22.1.0-next.0",
     ngImport: i0,
     type: DateRangePickerComparisonExample,
     deps: [],
@@ -45,7 +45,7 @@ class DateRangePickerComparisonExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.0.0",
+    version: "22.1.0-next.0",
     type: DateRangePickerComparisonExample,
     isStandalone: true,
     selector: "date-range-picker-comparison-example",
@@ -142,7 +142,7 @@ class DateRangePickerComparisonExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.0.0",
+  version: "22.1.0-next.0",
   ngImport: i0,
   type: DateRangePickerComparisonExample,
   decorators: [{
@@ -164,7 +164,7 @@ class DateRangePickerFormsExample {
   });
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.0.0",
+    version: "22.1.0-next.0",
     ngImport: i0,
     type: DateRangePickerFormsExample,
     deps: [],
@@ -172,7 +172,7 @@ class DateRangePickerFormsExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "22.0.0",
+    version: "22.1.0-next.0",
     type: DateRangePickerFormsExample,
     isStandalone: true,
     selector: "date-range-picker-forms-example",
@@ -277,7 +277,7 @@ class DateRangePickerFormsExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.0.0",
+  version: "22.1.0-next.0",
   ngImport: i0,
   type: DateRangePickerFormsExample,
   decorators: [{
@@ -294,7 +294,7 @@ i0.ɵɵngDeclareClassMetadata({
 class DateRangePickerOverviewExample {
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.0.0",
+    version: "22.1.0-next.0",
     ngImport: i0,
     type: DateRangePickerOverviewExample,
     deps: [],
@@ -302,7 +302,7 @@ class DateRangePickerOverviewExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.0.0",
+    version: "22.1.0-next.0",
     type: DateRangePickerOverviewExample,
     isStandalone: true,
     selector: "date-range-picker-overview-example",
@@ -367,7 +367,7 @@ class DateRangePickerOverviewExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.0.0",
+  version: "22.1.0-next.0",
   ngImport: i0,
   type: DateRangePickerOverviewExample,
   decorators: [{
@@ -399,7 +399,7 @@ class FiveDayRangeSelectionStrategy {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.0.0",
+    version: "22.1.0-next.0",
     ngImport: i0,
     type: FiveDayRangeSelectionStrategy,
     deps: [],
@@ -407,7 +407,7 @@ class FiveDayRangeSelectionStrategy {
   });
   static ɵprov = i0.ɵɵngDeclareService({
     minVersion: "22.0.0",
-    version: "22.0.0",
+    version: "22.1.0-next.0",
     ngImport: i0,
     type: FiveDayRangeSelectionStrategy,
     autoProvided: false
@@ -415,7 +415,7 @@ class FiveDayRangeSelectionStrategy {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.0.0",
+  version: "22.1.0-next.0",
   ngImport: i0,
   type: FiveDayRangeSelectionStrategy,
   decorators: [{
@@ -428,7 +428,7 @@ i0.ɵɵngDeclareClassMetadata({
 class DateRangePickerSelectionStrategyExample {
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.0.0",
+    version: "22.1.0-next.0",
     ngImport: i0,
     type: DateRangePickerSelectionStrategyExample,
     deps: [],
@@ -436,7 +436,7 @@ class DateRangePickerSelectionStrategyExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.0.0",
+    version: "22.1.0-next.0",
     type: DateRangePickerSelectionStrategyExample,
     isStandalone: true,
     selector: "date-range-picker-selection-strategy-example",
@@ -504,7 +504,7 @@ class DateRangePickerSelectionStrategyExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.0.0",
+  version: "22.1.0-next.0",
   ngImport: i0,
   type: DateRangePickerSelectionStrategyExample,
   decorators: [{
@@ -524,7 +524,7 @@ i0.ɵɵngDeclareClassMetadata({
 class DatepickerActionsExample {
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.0.0",
+    version: "22.1.0-next.0",
     ngImport: i0,
     type: DatepickerActionsExample,
     deps: [],
@@ -532,7 +532,7 @@ class DatepickerActionsExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.0.0",
+    version: "22.1.0-next.0",
     type: DatepickerActionsExample,
     isStandalone: true,
     selector: "datepicker-actions-example",
@@ -639,7 +639,7 @@ class DatepickerActionsExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.0.0",
+  version: "22.1.0-next.0",
   ngImport: i0,
   type: DatepickerActionsExample,
   decorators: [{
@@ -657,7 +657,7 @@ i0.ɵɵngDeclareClassMetadata({
 class DatepickerApiExample {
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.0.0",
+    version: "22.1.0-next.0",
     ngImport: i0,
     type: DatepickerApiExample,
     deps: [],
@@ -665,7 +665,7 @@ class DatepickerApiExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.0.0",
+    version: "22.1.0-next.0",
     type: DatepickerApiExample,
     isStandalone: true,
     selector: "datepicker-api-example",
@@ -728,7 +728,7 @@ class DatepickerApiExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.0.0",
+  version: "22.1.0-next.0",
   ngImport: i0,
   type: DatepickerApiExample,
   decorators: [{
@@ -747,7 +747,7 @@ class DatepickerCustomHeaderExample {
   exampleHeader = ExampleHeader;
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.0.0",
+    version: "22.1.0-next.0",
     ngImport: i0,
     type: DatepickerCustomHeaderExample,
     deps: [],
@@ -755,7 +755,7 @@ class DatepickerCustomHeaderExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.0.0",
+    version: "22.1.0-next.0",
     type: DatepickerCustomHeaderExample,
     isStandalone: true,
     selector: "datepicker-custom-header-example",
@@ -819,7 +819,7 @@ class DatepickerCustomHeaderExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.0.0",
+  version: "22.1.0-next.0",
   ngImport: i0,
   type: DatepickerCustomHeaderExample,
   decorators: [{
@@ -857,7 +857,7 @@ class ExampleHeader {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.0.0",
+    version: "22.1.0-next.0",
     ngImport: i0,
     type: ExampleHeader,
     deps: [],
@@ -865,7 +865,7 @@ class ExampleHeader {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.0.0",
+    version: "22.1.0-next.0",
     type: ExampleHeader,
     isStandalone: true,
     selector: "example-header",
@@ -911,7 +911,7 @@ class ExampleHeader {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.0.0",
+  version: "22.1.0-next.0",
   ngImport: i0,
   type: ExampleHeader,
   decorators: [{
@@ -945,7 +945,7 @@ i0.ɵɵngDeclareClassMetadata({
 class DatepickerCustomIconExample {
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.0.0",
+    version: "22.1.0-next.0",
     ngImport: i0,
     type: DatepickerCustomIconExample,
     deps: [],
@@ -953,7 +953,7 @@ class DatepickerCustomIconExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.0.0",
+    version: "22.1.0-next.0",
     type: DatepickerCustomIconExample,
     isStandalone: true,
     selector: "datepicker-custom-icon-example",
@@ -1030,7 +1030,7 @@ class DatepickerCustomIconExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.0.0",
+  version: "22.1.0-next.0",
   ngImport: i0,
   type: DatepickerCustomIconExample,
   decorators: [{
@@ -1054,7 +1054,7 @@ class DatepickerDateClassExample {
   };
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.0.0",
+    version: "22.1.0-next.0",
     ngImport: i0,
     type: DatepickerDateClassExample,
     deps: [],
@@ -1062,7 +1062,7 @@ class DatepickerDateClassExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.0.0",
+    version: "22.1.0-next.0",
     type: DatepickerDateClassExample,
     isStandalone: true,
     selector: "datepicker-date-class-example",
@@ -1128,7 +1128,7 @@ class DatepickerDateClassExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.0.0",
+  version: "22.1.0-next.0",
   ngImport: i0,
   type: DatepickerDateClassExample,
   decorators: [{
@@ -1147,7 +1147,7 @@ i0.ɵɵngDeclareClassMetadata({
 class DatepickerDisabledExample {
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.0.0",
+    version: "22.1.0-next.0",
     ngImport: i0,
     type: DatepickerDisabledExample,
     deps: [],
@@ -1155,7 +1155,7 @@ class DatepickerDisabledExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.0.0",
+    version: "22.1.0-next.0",
     type: DatepickerDisabledExample,
     isStandalone: true,
     selector: "datepicker-disabled-example",
@@ -1219,7 +1219,7 @@ class DatepickerDisabledExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.0.0",
+  version: "22.1.0-next.0",
   ngImport: i0,
   type: DatepickerDisabledExample,
   decorators: [{
@@ -1242,7 +1242,7 @@ class DatepickerEventsExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.0.0",
+    version: "22.1.0-next.0",
     ngImport: i0,
     type: DatepickerEventsExample,
     deps: [],
@@ -1250,7 +1250,7 @@ class DatepickerEventsExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "22.0.0",
+    version: "22.1.0-next.0",
     type: DatepickerEventsExample,
     isStandalone: true,
     selector: "datepicker-events-example",
@@ -1315,7 +1315,7 @@ class DatepickerEventsExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.0.0",
+  version: "22.1.0-next.0",
   ngImport: i0,
   type: DatepickerEventsExample,
   decorators: [{
@@ -1337,7 +1337,7 @@ class DatepickerFilterExample {
   };
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.0.0",
+    version: "22.1.0-next.0",
     ngImport: i0,
     type: DatepickerFilterExample,
     deps: [],
@@ -1345,7 +1345,7 @@ class DatepickerFilterExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.0.0",
+    version: "22.1.0-next.0",
     type: DatepickerFilterExample,
     isStandalone: true,
     selector: "datepicker-filter-example",
@@ -1409,7 +1409,7 @@ class DatepickerFilterExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.0.0",
+  version: "22.1.0-next.0",
   ngImport: i0,
   type: DatepickerFilterExample,
   decorators: [{
@@ -1438,7 +1438,7 @@ class DatepickerFormatsExample {
   date = new FormControl(DateTime.now());
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.0.0",
+    version: "22.1.0-next.0",
     ngImport: i0,
     type: DatepickerFormatsExample,
     deps: [],
@@ -1446,7 +1446,7 @@ class DatepickerFormatsExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.0.0",
+    version: "22.1.0-next.0",
     type: DatepickerFormatsExample,
     isStandalone: true,
     selector: "datepicker-formats-example",
@@ -1531,7 +1531,7 @@ class DatepickerFormatsExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.0.0",
+  version: "22.1.0-next.0",
   ngImport: i0,
   type: DatepickerFormatsExample,
   decorators: [{
@@ -1554,7 +1554,7 @@ class DatepickerHarnessExample {
   }] : []));
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.0.0",
+    version: "22.1.0-next.0",
     ngImport: i0,
     type: DatepickerHarnessExample,
     deps: [],
@@ -1562,7 +1562,7 @@ class DatepickerHarnessExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.1.0",
-    version: "22.0.0",
+    version: "22.1.0-next.0",
     type: DatepickerHarnessExample,
     isStandalone: true,
     selector: "datepicker-harness-example",
@@ -1627,7 +1627,7 @@ class DatepickerHarnessExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.0.0",
+  version: "22.1.0-next.0",
   ngImport: i0,
   type: DatepickerHarnessExample,
   decorators: [{
@@ -1660,7 +1660,7 @@ class DatepickerInlineCalendarExample {
   }] : []));
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.0.0",
+    version: "22.1.0-next.0",
     ngImport: i0,
     type: DatepickerInlineCalendarExample,
     deps: [],
@@ -1668,7 +1668,7 @@ class DatepickerInlineCalendarExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.1.0",
-    version: "22.0.0",
+    version: "22.1.0-next.0",
     type: DatepickerInlineCalendarExample,
     isStandalone: true,
     selector: "datepicker-inline-calendar-example",
@@ -1712,7 +1712,7 @@ class DatepickerInlineCalendarExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.0.0",
+  version: "22.1.0-next.0",
   ngImport: i0,
   type: DatepickerInlineCalendarExample,
   decorators: [{
@@ -1770,7 +1770,7 @@ class DatepickerLocaleExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.0.0",
+    version: "22.1.0-next.0",
     ngImport: i0,
     type: DatepickerLocaleExample,
     deps: [],
@@ -1778,7 +1778,7 @@ class DatepickerLocaleExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.0.0",
+    version: "22.1.0-next.0",
     type: DatepickerLocaleExample,
     isStandalone: true,
     selector: "datepicker-locale-example",
@@ -1855,7 +1855,7 @@ class DatepickerLocaleExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.0.0",
+  version: "22.1.0-next.0",
   ngImport: i0,
   type: DatepickerLocaleExample,
   decorators: [{
@@ -1879,7 +1879,7 @@ class DatepickerMinMaxExample {
   maxDate = new Date(this._currentYear + 1, 11, 31);
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.0.0",
+    version: "22.1.0-next.0",
     ngImport: i0,
     type: DatepickerMinMaxExample,
     deps: [],
@@ -1887,7 +1887,7 @@ class DatepickerMinMaxExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.0.0",
+    version: "22.1.0-next.0",
     type: DatepickerMinMaxExample,
     isStandalone: true,
     selector: "datepicker-min-max-example",
@@ -1951,7 +1951,7 @@ class DatepickerMinMaxExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.0.0",
+  version: "22.1.0-next.0",
   ngImport: i0,
   type: DatepickerMinMaxExample,
   decorators: [{
@@ -1969,7 +1969,7 @@ class DatepickerLuxonExample {
   date = new FormControl(DateTime.now());
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.0.0",
+    version: "22.1.0-next.0",
     ngImport: i0,
     type: DatepickerLuxonExample,
     deps: [],
@@ -1977,7 +1977,7 @@ class DatepickerLuxonExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.0.0",
+    version: "22.1.0-next.0",
     type: DatepickerLuxonExample,
     isStandalone: true,
     selector: "datepicker-luxon-example",
@@ -2062,7 +2062,7 @@ class DatepickerLuxonExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.0.0",
+  version: "22.1.0-next.0",
   ngImport: i0,
   type: DatepickerLuxonExample,
   decorators: [{
@@ -2079,7 +2079,7 @@ i0.ɵɵngDeclareClassMetadata({
 class DatepickerOverviewExample {
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.0.0",
+    version: "22.1.0-next.0",
     ngImport: i0,
     type: DatepickerOverviewExample,
     deps: [],
@@ -2087,7 +2087,7 @@ class DatepickerOverviewExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.0.0",
+    version: "22.1.0-next.0",
     type: DatepickerOverviewExample,
     isStandalone: true,
     selector: "datepicker-overview-example",
@@ -2151,7 +2151,7 @@ class DatepickerOverviewExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.0.0",
+  version: "22.1.0-next.0",
   ngImport: i0,
   type: DatepickerOverviewExample,
   decorators: [{
@@ -2169,7 +2169,7 @@ class DatepickerStartViewExample {
   startDate = new Date(1990, 0, 1);
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.0.0",
+    version: "22.1.0-next.0",
     ngImport: i0,
     type: DatepickerStartViewExample,
     deps: [],
@@ -2177,7 +2177,7 @@ class DatepickerStartViewExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.0.0",
+    version: "22.1.0-next.0",
     type: DatepickerStartViewExample,
     isStandalone: true,
     selector: "datepicker-start-view-example",
@@ -2241,7 +2241,7 @@ class DatepickerStartViewExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.0.0",
+  version: "22.1.0-next.0",
   ngImport: i0,
   type: DatepickerStartViewExample,
   decorators: [{
@@ -2258,7 +2258,7 @@ i0.ɵɵngDeclareClassMetadata({
 class DatepickerTouchExample {
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.0.0",
+    version: "22.1.0-next.0",
     ngImport: i0,
     type: DatepickerTouchExample,
     deps: [],
@@ -2266,7 +2266,7 @@ class DatepickerTouchExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.0.0",
+    version: "22.1.0-next.0",
     type: DatepickerTouchExample,
     isStandalone: true,
     selector: "datepicker-touch-example",
@@ -2330,7 +2330,7 @@ class DatepickerTouchExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.0.0",
+  version: "22.1.0-next.0",
   ngImport: i0,
   type: DatepickerTouchExample,
   decorators: [{
@@ -2349,7 +2349,7 @@ class DatepickerValueExample {
   serializedDate = new FormControl(new Date().toISOString());
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.0.0",
+    version: "22.1.0-next.0",
     ngImport: i0,
     type: DatepickerValueExample,
     deps: [],
@@ -2357,7 +2357,7 @@ class DatepickerValueExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.0.0",
+    version: "22.1.0-next.0",
     type: DatepickerValueExample,
     isStandalone: true,
     selector: "datepicker-value-example",
@@ -2443,7 +2443,7 @@ class DatepickerValueExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.0.0",
+  version: "22.1.0-next.0",
   ngImport: i0,
   type: DatepickerValueExample,
   decorators: [{
@@ -2481,7 +2481,7 @@ class DatepickerViewsSelectionExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.0.0",
+    version: "22.1.0-next.0",
     ngImport: i0,
     type: DatepickerViewsSelectionExample,
     deps: [],
@@ -2489,7 +2489,7 @@ class DatepickerViewsSelectionExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.0.0",
+    version: "22.1.0-next.0",
     type: DatepickerViewsSelectionExample,
     isStandalone: true,
     selector: "datepicker-views-selection-example",
@@ -2576,7 +2576,7 @@ class DatepickerViewsSelectionExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.0.0",
+  version: "22.1.0-next.0",
   ngImport: i0,
   type: DatepickerViewsSelectionExample,
   decorators: [{
@@ -2609,7 +2609,7 @@ class DatepickerDialogExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.0.0",
+    version: "22.1.0-next.0",
     ngImport: i0,
     type: DatepickerDialogExample,
     deps: [],
@@ -2617,7 +2617,7 @@ class DatepickerDialogExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.1.0",
-    version: "22.0.0",
+    version: "22.1.0-next.0",
     type: DatepickerDialogExample,
     isStandalone: true,
     selector: "datepicker-dialog-example",
@@ -2649,7 +2649,7 @@ class DatepickerDialogExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.0.0",
+  version: "22.1.0-next.0",
   ngImport: i0,
   type: DatepickerDialogExample,
   decorators: [{
@@ -2684,7 +2684,7 @@ class DatepickerDialogExampleDialog {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.0.0",
+    version: "22.1.0-next.0",
     ngImport: i0,
     type: DatepickerDialogExampleDialog,
     deps: [],
@@ -2692,7 +2692,7 @@ class DatepickerDialogExampleDialog {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.0.0",
+    version: "22.1.0-next.0",
     type: DatepickerDialogExampleDialog,
     isStandalone: true,
     selector: "datepicker-dialog-example",
@@ -2805,7 +2805,7 @@ class DatepickerDialogExampleDialog {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.0.0",
+  version: "22.1.0-next.0",
   ngImport: i0,
   type: DatepickerDialogExampleDialog,
   decorators: [{
