@@ -88,7 +88,7 @@ class AutocompleteAutoSelectExample {
       kind: "directive",
       type: Combobox,
       selector: "[ngCombobox]",
-      inputs: ["disabled", "softDisabled", "alwaysExpanded", "tabindex", "expanded", "value", "inlineSuggestion"],
+      inputs: ["disabled", "readonly", "softDisabled", "alwaysExpanded", "tabindex", "expanded", "value", "inlineSuggestion"],
       outputs: ["expandedChange", "valueChange"],
       exportAs: ["ngCombobox"]
     }, {
@@ -224,7 +224,7 @@ class AutocompleteDisabledExample {
       kind: "directive",
       type: Combobox,
       selector: "[ngCombobox]",
-      inputs: ["disabled", "softDisabled", "alwaysExpanded", "tabindex", "expanded", "value", "inlineSuggestion"],
+      inputs: ["disabled", "readonly", "softDisabled", "alwaysExpanded", "tabindex", "expanded", "value", "inlineSuggestion"],
       outputs: ["expandedChange", "valueChange"],
       exportAs: ["ngCombobox"]
     }, {
@@ -387,7 +387,7 @@ class AutocompleteHighlightExample {
       kind: "directive",
       type: Combobox,
       selector: "[ngCombobox]",
-      inputs: ["disabled", "softDisabled", "alwaysExpanded", "tabindex", "expanded", "value", "inlineSuggestion"],
+      inputs: ["disabled", "readonly", "softDisabled", "alwaysExpanded", "tabindex", "expanded", "value", "inlineSuggestion"],
       outputs: ["expandedChange", "valueChange"],
       exportAs: ["ngCombobox"]
     }, {
@@ -542,7 +542,7 @@ class AutocompleteManualExample {
       kind: "directive",
       type: Combobox,
       selector: "[ngCombobox]",
-      inputs: ["disabled", "softDisabled", "alwaysExpanded", "tabindex", "expanded", "value", "inlineSuggestion"],
+      inputs: ["disabled", "readonly", "softDisabled", "alwaysExpanded", "tabindex", "expanded", "value", "inlineSuggestion"],
       outputs: ["expandedChange", "valueChange"],
       exportAs: ["ngCombobox"]
     }, {
