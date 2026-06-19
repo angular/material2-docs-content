@@ -45,4 +45,12 @@ declare class SlideToggleHarnessExample {
     static ɵcmp: i0.ɵɵComponentDeclaration<SlideToggleHarnessExample, "slide-toggle-harness-example", never, {}, {}, never, never, true, never>;
 }
 
-export { SlideToggleConfigurableExample, SlideToggleFormsExample, SlideToggleHarnessExample, SlideToggleOverviewExample };
+/**
+ * @title Full-width slide toggle
+ */
+declare class SlideToggleFullWidthExample {
+    static ɵfac: i0.ɵɵFactoryDeclaration<SlideToggleFullWidthExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<SlideToggleFullWidthExample, "slide-toggle-full-width-example", never, {}, {}, never, never, true, never>;
+}
+
+export { SlideToggleConfigurableExample, SlideToggleFormsExample, SlideToggleFullWidthExample, SlideToggleHarnessExample, SlideToggleOverviewExample };

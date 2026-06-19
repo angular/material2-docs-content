@@ -766,7 +766,7 @@ class AutocompleteOverviewExample {
       kind: "component",
       type: i1$1.MatSlideToggle,
       selector: "mat-slide-toggle",
-      inputs: ["name", "id", "labelPosition", "aria-label", "aria-labelledby", "aria-describedby", "required", "color", "disabled", "disableRipple", "tabIndex", "checked", "hideIcon", "disabledInteractive"],
+      inputs: ["name", "id", "labelPosition", "aria-label", "aria-labelledby", "aria-describedby", "required", "color", "disabled", "fullWidth", "disableRipple", "tabIndex", "checked", "hideIcon", "disabledInteractive"],
       outputs: ["change", "toggleChange"],
       exportAs: ["matSlideToggle"]
     }, {

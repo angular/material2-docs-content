@@ -1,7 +1,7 @@
 import * as i0 from '@angular/core';
 import { Component, inject, signal } from '@angular/core';
 import * as i1$1 from '@angular/material/slide-toggle';
-import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { MatSlideToggleModule, MatSlideToggle } from '@angular/material/slide-toggle';
 import * as i2 from '@angular/material/checkbox';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import * as i3 from '@angular/forms';
@@ -79,7 +79,7 @@ class SlideToggleConfigurableExample {
       kind: "component",
       type: i1$1.MatSlideToggle,
       selector: "mat-slide-toggle",
-      inputs: ["name", "id", "labelPosition", "aria-label", "aria-labelledby", "aria-describedby", "required", "color", "disabled", "disableRipple", "tabIndex", "checked", "hideIcon", "disabledInteractive"],
+      inputs: ["name", "id", "labelPosition", "aria-label", "aria-labelledby", "aria-describedby", "required", "color", "disabled", "fullWidth", "disableRipple", "tabIndex", "checked", "hideIcon", "disabledInteractive"],
       outputs: ["change", "toggleChange"],
       exportAs: ["matSlideToggle"]
     }]
@@ -135,7 +135,7 @@ class SlideToggleFormsExample {
       kind: "component",
       type: i1$1.MatSlideToggle,
       selector: "mat-slide-toggle",
-      inputs: ["name", "id", "labelPosition", "aria-label", "aria-labelledby", "aria-describedby", "required", "color", "disabled", "disableRipple", "tabIndex", "checked", "hideIcon", "disabledInteractive"],
+      inputs: ["name", "id", "labelPosition", "aria-label", "aria-labelledby", "aria-describedby", "required", "color", "disabled", "fullWidth", "disableRipple", "tabIndex", "checked", "hideIcon", "disabledInteractive"],
       outputs: ["change", "toggleChange"],
       exportAs: ["matSlideToggle"]
     }, {
@@ -240,7 +240,7 @@ class SlideToggleOverviewExample {
       kind: "component",
       type: i1$1.MatSlideToggle,
       selector: "mat-slide-toggle",
-      inputs: ["name", "id", "labelPosition", "aria-label", "aria-labelledby", "aria-describedby", "required", "color", "disabled", "disableRipple", "tabIndex", "checked", "hideIcon", "disabledInteractive"],
+      inputs: ["name", "id", "labelPosition", "aria-label", "aria-labelledby", "aria-describedby", "required", "color", "disabled", "fullWidth", "disableRipple", "tabIndex", "checked", "hideIcon", "disabledInteractive"],
       outputs: ["change", "toggleChange"],
       exportAs: ["matSlideToggle"]
     }]
@@ -289,7 +289,7 @@ class SlideToggleHarnessExample {
       kind: "component",
       type: i1$1.MatSlideToggle,
       selector: "mat-slide-toggle",
-      inputs: ["name", "id", "labelPosition", "aria-label", "aria-labelledby", "aria-describedby", "required", "color", "disabled", "disableRipple", "tabIndex", "checked", "hideIcon", "disabledInteractive"],
+      inputs: ["name", "id", "labelPosition", "aria-label", "aria-labelledby", "aria-describedby", "required", "color", "disabled", "fullWidth", "disableRipple", "tabIndex", "checked", "hideIcon", "disabledInteractive"],
       outputs: ["change", "toggleChange"],
       exportAs: ["matSlideToggle"]
     }, {
@@ -327,5 +327,49 @@ i0.ɵɵngDeclareClassMetadata({
   }]
 });
 
-export { SlideToggleConfigurableExample, SlideToggleFormsExample, SlideToggleHarnessExample, SlideToggleOverviewExample };
+class SlideToggleFullWidthExample {
+  static ɵfac = i0.ɵɵngDeclareFactory({
+    minVersion: "12.0.0",
+    version: "22.1.0-next.0",
+    ngImport: i0,
+    type: SlideToggleFullWidthExample,
+    deps: [],
+    target: i0.ɵɵFactoryTarget.Component
+  });
+  static ɵcmp = i0.ɵɵngDeclareComponent({
+    minVersion: "14.0.0",
+    version: "22.1.0-next.0",
+    type: SlideToggleFullWidthExample,
+    isStandalone: true,
+    selector: "slide-toggle-full-width-example",
+    ngImport: i0,
+    template: "<div class=\"example-full-width-container\">\n  <mat-slide-toggle fullWidth labelPosition=\"before\">Full width slide toggle</mat-slide-toggle>\n  <mat-slide-toggle fullWidth>Full width slide toggle</mat-slide-toggle>\n</div>\n",
+    styles: [".example-full-width-container {\n  width: 300px;\n  border: 1px solid #ccc;\n  padding: 16px;\n  border-radius: 4px;\n}\n"],
+    dependencies: [{
+      kind: "component",
+      type: MatSlideToggle,
+      selector: "mat-slide-toggle",
+      inputs: ["name", "id", "labelPosition", "aria-label", "aria-labelledby", "aria-describedby", "required", "color", "disabled", "fullWidth", "disableRipple", "tabIndex", "checked", "hideIcon", "disabledInteractive"],
+      outputs: ["change", "toggleChange"],
+      exportAs: ["matSlideToggle"]
+    }]
+  });
+}
+i0.ɵɵngDeclareClassMetadata({
+  minVersion: "12.0.0",
+  version: "22.1.0-next.0",
+  ngImport: i0,
+  type: SlideToggleFullWidthExample,
+  decorators: [{
+    type: Component,
+    args: [{
+      selector: 'slide-toggle-full-width-example',
+      imports: [MatSlideToggle],
+      template: "<div class=\"example-full-width-container\">\n  <mat-slide-toggle fullWidth labelPosition=\"before\">Full width slide toggle</mat-slide-toggle>\n  <mat-slide-toggle fullWidth>Full width slide toggle</mat-slide-toggle>\n</div>\n",
+      styles: [".example-full-width-container {\n  width: 300px;\n  border: 1px solid #ccc;\n  padding: 16px;\n  border-radius: 4px;\n}\n"]
+    }]
+  }]
+});
+
+export { SlideToggleConfigurableExample, SlideToggleFormsExample, SlideToggleFullWidthExample, SlideToggleHarnessExample, SlideToggleOverviewExample };
 //# sourceMappingURL=material-slide-toggle.mjs.map

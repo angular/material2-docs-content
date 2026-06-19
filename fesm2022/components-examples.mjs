@@ -2429,6 +2429,16 @@ const EXAMPLE_COMPONENTS = {
     "primaryFile": "slide-toggle-forms-example.ts",
     "importPath": "material/slide-toggle"
   },
+  "slide-toggle-full-width": {
+    "packagePath": "material/slide-toggle/slide-toggle-full-width",
+    "title": "Full-width slide toggle",
+    "componentName": "SlideToggleFullWidthExample",
+    "files": ["slide-toggle-full-width-example.ts", "slide-toggle-full-width-example.html", "slide-toggle-full-width-example.css"],
+    "selector": "slide-toggle-full-width-example",
+    "additionalComponents": [],
+    "primaryFile": "slide-toggle-full-width-example.ts",
+    "importPath": "material/slide-toggle"
+  },
   "slide-toggle-harness": {
     "packagePath": "material/slide-toggle/slide-toggle-harness",
     "title": "Testing with MatSlideToggleHarness",
@@ -4017,6 +4027,8 @@ async function loadExample(id) {
     case 'slide-toggle-configurable':
       return import('@angular/components-examples/material/slide-toggle');
     case 'slide-toggle-forms':
+      return import('@angular/components-examples/material/slide-toggle');
+    case 'slide-toggle-full-width':
       return import('@angular/components-examples/material/slide-toggle');
     case 'slide-toggle-harness':
       return import('@angular/components-examples/material/slide-toggle');
