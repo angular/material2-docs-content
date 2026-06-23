@@ -84,9 +84,50 @@ on how scroll events are detected and dispatched.</p>
           The overlay container
         </h3>
       <p>The <code>OverlayContainer</code> provides a handle to the container element in which all individual overlay
-elements are rendered. By default, the overlay container is appended directly to the document body
-so that an overlay is never clipped by an <code>overflow: hidden</code> parent.</p>
+elements are rendered. By default, the overlay container is appended directly to the document body.</p>
+<p>In supported browsers, the CDK renders overlays as native
+<a href="https://developer.mozilla.org/en-US/docs/Web/API/Popover_API">Popover</a> elements.
+The <code>OverlayContainer</code> acts as the default insertion point for these elements, but because they are
+rendered as popovers, the browser automatically promotes them to the top layer. This natively
+bypasses <code>z-index</code> and <code>overflow: hidden</code> clipping issues without needing complex DOM stacking
+workarounds.</p>
+<p>If a browser does not support the Popover API, the CDK falls back to the traditional
+behavior where appending to the <code>OverlayContainer</code> is the only way to avoid clipping.</p>
+<p>You can explicitly configure the popover behavior using the <code>usePopover</code> option when creating an
+overlay. If you need to globally disable the popover behavior, you can provide the
+<code>OVERLAY_DEFAULT_CONFIG</code> injection token:</p>
+<pre><code class="language-ts"><span class="hljs-keyword">import</span> {<span class="hljs-variable constant_">OVERLAY_DEFAULT_CONFIG</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/overlay&#x27;</span>;
 
+<span class="hljs-title function_">bootstrapApplication</span>(<span class="hljs-title class_">MyApp</span>, {
+  <span class="hljs-attr">providers</span>: [
+    {<span class="hljs-attr">provide</span>: <span class="hljs-variable constant_">OVERLAY_DEFAULT_CONFIG</span>, <span class="hljs-attr">useValue</span>: {<span class="hljs-attr">usePopover</span>: <span class="hljs-literal">false</span>}}
+  ]
+});</code></pre>
+        <h4 id="popover-dom-location" class="docs-header-link">
+          <span header-link="popover-dom-location"></span>
+          Popover DOM location
+        </h4>
+      <p>When an overlay is rendered as a native popover, it doesn&#39;t strictly need to be placed inside the
+<code>OverlayContainer</code> to escape <code>overflow: hidden</code> containers. The <code>FlexibleConnectedPositionStrategy</code>
+allows you to change where the popover is inserted in the DOM via the <code>withPopoverLocation()</code> method.</p>
+<p>This is particularly beneficial for accessibility. By injecting the popover directly next to its
+trigger element in the DOM structure, the DOM sequence naturally follows the visual logical order,
+while the browser continues to render the popover on top of everything.</p>
+<p>If you are using the <code>cdkConnectedOverlay</code> directive, you can configure this using the
+<code>cdkConnectedOverlayUsePopover</code> input. The supported locations are:</p>
+<ul>
+<li><code>&#39;global&#39;</code> (default): Inserts the popover inside the <code>OverlayContainer</code>.</li>
+<li><code>&#39;inline&#39;</code>: Inserts the popover in the DOM immediately following its trigger element.</li>
+<li><code>{type: &#39;parent&#39;, element: HTMLElement}</code>: Inserts the popover as a child of a specific custom element.</li>
+</ul>
+<pre><code class="language-html"><span class="hljs-comment">&lt;!-- Inserts the overlay popover right next to the trigger button in the DOM --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">cdkOverlayOrigin</span> #<span class="hljs-attr">trigger</span>=<span class="hljs-string">&quot;cdkOverlayOrigin&quot;</span>&gt;</span>Open Menu<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">ng-template</span> <span class="hljs-attr">cdkConnectedOverlay</span>
+             [<span class="hljs-attr">cdkConnectedOverlayOrigin</span>]=<span class="hljs-string">&quot;trigger&quot;</span>
+             [<span class="hljs-attr">cdkConnectedOverlayOpen</span>]=<span class="hljs-string">&quot;isOpen&quot;</span>
+             <span class="hljs-attr">cdkConnectedOverlayUsePopover</span>=<span class="hljs-string">&quot;inline&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;menu-panel&quot;</span>&gt;</span>Menu content<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ng-template</span>&gt;</span></code></pre>
         <h4 id="full-screen-overlays" class="docs-header-link">
           <span header-link="full-screen-overlays"></span>
           Full-screen overlays
