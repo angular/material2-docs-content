@@ -364,6 +364,25 @@ to perform any clean-up or tear-down operations when a view is being destroyed.<
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>bulk: <code class="docs-api-property-type">Readonly&lt;{
+    select: (values: T[]) =&gt; boolean;
+    deselect: (values: T[]) =&gt; boolean;
+    setSelection: (values: T[]) =&gt; boolean;
+}&gt;</code></code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Exposes selection/deselection methods that work on array of values and don&#39;t expect a spread.
+This is useful in the cases where you may have a large collection of items that can&#39;t be
+easily spread into the existing methods without hitting browser limits.</p>
+</td>
+</tr>
+
+
+      
+        
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
       <code>changed: <code class="docs-api-property-type">Subject&lt;SelectionChange&lt;T&gt;&gt;</code></code>
     </p>
   </td>
