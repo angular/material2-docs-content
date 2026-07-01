@@ -5,6 +5,36 @@
 
   <span class="hljs-comment">/* stylelint-disable-next-line material/no-prefixes -- Valid in all remotely recent browsers. */</span>
   <span class="hljs-attribute">width</span>: fit-content;
+
+  <span class="hljs-comment">/* The ::placeholder selectors are intentionally separated.
+  The &#x27;material/no-prefixes&#x27; stylelint rule flags the standard ::placeholder
+  when grouped with vendor prefixes. Each prefix is on its own rule to comply.
+  Vendor prefixes are included to ensure consistent placeholder styling
+  across different browsers.
+
+  <span class="hljs-doctag">NOTE:</span> These styles are primarily needed for internal testing. */</span>
+
+  <span class="hljs-comment">/* stylelint-disable material/no-prefixes -- Provides all prefixes for ::placeholder */</span>
+  <span class="hljs-selector-tag">input</span>::-webkit-input-placeholder {
+    <span class="hljs-attribute">color</span>: <span class="hljs-built_in">var</span>(--mat-sys-on-surface-variant);
+  }
+
+  <span class="hljs-selector-tag">input</span>::-moz-placeholder <span class="hljs-comment">/* Firefox 19+ */</span> {
+    <span class="hljs-attribute">color</span>: <span class="hljs-built_in">var</span>(--mat-sys-on-surface-variant);
+  }
+
+  <span class="hljs-selector-tag">input</span>:-ms-input-placeholder <span class="hljs-comment">/* IE 10+ */</span> {
+    <span class="hljs-attribute">color</span>: <span class="hljs-built_in">var</span>(--mat-sys-on-surface-variant);
+  }
+
+  <span class="hljs-selector-tag">input</span>:-moz-placeholder  <span class="hljs-comment">/* Firefox 18- */</span> {
+    <span class="hljs-attribute">color</span>: <span class="hljs-built_in">var</span>(--mat-sys-on-surface-variant);
+  }
+
+  <span class="hljs-selector-tag">input</span><span class="hljs-selector-pseudo">::placeholder</span> {
+    <span class="hljs-attribute">color</span>: <span class="hljs-built_in">var</span>(--mat-sys-on-surface-variant);
+  }
+
 }
 
 <span class="hljs-selector-class">.example-search-icon</span>,
@@ -116,12 +146,3 @@
   <span class="hljs-attribute">font-size</span>: <span class="hljs-number">0.9rem</span>;
 }
 
-<span class="hljs-comment">/* stylelint-disable material/no-prefixes -- Provides all prefixes for ::placeholder */</span>
-<span class="hljs-selector-tag">input</span>::-webkit-input-placeholder,
-input::-moz-placeholder, <span class="hljs-comment">/* Firefox 19+ */</span>
-input:-ms-input-placeholder, <span class="hljs-comment">/* IE 10+ */</span>
-input:-moz-placeholder, <span class="hljs-comment">/* Firefox 18- */</span>
-input::placeholder {
-  <span class="hljs-attribute">color</span>: <span class="hljs-built_in">var</span>(--mat-sys-on-surface-variant);
-}
-<span class="hljs-comment">/* stylelint-enable material/no-prefixes */</span>
