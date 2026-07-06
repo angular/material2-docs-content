@@ -30,7 +30,7 @@ class ElevationOverviewExample {
     isStandalone: true,
     selector: "elevation-overview-example",
     ngImport: i0,
-    template: "<div class=\"example-container\"\n    [class.mat-elevation-z2]=\"!isActive\"\n    [class.mat-elevation-z8]=\"isActive\">\n  Example\n</div>\n\n<button matButton (click)=\"isActive = !isActive\">Toggle Elevation</button>\n",
+    template: "<div class=\"example-container\" [class.mat-shadow-1]=\"!isActive\" [class.mat-shadow-4]=\"isActive\">\n  Example\n</div>\n\n<button matButton (click)=\"isActive = !isActive\">Toggle Elevation</button>\n",
     styles: [".example-container {\n  padding: 16px;\n  margin-bottom: 16px;\n}\n"],
     dependencies: [{
       kind: "ngmodule",
@@ -54,7 +54,7 @@ i0.ɵɵngDeclareClassMetadata({
     args: [{
       selector: 'elevation-overview-example',
       imports: [MatButtonModule],
-      template: "<div class=\"example-container\"\n    [class.mat-elevation-z2]=\"!isActive\"\n    [class.mat-elevation-z8]=\"isActive\">\n  Example\n</div>\n\n<button matButton (click)=\"isActive = !isActive\">Toggle Elevation</button>\n",
+      template: "<div class=\"example-container\" [class.mat-shadow-1]=\"!isActive\" [class.mat-shadow-4]=\"isActive\">\n  Example\n</div>\n\n<button matButton (click)=\"isActive = !isActive\">Toggle Elevation</button>\n",
       styles: [".example-container {\n  padding: 16px;\n  margin-bottom: 16px;\n}\n"]
     }]
   }]
@@ -81,7 +81,7 @@ class RippleOverviewExample {
     isStandalone: true,
     selector: "ripple-overview-example",
     ngImport: i0,
-    template: "<mat-checkbox [(ngModel)]=\"centered\" class=\"example-ripple-checkbox\">Centered</mat-checkbox>\n<mat-checkbox [(ngModel)]=\"disabled\" class=\"example-ripple-checkbox\">Disabled</mat-checkbox>\n<mat-checkbox [(ngModel)]=\"unbounded\" class=\"example-ripple-checkbox\">Unbounded</mat-checkbox>\n\n<mat-form-field class=\"example-ripple-form-field\">\n  <mat-label>Radius</mat-label>\n  <input matInput [(ngModel)]=\"radius\" type=\"number\">\n</mat-form-field>\n<mat-form-field class=\"example-ripple-form-field\">\n  <mat-label>Color</mat-label>\n  <input matInput [(ngModel)]=\"color\" type=\"text\">\n</mat-form-field>\n\n\n<div class=\"example-ripple-container mat-elevation-z4\"\n     matRipple\n     [matRippleCentered]=\"centered\"\n     [matRippleDisabled]=\"disabled\"\n     [matRippleUnbounded]=\"unbounded\"\n     [matRippleRadius]=\"radius\"\n     [matRippleColor]=\"color\">\n  Click me\n</div>\n",
+    template: "<mat-checkbox [(ngModel)]=\"centered\" class=\"example-ripple-checkbox\">Centered</mat-checkbox>\n<mat-checkbox [(ngModel)]=\"disabled\" class=\"example-ripple-checkbox\">Disabled</mat-checkbox>\n<mat-checkbox [(ngModel)]=\"unbounded\" class=\"example-ripple-checkbox\">Unbounded</mat-checkbox>\n\n<mat-form-field class=\"example-ripple-form-field\">\n  <mat-label>Radius</mat-label>\n  <input matInput [(ngModel)]=\"radius\" type=\"number\">\n</mat-form-field>\n<mat-form-field class=\"example-ripple-form-field\">\n  <mat-label>Color</mat-label>\n  <input matInput [(ngModel)]=\"color\" type=\"text\">\n</mat-form-field>\n\n\n<div class=\"example-ripple-container mat-shadow-2\"\n     matRipple\n     [matRippleCentered]=\"centered\"\n     [matRippleDisabled]=\"disabled\"\n     [matRippleUnbounded]=\"unbounded\"\n     [matRippleRadius]=\"radius\"\n     [matRippleColor]=\"color\">\n  Click me\n</div>\n",
     styles: [".example-ripple-container {\n  cursor: pointer;\n  text-align: center;\n\n  width: 300px;\n  height: 300px;\n  line-height: 300px;\n\n  user-select: none;\n  -webkit-user-select: none;\n  -moz-user-select: none;\n\n  -webkit-user-drag: none;\n  -webkit-tap-highlight-color: transparent;\n}\n\n/** Styles to make the demo look better. */\n.example-ripple-checkbox {\n  margin: 6px 12px 6px 0;\n}\n\n.example-ripple-form-field {\n  margin: 0 12px 0 0;\n}\n"],
     dependencies: [{
       kind: "ngmodule",
@@ -159,7 +159,7 @@ i0.ɵɵngDeclareClassMetadata({
     args: [{
       selector: 'ripple-overview-example',
       imports: [MatCheckboxModule, FormsModule, MatFormFieldModule, MatInputModule, MatRippleModule],
-      template: "<mat-checkbox [(ngModel)]=\"centered\" class=\"example-ripple-checkbox\">Centered</mat-checkbox>\n<mat-checkbox [(ngModel)]=\"disabled\" class=\"example-ripple-checkbox\">Disabled</mat-checkbox>\n<mat-checkbox [(ngModel)]=\"unbounded\" class=\"example-ripple-checkbox\">Unbounded</mat-checkbox>\n\n<mat-form-field class=\"example-ripple-form-field\">\n  <mat-label>Radius</mat-label>\n  <input matInput [(ngModel)]=\"radius\" type=\"number\">\n</mat-form-field>\n<mat-form-field class=\"example-ripple-form-field\">\n  <mat-label>Color</mat-label>\n  <input matInput [(ngModel)]=\"color\" type=\"text\">\n</mat-form-field>\n\n\n<div class=\"example-ripple-container mat-elevation-z4\"\n     matRipple\n     [matRippleCentered]=\"centered\"\n     [matRippleDisabled]=\"disabled\"\n     [matRippleUnbounded]=\"unbounded\"\n     [matRippleRadius]=\"radius\"\n     [matRippleColor]=\"color\">\n  Click me\n</div>\n",
+      template: "<mat-checkbox [(ngModel)]=\"centered\" class=\"example-ripple-checkbox\">Centered</mat-checkbox>\n<mat-checkbox [(ngModel)]=\"disabled\" class=\"example-ripple-checkbox\">Disabled</mat-checkbox>\n<mat-checkbox [(ngModel)]=\"unbounded\" class=\"example-ripple-checkbox\">Unbounded</mat-checkbox>\n\n<mat-form-field class=\"example-ripple-form-field\">\n  <mat-label>Radius</mat-label>\n  <input matInput [(ngModel)]=\"radius\" type=\"number\">\n</mat-form-field>\n<mat-form-field class=\"example-ripple-form-field\">\n  <mat-label>Color</mat-label>\n  <input matInput [(ngModel)]=\"color\" type=\"text\">\n</mat-form-field>\n\n\n<div class=\"example-ripple-container mat-shadow-2\"\n     matRipple\n     [matRippleCentered]=\"centered\"\n     [matRippleDisabled]=\"disabled\"\n     [matRippleUnbounded]=\"unbounded\"\n     [matRippleRadius]=\"radius\"\n     [matRippleColor]=\"color\">\n  Click me\n</div>\n",
       styles: [".example-ripple-container {\n  cursor: pointer;\n  text-align: center;\n\n  width: 300px;\n  height: 300px;\n  line-height: 300px;\n\n  user-select: none;\n  -webkit-user-select: none;\n  -moz-user-select: none;\n\n  -webkit-user-drag: none;\n  -webkit-tap-highlight-color: transparent;\n}\n\n/** Styles to make the demo look better. */\n.example-ripple-checkbox {\n  margin: 6px 12px 6px 0;\n}\n\n.example-ripple-form-field {\n  margin: 0 12px 0 0;\n}\n"]
     }]
   }]
