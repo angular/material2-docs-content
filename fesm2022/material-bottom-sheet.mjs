@@ -1,5 +1,5 @@
 import * as i0 from '@angular/core';
-import { inject, Component, TemplateRef, ViewChild } from '@angular/core';
+import { inject, Component, viewChild, TemplateRef } from '@angular/core';
 import { MatBottomSheet, MatBottomSheetModule, MatBottomSheetRef } from '@angular/material/bottom-sheet';
 import * as i1$1 from '@angular/material/list';
 import { MatListModule } from '@angular/material/list';
@@ -116,9 +116,9 @@ i0.ɵɵngDeclareClassMetadata({
 
 class BottomSheetHarnessExample {
   bottomSheet = inject(MatBottomSheet);
-  template;
+  template = viewChild.required(TemplateRef);
   open(config) {
-    return this.bottomSheet.open(this.template, config);
+    return this.bottomSheet.open(this.template(), config);
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
@@ -129,7 +129,7 @@ class BottomSheetHarnessExample {
     target: i0.ɵɵFactoryTarget.Component
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
-    minVersion: "14.0.0",
+    minVersion: "17.2.0",
     version: "22.0.5",
     type: BottomSheetHarnessExample,
     isStandalone: true,
@@ -138,7 +138,8 @@ class BottomSheetHarnessExample {
       propertyName: "template",
       first: true,
       predicate: TemplateRef,
-      descendants: true
+      descendants: true,
+      isSignal: true
     }],
     ngImport: i0,
     template: "<ng-template>\n  Hello from the bottom sheet!\n</ng-template>\n",
@@ -163,8 +164,10 @@ i0.ɵɵngDeclareClassMetadata({
   }],
   propDecorators: {
     template: [{
-      type: ViewChild,
-      args: [TemplateRef]
+      type: i0.ViewChild,
+      args: [i0.forwardRef(() => TemplateRef), {
+        isSignal: true
+      }]
     }]
   }
 });

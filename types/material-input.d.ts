@@ -6,7 +6,7 @@ import { ErrorStateMatcher } from '@angular/material/core';
  * @title Input with a clear button
  */
 declare class InputClearableExample {
-    value: string;
+    value: i0.WritableSignal<string>;
     static ɵfac: i0.ɵɵFactoryDeclaration<InputClearableExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<InputClearableExample, "input-clearable-example", never, {}, {}, never, never, true, never>;
 }

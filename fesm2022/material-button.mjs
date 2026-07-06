@@ -138,7 +138,9 @@ i0.ɵɵngDeclareClassMetadata({
 });
 
 class ButtonHarnessExample {
-  clicked = false;
+  clicked = signal(false, ...(ngDevMode ? [{
+    debugName: "clicked"
+  }] : []));
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
     version: "22.0.5",
@@ -154,7 +156,7 @@ class ButtonHarnessExample {
     isStandalone: true,
     selector: "button-harness-example",
     ngImport: i0,
-    template: "<button id=\"basic\" type=\"button\" matButton (click)=\"clicked = true\">\n  Basic button\n</button>\n",
+    template: "<button id=\"basic\" type=\"button\" matButton (click)=\"clicked.set(true)\">\n  Basic button\n</button>\n",
     dependencies: [{
       kind: "ngmodule",
       type: MatButtonModule
@@ -177,7 +179,7 @@ i0.ɵɵngDeclareClassMetadata({
     args: [{
       selector: 'button-harness-example',
       imports: [MatButtonModule],
-      template: "<button id=\"basic\" type=\"button\" matButton (click)=\"clicked = true\">\n  Basic button\n</button>\n"
+      template: "<button id=\"basic\" type=\"button\" matButton (click)=\"clicked.set(true)\">\n  Basic button\n</button>\n"
     }]
   }]
 });

@@ -33,7 +33,7 @@ declare class ButtonToggleHarnessExample {
  */
 declare class ButtonToggleFormsExample {
     fontStyleControl: FormControl<string | null>;
-    fontStyle?: string;
+    fontStyle: i0.WritableSignal<string | undefined>;
     static ɵfac: i0.ɵɵFactoryDeclaration<ButtonToggleFormsExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<ButtonToggleFormsExample, "button-toggle-forms-example", never, {}, {}, never, never, true, never>;
 }
