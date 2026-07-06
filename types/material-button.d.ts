@@ -20,7 +20,7 @@ declare class ButtonDisabledInteractiveExample {
  * @title Testing with MatButtonHarness
  */
 declare class ButtonHarnessExample {
-    clicked: boolean;
+    clicked: i0.WritableSignal<boolean>;
     static ɵfac: i0.ɵɵFactoryDeclaration<ButtonHarnessExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<ButtonHarnessExample, "button-harness-example", never, {}, {}, never, never, true, never>;
 }

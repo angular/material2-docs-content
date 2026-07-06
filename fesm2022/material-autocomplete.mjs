@@ -1,5 +1,5 @@
 import * as i0 from '@angular/core';
-import { Component, inject, ViewChild } from '@angular/core';
+import { Component, inject, viewChild, signal } from '@angular/core';
 import * as i3 from '@angular/forms';
 import { FormControl, FormsModule, ReactiveFormsModule, FormBuilder } from '@angular/forms';
 import { startWith, map } from 'rxjs/operators';
@@ -1028,13 +1028,15 @@ i0.ɵɵngDeclareClassMetadata({
 });
 
 class AutocompleteRequireSelectionExample {
-  input;
+  input = viewChild.required('input');
   myControl = new FormControl('');
   options = ['One', 'Two', 'Three', 'Four', 'Five'];
-  filteredOptions = this.options.slice();
+  filteredOptions = signal(this.options.slice(), ...(ngDevMode ? [{
+    debugName: "filteredOptions"
+  }] : []));
   filter() {
-    const filterValue = this.input.nativeElement.value.toLowerCase();
-    this.filteredOptions = this.options.filter(o => o.toLowerCase().includes(filterValue));
+    const filterValue = this.input().nativeElement.value.toLowerCase();
+    this.filteredOptions.set(this.options.filter(o => o.toLowerCase().includes(filterValue)));
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
@@ -1054,10 +1056,11 @@ class AutocompleteRequireSelectionExample {
       propertyName: "input",
       first: true,
       predicate: ["input"],
-      descendants: true
+      descendants: true,
+      isSignal: true
     }],
     ngImport: i0,
-    template: "Control value: {{myControl.value || 'empty'}}\n\n<form class=\"example-form\">\n  <mat-form-field class=\"example-full-width\">\n    <mat-label>Number</mat-label>\n    <input #input\n           type=\"text\"\n           placeholder=\"Pick one\"\n           matInput\n           [formControl]=\"myControl\"\n           [matAutocomplete]=\"auto\"\n           (input)=\"filter()\"\n           (focus)=\"filter()\">\n    <mat-autocomplete requireSelection #auto=\"matAutocomplete\">\n      @for (option of filteredOptions; track option) {\n        <mat-option [value]=\"option\">{{option}}</mat-option>\n      }\n    </mat-autocomplete>\n  </mat-form-field>\n</form>\n",
+    template: "Control value: {{myControl.value || 'empty'}}\n\n<form class=\"example-form\">\n  <mat-form-field class=\"example-full-width\">\n    <mat-label>Number</mat-label>\n    <input #input\n           type=\"text\"\n           placeholder=\"Pick one\"\n           matInput\n           [formControl]=\"myControl\"\n           [matAutocomplete]=\"auto\"\n           (input)=\"filter()\"\n           (focus)=\"filter()\">\n    <mat-autocomplete requireSelection #auto=\"matAutocomplete\">\n      @for (option of filteredOptions(); track option) {\n        <mat-option [value]=\"option\">{{option}}</mat-option>\n      }\n    </mat-autocomplete>\n  </mat-form-field>\n</form>\n",
     styles: [".example-form {\n  min-width: 150px;\n  max-width: 500px;\n  width: 100%;\n  margin-top: 16px;\n}\n\n.example-full-width {\n  width: 100%;\n}\n"],
     dependencies: [{
       kind: "ngmodule",
@@ -1153,14 +1156,16 @@ i0.ɵɵngDeclareClassMetadata({
     args: [{
       selector: 'autocomplete-require-selection-example',
       imports: [FormsModule, MatFormFieldModule, MatInputModule, MatAutocompleteModule, ReactiveFormsModule],
-      template: "Control value: {{myControl.value || 'empty'}}\n\n<form class=\"example-form\">\n  <mat-form-field class=\"example-full-width\">\n    <mat-label>Number</mat-label>\n    <input #input\n           type=\"text\"\n           placeholder=\"Pick one\"\n           matInput\n           [formControl]=\"myControl\"\n           [matAutocomplete]=\"auto\"\n           (input)=\"filter()\"\n           (focus)=\"filter()\">\n    <mat-autocomplete requireSelection #auto=\"matAutocomplete\">\n      @for (option of filteredOptions; track option) {\n        <mat-option [value]=\"option\">{{option}}</mat-option>\n      }\n    </mat-autocomplete>\n  </mat-form-field>\n</form>\n",
+      template: "Control value: {{myControl.value || 'empty'}}\n\n<form class=\"example-form\">\n  <mat-form-field class=\"example-full-width\">\n    <mat-label>Number</mat-label>\n    <input #input\n           type=\"text\"\n           placeholder=\"Pick one\"\n           matInput\n           [formControl]=\"myControl\"\n           [matAutocomplete]=\"auto\"\n           (input)=\"filter()\"\n           (focus)=\"filter()\">\n    <mat-autocomplete requireSelection #auto=\"matAutocomplete\">\n      @for (option of filteredOptions(); track option) {\n        <mat-option [value]=\"option\">{{option}}</mat-option>\n      }\n    </mat-autocomplete>\n  </mat-form-field>\n</form>\n",
       styles: [".example-form {\n  min-width: 150px;\n  max-width: 500px;\n  width: 100%;\n  margin-top: 16px;\n}\n\n.example-full-width {\n  width: 100%;\n}\n"]
     }]
   }],
   propDecorators: {
     input: [{
-      type: ViewChild,
-      args: ['input']
+      type: i0.ViewChild,
+      args: ['input', {
+        isSignal: true
+      }]
     }]
   }
 });

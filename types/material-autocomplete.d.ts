@@ -113,10 +113,10 @@ declare class AutocompleteSimpleExample {
  * @title Require an autocomplete option to be selected
  */
 declare class AutocompleteRequireSelectionExample {
-    input: ElementRef<HTMLInputElement>;
+    input: i0.Signal<ElementRef<HTMLInputElement>>;
     myControl: FormControl<string | null>;
     options: string[];
-    filteredOptions: string[];
+    filteredOptions: i0.WritableSignal<string[]>;
     filter(): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<AutocompleteRequireSelectionExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<AutocompleteRequireSelectionExample, "autocomplete-require-selection-example", never, {}, {}, never, never, true, never>;

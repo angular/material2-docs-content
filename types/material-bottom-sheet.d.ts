@@ -24,7 +24,7 @@ declare class BottomSheetOverviewExampleSheet {
  */
 declare class BottomSheetHarnessExample {
     readonly bottomSheet: MatBottomSheet;
-    template: TemplateRef<any>;
+    template: i0.Signal<TemplateRef<any>>;
     open(config?: MatBottomSheetConfig): _angular_material_bottom_sheet.MatBottomSheetRef<any, any>;
     static ɵfac: i0.ɵɵFactoryDeclaration<BottomSheetHarnessExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<BottomSheetHarnessExample, "bottom-sheet-harness-example", never, {}, {}, never, never, true, never>;

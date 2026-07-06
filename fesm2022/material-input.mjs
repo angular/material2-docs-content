@@ -1,5 +1,5 @@
 import * as i0 from '@angular/core';
-import { Component, signal } from '@angular/core';
+import { signal, Component } from '@angular/core';
 import * as i3$1 from '@angular/material/icon';
 import { MatIconModule } from '@angular/material/icon';
 import * as i1$1 from '@angular/material/button';
@@ -12,7 +12,9 @@ import * as i1 from '@angular/material/form-field';
 import { MatFormFieldModule } from '@angular/material/form-field';
 
 class InputClearableExample {
-  value = 'Clear me';
+  value = signal('Clear me', ...(ngDevMode ? [{
+    debugName: "value"
+  }] : []));
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
     version: "22.1.0-next.4",
@@ -28,7 +30,7 @@ class InputClearableExample {
     isStandalone: true,
     selector: "input-clearable-example",
     ngImport: i0,
-    template: "<mat-form-field class=\"example-form-field\">\n  <mat-label>Clearable input</mat-label>\n  <input matInput type=\"text\" [(ngModel)]=\"value\">\n  @if (value) {\n    <button matSuffix matIconButton aria-label=\"Clear\" (click)=\"value=''\">\n      <mat-icon>close</mat-icon>\n    </button>\n  }\n</mat-form-field>\n",
+    template: "<mat-form-field class=\"example-form-field\">\n  <mat-label>Clearable input</mat-label>\n  <input matInput type=\"text\" [(ngModel)]=\"value\">\n  @if (value()) {\n    <button matSuffix matIconButton aria-label=\"Clear\" (click)=\"value.set('')\">\n      <mat-icon>close</mat-icon>\n    </button>\n  }\n</mat-form-field>\n",
     styles: [".example-form-field {\n  width: 200px;\n}\n"],
     dependencies: [{
       kind: "ngmodule",
@@ -105,7 +107,7 @@ i0.ɵɵngDeclareClassMetadata({
     args: [{
       selector: 'input-clearable-example',
       imports: [MatFormFieldModule, MatInputModule, FormsModule, MatButtonModule, MatIconModule],
-      template: "<mat-form-field class=\"example-form-field\">\n  <mat-label>Clearable input</mat-label>\n  <input matInput type=\"text\" [(ngModel)]=\"value\">\n  @if (value) {\n    <button matSuffix matIconButton aria-label=\"Clear\" (click)=\"value=''\">\n      <mat-icon>close</mat-icon>\n    </button>\n  }\n</mat-form-field>\n",
+      template: "<mat-form-field class=\"example-form-field\">\n  <mat-label>Clearable input</mat-label>\n  <input matInput type=\"text\" [(ngModel)]=\"value\">\n  @if (value()) {\n    <button matSuffix matIconButton aria-label=\"Clear\" (click)=\"value.set('')\">\n      <mat-icon>close</mat-icon>\n    </button>\n  }\n</mat-form-field>\n",
       styles: [".example-form-field {\n  width: 200px;\n}\n"]
     }]
   }]

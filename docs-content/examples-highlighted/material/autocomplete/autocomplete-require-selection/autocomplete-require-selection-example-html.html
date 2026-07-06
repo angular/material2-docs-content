@@ -12,7 +12,7 @@ Control value: {{myControl.value || &#x27;empty&#x27;}}
            (<span class="hljs-attr">input</span>)=<span class="hljs-string">&quot;filter()&quot;</span>
            (<span class="hljs-attr">focus</span>)=<span class="hljs-string">&quot;filter()&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">mat-autocomplete</span> <span class="hljs-attr">requireSelection</span> #<span class="hljs-attr">auto</span>=<span class="hljs-string">&quot;matAutocomplete&quot;</span>&gt;</span>
-      @for (option of filteredOptions; track option) {
+      @for (option of filteredOptions(); track option) {
         <span class="hljs-tag">&lt;<span class="hljs-name">mat-option</span> [<span class="hljs-attr">value</span>]=<span class="hljs-string">&quot;option&quot;</span>&gt;</span>{{option}}<span class="hljs-tag">&lt;/<span class="hljs-name">mat-option</span>&gt;</span>
       }
     <span class="hljs-tag">&lt;/<span class="hljs-name">mat-autocomplete</span>&gt;</span>
