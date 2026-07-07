@@ -1,4 +1,4 @@
-<span class="hljs-keyword">import</span> {<span class="hljs-title class_">Component</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">Component</span>, signal} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
 <span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatRippleModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/core&#x27;</span>;
 <span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatInputModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/input&#x27;</span>;
 <span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatFormFieldModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/form-field&#x27;</span>;
@@ -15,10 +15,10 @@
   <span class="hljs-attr">imports</span>: [<span class="hljs-title class_">MatCheckboxModule</span>, <span class="hljs-title class_">FormsModule</span>, <span class="hljs-title class_">MatFormFieldModule</span>, <span class="hljs-title class_">MatInputModule</span>, <span class="hljs-title class_">MatRippleModule</span>],
 })
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">RippleOverviewExample</span> {
-  centered = <span class="hljs-literal">false</span>;
-  disabled = <span class="hljs-literal">false</span>;
-  unbounded = <span class="hljs-literal">false</span>;
+  centered = <span class="hljs-title function_">signal</span>(<span class="hljs-literal">false</span>);
+  disabled = <span class="hljs-title function_">signal</span>(<span class="hljs-literal">false</span>);
+  unbounded = <span class="hljs-title function_">signal</span>(<span class="hljs-literal">false</span>);
 
-  radius!: <span class="hljs-built_in">number</span>;
-  color!: <span class="hljs-built_in">string</span>;
+  radius = signal&lt;<span class="hljs-built_in">number</span>&gt;(<span class="hljs-number">0</span>);
+  color = <span class="hljs-title function_">signal</span>(<span class="hljs-string">&#x27;&#x27;</span>);
 }

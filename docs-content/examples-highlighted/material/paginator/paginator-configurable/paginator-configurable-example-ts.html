@@ -1,4 +1,4 @@
-<span class="hljs-keyword">import</span> {<span class="hljs-title class_">Component</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">Component</span>, signal} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
 <span class="hljs-keyword">import</span> {<span class="hljs-title class_">PageEvent</span>, <span class="hljs-title class_">MatPaginatorModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/paginator&#x27;</span>;
 <span class="hljs-keyword">import</span> {<span class="hljs-title class_">JsonPipe</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/common&#x27;</span>;
 <span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatSlideToggleModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/slide-toggle&#x27;</span>;
@@ -23,28 +23,28 @@
   ],
 })
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">PaginatorConfigurableExample</span> {
-  length = <span class="hljs-number">50</span>;
-  pageSize = <span class="hljs-number">10</span>;
-  pageIndex = <span class="hljs-number">0</span>;
-  pageSizeOptions = [<span class="hljs-number">5</span>, <span class="hljs-number">10</span>, <span class="hljs-number">25</span>];
+  length = <span class="hljs-title function_">signal</span>(<span class="hljs-number">50</span>);
+  pageSize = <span class="hljs-title function_">signal</span>(<span class="hljs-number">10</span>);
+  pageIndex = <span class="hljs-title function_">signal</span>(<span class="hljs-number">0</span>);
+  pageSizeOptions = <span class="hljs-title function_">signal</span>([<span class="hljs-number">5</span>, <span class="hljs-number">10</span>, <span class="hljs-number">25</span>]);
 
-  hidePageSize = <span class="hljs-literal">false</span>;
-  showPageSizeOptions = <span class="hljs-literal">true</span>;
-  showFirstLastButtons = <span class="hljs-literal">true</span>;
-  disabled = <span class="hljs-literal">false</span>;
+  hidePageSize = <span class="hljs-title function_">signal</span>(<span class="hljs-literal">false</span>);
+  showPageSizeOptions = <span class="hljs-title function_">signal</span>(<span class="hljs-literal">true</span>);
+  showFirstLastButtons = <span class="hljs-title function_">signal</span>(<span class="hljs-literal">true</span>);
+  disabled = <span class="hljs-title function_">signal</span>(<span class="hljs-literal">false</span>);
 
-  <span class="hljs-attr">pageEvent</span>: <span class="hljs-title class_">PageEvent</span> | <span class="hljs-literal">undefined</span>;
+  pageEvent = signal&lt;<span class="hljs-title class_">PageEvent</span> | <span class="hljs-literal">undefined</span>&gt;(<span class="hljs-literal">undefined</span>);
 
   <span class="hljs-title function_">handlePageEvent</span>(<span class="hljs-params"><span class="hljs-attr">e</span>: <span class="hljs-title class_">PageEvent</span></span>) {
-    <span class="hljs-variable language_">this</span>.<span class="hljs-property">pageEvent</span> = e;
-    <span class="hljs-variable language_">this</span>.<span class="hljs-property">length</span> = e.<span class="hljs-property">length</span>;
-    <span class="hljs-variable language_">this</span>.<span class="hljs-property">pageSize</span> = e.<span class="hljs-property">pageSize</span>;
-    <span class="hljs-variable language_">this</span>.<span class="hljs-property">pageIndex</span> = e.<span class="hljs-property">pageIndex</span>;
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">pageEvent</span>.<span class="hljs-title function_">set</span>(e);
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">length</span>.<span class="hljs-title function_">set</span>(e.<span class="hljs-property">length</span>);
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">pageSize</span>.<span class="hljs-title function_">set</span>(e.<span class="hljs-property">pageSize</span>);
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">pageIndex</span>.<span class="hljs-title function_">set</span>(e.<span class="hljs-property">pageIndex</span>);
   }
 
   <span class="hljs-title function_">setPageSizeOptions</span>(<span class="hljs-params"><span class="hljs-attr">setPageSizeOptionsInput</span>: <span class="hljs-built_in">string</span></span>) {
     <span class="hljs-keyword">if</span> (setPageSizeOptionsInput) {
-      <span class="hljs-variable language_">this</span>.<span class="hljs-property">pageSizeOptions</span> = setPageSizeOptionsInput.<span class="hljs-title function_">split</span>(<span class="hljs-string">&#x27;,&#x27;</span>).<span class="hljs-title function_">map</span>(<span class="hljs-function"><span class="hljs-params">str</span> =&gt;</span> +str);
+      <span class="hljs-variable language_">this</span>.<span class="hljs-property">pageSizeOptions</span>.<span class="hljs-title function_">set</span>(setPageSizeOptionsInput.<span class="hljs-title function_">split</span>(<span class="hljs-string">&#x27;,&#x27;</span>).<span class="hljs-title function_">map</span>(<span class="hljs-function"><span class="hljs-params">str</span> =&gt;</span> +str));
     }
   }
 }

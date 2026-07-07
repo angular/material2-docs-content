@@ -24,26 +24,26 @@
   <span class="hljs-title function_">it</span>(<span class="hljs-string">&#x27;should be able to navigate between pages&#x27;</span>, <span class="hljs-title function_">async</span> () =&gt; {
     <span class="hljs-keyword">const</span> paginator = <span class="hljs-keyword">await</span> loader.<span class="hljs-title function_">getHarness</span>(<span class="hljs-title class_">MatPaginatorHarness</span>);
 
-    <span class="hljs-title function_">expect</span>(instance.<span class="hljs-property">pageIndex</span>).<span class="hljs-title function_">toBe</span>(<span class="hljs-number">0</span>);
+    <span class="hljs-title function_">expect</span>(instance.<span class="hljs-title function_">pageIndex</span>()).<span class="hljs-title function_">toBe</span>(<span class="hljs-number">0</span>);
     <span class="hljs-keyword">await</span> paginator.<span class="hljs-title function_">goToNextPage</span>();
-    <span class="hljs-title function_">expect</span>(instance.<span class="hljs-property">pageIndex</span>).<span class="hljs-title function_">toBe</span>(<span class="hljs-number">1</span>);
+    <span class="hljs-title function_">expect</span>(instance.<span class="hljs-title function_">pageIndex</span>()).<span class="hljs-title function_">toBe</span>(<span class="hljs-number">1</span>);
     <span class="hljs-keyword">await</span> paginator.<span class="hljs-title function_">goToPreviousPage</span>();
-    <span class="hljs-title function_">expect</span>(instance.<span class="hljs-property">pageIndex</span>).<span class="hljs-title function_">toBe</span>(<span class="hljs-number">0</span>);
+    <span class="hljs-title function_">expect</span>(instance.<span class="hljs-title function_">pageIndex</span>()).<span class="hljs-title function_">toBe</span>(<span class="hljs-number">0</span>);
   });
 
   <span class="hljs-title function_">it</span>(<span class="hljs-string">&#x27;should be able to go to the last page&#x27;</span>, <span class="hljs-title function_">async</span> () =&gt; {
     <span class="hljs-keyword">const</span> paginator = <span class="hljs-keyword">await</span> loader.<span class="hljs-title function_">getHarness</span>(<span class="hljs-title class_">MatPaginatorHarness</span>);
 
-    <span class="hljs-title function_">expect</span>(instance.<span class="hljs-property">pageIndex</span>).<span class="hljs-title function_">toBe</span>(<span class="hljs-number">0</span>);
+    <span class="hljs-title function_">expect</span>(instance.<span class="hljs-title function_">pageIndex</span>()).<span class="hljs-title function_">toBe</span>(<span class="hljs-number">0</span>);
     <span class="hljs-keyword">await</span> paginator.<span class="hljs-title function_">goToLastPage</span>();
-    <span class="hljs-title function_">expect</span>(instance.<span class="hljs-property">pageIndex</span>).<span class="hljs-title function_">toBe</span>(<span class="hljs-number">49</span>);
+    <span class="hljs-title function_">expect</span>(instance.<span class="hljs-title function_">pageIndex</span>()).<span class="hljs-title function_">toBe</span>(<span class="hljs-number">49</span>);
   });
 
   <span class="hljs-title function_">it</span>(<span class="hljs-string">&#x27;should be able to set the page size&#x27;</span>, <span class="hljs-title function_">async</span> () =&gt; {
     <span class="hljs-keyword">const</span> paginator = <span class="hljs-keyword">await</span> loader.<span class="hljs-title function_">getHarness</span>(<span class="hljs-title class_">MatPaginatorHarness</span>);
 
-    <span class="hljs-title function_">expect</span>(instance.<span class="hljs-property">pageSize</span>).<span class="hljs-title function_">toBe</span>(<span class="hljs-number">10</span>);
+    <span class="hljs-title function_">expect</span>(instance.<span class="hljs-title function_">pageSize</span>()).<span class="hljs-title function_">toBe</span>(<span class="hljs-number">10</span>);
     <span class="hljs-keyword">await</span> paginator.<span class="hljs-title function_">setPageSize</span>(<span class="hljs-number">25</span>);
-    <span class="hljs-title function_">expect</span>(instance.<span class="hljs-property">pageSize</span>).<span class="hljs-title function_">toBe</span>(<span class="hljs-number">25</span>);
+    <span class="hljs-title function_">expect</span>(instance.<span class="hljs-title function_">pageSize</span>()).<span class="hljs-title function_">toBe</span>(<span class="hljs-number">25</span>);
   });
 });

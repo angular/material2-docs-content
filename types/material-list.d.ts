@@ -95,7 +95,7 @@ declare class ListAvatarExample {
  */
 declare class ListNavigationExample {
     fragments: string[];
-    activeLink: string | null;
+    activeLink: i0.WritableSignal<string | null>;
     static ɵfac: i0.ɵɵFactoryDeclaration<ListNavigationExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<ListNavigationExample, "list-navigation-example", never, {}, {}, never, never, true, never>;
 }

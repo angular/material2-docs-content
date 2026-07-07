@@ -1,5 +1,5 @@
 import * as i0 from '@angular/core';
-import { Component, signal } from '@angular/core';
+import { signal, Component } from '@angular/core';
 import * as i1$3 from '@angular/material/progress-spinner';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import * as i1$2 from '@angular/material/slider';
@@ -12,8 +12,12 @@ import * as i1 from '@angular/material/card';
 import { MatCardModule } from '@angular/material/card';
 
 class ProgressSpinnerConfigurableExample {
-  mode = 'determinate';
-  value = 50;
+  mode = signal('determinate', ...(ngDevMode ? [{
+    debugName: "mode"
+  }] : []));
+  value = signal(50, ...(ngDevMode ? [{
+    debugName: "value"
+  }] : []));
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
     version: "22.0.5",
@@ -29,7 +33,7 @@ class ProgressSpinnerConfigurableExample {
     isStandalone: true,
     selector: "progress-spinner-configurable-example",
     ngImport: i0,
-    template: "<mat-card class=\"example-card\">\n  <mat-card-content>\n    <h2 class=\"example-h2\">Progress spinner configuration</h2>\n\n    <section class=\"example-section\">\n      <label class=\"example-margin\">Mode:</label>\n      <mat-radio-group [(ngModel)]=\"mode\">\n        <mat-radio-button class=\"example-margin\" value=\"determinate\">\n          Determinate\n        </mat-radio-button>\n        <mat-radio-button class=\"example-margin\" value=\"indeterminate\">\n          Indeterminate\n        </mat-radio-button>\n      </mat-radio-group>\n    </section>\n\n    @if (mode === 'determinate') {\n      <section class=\"example-section\">\n        <label class=\"example-margin\">Progress:</label>\n        <mat-slider class=\"example-margin\">\n          <input type=\"range\" [(ngModel)]=\"value\" matSliderThumb>\n        </mat-slider>\n      </section>\n    }\n  </mat-card-content>\n</mat-card>\n\n<mat-card class=\"example-card\">\n  <mat-card-content>\n    <h2 class=\"example-h2\">Result</h2>\n\n    <mat-progress-spinner\n        class=\"example-margin\"\n        [mode]=\"mode\"\n        [value]=\"value\">\n    </mat-progress-spinner>\n  </mat-card-content>\n</mat-card>\n",
+    template: "<mat-card class=\"example-card\">\n  <mat-card-content>\n    <h2 class=\"example-h2\">Progress spinner configuration</h2>\n\n    <section class=\"example-section\">\n      <label class=\"example-margin\">Mode:</label>\n      <mat-radio-group [(ngModel)]=\"mode\">\n        <mat-radio-button class=\"example-margin\" value=\"determinate\">\n          Determinate\n        </mat-radio-button>\n        <mat-radio-button class=\"example-margin\" value=\"indeterminate\">\n          Indeterminate\n        </mat-radio-button>\n      </mat-radio-group>\n    </section>\n\n    @if (mode() === 'determinate') {\n      <section class=\"example-section\">\n        <label class=\"example-margin\">Progress:</label>\n        <mat-slider class=\"example-margin\">\n          <input type=\"range\" [(ngModel)]=\"value\" matSliderThumb>\n        </mat-slider>\n      </section>\n    }\n  </mat-card-content>\n</mat-card>\n\n<mat-card class=\"example-card\">\n  <mat-card-content>\n    <h2 class=\"example-h2\">Result</h2>\n\n    <mat-progress-spinner\n        class=\"example-margin\"\n        [mode]=\"mode()\"\n        [value]=\"value()\">\n    </mat-progress-spinner>\n  </mat-card-content>\n</mat-card>\n",
     styles: [".example-h2 {\n  margin: 10px;\n}\n\n.example-section {\n  display: flex;\n  align-content: center;\n  align-items: center;\n  height: 60px;\n}\n\n.example-margin {\n  margin: 0 10px;\n}\n\n.example-card {\n  margin-bottom: 10px;\n}\n"],
     dependencies: [{
       kind: "ngmodule",
@@ -121,7 +125,7 @@ i0.ɵɵngDeclareClassMetadata({
     args: [{
       selector: 'progress-spinner-configurable-example',
       imports: [MatCardModule, MatRadioModule, FormsModule, MatSliderModule, MatProgressSpinnerModule],
-      template: "<mat-card class=\"example-card\">\n  <mat-card-content>\n    <h2 class=\"example-h2\">Progress spinner configuration</h2>\n\n    <section class=\"example-section\">\n      <label class=\"example-margin\">Mode:</label>\n      <mat-radio-group [(ngModel)]=\"mode\">\n        <mat-radio-button class=\"example-margin\" value=\"determinate\">\n          Determinate\n        </mat-radio-button>\n        <mat-radio-button class=\"example-margin\" value=\"indeterminate\">\n          Indeterminate\n        </mat-radio-button>\n      </mat-radio-group>\n    </section>\n\n    @if (mode === 'determinate') {\n      <section class=\"example-section\">\n        <label class=\"example-margin\">Progress:</label>\n        <mat-slider class=\"example-margin\">\n          <input type=\"range\" [(ngModel)]=\"value\" matSliderThumb>\n        </mat-slider>\n      </section>\n    }\n  </mat-card-content>\n</mat-card>\n\n<mat-card class=\"example-card\">\n  <mat-card-content>\n    <h2 class=\"example-h2\">Result</h2>\n\n    <mat-progress-spinner\n        class=\"example-margin\"\n        [mode]=\"mode\"\n        [value]=\"value\">\n    </mat-progress-spinner>\n  </mat-card-content>\n</mat-card>\n",
+      template: "<mat-card class=\"example-card\">\n  <mat-card-content>\n    <h2 class=\"example-h2\">Progress spinner configuration</h2>\n\n    <section class=\"example-section\">\n      <label class=\"example-margin\">Mode:</label>\n      <mat-radio-group [(ngModel)]=\"mode\">\n        <mat-radio-button class=\"example-margin\" value=\"determinate\">\n          Determinate\n        </mat-radio-button>\n        <mat-radio-button class=\"example-margin\" value=\"indeterminate\">\n          Indeterminate\n        </mat-radio-button>\n      </mat-radio-group>\n    </section>\n\n    @if (mode() === 'determinate') {\n      <section class=\"example-section\">\n        <label class=\"example-margin\">Progress:</label>\n        <mat-slider class=\"example-margin\">\n          <input type=\"range\" [(ngModel)]=\"value\" matSliderThumb>\n        </mat-slider>\n      </section>\n    }\n  </mat-card-content>\n</mat-card>\n\n<mat-card class=\"example-card\">\n  <mat-card-content>\n    <h2 class=\"example-h2\">Result</h2>\n\n    <mat-progress-spinner\n        class=\"example-margin\"\n        [mode]=\"mode()\"\n        [value]=\"value()\">\n    </mat-progress-spinner>\n  </mat-card-content>\n</mat-card>\n",
       styles: [".example-h2 {\n  margin: 10px;\n}\n\n.example-section {\n  display: flex;\n  align-content: center;\n  align-items: center;\n  height: 60px;\n}\n\n.example-margin {\n  margin: 0 10px;\n}\n\n.example-card {\n  margin-bottom: 10px;\n}\n"]
     }]
   }]

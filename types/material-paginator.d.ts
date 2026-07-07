@@ -1,19 +1,19 @@
-import { PageEvent } from '@angular/material/paginator';
 import * as i0 from '@angular/core';
+import { PageEvent } from '@angular/material/paginator';
 
 /**
  * @title Configurable paginator
  */
 declare class PaginatorConfigurableExample {
-    length: number;
-    pageSize: number;
-    pageIndex: number;
-    pageSizeOptions: number[];
-    hidePageSize: boolean;
-    showPageSizeOptions: boolean;
-    showFirstLastButtons: boolean;
-    disabled: boolean;
-    pageEvent: PageEvent | undefined;
+    length: i0.WritableSignal<number>;
+    pageSize: i0.WritableSignal<number>;
+    pageIndex: i0.WritableSignal<number>;
+    pageSizeOptions: i0.WritableSignal<number[]>;
+    hidePageSize: i0.WritableSignal<boolean>;
+    showPageSizeOptions: i0.WritableSignal<boolean>;
+    showFirstLastButtons: i0.WritableSignal<boolean>;
+    disabled: i0.WritableSignal<boolean>;
+    pageEvent: i0.WritableSignal<PageEvent | undefined>;
     handlePageEvent(e: PageEvent): void;
     setPageSizeOptions(setPageSizeOptionsInput: string): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<PaginatorConfigurableExample, never>;
@@ -32,11 +32,11 @@ declare class PaginatorOverviewExample {
  * @title Testing with MatPaginatorHarness
  */
 declare class PaginatorHarnessExample {
-    length: number;
-    pageSize: number;
-    pageIndex: number;
-    pageSizeOptions: number[];
-    showFirstLastButtons: boolean;
+    length: i0.WritableSignal<number>;
+    pageSize: i0.WritableSignal<number>;
+    pageIndex: i0.WritableSignal<number>;
+    pageSizeOptions: i0.WritableSignal<number[]>;
+    showFirstLastButtons: i0.WritableSignal<boolean>;
     handlePageEvent(event: PageEvent): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<PaginatorHarnessExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<PaginatorHarnessExample, "paginator-harness-example", never, {}, {}, never, never, true, never>;

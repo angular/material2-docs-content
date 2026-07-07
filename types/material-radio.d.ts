@@ -4,7 +4,7 @@ import * as i0 from '@angular/core';
  * @title Radios with ngModel
  */
 declare class RadioNgModelExample {
-    favoriteSeason: string;
+    favoriteSeason: i0.WritableSignal<string>;
     seasons: string[];
     static ɵfac: i0.ɵɵFactoryDeclaration<RadioNgModelExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<RadioNgModelExample, "radio-ng-model-example", never, {}, {}, never, never, true, never>;

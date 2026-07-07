@@ -13,9 +13,9 @@ declare class ProgressBarBufferExample {
  * @title Configurable progress-bar
  */
 declare class ProgressBarConfigurableExample {
-    mode: ProgressBarMode;
-    value: number;
-    bufferValue: number;
+    mode: i0.WritableSignal<ProgressBarMode>;
+    value: i0.WritableSignal<number>;
+    bufferValue: i0.WritableSignal<number>;
     static ɵfac: i0.ɵɵFactoryDeclaration<ProgressBarConfigurableExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<ProgressBarConfigurableExample, "progress-bar-configurable-example", never, {}, {}, never, never, true, never>;
 }
