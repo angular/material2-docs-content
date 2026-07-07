@@ -1,5 +1,5 @@
 import * as i0 from '@angular/core';
-import { Component, Service } from '@angular/core';
+import { signal, Component, Service } from '@angular/core';
 import * as i1$2 from '@angular/material/paginator';
 import { MatPaginatorModule, MatPaginatorIntl } from '@angular/material/paginator';
 import { JsonPipe } from '@angular/common';
@@ -14,24 +14,42 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { Subject } from 'rxjs';
 
 class PaginatorConfigurableExample {
-  length = 50;
-  pageSize = 10;
-  pageIndex = 0;
-  pageSizeOptions = [5, 10, 25];
-  hidePageSize = false;
-  showPageSizeOptions = true;
-  showFirstLastButtons = true;
-  disabled = false;
-  pageEvent;
+  length = signal(50, ...(ngDevMode ? [{
+    debugName: "length"
+  }] : []));
+  pageSize = signal(10, ...(ngDevMode ? [{
+    debugName: "pageSize"
+  }] : []));
+  pageIndex = signal(0, ...(ngDevMode ? [{
+    debugName: "pageIndex"
+  }] : []));
+  pageSizeOptions = signal([5, 10, 25], ...(ngDevMode ? [{
+    debugName: "pageSizeOptions"
+  }] : []));
+  hidePageSize = signal(false, ...(ngDevMode ? [{
+    debugName: "hidePageSize"
+  }] : []));
+  showPageSizeOptions = signal(true, ...(ngDevMode ? [{
+    debugName: "showPageSizeOptions"
+  }] : []));
+  showFirstLastButtons = signal(true, ...(ngDevMode ? [{
+    debugName: "showFirstLastButtons"
+  }] : []));
+  disabled = signal(false, ...(ngDevMode ? [{
+    debugName: "disabled"
+  }] : []));
+  pageEvent = signal(undefined, ...(ngDevMode ? [{
+    debugName: "pageEvent"
+  }] : []));
   handlePageEvent(e) {
-    this.pageEvent = e;
-    this.length = e.length;
-    this.pageSize = e.pageSize;
-    this.pageIndex = e.pageIndex;
+    this.pageEvent.set(e);
+    this.length.set(e.length);
+    this.pageSize.set(e.pageSize);
+    this.pageIndex.set(e.pageIndex);
   }
   setPageSizeOptions(setPageSizeOptionsInput) {
     if (setPageSizeOptionsInput) {
-      this.pageSizeOptions = setPageSizeOptionsInput.split(',').map(str => +str);
+      this.pageSizeOptions.set(setPageSizeOptionsInput.split(',').map(str => +str));
     }
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
@@ -49,7 +67,7 @@ class PaginatorConfigurableExample {
     isStandalone: true,
     selector: "paginator-configurable-example",
     ngImport: i0,
-    template: "<div class=\"demo-options\">\n  <mat-form-field>\n    <mat-label>Length</mat-label>\n    <input matInput placeholder=\"Length\" type=\"number\" [(ngModel)]=\"length\">\n  </mat-form-field>\n\n  <mat-form-field>\n    <mat-label>Page Size</mat-label>\n    <input matInput placeholder=\"Page Size\" type=\"number\" [(ngModel)]=\"pageSize\">\n  </mat-form-field>\n\n  <mat-form-field>\n    <mat-label>Page Index</mat-label>\n    <input matInput placeholder=\"Page Index\" type=\"number\" [(ngModel)]=\"pageIndex\">\n  </mat-form-field>\n\n  <mat-form-field>\n    <mat-label>Page Size Options</mat-label>\n    <input matInput [ngModel]=\"pageSizeOptions\" (ngModelChange)=\"setPageSizeOptions($event)\"\n           [ngModelOptions]=\"{updateOn: 'blur'}\" placeholder=\"Ex. 10,25,50\">\n  </mat-form-field>\n\n  <div class=\"demo-toggles\">\n    <mat-slide-toggle [(ngModel)]=\"hidePageSize\">Hide page size</mat-slide-toggle>\n    <mat-slide-toggle [(ngModel)]=\"showPageSizeOptions\">Show multiple page size options</mat-slide-toggle>\n    <mat-slide-toggle [(ngModel)]=\"showFirstLastButtons\">Show first/last buttons</mat-slide-toggle>\n    <mat-slide-toggle [(ngModel)]=\"disabled\">Disabled</mat-slide-toggle>\n  </div>\n</div>\n\n<mat-paginator #paginator\n               class=\"demo-paginator\"\n               (page)=\"handlePageEvent($event)\"\n               [length]=\"length\"\n               [pageSize]=\"pageSize\"\n               [disabled]=\"disabled\"\n               [showFirstLastButtons]=\"showFirstLastButtons\"\n               [pageSizeOptions]=\"showPageSizeOptions ? pageSizeOptions : []\"\n               [hidePageSize]=\"hidePageSize\"\n               [pageIndex]=\"pageIndex\"\n               aria-label=\"Select page\">\n</mat-paginator>\n\n<div class=\"demo-data\">\n  <div> Output event: {{(pageEvent | json) || 'No events dispatched yet'}} </div>\n  <div> getNumberOfPages: {{paginator.getNumberOfPages()}} </div>\n</div>\n",
+    template: "<div class=\"demo-options\">\n  <mat-form-field>\n    <mat-label>Length</mat-label>\n    <input matInput placeholder=\"Length\" type=\"number\" [(ngModel)]=\"length\">\n  </mat-form-field>\n\n  <mat-form-field>\n    <mat-label>Page Size</mat-label>\n    <input matInput placeholder=\"Page Size\" type=\"number\" [(ngModel)]=\"pageSize\">\n  </mat-form-field>\n\n  <mat-form-field>\n    <mat-label>Page Index</mat-label>\n    <input matInput placeholder=\"Page Index\" type=\"number\" [(ngModel)]=\"pageIndex\">\n  </mat-form-field>\n\n  <mat-form-field>\n    <mat-label>Page Size Options</mat-label>\n    <input matInput [ngModel]=\"pageSizeOptions()\" (ngModelChange)=\"setPageSizeOptions($event)\"\n           [ngModelOptions]=\"{updateOn: 'blur'}\" placeholder=\"Ex. 10,25,50\">\n  </mat-form-field>\n\n  <div class=\"demo-toggles\">\n    <mat-slide-toggle [(ngModel)]=\"hidePageSize\">Hide page size</mat-slide-toggle>\n    <mat-slide-toggle [(ngModel)]=\"showPageSizeOptions\">Show multiple page size options</mat-slide-toggle>\n    <mat-slide-toggle [(ngModel)]=\"showFirstLastButtons\">Show first/last buttons</mat-slide-toggle>\n    <mat-slide-toggle [(ngModel)]=\"disabled\">Disabled</mat-slide-toggle>\n  </div>\n</div>\n\n<mat-paginator #paginator\n               class=\"demo-paginator\"\n               (page)=\"handlePageEvent($event)\"\n               [length]=\"length()\"\n               [pageSize]=\"pageSize()\"\n               [disabled]=\"disabled()\"\n               [showFirstLastButtons]=\"showFirstLastButtons()\"\n               [pageSizeOptions]=\"showPageSizeOptions() ? pageSizeOptions() : []\"\n               [hidePageSize]=\"hidePageSize()\"\n               [pageIndex]=\"pageIndex()\"\n               aria-label=\"Select page\">\n</mat-paginator>\n\n<div class=\"demo-data\">\n  <div> Output event: {{(pageEvent() | json) || 'No events dispatched yet'}} </div>\n  <div> getNumberOfPages: {{paginator.getNumberOfPages()}} </div>\n</div>\n",
     styles: [".demo-toggles {\n  display: flex;\n  flex-direction: column;\n}\n\n.demo-toggles * {\n  margin-bottom: 16px;\n}\n\n.demo-options {\n  display: flex;\n  flex-direction: column;\n  width: 600px;\n}\n\n.demo-data * {\n  margin: 16px 0;\n}\n\n.demo-paginator {\n  width: 600px;\n}\n"],
     dependencies: [{
       kind: "ngmodule",
@@ -132,7 +150,7 @@ i0.ɵɵngDeclareClassMetadata({
     args: [{
       selector: 'paginator-configurable-example',
       imports: [MatFormFieldModule, MatInputModule, FormsModule, MatSlideToggleModule, MatPaginatorModule, JsonPipe],
-      template: "<div class=\"demo-options\">\n  <mat-form-field>\n    <mat-label>Length</mat-label>\n    <input matInput placeholder=\"Length\" type=\"number\" [(ngModel)]=\"length\">\n  </mat-form-field>\n\n  <mat-form-field>\n    <mat-label>Page Size</mat-label>\n    <input matInput placeholder=\"Page Size\" type=\"number\" [(ngModel)]=\"pageSize\">\n  </mat-form-field>\n\n  <mat-form-field>\n    <mat-label>Page Index</mat-label>\n    <input matInput placeholder=\"Page Index\" type=\"number\" [(ngModel)]=\"pageIndex\">\n  </mat-form-field>\n\n  <mat-form-field>\n    <mat-label>Page Size Options</mat-label>\n    <input matInput [ngModel]=\"pageSizeOptions\" (ngModelChange)=\"setPageSizeOptions($event)\"\n           [ngModelOptions]=\"{updateOn: 'blur'}\" placeholder=\"Ex. 10,25,50\">\n  </mat-form-field>\n\n  <div class=\"demo-toggles\">\n    <mat-slide-toggle [(ngModel)]=\"hidePageSize\">Hide page size</mat-slide-toggle>\n    <mat-slide-toggle [(ngModel)]=\"showPageSizeOptions\">Show multiple page size options</mat-slide-toggle>\n    <mat-slide-toggle [(ngModel)]=\"showFirstLastButtons\">Show first/last buttons</mat-slide-toggle>\n    <mat-slide-toggle [(ngModel)]=\"disabled\">Disabled</mat-slide-toggle>\n  </div>\n</div>\n\n<mat-paginator #paginator\n               class=\"demo-paginator\"\n               (page)=\"handlePageEvent($event)\"\n               [length]=\"length\"\n               [pageSize]=\"pageSize\"\n               [disabled]=\"disabled\"\n               [showFirstLastButtons]=\"showFirstLastButtons\"\n               [pageSizeOptions]=\"showPageSizeOptions ? pageSizeOptions : []\"\n               [hidePageSize]=\"hidePageSize\"\n               [pageIndex]=\"pageIndex\"\n               aria-label=\"Select page\">\n</mat-paginator>\n\n<div class=\"demo-data\">\n  <div> Output event: {{(pageEvent | json) || 'No events dispatched yet'}} </div>\n  <div> getNumberOfPages: {{paginator.getNumberOfPages()}} </div>\n</div>\n",
+      template: "<div class=\"demo-options\">\n  <mat-form-field>\n    <mat-label>Length</mat-label>\n    <input matInput placeholder=\"Length\" type=\"number\" [(ngModel)]=\"length\">\n  </mat-form-field>\n\n  <mat-form-field>\n    <mat-label>Page Size</mat-label>\n    <input matInput placeholder=\"Page Size\" type=\"number\" [(ngModel)]=\"pageSize\">\n  </mat-form-field>\n\n  <mat-form-field>\n    <mat-label>Page Index</mat-label>\n    <input matInput placeholder=\"Page Index\" type=\"number\" [(ngModel)]=\"pageIndex\">\n  </mat-form-field>\n\n  <mat-form-field>\n    <mat-label>Page Size Options</mat-label>\n    <input matInput [ngModel]=\"pageSizeOptions()\" (ngModelChange)=\"setPageSizeOptions($event)\"\n           [ngModelOptions]=\"{updateOn: 'blur'}\" placeholder=\"Ex. 10,25,50\">\n  </mat-form-field>\n\n  <div class=\"demo-toggles\">\n    <mat-slide-toggle [(ngModel)]=\"hidePageSize\">Hide page size</mat-slide-toggle>\n    <mat-slide-toggle [(ngModel)]=\"showPageSizeOptions\">Show multiple page size options</mat-slide-toggle>\n    <mat-slide-toggle [(ngModel)]=\"showFirstLastButtons\">Show first/last buttons</mat-slide-toggle>\n    <mat-slide-toggle [(ngModel)]=\"disabled\">Disabled</mat-slide-toggle>\n  </div>\n</div>\n\n<mat-paginator #paginator\n               class=\"demo-paginator\"\n               (page)=\"handlePageEvent($event)\"\n               [length]=\"length()\"\n               [pageSize]=\"pageSize()\"\n               [disabled]=\"disabled()\"\n               [showFirstLastButtons]=\"showFirstLastButtons()\"\n               [pageSizeOptions]=\"showPageSizeOptions() ? pageSizeOptions() : []\"\n               [hidePageSize]=\"hidePageSize()\"\n               [pageIndex]=\"pageIndex()\"\n               aria-label=\"Select page\">\n</mat-paginator>\n\n<div class=\"demo-data\">\n  <div> Output event: {{(pageEvent() | json) || 'No events dispatched yet'}} </div>\n  <div> getNumberOfPages: {{paginator.getNumberOfPages()}} </div>\n</div>\n",
       styles: [".demo-toggles {\n  display: flex;\n  flex-direction: column;\n}\n\n.demo-toggles * {\n  margin-bottom: 16px;\n}\n\n.demo-options {\n  display: flex;\n  flex-direction: column;\n  width: 600px;\n}\n\n.demo-data * {\n  margin: 16px 0;\n}\n\n.demo-paginator {\n  width: 600px;\n}\n"]
     }]
   }]
@@ -184,15 +202,25 @@ i0.ɵɵngDeclareClassMetadata({
 });
 
 class PaginatorHarnessExample {
-  length = 500;
-  pageSize = 10;
-  pageIndex = 0;
-  pageSizeOptions = [5, 10, 25];
-  showFirstLastButtons = true;
+  length = signal(500, ...(ngDevMode ? [{
+    debugName: "length"
+  }] : []));
+  pageSize = signal(10, ...(ngDevMode ? [{
+    debugName: "pageSize"
+  }] : []));
+  pageIndex = signal(0, ...(ngDevMode ? [{
+    debugName: "pageIndex"
+  }] : []));
+  pageSizeOptions = signal([5, 10, 25], ...(ngDevMode ? [{
+    debugName: "pageSizeOptions"
+  }] : []));
+  showFirstLastButtons = signal(true, ...(ngDevMode ? [{
+    debugName: "showFirstLastButtons"
+  }] : []));
   handlePageEvent(event) {
-    this.length = event.length;
-    this.pageSize = event.pageSize;
-    this.pageIndex = event.pageIndex;
+    this.length.set(event.length);
+    this.pageSize.set(event.pageSize);
+    this.pageIndex.set(event.pageIndex);
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
@@ -209,7 +237,7 @@ class PaginatorHarnessExample {
     isStandalone: true,
     selector: "paginator-harness-example",
     ngImport: i0,
-    template: "<mat-paginator\n    (page)=\"handlePageEvent($event)\"\n    [length]=\"length\"\n    [pageSize]=\"pageSize\"\n    [showFirstLastButtons]=\"showFirstLastButtons\"\n    [pageSizeOptions]=\"pageSizeOptions\"\n    [pageIndex]=\"pageIndex\"\n    aria-label=\"Select page\">\n</mat-paginator>\n",
+    template: "<mat-paginator\n    (page)=\"handlePageEvent($event)\"\n    [length]=\"length()\"\n    [pageSize]=\"pageSize()\"\n    [showFirstLastButtons]=\"showFirstLastButtons()\"\n    [pageSizeOptions]=\"pageSizeOptions()\"\n    [pageIndex]=\"pageIndex()\"\n    aria-label=\"Select page\">\n</mat-paginator>\n",
     dependencies: [{
       kind: "ngmodule",
       type: MatPaginatorModule
@@ -233,7 +261,7 @@ i0.ɵɵngDeclareClassMetadata({
     args: [{
       selector: 'paginator-harness-example',
       imports: [MatPaginatorModule],
-      template: "<mat-paginator\n    (page)=\"handlePageEvent($event)\"\n    [length]=\"length\"\n    [pageSize]=\"pageSize\"\n    [showFirstLastButtons]=\"showFirstLastButtons\"\n    [pageSizeOptions]=\"pageSizeOptions\"\n    [pageIndex]=\"pageIndex\"\n    aria-label=\"Select page\">\n</mat-paginator>\n"
+      template: "<mat-paginator\n    (page)=\"handlePageEvent($event)\"\n    [length]=\"length()\"\n    [pageSize]=\"pageSize()\"\n    [showFirstLastButtons]=\"showFirstLastButtons()\"\n    [pageSizeOptions]=\"pageSizeOptions()\"\n    [pageIndex]=\"pageIndex()\"\n    aria-label=\"Select page\">\n</mat-paginator>\n"
     }]
   }]
 });

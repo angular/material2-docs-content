@@ -1,12 +1,14 @@
 import * as i0 from '@angular/core';
-import { Component } from '@angular/core';
+import { signal, Component } from '@angular/core';
 import * as i3 from '@angular/forms';
 import { FormsModule } from '@angular/forms';
 import * as i1 from '@angular/material/radio';
 import { MatRadioModule } from '@angular/material/radio';
 
 class RadioNgModelExample {
-  favoriteSeason = '';
+  favoriteSeason = signal('', ...(ngDevMode ? [{
+    debugName: "favoriteSeason"
+  }] : []));
   seasons = ['Winter', 'Spring', 'Summer', 'Autumn'];
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
@@ -23,7 +25,7 @@ class RadioNgModelExample {
     isStandalone: true,
     selector: "radio-ng-model-example",
     ngImport: i0,
-    template: "<label id=\"example-radio-group-label\">Pick your favorite season</label>\n<mat-radio-group\n  aria-labelledby=\"example-radio-group-label\"\n  class=\"example-radio-group\"\n  [(ngModel)]=\"favoriteSeason\">\n  @for (season of seasons; track season) {\n    <mat-radio-button class=\"example-radio-button\" [value]=\"season\">{{season}}</mat-radio-button>\n  }\n</mat-radio-group>\n<div>Your favorite season is: {{favoriteSeason}}</div>\n",
+    template: "<label id=\"example-radio-group-label\">Pick your favorite season</label>\n<mat-radio-group\n  aria-labelledby=\"example-radio-group-label\"\n  class=\"example-radio-group\"\n  [(ngModel)]=\"favoriteSeason\">\n  @for (season of seasons; track season) {\n    <mat-radio-button class=\"example-radio-button\" [value]=\"season\">{{season}}</mat-radio-button>\n  }\n</mat-radio-group>\n<div>Your favorite season is: {{favoriteSeason()}}</div>\n",
     styles: [".example-radio-group {\n  display: flex;\n  flex-direction: column;\n  margin: 15px 0;\n  align-items: flex-start;\n}\n\n.example-radio-button {\n  margin: 5px;\n}\n"],
     dependencies: [{
       kind: "ngmodule",
@@ -69,7 +71,7 @@ i0.ɵɵngDeclareClassMetadata({
     args: [{
       selector: 'radio-ng-model-example',
       imports: [MatRadioModule, FormsModule],
-      template: "<label id=\"example-radio-group-label\">Pick your favorite season</label>\n<mat-radio-group\n  aria-labelledby=\"example-radio-group-label\"\n  class=\"example-radio-group\"\n  [(ngModel)]=\"favoriteSeason\">\n  @for (season of seasons; track season) {\n    <mat-radio-button class=\"example-radio-button\" [value]=\"season\">{{season}}</mat-radio-button>\n  }\n</mat-radio-group>\n<div>Your favorite season is: {{favoriteSeason}}</div>\n",
+      template: "<label id=\"example-radio-group-label\">Pick your favorite season</label>\n<mat-radio-group\n  aria-labelledby=\"example-radio-group-label\"\n  class=\"example-radio-group\"\n  [(ngModel)]=\"favoriteSeason\">\n  @for (season of seasons; track season) {\n    <mat-radio-button class=\"example-radio-button\" [value]=\"season\">{{season}}</mat-radio-button>\n  }\n</mat-radio-group>\n<div>Your favorite season is: {{favoriteSeason()}}</div>\n",
       styles: [".example-radio-group {\n  display: flex;\n  flex-direction: column;\n  margin: 15px 0;\n  align-items: flex-start;\n}\n\n.example-radio-button {\n  margin: 5px;\n}\n"]
     }]
   }]

@@ -1,12 +1,12 @@
-import { ProgressSpinnerMode } from '@angular/material/progress-spinner';
 import * as i0 from '@angular/core';
+import { ProgressSpinnerMode } from '@angular/material/progress-spinner';
 
 /**
  * @title Configurable progress spinner
  */
 declare class ProgressSpinnerConfigurableExample {
-    mode: ProgressSpinnerMode;
-    value: number;
+    mode: i0.WritableSignal<ProgressSpinnerMode>;
+    value: i0.WritableSignal<number>;
     static ɵfac: i0.ɵɵFactoryDeclaration<ProgressSpinnerConfigurableExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<ProgressSpinnerConfigurableExample, "progress-spinner-configurable-example", never, {}, {}, never, never, true, never>;
 }

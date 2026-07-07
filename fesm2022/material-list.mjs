@@ -1,5 +1,5 @@
 import * as i0 from '@angular/core';
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import * as i1 from '@angular/material/list';
 import { MatListModule } from '@angular/material/list';
 import { MatDividerModule } from '@angular/material/divider';
@@ -619,7 +619,9 @@ i0.ɵɵngDeclareClassMetadata({
 
 class ListNavigationExample {
   fragments = ['inbox', 'outbox', 'drafts'];
-  activeLink = null;
+  activeLink = signal(null, ...(ngDevMode ? [{
+    debugName: "activeLink"
+  }] : []));
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
     version: "22.1.0-next.4",
@@ -635,7 +637,7 @@ class ListNavigationExample {
     isStandalone: true,
     selector: "list-navigation-example",
     ngImport: i0,
-    template: "<mat-nav-list>\n  @for (link of fragments; track link) {\n    <a\n      mat-list-item\n      href=\"#{{link}}\"\n      (click)=\"$event.preventDefault(); activeLink=link;\"\n      [activated]=\"activeLink === link\"\n      >{{link | titlecase}}</a\n    >\n  }\n\n  <h3 matSubheader>List with icons</h3>\n  @for (link of fragments; track link) {\n    <a\n      mat-list-item\n      [activated]=\"activeLink===link\"\n      href=\"#{{link}}\"\n      (click)=\"$event.preventDefault(); activeLink=link;\"\n    >\n      <mat-icon matListItemIcon>folder</mat-icon>\n      <span matListItemTitle>{{ link | titlecase}}</span>\n      <div matListItemMeta>\n        <mat-icon>{{link}}</mat-icon>\n      </div>\n    </a>\n  }\n</mat-nav-list>\n",
+    template: "<mat-nav-list>\n  @for (link of fragments; track link) {\n    <a\n      mat-list-item\n      href=\"#{{link}}\"\n      (click)=\"$event.preventDefault(); activeLink.set(link)\"\n      [activated]=\"activeLink() === link\"\n      >{{link | titlecase}}</a\n    >\n  }\n\n  <h3 matSubheader>List with icons</h3>\n  @for (link of fragments; track link) {\n    <a\n      mat-list-item\n      [activated]=\"activeLink() === link\"\n      href=\"#{{link}}\"\n      (click)=\"$event.preventDefault(); activeLink.set(link);\"\n    >\n      <mat-icon matListItemIcon>folder</mat-icon>\n      <span matListItemTitle>{{ link | titlecase}}</span>\n      <div matListItemMeta>\n        <mat-icon>{{link}}</mat-icon>\n      </div>\n    </a>\n  }\n</mat-nav-list>\n",
     dependencies: [{
       kind: "ngmodule",
       type: MatListModule
@@ -692,7 +694,7 @@ i0.ɵɵngDeclareClassMetadata({
     args: [{
       selector: 'list-navigation-example',
       imports: [MatListModule, MatIconModule, TitleCasePipe],
-      template: "<mat-nav-list>\n  @for (link of fragments; track link) {\n    <a\n      mat-list-item\n      href=\"#{{link}}\"\n      (click)=\"$event.preventDefault(); activeLink=link;\"\n      [activated]=\"activeLink === link\"\n      >{{link | titlecase}}</a\n    >\n  }\n\n  <h3 matSubheader>List with icons</h3>\n  @for (link of fragments; track link) {\n    <a\n      mat-list-item\n      [activated]=\"activeLink===link\"\n      href=\"#{{link}}\"\n      (click)=\"$event.preventDefault(); activeLink=link;\"\n    >\n      <mat-icon matListItemIcon>folder</mat-icon>\n      <span matListItemTitle>{{ link | titlecase}}</span>\n      <div matListItemMeta>\n        <mat-icon>{{link}}</mat-icon>\n      </div>\n    </a>\n  }\n</mat-nav-list>\n"
+      template: "<mat-nav-list>\n  @for (link of fragments; track link) {\n    <a\n      mat-list-item\n      href=\"#{{link}}\"\n      (click)=\"$event.preventDefault(); activeLink.set(link)\"\n      [activated]=\"activeLink() === link\"\n      >{{link | titlecase}}</a\n    >\n  }\n\n  <h3 matSubheader>List with icons</h3>\n  @for (link of fragments; track link) {\n    <a\n      mat-list-item\n      [activated]=\"activeLink() === link\"\n      href=\"#{{link}}\"\n      (click)=\"$event.preventDefault(); activeLink.set(link);\"\n    >\n      <mat-icon matListItemIcon>folder</mat-icon>\n      <span matListItemTitle>{{ link | titlecase}}</span>\n      <div matListItemMeta>\n        <mat-icon>{{link}}</mat-icon>\n      </div>\n    </a>\n  }\n</mat-nav-list>\n"
     }]
   }]
 });
