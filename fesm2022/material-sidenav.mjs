@@ -1,5 +1,5 @@
 import * as i0 from '@angular/core';
-import { Component, ViewChild, inject, signal } from '@angular/core';
+import { signal, Component, viewChild, inject } from '@angular/core';
 import * as i1$1 from '@angular/material/button';
 import { MatButtonModule } from '@angular/material/button';
 import * as i1 from '@angular/material/sidenav';
@@ -26,7 +26,9 @@ import * as i3$1 from '@angular/material/icon';
 import { MatIconModule } from '@angular/material/icon';
 
 class SidenavAutosizeExample {
-  showFiller = false;
+  showFiller = signal(false, ...(ngDevMode ? [{
+    debugName: "showFiller"
+  }] : []));
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
     version: "22.0.5",
@@ -42,7 +44,7 @@ class SidenavAutosizeExample {
     isStandalone: true,
     selector: "sidenav-autosize-example",
     ngImport: i0,
-    template: "<mat-drawer-container class=\"example-container\" autosize>\n  <mat-drawer #drawer class=\"example-sidenav\" mode=\"side\">\n    <p>Auto-resizing sidenav</p>\n    @if (showFiller) {\n      <p>Lorem, ipsum dolor sit amet consectetur.</p>\n    }\n    <button (click)=\"showFiller = !showFiller\" matButton=\"elevated\">\n      Toggle extra text\n    </button>\n  </mat-drawer>\n\n  <div class=\"example-sidenav-content\">\n    <button type=\"button\" matButton (click)=\"drawer.toggle()\">\n      Toggle sidenav\n    </button>\n  </div>\n\n</mat-drawer-container>\n",
+    template: "<mat-drawer-container class=\"example-container\" autosize>\n  <mat-drawer #drawer class=\"example-sidenav\" mode=\"side\">\n    <p>Auto-resizing sidenav</p>\n    @if (showFiller()) {\n      <p>Lorem, ipsum dolor sit amet consectetur.</p>\n    }\n    <button (click)=\"showFiller.set(!showFiller())\" matButton=\"elevated\">\n      Toggle extra text\n    </button>\n  </mat-drawer>\n\n  <div class=\"example-sidenav-content\">\n    <button type=\"button\" matButton (click)=\"drawer.toggle()\">\n      Toggle sidenav\n    </button>\n  </div>\n\n</mat-drawer-container>\n",
     styles: [".example-container {\n  width: 500px;\n  height: 300px;\n  border: 1px solid rgba(0, 0, 0, 0.5);\n}\n\n.example-sidenav-content {\n  display: flex;\n  height: 100%;\n  align-items: center;\n  justify-content: center;\n}\n\n.example-sidenav {\n  padding: 20px;\n}\n"],
     dependencies: [{
       kind: "ngmodule",
@@ -83,7 +85,7 @@ i0.ɵɵngDeclareClassMetadata({
     args: [{
       selector: 'sidenav-autosize-example',
       imports: [MatSidenavModule, MatButtonModule],
-      template: "<mat-drawer-container class=\"example-container\" autosize>\n  <mat-drawer #drawer class=\"example-sidenav\" mode=\"side\">\n    <p>Auto-resizing sidenav</p>\n    @if (showFiller) {\n      <p>Lorem, ipsum dolor sit amet consectetur.</p>\n    }\n    <button (click)=\"showFiller = !showFiller\" matButton=\"elevated\">\n      Toggle extra text\n    </button>\n  </mat-drawer>\n\n  <div class=\"example-sidenav-content\">\n    <button type=\"button\" matButton (click)=\"drawer.toggle()\">\n      Toggle sidenav\n    </button>\n  </div>\n\n</mat-drawer-container>\n",
+      template: "<mat-drawer-container class=\"example-container\" autosize>\n  <mat-drawer #drawer class=\"example-sidenav\" mode=\"side\">\n    <p>Auto-resizing sidenav</p>\n    @if (showFiller()) {\n      <p>Lorem, ipsum dolor sit amet consectetur.</p>\n    }\n    <button (click)=\"showFiller.set(!showFiller())\" matButton=\"elevated\">\n      Toggle extra text\n    </button>\n  </mat-drawer>\n\n  <div class=\"example-sidenav-content\">\n    <button type=\"button\" matButton (click)=\"drawer.toggle()\">\n      Toggle sidenav\n    </button>\n  </div>\n\n</mat-drawer-container>\n",
       styles: [".example-container {\n  width: 500px;\n  height: 300px;\n  border: 1px solid rgba(0, 0, 0, 0.5);\n}\n\n.example-sidenav-content {\n  display: flex;\n  height: 100%;\n  align-items: center;\n  justify-content: center;\n}\n\n.example-sidenav {\n  padding: 20px;\n}\n"]
     }]
   }]
@@ -187,11 +189,13 @@ i0.ɵɵngDeclareClassMetadata({
 });
 
 class SidenavDisableCloseExample {
-  sidenav;
-  reason = '';
+  sidenav = viewChild.required('sidenav');
+  reason = signal('', ...(ngDevMode ? [{
+    debugName: "reason"
+  }] : []));
   close(reason) {
-    this.reason = reason;
-    this.sidenav.close();
+    this.reason.set(reason);
+    this.sidenav().close();
   }
   shouldRun = /(^|.)(stackblitz|webcontainer).(io|com)$/.test(window.location.host);
   static ɵfac = i0.ɵɵngDeclareFactory({
@@ -212,10 +216,11 @@ class SidenavDisableCloseExample {
       propertyName: "sidenav",
       first: true,
       predicate: ["sidenav"],
-      descendants: true
+      descendants: true,
+      isSignal: true
     }],
     ngImport: i0,
-    template: "@if (shouldRun) {\n  <mat-sidenav-container\n      class=\"example-container\" (backdropClick)=\"close('backdrop')\">\n    <mat-sidenav #sidenav (keydown.escape)=\"close('escape')\" disableClose>\n      <p><button matButton (click)=\"close('toggle button')\">Toggle</button></p>\n    </mat-sidenav>\n\n    <mat-sidenav-content>\n      <p><button matButton (click)=\"sidenav.open()\">Open</button></p>\n      <p>Closed due to: {{reason}}</p>\n    </mat-sidenav-content>\n  </mat-sidenav-container>\n} @else {\n  <div>Please open on Stackblitz to see result</div>\n}\n",
+    template: "@if (shouldRun) {\n  <mat-sidenav-container\n      class=\"example-container\" (backdropClick)=\"close('backdrop')\">\n    <mat-sidenav #sidenav (keydown.escape)=\"close('escape')\" disableClose>\n      <p><button matButton (click)=\"close('toggle button')\">Toggle</button></p>\n    </mat-sidenav>\n\n    <mat-sidenav-content>\n      <p><button matButton (click)=\"sidenav.open()\">Open</button></p>\n      <p>Closed due to: {{reason()}}</p>\n    </mat-sidenav-content>\n  </mat-sidenav-container>\n} @else {\n  <div>Please open on Stackblitz to see result</div>\n}\n",
     styles: [".example-container {\n  position: absolute;\n  top: 0;\n  bottom: 0;\n  left: 0;\n  right: 0;\n}\n"],
     dependencies: [{
       kind: "ngmodule",
@@ -257,14 +262,16 @@ i0.ɵɵngDeclareClassMetadata({
     args: [{
       selector: 'sidenav-disable-close-example',
       imports: [MatSidenavModule, MatButtonModule],
-      template: "@if (shouldRun) {\n  <mat-sidenav-container\n      class=\"example-container\" (backdropClick)=\"close('backdrop')\">\n    <mat-sidenav #sidenav (keydown.escape)=\"close('escape')\" disableClose>\n      <p><button matButton (click)=\"close('toggle button')\">Toggle</button></p>\n    </mat-sidenav>\n\n    <mat-sidenav-content>\n      <p><button matButton (click)=\"sidenav.open()\">Open</button></p>\n      <p>Closed due to: {{reason}}</p>\n    </mat-sidenav-content>\n  </mat-sidenav-container>\n} @else {\n  <div>Please open on Stackblitz to see result</div>\n}\n",
+      template: "@if (shouldRun) {\n  <mat-sidenav-container\n      class=\"example-container\" (backdropClick)=\"close('backdrop')\">\n    <mat-sidenav #sidenav (keydown.escape)=\"close('escape')\" disableClose>\n      <p><button matButton (click)=\"close('toggle button')\">Toggle</button></p>\n    </mat-sidenav>\n\n    <mat-sidenav-content>\n      <p><button matButton (click)=\"sidenav.open()\">Open</button></p>\n      <p>Closed due to: {{reason()}}</p>\n    </mat-sidenav-content>\n  </mat-sidenav-container>\n} @else {\n  <div>Please open on Stackblitz to see result</div>\n}\n",
       styles: [".example-container {\n  position: absolute;\n  top: 0;\n  bottom: 0;\n  left: 0;\n  right: 0;\n}\n"]
     }]
   }],
   propDecorators: {
     sidenav: [{
-      type: ViewChild,
-      args: ['sidenav']
+      type: i0.ViewChild,
+      args: ['sidenav', {
+        isSignal: true
+      }]
     }]
   }
 });
@@ -585,9 +592,16 @@ i0.ɵɵngDeclareClassMetadata({
 });
 
 class SidenavOpenCloseExample {
-  events = [];
-  opened = false;
+  events = signal([], ...(ngDevMode ? [{
+    debugName: "events"
+  }] : []));
+  opened = signal(false, ...(ngDevMode ? [{
+    debugName: "opened"
+  }] : []));
   shouldRun = /(^|.)(stackblitz|webcontainer).(io|com)$/.test(window.location.host);
+  trackEvent(event) {
+    this.events.update(events => [...events, event]);
+  }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
     version: "22.0.5",
@@ -603,7 +617,7 @@ class SidenavOpenCloseExample {
     isStandalone: true,
     selector: "sidenav-open-close-example",
     ngImport: i0,
-    template: "@if (shouldRun) {\n  <mat-sidenav-container class=\"example-container\">\n    <mat-sidenav #sidenav mode=\"side\" [(opened)]=\"opened\" (opened)=\"events.push('open!')\"\n                (closed)=\"events.push('close!')\">\n      Sidenav content\n    </mat-sidenav>\n\n    <mat-sidenav-content>\n      <p><mat-checkbox [(ngModel)]=\"opened\">sidenav.opened</mat-checkbox></p>\n      <p><button matButton (click)=\"sidenav.toggle()\">sidenav.toggle()</button></p>\n      <p>Events:</p>\n      <div class=\"example-events\">\n        @for (e of events; track e) {\n          <div>{{e}}</div>\n        }\n      </div>\n    </mat-sidenav-content>\n  </mat-sidenav-container>\n} @else {\n  <div>Please open on Stackblitz to see result</div>\n}\n\n",
+    template: "@if (shouldRun) {\n  <mat-sidenav-container class=\"example-container\">\n    <mat-sidenav #sidenav mode=\"side\" [(opened)]=\"opened\" (opened)=\"trackEvent('open!')\"\n                (closed)=\"trackEvent('close!')\">\n      Sidenav content\n    </mat-sidenav>\n\n    <mat-sidenav-content>\n      <p><mat-checkbox [(ngModel)]=\"opened\">sidenav.opened</mat-checkbox></p>\n      <p><button matButton (click)=\"sidenav.toggle()\">sidenav.toggle()</button></p>\n      <p>Events:</p>\n      <div class=\"example-events\">\n        @for (e of events(); track $index) {\n          <div>{{e}}</div>\n        }\n      </div>\n    </mat-sidenav-content>\n  </mat-sidenav-container>\n} @else {\n  <div>Please open on Stackblitz to see result</div>\n}\n\n",
     styles: [".example-container {\n  position: absolute;\n  top: 0;\n  bottom: 0;\n  left: 0;\n  right: 0;\n}\n\n.example-events {\n  width: 300px;\n  height: 200px;\n  overflow: auto;\n  border: 1px solid #555;\n}\n"],
     dependencies: [{
       kind: "ngmodule",
@@ -669,7 +683,7 @@ i0.ɵɵngDeclareClassMetadata({
     args: [{
       selector: 'sidenav-open-close-example',
       imports: [MatSidenavModule, MatCheckboxModule, FormsModule, MatButtonModule],
-      template: "@if (shouldRun) {\n  <mat-sidenav-container class=\"example-container\">\n    <mat-sidenav #sidenav mode=\"side\" [(opened)]=\"opened\" (opened)=\"events.push('open!')\"\n                (closed)=\"events.push('close!')\">\n      Sidenav content\n    </mat-sidenav>\n\n    <mat-sidenav-content>\n      <p><mat-checkbox [(ngModel)]=\"opened\">sidenav.opened</mat-checkbox></p>\n      <p><button matButton (click)=\"sidenav.toggle()\">sidenav.toggle()</button></p>\n      <p>Events:</p>\n      <div class=\"example-events\">\n        @for (e of events; track e) {\n          <div>{{e}}</div>\n        }\n      </div>\n    </mat-sidenav-content>\n  </mat-sidenav-container>\n} @else {\n  <div>Please open on Stackblitz to see result</div>\n}\n\n",
+      template: "@if (shouldRun) {\n  <mat-sidenav-container class=\"example-container\">\n    <mat-sidenav #sidenav mode=\"side\" [(opened)]=\"opened\" (opened)=\"trackEvent('open!')\"\n                (closed)=\"trackEvent('close!')\">\n      Sidenav content\n    </mat-sidenav>\n\n    <mat-sidenav-content>\n      <p><mat-checkbox [(ngModel)]=\"opened\">sidenav.opened</mat-checkbox></p>\n      <p><button matButton (click)=\"sidenav.toggle()\">sidenav.toggle()</button></p>\n      <p>Events:</p>\n      <div class=\"example-events\">\n        @for (e of events(); track $index) {\n          <div>{{e}}</div>\n        }\n      </div>\n    </mat-sidenav-content>\n  </mat-sidenav-container>\n} @else {\n  <div>Please open on Stackblitz to see result</div>\n}\n\n",
       styles: [".example-container {\n  position: absolute;\n  top: 0;\n  bottom: 0;\n  left: 0;\n  right: 0;\n}\n\n.example-events {\n  width: 300px;\n  height: 200px;\n  overflow: auto;\n  border: 1px solid #555;\n}\n"]
     }]
   }]

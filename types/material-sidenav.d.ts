@@ -8,7 +8,7 @@ import { FormControl } from '@angular/forms';
  * @title Autosize sidenav
  */
 declare class SidenavAutosizeExample {
-    showFiller: boolean;
+    showFiller: i0.WritableSignal<boolean>;
     static ɵfac: i0.ɵɵFactoryDeclaration<SidenavAutosizeExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<SidenavAutosizeExample, "sidenav-autosize-example", never, {}, {}, never, never, true, never>;
 }
@@ -21,8 +21,8 @@ declare class SidenavBackdropExample {
 
 /** @title Sidenav with custom escape and backdrop click behavior */
 declare class SidenavDisableCloseExample {
-    sidenav: MatSidenav;
-    reason: string;
+    sidenav: i0.Signal<MatSidenav>;
+    reason: i0.WritableSignal<string>;
     close(reason: string): void;
     shouldRun: boolean;
     static ɵfac: i0.ɵɵFactoryDeclaration<SidenavDisableCloseExample, never>;
@@ -60,9 +60,10 @@ declare class SidenavConfigurableFocusTrapExample {
 
 /** @title Sidenav open & close behavior */
 declare class SidenavOpenCloseExample {
-    events: string[];
-    opened: boolean;
+    events: i0.WritableSignal<("open!" | "close!")[]>;
+    opened: i0.WritableSignal<boolean>;
     shouldRun: boolean;
+    trackEvent(event: 'open!' | 'close!'): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<SidenavOpenCloseExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<SidenavOpenCloseExample, "sidenav-open-close-example", never, {}, {}, never, never, true, never>;
 }

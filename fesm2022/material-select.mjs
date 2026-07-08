@@ -1,5 +1,5 @@
 import * as i0 from '@angular/core';
-import { Component, ViewEncapsulation } from '@angular/core';
+import { Component, signal, ViewEncapsulation } from '@angular/core';
 import * as i3 from '@angular/forms';
 import { FormControl, FormsModule, ReactiveFormsModule, Validators, FormGroup } from '@angular/forms';
 import * as i2 from '@angular/material/select';
@@ -340,8 +340,12 @@ i0.ɵɵngDeclareClassMetadata({
 });
 
 class SelectFormExample {
-  selectedValue;
-  selectedCar = '';
+  selectedValue = signal('', ...(ngDevMode ? [{
+    debugName: "selectedValue"
+  }] : []));
+  selectedCar = signal('', ...(ngDevMode ? [{
+    debugName: "selectedCar"
+  }] : []));
   foods = [{
     value: 'steak-0',
     viewValue: 'Steak'
@@ -377,7 +381,7 @@ class SelectFormExample {
     isStandalone: true,
     selector: "select-form-example",
     ngImport: i0,
-    template: "<form>\n  <h4>mat-select</h4>\n  <mat-form-field>\n    <mat-label>Favorite food</mat-label>\n    <mat-select [(ngModel)]=\"selectedValue\" name=\"food\">\n      @for (food of foods; track food) {\n        <mat-option [value]=\"food.value\">{{food.viewValue}}</mat-option>\n      }\n    </mat-select>\n  </mat-form-field>\n  <p> Selected food: {{selectedValue}} </p>\n  <h4>native html select</h4>\n  <mat-form-field>\n    <mat-label>Favorite car</mat-label>\n    <select matNativeControl [(ngModel)]=\"selectedCar\" name=\"car\">\n      <option value=\"\" selected></option>\n      @for (car of cars; track car) {\n        <option [value]=\"car.value\">{{car.viewValue}}</option>\n      }\n    </select>\n  </mat-form-field>\n  <p> Selected car: {{selectedCar}} </p>\n</form>\n",
+    template: "<form>\n  <h4>mat-select</h4>\n  <mat-form-field>\n    <mat-label>Favorite food</mat-label>\n    <mat-select [(ngModel)]=\"selectedValue\" name=\"food\">\n      @for (food of foods; track food) {\n        <mat-option [value]=\"food.value\">{{food.viewValue}}</mat-option>\n      }\n    </mat-select>\n  </mat-form-field>\n  <p> Selected food: {{selectedValue()}} </p>\n  <h4>native html select</h4>\n  <mat-form-field>\n    <mat-label>Favorite car</mat-label>\n    <select matNativeControl [(ngModel)]=\"selectedCar\" name=\"car\">\n      <option value=\"\" selected></option>\n      @for (car of cars; track car) {\n        <option [value]=\"car.value\">{{car.viewValue}}</option>\n      }\n    </select>\n  </mat-form-field>\n  <p> Selected car: {{selectedCar()}} </p>\n</form>\n",
     dependencies: [{
       kind: "ngmodule",
       type: FormsModule
@@ -474,7 +478,7 @@ i0.ɵɵngDeclareClassMetadata({
     args: [{
       selector: 'select-form-example',
       imports: [FormsModule, MatFormFieldModule, MatSelectModule, MatInputModule],
-      template: "<form>\n  <h4>mat-select</h4>\n  <mat-form-field>\n    <mat-label>Favorite food</mat-label>\n    <mat-select [(ngModel)]=\"selectedValue\" name=\"food\">\n      @for (food of foods; track food) {\n        <mat-option [value]=\"food.value\">{{food.viewValue}}</mat-option>\n      }\n    </mat-select>\n  </mat-form-field>\n  <p> Selected food: {{selectedValue}} </p>\n  <h4>native html select</h4>\n  <mat-form-field>\n    <mat-label>Favorite car</mat-label>\n    <select matNativeControl [(ngModel)]=\"selectedCar\" name=\"car\">\n      <option value=\"\" selected></option>\n      @for (car of cars; track car) {\n        <option [value]=\"car.value\">{{car.viewValue}}</option>\n      }\n    </select>\n  </mat-form-field>\n  <p> Selected car: {{selectedCar}} </p>\n</form>\n"
+      template: "<form>\n  <h4>mat-select</h4>\n  <mat-form-field>\n    <mat-label>Favorite food</mat-label>\n    <mat-select [(ngModel)]=\"selectedValue\" name=\"food\">\n      @for (food of foods; track food) {\n        <mat-option [value]=\"food.value\">{{food.viewValue}}</mat-option>\n      }\n    </mat-select>\n  </mat-form-field>\n  <p> Selected food: {{selectedValue()}} </p>\n  <h4>native html select</h4>\n  <mat-form-field>\n    <mat-label>Favorite car</mat-label>\n    <select matNativeControl [(ngModel)]=\"selectedCar\" name=\"car\">\n      <option value=\"\" selected></option>\n      @for (car of cars; track car) {\n        <option [value]=\"car.value\">{{car.viewValue}}</option>\n      }\n    </select>\n  </mat-form-field>\n  <p> Selected car: {{selectedCar()}} </p>\n</form>\n"
     }]
   }]
 });
@@ -1192,7 +1196,9 @@ i0.ɵɵngDeclareClassMetadata({
 });
 
 class SelectValueBindingExample {
-  selected = 'option2';
+  selected = signal('option2', ...(ngDevMode ? [{
+    debugName: "selected"
+  }] : []));
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
     version: "22.0.5",
@@ -1208,7 +1214,7 @@ class SelectValueBindingExample {
     isStandalone: true,
     selector: "select-value-binding-example",
     ngImport: i0,
-    template: "<mat-form-field>\n  <mat-label>Select an option</mat-label>\n  <mat-select [(value)]=\"selected\">\n    <mat-option>None</mat-option>\n    <mat-option value=\"option1\">Option 1</mat-option>\n    <mat-option value=\"option2\">Option 2</mat-option>\n    <mat-option value=\"option3\">Option 3</mat-option>\n  </mat-select>\n</mat-form-field>\n\n<p>You selected: {{selected}}</p>\n",
+    template: "<mat-form-field>\n  <mat-label>Select an option</mat-label>\n  <mat-select [(value)]=\"selected\">\n    <mat-option>None</mat-option>\n    <mat-option value=\"option1\">Option 1</mat-option>\n    <mat-option value=\"option2\">Option 2</mat-option>\n    <mat-option value=\"option3\">Option 3</mat-option>\n  </mat-select>\n</mat-form-field>\n\n<p>You selected: {{selected()}}</p>\n",
     dependencies: [{
       kind: "ngmodule",
       type: MatFormFieldModule
@@ -1252,7 +1258,7 @@ i0.ɵɵngDeclareClassMetadata({
     args: [{
       selector: 'select-value-binding-example',
       imports: [MatFormFieldModule, MatSelectModule],
-      template: "<mat-form-field>\n  <mat-label>Select an option</mat-label>\n  <mat-select [(value)]=\"selected\">\n    <mat-option>None</mat-option>\n    <mat-option value=\"option1\">Option 1</mat-option>\n    <mat-option value=\"option2\">Option 2</mat-option>\n    <mat-option value=\"option3\">Option 3</mat-option>\n  </mat-select>\n</mat-form-field>\n\n<p>You selected: {{selected}}</p>\n"
+      template: "<mat-form-field>\n  <mat-label>Select an option</mat-label>\n  <mat-select [(value)]=\"selected\">\n    <mat-option>None</mat-option>\n    <mat-option value=\"option1\">Option 1</mat-option>\n    <mat-option value=\"option2\">Option 2</mat-option>\n    <mat-option value=\"option3\">Option 3</mat-option>\n  </mat-select>\n</mat-form-field>\n\n<p>You selected: {{selected()}}</p>\n"
     }]
   }]
 });
@@ -1425,10 +1431,14 @@ class SelectInitialValueExample {
     value: 'dodge',
     viewValue: 'Dodge'
   }];
-  selectedFood = this.foods[2].value;
-  selectedCar = this.cars[0].value;
+  selectedFood = signal(this.foods[2].value, ...(ngDevMode ? [{
+    debugName: "selectedFood"
+  }] : []));
+  selectedCar = signal(this.cars[0].value, ...(ngDevMode ? [{
+    debugName: "selectedCar"
+  }] : []));
   selectCar(event) {
-    this.selectedCar = event.target.value;
+    this.selectedCar.set(event.target.value);
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
@@ -1445,7 +1455,7 @@ class SelectInitialValueExample {
     isStandalone: true,
     selector: "select-initial-value-example",
     ngImport: i0,
-    template: "<h4>Basic mat-select with initial value</h4>\n<mat-form-field>\n  <mat-label>Favorite Food</mat-label>\n  <mat-select [(value)]=\"selectedFood\">\n    <mat-option></mat-option>\n    @for (option of foods; track option) {\n      <mat-option [value]=\"option.value\">{{ option.viewValue }}</mat-option>\n    }\n  </mat-select>\n</mat-form-field>\n<p>You selected: {{selectedFood}}</p>\n\n<h4>Basic native select with initial value</h4>\n<mat-form-field>\n  <mat-label>Favorite Car</mat-label>\n  <select matNativeControl (change)=\"selectCar($event)\">\n    <option value=\"\"></option>\n    @for (option of cars; track option) {\n      <option [value]=\"option.value\"\n            [selected]=\"selectedCar === option.value\">{{ option.viewValue }}</option>\n    }\n  </select>\n</mat-form-field>\n<p>You selected: {{selectedCar}}</p>\n",
+    template: "<h4>Basic mat-select with initial value</h4>\n<mat-form-field>\n  <mat-label>Favorite Food</mat-label>\n  <mat-select [(value)]=\"selectedFood\">\n    <mat-option></mat-option>\n    @for (option of foods; track option) {\n      <mat-option [value]=\"option.value\">{{ option.viewValue }}</mat-option>\n    }\n  </mat-select>\n</mat-form-field>\n<p>You selected: {{selectedFood()}}</p>\n\n<h4>Basic native select with initial value</h4>\n<mat-form-field>\n  <mat-label>Favorite Car</mat-label>\n  <select matNativeControl (change)=\"selectCar($event)\">\n    <option value=\"\"></option>\n    @for (option of cars; track option) {\n      <option [value]=\"option.value\"\n            [selected]=\"selectedCar() === option.value\">{{ option.viewValue }}</option>\n    }\n  </select>\n</mat-form-field>\n<p>You selected: {{selectedCar()}}</p>\n",
     dependencies: [{
       kind: "ngmodule",
       type: MatFormFieldModule
@@ -1511,13 +1521,15 @@ i0.ɵɵngDeclareClassMetadata({
     args: [{
       selector: 'select-initial-value-example',
       imports: [MatFormFieldModule, MatSelectModule, MatInputModule, FormsModule],
-      template: "<h4>Basic mat-select with initial value</h4>\n<mat-form-field>\n  <mat-label>Favorite Food</mat-label>\n  <mat-select [(value)]=\"selectedFood\">\n    <mat-option></mat-option>\n    @for (option of foods; track option) {\n      <mat-option [value]=\"option.value\">{{ option.viewValue }}</mat-option>\n    }\n  </mat-select>\n</mat-form-field>\n<p>You selected: {{selectedFood}}</p>\n\n<h4>Basic native select with initial value</h4>\n<mat-form-field>\n  <mat-label>Favorite Car</mat-label>\n  <select matNativeControl (change)=\"selectCar($event)\">\n    <option value=\"\"></option>\n    @for (option of cars; track option) {\n      <option [value]=\"option.value\"\n            [selected]=\"selectedCar === option.value\">{{ option.viewValue }}</option>\n    }\n  </select>\n</mat-form-field>\n<p>You selected: {{selectedCar}}</p>\n"
+      template: "<h4>Basic mat-select with initial value</h4>\n<mat-form-field>\n  <mat-label>Favorite Food</mat-label>\n  <mat-select [(value)]=\"selectedFood\">\n    <mat-option></mat-option>\n    @for (option of foods; track option) {\n      <mat-option [value]=\"option.value\">{{ option.viewValue }}</mat-option>\n    }\n  </mat-select>\n</mat-form-field>\n<p>You selected: {{selectedFood()}}</p>\n\n<h4>Basic native select with initial value</h4>\n<mat-form-field>\n  <mat-label>Favorite Car</mat-label>\n  <select matNativeControl (change)=\"selectCar($event)\">\n    <option value=\"\"></option>\n    @for (option of cars; track option) {\n      <option [value]=\"option.value\"\n            [selected]=\"selectedCar() === option.value\">{{ option.viewValue }}</option>\n    }\n  </select>\n</mat-form-field>\n<p>You selected: {{selectedCar()}}</p>\n"
     }]
   }]
 });
 
 class SelectSelectableNullExample {
-  value = null;
+  value = signal(null, ...(ngDevMode ? [{
+    debugName: "value"
+  }] : []));
   options = [{
     label: 'None',
     value: null

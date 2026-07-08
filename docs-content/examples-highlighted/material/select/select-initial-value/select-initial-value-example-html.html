@@ -8,7 +8,7 @@
     }
   <span class="hljs-tag">&lt;/<span class="hljs-name">mat-select</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">mat-form-field</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>You selected: {{selectedFood}}<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>You selected: {{selectedFood()}}<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 
 <span class="hljs-tag">&lt;<span class="hljs-name">h4</span>&gt;</span>Basic native select with initial value<span class="hljs-tag">&lt;/<span class="hljs-name">h4</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">mat-form-field</span>&gt;</span>
@@ -17,8 +17,8 @@
     <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
     @for (option of cars; track option) {
       <span class="hljs-tag">&lt;<span class="hljs-name">option</span> [<span class="hljs-attr">value</span>]=<span class="hljs-string">&quot;option.value&quot;</span>
-            [<span class="hljs-attr">selected</span>]=<span class="hljs-string">&quot;selectedCar === option.value&quot;</span>&gt;</span>{{ option.viewValue }}<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+            [<span class="hljs-attr">selected</span>]=<span class="hljs-string">&quot;selectedCar() === option.value&quot;</span>&gt;</span>{{ option.viewValue }}<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
     }
   <span class="hljs-tag">&lt;/<span class="hljs-name">select</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">mat-form-field</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>You selected: {{selectedCar}}<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>You selected: {{selectedCar()}}<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>

@@ -1,5 +1,5 @@
 import * as i0 from '@angular/core';
-import { Component } from '@angular/core';
+import { signal, Component } from '@angular/core';
 import * as i1$2 from '@angular/material/slider';
 import { MatSliderModule } from '@angular/material/slider';
 import * as i2$1 from '@angular/material/checkbox';
@@ -14,13 +14,27 @@ import * as i1 from '@angular/material/card';
 import { MatCardModule } from '@angular/material/card';
 
 class SliderConfigurableExample {
-  disabled = false;
-  max = 100;
-  min = 0;
-  showTicks = false;
-  step = 1;
-  thumbLabel = false;
-  value = 0;
+  disabled = signal(false, ...(ngDevMode ? [{
+    debugName: "disabled"
+  }] : []));
+  max = signal(100, ...(ngDevMode ? [{
+    debugName: "max"
+  }] : []));
+  min = signal(0, ...(ngDevMode ? [{
+    debugName: "min"
+  }] : []));
+  showTicks = signal(false, ...(ngDevMode ? [{
+    debugName: "showTicks"
+  }] : []));
+  step = signal(1, ...(ngDevMode ? [{
+    debugName: "step"
+  }] : []));
+  thumbLabel = signal(false, ...(ngDevMode ? [{
+    debugName: "thumbLabel"
+  }] : []));
+  value = signal(0, ...(ngDevMode ? [{
+    debugName: "value"
+  }] : []));
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
     version: "22.0.5",
@@ -36,7 +50,7 @@ class SliderConfigurableExample {
     isStandalone: true,
     selector: "slider-configurable-example",
     ngImport: i0,
-    template: "<mat-card>\n  <mat-card-content>\n    <h2 class=\"example-h2\">Slider configuration</h2>\n\n    <section class=\"example-section\">\n      <mat-form-field class=\"example-margin example-width\">\n        <mat-label>Value</mat-label>\n        <input matInput type=\"number\" [(ngModel)]=\"value\">\n      </mat-form-field>\n      <mat-form-field class=\"example-margin example-width\">\n        <mat-label>Min value</mat-label>\n        <input matInput type=\"number\" [(ngModel)]=\"min\">\n      </mat-form-field>\n      <mat-form-field class=\"example-margin example-width\">\n        <mat-label>Max value</mat-label>\n        <input matInput type=\"number\" [(ngModel)]=\"max\">\n      </mat-form-field>\n      <mat-form-field class=\"example-margin example-width\">\n        <mat-label>Step size</mat-label>\n        <input matInput type=\"number\" [(ngModel)]=\"step\">\n      </mat-form-field>\n    </section>\n\n    <section class=\"example-section\">\n      <mat-checkbox [(ngModel)]=\"showTicks\">Show ticks</mat-checkbox>\n    </section>\n\n    <section class=\"example-section\">\n      <mat-checkbox [(ngModel)]=\"thumbLabel\">Show thumb label</mat-checkbox>\n    </section>\n\n    <section class=\"example-section\">\n      <mat-checkbox [(ngModel)]=\"disabled\">Disabled</mat-checkbox>\n    </section>\n  </mat-card-content>\n</mat-card>\n\n<mat-card class=\"example-result-card\">\n  <mat-card-content>\n    <h2>Result</h2>\n\n    <div class=\"example-label-container\">\n      <label id=\"example-name-label\" class=\"example-name-label\">Value</label>\n      <label class=\"example-value-label\">{{slider.value}}</label>\n    </div>\n    <mat-slider\n        class=\"example-margin\"\n        [disabled]=\"disabled\"\n        [max]=\"max\"\n        [min]=\"min\"\n        [step]=\"step\"\n        [discrete]=\"thumbLabel\"\n        [showTickMarks]=\"showTicks\">\n      <input matSliderThumb [(ngModel)]=\"value\" #slider>\n    </mat-slider>\n  </mat-card-content>\n</mat-card>\n",
+    template: "<mat-card>\n  <mat-card-content>\n    <h2 class=\"example-h2\">Slider configuration</h2>\n\n    <section class=\"example-section\">\n      <mat-form-field class=\"example-margin example-width\">\n        <mat-label>Value</mat-label>\n        <input matInput type=\"number\" [(ngModel)]=\"value\">\n      </mat-form-field>\n      <mat-form-field class=\"example-margin example-width\">\n        <mat-label>Min value</mat-label>\n        <input matInput type=\"number\" [(ngModel)]=\"min\">\n      </mat-form-field>\n      <mat-form-field class=\"example-margin example-width\">\n        <mat-label>Max value</mat-label>\n        <input matInput type=\"number\" [(ngModel)]=\"max\">\n      </mat-form-field>\n      <mat-form-field class=\"example-margin example-width\">\n        <mat-label>Step size</mat-label>\n        <input matInput type=\"number\" [(ngModel)]=\"step\">\n      </mat-form-field>\n    </section>\n\n    <section class=\"example-section\">\n      <mat-checkbox [(ngModel)]=\"showTicks\">Show ticks</mat-checkbox>\n    </section>\n\n    <section class=\"example-section\">\n      <mat-checkbox [(ngModel)]=\"thumbLabel\">Show thumb label</mat-checkbox>\n    </section>\n\n    <section class=\"example-section\">\n      <mat-checkbox [(ngModel)]=\"disabled\">Disabled</mat-checkbox>\n    </section>\n  </mat-card-content>\n</mat-card>\n\n<mat-card class=\"example-result-card\">\n  <mat-card-content>\n    <h2>Result</h2>\n\n    <div class=\"example-label-container\">\n      <label id=\"example-name-label\" class=\"example-name-label\">Value</label>\n      <label class=\"example-value-label\">{{slider.value}}</label>\n    </div>\n    <mat-slider\n        class=\"example-margin\"\n        [disabled]=\"disabled()\"\n        [max]=\"max()\"\n        [min]=\"min()\"\n        [step]=\"step()\"\n        [discrete]=\"thumbLabel()\"\n        [showTickMarks]=\"showTicks()\">\n      <input matSliderThumb [(ngModel)]=\"value\" #slider>\n    </mat-slider>\n  </mat-card-content>\n</mat-card>\n",
     styles: [".example-h2 {\n  margin-left: 10px;\n  margin-right: 10px;\n}\n\n.example-section {\n  display: flex;\n  flex-wrap: wrap;\n  align-content: center;\n  align-items: center;\n}\n\n.example-margin {\n  margin: 8px;\n}\n\n.example-width {\n  max-width: 180px;\n  width: 100%;\n}\n\n.mat-mdc-slider {\n  max-width: 300px;\n  width: 100%;\n}\n\n.mat-mdc-card + .mat-mdc-card {\n  margin-top: 8px;\n}\n\n.example-result-card h2 {\n  margin: 0 8px;\n}\n\n.example-label-container {\n  display: flex;\n  justify-content: space-between;\n  margin: 20px 10px 0;\n  max-width: 284px;\n}\n\n.example-result-card .example-value-label {\n  font-weight: 600;\n}\n"],
     dependencies: [{
       kind: "ngmodule",
@@ -134,7 +148,7 @@ i0.ɵɵngDeclareClassMetadata({
     args: [{
       selector: 'slider-configurable-example',
       imports: [MatCardModule, MatFormFieldModule, MatInputModule, FormsModule, MatCheckboxModule, MatSliderModule],
-      template: "<mat-card>\n  <mat-card-content>\n    <h2 class=\"example-h2\">Slider configuration</h2>\n\n    <section class=\"example-section\">\n      <mat-form-field class=\"example-margin example-width\">\n        <mat-label>Value</mat-label>\n        <input matInput type=\"number\" [(ngModel)]=\"value\">\n      </mat-form-field>\n      <mat-form-field class=\"example-margin example-width\">\n        <mat-label>Min value</mat-label>\n        <input matInput type=\"number\" [(ngModel)]=\"min\">\n      </mat-form-field>\n      <mat-form-field class=\"example-margin example-width\">\n        <mat-label>Max value</mat-label>\n        <input matInput type=\"number\" [(ngModel)]=\"max\">\n      </mat-form-field>\n      <mat-form-field class=\"example-margin example-width\">\n        <mat-label>Step size</mat-label>\n        <input matInput type=\"number\" [(ngModel)]=\"step\">\n      </mat-form-field>\n    </section>\n\n    <section class=\"example-section\">\n      <mat-checkbox [(ngModel)]=\"showTicks\">Show ticks</mat-checkbox>\n    </section>\n\n    <section class=\"example-section\">\n      <mat-checkbox [(ngModel)]=\"thumbLabel\">Show thumb label</mat-checkbox>\n    </section>\n\n    <section class=\"example-section\">\n      <mat-checkbox [(ngModel)]=\"disabled\">Disabled</mat-checkbox>\n    </section>\n  </mat-card-content>\n</mat-card>\n\n<mat-card class=\"example-result-card\">\n  <mat-card-content>\n    <h2>Result</h2>\n\n    <div class=\"example-label-container\">\n      <label id=\"example-name-label\" class=\"example-name-label\">Value</label>\n      <label class=\"example-value-label\">{{slider.value}}</label>\n    </div>\n    <mat-slider\n        class=\"example-margin\"\n        [disabled]=\"disabled\"\n        [max]=\"max\"\n        [min]=\"min\"\n        [step]=\"step\"\n        [discrete]=\"thumbLabel\"\n        [showTickMarks]=\"showTicks\">\n      <input matSliderThumb [(ngModel)]=\"value\" #slider>\n    </mat-slider>\n  </mat-card-content>\n</mat-card>\n",
+      template: "<mat-card>\n  <mat-card-content>\n    <h2 class=\"example-h2\">Slider configuration</h2>\n\n    <section class=\"example-section\">\n      <mat-form-field class=\"example-margin example-width\">\n        <mat-label>Value</mat-label>\n        <input matInput type=\"number\" [(ngModel)]=\"value\">\n      </mat-form-field>\n      <mat-form-field class=\"example-margin example-width\">\n        <mat-label>Min value</mat-label>\n        <input matInput type=\"number\" [(ngModel)]=\"min\">\n      </mat-form-field>\n      <mat-form-field class=\"example-margin example-width\">\n        <mat-label>Max value</mat-label>\n        <input matInput type=\"number\" [(ngModel)]=\"max\">\n      </mat-form-field>\n      <mat-form-field class=\"example-margin example-width\">\n        <mat-label>Step size</mat-label>\n        <input matInput type=\"number\" [(ngModel)]=\"step\">\n      </mat-form-field>\n    </section>\n\n    <section class=\"example-section\">\n      <mat-checkbox [(ngModel)]=\"showTicks\">Show ticks</mat-checkbox>\n    </section>\n\n    <section class=\"example-section\">\n      <mat-checkbox [(ngModel)]=\"thumbLabel\">Show thumb label</mat-checkbox>\n    </section>\n\n    <section class=\"example-section\">\n      <mat-checkbox [(ngModel)]=\"disabled\">Disabled</mat-checkbox>\n    </section>\n  </mat-card-content>\n</mat-card>\n\n<mat-card class=\"example-result-card\">\n  <mat-card-content>\n    <h2>Result</h2>\n\n    <div class=\"example-label-container\">\n      <label id=\"example-name-label\" class=\"example-name-label\">Value</label>\n      <label class=\"example-value-label\">{{slider.value}}</label>\n    </div>\n    <mat-slider\n        class=\"example-margin\"\n        [disabled]=\"disabled()\"\n        [max]=\"max()\"\n        [min]=\"min()\"\n        [step]=\"step()\"\n        [discrete]=\"thumbLabel()\"\n        [showTickMarks]=\"showTicks()\">\n      <input matSliderThumb [(ngModel)]=\"value\" #slider>\n    </mat-slider>\n  </mat-card-content>\n</mat-card>\n",
       styles: [".example-h2 {\n  margin-left: 10px;\n  margin-right: 10px;\n}\n\n.example-section {\n  display: flex;\n  flex-wrap: wrap;\n  align-content: center;\n  align-items: center;\n}\n\n.example-margin {\n  margin: 8px;\n}\n\n.example-width {\n  max-width: 180px;\n  width: 100%;\n}\n\n.mat-mdc-slider {\n  max-width: 300px;\n  width: 100%;\n}\n\n.mat-mdc-card + .mat-mdc-card {\n  margin-top: 8px;\n}\n\n.example-result-card h2 {\n  margin: 0 8px;\n}\n\n.example-label-container {\n  display: flex;\n  justify-content: space-between;\n  margin: 20px 10px 0;\n  max-width: 284px;\n}\n\n.example-result-card .example-value-label {\n  font-weight: 600;\n}\n"]
     }]
   }]

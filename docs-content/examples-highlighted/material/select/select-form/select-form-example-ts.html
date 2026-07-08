@@ -1,4 +1,4 @@
-<span class="hljs-keyword">import</span> {<span class="hljs-title class_">Component</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">Component</span>, signal} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
 <span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatInputModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/input&#x27;</span>;
 <span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatSelectModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/select&#x27;</span>;
 <span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatFormFieldModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/form-field&#x27;</span>;
@@ -23,8 +23,8 @@
   <span class="hljs-attr">imports</span>: [<span class="hljs-title class_">FormsModule</span>, <span class="hljs-title class_">MatFormFieldModule</span>, <span class="hljs-title class_">MatSelectModule</span>, <span class="hljs-title class_">MatInputModule</span>],
 })
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">SelectFormExample</span> {
-  selectedValue!: <span class="hljs-built_in">string</span>;
-  selectedCar = <span class="hljs-string">&#x27;&#x27;</span>;
+  selectedValue = <span class="hljs-title function_">signal</span>(<span class="hljs-string">&#x27;&#x27;</span>);
+  selectedCar = <span class="hljs-title function_">signal</span>(<span class="hljs-string">&#x27;&#x27;</span>);
 
   <span class="hljs-attr">foods</span>: <span class="hljs-title class_">Food</span>[] = [
     {<span class="hljs-attr">value</span>: <span class="hljs-string">&#x27;steak-0&#x27;</span>, <span class="hljs-attr">viewValue</span>: <span class="hljs-string">&#x27;Steak&#x27;</span>},

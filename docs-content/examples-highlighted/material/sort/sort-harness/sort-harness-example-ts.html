@@ -19,19 +19,21 @@
     {<span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Gingerbread&#x27;</span>, <span class="hljs-attr">calories</span>: <span class="hljs-number">356</span>, <span class="hljs-attr">fat</span>: <span class="hljs-number">16</span>, <span class="hljs-attr">carbs</span>: <span class="hljs-number">49</span>, <span class="hljs-attr">protein</span>: <span class="hljs-number">4</span>},
   ];
 
-  sortedData = <span class="hljs-variable language_">this</span>.<span class="hljs-property">desserts</span>.<span class="hljs-title function_">slice</span>();
+  sortedData = <span class="hljs-title function_">signal</span>(<span class="hljs-variable language_">this</span>.<span class="hljs-property">desserts</span>.<span class="hljs-title function_">slice</span>());
 
   <span class="hljs-title function_">sortData</span>(<span class="hljs-params"><span class="hljs-attr">sort</span>: <span class="hljs-title class_">Sort</span></span>) {
     <span class="hljs-keyword">const</span> data = <span class="hljs-variable language_">this</span>.<span class="hljs-property">desserts</span>.<span class="hljs-title function_">slice</span>();
 
     <span class="hljs-keyword">if</span> (!sort.<span class="hljs-property">active</span> || sort.<span class="hljs-property">direction</span> === <span class="hljs-string">&#x27;&#x27;</span>) {
-      <span class="hljs-variable language_">this</span>.<span class="hljs-property">sortedData</span> = data;
+      <span class="hljs-variable language_">this</span>.<span class="hljs-property">sortedData</span>.<span class="hljs-title function_">set</span>(data);
     } <span class="hljs-keyword">else</span> {
-      <span class="hljs-variable language_">this</span>.<span class="hljs-property">sortedData</span> = data.<span class="hljs-title function_">sort</span>(<span class="hljs-function">(<span class="hljs-params">a, b</span>) =&gt;</span> {
-        <span class="hljs-keyword">const</span> aValue = (a <span class="hljs-keyword">as</span> <span class="hljs-built_in">any</span>)[sort.<span class="hljs-property">active</span>];
-        <span class="hljs-keyword">const</span> bValue = (b <span class="hljs-keyword">as</span> <span class="hljs-built_in">any</span>)[sort.<span class="hljs-property">active</span>];
-        <span class="hljs-keyword">return</span> (aValue &lt; bValue ? -<span class="hljs-number">1</span> : <span class="hljs-number">1</span>) * (sort.<span class="hljs-property">direction</span> === <span class="hljs-string">&#x27;asc&#x27;</span> ? <span class="hljs-number">1</span> : -<span class="hljs-number">1</span>);
-      });
+      <span class="hljs-variable language_">this</span>.<span class="hljs-property">sortedData</span>.<span class="hljs-title function_">set</span>(
+        data.<span class="hljs-title function_">sort</span>(<span class="hljs-function">(<span class="hljs-params">a, b</span>) =&gt;</span> {
+          <span class="hljs-keyword">const</span> aValue = a[sort.<span class="hljs-property">active</span> <span class="hljs-keyword">as</span> keyof <span class="hljs-keyword">typeof</span> a];
+          <span class="hljs-keyword">const</span> bValue = b[sort.<span class="hljs-property">active</span> <span class="hljs-keyword">as</span> keyof <span class="hljs-keyword">typeof</span> b];
+          <span class="hljs-keyword">return</span> (aValue &lt; bValue ? -<span class="hljs-number">1</span> : <span class="hljs-number">1</span>) * (sort.<span class="hljs-property">direction</span> === <span class="hljs-string">&#x27;asc&#x27;</span> ? <span class="hljs-number">1</span> : -<span class="hljs-number">1</span>);
+        }),
+      );
     }
   }
 }

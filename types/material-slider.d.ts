@@ -4,13 +4,13 @@ import * as i0 from '@angular/core';
  * @title Configurable slider
  */
 declare class SliderConfigurableExample {
-    disabled: boolean;
-    max: number;
-    min: number;
-    showTicks: boolean;
-    step: number;
-    thumbLabel: boolean;
-    value: number;
+    disabled: i0.WritableSignal<boolean>;
+    max: i0.WritableSignal<number>;
+    min: i0.WritableSignal<number>;
+    showTicks: i0.WritableSignal<boolean>;
+    step: i0.WritableSignal<number>;
+    thumbLabel: i0.WritableSignal<boolean>;
+    value: i0.WritableSignal<number>;
     static ɵfac: i0.ɵɵFactoryDeclaration<SliderConfigurableExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<SliderConfigurableExample, "slider-configurable-example", never, {}, {}, never, never, true, never>;
 }
