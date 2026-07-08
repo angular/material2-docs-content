@@ -1,4 +1,4 @@
-<span class="hljs-keyword">import</span> {<span class="hljs-title class_">Component</span>, inject} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">Component</span>, inject, signal} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
 <span class="hljs-keyword">import</span> {
   <span class="hljs-title class_">MatSnackBar</span>,
   <span class="hljs-title class_">MatSnackBarHorizontalPosition</span>,
@@ -20,13 +20,13 @@
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">SnackBarPositionExample</span> {
   <span class="hljs-keyword">private</span> _snackBar = <span class="hljs-title function_">inject</span>(<span class="hljs-title class_">MatSnackBar</span>);
 
-  <span class="hljs-attr">horizontalPosition</span>: <span class="hljs-title class_">MatSnackBarHorizontalPosition</span> = <span class="hljs-string">&#x27;start&#x27;</span>;
-  <span class="hljs-attr">verticalPosition</span>: <span class="hljs-title class_">MatSnackBarVerticalPosition</span> = <span class="hljs-string">&#x27;bottom&#x27;</span>;
+  horizontalPosition = signal&lt;<span class="hljs-title class_">MatSnackBarHorizontalPosition</span>&gt;(<span class="hljs-string">&#x27;start&#x27;</span>);
+  verticalPosition = signal&lt;<span class="hljs-title class_">MatSnackBarVerticalPosition</span>&gt;(<span class="hljs-string">&#x27;bottom&#x27;</span>);
 
   <span class="hljs-title function_">openSnackBar</span>(<span class="hljs-params"></span>) {
     <span class="hljs-variable language_">this</span>.<span class="hljs-property">_snackBar</span>.<span class="hljs-title function_">open</span>(<span class="hljs-string">&#x27;Cannonball!!&#x27;</span>, <span class="hljs-string">&#x27;Splash&#x27;</span>, {
-      <span class="hljs-attr">horizontalPosition</span>: <span class="hljs-variable language_">this</span>.<span class="hljs-property">horizontalPosition</span>,
-      <span class="hljs-attr">verticalPosition</span>: <span class="hljs-variable language_">this</span>.<span class="hljs-property">verticalPosition</span>,
+      <span class="hljs-attr">horizontalPosition</span>: <span class="hljs-variable language_">this</span>.<span class="hljs-title function_">horizontalPosition</span>(),
+      <span class="hljs-attr">verticalPosition</span>: <span class="hljs-variable language_">this</span>.<span class="hljs-title function_">verticalPosition</span>(),
     });
   }
 }

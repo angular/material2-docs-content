@@ -1,5 +1,5 @@
 import * as i0 from '@angular/core';
-import { inject, Component } from '@angular/core';
+import { inject, signal, Component } from '@angular/core';
 import { MatSnackBar, MatSnackBarRef, MatSnackBarLabel, MatSnackBarActions, MatSnackBarAction } from '@angular/material/snack-bar';
 import * as i1$1 from '@angular/material/button';
 import { MatButtonModule } from '@angular/material/button';
@@ -14,10 +14,12 @@ import { MatSelectModule } from '@angular/material/select';
 
 class SnackBarComponentExample {
   _snackBar = inject(MatSnackBar);
-  durationInSeconds = 5;
+  durationInSeconds = signal(5, ...(ngDevMode ? [{
+    debugName: "durationInSeconds"
+  }] : []));
   openSnackBar() {
     this._snackBar.openFromComponent(PizzaPartyComponent, {
-      duration: this.durationInSeconds * 1000
+      duration: this.durationInSeconds() * 1000
     });
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
@@ -145,10 +147,12 @@ i0.ɵɵngDeclareClassMetadata({
 
 class SnackBarAnnotatedComponentExample {
   _snackBar = inject(MatSnackBar);
-  durationInSeconds = 5;
+  durationInSeconds = signal(5, ...(ngDevMode ? [{
+    debugName: "durationInSeconds"
+  }] : []));
   openSnackBar() {
     this._snackBar.openFromComponent(PizzaPartyAnnotatedComponent, {
-      duration: this.durationInSeconds * 1000
+      duration: this.durationInSeconds() * 1000
     });
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
@@ -372,12 +376,16 @@ i0.ɵɵngDeclareClassMetadata({
 
 class SnackBarPositionExample {
   _snackBar = inject(MatSnackBar);
-  horizontalPosition = 'start';
-  verticalPosition = 'bottom';
+  horizontalPosition = signal('start', ...(ngDevMode ? [{
+    debugName: "horizontalPosition"
+  }] : []));
+  verticalPosition = signal('bottom', ...(ngDevMode ? [{
+    debugName: "verticalPosition"
+  }] : []));
   openSnackBar() {
     this._snackBar.open('Cannonball!!', 'Splash', {
-      horizontalPosition: this.horizontalPosition,
-      verticalPosition: this.verticalPosition
+      horizontalPosition: this.horizontalPosition(),
+      verticalPosition: this.verticalPosition()
     });
   }
   static ɵfac = i0.ɵɵngDeclareFactory({

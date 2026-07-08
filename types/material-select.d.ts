@@ -43,8 +43,8 @@ interface Car$2 {
  * @title Select in a form
  */
 declare class SelectFormExample {
-    selectedValue: string;
-    selectedCar: string;
+    selectedValue: i0.WritableSignal<string>;
+    selectedCar: i0.WritableSignal<string>;
     foods: Food$3[];
     cars: Car$2[];
     static ɵfac: i0.ɵɵFactoryDeclaration<SelectFormExample, never>;
@@ -126,7 +126,7 @@ declare class SelectResetExample {
 
 /** @title Select with 2-way value binding */
 declare class SelectValueBindingExample {
-    selected: string;
+    selected: i0.WritableSignal<string>;
     static ɵfac: i0.ɵɵFactoryDeclaration<SelectValueBindingExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<SelectValueBindingExample, "select-value-binding-example", never, {}, {}, never, never, true, never>;
 }
@@ -169,8 +169,8 @@ interface Car {
 declare class SelectInitialValueExample {
     foods: Food[];
     cars: Car[];
-    selectedFood: string;
-    selectedCar: string;
+    selectedFood: i0.WritableSignal<string>;
+    selectedCar: i0.WritableSignal<string>;
     selectCar(event: Event): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<SelectInitialValueExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<SelectInitialValueExample, "select-initial-value-example", never, {}, {}, never, never, true, never>;
@@ -178,7 +178,7 @@ declare class SelectInitialValueExample {
 
 /** @title Select with selectable null options */
 declare class SelectSelectableNullExample {
-    value: number | null;
+    value: i0.WritableSignal<number | null>;
     options: ({
         label: string;
         value: null;

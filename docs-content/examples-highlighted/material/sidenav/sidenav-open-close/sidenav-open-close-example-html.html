@@ -1,7 +1,7 @@
 @if (shouldRun) {
   <span class="hljs-tag">&lt;<span class="hljs-name">mat-sidenav-container</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-container&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">mat-sidenav</span> #<span class="hljs-attr">sidenav</span> <span class="hljs-attr">mode</span>=<span class="hljs-string">&quot;side&quot;</span> [(<span class="hljs-attr">opened</span>)]=<span class="hljs-string">&quot;opened&quot;</span> (<span class="hljs-attr">opened</span>)=<span class="hljs-string">&quot;events.push(&#x27;open!&#x27;)&quot;</span>
-                (<span class="hljs-attr">closed</span>)=<span class="hljs-string">&quot;events.push(&#x27;close!&#x27;)&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mat-sidenav</span> #<span class="hljs-attr">sidenav</span> <span class="hljs-attr">mode</span>=<span class="hljs-string">&quot;side&quot;</span> [(<span class="hljs-attr">opened</span>)]=<span class="hljs-string">&quot;opened&quot;</span> (<span class="hljs-attr">opened</span>)=<span class="hljs-string">&quot;trackEvent(&#x27;open!&#x27;)&quot;</span>
+                (<span class="hljs-attr">closed</span>)=<span class="hljs-string">&quot;trackEvent(&#x27;close!&#x27;)&quot;</span>&gt;</span>
       Sidenav content
     <span class="hljs-tag">&lt;/<span class="hljs-name">mat-sidenav</span>&gt;</span>
 
@@ -10,7 +10,7 @@
       <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">matButton</span> (<span class="hljs-attr">click</span>)=<span class="hljs-string">&quot;sidenav.toggle()&quot;</span>&gt;</span>sidenav.toggle()<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Events:<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-events&quot;</span>&gt;</span>
-        @for (e of events; track e) {
+        @for (e of events(); track $index) {
           <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>{{e}}<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
         }
       <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>

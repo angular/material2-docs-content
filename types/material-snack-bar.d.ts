@@ -7,7 +7,7 @@ import { MatSnackBarRef, MatSnackBarHorizontalPosition, MatSnackBarVerticalPosit
  */
 declare class SnackBarComponentExample {
     private _snackBar;
-    durationInSeconds: number;
+    durationInSeconds: i0.WritableSignal<number>;
     openSnackBar(): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<SnackBarComponentExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<SnackBarComponentExample, "snack-bar-component-example", never, {}, {}, never, never, true, never>;
@@ -22,7 +22,7 @@ declare class PizzaPartyComponent {
  */
 declare class SnackBarAnnotatedComponentExample {
     private _snackBar;
-    durationInSeconds: number;
+    durationInSeconds: i0.WritableSignal<number>;
     openSnackBar(): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<SnackBarAnnotatedComponentExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<SnackBarAnnotatedComponentExample, "snack-bar-annotated-component-example", never, {}, {}, never, never, true, never>;
@@ -48,8 +48,8 @@ declare class SnackBarOverviewExample {
  */
 declare class SnackBarPositionExample {
     private _snackBar;
-    horizontalPosition: MatSnackBarHorizontalPosition;
-    verticalPosition: MatSnackBarVerticalPosition;
+    horizontalPosition: i0.WritableSignal<MatSnackBarHorizontalPosition>;
+    verticalPosition: i0.WritableSignal<MatSnackBarVerticalPosition>;
     openSnackBar(): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<SnackBarPositionExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<SnackBarPositionExample, "snack-bar-position-example", never, {}, {}, never, never, true, never>;

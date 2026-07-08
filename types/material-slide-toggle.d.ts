@@ -6,8 +6,8 @@ import { FormGroup, FormControl } from '@angular/forms';
  * @title Configurable slide-toggle
  */
 declare class SlideToggleConfigurableExample {
-    checked: boolean;
-    disabled: boolean;
+    checked: i0.WritableSignal<boolean>;
+    disabled: i0.WritableSignal<boolean>;
     static ɵfac: i0.ɵɵFactoryDeclaration<SlideToggleConfigurableExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<SlideToggleConfigurableExample, "slide-toggle-configurable-example", never, {}, {}, never, never, true, never>;
 }
@@ -17,7 +17,7 @@ declare class SlideToggleConfigurableExample {
  */
 declare class SlideToggleFormsExample {
     private _formBuilder;
-    isChecked: boolean;
+    isChecked: i0.WritableSignal<boolean>;
     formGroup: FormGroup<{
         enableWifi: _angular_forms.FormControl<string | null>;
         acceptTerms: _angular_forms.FormControl<string | null>;

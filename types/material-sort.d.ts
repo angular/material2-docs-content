@@ -1,5 +1,5 @@
-import { Sort } from '@angular/material/sort';
 import * as i0 from '@angular/core';
+import { Sort } from '@angular/material/sort';
 
 interface Dessert {
     calories: number;
@@ -13,7 +13,7 @@ interface Dessert {
  */
 declare class SortOverviewExample {
     desserts: Dessert[];
-    sortedData: Dessert[];
+    sortedData: i0.WritableSignal<Dessert[]>;
     sortData(sort: Sort): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<SortOverviewExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<SortOverviewExample, "sort-overview-example", never, {}, {}, never, never, true, never>;
@@ -31,13 +31,13 @@ declare class SortHarnessExample {
         carbs: number;
         protein: number;
     }[];
-    sortedData: {
+    sortedData: i0.WritableSignal<{
         name: string;
         calories: number;
         fat: number;
         carbs: number;
         protein: number;
-    }[];
+    }[]>;
     sortData(sort: Sort): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<SortHarnessExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<SortHarnessExample, "sort-harness-example", never, {}, {}, never, never, true, never>;

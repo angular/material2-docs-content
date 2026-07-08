@@ -1,4 +1,4 @@
-<span class="hljs-keyword">import</span> {<span class="hljs-title class_">Component</span>, inject} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">Component</span>, inject, signal} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
 <span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatSnackBar</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/snack-bar&#x27;</span>;
 <span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatButtonModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/button&#x27;</span>;
 <span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatInputModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/input&#x27;</span>;
@@ -17,11 +17,11 @@
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">SnackBarComponentExample</span> {
   <span class="hljs-keyword">private</span> _snackBar = <span class="hljs-title function_">inject</span>(<span class="hljs-title class_">MatSnackBar</span>);
 
-  durationInSeconds = <span class="hljs-number">5</span>;
+  durationInSeconds = <span class="hljs-title function_">signal</span>(<span class="hljs-number">5</span>);
 
   <span class="hljs-title function_">openSnackBar</span>(<span class="hljs-params"></span>) {
     <span class="hljs-variable language_">this</span>.<span class="hljs-property">_snackBar</span>.<span class="hljs-title function_">openFromComponent</span>(<span class="hljs-title class_">PizzaPartyComponent</span>, {
-      <span class="hljs-attr">duration</span>: <span class="hljs-variable language_">this</span>.<span class="hljs-property">durationInSeconds</span> * <span class="hljs-number">1000</span>,
+      <span class="hljs-attr">duration</span>: <span class="hljs-variable language_">this</span>.<span class="hljs-title function_">durationInSeconds</span>() * <span class="hljs-number">1000</span>,
     });
   }
 }
