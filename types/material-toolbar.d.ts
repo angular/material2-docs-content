@@ -40,4 +40,12 @@ declare class ToolbarHarnessExample {
     static ɵcmp: i0.ɵɵComponentDeclaration<ToolbarHarnessExample, "toolbar-harness-example", never, {}, {}, never, never, true, never>;
 }
 
-export { ToolbarBasicExample, ToolbarHarnessExample, ToolbarMultirowExample, ToolbarOverviewExample, ToolbarSimpleExample };
+/**
+ * @title Toolbar as a navigation bar
+ */
+declare class ToolbarNavbarExample {
+    static ɵfac: i0.ɵɵFactoryDeclaration<ToolbarNavbarExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<ToolbarNavbarExample, "toolbar-navbar-example", never, {}, {}, never, never, true, never>;
+}
+
+export { ToolbarBasicExample, ToolbarHarnessExample, ToolbarMultirowExample, ToolbarNavbarExample, ToolbarOverviewExample, ToolbarSimpleExample };

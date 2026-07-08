@@ -3319,6 +3319,16 @@ const EXAMPLE_COMPONENTS = {
     "primaryFile": "toolbar-multirow-example.ts",
     "importPath": "material/toolbar"
   },
+  "toolbar-navbar": {
+    "packagePath": "material/toolbar/toolbar-navbar",
+    "title": "Toolbar as a navigation bar",
+    "componentName": "ToolbarNavbarExample",
+    "files": ["toolbar-navbar-example.ts", "toolbar-navbar-example.html", "toolbar-navbar-example.css"],
+    "selector": "toolbar-navbar-example",
+    "additionalComponents": [],
+    "primaryFile": "toolbar-navbar-example.ts",
+    "importPath": "material/toolbar"
+  },
   "toolbar-overview": {
     "packagePath": "material/toolbar/toolbar-overview",
     "title": "Toolbar overview",
@@ -4195,6 +4205,8 @@ async function loadExample(id) {
     case 'toolbar-harness':
       return import('@angular/components-examples/material/toolbar');
     case 'toolbar-multirow':
+      return import('@angular/components-examples/material/toolbar');
+    case 'toolbar-navbar':
       return import('@angular/components-examples/material/toolbar');
     case 'toolbar-overview':
       return import('@angular/components-examples/material/toolbar');
