@@ -1,10 +1,10 @@
 <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-container mat-shadow-2&quot;</span>&gt;</span>
-  @if (isLoadingResults || isRateLimitReached) {
+  @if (isLoadingResults() || isRateLimitReached()) {
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-loading-shade&quot;</span>&gt;</span>
-      @if (isLoadingResults) {
-        <span class="hljs-tag">&lt;<span class="hljs-name">mat-spinner</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">mat-spinner</span>&gt;</span>
+      @if (isLoadingResults()) {
+        <span class="hljs-tag">&lt;<span class="hljs-name">mat-spinner</span>/&gt;</span>
       }
-      @if (isRateLimitReached) {
+      @if (isRateLimitReached()) {
         <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-rate-limit-reached&quot;</span>&gt;</span>
           GitHub&#x27;s API rate limit has been reached. It will be reset in one minute.
         <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
@@ -13,9 +13,15 @@
   }
 
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-table-container&quot;</span>&gt;</span>
-
-    <span class="hljs-tag">&lt;<span class="hljs-name">table</span> <span class="hljs-attr">mat-table</span> [<span class="hljs-attr">dataSource</span>]=<span class="hljs-string">&quot;data&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-table&quot;</span>
-           <span class="hljs-attr">matSort</span> <span class="hljs-attr">matSortActive</span>=<span class="hljs-string">&quot;created&quot;</span> <span class="hljs-attr">matSortDisableClear</span> <span class="hljs-attr">matSortDirection</span>=<span class="hljs-string">&quot;desc&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">table</span>
+      <span class="hljs-attr">mat-table</span>
+      [<span class="hljs-attr">dataSource</span>]=<span class="hljs-string">&quot;data()&quot;</span>
+      <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-table&quot;</span>
+      <span class="hljs-attr">matSort</span>
+      (<span class="hljs-attr">matSortChange</span>)=<span class="hljs-string">&quot;handleSort()&quot;</span>
+      <span class="hljs-attr">matSortActive</span>=<span class="hljs-string">&quot;created&quot;</span>
+      <span class="hljs-attr">matSortDisableClear</span>
+      <span class="hljs-attr">matSortDirection</span>=<span class="hljs-string">&quot;desc&quot;</span>&gt;</span>
       <span class="hljs-comment">&lt;!-- Number Column --&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">ng-container</span> <span class="hljs-attr">matColumnDef</span>=<span class="hljs-string">&quot;number&quot;</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">mat-header-cell</span> *<span class="hljs-attr">matHeaderCellDef</span>&gt;</span>#<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
@@ -47,5 +53,9 @@
     <span class="hljs-tag">&lt;/<span class="hljs-name">table</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
-  <span class="hljs-tag">&lt;<span class="hljs-name">mat-paginator</span> [<span class="hljs-attr">length</span>]=<span class="hljs-string">&quot;resultsLength&quot;</span> [<span class="hljs-attr">pageSize</span>]=<span class="hljs-string">&quot;30&quot;</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">&quot;Select page of GitHub search results&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">mat-paginator</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-paginator</span>
+    [<span class="hljs-attr">length</span>]=<span class="hljs-string">&quot;resultsLength()&quot;</span>
+    [<span class="hljs-attr">pageSize</span>]=<span class="hljs-string">&quot;30&quot;</span>
+    (<span class="hljs-attr">page</span>)=<span class="hljs-string">&quot;handlePage()&quot;</span>
+    <span class="hljs-attr">aria-label</span>=<span class="hljs-string">&quot;Select page of GitHub search results&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">mat-paginator</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
