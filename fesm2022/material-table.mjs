@@ -1,5 +1,5 @@
 import * as i0 from '@angular/core';
-import { Component, inject, ViewChild, input, forwardRef, ContentChild, ContentChildren } from '@angular/core';
+import { Component, viewChild, signal, resource, computed, ViewChild, inject, input, forwardRef, ContentChild, ContentChildren } from '@angular/core';
 import * as i1 from '@angular/material/table';
 import { MatTableModule, MatTableDataSource, MatTable, MatNoDataRow, MatHeaderRowDef, MatRowDef, MatColumnDef } from '@angular/material/table';
 import * as i1$1 from '@angular/material/button';
@@ -11,13 +11,10 @@ import { MatInputModule } from '@angular/material/input';
 import * as i1$2 from '@angular/material/form-field';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { CurrencyPipe, DatePipe, DecimalPipe } from '@angular/common';
-import { HttpClient } from '@angular/common/http';
 import * as i1$5 from '@angular/material/paginator';
-import { MatPaginatorModule, MatPaginator } from '@angular/material/paginator';
+import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
 import * as i1$4 from '@angular/material/sort';
-import { MatSortModule, MatSort } from '@angular/material/sort';
-import { merge, of, ReplaySubject } from 'rxjs';
-import { startWith, switchMap, catchError, map } from 'rxjs/operators';
+import { MatSort, MatSortModule } from '@angular/material/sort';
 import * as i1$3 from '@angular/material/progress-spinner';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { SelectionModel, DataSource } from '@angular/cdk/collections';
@@ -29,6 +26,7 @@ import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { moveItemInArray, CdkDropList, CdkDrag } from '@angular/cdk/drag-drop';
 import * as i5 from '@angular/material/core';
 import { MatRippleModule } from '@angular/material/core';
+import { ReplaySubject } from 'rxjs';
 import * as i1$7 from '@angular/cdk/scrolling';
 import { ScrollingModule } from '@angular/cdk/scrolling';
 
@@ -971,30 +969,69 @@ i0.ɵɵngDeclareClassMetadata({
 });
 
 class TableHttpExample {
-  _httpClient = inject(HttpClient);
   displayedColumns = ['created', 'state', 'number', 'title'];
-  exampleDatabase = null;
-  data = [];
-  resultsLength = 0;
-  isLoadingResults = true;
-  isRateLimitReached = false;
-  paginator;
-  sort;
-  ngAfterViewInit() {
-    this.exampleDatabase = new ExampleHttpDatabase(this._httpClient);
-    this.sort.sortChange.subscribe(() => this.paginator.pageIndex = 0);
-    merge(this.sort.sortChange, this.paginator.page).pipe(startWith({}), switchMap(() => {
-      this.isLoadingResults = true;
-      return this.exampleDatabase.getRepoIssues(this.sort.active, this.sort.direction, this.paginator.pageIndex).pipe(catchError(() => of(null)));
-    }), map(data => {
-      this.isLoadingResults = false;
-      this.isRateLimitReached = data === null;
-      if (data === null) {
-        return [];
+  paginator = viewChild.required(MatPaginator);
+  sort = viewChild.required(MatSort);
+  sortActive = signal('created', ...(ngDevMode ? [{
+    debugName: "sortActive"
+  }] : []));
+  sortDirection = signal('desc', ...(ngDevMode ? [{
+    debugName: "sortDirection"
+  }] : []));
+  pageIndex = signal(0, ...(ngDevMode ? [{
+    debugName: "pageIndex"
+  }] : []));
+  issueResource = resource({
+    ...(ngDevMode ? {
+      debugName: "issueResource"
+    } : {}),
+    params: () => ({
+      sort: this.sortActive(),
+      order: this.sortDirection(),
+      page: this.pageIndex()
+    }),
+    loader: async ({
+      params: {
+        sort,
+        order,
+        page
+      },
+      abortSignal
+    }) => {
+      const base = 'https://api.github.com/search/issues';
+      const requestUrl = `${base}?q=repo:angular/components&sort=${sort}&order=${order}&page=${page + 1}`;
+      const response = await fetch(requestUrl, {
+        signal: abortSignal
+      });
+      if (!response.ok) {
+        throw new Error('Rate limit reached');
       }
-      this.resultsLength = data.total_count;
-      return data.items;
-    })).subscribe(data => this.data = data);
+      return await response.json();
+    }
+  });
+  isLoadingResults = this.issueResource.isLoading;
+  isRateLimitReached = computed(() => this.issueResource.error() != null, ...(ngDevMode ? [{
+    debugName: "isRateLimitReached"
+  }] : []));
+  data = computed(() => {
+    if (this.isRateLimitReached()) {
+      return [];
+    }
+    return this.issueResource.value()?.items || [];
+  }, ...(ngDevMode ? [{
+    debugName: "data"
+  }] : []));
+  resultsLength = computed(() => this.issueResource.value()?.total_count || 0, ...(ngDevMode ? [{
+    debugName: "resultsLength"
+  }] : []));
+  handleSort() {
+    this.paginator().pageIndex = 0;
+    this.pageIndex.set(0);
+    this.sortActive.set(this.sort().active);
+    this.sortDirection.set(this.sort().direction);
+  }
+  handlePage() {
+    this.pageIndex.set(this.paginator().pageIndex);
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
@@ -1014,16 +1051,18 @@ class TableHttpExample {
       propertyName: "paginator",
       first: true,
       predicate: MatPaginator,
-      descendants: true
+      descendants: true,
+      isSignal: true
     }, {
       propertyName: "sort",
       first: true,
       predicate: MatSort,
-      descendants: true
+      descendants: true,
+      isSignal: true
     }],
     ngImport: i0,
-    template: "<div class=\"example-container mat-shadow-2\">\n  @if (isLoadingResults || isRateLimitReached) {\n    <div class=\"example-loading-shade\">\n      @if (isLoadingResults) {\n        <mat-spinner></mat-spinner>\n      }\n      @if (isRateLimitReached) {\n        <div class=\"example-rate-limit-reached\">\n          GitHub's API rate limit has been reached. It will be reset in one minute.\n        </div>\n      }\n    </div>\n  }\n\n  <div class=\"example-table-container\">\n\n    <table mat-table [dataSource]=\"data\" class=\"example-table\"\n           matSort matSortActive=\"created\" matSortDisableClear matSortDirection=\"desc\">\n      <!-- Number Column -->\n      <ng-container matColumnDef=\"number\">\n        <th mat-header-cell *matHeaderCellDef>#</th>\n        <td mat-cell *matCellDef=\"let row\">{{row.number}}</td>\n      </ng-container>\n\n      <!-- Title Column -->\n      <ng-container matColumnDef=\"title\">\n        <th mat-header-cell *matHeaderCellDef>Title</th>\n        <td mat-cell *matCellDef=\"let row\">{{row.title}}</td>\n      </ng-container>\n\n      <!-- State Column -->\n      <ng-container matColumnDef=\"state\">\n        <th mat-header-cell *matHeaderCellDef>State</th>\n        <td mat-cell *matCellDef=\"let row\">{{row.state}}</td>\n      </ng-container>\n\n      <!-- Created Column -->\n      <ng-container matColumnDef=\"created\">\n        <th mat-header-cell *matHeaderCellDef mat-sort-header disableClear>\n          Created\n        </th>\n        <td mat-cell *matCellDef=\"let row\">{{row.created_at | date}}</td>\n      </ng-container>\n\n      <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n      <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n    </table>\n  </div>\n\n  <mat-paginator [length]=\"resultsLength\" [pageSize]=\"30\" aria-label=\"Select page of GitHub search results\"></mat-paginator>\n</div>\n",
-    styles: ["/* Structure */\n.example-container {\n  position: relative;\n}\n\n.example-table-container {\n  position: relative;\n  min-height: 200px;\n  max-height: 400px;\n  overflow: auto;\n}\n\ntable {\n  width: 100%;\n}\n\n.example-loading-shade {\n  position: absolute;\n  top: 0;\n  left: 0;\n  bottom: 56px;\n  right: 0;\n  background: rgba(0, 0, 0, 0.15);\n  z-index: 1;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n\n.example-rate-limit-reached {\n  max-width: 360px;\n  text-align: center;\n}\n\n/* Column Widths */\n.mat-column-number,\n.mat-column-state {\n  width: 64px;\n}\n\n.mat-column-created {\n  width: 124px;\n}\n"],
+    template: "<div class=\"example-container mat-shadow-2\">\n  @if (isLoadingResults() || isRateLimitReached()) {\n    <div class=\"example-loading-shade\">\n      @if (isLoadingResults()) {\n        <mat-spinner/>\n      }\n      @if (isRateLimitReached()) {\n        <div class=\"example-rate-limit-reached\">\n          GitHub's API rate limit has been reached. It will be reset in one minute.\n        </div>\n      }\n    </div>\n  }\n\n  <div class=\"example-table-container\">\n    <table\n      mat-table\n      [dataSource]=\"data()\"\n      class=\"example-table\"\n      matSort\n      (matSortChange)=\"handleSort()\"\n      matSortActive=\"created\"\n      matSortDisableClear\n      matSortDirection=\"desc\">\n      <!-- Number Column -->\n      <ng-container matColumnDef=\"number\">\n        <th mat-header-cell *matHeaderCellDef>#</th>\n        <td mat-cell *matCellDef=\"let row\">{{row.number}}</td>\n      </ng-container>\n\n      <!-- Title Column -->\n      <ng-container matColumnDef=\"title\">\n        <th mat-header-cell *matHeaderCellDef>Title</th>\n        <td mat-cell *matCellDef=\"let row\">{{row.title}}</td>\n      </ng-container>\n\n      <!-- State Column -->\n      <ng-container matColumnDef=\"state\">\n        <th mat-header-cell *matHeaderCellDef>State</th>\n        <td mat-cell *matCellDef=\"let row\">{{row.state}}</td>\n      </ng-container>\n\n      <!-- Created Column -->\n      <ng-container matColumnDef=\"created\">\n        <th mat-header-cell *matHeaderCellDef mat-sort-header disableClear>\n          Created\n        </th>\n        <td mat-cell *matCellDef=\"let row\">{{row.created_at | date}}</td>\n      </ng-container>\n\n      <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n      <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n    </table>\n  </div>\n\n  <mat-paginator\n    [length]=\"resultsLength()\"\n    [pageSize]=\"30\"\n    (page)=\"handlePage()\"\n    aria-label=\"Select page of GitHub search results\"></mat-paginator>\n</div>\n",
+    styles: ["/* Structure */\n.example-container {\n  position: relative;\n}\n\n.example-table-container {\n  position: relative;\n  height: 400px;\n  overflow: auto;\n}\n\ntable {\n  width: 100%;\n}\n\n.example-loading-shade {\n  position: absolute;\n  top: 0;\n  left: 0;\n  bottom: 56px;\n  right: 0;\n  background: rgba(0, 0, 0, 0.15);\n  z-index: 1;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n\n.example-rate-limit-reached {\n  max-width: 360px;\n  text-align: center;\n}\n\n/* Column Widths */\n.mat-column-number,\n.mat-column-state {\n  width: 64px;\n}\n\n.mat-column-created {\n  width: 124px;\n}\n"],
     dependencies: [{
       kind: "ngmodule",
       type: MatProgressSpinnerModule
@@ -1125,32 +1164,25 @@ i0.ɵɵngDeclareClassMetadata({
     args: [{
       selector: 'table-http-example',
       imports: [MatProgressSpinnerModule, MatTableModule, MatSortModule, MatPaginatorModule, DatePipe],
-      template: "<div class=\"example-container mat-shadow-2\">\n  @if (isLoadingResults || isRateLimitReached) {\n    <div class=\"example-loading-shade\">\n      @if (isLoadingResults) {\n        <mat-spinner></mat-spinner>\n      }\n      @if (isRateLimitReached) {\n        <div class=\"example-rate-limit-reached\">\n          GitHub's API rate limit has been reached. It will be reset in one minute.\n        </div>\n      }\n    </div>\n  }\n\n  <div class=\"example-table-container\">\n\n    <table mat-table [dataSource]=\"data\" class=\"example-table\"\n           matSort matSortActive=\"created\" matSortDisableClear matSortDirection=\"desc\">\n      <!-- Number Column -->\n      <ng-container matColumnDef=\"number\">\n        <th mat-header-cell *matHeaderCellDef>#</th>\n        <td mat-cell *matCellDef=\"let row\">{{row.number}}</td>\n      </ng-container>\n\n      <!-- Title Column -->\n      <ng-container matColumnDef=\"title\">\n        <th mat-header-cell *matHeaderCellDef>Title</th>\n        <td mat-cell *matCellDef=\"let row\">{{row.title}}</td>\n      </ng-container>\n\n      <!-- State Column -->\n      <ng-container matColumnDef=\"state\">\n        <th mat-header-cell *matHeaderCellDef>State</th>\n        <td mat-cell *matCellDef=\"let row\">{{row.state}}</td>\n      </ng-container>\n\n      <!-- Created Column -->\n      <ng-container matColumnDef=\"created\">\n        <th mat-header-cell *matHeaderCellDef mat-sort-header disableClear>\n          Created\n        </th>\n        <td mat-cell *matCellDef=\"let row\">{{row.created_at | date}}</td>\n      </ng-container>\n\n      <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n      <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n    </table>\n  </div>\n\n  <mat-paginator [length]=\"resultsLength\" [pageSize]=\"30\" aria-label=\"Select page of GitHub search results\"></mat-paginator>\n</div>\n",
-      styles: ["/* Structure */\n.example-container {\n  position: relative;\n}\n\n.example-table-container {\n  position: relative;\n  min-height: 200px;\n  max-height: 400px;\n  overflow: auto;\n}\n\ntable {\n  width: 100%;\n}\n\n.example-loading-shade {\n  position: absolute;\n  top: 0;\n  left: 0;\n  bottom: 56px;\n  right: 0;\n  background: rgba(0, 0, 0, 0.15);\n  z-index: 1;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n\n.example-rate-limit-reached {\n  max-width: 360px;\n  text-align: center;\n}\n\n/* Column Widths */\n.mat-column-number,\n.mat-column-state {\n  width: 64px;\n}\n\n.mat-column-created {\n  width: 124px;\n}\n"]
+      template: "<div class=\"example-container mat-shadow-2\">\n  @if (isLoadingResults() || isRateLimitReached()) {\n    <div class=\"example-loading-shade\">\n      @if (isLoadingResults()) {\n        <mat-spinner/>\n      }\n      @if (isRateLimitReached()) {\n        <div class=\"example-rate-limit-reached\">\n          GitHub's API rate limit has been reached. It will be reset in one minute.\n        </div>\n      }\n    </div>\n  }\n\n  <div class=\"example-table-container\">\n    <table\n      mat-table\n      [dataSource]=\"data()\"\n      class=\"example-table\"\n      matSort\n      (matSortChange)=\"handleSort()\"\n      matSortActive=\"created\"\n      matSortDisableClear\n      matSortDirection=\"desc\">\n      <!-- Number Column -->\n      <ng-container matColumnDef=\"number\">\n        <th mat-header-cell *matHeaderCellDef>#</th>\n        <td mat-cell *matCellDef=\"let row\">{{row.number}}</td>\n      </ng-container>\n\n      <!-- Title Column -->\n      <ng-container matColumnDef=\"title\">\n        <th mat-header-cell *matHeaderCellDef>Title</th>\n        <td mat-cell *matCellDef=\"let row\">{{row.title}}</td>\n      </ng-container>\n\n      <!-- State Column -->\n      <ng-container matColumnDef=\"state\">\n        <th mat-header-cell *matHeaderCellDef>State</th>\n        <td mat-cell *matCellDef=\"let row\">{{row.state}}</td>\n      </ng-container>\n\n      <!-- Created Column -->\n      <ng-container matColumnDef=\"created\">\n        <th mat-header-cell *matHeaderCellDef mat-sort-header disableClear>\n          Created\n        </th>\n        <td mat-cell *matCellDef=\"let row\">{{row.created_at | date}}</td>\n      </ng-container>\n\n      <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n      <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n    </table>\n  </div>\n\n  <mat-paginator\n    [length]=\"resultsLength()\"\n    [pageSize]=\"30\"\n    (page)=\"handlePage()\"\n    aria-label=\"Select page of GitHub search results\"></mat-paginator>\n</div>\n",
+      styles: ["/* Structure */\n.example-container {\n  position: relative;\n}\n\n.example-table-container {\n  position: relative;\n  height: 400px;\n  overflow: auto;\n}\n\ntable {\n  width: 100%;\n}\n\n.example-loading-shade {\n  position: absolute;\n  top: 0;\n  left: 0;\n  bottom: 56px;\n  right: 0;\n  background: rgba(0, 0, 0, 0.15);\n  z-index: 1;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n\n.example-rate-limit-reached {\n  max-width: 360px;\n  text-align: center;\n}\n\n/* Column Widths */\n.mat-column-number,\n.mat-column-state {\n  width: 64px;\n}\n\n.mat-column-created {\n  width: 124px;\n}\n"]
     }]
   }],
   propDecorators: {
     paginator: [{
-      type: ViewChild,
-      args: [MatPaginator]
+      type: i0.ViewChild,
+      args: [i0.forwardRef(() => MatPaginator), {
+        isSignal: true
+      }]
     }],
     sort: [{
-      type: ViewChild,
-      args: [MatSort]
+      type: i0.ViewChild,
+      args: [i0.forwardRef(() => MatSort), {
+        isSignal: true
+      }]
     }]
   }
 });
-class ExampleHttpDatabase {
-  _httpClient;
-  constructor(_httpClient) {
-    this._httpClient = _httpClient;
-  }
-  getRepoIssues(sort, order, page) {
-    const href = 'https://api.github.com/search/issues';
-    const requestUrl = `${href}?q=repo:angular/components&sort=${sort}&order=${order}&page=${page + 1}`;
-    return this._httpClient.get(requestUrl);
-  }
-}
 
 class TableMultipleHeaderFooterExample {
   displayedColumns = ['item', 'cost'];

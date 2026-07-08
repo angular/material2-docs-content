@@ -3,13 +3,12 @@ import { AfterViewInit, AfterContentInit, QueryList } from '@angular/core';
 import * as _angular_material_paginator from '@angular/material/paginator';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource, MatHeaderRowDef, MatRowDef, MatColumnDef, MatNoDataRow, MatTable } from '@angular/material/table';
-import { HttpClient } from '@angular/common/http';
-import { SortDirection, MatSort, Sort } from '@angular/material/sort';
-import { Observable } from 'rxjs';
+import { MatSort, SortDirection, Sort } from '@angular/material/sort';
 import { SelectionModel, DataSource } from '@angular/cdk/collections';
 import { MatButtonToggleGroup } from '@angular/material/button-toggle';
 import { DecimalPipe } from '@angular/common';
 import { CdkDragDrop } from '@angular/cdk/drag-drop';
+import { Observable } from 'rxjs';
 
 interface PeriodicElement$p {
     name: string;
@@ -122,17 +121,20 @@ declare class TableFooterRowExample {
 /**
  * @title Table retrieving data through HTTP
  */
-declare class TableHttpExample implements AfterViewInit {
-    private _httpClient;
-    displayedColumns: string[];
-    exampleDatabase: ExampleHttpDatabase | null;
-    data: GithubIssue[];
-    resultsLength: number;
-    isLoadingResults: boolean;
-    isRateLimitReached: boolean;
-    paginator: MatPaginator;
-    sort: MatSort;
-    ngAfterViewInit(): void;
+declare class TableHttpExample {
+    readonly displayedColumns: string[];
+    readonly paginator: i0.Signal<MatPaginator>;
+    readonly sort: i0.Signal<MatSort>;
+    readonly sortActive: i0.WritableSignal<string>;
+    readonly sortDirection: i0.WritableSignal<SortDirection>;
+    readonly pageIndex: i0.WritableSignal<number>;
+    readonly issueResource: i0.ResourceRef<GithubApi | undefined>;
+    readonly isLoadingResults: i0.Signal<boolean>;
+    readonly isRateLimitReached: i0.Signal<boolean>;
+    readonly data: i0.Signal<GithubIssue[]>;
+    readonly resultsLength: i0.Signal<number>;
+    handleSort(): void;
+    handlePage(): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<TableHttpExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<TableHttpExample, "table-http-example", never, {}, {}, never, never, true, never>;
 }
@@ -145,12 +147,6 @@ interface GithubIssue {
     number: string;
     state: string;
     title: string;
-}
-/** An example database that the data source uses to retrieve data for the table. */
-declare class ExampleHttpDatabase {
-    private _httpClient;
-    constructor(_httpClient: HttpClient);
-    getRepoIssues(sort: string, order: SortDirection, page: number): Observable<GithubApi>;
 }
 
 interface Transaction$1 {
