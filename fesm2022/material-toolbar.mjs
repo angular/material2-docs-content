@@ -295,5 +295,60 @@ i0.ɵɵngDeclareClassMetadata({
   }]
 });
 
-export { ToolbarBasicExample, ToolbarHarnessExample, ToolbarMultirowExample, ToolbarOverviewExample, ToolbarSimpleExample };
+class ToolbarNavbarExample {
+  static ɵfac = i0.ɵɵngDeclareFactory({
+    minVersion: "12.0.0",
+    version: "22.1.0-next.4",
+    ngImport: i0,
+    type: ToolbarNavbarExample,
+    deps: [],
+    target: i0.ɵɵFactoryTarget.Component
+  });
+  static ɵcmp = i0.ɵɵngDeclareComponent({
+    minVersion: "14.0.0",
+    version: "22.1.0-next.4",
+    type: ToolbarNavbarExample,
+    isStandalone: true,
+    selector: "toolbar-navbar-example",
+    ngImport: i0,
+    template: "<mat-toolbar>\n  <span>My App</span>\n\n  <span class=\"example-spacer\"></span>\n\n  <a mat-button>Home</a>\n  <a mat-button>Products</a>\n  <a mat-button>Pricing</a>\n  <a mat-button>About</a>\n</mat-toolbar>\n",
+    styles: [".example-spacer {\n  flex: 1 1 auto;\n}\n"],
+    dependencies: [{
+      kind: "ngmodule",
+      type: MatToolbarModule
+    }, {
+      kind: "component",
+      type: i1.MatToolbar,
+      selector: "mat-toolbar",
+      inputs: ["color"],
+      exportAs: ["matToolbar"]
+    }, {
+      kind: "ngmodule",
+      type: MatButtonModule
+    }, {
+      kind: "component",
+      type: i1$1.MatButton,
+      selector: "    button[matButton], a[matButton], button[mat-button], button[mat-raised-button],    button[mat-flat-button], button[mat-stroked-button], a[mat-button], a[mat-raised-button],    a[mat-flat-button], a[mat-stroked-button]  ",
+      inputs: ["matButton"],
+      exportAs: ["matButton", "matAnchor"]
+    }]
+  });
+}
+i0.ɵɵngDeclareClassMetadata({
+  minVersion: "12.0.0",
+  version: "22.1.0-next.4",
+  ngImport: i0,
+  type: ToolbarNavbarExample,
+  decorators: [{
+    type: Component,
+    args: [{
+      selector: 'toolbar-navbar-example',
+      imports: [MatToolbarModule, MatButtonModule],
+      template: "<mat-toolbar>\n  <span>My App</span>\n\n  <span class=\"example-spacer\"></span>\n\n  <a mat-button>Home</a>\n  <a mat-button>Products</a>\n  <a mat-button>Pricing</a>\n  <a mat-button>About</a>\n</mat-toolbar>\n",
+      styles: [".example-spacer {\n  flex: 1 1 auto;\n}\n"]
+    }]
+  }]
+});
+
+export { ToolbarBasicExample, ToolbarHarnessExample, ToolbarMultirowExample, ToolbarNavbarExample, ToolbarOverviewExample, ToolbarSimpleExample };
 //# sourceMappingURL=material-toolbar.mjs.map
