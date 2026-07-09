@@ -31,7 +31,7 @@ class SidenavAutosizeExample {
   }] : []));
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.0.5",
+    version: "22.0.6",
     ngImport: i0,
     type: SidenavAutosizeExample,
     deps: [],
@@ -39,7 +39,7 @@ class SidenavAutosizeExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "22.0.5",
+    version: "22.0.6",
     type: SidenavAutosizeExample,
     isStandalone: true,
     selector: "sidenav-autosize-example",
@@ -77,7 +77,7 @@ class SidenavAutosizeExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.0.5",
+  version: "22.0.6",
   ngImport: i0,
   type: SidenavAutosizeExample,
   decorators: [{
@@ -94,7 +94,7 @@ i0.ɵɵngDeclareClassMetadata({
 class SidenavBackdropExample {
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.0.5",
+    version: "22.0.6",
     ngImport: i0,
     type: SidenavBackdropExample,
     deps: [],
@@ -102,7 +102,7 @@ class SidenavBackdropExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.0.5",
+    version: "22.0.6",
     type: SidenavBackdropExample,
     isStandalone: true,
     selector: "sidenav-backdrop-example",
@@ -174,7 +174,7 @@ class SidenavBackdropExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.0.5",
+  version: "22.0.6",
   ngImport: i0,
   type: SidenavBackdropExample,
   decorators: [{
@@ -189,7 +189,9 @@ i0.ɵɵngDeclareClassMetadata({
 });
 
 class SidenavDisableCloseExample {
-  sidenav = viewChild.required('sidenav');
+  sidenav = viewChild.required('sidenav', ...(ngDevMode ? [{
+    debugName: "sidenav"
+  }] : []));
   reason = signal('', ...(ngDevMode ? [{
     debugName: "reason"
   }] : []));
@@ -200,7 +202,7 @@ class SidenavDisableCloseExample {
   shouldRun = /(^|.)(stackblitz|webcontainer).(io|com)$/.test(window.location.host);
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.0.5",
+    version: "22.0.6",
     ngImport: i0,
     type: SidenavDisableCloseExample,
     deps: [],
@@ -208,7 +210,7 @@ class SidenavDisableCloseExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "22.0.5",
+    version: "22.0.6",
     type: SidenavDisableCloseExample,
     isStandalone: true,
     selector: "sidenav-disable-close-example",
@@ -254,7 +256,7 @@ class SidenavDisableCloseExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.0.5",
+  version: "22.0.6",
   ngImport: i0,
   type: SidenavDisableCloseExample,
   decorators: [{
@@ -279,7 +281,7 @@ i0.ɵɵngDeclareClassMetadata({
 class SidenavDrawerOverviewExample {
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.0.5",
+    version: "22.0.6",
     ngImport: i0,
     type: SidenavDrawerOverviewExample,
     deps: [],
@@ -287,7 +289,7 @@ class SidenavDrawerOverviewExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.0.5",
+    version: "22.0.6",
     type: SidenavDrawerOverviewExample,
     isStandalone: true,
     selector: "sidenav-drawer-overview-example",
@@ -320,7 +322,7 @@ class SidenavDrawerOverviewExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.0.5",
+  version: "22.0.6",
   ngImport: i0,
   type: SidenavDrawerOverviewExample,
   decorators: [{
@@ -344,7 +346,7 @@ class SidenavFixedExample {
   shouldRun = /(^|.)(stackblitz|webcontainer).(io|com)$/.test(window.location.host);
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.0.5",
+    version: "22.0.6",
     ngImport: i0,
     type: SidenavFixedExample,
     deps: [],
@@ -352,7 +354,7 @@ class SidenavFixedExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "22.0.5",
+    version: "22.0.6",
     type: SidenavFixedExample,
     isStandalone: true,
     selector: "sidenav-fixed-example",
@@ -467,7 +469,7 @@ class SidenavFixedExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.0.5",
+  version: "22.0.6",
   ngImport: i0,
   type: SidenavFixedExample,
   decorators: [{
@@ -488,7 +490,7 @@ class SidenavConfigurableFocusTrapExample {
   shouldRun = /(^|.)(stackblitz|webcontainer).(io|com)$/.test(window.location.host);
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.0.5",
+    version: "22.0.6",
     ngImport: i0,
     type: SidenavConfigurableFocusTrapExample,
     deps: [],
@@ -496,7 +498,7 @@ class SidenavConfigurableFocusTrapExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "22.0.5",
+    version: "22.0.6",
     type: SidenavConfigurableFocusTrapExample,
     isStandalone: true,
     selector: "sidenav-configurable-focus-trap-example",
@@ -573,7 +575,7 @@ class SidenavConfigurableFocusTrapExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.0.5",
+  version: "22.0.6",
   ngImport: i0,
   type: SidenavConfigurableFocusTrapExample,
   decorators: [{
@@ -604,7 +606,7 @@ class SidenavOpenCloseExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.0.5",
+    version: "22.0.6",
     ngImport: i0,
     type: SidenavOpenCloseExample,
     deps: [],
@@ -612,7 +614,7 @@ class SidenavOpenCloseExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "22.0.5",
+    version: "22.0.6",
     type: SidenavOpenCloseExample,
     isStandalone: true,
     selector: "sidenav-open-close-example",
@@ -675,7 +677,7 @@ class SidenavOpenCloseExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.0.5",
+  version: "22.0.6",
   ngImport: i0,
   type: SidenavOpenCloseExample,
   decorators: [{
@@ -693,7 +695,7 @@ class SidenavOverviewExample {
   shouldRun = /(^|.)(stackblitz|webcontainer).(io|com)$/.test(window.location.host);
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.0.5",
+    version: "22.0.6",
     ngImport: i0,
     type: SidenavOverviewExample,
     deps: [],
@@ -701,7 +703,7 @@ class SidenavOverviewExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "22.0.5",
+    version: "22.0.6",
     type: SidenavOverviewExample,
     isStandalone: true,
     selector: "sidenav-overview-example",
@@ -731,7 +733,7 @@ class SidenavOverviewExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.0.5",
+  version: "22.0.6",
   ngImport: i0,
   type: SidenavOverviewExample,
   decorators: [{
@@ -749,7 +751,7 @@ class SidenavPositionExample {
   shouldRun = /(^|.)(stackblitz|webcontainer).(io|com)$/.test(window.location.host);
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.0.5",
+    version: "22.0.6",
     ngImport: i0,
     type: SidenavPositionExample,
     deps: [],
@@ -757,7 +759,7 @@ class SidenavPositionExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "22.0.5",
+    version: "22.0.6",
     type: SidenavPositionExample,
     isStandalone: true,
     selector: "sidenav-position-example",
@@ -783,7 +785,7 @@ class SidenavPositionExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.0.5",
+  version: "22.0.6",
   ngImport: i0,
   type: SidenavPositionExample,
   decorators: [{
@@ -826,7 +828,7 @@ class SidenavResponsiveExample {
   shouldRun = /(^|.)(stackblitz|webcontainer).(io|com)$/.test(window.location.host);
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.0.5",
+    version: "22.0.6",
     ngImport: i0,
     type: SidenavResponsiveExample,
     deps: [],
@@ -834,7 +836,7 @@ class SidenavResponsiveExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "22.0.5",
+    version: "22.0.6",
     type: SidenavResponsiveExample,
     isStandalone: true,
     selector: "sidenav-responsive-example",
@@ -904,7 +906,7 @@ class SidenavResponsiveExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.0.5",
+  version: "22.0.6",
   ngImport: i0,
   type: SidenavResponsiveExample,
   decorators: [{
@@ -922,7 +924,7 @@ i0.ɵɵngDeclareClassMetadata({
 class SidenavHarnessExample {
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.0.5",
+    version: "22.0.6",
     ngImport: i0,
     type: SidenavHarnessExample,
     deps: [],
@@ -930,7 +932,7 @@ class SidenavHarnessExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.0.5",
+    version: "22.0.6",
     type: SidenavHarnessExample,
     isStandalone: true,
     selector: "sidenav-harness-example",
@@ -962,7 +964,7 @@ class SidenavHarnessExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.0.5",
+  version: "22.0.6",
   ngImport: i0,
   type: SidenavHarnessExample,
   decorators: [{

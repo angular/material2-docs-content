@@ -51,7 +51,7 @@ class CdkTreeFlatChildrenAccessorExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.0.5",
+    version: "22.0.6",
     ngImport: i0,
     type: CdkTreeFlatChildrenAccessorExample,
     deps: [],
@@ -59,7 +59,7 @@ class CdkTreeFlatChildrenAccessorExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.0.5",
+    version: "22.0.6",
     type: CdkTreeFlatChildrenAccessorExample,
     isStandalone: true,
     selector: "cdk-tree-flat-children-accessor-example",
@@ -125,7 +125,7 @@ class CdkTreeFlatChildrenAccessorExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.0.5",
+  version: "22.0.6",
   ngImport: i0,
   type: CdkTreeFlatChildrenAccessorExample,
   decorators: [{
@@ -192,7 +192,7 @@ class CdkTreeFlatLevelAccessorExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.0.5",
+    version: "22.0.6",
     ngImport: i0,
     type: CdkTreeFlatLevelAccessorExample,
     deps: [],
@@ -200,7 +200,7 @@ class CdkTreeFlatLevelAccessorExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.0.5",
+    version: "22.0.6",
     type: CdkTreeFlatLevelAccessorExample,
     isStandalone: true,
     selector: "cdk-tree-flat-level-accessor-example",
@@ -266,7 +266,7 @@ class CdkTreeFlatLevelAccessorExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.0.5",
+  version: "22.0.6",
   ngImport: i0,
   type: CdkTreeFlatLevelAccessorExample,
   decorators: [{
@@ -356,7 +356,7 @@ class CdkTreeFlatExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.0.5",
+    version: "22.0.6",
     ngImport: i0,
     type: CdkTreeFlatExample,
     deps: [],
@@ -364,7 +364,7 @@ class CdkTreeFlatExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.0.5",
+    version: "22.0.6",
     type: CdkTreeFlatExample,
     isStandalone: true,
     selector: "cdk-tree-flat-example",
@@ -424,7 +424,7 @@ class CdkTreeFlatExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.0.5",
+  version: "22.0.6",
   ngImport: i0,
   type: CdkTreeFlatExample,
   decorators: [{
@@ -503,7 +503,7 @@ class CdkTreeNestedLevelAccessorExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.0.5",
+    version: "22.0.6",
     ngImport: i0,
     type: CdkTreeNestedLevelAccessorExample,
     deps: [],
@@ -511,7 +511,7 @@ class CdkTreeNestedLevelAccessorExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.0.5",
+    version: "22.0.6",
     type: CdkTreeNestedLevelAccessorExample,
     isStandalone: true,
     selector: "cdk-tree-nested-level-accessor-example",
@@ -574,7 +574,7 @@ class CdkTreeNestedLevelAccessorExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.0.5",
+  version: "22.0.6",
   ngImport: i0,
   type: CdkTreeNestedLevelAccessorExample,
   decorators: [{
@@ -668,7 +668,7 @@ class CdkTreeNestedChildrenAccessorExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.0.5",
+    version: "22.0.6",
     ngImport: i0,
     type: CdkTreeNestedChildrenAccessorExample,
     deps: [],
@@ -676,7 +676,7 @@ class CdkTreeNestedChildrenAccessorExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.0.5",
+    version: "22.0.6",
     type: CdkTreeNestedChildrenAccessorExample,
     isStandalone: true,
     selector: "cdk-tree-nested-children-accessor-example",
@@ -739,7 +739,7 @@ class CdkTreeNestedChildrenAccessorExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.0.5",
+  version: "22.0.6",
   ngImport: i0,
   type: CdkTreeNestedChildrenAccessorExample,
   decorators: [{
@@ -792,7 +792,7 @@ class CdkTreeNestedExample {
   hasChild = (_, node) => !!node.children && node.children.length > 0;
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.0.5",
+    version: "22.0.6",
     ngImport: i0,
     type: CdkTreeNestedExample,
     deps: [],
@@ -800,7 +800,7 @@ class CdkTreeNestedExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.0.5",
+    version: "22.0.6",
     type: CdkTreeNestedExample,
     isStandalone: true,
     selector: "cdk-tree-nested-example",
@@ -857,7 +857,7 @@ class CdkTreeNestedExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.0.5",
+  version: "22.0.6",
   ngImport: i0,
   type: CdkTreeNestedExample,
   decorators: [{
@@ -1055,7 +1055,7 @@ class CdkTreeComplexExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.0.5",
+    version: "22.0.6",
     ngImport: i0,
     type: CdkTreeComplexExample,
     deps: [],
@@ -1063,7 +1063,7 @@ class CdkTreeComplexExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "22.0.5",
+    version: "22.0.6",
     type: CdkTreeComplexExample,
     isStandalone: true,
     selector: "cdk-tree-complex-example",
@@ -1136,7 +1136,7 @@ class CdkTreeComplexExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.0.5",
+  version: "22.0.6",
   ngImport: i0,
   type: CdkTreeComplexExample,
   decorators: [{
@@ -1397,7 +1397,7 @@ class CdkTreeCustomKeyManagerExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.0.5",
+    version: "22.0.6",
     ngImport: i0,
     type: CdkTreeCustomKeyManagerExample,
     deps: [],
@@ -1405,7 +1405,7 @@ class CdkTreeCustomKeyManagerExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.0.5",
+    version: "22.0.6",
     type: CdkTreeCustomKeyManagerExample,
     isStandalone: true,
     selector: "cdk-tree-custom-key-manager-example",
@@ -1466,7 +1466,7 @@ class CdkTreeCustomKeyManagerExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.0.5",
+  version: "22.0.6",
   ngImport: i0,
   type: CdkTreeCustomKeyManagerExample,
   decorators: [{
