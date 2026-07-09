@@ -12,7 +12,7 @@ class RadioNgModelExample {
   seasons = ['Winter', 'Spring', 'Summer', 'Autumn'];
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.1.0-next.4",
+    version: "22.1.0-next.5",
     ngImport: i0,
     type: RadioNgModelExample,
     deps: [],
@@ -20,7 +20,7 @@ class RadioNgModelExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "22.1.0-next.4",
+    version: "22.1.0-next.5",
     type: RadioNgModelExample,
     isStandalone: true,
     selector: "radio-ng-model-example",
@@ -63,7 +63,7 @@ class RadioNgModelExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.1.0-next.4",
+  version: "22.1.0-next.5",
   ngImport: i0,
   type: RadioNgModelExample,
   decorators: [{
@@ -80,7 +80,7 @@ i0.ɵɵngDeclareClassMetadata({
 class RadioOverviewExample {
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.1.0-next.4",
+    version: "22.1.0-next.5",
     ngImport: i0,
     type: RadioOverviewExample,
     deps: [],
@@ -88,7 +88,7 @@ class RadioOverviewExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.1.0-next.4",
+    version: "22.1.0-next.5",
     type: RadioOverviewExample,
     isStandalone: true,
     selector: "radio-overview-example",
@@ -117,7 +117,7 @@ class RadioOverviewExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.1.0-next.4",
+  version: "22.1.0-next.5",
   ngImport: i0,
   type: RadioOverviewExample,
   decorators: [{
@@ -134,7 +134,7 @@ i0.ɵɵngDeclareClassMetadata({
 class RadioHarnessExample {
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.1.0-next.4",
+    version: "22.1.0-next.5",
     ngImport: i0,
     type: RadioHarnessExample,
     deps: [],
@@ -142,7 +142,7 @@ class RadioHarnessExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.1.0-next.4",
+    version: "22.1.0-next.5",
     type: RadioHarnessExample,
     isStandalone: true,
     selector: "radio-harness-example",
@@ -170,7 +170,7 @@ class RadioHarnessExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.1.0-next.4",
+  version: "22.1.0-next.5",
   ngImport: i0,
   type: RadioHarnessExample,
   decorators: [{

@@ -14,7 +14,7 @@ import { MatCardModule } from '@angular/material/card';
 class ProgressBarBufferExample {
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.1.0-next.4",
+    version: "22.1.0-next.5",
     ngImport: i0,
     type: ProgressBarBufferExample,
     deps: [],
@@ -22,7 +22,7 @@ class ProgressBarBufferExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.1.0-next.4",
+    version: "22.1.0-next.5",
     type: ProgressBarBufferExample,
     isStandalone: true,
     selector: "progress-bar-buffer-example",
@@ -43,7 +43,7 @@ class ProgressBarBufferExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.1.0-next.4",
+  version: "22.1.0-next.5",
   ngImport: i0,
   type: ProgressBarBufferExample,
   decorators: [{
@@ -68,7 +68,7 @@ class ProgressBarConfigurableExample {
   }] : []));
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.1.0-next.4",
+    version: "22.1.0-next.5",
     ngImport: i0,
     type: ProgressBarConfigurableExample,
     deps: [],
@@ -76,7 +76,7 @@ class ProgressBarConfigurableExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "22.1.0-next.4",
+    version: "22.1.0-next.5",
     type: ProgressBarConfigurableExample,
     isStandalone: true,
     selector: "progress-bar-configurable-example",
@@ -166,7 +166,7 @@ class ProgressBarConfigurableExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.1.0-next.4",
+  version: "22.1.0-next.5",
   ngImport: i0,
   type: ProgressBarConfigurableExample,
   decorators: [{
@@ -183,7 +183,7 @@ i0.ɵɵngDeclareClassMetadata({
 class ProgressBarDeterminateExample {
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.1.0-next.4",
+    version: "22.1.0-next.5",
     ngImport: i0,
     type: ProgressBarDeterminateExample,
     deps: [],
@@ -191,7 +191,7 @@ class ProgressBarDeterminateExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.1.0-next.4",
+    version: "22.1.0-next.5",
     type: ProgressBarDeterminateExample,
     isStandalone: true,
     selector: "progress-bar-determinate-example",
@@ -212,7 +212,7 @@ class ProgressBarDeterminateExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.1.0-next.4",
+  version: "22.1.0-next.5",
   ngImport: i0,
   type: ProgressBarDeterminateExample,
   decorators: [{
@@ -228,7 +228,7 @@ i0.ɵɵngDeclareClassMetadata({
 class ProgressBarIndeterminateExample {
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.1.0-next.4",
+    version: "22.1.0-next.5",
     ngImport: i0,
     type: ProgressBarIndeterminateExample,
     deps: [],
@@ -236,7 +236,7 @@ class ProgressBarIndeterminateExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.1.0-next.4",
+    version: "22.1.0-next.5",
     type: ProgressBarIndeterminateExample,
     isStandalone: true,
     selector: "progress-bar-indeterminate-example",
@@ -257,7 +257,7 @@ class ProgressBarIndeterminateExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.1.0-next.4",
+  version: "22.1.0-next.5",
   ngImport: i0,
   type: ProgressBarIndeterminateExample,
   decorators: [{
@@ -273,7 +273,7 @@ i0.ɵɵngDeclareClassMetadata({
 class ProgressBarQueryExample {
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.1.0-next.4",
+    version: "22.1.0-next.5",
     ngImport: i0,
     type: ProgressBarQueryExample,
     deps: [],
@@ -281,7 +281,7 @@ class ProgressBarQueryExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.1.0-next.4",
+    version: "22.1.0-next.5",
     type: ProgressBarQueryExample,
     isStandalone: true,
     selector: "progress-bar-query-example",
@@ -302,7 +302,7 @@ class ProgressBarQueryExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.1.0-next.4",
+  version: "22.1.0-next.5",
   ngImport: i0,
   type: ProgressBarQueryExample,
   decorators: [{
@@ -321,7 +321,7 @@ class ProgressBarHarnessExample {
   }] : []));
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.1.0-next.4",
+    version: "22.1.0-next.5",
     ngImport: i0,
     type: ProgressBarHarnessExample,
     deps: [],
@@ -329,7 +329,7 @@ class ProgressBarHarnessExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.1.0-next.4",
+    version: "22.1.0-next.5",
     type: ProgressBarHarnessExample,
     isStandalone: true,
     selector: "progress-bar-harness-example",
@@ -350,7 +350,7 @@ class ProgressBarHarnessExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.1.0-next.4",
+  version: "22.1.0-next.5",
   ngImport: i0,
   type: ProgressBarHarnessExample,
   decorators: [{

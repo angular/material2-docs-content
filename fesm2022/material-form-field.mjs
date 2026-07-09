@@ -25,7 +25,7 @@ import { MatButtonModule } from '@angular/material/button';
 class FormFieldAppearanceExample {
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.1.0-next.4",
+    version: "22.1.0-next.5",
     ngImport: i0,
     type: FormFieldAppearanceExample,
     deps: [],
@@ -33,7 +33,7 @@ class FormFieldAppearanceExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.1.0-next.4",
+    version: "22.1.0-next.5",
     type: FormFieldAppearanceExample,
     isStandalone: true,
     selector: "form-field-appearance-example",
@@ -85,7 +85,7 @@ class FormFieldAppearanceExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.1.0-next.4",
+  version: "22.1.0-next.5",
   ngImport: i0,
   type: FormFieldAppearanceExample,
   decorators: [{
@@ -104,7 +104,7 @@ class FormFieldCustomControlExample {
   });
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.1.0-next.4",
+    version: "22.1.0-next.5",
     ngImport: i0,
     type: FormFieldCustomControlExample,
     deps: [],
@@ -112,7 +112,7 @@ class FormFieldCustomControlExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.1.0-next.4",
+    version: "22.1.0-next.5",
     type: FormFieldCustomControlExample,
     isStandalone: true,
     selector: "form-field-custom-control-example",
@@ -201,7 +201,7 @@ class FormFieldCustomControlExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.1.0-next.4",
+  version: "22.1.0-next.5",
   ngImport: i0,
   type: FormFieldCustomControlExample,
   decorators: [{
@@ -225,9 +225,15 @@ class MyTel {
 }
 class MyTelInput {
   static nextId = 0;
-  areaInput = viewChild.required('area');
-  exchangeInput = viewChild.required('exchange');
-  subscriberInput = viewChild.required('subscriber');
+  areaInput = viewChild.required('area', ...(ngDevMode ? [{
+    debugName: "areaInput"
+  }] : []));
+  exchangeInput = viewChild.required('exchange', ...(ngDevMode ? [{
+    debugName: "exchangeInput"
+  }] : []));
+  subscriberInput = viewChild.required('subscriber', ...(ngDevMode ? [{
+    debugName: "subscriberInput"
+  }] : []));
   ngControl = inject(NgControl, {
     optional: true,
     self: true
@@ -422,7 +428,7 @@ class MyTelInput {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.1.0-next.4",
+    version: "22.1.0-next.5",
     ngImport: i0,
     type: MyTelInput,
     deps: [],
@@ -430,7 +436,7 @@ class MyTelInput {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.2.0",
-    version: "22.1.0-next.4",
+    version: "22.1.0-next.5",
     type: MyTelInput,
     isStandalone: true,
     selector: "example-tel-input",
@@ -542,7 +548,7 @@ class MyTelInput {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.1.0-next.4",
+  version: "22.1.0-next.5",
   ngImport: i0,
   type: MyTelInput,
   decorators: [{
@@ -647,7 +653,7 @@ class FormFieldErrorExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.1.0-next.4",
+    version: "22.1.0-next.5",
     ngImport: i0,
     type: FormFieldErrorExample,
     deps: [],
@@ -655,7 +661,7 @@ class FormFieldErrorExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "22.1.0-next.4",
+    version: "22.1.0-next.5",
     type: FormFieldErrorExample,
     isStandalone: true,
     selector: "form-field-error-example",
@@ -720,7 +726,7 @@ class FormFieldErrorExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.1.0-next.4",
+  version: "22.1.0-next.5",
   ngImport: i0,
   type: FormFieldErrorExample,
   decorators: [{
@@ -739,7 +745,7 @@ class FormFieldHarnessExample {
   requiredControl = new FormControl('Initial value', [Validators.required]);
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.1.0-next.4",
+    version: "22.1.0-next.5",
     ngImport: i0,
     type: FormFieldHarnessExample,
     deps: [],
@@ -747,7 +753,7 @@ class FormFieldHarnessExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.1.0-next.4",
+    version: "22.1.0-next.5",
     type: FormFieldHarnessExample,
     isStandalone: true,
     selector: "form-field-harness-example",
@@ -807,7 +813,7 @@ class FormFieldHarnessExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.1.0-next.4",
+  version: "22.1.0-next.5",
   ngImport: i0,
   type: FormFieldHarnessExample,
   decorators: [{
@@ -829,7 +835,7 @@ class FormFieldHintExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.1.0-next.4",
+    version: "22.1.0-next.5",
     ngImport: i0,
     type: FormFieldHintExample,
     deps: [],
@@ -837,7 +843,7 @@ class FormFieldHintExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.1.0-next.4",
+    version: "22.1.0-next.5",
     type: FormFieldHintExample,
     isStandalone: true,
     selector: "form-field-hint-example",
@@ -893,7 +899,7 @@ class FormFieldHintExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.1.0-next.4",
+  version: "22.1.0-next.5",
   ngImport: i0,
   type: FormFieldHintExample,
   decorators: [{
@@ -920,7 +926,7 @@ class FormFieldLabelExample {
   });
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.1.0-next.4",
+    version: "22.1.0-next.5",
     ngImport: i0,
     type: FormFieldLabelExample,
     deps: [],
@@ -928,7 +934,7 @@ class FormFieldLabelExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.1.0-next.4",
+    version: "22.1.0-next.5",
     type: FormFieldLabelExample,
     isStandalone: true,
     selector: "form-field-label-example",
@@ -1047,7 +1053,7 @@ class FormFieldLabelExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.1.0-next.4",
+  version: "22.1.0-next.5",
   ngImport: i0,
   type: FormFieldLabelExample,
   decorators: [{
@@ -1064,7 +1070,7 @@ i0.ɵɵngDeclareClassMetadata({
 class FormFieldOverviewExample {
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.1.0-next.4",
+    version: "22.1.0-next.5",
     ngImport: i0,
     type: FormFieldOverviewExample,
     deps: [],
@@ -1072,7 +1078,7 @@ class FormFieldOverviewExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.1.0-next.4",
+    version: "22.1.0-next.5",
     type: FormFieldOverviewExample,
     isStandalone: true,
     selector: "form-field-overview-example",
@@ -1123,7 +1129,7 @@ class FormFieldOverviewExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.1.0-next.4",
+  version: "22.1.0-next.5",
   ngImport: i0,
   type: FormFieldOverviewExample,
   decorators: [{
@@ -1147,7 +1153,7 @@ class FormFieldPrefixSuffixExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.1.0-next.4",
+    version: "22.1.0-next.5",
     ngImport: i0,
     type: FormFieldPrefixSuffixExample,
     deps: [],
@@ -1155,7 +1161,7 @@ class FormFieldPrefixSuffixExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.1.0-next.4",
+    version: "22.1.0-next.5",
     type: FormFieldPrefixSuffixExample,
     isStandalone: true,
     selector: "form-field-prefix-suffix-example",
@@ -1216,7 +1222,7 @@ class FormFieldPrefixSuffixExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.1.0-next.4",
+  version: "22.1.0-next.5",
   ngImport: i0,
   type: FormFieldPrefixSuffixExample,
   decorators: [{

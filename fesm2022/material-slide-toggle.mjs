@@ -21,7 +21,7 @@ class SlideToggleConfigurableExample {
   }] : []));
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.1.0-next.4",
+    version: "22.1.0-next.5",
     ngImport: i0,
     type: SlideToggleConfigurableExample,
     deps: [],
@@ -29,7 +29,7 @@ class SlideToggleConfigurableExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.1.0-next.4",
+    version: "22.1.0-next.5",
     type: SlideToggleConfigurableExample,
     isStandalone: true,
     selector: "slide-toggle-configurable-example",
@@ -91,7 +91,7 @@ class SlideToggleConfigurableExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.1.0-next.4",
+  version: "22.1.0-next.5",
   ngImport: i0,
   type: SlideToggleConfigurableExample,
   decorators: [{
@@ -119,7 +119,7 @@ class SlideToggleFormsExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.1.0-next.4",
+    version: "22.1.0-next.5",
     ngImport: i0,
     type: SlideToggleFormsExample,
     deps: [],
@@ -127,7 +127,7 @@ class SlideToggleFormsExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.1.0-next.4",
+    version: "22.1.0-next.5",
     type: SlideToggleFormsExample,
     isStandalone: true,
     selector: "slide-toggle-forms-example",
@@ -208,7 +208,7 @@ class SlideToggleFormsExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.1.0-next.4",
+  version: "22.1.0-next.5",
   ngImport: i0,
   type: SlideToggleFormsExample,
   decorators: [{
@@ -225,7 +225,7 @@ i0.ɵɵngDeclareClassMetadata({
 class SlideToggleOverviewExample {
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.1.0-next.4",
+    version: "22.1.0-next.5",
     ngImport: i0,
     type: SlideToggleOverviewExample,
     deps: [],
@@ -233,7 +233,7 @@ class SlideToggleOverviewExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.1.0-next.4",
+    version: "22.1.0-next.5",
     type: SlideToggleOverviewExample,
     isStandalone: true,
     selector: "slide-toggle-overview-example",
@@ -254,7 +254,7 @@ class SlideToggleOverviewExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.1.0-next.4",
+  version: "22.1.0-next.5",
   ngImport: i0,
   type: SlideToggleOverviewExample,
   decorators: [{
@@ -274,7 +274,7 @@ class SlideToggleHarnessExample {
   ctrl = new FormControl(true);
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.1.0-next.4",
+    version: "22.1.0-next.5",
     ngImport: i0,
     type: SlideToggleHarnessExample,
     deps: [],
@@ -282,7 +282,7 @@ class SlideToggleHarnessExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.1.0-next.4",
+    version: "22.1.0-next.5",
     type: SlideToggleHarnessExample,
     isStandalone: true,
     selector: "slide-toggle-harness-example",
@@ -320,7 +320,7 @@ class SlideToggleHarnessExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.1.0-next.4",
+  version: "22.1.0-next.5",
   ngImport: i0,
   type: SlideToggleHarnessExample,
   decorators: [{
@@ -336,7 +336,7 @@ i0.ɵɵngDeclareClassMetadata({
 class SlideToggleFullWidthExample {
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.1.0-next.4",
+    version: "22.1.0-next.5",
     ngImport: i0,
     type: SlideToggleFullWidthExample,
     deps: [],
@@ -344,7 +344,7 @@ class SlideToggleFullWidthExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.1.0-next.4",
+    version: "22.1.0-next.5",
     type: SlideToggleFullWidthExample,
     isStandalone: true,
     selector: "slide-toggle-full-width-example",
@@ -363,7 +363,7 @@ class SlideToggleFullWidthExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.1.0-next.4",
+  version: "22.1.0-next.5",
   ngImport: i0,
   type: SlideToggleFullWidthExample,
   decorators: [{
