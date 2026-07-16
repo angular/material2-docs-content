@@ -11,7 +11,7 @@ class CdkVirtualScrollAppendOnlyExample {
   }).map((_, i) => `Item #${i}`);
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.0.6",
+    version: "22.0.7",
     ngImport: i0,
     type: CdkVirtualScrollAppendOnlyExample,
     deps: [],
@@ -19,7 +19,7 @@ class CdkVirtualScrollAppendOnlyExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.0.6",
+    version: "22.0.7",
     type: CdkVirtualScrollAppendOnlyExample,
     isStandalone: true,
     selector: "cdk-virtual-scroll-append-only-example",
@@ -50,7 +50,7 @@ class CdkVirtualScrollAppendOnlyExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.0.6",
+  version: "22.0.7",
   ngImport: i0,
   type: CdkVirtualScrollAppendOnlyExample,
   decorators: [{
@@ -70,7 +70,7 @@ class CdkVirtualScrollContextExample {
   }).map((_, i) => `Item #${i}`);
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.0.6",
+    version: "22.0.7",
     ngImport: i0,
     type: CdkVirtualScrollContextExample,
     deps: [],
@@ -78,7 +78,7 @@ class CdkVirtualScrollContextExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.0.6",
+    version: "22.0.7",
     type: CdkVirtualScrollContextExample,
     isStandalone: true,
     selector: "cdk-virtual-scroll-context-example",
@@ -109,7 +109,7 @@ class CdkVirtualScrollContextExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.0.6",
+  version: "22.0.7",
   ngImport: i0,
   type: CdkVirtualScrollContextExample,
   decorators: [{
@@ -134,7 +134,7 @@ class CdkVirtualScrollCustomStrategyExample {
   }).map((_, i) => `Item #${i}`);
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.0.6",
+    version: "22.0.7",
     ngImport: i0,
     type: CdkVirtualScrollCustomStrategyExample,
     deps: [],
@@ -142,7 +142,7 @@ class CdkVirtualScrollCustomStrategyExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.0.6",
+    version: "22.0.7",
     type: CdkVirtualScrollCustomStrategyExample,
     isStandalone: true,
     selector: "cdk-virtual-scroll-custom-strategy-example",
@@ -172,7 +172,7 @@ class CdkVirtualScrollCustomStrategyExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.0.6",
+  version: "22.0.7",
   ngImport: i0,
   type: CdkVirtualScrollCustomStrategyExample,
   decorators: [{
@@ -194,7 +194,7 @@ class CdkVirtualScrollDataSourceExample {
   ds = new MyDataSource();
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.0.6",
+    version: "22.0.7",
     ngImport: i0,
     type: CdkVirtualScrollDataSourceExample,
     deps: [],
@@ -202,7 +202,7 @@ class CdkVirtualScrollDataSourceExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.0.6",
+    version: "22.0.7",
     type: CdkVirtualScrollDataSourceExample,
     isStandalone: true,
     selector: "cdk-virtual-scroll-data-source-example",
@@ -233,7 +233,7 @@ class CdkVirtualScrollDataSourceExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.0.6",
+  version: "22.0.7",
   ngImport: i0,
   type: CdkVirtualScrollDataSourceExample,
   decorators: [{
@@ -439,7 +439,7 @@ class CdkVirtualScrollDlExample {
   }];
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.0.6",
+    version: "22.0.7",
     ngImport: i0,
     type: CdkVirtualScrollDlExample,
     deps: [],
@@ -447,7 +447,7 @@ class CdkVirtualScrollDlExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.0.6",
+    version: "22.0.7",
     type: CdkVirtualScrollDlExample,
     isStandalone: true,
     selector: "cdk-virtual-scroll-dl-example",
@@ -478,7 +478,7 @@ class CdkVirtualScrollDlExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.0.6",
+  version: "22.0.7",
   ngImport: i0,
   type: CdkVirtualScrollDlExample,
   decorators: [{
@@ -498,7 +498,7 @@ class CdkVirtualScrollFixedBufferExample {
   }).map((_, i) => `Item #${i}`);
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.0.6",
+    version: "22.0.7",
     ngImport: i0,
     type: CdkVirtualScrollFixedBufferExample,
     deps: [],
@@ -506,7 +506,7 @@ class CdkVirtualScrollFixedBufferExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.0.6",
+    version: "22.0.7",
     type: CdkVirtualScrollFixedBufferExample,
     isStandalone: true,
     selector: "cdk-virtual-scroll-fixed-buffer-example",
@@ -537,7 +537,7 @@ class CdkVirtualScrollFixedBufferExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.0.6",
+  version: "22.0.7",
   ngImport: i0,
   type: CdkVirtualScrollFixedBufferExample,
   decorators: [{
@@ -557,7 +557,7 @@ class CdkVirtualScrollHorizontalExample {
   }).map((_, i) => `Item #${i}`);
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.0.6",
+    version: "22.0.7",
     ngImport: i0,
     type: CdkVirtualScrollHorizontalExample,
     deps: [],
@@ -565,7 +565,7 @@ class CdkVirtualScrollHorizontalExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.0.6",
+    version: "22.0.7",
     type: CdkVirtualScrollHorizontalExample,
     isStandalone: true,
     selector: "cdk-virtual-scroll-horizontal-example",
@@ -597,7 +597,7 @@ class CdkVirtualScrollHorizontalExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.0.6",
+  version: "22.0.7",
   ngImport: i0,
   type: CdkVirtualScrollHorizontalExample,
   decorators: [{
@@ -618,7 +618,7 @@ class CdkVirtualScrollOverviewExample {
   }).map((_, i) => `Item #${i}`);
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.0.6",
+    version: "22.0.7",
     ngImport: i0,
     type: CdkVirtualScrollOverviewExample,
     deps: [],
@@ -626,7 +626,7 @@ class CdkVirtualScrollOverviewExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.0.6",
+    version: "22.0.7",
     type: CdkVirtualScrollOverviewExample,
     isStandalone: true,
     selector: "cdk-virtual-scroll-overview-example",
@@ -657,7 +657,7 @@ class CdkVirtualScrollOverviewExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.0.6",
+  version: "22.0.7",
   ngImport: i0,
   type: CdkVirtualScrollOverviewExample,
   decorators: [{
@@ -677,7 +677,7 @@ class CdkVirtualScrollParentScrollingExample {
   }).map((_, i) => `Item #${i}`);
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.0.6",
+    version: "22.0.7",
     ngImport: i0,
     type: CdkVirtualScrollParentScrollingExample,
     deps: [],
@@ -685,7 +685,7 @@ class CdkVirtualScrollParentScrollingExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.0.6",
+    version: "22.0.7",
     type: CdkVirtualScrollParentScrollingExample,
     isStandalone: true,
     selector: "cdk-virtual-scroll-parent-scrolling-example",
@@ -720,7 +720,7 @@ class CdkVirtualScrollParentScrollingExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.0.6",
+  version: "22.0.7",
   ngImport: i0,
   type: CdkVirtualScrollParentScrollingExample,
   decorators: [{
@@ -740,7 +740,7 @@ class CdkVirtualScrollTemplateCacheExample {
   }).map((_, i) => `Item #${i}`);
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.0.6",
+    version: "22.0.7",
     ngImport: i0,
     type: CdkVirtualScrollTemplateCacheExample,
     deps: [],
@@ -748,7 +748,7 @@ class CdkVirtualScrollTemplateCacheExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.0.6",
+    version: "22.0.7",
     type: CdkVirtualScrollTemplateCacheExample,
     isStandalone: true,
     selector: "cdk-virtual-scroll-template-cache-example",
@@ -779,7 +779,7 @@ class CdkVirtualScrollTemplateCacheExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.0.6",
+  version: "22.0.7",
   ngImport: i0,
   type: CdkVirtualScrollTemplateCacheExample,
   decorators: [{
@@ -802,7 +802,7 @@ class CdkVirtualScrollWindowScrollingExample {
   }).map((_, i) => `Item #${i}`);
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.0.6",
+    version: "22.0.7",
     ngImport: i0,
     type: CdkVirtualScrollWindowScrollingExample,
     deps: [],
@@ -810,7 +810,7 @@ class CdkVirtualScrollWindowScrollingExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "22.0.6",
+    version: "22.0.7",
     type: CdkVirtualScrollWindowScrollingExample,
     isStandalone: true,
     selector: "cdk-virtual-scroll-window-scrolling-example",
@@ -854,7 +854,7 @@ class CdkVirtualScrollWindowScrollingExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.0.6",
+  version: "22.0.7",
   ngImport: i0,
   type: CdkVirtualScrollWindowScrollingExample,
   decorators: [{

@@ -10,7 +10,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 class ButtonToggleAppearanceExample {
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.0.6",
+    version: "22.0.7",
     ngImport: i0,
     type: ButtonToggleAppearanceExample,
     deps: [],
@@ -18,7 +18,7 @@ class ButtonToggleAppearanceExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.0.6",
+    version: "22.0.7",
     type: ButtonToggleAppearanceExample,
     isStandalone: true,
     selector: "button-toggle-appearance-example",
@@ -47,7 +47,7 @@ class ButtonToggleAppearanceExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.0.6",
+  version: "22.0.7",
   ngImport: i0,
   type: ButtonToggleAppearanceExample,
   decorators: [{
@@ -64,7 +64,7 @@ i0.ɵɵngDeclareClassMetadata({
 class ButtonToggleOverviewExample {
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.0.6",
+    version: "22.0.7",
     ngImport: i0,
     type: ButtonToggleOverviewExample,
     deps: [],
@@ -72,7 +72,7 @@ class ButtonToggleOverviewExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.0.6",
+    version: "22.0.7",
     type: ButtonToggleOverviewExample,
     isStandalone: true,
     selector: "button-toggle-overview-example",
@@ -100,7 +100,7 @@ class ButtonToggleOverviewExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.0.6",
+  version: "22.0.7",
   ngImport: i0,
   type: ButtonToggleOverviewExample,
   decorators: [{
@@ -122,7 +122,7 @@ class ButtonToggleHarnessExample {
   }] : []));
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.0.6",
+    version: "22.0.7",
     ngImport: i0,
     type: ButtonToggleHarnessExample,
     deps: [],
@@ -130,7 +130,7 @@ class ButtonToggleHarnessExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.0.6",
+    version: "22.0.7",
     type: ButtonToggleHarnessExample,
     isStandalone: true,
     selector: "button-toggle-harness-example",
@@ -158,7 +158,7 @@ class ButtonToggleHarnessExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.0.6",
+  version: "22.0.7",
   ngImport: i0,
   type: ButtonToggleHarnessExample,
   decorators: [{
@@ -178,7 +178,7 @@ class ButtonToggleFormsExample {
   }] : []));
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.0.6",
+    version: "22.0.7",
     ngImport: i0,
     type: ButtonToggleFormsExample,
     deps: [],
@@ -186,7 +186,7 @@ class ButtonToggleFormsExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.0.6",
+    version: "22.0.7",
     type: ButtonToggleFormsExample,
     isStandalone: true,
     selector: "button-toggle-forms-example",
@@ -238,7 +238,7 @@ class ButtonToggleFormsExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.0.6",
+  version: "22.0.7",
   ngImport: i0,
   type: ButtonToggleFormsExample,
   decorators: [{
@@ -266,7 +266,7 @@ class ButtonToggleModeExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.0.6",
+    version: "22.0.7",
     ngImport: i0,
     type: ButtonToggleModeExample,
     deps: [],
@@ -274,7 +274,7 @@ class ButtonToggleModeExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.0.6",
+    version: "22.0.7",
     type: ButtonToggleModeExample,
     isStandalone: true,
     selector: "button-toggle-mode-example",
@@ -312,7 +312,7 @@ class ButtonToggleModeExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.0.6",
+  version: "22.0.7",
   ngImport: i0,
   type: ButtonToggleModeExample,
   decorators: [{

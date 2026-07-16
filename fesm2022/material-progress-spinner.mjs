@@ -20,7 +20,7 @@ class ProgressSpinnerConfigurableExample {
   }] : []));
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.0.6",
+    version: "22.0.7",
     ngImport: i0,
     type: ProgressSpinnerConfigurableExample,
     deps: [],
@@ -28,7 +28,7 @@ class ProgressSpinnerConfigurableExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "22.0.6",
+    version: "22.0.7",
     type: ProgressSpinnerConfigurableExample,
     isStandalone: true,
     selector: "progress-spinner-configurable-example",
@@ -117,7 +117,7 @@ class ProgressSpinnerConfigurableExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.0.6",
+  version: "22.0.7",
   ngImport: i0,
   type: ProgressSpinnerConfigurableExample,
   decorators: [{
@@ -134,7 +134,7 @@ i0.ɵɵngDeclareClassMetadata({
 class ProgressSpinnerOverviewExample {
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.0.6",
+    version: "22.0.7",
     ngImport: i0,
     type: ProgressSpinnerOverviewExample,
     deps: [],
@@ -142,7 +142,7 @@ class ProgressSpinnerOverviewExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.0.6",
+    version: "22.0.7",
     type: ProgressSpinnerOverviewExample,
     isStandalone: true,
     selector: "progress-spinner-overview-example",
@@ -162,7 +162,7 @@ class ProgressSpinnerOverviewExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.0.6",
+  version: "22.0.7",
   ngImport: i0,
   type: ProgressSpinnerOverviewExample,
   decorators: [{
@@ -181,7 +181,7 @@ class ProgressSpinnerHarnessExample {
   }] : []));
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.0.6",
+    version: "22.0.7",
     ngImport: i0,
     type: ProgressSpinnerHarnessExample,
     deps: [],
@@ -189,7 +189,7 @@ class ProgressSpinnerHarnessExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.0.6",
+    version: "22.0.7",
     type: ProgressSpinnerHarnessExample,
     isStandalone: true,
     selector: "progress-spinner-harness-example",
@@ -209,7 +209,7 @@ class ProgressSpinnerHarnessExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.0.6",
+  version: "22.0.7",
   ngImport: i0,
   type: ProgressSpinnerHarnessExample,
   decorators: [{
