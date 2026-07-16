@@ -19,7 +19,7 @@ class ElevationOverviewExample {
   }] : []));
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.1.0-next.5",
+    version: "22.1.0-next.6",
     ngImport: i0,
     type: ElevationOverviewExample,
     deps: [],
@@ -27,7 +27,7 @@ class ElevationOverviewExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.1.0-next.5",
+    version: "22.1.0-next.6",
     type: ElevationOverviewExample,
     isStandalone: true,
     selector: "elevation-overview-example",
@@ -48,7 +48,7 @@ class ElevationOverviewExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.1.0-next.5",
+  version: "22.1.0-next.6",
   ngImport: i0,
   type: ElevationOverviewExample,
   decorators: [{
@@ -80,7 +80,7 @@ class RippleOverviewExample {
   }] : []));
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.1.0-next.5",
+    version: "22.1.0-next.6",
     ngImport: i0,
     type: RippleOverviewExample,
     deps: [],
@@ -88,7 +88,7 @@ class RippleOverviewExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.1.0-next.5",
+    version: "22.1.0-next.6",
     type: RippleOverviewExample,
     isStandalone: true,
     selector: "ripple-overview-example",
@@ -163,7 +163,7 @@ class RippleOverviewExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.1.0-next.5",
+  version: "22.1.0-next.6",
   ngImport: i0,
   type: RippleOverviewExample,
   decorators: [{

@@ -16,7 +16,7 @@ class BadgeOverviewExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.1.0-next.5",
+    version: "22.1.0-next.6",
     ngImport: i0,
     type: BadgeOverviewExample,
     deps: [],
@@ -24,7 +24,7 @@ class BadgeOverviewExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.1.0-next.5",
+    version: "22.1.0-next.6",
     type: BadgeOverviewExample,
     isStandalone: true,
     selector: "badge-overview-example",
@@ -62,7 +62,7 @@ class BadgeOverviewExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.1.0-next.5",
+  version: "22.1.0-next.6",
   ngImport: i0,
   type: BadgeOverviewExample,
   decorators: [{
@@ -88,7 +88,7 @@ class BadgeHarnessExample {
   }] : []));
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.1.0-next.5",
+    version: "22.1.0-next.6",
     ngImport: i0,
     type: BadgeHarnessExample,
     deps: [],
@@ -96,7 +96,7 @@ class BadgeHarnessExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.1.0-next.5",
+    version: "22.1.0-next.6",
     type: BadgeHarnessExample,
     isStandalone: true,
     selector: "badge-harness-example",
@@ -124,7 +124,7 @@ class BadgeHarnessExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.1.0-next.5",
+  version: "22.1.0-next.6",
   ngImport: i0,
   type: BadgeHarnessExample,
   decorators: [{

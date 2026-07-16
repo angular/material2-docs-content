@@ -7,7 +7,7 @@ import { DomSanitizer } from '@angular/platform-browser';
 class IconOverviewExample {
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.1.0-next.5",
+    version: "22.1.0-next.6",
     ngImport: i0,
     type: IconOverviewExample,
     deps: [],
@@ -15,7 +15,7 @@ class IconOverviewExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.1.0-next.5",
+    version: "22.1.0-next.6",
     type: IconOverviewExample,
     isStandalone: true,
     selector: "icon-overview-example",
@@ -35,7 +35,7 @@ class IconOverviewExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.1.0-next.5",
+  version: "22.1.0-next.6",
   ngImport: i0,
   type: IconOverviewExample,
   decorators: [{
@@ -62,7 +62,7 @@ class IconSvgExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.1.0-next.5",
+    version: "22.1.0-next.6",
     ngImport: i0,
     type: IconSvgExample,
     deps: [],
@@ -70,7 +70,7 @@ class IconSvgExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.1.0-next.5",
+    version: "22.1.0-next.6",
     type: IconSvgExample,
     isStandalone: true,
     selector: "icon-svg-example",
@@ -90,7 +90,7 @@ class IconSvgExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.1.0-next.5",
+  version: "22.1.0-next.6",
   ngImport: i0,
   type: IconSvgExample,
   decorators: [{
@@ -107,7 +107,7 @@ i0.ɵɵngDeclareClassMetadata({
 class IconHarnessExample {
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.1.0-next.5",
+    version: "22.1.0-next.6",
     ngImport: i0,
     type: IconHarnessExample,
     deps: [],
@@ -115,7 +115,7 @@ class IconHarnessExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.1.0-next.5",
+    version: "22.1.0-next.6",
     type: IconHarnessExample,
     isStandalone: true,
     selector: "icon-harness-example",
@@ -135,7 +135,7 @@ class IconHarnessExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.1.0-next.5",
+  version: "22.1.0-next.6",
   ngImport: i0,
   type: IconHarnessExample,
   decorators: [{
