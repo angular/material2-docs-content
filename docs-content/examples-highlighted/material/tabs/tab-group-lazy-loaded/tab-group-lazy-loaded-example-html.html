@@ -1,17 +1,21 @@
-<span class="hljs-tag">&lt;<span class="hljs-name">mat-tab-group</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">mat-tab-group</span> (<span class="hljs-attr">selectedIndexChange</span>)=<span class="hljs-string">&quot;markTimeLoaded($event + 1)&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">mat-tab</span> <span class="hljs-attr">label</span>=<span class="hljs-string">&quot;First&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">ng-template</span> <span class="hljs-attr">matTabContent</span>&gt;</span>
-      Content 1 - Loaded: {{getTimeLoaded(1) | date:&#x27;medium&#x27;}}
+      Content 1 - Loaded: {{tabLoadTimes()[1] | date:&#x27;medium&#x27;}}
     <span class="hljs-tag">&lt;/<span class="hljs-name">ng-template</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">mat-tab</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">mat-tab</span> <span class="hljs-attr">label</span>=<span class="hljs-string">&quot;Second&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">ng-template</span> <span class="hljs-attr">matTabContent</span>&gt;</span>
-      Content 2 - Loaded: {{getTimeLoaded(2) | date:&#x27;medium&#x27;}}
+      Content 2 - Loaded: {{tabLoadTimes()[2] | date:&#x27;medium&#x27;}}
     <span class="hljs-tag">&lt;/<span class="hljs-name">ng-template</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">mat-tab</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">mat-tab</span> <span class="hljs-attr">label</span>=<span class="hljs-string">&quot;Third&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">ng-template</span> <span class="hljs-attr">matTabContent</span>&gt;</span>
-      Content 3 - Loaded: {{getTimeLoaded(3) | date:&#x27;medium&#x27;}}
+      Content 3 - Loaded: {{tabLoadTimes()[3] | date:&#x27;medium&#x27;}}
     <span class="hljs-tag">&lt;/<span class="hljs-name">ng-template</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">mat-tab</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">mat-tab-group</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- Copyright 2026 Google LLC. All Rights Reserved.
+    Use of this source code is governed by an MIT-style license that
+    can be found in the LICENSE file at https://angular.io/license --&gt;</span>

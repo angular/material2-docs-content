@@ -6,7 +6,7 @@
   <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-drag-tabs&quot;</span>
   [(<span class="hljs-attr">selectedIndex</span>)]=<span class="hljs-string">&quot;selectedTabIndex&quot;</span>
   <span class="hljs-attr">animationDuration</span>=<span class="hljs-string">&quot;0&quot;</span>&gt;</span>
-  @for (tab of tabs; track $index) {
+  @for (tab of tabs(); track $index) {
     <span class="hljs-tag">&lt;<span class="hljs-name">mat-tab</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">ng-template</span> <span class="hljs-attr">mat-tab-label</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">span</span>

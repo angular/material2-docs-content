@@ -1,6 +1,6 @@
+import * as i0 from '@angular/core';
 import * as _angular_forms from '@angular/forms';
 import { FormGroup } from '@angular/forms';
-import * as i0 from '@angular/core';
 import { StepperOrientation } from '@angular/material/stepper';
 import { Observable } from 'rxjs';
 
@@ -15,7 +15,7 @@ declare class StepperEditableExample {
     secondFormGroup: _angular_forms.FormGroup<{
         secondCtrl: _angular_forms.FormControl<string | null>;
     }>;
-    isEditable: boolean;
+    isEditable: i0.WritableSignal<boolean>;
     static ɵfac: i0.ɵɵFactoryDeclaration<StepperEditableExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<StepperEditableExample, "stepper-editable-example", never, {}, {}, never, never, true, never>;
 }
@@ -61,7 +61,7 @@ declare class StepperOptionalExample {
     secondFormGroup: _angular_forms.FormGroup<{
         secondCtrl: _angular_forms.FormControl<string | null>;
     }>;
-    isOptional: boolean;
+    isOptional: i0.WritableSignal<boolean>;
     static ɵfac: i0.ɵɵFactoryDeclaration<StepperOptionalExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<StepperOptionalExample, "stepper-optional-example", never, {}, {}, never, never, true, never>;
 }
@@ -77,7 +77,7 @@ declare class StepperOverviewExample {
     secondFormGroup: _angular_forms.FormGroup<{
         secondCtrl: _angular_forms.FormControl<string | null>;
     }>;
-    isLinear: boolean;
+    isLinear: i0.WritableSignal<boolean>;
     static ɵfac: i0.ɵɵFactoryDeclaration<StepperOverviewExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<StepperOverviewExample, "stepper-overview-example", never, {}, {}, never, never, true, never>;
 }
@@ -108,7 +108,7 @@ declare class StepperVerticalExample {
     secondFormGroup: _angular_forms.FormGroup<{
         secondCtrl: _angular_forms.FormControl<string | null>;
     }>;
-    isLinear: boolean;
+    isLinear: i0.WritableSignal<boolean>;
     static ɵfac: i0.ɵɵFactoryDeclaration<StepperVerticalExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<StepperVerticalExample, "stepper-vertical-example", never, {}, {}, never, never, true, never>;
 }
@@ -127,7 +127,7 @@ declare class StepperHarnessExample {
 declare class StepperIntlExample {
     private _formBuilder;
     private _matStepperIntl;
-    optionalLabelText: string;
+    optionalLabelText: i0.WritableSignal<string>;
     optionalLabelTextChoices: string[];
     firstFormGroup: _angular_forms.FormGroup<{
         firstCtrl: _angular_forms.FormControl<string | null>;

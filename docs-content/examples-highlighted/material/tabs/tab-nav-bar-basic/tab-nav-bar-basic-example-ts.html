@@ -1,4 +1,4 @@
-<span class="hljs-keyword">import</span> {<span class="hljs-title class_">Component</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">Component</span>, linkedSignal, signal} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
 <span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatButtonModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/button&#x27;</span>;
 <span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatTabsModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/tabs&#x27;</span>;
 
@@ -12,10 +12,10 @@
   <span class="hljs-attr">imports</span>: [<span class="hljs-title class_">MatTabsModule</span>, <span class="hljs-title class_">MatButtonModule</span>],
 })
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">TabNavBarBasicExample</span> {
-  links = [<span class="hljs-string">&#x27;First&#x27;</span>, <span class="hljs-string">&#x27;Second&#x27;</span>, <span class="hljs-string">&#x27;Third&#x27;</span>];
-  activeLink = <span class="hljs-variable language_">this</span>.<span class="hljs-property">links</span>[<span class="hljs-number">0</span>];
+  links = <span class="hljs-title function_">signal</span>([<span class="hljs-string">&#x27;Link 1&#x27;</span>, <span class="hljs-string">&#x27;Link 2&#x27;</span>, <span class="hljs-string">&#x27;Link 3&#x27;</span>]);
+  activeLink = <span class="hljs-title function_">linkedSignal</span>(<span class="hljs-function">() =&gt;</span> <span class="hljs-variable language_">this</span>.<span class="hljs-title function_">links</span>()[<span class="hljs-number">0</span>]);
 
   <span class="hljs-title function_">addLink</span>(<span class="hljs-params"></span>) {
-    <span class="hljs-variable language_">this</span>.<span class="hljs-property">links</span>.<span class="hljs-title function_">push</span>(<span class="hljs-string">`Link <span class="hljs-subst">${<span class="hljs-variable language_">this</span>.links.length + <span class="hljs-number">1</span>}</span>`</span>);
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">links</span>.<span class="hljs-title function_">update</span>(<span class="hljs-function"><span class="hljs-params">current</span> =&gt;</span> [...current, <span class="hljs-string">`Link <span class="hljs-subst">${current.length + <span class="hljs-number">1</span>}</span>`</span>]);
   }
 }

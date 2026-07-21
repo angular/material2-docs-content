@@ -1,4 +1,4 @@
-<span class="hljs-keyword">import</span> {<span class="hljs-title class_">Component</span>, inject} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">Component</span>, inject, signal} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
 <span class="hljs-keyword">import</span> {<span class="hljs-title class_">FormBuilder</span>, <span class="hljs-title class_">Validators</span>, <span class="hljs-title class_">FormsModule</span>, <span class="hljs-title class_">ReactiveFormsModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/forms&#x27;</span>;
 <span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatInputModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/input&#x27;</span>;
 <span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatFormFieldModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/form-field&#x27;</span>;
@@ -30,5 +30,6 @@
   secondFormGroup = <span class="hljs-variable language_">this</span>.<span class="hljs-property">_formBuilder</span>.<span class="hljs-title function_">group</span>({
     <span class="hljs-attr">secondCtrl</span>: <span class="hljs-string">&#x27;&#x27;</span>,
   });
-  isOptional = <span class="hljs-literal">false</span>;
+
+  isOptional = <span class="hljs-title function_">signal</span>(<span class="hljs-literal">false</span>);
 }
