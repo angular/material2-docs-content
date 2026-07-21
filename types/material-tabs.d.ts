@@ -61,7 +61,7 @@ declare class TabGroupDynamicHeightExample {
  * @title Tab group with dynamically changing tabs
  */
 declare class TabGroupDynamicExample {
-    tabs: string[];
+    tabs: i0.WritableSignal<string[]>;
     selected: FormControl<number | null>;
     addTab(selectAfterAdding: boolean): void;
     removeTab(index: number): void;
@@ -97,8 +97,8 @@ declare class TabGroupInkBarExample {
  * @title Tab group where the tab content is loaded lazily (when activated)
  */
 declare class TabGroupLazyLoadedExample {
-    tabLoadTimes: Date[];
-    getTimeLoaded(index: number): Date;
+    protected tabLoadTimes: i0.WritableSignal<Record<number, Date>>;
+    protected markTimeLoaded(index: number): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<TabGroupLazyLoadedExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<TabGroupLazyLoadedExample, "tab-group-lazy-loaded-example", never, {}, {}, never, never, true, never>;
 }
@@ -132,8 +132,8 @@ declare class TabGroupStretchedExample {
  * @title Basic use of the tab nav bar
  */
 declare class TabNavBarBasicExample {
-    links: string[];
-    activeLink: string;
+    links: i0.WritableSignal<string[]>;
+    activeLink: i0.WritableSignal<string>;
     addLink(): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<TabNavBarBasicExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<TabNavBarBasicExample, "tab-nav-bar-basic-example", never, {}, {}, never, never, true, never>;
@@ -143,8 +143,8 @@ declare class TabNavBarBasicExample {
  * @title Tabs with drag*drop integration.
  */
 declare class TabGroupDragDropExample {
-    protected tabs: string[];
-    protected selectedTabIndex: number;
+    protected tabs: i0.WritableSignal<string[]>;
+    protected selectedTabIndex: i0.WritableSignal<number>;
     drop(event: CdkDragDrop<string[]>): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<TabGroupDragDropExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<TabGroupDragDropExample, "tab-group-drag-drop-example", never, {}, {}, never, never, true, never>;

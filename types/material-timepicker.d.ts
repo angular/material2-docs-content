@@ -19,7 +19,7 @@ declare class TimepickerFormsExample {
 
 /** @title Timepicker integration with datepicker */
 declare class TimepickerDatepickerIntegrationExample {
-    value: Date;
+    value: i0.WritableSignal<Date | undefined>;
     static ɵfac: i0.ɵɵFactoryDeclaration<TimepickerDatepickerIntegrationExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<TimepickerDatepickerIntegrationExample, "timepicker-datepicker-integration-example", never, {}, {}, never, never, true, never>;
 }
@@ -47,7 +47,7 @@ declare class TimepickerCustomIconExample {
 /** @title Timepicker with different locale */
 declare class TimepickerLocaleExample {
     private readonly _adapter;
-    value: Date;
+    value: i0.WritableSignal<Date>;
     protected switchLocale(): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<TimepickerLocaleExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<TimepickerLocaleExample, "timepicker-locale-example", never, {}, {}, never, never, true, never>;

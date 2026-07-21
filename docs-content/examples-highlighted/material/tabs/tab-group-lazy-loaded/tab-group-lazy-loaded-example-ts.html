@@ -1,4 +1,4 @@
-<span class="hljs-keyword">import</span> {<span class="hljs-title class_">Component</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">Component</span>, signal} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
 <span class="hljs-keyword">import</span> {<span class="hljs-title class_">DatePipe</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/common&#x27;</span>;
 <span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatTabsModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/tabs&#x27;</span>;
 
@@ -11,13 +11,18 @@
   <span class="hljs-attr">imports</span>: [<span class="hljs-title class_">MatTabsModule</span>, <span class="hljs-title class_">DatePipe</span>],
 })
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">TabGroupLazyLoadedExample</span> {
-  <span class="hljs-attr">tabLoadTimes</span>: <span class="hljs-title class_">Date</span>[] = [];
+  <span class="hljs-keyword">protected</span> tabLoadTimes = signal&lt;<span class="hljs-title class_">Record</span>&lt;<span class="hljs-built_in">number</span>, <span class="hljs-title class_">Date</span>&gt;&gt;({
+    <span class="hljs-number">1</span>: <span class="hljs-keyword">new</span> <span class="hljs-title class_">Date</span>(),
+  });
 
-  <span class="hljs-title function_">getTimeLoaded</span>(<span class="hljs-params"><span class="hljs-attr">index</span>: <span class="hljs-built_in">number</span></span>) {
-    <span class="hljs-keyword">if</span> (!<span class="hljs-variable language_">this</span>.<span class="hljs-property">tabLoadTimes</span>[index]) {
-      <span class="hljs-variable language_">this</span>.<span class="hljs-property">tabLoadTimes</span>[index] = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Date</span>();
-    }
-
-    <span class="hljs-keyword">return</span> <span class="hljs-variable language_">this</span>.<span class="hljs-property">tabLoadTimes</span>[index];
+  <span class="hljs-keyword">protected</span> <span class="hljs-title function_">markTimeLoaded</span>(<span class="hljs-params"><span class="hljs-attr">index</span>: <span class="hljs-built_in">number</span></span>) {
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">tabLoadTimes</span>.<span class="hljs-title function_">update</span>(<span class="hljs-function"><span class="hljs-params">current</span> =&gt;</span>
+      current[index]
+        ? current
+        : {
+            ...current,
+            [index]: <span class="hljs-keyword">new</span> <span class="hljs-title class_">Date</span>(),
+          },
+    );
   }
 }

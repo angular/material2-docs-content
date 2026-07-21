@@ -1,5 +1,5 @@
 import * as i0 from '@angular/core';
-import { Component, inject, signal } from '@angular/core';
+import { Component, signal, inject } from '@angular/core';
 import * as i3 from '@angular/material/timepicker';
 import { MatTimepickerModule } from '@angular/material/timepicker';
 import * as i2 from '@angular/material/input';
@@ -216,7 +216,9 @@ i0.ɵɵngDeclareClassMetadata({
 });
 
 class TimepickerDatepickerIntegrationExample {
-  value;
+  value = signal(undefined, ...(ngDevMode ? [{
+    debugName: "value"
+  }] : []));
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
     version: "22.0.7",
@@ -233,7 +235,7 @@ class TimepickerDatepickerIntegrationExample {
     selector: "timepicker-datepicker-integration-example",
     providers: [provideNativeDateAdapter()],
     ngImport: i0,
-    template: "<mat-form-field>\n  <mat-label>Meeting date</mat-label>\n  <input matInput [matDatepicker]=\"datepicker\" [(ngModel)]=\"value\">\n  <mat-datepicker #datepicker/>\n  <mat-datepicker-toggle [for]=\"datepicker\" matSuffix/>\n</mat-form-field>\n\n<mat-form-field>\n  <mat-label>Meeting time</mat-label>\n  <input matInput\n    [matTimepicker]=\"timepicker\"\n    [(ngModel)]=\"value\"\n    [ngModelOptions]=\"{updateOn: 'blur'}\">\n  <mat-timepicker #timepicker/>\n  <mat-timepicker-toggle [for]=\"timepicker\" matSuffix/>\n</mat-form-field>\n\n<p>Value: {{value}}</p>\n",
+    template: "<mat-form-field>\n  <mat-label>Meeting date</mat-label>\n  <input matInput [matDatepicker]=\"datepicker\" [(ngModel)]=\"value\">\n  <mat-datepicker #datepicker/>\n  <mat-datepicker-toggle [for]=\"datepicker\" matSuffix/>\n</mat-form-field>\n\n<mat-form-field>\n  <mat-label>Meeting time</mat-label>\n  <input matInput\n    [matTimepicker]=\"timepicker\"\n    [(ngModel)]=\"value\"\n    [ngModelOptions]=\"{updateOn: 'blur'}\">\n  <mat-timepicker #timepicker/>\n  <mat-timepicker-toggle [for]=\"timepicker\" matSuffix/>\n</mat-form-field>\n\n<p>Value: {{value()}}</p>\n",
     styles: ["mat-form-field {\n  margin-right: 16px;\n}\n"],
     dependencies: [{
       kind: "ngmodule",
@@ -337,7 +339,7 @@ i0.ɵɵngDeclareClassMetadata({
       selector: 'timepicker-datepicker-integration-example',
       providers: [provideNativeDateAdapter()],
       imports: [MatFormFieldModule, MatInputModule, MatTimepickerModule, MatDatepickerModule, FormsModule],
-      template: "<mat-form-field>\n  <mat-label>Meeting date</mat-label>\n  <input matInput [matDatepicker]=\"datepicker\" [(ngModel)]=\"value\">\n  <mat-datepicker #datepicker/>\n  <mat-datepicker-toggle [for]=\"datepicker\" matSuffix/>\n</mat-form-field>\n\n<mat-form-field>\n  <mat-label>Meeting time</mat-label>\n  <input matInput\n    [matTimepicker]=\"timepicker\"\n    [(ngModel)]=\"value\"\n    [ngModelOptions]=\"{updateOn: 'blur'}\">\n  <mat-timepicker #timepicker/>\n  <mat-timepicker-toggle [for]=\"timepicker\" matSuffix/>\n</mat-form-field>\n\n<p>Value: {{value}}</p>\n",
+      template: "<mat-form-field>\n  <mat-label>Meeting date</mat-label>\n  <input matInput [matDatepicker]=\"datepicker\" [(ngModel)]=\"value\">\n  <mat-datepicker #datepicker/>\n  <mat-datepicker-toggle [for]=\"datepicker\" matSuffix/>\n</mat-form-field>\n\n<mat-form-field>\n  <mat-label>Meeting time</mat-label>\n  <input matInput\n    [matTimepicker]=\"timepicker\"\n    [(ngModel)]=\"value\"\n    [ngModelOptions]=\"{updateOn: 'blur'}\">\n  <mat-timepicker #timepicker/>\n  <mat-timepicker-toggle [for]=\"timepicker\" matSuffix/>\n</mat-form-field>\n\n<p>Value: {{value()}}</p>\n",
       styles: ["mat-form-field {\n  margin-right: 16px;\n}\n"]
     }]
   }]
@@ -652,7 +654,9 @@ i0.ɵɵngDeclareClassMetadata({
 
 class TimepickerLocaleExample {
   _adapter = inject(DateAdapter);
-  value = new Date(2024, 0, 1, 13, 45, 0);
+  value = signal(new Date(2024, 0, 1, 13, 45, 0), ...(ngDevMode ? [{
+    debugName: "value"
+  }] : []));
   switchLocale() {
     this._adapter.setLocale('bg-BG');
   }

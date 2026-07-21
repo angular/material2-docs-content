@@ -1,4 +1,4 @@
-<span class="hljs-keyword">import</span> {<span class="hljs-title class_">Component</span>, <span class="hljs-title class_">Service</span>, inject} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">Component</span>, <span class="hljs-title class_">Service</span>, inject, signal} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
 <span class="hljs-keyword">import</span> {<span class="hljs-title class_">FormBuilder</span>, <span class="hljs-title class_">Validators</span>, <span class="hljs-title class_">FormsModule</span>, <span class="hljs-title class_">ReactiveFormsModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/forms&#x27;</span>;
 <span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatStepperIntl</span>, <span class="hljs-title class_">MatStepperModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/stepper&#x27;</span>;
 <span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatButtonModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/button&#x27;</span>;
@@ -34,7 +34,7 @@
   <span class="hljs-keyword">private</span> _formBuilder = <span class="hljs-title function_">inject</span>(<span class="hljs-title class_">FormBuilder</span>);
   <span class="hljs-keyword">private</span> _matStepperIntl = <span class="hljs-title function_">inject</span>(<span class="hljs-title class_">MatStepperIntl</span>);
 
-  optionalLabelText = <span class="hljs-string">&#x27;&#x27;</span>;
+  optionalLabelText = <span class="hljs-title function_">signal</span>(<span class="hljs-string">&#x27;&#x27;</span>);
   <span class="hljs-attr">optionalLabelTextChoices</span>: <span class="hljs-built_in">string</span>[] = [<span class="hljs-string">&#x27;Option 1&#x27;</span>, <span class="hljs-string">&#x27;Option 2&#x27;</span>, <span class="hljs-string">&#x27;Option 3&#x27;</span>];
   firstFormGroup = <span class="hljs-variable language_">this</span>.<span class="hljs-property">_formBuilder</span>.<span class="hljs-title function_">group</span>({
     <span class="hljs-attr">firstCtrl</span>: [<span class="hljs-string">&#x27;&#x27;</span>, <span class="hljs-title class_">Validators</span>.<span class="hljs-property">required</span>],
@@ -44,7 +44,7 @@
   });
 
   <span class="hljs-title function_">updateOptionalLabel</span>(<span class="hljs-params"></span>) {
-    <span class="hljs-variable language_">this</span>.<span class="hljs-property">_matStepperIntl</span>.<span class="hljs-property">optionalLabel</span> = <span class="hljs-variable language_">this</span>.<span class="hljs-property">optionalLabelText</span>;
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">_matStepperIntl</span>.<span class="hljs-property">optionalLabel</span> = <span class="hljs-variable language_">this</span>.<span class="hljs-title function_">optionalLabelText</span>();
     <span class="hljs-comment">// Required for the optional label text to be updated</span>
     <span class="hljs-comment">// Notifies the MatStepperIntl service that a change has been made</span>
     <span class="hljs-variable language_">this</span>.<span class="hljs-property">_matStepperIntl</span>.<span class="hljs-property">changes</span>.<span class="hljs-title function_">next</span>();

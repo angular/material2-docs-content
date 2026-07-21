@@ -1,9 +1,10 @@
 import * as i0 from '@angular/core';
-import { Component, ViewEncapsulation } from '@angular/core';
+import { Component, signal, linkedSignal, ViewEncapsulation } from '@angular/core';
 import * as i1 from '@angular/material/tabs';
 import { MatTabsModule } from '@angular/material/tabs';
-import { Observable } from 'rxjs';
+import { of } from 'rxjs';
 import { AsyncPipe, DatePipe } from '@angular/common';
+import { delay } from 'rxjs/operators';
 import * as i3 from '@angular/material/icon';
 import { MatIconModule } from '@angular/material/icon';
 import * as i3$1 from '@angular/forms';
@@ -127,20 +128,16 @@ i0.ɵɵngDeclareClassMetadata({
 class TabGroupAsyncExample {
   asyncTabs;
   constructor() {
-    this.asyncTabs = new Observable(observer => {
-      setTimeout(() => {
-        observer.next([{
-          label: 'First',
-          content: 'Content 1'
-        }, {
-          label: 'Second',
-          content: 'Content 2'
-        }, {
-          label: 'Third',
-          content: 'Content 3'
-        }]);
-      }, 1000);
-    });
+    this.asyncTabs = of([{
+      label: 'First',
+      content: 'Content 1'
+    }, {
+      label: 'Second',
+      content: 'Content 2'
+    }, {
+      label: 'Third',
+      content: 'Content 3'
+    }]).pipe(delay(1000));
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
@@ -372,16 +369,18 @@ i0.ɵɵngDeclareClassMetadata({
 });
 
 class TabGroupDynamicExample {
-  tabs = ['First', 'Second', 'Third'];
+  tabs = signal(['First', 'Second', 'Third'], ...(ngDevMode ? [{
+    debugName: "tabs"
+  }] : []));
   selected = new FormControl(0);
   addTab(selectAfterAdding) {
-    this.tabs.push('New');
+    this.tabs.update(tabs => [...tabs, 'New']);
     if (selectAfterAdding) {
-      this.selected.setValue(this.tabs.length - 1);
+      this.selected.setValue(this.tabs().length - 1);
     }
   }
   removeTab(index) {
-    this.tabs.splice(index, 1);
+    this.tabs.update(tabs => tabs.filter((_, i) => i !== index));
     this.selected.setValue(index);
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
@@ -399,7 +398,7 @@ class TabGroupDynamicExample {
     isStandalone: true,
     selector: "tab-group-dynamic-example",
     ngImport: i0,
-    template: "<mat-form-field>\n  <mat-label>Selected tab index</mat-label>\n  <input matInput type=\"number\" [formControl]=\"selected\">\n</mat-form-field>\n\n<div>\n  <button matButton=\"elevated\"\n          class=\"example-add-tab-button\"\n          (click)=\"addTab(selectAfterAdding.checked)\">\n    Add new tab\n  </button>\n  <mat-checkbox #selectAfterAdding> Select tab after adding </mat-checkbox>\n</div>\n\n<mat-tab-group [selectedIndex]=\"selected.value\"\n               (selectedIndexChange)=\"selected.setValue($event)\">\n  @for (tab of tabs; track tab; let index = $index) {\n    <mat-tab [label]=\"tab\">\n      Contents for {{tab}} tab\n\n      <button matButton=\"elevated\"\n              class=\"example-delete-tab-button\"\n              [disabled]=\"tabs.length === 1\"\n              (click)=\"removeTab(index)\">\n        Delete Tab\n      </button>\n    </mat-tab>\n  }\n</mat-tab-group>\n",
+    template: "<mat-form-field>\n  <mat-label>Selected tab index</mat-label>\n  <input matInput type=\"number\" [formControl]=\"selected\">\n</mat-form-field>\n\n<div>\n  <button matButton=\"elevated\"\n          class=\"example-add-tab-button\"\n          (click)=\"addTab(selectAfterAdding.checked)\">\n    Add new tab\n  </button>\n  <mat-checkbox #selectAfterAdding> Select tab after adding </mat-checkbox>\n</div>\n\n<mat-tab-group [selectedIndex]=\"selected.value\"\n               (selectedIndexChange)=\"selected.setValue($event)\">\n  @for (tab of tabs(); track $index; let index = $index) {\n    <mat-tab [label]=\"tab\">\n      Contents for {{tab}} tab\n\n      <button matButton=\"elevated\"\n              class=\"example-delete-tab-button\"\n              [disabled]=\"tabs().length === 1\"\n              (click)=\"removeTab(index)\">\n        Delete Tab\n      </button>\n    </mat-tab>\n  }\n</mat-tab-group>\n",
     styles: [".example-input-label,\n.example-add-tab-button,\n.example-delete-tab-button {\n  margin: 8px;\n}\n"],
     dependencies: [{
       kind: "ngmodule",
@@ -496,7 +495,7 @@ i0.ɵɵngDeclareClassMetadata({
     args: [{
       selector: 'tab-group-dynamic-example',
       imports: [MatFormFieldModule, MatInputModule, FormsModule, ReactiveFormsModule, MatButtonModule, MatCheckboxModule, MatTabsModule],
-      template: "<mat-form-field>\n  <mat-label>Selected tab index</mat-label>\n  <input matInput type=\"number\" [formControl]=\"selected\">\n</mat-form-field>\n\n<div>\n  <button matButton=\"elevated\"\n          class=\"example-add-tab-button\"\n          (click)=\"addTab(selectAfterAdding.checked)\">\n    Add new tab\n  </button>\n  <mat-checkbox #selectAfterAdding> Select tab after adding </mat-checkbox>\n</div>\n\n<mat-tab-group [selectedIndex]=\"selected.value\"\n               (selectedIndexChange)=\"selected.setValue($event)\">\n  @for (tab of tabs; track tab; let index = $index) {\n    <mat-tab [label]=\"tab\">\n      Contents for {{tab}} tab\n\n      <button matButton=\"elevated\"\n              class=\"example-delete-tab-button\"\n              [disabled]=\"tabs.length === 1\"\n              (click)=\"removeTab(index)\">\n        Delete Tab\n      </button>\n    </mat-tab>\n  }\n</mat-tab-group>\n",
+      template: "<mat-form-field>\n  <mat-label>Selected tab index</mat-label>\n  <input matInput type=\"number\" [formControl]=\"selected\">\n</mat-form-field>\n\n<div>\n  <button matButton=\"elevated\"\n          class=\"example-add-tab-button\"\n          (click)=\"addTab(selectAfterAdding.checked)\">\n    Add new tab\n  </button>\n  <mat-checkbox #selectAfterAdding> Select tab after adding </mat-checkbox>\n</div>\n\n<mat-tab-group [selectedIndex]=\"selected.value\"\n               (selectedIndexChange)=\"selected.setValue($event)\">\n  @for (tab of tabs(); track $index; let index = $index) {\n    <mat-tab [label]=\"tab\">\n      Contents for {{tab}} tab\n\n      <button matButton=\"elevated\"\n              class=\"example-delete-tab-button\"\n              [disabled]=\"tabs().length === 1\"\n              (click)=\"removeTab(index)\">\n        Delete Tab\n      </button>\n    </mat-tab>\n  }\n</mat-tab-group>\n",
       styles: [".example-input-label,\n.example-add-tab-button,\n.example-delete-tab-button {\n  margin: 8px;\n}\n"]
     }]
   }]
@@ -656,12 +655,16 @@ i0.ɵɵngDeclareClassMetadata({
 });
 
 class TabGroupLazyLoadedExample {
-  tabLoadTimes = [];
-  getTimeLoaded(index) {
-    if (!this.tabLoadTimes[index]) {
-      this.tabLoadTimes[index] = new Date();
-    }
-    return this.tabLoadTimes[index];
+  tabLoadTimes = signal({
+    1: new Date()
+  }, ...(ngDevMode ? [{
+    debugName: "tabLoadTimes"
+  }] : []));
+  markTimeLoaded(index) {
+    this.tabLoadTimes.update(current => current[index] ? current : {
+      ...current,
+      [index]: new Date()
+    });
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
@@ -678,7 +681,7 @@ class TabGroupLazyLoadedExample {
     isStandalone: true,
     selector: "tab-group-lazy-loaded-example",
     ngImport: i0,
-    template: "<mat-tab-group>\n<!-- #docregion mat-tab-content -->\n  <mat-tab label=\"First\">\n    <ng-template matTabContent>\n      Content 1 - Loaded: {{getTimeLoaded(1) | date:'medium'}}\n    </ng-template>\n  </mat-tab>\n<!-- #enddocregion mat-tab-content -->\n  <mat-tab label=\"Second\">\n    <ng-template matTabContent>\n      Content 2 - Loaded: {{getTimeLoaded(2) | date:'medium'}}\n    </ng-template>\n  </mat-tab>\n  <mat-tab label=\"Third\">\n    <ng-template matTabContent>\n      Content 3 - Loaded: {{getTimeLoaded(3) | date:'medium'}}\n    </ng-template>\n  </mat-tab>\n</mat-tab-group>\n",
+    template: "<mat-tab-group (selectedIndexChange)=\"markTimeLoaded($event + 1)\">\n  <!-- #docregion mat-tab-content -->\n  <mat-tab label=\"First\">\n    <ng-template matTabContent>\n      Content 1 - Loaded: {{tabLoadTimes()[1] | date:'medium'}}\n    </ng-template>\n  </mat-tab>\n  <!-- #enddocregion mat-tab-content -->\n  <mat-tab label=\"Second\">\n    <ng-template matTabContent>\n      Content 2 - Loaded: {{tabLoadTimes()[2] | date:'medium'}}\n    </ng-template>\n  </mat-tab>\n  <mat-tab label=\"Third\">\n    <ng-template matTabContent>\n      Content 3 - Loaded: {{tabLoadTimes()[3] | date:'medium'}}\n    </ng-template>\n  </mat-tab>\n</mat-tab-group>\n\n<!-- Copyright 2026 Google LLC. All Rights Reserved.\n    Use of this source code is governed by an MIT-style license that\n    can be found in the LICENSE file at https://angular.io/license -->",
     dependencies: [{
       kind: "ngmodule",
       type: MatTabsModule
@@ -716,7 +719,7 @@ i0.ɵɵngDeclareClassMetadata({
     args: [{
       selector: 'tab-group-lazy-loaded-example',
       imports: [MatTabsModule, DatePipe],
-      template: "<mat-tab-group>\n<!-- #docregion mat-tab-content -->\n  <mat-tab label=\"First\">\n    <ng-template matTabContent>\n      Content 1 - Loaded: {{getTimeLoaded(1) | date:'medium'}}\n    </ng-template>\n  </mat-tab>\n<!-- #enddocregion mat-tab-content -->\n  <mat-tab label=\"Second\">\n    <ng-template matTabContent>\n      Content 2 - Loaded: {{getTimeLoaded(2) | date:'medium'}}\n    </ng-template>\n  </mat-tab>\n  <mat-tab label=\"Third\">\n    <ng-template matTabContent>\n      Content 3 - Loaded: {{getTimeLoaded(3) | date:'medium'}}\n    </ng-template>\n  </mat-tab>\n</mat-tab-group>\n"
+      template: "<mat-tab-group (selectedIndexChange)=\"markTimeLoaded($event + 1)\">\n  <!-- #docregion mat-tab-content -->\n  <mat-tab label=\"First\">\n    <ng-template matTabContent>\n      Content 1 - Loaded: {{tabLoadTimes()[1] | date:'medium'}}\n    </ng-template>\n  </mat-tab>\n  <!-- #enddocregion mat-tab-content -->\n  <mat-tab label=\"Second\">\n    <ng-template matTabContent>\n      Content 2 - Loaded: {{tabLoadTimes()[2] | date:'medium'}}\n    </ng-template>\n  </mat-tab>\n  <mat-tab label=\"Third\">\n    <ng-template matTabContent>\n      Content 3 - Loaded: {{tabLoadTimes()[3] | date:'medium'}}\n    </ng-template>\n  </mat-tab>\n</mat-tab-group>\n\n<!-- Copyright 2026 Google LLC. All Rights Reserved.\n    Use of this source code is governed by an MIT-style license that\n    can be found in the LICENSE file at https://angular.io/license -->"
     }]
   }]
 });
@@ -878,10 +881,14 @@ i0.ɵɵngDeclareClassMetadata({
 });
 
 class TabNavBarBasicExample {
-  links = ['First', 'Second', 'Third'];
-  activeLink = this.links[0];
+  links = signal(['Link 1', 'Link 2', 'Link 3'], ...(ngDevMode ? [{
+    debugName: "links"
+  }] : []));
+  activeLink = linkedSignal(() => this.links()[0], ...(ngDevMode ? [{
+    debugName: "activeLink"
+  }] : []));
   addLink() {
-    this.links.push(`Link ${this.links.length + 1}`);
+    this.links.update(current => [...current, `Link ${current.length + 1}`]);
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
@@ -898,7 +905,7 @@ class TabNavBarBasicExample {
     isStandalone: true,
     selector: "tab-nav-bar-basic-example",
     ngImport: i0,
-    template: "<!-- #docregion mat-tab-nav -->\n<nav mat-tab-nav-bar [tabPanel]=\"tabPanel\">\n  @for (link of links; track link) {\n    <a mat-tab-link\n      (click)=\"activeLink = link\"\n      [active]=\"activeLink == link\"> {{link}} </a>\n  }\n  <a mat-tab-link disabled>Disabled Link</a>\n</nav>\n<mat-tab-nav-panel #tabPanel></mat-tab-nav-panel>\n<!-- #enddocregion mat-tab-nav -->\n\n<button matButton=\"elevated\" class=\"example-action-button\" (click)=\"addLink()\">\n  Add link\n</button>\n",
+    template: "<!-- #docregion mat-tab-nav -->\n<nav mat-tab-nav-bar [tabPanel]=\"tabPanel\">\n  @for (link of links(); track link) {\n    <a mat-tab-link\n      (click)=\"activeLink.set(link)\"\n      [active]=\"activeLink() == link\"> {{link}} </a>\n  }\n  <a mat-tab-link disabled>Disabled Link</a>\n</nav>\n<mat-tab-nav-panel #tabPanel></mat-tab-nav-panel>\n<!-- #enddocregion mat-tab-nav -->\n\n<button matButton=\"elevated\" class=\"example-action-button\" (click)=\"addLink()\">\n  Add link\n</button>\n",
     styles: [".example-action-button {\n  margin-top: 8px;\n  margin-right: 8px;\n}\n"],
     dependencies: [{
       kind: "ngmodule",
@@ -943,19 +950,23 @@ i0.ɵɵngDeclareClassMetadata({
     args: [{
       selector: 'tab-nav-bar-basic-example',
       imports: [MatTabsModule, MatButtonModule],
-      template: "<!-- #docregion mat-tab-nav -->\n<nav mat-tab-nav-bar [tabPanel]=\"tabPanel\">\n  @for (link of links; track link) {\n    <a mat-tab-link\n      (click)=\"activeLink = link\"\n      [active]=\"activeLink == link\"> {{link}} </a>\n  }\n  <a mat-tab-link disabled>Disabled Link</a>\n</nav>\n<mat-tab-nav-panel #tabPanel></mat-tab-nav-panel>\n<!-- #enddocregion mat-tab-nav -->\n\n<button matButton=\"elevated\" class=\"example-action-button\" (click)=\"addLink()\">\n  Add link\n</button>\n",
+      template: "<!-- #docregion mat-tab-nav -->\n<nav mat-tab-nav-bar [tabPanel]=\"tabPanel\">\n  @for (link of links(); track link) {\n    <a mat-tab-link\n      (click)=\"activeLink.set(link)\"\n      [active]=\"activeLink() == link\"> {{link}} </a>\n  }\n  <a mat-tab-link disabled>Disabled Link</a>\n</nav>\n<mat-tab-nav-panel #tabPanel></mat-tab-nav-panel>\n<!-- #enddocregion mat-tab-nav -->\n\n<button matButton=\"elevated\" class=\"example-action-button\" (click)=\"addLink()\">\n  Add link\n</button>\n",
       styles: [".example-action-button {\n  margin-top: 8px;\n  margin-right: 8px;\n}\n"]
     }]
   }]
 });
 
 class TabGroupDragDropExample {
-  tabs = ['One', 'Two', 'Three', 'Four', 'Five'];
-  selectedTabIndex = 0;
+  tabs = signal(['One', 'Two', 'Three', 'Four', 'Five'], ...(ngDevMode ? [{
+    debugName: "tabs"
+  }] : []));
+  selectedTabIndex = signal(0, ...(ngDevMode ? [{
+    debugName: "selectedTabIndex"
+  }] : []));
   drop(event) {
-    const prevActive = this.tabs[this.selectedTabIndex];
-    moveItemInArray(this.tabs, event.previousIndex, event.currentIndex);
-    this.selectedTabIndex = this.tabs.indexOf(prevActive);
+    const prevActive = this.tabs()[this.selectedTabIndex()];
+    moveItemInArray(this.tabs(), event.previousIndex, event.currentIndex);
+    this.selectedTabIndex.set(this.tabs().indexOf(prevActive));
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
@@ -972,7 +983,7 @@ class TabGroupDragDropExample {
     isStandalone: true,
     selector: "tab-group-drag-drop-example",
     ngImport: i0,
-    template: "<mat-tab-group\n  cdkDropList\n  cdkDropListOrientation=\"horizontal\"\n  (cdkDropListDropped)=\"drop($event)\"\n  cdkDropListElementContainer=\".mat-mdc-tab-labels\"\n  class=\"example-drag-tabs\"\n  [(selectedIndex)]=\"selectedTabIndex\"\n  animationDuration=\"0\">\n  @for (tab of tabs; track $index) {\n    <mat-tab>\n      <ng-template mat-tab-label>\n        <span\n          cdkDrag\n          cdkDragPreviewClass=\"example-drag-tabs-preview\"\n          cdkDragRootElement=\".mat-mdc-tab\">{{tab}}</span>\n      </ng-template>\n\n      <h3>Content for {{tab}}</h3>\n\n      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem perspiciatis in delectus\n      reprehenderit, molestias ullam nostrum odit, modi consequatur harum beatae? Sapiente\n      voluptatibus illo natus assumenda hic quasi dolor et laborum veniam! Molestiae architecto\n      nesciunt est quo nisi? Nostrum repellendus quibusdam laudantium? Optio architecto explicabo\n      labore sapiente cum alias nobis!\n    </mat-tab>\n  }\n</mat-tab-group>\n",
+    template: "<mat-tab-group\n  cdkDropList\n  cdkDropListOrientation=\"horizontal\"\n  (cdkDropListDropped)=\"drop($event)\"\n  cdkDropListElementContainer=\".mat-mdc-tab-labels\"\n  class=\"example-drag-tabs\"\n  [(selectedIndex)]=\"selectedTabIndex\"\n  animationDuration=\"0\">\n  @for (tab of tabs(); track $index) {\n    <mat-tab>\n      <ng-template mat-tab-label>\n        <span\n          cdkDrag\n          cdkDragPreviewClass=\"example-drag-tabs-preview\"\n          cdkDragRootElement=\".mat-mdc-tab\">{{tab}}</span>\n      </ng-template>\n\n      <h3>Content for {{tab}}</h3>\n\n      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem perspiciatis in delectus\n      reprehenderit, molestias ullam nostrum odit, modi consequatur harum beatae? Sapiente\n      voluptatibus illo natus assumenda hic quasi dolor et laborum veniam! Molestiae architecto\n      nesciunt est quo nisi? Nostrum repellendus quibusdam laudantium? Optio architecto explicabo\n      labore sapiente cum alias nobis!\n    </mat-tab>\n  }\n</mat-tab-group>\n",
     styles: [".example-drag-tabs.cdk-drop-list-dragging {\n  pointer-events: none;\n}\n\n.example-drag-tabs-preview.cdk-drag-animating {\n  transition: all 250ms cubic-bezier(0, 0, 0.2, 1);\n}\n\n.mat-mdc-tab.example-drag-tabs-preview {\n  outline: dashed 1px #ccc;\n  outline-offset: 4px;\n}\n\n.example-drag-tabs .cdk-drag-placeholder {\n  opacity: 0.5;\n}\n\n"],
     dependencies: [{
       kind: "directive",
@@ -1023,7 +1034,7 @@ i0.ɵɵngDeclareClassMetadata({
       selector: 'tab-group-drag-drop-example',
       imports: [CdkDrag, CdkDropList, MatTabsModule],
       encapsulation: ViewEncapsulation.None,
-      template: "<mat-tab-group\n  cdkDropList\n  cdkDropListOrientation=\"horizontal\"\n  (cdkDropListDropped)=\"drop($event)\"\n  cdkDropListElementContainer=\".mat-mdc-tab-labels\"\n  class=\"example-drag-tabs\"\n  [(selectedIndex)]=\"selectedTabIndex\"\n  animationDuration=\"0\">\n  @for (tab of tabs; track $index) {\n    <mat-tab>\n      <ng-template mat-tab-label>\n        <span\n          cdkDrag\n          cdkDragPreviewClass=\"example-drag-tabs-preview\"\n          cdkDragRootElement=\".mat-mdc-tab\">{{tab}}</span>\n      </ng-template>\n\n      <h3>Content for {{tab}}</h3>\n\n      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem perspiciatis in delectus\n      reprehenderit, molestias ullam nostrum odit, modi consequatur harum beatae? Sapiente\n      voluptatibus illo natus assumenda hic quasi dolor et laborum veniam! Molestiae architecto\n      nesciunt est quo nisi? Nostrum repellendus quibusdam laudantium? Optio architecto explicabo\n      labore sapiente cum alias nobis!\n    </mat-tab>\n  }\n</mat-tab-group>\n",
+      template: "<mat-tab-group\n  cdkDropList\n  cdkDropListOrientation=\"horizontal\"\n  (cdkDropListDropped)=\"drop($event)\"\n  cdkDropListElementContainer=\".mat-mdc-tab-labels\"\n  class=\"example-drag-tabs\"\n  [(selectedIndex)]=\"selectedTabIndex\"\n  animationDuration=\"0\">\n  @for (tab of tabs(); track $index) {\n    <mat-tab>\n      <ng-template mat-tab-label>\n        <span\n          cdkDrag\n          cdkDragPreviewClass=\"example-drag-tabs-preview\"\n          cdkDragRootElement=\".mat-mdc-tab\">{{tab}}</span>\n      </ng-template>\n\n      <h3>Content for {{tab}}</h3>\n\n      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem perspiciatis in delectus\n      reprehenderit, molestias ullam nostrum odit, modi consequatur harum beatae? Sapiente\n      voluptatibus illo natus assumenda hic quasi dolor et laborum veniam! Molestiae architecto\n      nesciunt est quo nisi? Nostrum repellendus quibusdam laudantium? Optio architecto explicabo\n      labore sapiente cum alias nobis!\n    </mat-tab>\n  }\n</mat-tab-group>\n",
       styles: [".example-drag-tabs.cdk-drop-list-dragging {\n  pointer-events: none;\n}\n\n.example-drag-tabs-preview.cdk-drag-animating {\n  transition: all 250ms cubic-bezier(0, 0, 0.2, 1);\n}\n\n.mat-mdc-tab.example-drag-tabs-preview {\n  outline: dashed 1px #ccc;\n  outline-offset: 4px;\n}\n\n.example-drag-tabs .cdk-drag-placeholder {\n  opacity: 0.5;\n}\n\n"]
     }]
   }]
