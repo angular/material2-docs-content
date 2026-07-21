@@ -3,6 +3,7 @@ import * as _angular_forms from '@angular/forms';
 import { FormGroup } from '@angular/forms';
 import { StepperOrientation } from '@angular/material/stepper';
 import { Observable } from 'rxjs';
+import * as _angular_forms_signals from '@angular/forms/signals';
 
 /**
  * @title Stepper with editable steps
@@ -194,4 +195,19 @@ declare class StepperAnimationsExample {
     static ɵcmp: i0.ɵɵComponentDeclaration<StepperAnimationsExample, "stepper-animations-example", never, {}, {}, never, never, true, never>;
 }
 
-export { StepperAnimationsExample, StepperEditableExample, StepperErrorsExample, StepperHarnessExample, StepperHeaderPositionExample, StepperIntlExample, StepperLabelPositionBottomExample, StepperLazyContentExample, StepperOptionalExample, StepperOverviewExample, StepperResponsiveExample, StepperStatesExample, StepperVerticalExample };
+/**
+ * @title Stepper using signal forms
+ */
+declare class StepperSignalFormsExample {
+    readonly nameFormGroup: _angular_forms_signals.FieldTree<{
+        name: string;
+    }, string | number, "writable">;
+    readonly adddressFormGroup: _angular_forms_signals.FieldTree<{
+        address: string;
+    }, string | number, "writable">;
+    readonly isLinear: i0.WritableSignal<boolean>;
+    static ɵfac: i0.ɵɵFactoryDeclaration<StepperSignalFormsExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<StepperSignalFormsExample, "stepper-signal-forms-example", never, {}, {}, never, never, true, never>;
+}
+
+export { StepperAnimationsExample, StepperEditableExample, StepperErrorsExample, StepperHarnessExample, StepperHeaderPositionExample, StepperIntlExample, StepperLabelPositionBottomExample, StepperLazyContentExample, StepperOptionalExample, StepperOverviewExample, StepperResponsiveExample, StepperSignalFormsExample, StepperStatesExample, StepperVerticalExample };

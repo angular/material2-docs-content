@@ -2699,6 +2699,16 @@ const EXAMPLE_COMPONENTS = {
     "primaryFile": "stepper-responsive-example.ts",
     "importPath": "material/stepper"
   },
+  "stepper-signal-forms": {
+    "packagePath": "material/stepper/stepper-signal-forms",
+    "title": "Stepper using signal forms",
+    "componentName": "StepperSignalFormsExample",
+    "files": ["stepper-signal-forms-example.ts", "stepper-signal-forms-example.html", "stepper-signal-forms-example.css"],
+    "selector": "stepper-signal-forms-example",
+    "additionalComponents": [],
+    "primaryFile": "stepper-signal-forms-example.ts",
+    "importPath": "material/stepper"
+  },
   "stepper-states": {
     "packagePath": "material/stepper/stepper-states",
     "title": "Stepper with customized states",
@@ -4091,6 +4101,8 @@ async function loadExample(id) {
     case 'stepper-overview':
       return import('@angular/components-examples/material/stepper');
     case 'stepper-responsive':
+      return import('@angular/components-examples/material/stepper');
+    case 'stepper-signal-forms':
       return import('@angular/components-examples/material/stepper');
     case 'stepper-states':
       return import('@angular/components-examples/material/stepper');

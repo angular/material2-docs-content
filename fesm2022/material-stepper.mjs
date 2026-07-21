@@ -18,6 +18,7 @@ import { MatRadioModule } from '@angular/material/radio';
 import { BreakpointObserver } from '@angular/cdk/layout';
 import { map } from 'rxjs/operators';
 import { AsyncPipe } from '@angular/common';
+import { form, required, FormField } from '@angular/forms/signals';
 
 class StepperEditableExample {
   _formBuilder = inject(FormBuilder);
@@ -1857,5 +1858,120 @@ i0.ɵɵngDeclareClassMetadata({
   }]
 });
 
-export { StepperAnimationsExample, StepperEditableExample, StepperErrorsExample, StepperHarnessExample, StepperHeaderPositionExample, StepperIntlExample, StepperLabelPositionBottomExample, StepperLazyContentExample, StepperOptionalExample, StepperOverviewExample, StepperResponsiveExample, StepperStatesExample, StepperVerticalExample };
+class StepperSignalFormsExample {
+  nameFormGroup = form(signal({
+    name: ''
+  }), tree => {
+    required(tree.name);
+  });
+  adddressFormGroup = form(signal({
+    address: ''
+  }), tree => {
+    required(tree.address);
+  });
+  isLinear = signal(false, ...(ngDevMode ? [{
+    debugName: "isLinear"
+  }] : []));
+  static ɵfac = i0.ɵɵngDeclareFactory({
+    minVersion: "12.0.0",
+    version: "22.1.0-next.6",
+    ngImport: i0,
+    type: StepperSignalFormsExample,
+    deps: [],
+    target: i0.ɵɵFactoryTarget.Component
+  });
+  static ɵcmp = i0.ɵɵngDeclareComponent({
+    minVersion: "14.0.0",
+    version: "22.1.0-next.6",
+    type: StepperSignalFormsExample,
+    isStandalone: true,
+    selector: "stepper-signal-forms-example",
+    ngImport: i0,
+    template: "<button matButton=\"elevated\" (click)=\"isLinear.set(!isLinear())\">\n  {{!isLinear ? 'Enable linear mode' : 'Disable linear mode'}}\n</button>\n\n<mat-stepper [linear]=\"isLinear()\" #stepper>\n  <mat-step [stepControl]=\"nameFormGroup\">\n    <form (submit)=\"$event.preventDefault()\">\n      <ng-template matStepLabel>Fill out your name</ng-template>\n      <mat-form-field>\n        <mat-label>Name</mat-label>\n        <input matInput placeholder=\"Last name, First name\" [formField]=\"nameFormGroup.name\">\n      </mat-form-field>\n      <div>\n        <button matButton matStepperNext>Next</button>\n      </div>\n    </form>\n  </mat-step>\n  <mat-step [stepControl]=\"adddressFormGroup\" label=\"Fill out your address\">\n    <form (submit)=\"$event.preventDefault()\">\n      <mat-form-field>\n        <mat-label>Address</mat-label>\n        <input matInput [formField]=\"adddressFormGroup.address\" placeholder=\"Ex. 1 Main St, New York, NY\">\n      </mat-form-field>\n      <div>\n        <button matButton matStepperPrevious>Back</button>\n        <button matButton matStepperNext>Next</button>\n      </div>\n    </form>\n  </mat-step>\n  <mat-step>\n    <ng-template matStepLabel>Done</ng-template>\n    <p>You are now done.</p>\n    <div>\n      <button matButton matStepperPrevious>Back</button>\n      <button matButton (click)=\"stepper.reset()\">Reset</button>\n    </div>\n  </mat-step>\n</mat-stepper>\n",
+    styles: [".mat-stepper-horizontal {\n  margin-top: 8px;\n}\n\n.mat-mdc-form-field {\n  margin-top: 16px;\n}\n"],
+    dependencies: [{
+      kind: "directive",
+      type: FormField,
+      selector: "[formField]",
+      inputs: ["formField"],
+      exportAs: ["formField"]
+    }, {
+      kind: "ngmodule",
+      type: MatButtonModule
+    }, {
+      kind: "component",
+      type: i1.MatButton,
+      selector: "    button[matButton], a[matButton], button[mat-button], button[mat-raised-button],    button[mat-flat-button], button[mat-stroked-button], a[mat-button], a[mat-raised-button],    a[mat-flat-button], a[mat-stroked-button]  ",
+      inputs: ["matButton"],
+      exportAs: ["matButton", "matAnchor"]
+    }, {
+      kind: "ngmodule",
+      type: MatFormFieldModule
+    }, {
+      kind: "component",
+      type: i1$2.MatFormField,
+      selector: "mat-form-field",
+      inputs: ["hideRequiredMarker", "color", "floatLabel", "appearance", "subscriptSizing", "hintLabel"],
+      exportAs: ["matFormField"]
+    }, {
+      kind: "directive",
+      type: i1$2.MatLabel,
+      selector: "mat-label"
+    }, {
+      kind: "ngmodule",
+      type: MatInputModule
+    }, {
+      kind: "directive",
+      type: i2.MatInput,
+      selector: "input[matInput], textarea[matInput], select[matNativeControl],      input[matNativeControl], textarea[matNativeControl]",
+      inputs: ["disabled", "id", "placeholder", "name", "required", "type", "errorStateMatcher", "aria-describedby", "value", "readonly", "disabledInteractive"],
+      exportAs: ["matInput"]
+    }, {
+      kind: "ngmodule",
+      type: MatStepperModule
+    }, {
+      kind: "component",
+      type: i1$1.MatStep,
+      selector: "mat-step",
+      inputs: ["color"],
+      exportAs: ["matStep"]
+    }, {
+      kind: "directive",
+      type: i1$1.MatStepLabel,
+      selector: "[matStepLabel]"
+    }, {
+      kind: "component",
+      type: i1$1.MatStepper,
+      selector: "mat-stepper, mat-vertical-stepper, mat-horizontal-stepper, [matStepper]",
+      inputs: ["disableRipple", "color", "labelPosition", "headerPosition", "aria-label", "headerPrefix", "animationDuration"],
+      outputs: ["animationDone"],
+      exportAs: ["matStepper", "matVerticalStepper", "matHorizontalStepper"]
+    }, {
+      kind: "directive",
+      type: i1$1.MatStepperNext,
+      selector: "button[matStepperNext]"
+    }, {
+      kind: "directive",
+      type: i1$1.MatStepperPrevious,
+      selector: "button[matStepperPrevious]"
+    }]
+  });
+}
+i0.ɵɵngDeclareClassMetadata({
+  minVersion: "12.0.0",
+  version: "22.1.0-next.6",
+  ngImport: i0,
+  type: StepperSignalFormsExample,
+  decorators: [{
+    type: Component,
+    args: [{
+      selector: 'stepper-signal-forms-example',
+      imports: [FormField, MatButtonModule, MatFormFieldModule, MatInputModule, MatStepperModule],
+      template: "<button matButton=\"elevated\" (click)=\"isLinear.set(!isLinear())\">\n  {{!isLinear ? 'Enable linear mode' : 'Disable linear mode'}}\n</button>\n\n<mat-stepper [linear]=\"isLinear()\" #stepper>\n  <mat-step [stepControl]=\"nameFormGroup\">\n    <form (submit)=\"$event.preventDefault()\">\n      <ng-template matStepLabel>Fill out your name</ng-template>\n      <mat-form-field>\n        <mat-label>Name</mat-label>\n        <input matInput placeholder=\"Last name, First name\" [formField]=\"nameFormGroup.name\">\n      </mat-form-field>\n      <div>\n        <button matButton matStepperNext>Next</button>\n      </div>\n    </form>\n  </mat-step>\n  <mat-step [stepControl]=\"adddressFormGroup\" label=\"Fill out your address\">\n    <form (submit)=\"$event.preventDefault()\">\n      <mat-form-field>\n        <mat-label>Address</mat-label>\n        <input matInput [formField]=\"adddressFormGroup.address\" placeholder=\"Ex. 1 Main St, New York, NY\">\n      </mat-form-field>\n      <div>\n        <button matButton matStepperPrevious>Back</button>\n        <button matButton matStepperNext>Next</button>\n      </div>\n    </form>\n  </mat-step>\n  <mat-step>\n    <ng-template matStepLabel>Done</ng-template>\n    <p>You are now done.</p>\n    <div>\n      <button matButton matStepperPrevious>Back</button>\n      <button matButton (click)=\"stepper.reset()\">Reset</button>\n    </div>\n  </mat-step>\n</mat-stepper>\n",
+      styles: [".mat-stepper-horizontal {\n  margin-top: 8px;\n}\n\n.mat-mdc-form-field {\n  margin-top: 16px;\n}\n"]
+    }]
+  }]
+});
+
+export { StepperAnimationsExample, StepperEditableExample, StepperErrorsExample, StepperHarnessExample, StepperHeaderPositionExample, StepperIntlExample, StepperLabelPositionBottomExample, StepperLazyContentExample, StepperOptionalExample, StepperOverviewExample, StepperResponsiveExample, StepperSignalFormsExample, StepperStatesExample, StepperVerticalExample };
 //# sourceMappingURL=material-stepper.mjs.map

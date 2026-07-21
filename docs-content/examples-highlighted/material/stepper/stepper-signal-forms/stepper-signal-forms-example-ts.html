@@ -1,0 +1,27 @@
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">Component</span>, signal} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {form, required, <span class="hljs-title class_">FormField</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/forms/signals&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatButtonModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/button&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatFormFieldModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/form-field&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatInputModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/input&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatStepperModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/stepper&#x27;</span>;
+
+<span class="hljs-comment">/**
+ * <span class="hljs-doctag">@title</span> Stepper using signal forms
+ */</span>
+<span class="hljs-meta">@Component</span>({
+  <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;stepper-signal-forms-example&#x27;</span>,
+  <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;stepper-signal-forms-example.html&#x27;</span>,
+  <span class="hljs-attr">styleUrl</span>: <span class="hljs-string">&#x27;stepper-signal-forms-example.css&#x27;</span>,
+  <span class="hljs-attr">imports</span>: [<span class="hljs-title class_">FormField</span>, <span class="hljs-title class_">MatButtonModule</span>, <span class="hljs-title class_">MatFormFieldModule</span>, <span class="hljs-title class_">MatInputModule</span>, <span class="hljs-title class_">MatStepperModule</span>],
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">StepperSignalFormsExample</span> {
+  <span class="hljs-keyword">readonly</span> nameFormGroup = <span class="hljs-title function_">form</span>(<span class="hljs-title function_">signal</span>({<span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;&#x27;</span>}), <span class="hljs-function"><span class="hljs-params">tree</span> =&gt;</span> {
+    <span class="hljs-title function_">required</span>(tree.<span class="hljs-property">name</span>);
+  });
+
+  <span class="hljs-keyword">readonly</span> adddressFormGroup = <span class="hljs-title function_">form</span>(<span class="hljs-title function_">signal</span>({<span class="hljs-attr">address</span>: <span class="hljs-string">&#x27;&#x27;</span>}), <span class="hljs-function"><span class="hljs-params">tree</span> =&gt;</span> {
+    <span class="hljs-title function_">required</span>(tree.<span class="hljs-property">address</span>);
+  });
+
+  <span class="hljs-keyword">readonly</span> isLinear = <span class="hljs-title function_">signal</span>(<span class="hljs-literal">false</span>);
+}
