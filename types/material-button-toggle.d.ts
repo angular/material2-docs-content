@@ -1,5 +1,6 @@
 import * as i0 from '@angular/core';
 import { MatButtonToggleAppearance } from '@angular/material/button-toggle';
+import * as _angular_forms_signals from '@angular/forms/signals';
 import { FormControl } from '@angular/forms';
 
 /**
@@ -32,8 +33,9 @@ declare class ButtonToggleHarnessExample {
  * @title Button-toggles with forms
  */
 declare class ButtonToggleFormsExample {
-    fontStyleControl: FormControl<string | null>;
-    fontStyle: i0.WritableSignal<string | undefined>;
+    readonly fontStyleControl: FormControl<string | null>;
+    readonly fontStyle: i0.WritableSignal<string | undefined>;
+    readonly fontStyleForm: _angular_forms_signals.FieldTree<string, string | number, "writable">;
     static ɵfac: i0.ɵɵFactoryDeclaration<ButtonToggleFormsExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<ButtonToggleFormsExample, "button-toggle-forms-example", never, {}, {}, never, never, true, never>;
 }
