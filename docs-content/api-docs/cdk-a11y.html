@@ -5558,7 +5558,12 @@ Things like <code>tabIndex &gt; 0</code>, flex <code>order</code>, and shadow ro
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>endAnchorListener: <code class="docs-api-property-type">() =&gt; this.focusFirstTabbableElement()</code></code>
+      <code>endAnchorListener: <code class="docs-api-property-type">() =&gt; {
+    const isSuccess = this.focusFirstTabbableElement();
+    if (!isSuccess &amp;&amp; this._checker.isFocusable(this._element)) {
+        this._element.focus();
+    }
+}</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"></td>
@@ -5570,7 +5575,12 @@ Things like <code>tabIndex &gt; 0</code>, flex <code>order</code>, and shadow ro
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>startAnchorListener: <code class="docs-api-property-type">() =&gt; this.focusLastTabbableElement()</code></code>
+      <code>startAnchorListener: <code class="docs-api-property-type">() =&gt; {
+    const isSuccess = this.focusLastTabbableElement();
+    if (!isSuccess &amp;&amp; this._checker.isFocusable(this._element)) {
+        this._element.focus();
+    }
+}</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"></td>
