@@ -126,6 +126,16 @@ themselves using <code>aria-label</code>, <code>aria-labelledby</code> or <code>
 adds these elements&#39; IDs to the control&#39;s <code>aria-describedby</code> attribute. Additionally, <code>MatError</code>
 applies <code>aria-live=&quot;polite&quot;</code> by default such that assistive technology will announce errors when
 they appear.</p>
+<p>When using static text prefixes or suffixes (such as currency symbols like <code>$</code> or unit suffixes like
+<code>.00</code> or <code>kg</code>), screen readers may not announce them as part of the input value, and some mobile screen
+readers, especially on Android/TalkBack, may expose them as separate focus stops. This can lead to
+redundant announcements or unexpected focus behavior when navigating the field.</p>
+<p>If the prefix or suffix provides important context, add an <code>aria-label</code> to the input or include the full
+meaning in <code>aria-describedby</code> so the accessible name/description matches the visible content. For example,
+if the prefix is <code>$</code> and the suffix is <code>.00</code> to indicate dollars with no cents, an appropriate <code>aria-label</code>
+could be <code>aria-label=&quot;Amount in dollars with 0 cents&quot;</code>. When the static text is purely decorative and the
+input already conveys the full context, add <code>aria-hidden=&quot;true&quot;</code> to the static <code>matTextPrefix</code> or
+<code>matTextSuffix</code> elements so they are skipped during swipe navigation and do not create redundant focus stops.</p>
 
         <h3 id="troubleshooting" class="docs-header-link">
           <span header-link="troubleshooting"></span>
