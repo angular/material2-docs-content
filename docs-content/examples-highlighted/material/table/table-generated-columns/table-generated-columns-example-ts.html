@@ -40,7 +40,7 @@
     {
       <span class="hljs-attr">columnDef</span>: <span class="hljs-string">&#x27;name&#x27;</span>,
       <span class="hljs-attr">header</span>: <span class="hljs-string">&#x27;Name&#x27;</span>,
-      <span class="hljs-attr">cell</span>: <span class="hljs-function">(<span class="hljs-params"><span class="hljs-attr">element</span>: <span class="hljs-title class_">PeriodicElement</span></span>) =&gt;</span> <span class="hljs-string">`<span class="hljs-subst">${element.name}</span>`</span>,
+      <span class="hljs-attr">cell</span>: <span class="hljs-function">(<span class="hljs-params"><span class="hljs-attr">element</span>: <span class="hljs-title class_">PeriodicElement</span></span>) =&gt;</span> element.<span class="hljs-property">name</span>,
     },
     {
       <span class="hljs-attr">columnDef</span>: <span class="hljs-string">&#x27;weight&#x27;</span>,
@@ -50,7 +50,7 @@
     {
       <span class="hljs-attr">columnDef</span>: <span class="hljs-string">&#x27;symbol&#x27;</span>,
       <span class="hljs-attr">header</span>: <span class="hljs-string">&#x27;Symbol&#x27;</span>,
-      <span class="hljs-attr">cell</span>: <span class="hljs-function">(<span class="hljs-params"><span class="hljs-attr">element</span>: <span class="hljs-title class_">PeriodicElement</span></span>) =&gt;</span> <span class="hljs-string">`<span class="hljs-subst">${element.<span class="hljs-built_in">symbol</span>}</span>`</span>,
+      <span class="hljs-attr">cell</span>: <span class="hljs-function">(<span class="hljs-params"><span class="hljs-attr">element</span>: <span class="hljs-title class_">PeriodicElement</span></span>) =&gt;</span> element.<span class="hljs-property">symbol</span>,
     },
   ];
   dataSource = <span class="hljs-variable constant_">ELEMENT_DATA</span>;

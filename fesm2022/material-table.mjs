@@ -5012,7 +5012,7 @@ class TableGeneratedColumnsExample {
   }, {
     columnDef: 'name',
     header: 'Name',
-    cell: element => `${element.name}`
+    cell: element => element.name
   }, {
     columnDef: 'weight',
     header: 'Weight',
@@ -5020,7 +5020,7 @@ class TableGeneratedColumnsExample {
   }, {
     columnDef: 'symbol',
     header: 'Symbol',
-    cell: element => `${element.symbol}`
+    cell: element => element.symbol
   }];
   dataSource = ELEMENT_DATA$3;
   displayedColumns = this.columns.map(c => c.columnDef);
