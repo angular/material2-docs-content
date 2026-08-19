@@ -7,7 +7,7 @@ import * as _angular_forms from '@angular/forms';
 declare class CheckboxConfigurableExample {
     readonly checked: i0.ModelSignal<boolean>;
     readonly indeterminate: i0.ModelSignal<boolean>;
-    readonly labelPosition: i0.ModelSignal<"before" | "after">;
+    readonly labelPosition: i0.ModelSignal<"after" | "before">;
     readonly disabled: i0.ModelSignal<boolean>;
     static ɵfac: i0.ɵɵFactoryDeclaration<CheckboxConfigurableExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<CheckboxConfigurableExample, "checkbox-configurable-example", never, { "checked": { "alias": "checked"; "required": false; "isSignal": true; }; "indeterminate": { "alias": "indeterminate"; "required": false; "isSignal": true; }; "labelPosition": { "alias": "labelPosition"; "required": false; "isSignal": true; }; "disabled": { "alias": "disabled"; "required": false; "isSignal": true; }; }, { "checked": "checkedChange"; "indeterminate": "indeterminateChange"; "labelPosition": "labelPositionChange"; "disabled": "disabledChange"; }, never, never, true, never>;

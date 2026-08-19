@@ -50,9 +50,9 @@ declare class SidenavFixedExample {
 
 /** @title Sidenav using injected ConfigurableFocusTrap */
 declare class SidenavConfigurableFocusTrapExample {
-    mode: FormControl<"push" | "over" | "side" | null>;
+    mode: FormControl<"over" | "push" | "side" | null>;
     hasBackdrop: FormControl<boolean | null>;
-    position: FormControl<"start" | "end" | null>;
+    position: FormControl<"end" | "start" | null>;
     shouldRun: boolean;
     static ɵfac: i0.ɵɵFactoryDeclaration<SidenavConfigurableFocusTrapExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<SidenavConfigurableFocusTrapExample, "sidenav-configurable-focus-trap-example", never, {}, {}, never, never, true, never>;
@@ -60,7 +60,7 @@ declare class SidenavConfigurableFocusTrapExample {
 
 /** @title Sidenav open & close behavior */
 declare class SidenavOpenCloseExample {
-    events: i0.WritableSignal<("open!" | "close!")[]>;
+    events: i0.WritableSignal<("close!" | "open!")[]>;
     opened: i0.WritableSignal<boolean>;
     shouldRun: boolean;
     trackEvent(event: 'open!' | 'close!'): void;
