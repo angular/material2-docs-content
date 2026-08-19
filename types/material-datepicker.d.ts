@@ -137,7 +137,7 @@ declare class DatepickerLocaleExample implements OnInit {
     private readonly _adapter;
     private readonly _intl;
     private readonly _locale;
-    readonly dateFormatString: i0.Signal<"" | "YYYY/MM/DD" | "DD/MM/YYYY">;
+    readonly dateFormatString: i0.Signal<"" | "DD/MM/YYYY" | "YYYY/MM/DD">;
     ngOnInit(): void;
     french(): void;
     updateCloseButtonLabel(label: string): void;

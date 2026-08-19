@@ -7,7 +7,7 @@ import * as i0 from '@angular/core';
  */
 declare class TooltipAutoHideExample {
     positionOptions: TooltipPosition[];
-    position: FormControl<"left" | "right" | "above" | "below" | "before" | "after" | null>;
+    position: FormControl<"above" | "after" | "before" | "below" | "left" | "right" | null>;
     static ɵfac: i0.ɵɵFactoryDeclaration<TooltipAutoHideExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<TooltipAutoHideExample, "tooltip-auto-hide-example", never, {}, {}, never, never, true, never>;
 }
@@ -77,7 +77,7 @@ declare class TooltipOverviewExample {
  */
 declare class TooltipPositionExample {
     positionOptions: TooltipPosition[];
-    position: FormControl<"left" | "right" | "above" | "below" | "before" | "after" | null>;
+    position: FormControl<"above" | "after" | "before" | "below" | "left" | "right" | null>;
     static ɵfac: i0.ɵɵFactoryDeclaration<TooltipPositionExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<TooltipPositionExample, "tooltip-position-example", never, {}, {}, never, never, true, never>;
 }

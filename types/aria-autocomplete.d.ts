@@ -5,7 +5,7 @@ import { Listbox } from '@angular/aria/listbox';
 /** @title Autocomplete with auto-select filtering. */
 declare class AutocompleteAutoSelectExample {
     /** The selected value of the combobox. */
-    readonly listbox: i0.Signal<Listbox<any> | undefined>;
+    readonly listbox: i0.Signal<Listbox<unknown> | undefined>;
     readonly combobox: i0.Signal<Combobox | undefined>;
     popupExpanded: i0.WritableSignal<boolean>;
     searchString: i0.WritableSignal<string>;
@@ -27,7 +27,7 @@ declare class AutocompleteAutoSelectExample {
 /** @title Disabled autocomplete. */
 declare class AutocompleteDisabledExample {
     /** The selected value of the combobox. */
-    readonly listbox: i0.Signal<Listbox<any> | undefined>;
+    readonly listbox: i0.Signal<Listbox<unknown> | undefined>;
     readonly combobox: i0.Signal<Combobox | undefined>;
     popupExpanded: i0.WritableSignal<boolean>;
     searchString: i0.WritableSignal<string>;
@@ -44,7 +44,7 @@ declare class AutocompleteDisabledExample {
 /** @title Autocomplete with highlighted filtering. */
 declare class AutocompleteHighlightExample {
     /** The selected value of the combobox. */
-    readonly listbox: i0.Signal<Listbox<any> | undefined>;
+    readonly listbox: i0.Signal<Listbox<unknown> | undefined>;
     readonly combobox: i0.Signal<Combobox | undefined>;
     popupExpanded: i0.WritableSignal<boolean>;
     searchString: i0.WritableSignal<string>;
@@ -67,7 +67,7 @@ declare class AutocompleteHighlightExample {
 /** @title Combobox Autocomplete with manual filtering. */
 declare class AutocompleteManualExample {
     /** The selected value of the combobox. */
-    readonly listbox: i0.Signal<Listbox<any> | undefined>;
+    readonly listbox: i0.Signal<Listbox<unknown> | undefined>;
     readonly combobox: i0.Signal<Combobox | undefined>;
     popupExpanded: i0.WritableSignal<boolean>;
     searchString: i0.WritableSignal<string>;

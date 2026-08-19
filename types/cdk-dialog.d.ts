@@ -44,7 +44,7 @@ declare class CdkDialogStylingExample {
     static ɵcmp: i0.ɵɵComponentDeclaration<CdkDialogStylingExample, "cdk-dialog-styling-example", never, {}, {}, never, never, true, never>;
 }
 declare class CdkDialogStylingExampleDialog {
-    dialogRef: DialogRef<any, any>;
+    dialogRef: DialogRef<unknown, unknown>;
     static ɵfac: i0.ɵɵFactoryDeclaration<CdkDialogStylingExampleDialog, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<CdkDialogStylingExampleDialog, "cdk-dialog-styling-example-dialog", never, {}, {}, never, never, true, never>;
 }
