@@ -667,7 +667,7 @@ class DialogFromMenuExample {
       kind: "component",
       type: i2$1.MatMenuItem,
       selector: "[mat-menu-item]",
-      inputs: ["role", "disabled", "disableRipple"],
+      inputs: ["role", "disabled", "disabledInteractive", "disableRipple"],
       exportAs: ["matMenuItem"]
     }, {
       kind: "directive",

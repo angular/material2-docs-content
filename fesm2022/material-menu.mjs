@@ -46,7 +46,7 @@ class MenuIconsExample {
       kind: "component",
       type: i2.MatMenuItem,
       selector: "[mat-menu-item]",
-      inputs: ["role", "disabled", "disableRipple"],
+      inputs: ["role", "disabled", "disabledInteractive", "disableRipple"],
       exportAs: ["matMenuItem"]
     }, {
       kind: "directive",
@@ -122,7 +122,7 @@ class MenuOverviewExample {
       kind: "component",
       type: i2.MatMenuItem,
       selector: "[mat-menu-item]",
-      inputs: ["role", "disabled", "disableRipple"],
+      inputs: ["role", "disabled", "disabledInteractive", "disableRipple"],
       exportAs: ["matMenuItem"]
     }, {
       kind: "directive",
@@ -189,7 +189,7 @@ class MenuPositionExample {
       kind: "component",
       type: i2.MatMenuItem,
       selector: "[mat-menu-item]",
-      inputs: ["role", "disabled", "disableRipple"],
+      inputs: ["role", "disabled", "disabledInteractive", "disableRipple"],
       exportAs: ["matMenuItem"]
     }, {
       kind: "directive",
@@ -256,7 +256,7 @@ class MenuNestedExample {
       kind: "component",
       type: i2.MatMenuItem,
       selector: "[mat-menu-item]",
-      inputs: ["role", "disabled", "disableRipple"],
+      inputs: ["role", "disabled", "disabledInteractive", "disableRipple"],
       exportAs: ["matMenuItem"]
     }, {
       kind: "directive",
@@ -314,7 +314,7 @@ class MenuHarnessExample {
       kind: "component",
       type: i2.MatMenuItem,
       selector: "[mat-menu-item]",
-      inputs: ["role", "disabled", "disableRipple"],
+      inputs: ["role", "disabled", "disabledInteractive", "disableRipple"],
       exportAs: ["matMenuItem"]
     }, {
       kind: "directive",
@@ -373,7 +373,7 @@ class ContextMenuExample {
       kind: "component",
       type: i2.MatMenuItem,
       selector: "[mat-menu-item]",
-      inputs: ["role", "disabled", "disableRipple"],
+      inputs: ["role", "disabled", "disabledInteractive", "disableRipple"],
       exportAs: ["matMenuItem"]
     }, {
       kind: "directive",
