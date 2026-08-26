@@ -33,13 +33,13 @@
     <span class="hljs-keyword">const</span> container = <span class="hljs-keyword">await</span> loader.<span class="hljs-title function_">getHarness</span>(<span class="hljs-title class_">MatDrawerContainerHarness</span>);
     <span class="hljs-keyword">const</span> drawer = <span class="hljs-keyword">await</span> container.<span class="hljs-title function_">getDrawers</span>();
 
-    <span class="hljs-title function_">expect</span>(<span class="hljs-title function_">await</span> (<span class="hljs-keyword">await</span> drawer[<span class="hljs-number">0</span>].<span class="hljs-title function_">host</span>()).<span class="hljs-title function_">text</span>()).<span class="hljs-title function_">toBe</span>(<span class="hljs-string">&#x27;Hello from the drawer&#x27;</span>);
+    <span class="hljs-title function_">expect</span>(<span class="hljs-keyword">await</span> (<span class="hljs-keyword">await</span> drawer[<span class="hljs-number">0</span>].<span class="hljs-title function_">host</span>()).<span class="hljs-title function_">text</span>()).<span class="hljs-title function_">toBe</span>(<span class="hljs-string">&#x27;Hello from the drawer&#x27;</span>);
   });
 
   <span class="hljs-title function_">it</span>(<span class="hljs-string">&#x27;should get the content of a container&#x27;</span>, <span class="hljs-title function_">async</span> () =&gt; {
     <span class="hljs-keyword">const</span> container = <span class="hljs-keyword">await</span> loader.<span class="hljs-title function_">getHarness</span>(<span class="hljs-title class_">MatDrawerContainerHarness</span>);
     <span class="hljs-keyword">const</span> content = <span class="hljs-keyword">await</span> container.<span class="hljs-title function_">getContent</span>();
-    <span class="hljs-title function_">expect</span>(<span class="hljs-title function_">await</span> (<span class="hljs-keyword">await</span> content.<span class="hljs-title function_">host</span>()).<span class="hljs-title function_">text</span>()).<span class="hljs-title function_">toBe</span>(<span class="hljs-string">&#x27;Hello from the content&#x27;</span>);
+    <span class="hljs-title function_">expect</span>(<span class="hljs-keyword">await</span> (<span class="hljs-keyword">await</span> content.<span class="hljs-title function_">host</span>()).<span class="hljs-title function_">text</span>()).<span class="hljs-title function_">toBe</span>(<span class="hljs-string">&#x27;Hello from the content&#x27;</span>);
   });
 
   <span class="hljs-title function_">it</span>(<span class="hljs-string">&#x27;should load all drawer content harnesses&#x27;</span>, <span class="hljs-title function_">async</span> () =&gt; {
