@@ -31,7 +31,7 @@
     <span class="hljs-title function_">expect</span>(<span class="hljs-keyword">await</span> formField.<span class="hljs-title function_">getTextHints</span>()).<span class="hljs-title function_">toEqual</span>([<span class="hljs-string">&#x27;Hint&#x27;</span>]);
 
     fixture.<span class="hljs-property">componentInstance</span>.<span class="hljs-property">requiredControl</span>.<span class="hljs-title function_">setValue</span>(<span class="hljs-string">&#x27;&#x27;</span>);
-    <span class="hljs-keyword">await</span> ((<span class="hljs-keyword">await</span> formField.<span class="hljs-title function_">getControl</span>()) <span class="hljs-keyword">as</span> <span class="hljs-title class_">MatInputHarness</span>)?.<span class="hljs-title function_">blur</span>();
+    <span class="hljs-title function_">await</span> ((<span class="hljs-keyword">await</span> formField.<span class="hljs-title function_">getControl</span>()) <span class="hljs-keyword">as</span> <span class="hljs-title class_">MatInputHarness</span>)?.<span class="hljs-title function_">blur</span>();
     <span class="hljs-title function_">expect</span>(<span class="hljs-keyword">await</span> formField.<span class="hljs-title function_">getTextErrors</span>()).<span class="hljs-title function_">toEqual</span>([<span class="hljs-string">&#x27;Error&#x27;</span>]);
     <span class="hljs-title function_">expect</span>(<span class="hljs-keyword">await</span> formField.<span class="hljs-title function_">getTextHints</span>()).<span class="hljs-title function_">toEqual</span>([]);
   });

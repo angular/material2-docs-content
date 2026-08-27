@@ -9,7 +9,7 @@ class CdkOverlayBasicExample {
   }] : []));
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.2.0-next.3",
+    version: "22.2.0-next.4",
     ngImport: i0,
     type: CdkOverlayBasicExample,
     deps: [],
@@ -17,7 +17,7 @@ class CdkOverlayBasicExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.2.0-next.3",
+    version: "22.2.0-next.4",
     type: CdkOverlayBasicExample,
     isStandalone: true,
     selector: "cdk-overlay-basic-example",
@@ -44,7 +44,7 @@ class CdkOverlayBasicExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.2.0-next.3",
+  version: "22.2.0-next.4",
   ngImport: i0,
   type: CdkOverlayBasicExample,
   decorators: [{

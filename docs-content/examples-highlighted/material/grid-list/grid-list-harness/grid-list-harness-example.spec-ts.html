@@ -33,7 +33,7 @@
   <span class="hljs-title function_">it</span>(<span class="hljs-string">&#x27;should be able to check whether tile has header&#x27;</span>, <span class="hljs-title function_">async</span> () =&gt; {
     <span class="hljs-keyword">const</span> tiles = <span class="hljs-keyword">await</span> loader.<span class="hljs-title function_">getAllHarnesses</span>(<span class="hljs-title class_">MatGridTileHarness</span>);
     <span class="hljs-title function_">expect</span>(<span class="hljs-keyword">await</span> tiles[<span class="hljs-number">0</span>].<span class="hljs-title function_">hasHeader</span>()).<span class="hljs-title function_">toBe</span>(<span class="hljs-literal">false</span>);
-    <span class="hljs-title function_">expect</span>(<span class="hljs-keyword">await</span> (<span class="hljs-keyword">await</span> tiles[<span class="hljs-number">0</span>].<span class="hljs-title function_">host</span>()).<span class="hljs-title function_">text</span>()).<span class="hljs-title function_">toBe</span>(<span class="hljs-string">&#x27;Tile 1 (no header, no footer)&#x27;</span>);
+    <span class="hljs-title function_">expect</span>(<span class="hljs-title function_">await</span> (<span class="hljs-keyword">await</span> tiles[<span class="hljs-number">0</span>].<span class="hljs-title function_">host</span>()).<span class="hljs-title function_">text</span>()).<span class="hljs-title function_">toBe</span>(<span class="hljs-string">&#x27;Tile 1 (no header, no footer)&#x27;</span>);
   });
 
   <span class="hljs-title function_">it</span>(<span class="hljs-string">&#x27;should be able to check whether tile has footer&#x27;</span>, <span class="hljs-title function_">async</span> () =&gt; {
