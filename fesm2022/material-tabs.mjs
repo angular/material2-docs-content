@@ -22,7 +22,7 @@ import { moveItemInArray, CdkDrag, CdkDropList } from '@angular/cdk/drag-drop';
 class TabGroupAlignExample {
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.1.4",
+    version: "22.1.5",
     ngImport: i0,
     type: TabGroupAlignExample,
     deps: [],
@@ -30,7 +30,7 @@ class TabGroupAlignExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.1.4",
+    version: "22.1.5",
     type: TabGroupAlignExample,
     isStandalone: true,
     selector: "tab-group-align-example",
@@ -58,7 +58,7 @@ class TabGroupAlignExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.1.4",
+  version: "22.1.5",
   ngImport: i0,
   type: TabGroupAlignExample,
   decorators: [{
@@ -75,7 +75,7 @@ i0.ɵɵngDeclareClassMetadata({
 class TabGroupAnimationsExample {
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.1.4",
+    version: "22.1.5",
     ngImport: i0,
     type: TabGroupAnimationsExample,
     deps: [],
@@ -83,7 +83,7 @@ class TabGroupAnimationsExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.1.4",
+    version: "22.1.5",
     type: TabGroupAnimationsExample,
     isStandalone: true,
     selector: "tab-group-animations-example",
@@ -111,7 +111,7 @@ class TabGroupAnimationsExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.1.4",
+  version: "22.1.5",
   ngImport: i0,
   type: TabGroupAnimationsExample,
   decorators: [{
@@ -141,7 +141,7 @@ class TabGroupAsyncExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.1.4",
+    version: "22.1.5",
     ngImport: i0,
     type: TabGroupAsyncExample,
     deps: [],
@@ -149,7 +149,7 @@ class TabGroupAsyncExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "22.1.4",
+    version: "22.1.5",
     type: TabGroupAsyncExample,
     isStandalone: true,
     selector: "tab-group-async-example",
@@ -184,7 +184,7 @@ class TabGroupAsyncExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.1.4",
+  version: "22.1.5",
   ngImport: i0,
   type: TabGroupAsyncExample,
   decorators: [{
@@ -201,7 +201,7 @@ i0.ɵɵngDeclareClassMetadata({
 class TabGroupBasicExample {
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.1.4",
+    version: "22.1.5",
     ngImport: i0,
     type: TabGroupBasicExample,
     deps: [],
@@ -209,7 +209,7 @@ class TabGroupBasicExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.1.4",
+    version: "22.1.5",
     type: TabGroupBasicExample,
     isStandalone: true,
     selector: "tab-group-basic-example",
@@ -236,7 +236,7 @@ class TabGroupBasicExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.1.4",
+  version: "22.1.5",
   ngImport: i0,
   type: TabGroupBasicExample,
   decorators: [{
@@ -252,7 +252,7 @@ i0.ɵɵngDeclareClassMetadata({
 class TabGroupCustomLabelExample {
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.1.4",
+    version: "22.1.5",
     ngImport: i0,
     type: TabGroupCustomLabelExample,
     deps: [],
@@ -260,7 +260,7 @@ class TabGroupCustomLabelExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.1.4",
+    version: "22.1.5",
     type: TabGroupCustomLabelExample,
     isStandalone: true,
     selector: "tab-group-custom-label-example",
@@ -301,7 +301,7 @@ class TabGroupCustomLabelExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.1.4",
+  version: "22.1.5",
   ngImport: i0,
   type: TabGroupCustomLabelExample,
   decorators: [{
@@ -318,7 +318,7 @@ i0.ɵɵngDeclareClassMetadata({
 class TabGroupDynamicHeightExample {
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.1.4",
+    version: "22.1.5",
     ngImport: i0,
     type: TabGroupDynamicHeightExample,
     deps: [],
@@ -326,7 +326,7 @@ class TabGroupDynamicHeightExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.1.4",
+    version: "22.1.5",
     type: TabGroupDynamicHeightExample,
     isStandalone: true,
     selector: "tab-group-dynamic-height-example",
@@ -354,7 +354,7 @@ class TabGroupDynamicHeightExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.1.4",
+  version: "22.1.5",
   ngImport: i0,
   type: TabGroupDynamicHeightExample,
   decorators: [{
@@ -385,7 +385,7 @@ class TabGroupDynamicExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.1.4",
+    version: "22.1.5",
     ngImport: i0,
     type: TabGroupDynamicExample,
     deps: [],
@@ -393,7 +393,7 @@ class TabGroupDynamicExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "22.1.4",
+    version: "22.1.5",
     type: TabGroupDynamicExample,
     isStandalone: true,
     selector: "tab-group-dynamic-example",
@@ -487,7 +487,7 @@ class TabGroupDynamicExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.1.4",
+  version: "22.1.5",
   ngImport: i0,
   type: TabGroupDynamicExample,
   decorators: [{
@@ -504,7 +504,7 @@ i0.ɵɵngDeclareClassMetadata({
 class TabGroupHarnessExample {
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.1.4",
+    version: "22.1.5",
     ngImport: i0,
     type: TabGroupHarnessExample,
     deps: [],
@@ -512,7 +512,7 @@ class TabGroupHarnessExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.1.4",
+    version: "22.1.5",
     type: TabGroupHarnessExample,
     isStandalone: true,
     selector: "tab-group-harness-example",
@@ -539,7 +539,7 @@ class TabGroupHarnessExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.1.4",
+  version: "22.1.5",
   ngImport: i0,
   type: TabGroupHarnessExample,
   decorators: [{
@@ -555,7 +555,7 @@ i0.ɵɵngDeclareClassMetadata({
 class TabGroupHeaderBelowExample {
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.1.4",
+    version: "22.1.5",
     ngImport: i0,
     type: TabGroupHeaderBelowExample,
     deps: [],
@@ -563,7 +563,7 @@ class TabGroupHeaderBelowExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.1.4",
+    version: "22.1.5",
     type: TabGroupHeaderBelowExample,
     isStandalone: true,
     selector: "tab-group-header-below-example",
@@ -590,7 +590,7 @@ class TabGroupHeaderBelowExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.1.4",
+  version: "22.1.5",
   ngImport: i0,
   type: TabGroupHeaderBelowExample,
   decorators: [{
@@ -606,7 +606,7 @@ i0.ɵɵngDeclareClassMetadata({
 class TabGroupInkBarExample {
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.1.4",
+    version: "22.1.5",
     ngImport: i0,
     type: TabGroupInkBarExample,
     deps: [],
@@ -614,7 +614,7 @@ class TabGroupInkBarExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.1.4",
+    version: "22.1.5",
     type: TabGroupInkBarExample,
     isStandalone: true,
     selector: "tab-group-ink-bar-example",
@@ -641,7 +641,7 @@ class TabGroupInkBarExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.1.4",
+  version: "22.1.5",
   ngImport: i0,
   type: TabGroupInkBarExample,
   decorators: [{
@@ -668,7 +668,7 @@ class TabGroupLazyLoadedExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.1.4",
+    version: "22.1.5",
     ngImport: i0,
     type: TabGroupLazyLoadedExample,
     deps: [],
@@ -676,7 +676,7 @@ class TabGroupLazyLoadedExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.1.4",
+    version: "22.1.5",
     type: TabGroupLazyLoadedExample,
     isStandalone: true,
     selector: "tab-group-lazy-loaded-example",
@@ -711,7 +711,7 @@ class TabGroupLazyLoadedExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.1.4",
+  version: "22.1.5",
   ngImport: i0,
   type: TabGroupLazyLoadedExample,
   decorators: [{
@@ -728,7 +728,7 @@ class TabGroupPaginatedExample {
   lotsOfTabs = new Array(30).fill(0).map((_, index) => `Tab ${index}`);
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.1.4",
+    version: "22.1.5",
     ngImport: i0,
     type: TabGroupPaginatedExample,
     deps: [],
@@ -736,7 +736,7 @@ class TabGroupPaginatedExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "22.1.4",
+    version: "22.1.5",
     type: TabGroupPaginatedExample,
     isStandalone: true,
     selector: "tab-group-paginated-example",
@@ -763,7 +763,7 @@ class TabGroupPaginatedExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.1.4",
+  version: "22.1.5",
   ngImport: i0,
   type: TabGroupPaginatedExample,
   decorators: [{
@@ -779,7 +779,7 @@ i0.ɵɵngDeclareClassMetadata({
 class TabGroupPreserveContentExample {
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.1.4",
+    version: "22.1.5",
     ngImport: i0,
     type: TabGroupPreserveContentExample,
     deps: [],
@@ -787,7 +787,7 @@ class TabGroupPreserveContentExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.1.4",
+    version: "22.1.5",
     type: TabGroupPreserveContentExample,
     isStandalone: true,
     selector: "tab-group-preserve-content-example",
@@ -814,7 +814,7 @@ class TabGroupPreserveContentExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.1.4",
+  version: "22.1.5",
   ngImport: i0,
   type: TabGroupPreserveContentExample,
   decorators: [{
@@ -830,7 +830,7 @@ i0.ɵɵngDeclareClassMetadata({
 class TabGroupStretchedExample {
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.1.4",
+    version: "22.1.5",
     ngImport: i0,
     type: TabGroupStretchedExample,
     deps: [],
@@ -838,7 +838,7 @@ class TabGroupStretchedExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.1.4",
+    version: "22.1.5",
     type: TabGroupStretchedExample,
     isStandalone: true,
     selector: "tab-group-stretched-example",
@@ -866,7 +866,7 @@ class TabGroupStretchedExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.1.4",
+  version: "22.1.5",
   ngImport: i0,
   type: TabGroupStretchedExample,
   decorators: [{
@@ -892,7 +892,7 @@ class TabNavBarBasicExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.1.4",
+    version: "22.1.5",
     ngImport: i0,
     type: TabNavBarBasicExample,
     deps: [],
@@ -900,7 +900,7 @@ class TabNavBarBasicExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "22.1.4",
+    version: "22.1.5",
     type: TabNavBarBasicExample,
     isStandalone: true,
     selector: "tab-nav-bar-basic-example",
@@ -942,7 +942,7 @@ class TabNavBarBasicExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.1.4",
+  version: "22.1.5",
   ngImport: i0,
   type: TabNavBarBasicExample,
   decorators: [{
@@ -970,7 +970,7 @@ class TabGroupDragDropExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.1.4",
+    version: "22.1.5",
     ngImport: i0,
     type: TabGroupDragDropExample,
     deps: [],
@@ -978,7 +978,7 @@ class TabGroupDragDropExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "22.1.4",
+    version: "22.1.5",
     type: TabGroupDragDropExample,
     isStandalone: true,
     selector: "tab-group-drag-drop-example",
@@ -1025,7 +1025,7 @@ class TabGroupDragDropExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.1.4",
+  version: "22.1.5",
   ngImport: i0,
   type: TabGroupDragDropExample,
   decorators: [{
