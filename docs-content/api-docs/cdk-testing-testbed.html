@@ -243,7 +243,7 @@
           </div>documentRootLoader
           (<span class="docs-api-method-parameter-name">fixture:
             </span>
-            <code class="docs-api-method-parameter-type">ComponentFixture&lt;unknown&gt;</code>, <span class="docs-api-method-parameter-name">options<span class="docs-api-method-parameter-optional-marker">?</span>:
+            <code class="docs-api-method-parameter-type">any</code>, <span class="docs-api-method-parameter-name">options<span class="docs-api-method-parameter-optional-marker">?</span>:
             </span>
             <code class="docs-api-method-parameter-type">TestbedHarnessEnvironmentOptions</code>): <code class="docs-api-method-returns-type">HarnessLoader</code>
         </th>
@@ -264,7 +264,7 @@ located outside of a fixture (e.g. overlays appended to the document body).</p>
       <td class="docs-api-method-parameter-cell">
         <p class="docs-api-method-parameter-name">
           fixture</p>
-        <code class="docs-api-method-parameter-type">ComponentFixture&lt;unknown&gt;</code>
+        <code class="docs-api-method-parameter-type">any</code>
       </td>
       <td class="docs-api-method-parameter-description-cell">
         <p class="docs-api-method-parameter-description">
@@ -929,7 +929,7 @@ component is found, null is returned.</p>
           </div>harnessForFixture
           (<span class="docs-api-method-parameter-name">fixture:
             </span>
-            <code class="docs-api-method-parameter-type">ComponentFixture&lt;unknown&gt;</code>, <span class="docs-api-method-parameter-name">harnessType:
+            <code class="docs-api-method-parameter-type">any</code>, <span class="docs-api-method-parameter-name">harnessType:
             </span>
             <code class="docs-api-method-parameter-type">ComponentHarnessConstructor&lt;T&gt;</code>, <span class="docs-api-method-parameter-name">options<span class="docs-api-method-parameter-optional-marker">?</span>:
             </span>
@@ -954,7 +954,7 @@ of the fixture.</p>
       <td class="docs-api-method-parameter-cell">
         <p class="docs-api-method-parameter-name">
           fixture</p>
-        <code class="docs-api-method-parameter-type">ComponentFixture&lt;unknown&gt;</code>
+        <code class="docs-api-method-parameter-type">any</code>
       </td>
       <td class="docs-api-method-parameter-description-cell">
         <p class="docs-api-method-parameter-description">
@@ -1252,7 +1252,7 @@ of the fixture.</p>
           </div>loader
           (<span class="docs-api-method-parameter-name">fixture:
             </span>
-            <code class="docs-api-method-parameter-type">ComponentFixture&lt;unknown&gt;</code>, <span class="docs-api-method-parameter-name">options<span class="docs-api-method-parameter-optional-marker">?</span>:
+            <code class="docs-api-method-parameter-type">any</code>, <span class="docs-api-method-parameter-name">options<span class="docs-api-method-parameter-optional-marker">?</span>:
             </span>
             <code class="docs-api-method-parameter-type">TestbedHarnessEnvironmentOptions</code>): <code class="docs-api-method-returns-type">HarnessLoader</code>
         </th>
@@ -1272,7 +1272,7 @@ of the fixture.</p>
       <td class="docs-api-method-parameter-cell">
         <p class="docs-api-method-parameter-name">
           fixture</p>
-        <code class="docs-api-method-parameter-type">ComponentFixture&lt;unknown&gt;</code>
+        <code class="docs-api-method-parameter-type">any</code>
       </td>
       <td class="docs-api-method-parameter-description-cell">
         <p class="docs-api-method-parameter-description">
@@ -2981,6 +2981,24 @@ and attempts to add the string to the Element&#39;s value.</p>
 
 
 
+
+
+    <h3 id="cdk-testing-testbed-type_aliases" class="docs-header-link docs-api-h3">
+      <span header-link="type_aliases"></span>
+      Type aliases
+    </h3>
+    
+      
+
+<h4 id="Fixture" class="docs-header-link docs-api-h4 docs-api-type-alias-name">
+  <span header-link="Fixture"></span>
+  <code>Fixture</code>
+</h4><p class="docs-api-type-alias-description"><p>Covers all fixtures supported by <code>TestBed</code>.</p>
+</p><div class="docs-markdown">
+<pre class="docs-markdown-pre">
+<code class="docs-markdown-code">type Fixture = ComponentFixture<T> | DirectiveFixture<T>;</code>
+</pre>
+</div>
 
 
     </div>
