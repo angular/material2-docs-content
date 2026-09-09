@@ -1,6 +1,7 @@
 import * as i0 from '@angular/core';
 import { FormControl, FormGroupDirective, NgForm } from '@angular/forms';
 import { ErrorStateMatcher } from '@angular/material/core';
+import * as _angular_forms_signals from '@angular/forms/signals';
 
 /**
  * @title Input with a clear button
@@ -24,12 +25,22 @@ declare class InputErrorStateMatcherExample {
 }
 
 /**
- * @title Input with error messages
+ * @title Input with error messages (reactive form)
  */
 declare class InputErrorsExample {
     emailFormControl: FormControl<string | null>;
     static ɵfac: i0.ɵɵFactoryDeclaration<InputErrorsExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<InputErrorsExample, "input-errors-example", never, {}, {}, never, never, true, never>;
+}
+
+/**
+ * @title Input with error messages (signal form)
+ */
+declare class InputErrorsSignalFormExample {
+    private _emailModel;
+    protected emailForm: _angular_forms_signals.FieldTree<string, string | number, "writable">;
+    static ɵfac: i0.ɵɵFactoryDeclaration<InputErrorsSignalFormExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<InputErrorsSignalFormExample, "input-errors-signal-form-example", never, {}, {}, never, never, true, never>;
 }
 
 /**
@@ -74,4 +85,4 @@ declare class InputHarnessExample {
     static ɵcmp: i0.ɵɵComponentDeclaration<InputHarnessExample, "input-harness-example", never, {}, {}, never, never, true, never>;
 }
 
-export { InputClearableExample, InputErrorStateMatcherExample, InputErrorsExample, InputFormExample, InputHarnessExample, InputHintExample, InputOverviewExample, InputPrefixSuffixExample };
+export { InputClearableExample, InputErrorStateMatcherExample, InputErrorsExample, InputErrorsSignalFormExample, InputFormExample, InputHarnessExample, InputHintExample, InputOverviewExample, InputPrefixSuffixExample };
