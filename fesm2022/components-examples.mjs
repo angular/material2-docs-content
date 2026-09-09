@@ -1099,6 +1099,16 @@ const EXAMPLE_COMPONENTS = {
     "primaryFile": "checkbox-reactive-forms-example.ts",
     "importPath": "material/checkbox"
   },
+  "checkbox-signal-forms": {
+    "packagePath": "material/checkbox/checkbox-signal-forms",
+    "title": "Checkboxes with signal forms",
+    "componentName": "CheckboxSignalFormsExample",
+    "files": ["checkbox-signal-forms-example.ts", "checkbox-signal-forms-example.html", "checkbox-signal-forms-example.css"],
+    "selector": "checkbox-signal-forms-example",
+    "additionalComponents": [],
+    "primaryFile": "checkbox-signal-forms-example.ts",
+    "importPath": "material/checkbox"
+  },
   "chips-autocomplete": {
     "packagePath": "material/chips/chips-autocomplete",
     "title": "Chips Autocomplete",
@@ -1139,6 +1149,16 @@ const EXAMPLE_COMPONENTS = {
     "primaryFile": "chips-form-control-example.ts",
     "importPath": "material/chips"
   },
+  "chips-form-field": {
+    "packagePath": "material/chips/chips-form-field",
+    "title": "Chips with form field",
+    "componentName": "ChipsFormFieldExample",
+    "files": ["chips-form-field-example.ts", "chips-form-field-example.html", "chips-form-field-example.css"],
+    "selector": "chips-form-field-example",
+    "additionalComponents": [],
+    "primaryFile": "chips-form-field-example.ts",
+    "importPath": "material/chips"
+  },
   "chips-harness": {
     "packagePath": "material/chips/chips-harness",
     "title": "Testing with MatChipsHarness",
@@ -1177,6 +1197,16 @@ const EXAMPLE_COMPONENTS = {
     "selector": "chips-reactive-form-example",
     "additionalComponents": [],
     "primaryFile": "chips-reactive-form-example.ts",
+    "importPath": "material/chips"
+  },
+  "chips-signal-form": {
+    "packagePath": "material/chips/chips-signal-form",
+    "title": "Chips in signal forms",
+    "componentName": "ChipsSignalFormExample",
+    "files": ["chips-signal-form-example.ts", "chips-signal-form-example.html", "chips-signal-form-example.css"],
+    "selector": "chips-signal-form-example",
+    "additionalComponents": [],
+    "primaryFile": "chips-signal-form-example.ts",
     "importPath": "material/chips"
   },
   "chips-stacked": {
@@ -3792,6 +3822,8 @@ async function loadExample(id) {
       return import('@angular/components-examples/material/checkbox');
     case 'checkbox-reactive-forms':
       return import('@angular/components-examples/material/checkbox');
+    case 'checkbox-signal-forms':
+      return import('@angular/components-examples/material/checkbox');
     case 'chips-autocomplete':
       return import('@angular/components-examples/material/chips');
     case 'chips-avatar':
@@ -3800,6 +3832,8 @@ async function loadExample(id) {
       return import('@angular/components-examples/material/chips');
     case 'chips-form-control':
       return import('@angular/components-examples/material/chips');
+    case 'chips-form-field':
+      return import('@angular/components-examples/material/chips');
     case 'chips-harness':
       return import('@angular/components-examples/material/chips');
     case 'chips-input':
@@ -3807,6 +3841,8 @@ async function loadExample(id) {
     case 'chips-overview':
       return import('@angular/components-examples/material/chips');
     case 'chips-reactive-form':
+      return import('@angular/components-examples/material/chips');
+    case 'chips-signal-form':
       return import('@angular/components-examples/material/chips');
     case 'chips-stacked':
       return import('@angular/components-examples/material/chips');

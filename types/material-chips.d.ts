@@ -4,6 +4,7 @@ import { MatAutocompleteSelectedEvent } from '@angular/material/autocomplete';
 import { MatChipInputEvent, MatChipEditedEvent } from '@angular/material/chips';
 import { CdkDragDrop } from '@angular/cdk/drag-drop';
 import { FormControl } from '@angular/forms';
+import * as _angular_forms_signals from '@angular/forms/signals';
 
 /**
  * @title Chips Autocomplete
@@ -95,6 +96,25 @@ declare class ChipsFormControlExample {
 }
 
 /**
+ * @title Chips with form field
+ */
+declare class ChipsFormFieldExample {
+    readonly keywordsFormModel: i0.WritableSignal<{
+        words: string[];
+        enabled: boolean;
+    }>;
+    readonly keywordsForm: _angular_forms_signals.FieldTree<{
+        words: string[];
+        enabled: boolean;
+    }, string | number, "writable">;
+    announcer: LiveAnnouncer;
+    protected removeKeyword(keyword: string): void;
+    protected add(event: MatChipInputEvent): void;
+    static ɵfac: i0.ɵɵFactoryDeclaration<ChipsFormFieldExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<ChipsFormFieldExample, "chips-form-field-example", never, {}, {}, never, never, true, never>;
+}
+
+/**
  * @title Chips in reactive forms
  */
 declare class ChipsReactiveFormExample {
@@ -104,6 +124,19 @@ declare class ChipsReactiveFormExample {
     removeKeyword(keyword: string): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<ChipsReactiveFormExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<ChipsReactiveFormExample, "chips-reactive-form-example", never, {}, {}, never, never, true, never>;
+}
+
+/**
+ * @title Chips in signal forms
+ */
+declare class ChipsSignalFormExample {
+    private _announcer;
+    readonly keywordsFormModel: i0.WritableSignal<string[]>;
+    readonly keywordsForm: _angular_forms_signals.FieldTree<string[], string | number, "writable">;
+    protected addKeyword(event: MatChipInputEvent): void;
+    protected removeKeyword(keyword: string): void;
+    static ɵfac: i0.ɵɵFactoryDeclaration<ChipsSignalFormExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<ChipsSignalFormExample, "chips-signal-form-example", never, {}, {}, never, never, true, never>;
 }
 
 /**
@@ -127,4 +160,4 @@ declare class ChipsAvatarExample {
     static ɵcmp: i0.ɵɵComponentDeclaration<ChipsAvatarExample, "chips-avatar-example", never, {}, {}, never, never, true, never>;
 }
 
-export { ChipsAutocompleteExample, ChipsAvatarExample, ChipsDragDropExample, ChipsFormControlExample, ChipsHarnessExample, ChipsInputExample, ChipsOverviewExample, ChipsReactiveFormExample, ChipsStackedExample, ChipsTemplateFormExample };
+export { ChipsAutocompleteExample, ChipsAvatarExample, ChipsDragDropExample, ChipsFormControlExample, ChipsFormFieldExample, ChipsHarnessExample, ChipsInputExample, ChipsOverviewExample, ChipsReactiveFormExample, ChipsSignalFormExample, ChipsStackedExample, ChipsTemplateFormExample };

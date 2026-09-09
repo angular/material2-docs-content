@@ -9,6 +9,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import * as i1$1 from '@angular/material/radio';
 import { MatRadioModule } from '@angular/material/radio';
 import { JsonPipe } from '@angular/common';
+import { form, FormField } from '@angular/forms/signals';
 
 class CheckboxConfigurableExample {
   checked = model(false, ...(ngDevMode ? [{
@@ -435,5 +436,70 @@ i0.ɵɵngDeclareClassMetadata({
   }]
 });
 
-export { CheckboxConfigurableExample, CheckboxHarnessExample, CheckboxOverviewExample, CheckboxReactiveFormsExample };
+class CheckboxSignalFormsExample {
+  toppingsFormModel = signal({
+    pepperoni: false,
+    extracheese: false,
+    mushroom: false
+  }, ...(ngDevMode ? [{
+    debugName: "toppingsFormModel"
+  }] : []));
+  toppingsForm = form(this.toppingsFormModel);
+  static ɵfac = i0.ɵɵngDeclareFactory({
+    minVersion: "12.0.0",
+    version: "22.2.0-next.5",
+    ngImport: i0,
+    type: CheckboxSignalFormsExample,
+    deps: [],
+    target: i0.ɵɵFactoryTarget.Component
+  });
+  static ɵcmp = i0.ɵɵngDeclareComponent({
+    minVersion: "14.0.0",
+    version: "22.2.0-next.5",
+    type: CheckboxSignalFormsExample,
+    isStandalone: true,
+    selector: "checkbox-signal-forms-example",
+    ngImport: i0,
+    template: "<section class=\"example-section\">\n  <h4>Select your toppings:</h4>\n  <p><mat-checkbox [formField]=\"toppingsForm.pepperoni\">Pepperoni</mat-checkbox></p>\n  <p><mat-checkbox [formField]=\"toppingsForm.extracheese\">Extra Cheese</mat-checkbox></p>\n  <p><mat-checkbox [formField]=\"toppingsForm.mushroom\">Mushroom</mat-checkbox></p>\n</section>\n\n<section class=\"example-section\">\n  <h4>You chose:</h4>\n  {{toppingsForm().value() | json}}\n</section>\n",
+    styles: [".example-section {\n  margin: 12px 0;\n}\n"],
+    dependencies: [{
+      kind: "directive",
+      type: FormField,
+      selector: "[formField]",
+      inputs: ["formField"],
+      exportAs: ["formField"]
+    }, {
+      kind: "ngmodule",
+      type: MatCheckboxModule
+    }, {
+      kind: "component",
+      type: i2.MatCheckbox,
+      selector: "mat-checkbox",
+      inputs: ["aria-label", "aria-labelledby", "aria-describedby", "aria-expanded", "aria-controls", "aria-owns", "id", "required", "labelPosition", "name", "value", "disableRipple", "tabIndex", "color", "disabledInteractive", "checked", "disabled", "indeterminate"],
+      outputs: ["change", "indeterminateChange"],
+      exportAs: ["matCheckbox"]
+    }, {
+      kind: "pipe",
+      type: JsonPipe,
+      name: "json"
+    }]
+  });
+}
+i0.ɵɵngDeclareClassMetadata({
+  minVersion: "12.0.0",
+  version: "22.2.0-next.5",
+  ngImport: i0,
+  type: CheckboxSignalFormsExample,
+  decorators: [{
+    type: Component,
+    args: [{
+      selector: 'checkbox-signal-forms-example',
+      imports: [FormField, MatCheckboxModule, JsonPipe],
+      template: "<section class=\"example-section\">\n  <h4>Select your toppings:</h4>\n  <p><mat-checkbox [formField]=\"toppingsForm.pepperoni\">Pepperoni</mat-checkbox></p>\n  <p><mat-checkbox [formField]=\"toppingsForm.extracheese\">Extra Cheese</mat-checkbox></p>\n  <p><mat-checkbox [formField]=\"toppingsForm.mushroom\">Mushroom</mat-checkbox></p>\n</section>\n\n<section class=\"example-section\">\n  <h4>You chose:</h4>\n  {{toppingsForm().value() | json}}\n</section>\n",
+      styles: [".example-section {\n  margin: 12px 0;\n}\n"]
+    }]
+  }]
+});
+
+export { CheckboxConfigurableExample, CheckboxHarnessExample, CheckboxOverviewExample, CheckboxReactiveFormsExample, CheckboxSignalFormsExample };
 //# sourceMappingURL=material-checkbox.mjs.map
