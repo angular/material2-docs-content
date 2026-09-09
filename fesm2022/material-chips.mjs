@@ -15,6 +15,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { moveItemInArray, CdkDropList, CdkDrag } from '@angular/cdk/drag-drop';
 import * as i1$1 from '@angular/material/button';
 import { MatButtonModule } from '@angular/material/button';
+import { form, disabled, FormField } from '@angular/forms/signals';
 
 class ChipsAutocompleteExample {
   separatorKeysCodes = [ENTER, COMMA];
@@ -657,7 +658,7 @@ class ChipsFormControlExample {
     isStandalone: true,
     selector: "chips-form-control-example",
     ngImport: i0,
-    template: "<div class=\"example-button-container\">\n  <button matButton=\"elevated\" (click)=\"formControl.disable()\">Disable form control</button>\n  <button matButton=\"elevated\" (click)=\"formControl.enable()\">Enable form control</button>\n</div>\n<p>\n  <em>Enter video keywords</em>\n</p>\n<mat-form-field class=\"example-form-field\">\n  <mat-label>Video keywords</mat-label>\n  <mat-chip-grid #chipGrid aria-label=\"Enter keywords\" [formControl]=\"formControl\">\n    @for (keyword of keywords(); track keyword) {\n      <mat-chip-row (removed)=\"removeKeyword(keyword)\">\n        {{keyword}}\n        <button matChipRemove [attr.aria-label]=\"'remove ' + keyword\">\n          <mat-icon>cancel</mat-icon>\n        </button>\n      </mat-chip-row>\n    }\n  </mat-chip-grid>\n  <input\n    placeholder=\"New keyword...\"\n    [matChipInputFor]=\"chipGrid\"\n    (matChipInputTokenEnd)=\"add($event)\"\n  />\n</mat-form-field>\n\n<p><strong>The following keywords are entered:</strong> {{formControl.value}}</p>\n",
+    template: "<div class=\"example-button-container\">\n  <button matButton=\"elevated\" (click)=\"formControl.disable()\">Disable form control</button>\n  <button matButton=\"elevated\" (click)=\"formControl.enable()\">Enable form control</button>\n</div>\n<p>\n  <em>Enter video keywords</em>\n</p>\n<mat-form-field class=\"example-form-field\">\n  <mat-label>Video keywords</mat-label>\n  <mat-chip-grid #chipGrid aria-label=\"Enter keywords\" [formControl]=\"formControl\">\n    @for (keyword of keywords(); track $index) {\n      <mat-chip-row (removed)=\"removeKeyword(keyword)\">\n        {{keyword}}\n        <button matChipRemove [attr.aria-label]=\"'remove ' + keyword\">\n          <mat-icon>cancel</mat-icon>\n        </button>\n      </mat-chip-row>\n    }\n  </mat-chip-grid>\n  <input\n    placeholder=\"New keyword...\"\n    [matChipInputFor]=\"chipGrid\"\n    (matChipInputTokenEnd)=\"add($event)\"\n  />\n</mat-form-field>\n\n<p><strong>The following keywords are entered:</strong> {{formControl.value}}</p>\n",
     styles: [".example-form-field {\n  width: 100%;\n}\n\n.example-button-container > button {\n  margin: 0 12px;\n}\n"],
     dependencies: [{
       kind: "ngmodule",
@@ -746,8 +747,145 @@ i0.ɵɵngDeclareClassMetadata({
     args: [{
       selector: 'chips-form-control-example',
       imports: [MatButtonModule, MatFormFieldModule, MatChipsModule, FormsModule, ReactiveFormsModule, MatIconModule],
-      template: "<div class=\"example-button-container\">\n  <button matButton=\"elevated\" (click)=\"formControl.disable()\">Disable form control</button>\n  <button matButton=\"elevated\" (click)=\"formControl.enable()\">Enable form control</button>\n</div>\n<p>\n  <em>Enter video keywords</em>\n</p>\n<mat-form-field class=\"example-form-field\">\n  <mat-label>Video keywords</mat-label>\n  <mat-chip-grid #chipGrid aria-label=\"Enter keywords\" [formControl]=\"formControl\">\n    @for (keyword of keywords(); track keyword) {\n      <mat-chip-row (removed)=\"removeKeyword(keyword)\">\n        {{keyword}}\n        <button matChipRemove [attr.aria-label]=\"'remove ' + keyword\">\n          <mat-icon>cancel</mat-icon>\n        </button>\n      </mat-chip-row>\n    }\n  </mat-chip-grid>\n  <input\n    placeholder=\"New keyword...\"\n    [matChipInputFor]=\"chipGrid\"\n    (matChipInputTokenEnd)=\"add($event)\"\n  />\n</mat-form-field>\n\n<p><strong>The following keywords are entered:</strong> {{formControl.value}}</p>\n",
+      template: "<div class=\"example-button-container\">\n  <button matButton=\"elevated\" (click)=\"formControl.disable()\">Disable form control</button>\n  <button matButton=\"elevated\" (click)=\"formControl.enable()\">Enable form control</button>\n</div>\n<p>\n  <em>Enter video keywords</em>\n</p>\n<mat-form-field class=\"example-form-field\">\n  <mat-label>Video keywords</mat-label>\n  <mat-chip-grid #chipGrid aria-label=\"Enter keywords\" [formControl]=\"formControl\">\n    @for (keyword of keywords(); track $index) {\n      <mat-chip-row (removed)=\"removeKeyword(keyword)\">\n        {{keyword}}\n        <button matChipRemove [attr.aria-label]=\"'remove ' + keyword\">\n          <mat-icon>cancel</mat-icon>\n        </button>\n      </mat-chip-row>\n    }\n  </mat-chip-grid>\n  <input\n    placeholder=\"New keyword...\"\n    [matChipInputFor]=\"chipGrid\"\n    (matChipInputTokenEnd)=\"add($event)\"\n  />\n</mat-form-field>\n\n<p><strong>The following keywords are entered:</strong> {{formControl.value}}</p>\n",
       styles: [".example-form-field {\n  width: 100%;\n}\n\n.example-button-container > button {\n  margin: 0 12px;\n}\n"]
+    }]
+  }]
+});
+
+class ChipsFormFieldExample {
+  keywordsFormModel = signal({
+    words: ['angular', 'how-to', 'tutorial', 'accessibility'],
+    enabled: true
+  }, ...(ngDevMode ? [{
+    debugName: "keywordsFormModel"
+  }] : []));
+  keywordsForm = form(this.keywordsFormModel, p => {
+    disabled(p, {
+      when: ({
+        valueOf
+      }) => !valueOf(p.enabled)
+    });
+  });
+  announcer = inject(LiveAnnouncer);
+  removeKeyword(keyword) {
+    this.keywordsFormModel.update(keywords => {
+      const index = keywords.words.indexOf(keyword);
+      if (index < 0) {
+        return keywords;
+      }
+      keywords.words.splice(index, 1);
+      this.announcer.announce(`removed ${keyword}`);
+      return {
+        ...keywords
+      };
+    });
+  }
+  add(event) {
+    const value = (event.value || '').trim();
+    if (value) {
+      this.keywordsFormModel.update(keywords => ({
+        ...keywords,
+        words: [...keywords.words, value]
+      }));
+    }
+    event.chipInput.clear();
+  }
+  static ɵfac = i0.ɵɵngDeclareFactory({
+    minVersion: "12.0.0",
+    version: "22.1.5",
+    ngImport: i0,
+    type: ChipsFormFieldExample,
+    deps: [],
+    target: i0.ɵɵFactoryTarget.Component
+  });
+  static ɵcmp = i0.ɵɵngDeclareComponent({
+    minVersion: "17.0.0",
+    version: "22.1.5",
+    type: ChipsFormFieldExample,
+    isStandalone: true,
+    selector: "chips-form-field-example",
+    ngImport: i0,
+    template: "<div class=\"example-button-container\">\n  <button matButton=\"elevated\" (click)=\"keywordsFormModel.update(m => ({ ...m, enabled: false }))\">\n    Disable form control\n  </button>\n  <button matButton=\"elevated\" (click)=\"keywordsFormModel.update(m => ({ ...m, enabled: true }))\">\n    Enable form control\n  </button>\n</div>\n<p>\n  <em>Enter video keywords</em>\n</p>\n<mat-form-field class=\"example-form-field\">\n  <mat-label>Video keywords</mat-label>\n  <mat-chip-grid #chipGrid aria-label=\"Enter keywords\" [formField]=\"keywordsForm.words\">\n    @for (keyword of keywordsForm.words().value(); track $index) {\n      <mat-chip-row (removed)=\"removeKeyword(keyword)\">\n        {{ keyword }}\n        <button matChipRemove [attr.aria-label]=\"'remove ' + keyword\">\n          <mat-icon>cancel</mat-icon>\n        </button>\n      </mat-chip-row>\n    }\n  </mat-chip-grid>\n  <input\n    placeholder=\"New keyword...\"\n    [matChipInputFor]=\"chipGrid\"\n    (matChipInputTokenEnd)=\"add($event)\"\n  />\n</mat-form-field>\n\n<p><strong>The following keywords are entered:</strong> {{ keywordsForm.words().value() }}</p>",
+    styles: [".example-button-container > button {\n    margin: 0 12px;\n}\n\n.example-form-field {\n    width: 100%;\n}\n"],
+    dependencies: [{
+      kind: "directive",
+      type: FormField,
+      selector: "[formField]",
+      inputs: ["formField"],
+      exportAs: ["formField"]
+    }, {
+      kind: "ngmodule",
+      type: MatButtonModule
+    }, {
+      kind: "component",
+      type: i1$1.MatButton,
+      selector: "    button[matButton], a[matButton], button[mat-button], button[mat-raised-button],    button[mat-flat-button], button[mat-stroked-button], a[mat-button], a[mat-raised-button],    a[mat-flat-button], a[mat-stroked-button]  ",
+      inputs: ["matButton"],
+      exportAs: ["matButton", "matAnchor"]
+    }, {
+      kind: "ngmodule",
+      type: MatFormFieldModule
+    }, {
+      kind: "component",
+      type: i1.MatFormField,
+      selector: "mat-form-field",
+      inputs: ["hideRequiredMarker", "color", "floatLabel", "appearance", "subscriptSizing", "hintLabel"],
+      exportAs: ["matFormField"]
+    }, {
+      kind: "directive",
+      type: i1.MatLabel,
+      selector: "mat-label"
+    }, {
+      kind: "ngmodule",
+      type: MatChipsModule
+    }, {
+      kind: "component",
+      type: i2.MatChipGrid,
+      selector: "mat-chip-grid",
+      inputs: ["disabled", "placeholder", "required", "value", "errorStateMatcher"],
+      outputs: ["change", "valueChange"]
+    }, {
+      kind: "directive",
+      type: i2.MatChipInput,
+      selector: "input[matChipInputFor]",
+      inputs: ["matChipInputFor", "matChipInputAddOnBlur", "matChipInputSeparatorKeyCodes", "placeholder", "id", "disabled", "readonly", "matChipInputDisabledInteractive"],
+      outputs: ["matChipInputTokenEnd"],
+      exportAs: ["matChipInput", "matChipInputFor"]
+    }, {
+      kind: "directive",
+      type: i2.MatChipRemove,
+      selector: "[matChipRemove]"
+    }, {
+      kind: "component",
+      type: i2.MatChipRow,
+      selector: "mat-chip-row, [mat-chip-row], mat-basic-chip-row, [mat-basic-chip-row]",
+      inputs: ["editable"],
+      outputs: ["edited"]
+    }, {
+      kind: "ngmodule",
+      type: MatIconModule
+    }, {
+      kind: "component",
+      type: i3.MatIcon,
+      selector: "mat-icon",
+      inputs: ["color", "inline", "svgIcon", "fontSet", "fontIcon"],
+      exportAs: ["matIcon"]
+    }]
+  });
+}
+i0.ɵɵngDeclareClassMetadata({
+  minVersion: "12.0.0",
+  version: "22.1.5",
+  ngImport: i0,
+  type: ChipsFormFieldExample,
+  decorators: [{
+    type: Component,
+    args: [{
+      selector: 'chips-form-field-example',
+      imports: [FormField, MatButtonModule, MatFormFieldModule, MatChipsModule, MatIconModule],
+      template: "<div class=\"example-button-container\">\n  <button matButton=\"elevated\" (click)=\"keywordsFormModel.update(m => ({ ...m, enabled: false }))\">\n    Disable form control\n  </button>\n  <button matButton=\"elevated\" (click)=\"keywordsFormModel.update(m => ({ ...m, enabled: true }))\">\n    Enable form control\n  </button>\n</div>\n<p>\n  <em>Enter video keywords</em>\n</p>\n<mat-form-field class=\"example-form-field\">\n  <mat-label>Video keywords</mat-label>\n  <mat-chip-grid #chipGrid aria-label=\"Enter keywords\" [formField]=\"keywordsForm.words\">\n    @for (keyword of keywordsForm.words().value(); track $index) {\n      <mat-chip-row (removed)=\"removeKeyword(keyword)\">\n        {{ keyword }}\n        <button matChipRemove [attr.aria-label]=\"'remove ' + keyword\">\n          <mat-icon>cancel</mat-icon>\n        </button>\n      </mat-chip-row>\n    }\n  </mat-chip-grid>\n  <input\n    placeholder=\"New keyword...\"\n    [matChipInputFor]=\"chipGrid\"\n    (matChipInputTokenEnd)=\"add($event)\"\n  />\n</mat-form-field>\n\n<p><strong>The following keywords are entered:</strong> {{ keywordsForm.words().value() }}</p>",
+      styles: [".example-button-container > button {\n    margin: 0 12px;\n}\n\n.example-form-field {\n    width: 100%;\n}\n"]
     }]
   }]
 });
@@ -789,7 +927,7 @@ class ChipsReactiveFormExample {
     isStandalone: true,
     selector: "chips-reactive-form-example",
     ngImport: i0,
-    template: "<section>\n  <h4>Chips inside of a Reactive form</h4>\n  <mat-form-field class=\"example-form-field\">\n    <mat-label>Video keywords</mat-label>\n    <mat-chip-grid #reactiveChipGrid aria-label=\"Enter reactive form keywords\" [formControl]=\"formControl\">\n    @for (keyword of formControl.value; track keyword) {\n      <mat-chip-row (removed)=\"removeKeyword(keyword)\">\n        {{keyword}}\n      <button matChipRemove [attr.aria-label]=\"'remove reactive form' + keyword\">\n        <mat-icon>cancel</mat-icon>\n      </button>\n      </mat-chip-row>\n    }\n    </mat-chip-grid>\n    <input\n      placeholder=\"New keyword...\"\n      [matChipInputFor]=\"reactiveChipGrid\"\n      (matChipInputTokenEnd)=\"addKeyword($event)\"\n    />\n  </mat-form-field>\n</section>\n",
+    template: "<section>\n  <h4>Chips inside of a Reactive form</h4>\n  <mat-form-field class=\"example-form-field\">\n    <mat-label>Video keywords</mat-label>\n    <mat-chip-grid #reactiveChipGrid aria-label=\"Enter reactive form keywords\" [formControl]=\"formControl\">\n    @for (keyword of formControl.value; track $index) {\n      <mat-chip-row (removed)=\"removeKeyword(keyword)\">\n        {{keyword}}\n      <button matChipRemove [attr.aria-label]=\"'remove reactive form' + keyword\">\n        <mat-icon>cancel</mat-icon>\n      </button>\n      </mat-chip-row>\n    }\n    </mat-chip-grid>\n    <input\n      placeholder=\"New keyword...\"\n      [matChipInputFor]=\"reactiveChipGrid\"\n      (matChipInputTokenEnd)=\"addKeyword($event)\"\n    />\n  </mat-form-field>\n</section>\n",
     styles: [".example-form-field {\n    width: 100%;\n}\n"],
     dependencies: [{
       kind: "ngmodule",
@@ -869,7 +1007,123 @@ i0.ɵɵngDeclareClassMetadata({
     args: [{
       selector: 'chips-reactive-form-example',
       imports: [MatButtonModule, MatFormFieldModule, MatChipsModule, ReactiveFormsModule, MatIconModule],
-      template: "<section>\n  <h4>Chips inside of a Reactive form</h4>\n  <mat-form-field class=\"example-form-field\">\n    <mat-label>Video keywords</mat-label>\n    <mat-chip-grid #reactiveChipGrid aria-label=\"Enter reactive form keywords\" [formControl]=\"formControl\">\n    @for (keyword of formControl.value; track keyword) {\n      <mat-chip-row (removed)=\"removeKeyword(keyword)\">\n        {{keyword}}\n      <button matChipRemove [attr.aria-label]=\"'remove reactive form' + keyword\">\n        <mat-icon>cancel</mat-icon>\n      </button>\n      </mat-chip-row>\n    }\n    </mat-chip-grid>\n    <input\n      placeholder=\"New keyword...\"\n      [matChipInputFor]=\"reactiveChipGrid\"\n      (matChipInputTokenEnd)=\"addKeyword($event)\"\n    />\n  </mat-form-field>\n</section>\n",
+      template: "<section>\n  <h4>Chips inside of a Reactive form</h4>\n  <mat-form-field class=\"example-form-field\">\n    <mat-label>Video keywords</mat-label>\n    <mat-chip-grid #reactiveChipGrid aria-label=\"Enter reactive form keywords\" [formControl]=\"formControl\">\n    @for (keyword of formControl.value; track $index) {\n      <mat-chip-row (removed)=\"removeKeyword(keyword)\">\n        {{keyword}}\n      <button matChipRemove [attr.aria-label]=\"'remove reactive form' + keyword\">\n        <mat-icon>cancel</mat-icon>\n      </button>\n      </mat-chip-row>\n    }\n    </mat-chip-grid>\n    <input\n      placeholder=\"New keyword...\"\n      [matChipInputFor]=\"reactiveChipGrid\"\n      (matChipInputTokenEnd)=\"addKeyword($event)\"\n    />\n  </mat-form-field>\n</section>\n",
+      styles: [".example-form-field {\n    width: 100%;\n}\n"]
+    }]
+  }]
+});
+
+class ChipsSignalFormExample {
+  _announcer = inject(LiveAnnouncer);
+  keywordsFormModel = signal(['angular', 'how-to', 'tutorial', 'accessibility'], ...(ngDevMode ? [{
+    debugName: "keywordsFormModel"
+  }] : []));
+  keywordsForm = form(this.keywordsFormModel);
+  addKeyword(event) {
+    const value = (event.value || '').trim();
+    if (value) {
+      this.keywordsFormModel.update(model => [...model, value]);
+      this._announcer.announce(`added ${value} to signal form`);
+    }
+    event.chipInput.clear();
+  }
+  removeKeyword(keyword) {
+    const keywords = this.keywordsForm().value();
+    const index = keywords.lastIndexOf(keyword);
+    if (index > -1) {
+      keywords.splice(index, 1);
+      this.keywordsFormModel.set(keywords);
+      this._announcer.announce(`removed ${keyword} from signal form`);
+    }
+  }
+  static ɵfac = i0.ɵɵngDeclareFactory({
+    minVersion: "12.0.0",
+    version: "22.1.5",
+    ngImport: i0,
+    type: ChipsSignalFormExample,
+    deps: [],
+    target: i0.ɵɵFactoryTarget.Component
+  });
+  static ɵcmp = i0.ɵɵngDeclareComponent({
+    minVersion: "17.0.0",
+    version: "22.1.5",
+    type: ChipsSignalFormExample,
+    isStandalone: true,
+    selector: "chips-signal-form-example",
+    ngImport: i0,
+    template: "<section>\n  <h4>Chips inside of a Signal form</h4>\n  <mat-form-field class=\"example-form-field\">\n    <mat-label>Video keywords</mat-label>\n    <mat-chip-grid #signalChipGrid aria-label=\"Enter signal form keywords\" [formField]=\"keywordsForm\">\n    @for (keyword of keywordsForm().value(); track $index) {\n      <mat-chip-row (removed)=\"removeKeyword(keyword)\">\n        {{keyword}}\n      <button matChipRemove [attr.aria-label]=\"'remove signal form' + keyword\">\n        <mat-icon>cancel</mat-icon>\n      </button>\n      </mat-chip-row>\n    }\n    </mat-chip-grid>\n    <input\n      placeholder=\"New keyword...\"\n      [matChipInputFor]=\"signalChipGrid\"\n      (matChipInputTokenEnd)=\"addKeyword($event)\"\n    />\n  </mat-form-field>\n</section>\n",
+    styles: [".example-form-field {\n    width: 100%;\n}\n"],
+    dependencies: [{
+      kind: "directive",
+      type: FormField,
+      selector: "[formField]",
+      inputs: ["formField"],
+      exportAs: ["formField"]
+    }, {
+      kind: "ngmodule",
+      type: MatButtonModule
+    }, {
+      kind: "ngmodule",
+      type: MatFormFieldModule
+    }, {
+      kind: "component",
+      type: i1.MatFormField,
+      selector: "mat-form-field",
+      inputs: ["hideRequiredMarker", "color", "floatLabel", "appearance", "subscriptSizing", "hintLabel"],
+      exportAs: ["matFormField"]
+    }, {
+      kind: "directive",
+      type: i1.MatLabel,
+      selector: "mat-label"
+    }, {
+      kind: "ngmodule",
+      type: MatChipsModule
+    }, {
+      kind: "component",
+      type: i2.MatChipGrid,
+      selector: "mat-chip-grid",
+      inputs: ["disabled", "placeholder", "required", "value", "errorStateMatcher"],
+      outputs: ["change", "valueChange"]
+    }, {
+      kind: "directive",
+      type: i2.MatChipInput,
+      selector: "input[matChipInputFor]",
+      inputs: ["matChipInputFor", "matChipInputAddOnBlur", "matChipInputSeparatorKeyCodes", "placeholder", "id", "disabled", "readonly", "matChipInputDisabledInteractive"],
+      outputs: ["matChipInputTokenEnd"],
+      exportAs: ["matChipInput", "matChipInputFor"]
+    }, {
+      kind: "directive",
+      type: i2.MatChipRemove,
+      selector: "[matChipRemove]"
+    }, {
+      kind: "component",
+      type: i2.MatChipRow,
+      selector: "mat-chip-row, [mat-chip-row], mat-basic-chip-row, [mat-basic-chip-row]",
+      inputs: ["editable"],
+      outputs: ["edited"]
+    }, {
+      kind: "ngmodule",
+      type: MatIconModule
+    }, {
+      kind: "component",
+      type: i3.MatIcon,
+      selector: "mat-icon",
+      inputs: ["color", "inline", "svgIcon", "fontSet", "fontIcon"],
+      exportAs: ["matIcon"]
+    }]
+  });
+}
+i0.ɵɵngDeclareClassMetadata({
+  minVersion: "12.0.0",
+  version: "22.1.5",
+  ngImport: i0,
+  type: ChipsSignalFormExample,
+  decorators: [{
+    type: Component,
+    args: [{
+      selector: 'chips-signal-form-example',
+      imports: [FormField, MatButtonModule, MatFormFieldModule, MatChipsModule, MatIconModule],
+      template: "<section>\n  <h4>Chips inside of a Signal form</h4>\n  <mat-form-field class=\"example-form-field\">\n    <mat-label>Video keywords</mat-label>\n    <mat-chip-grid #signalChipGrid aria-label=\"Enter signal form keywords\" [formField]=\"keywordsForm\">\n    @for (keyword of keywordsForm().value(); track $index) {\n      <mat-chip-row (removed)=\"removeKeyword(keyword)\">\n        {{keyword}}\n      <button matChipRemove [attr.aria-label]=\"'remove signal form' + keyword\">\n        <mat-icon>cancel</mat-icon>\n      </button>\n      </mat-chip-row>\n    }\n    </mat-chip-grid>\n    <input\n      placeholder=\"New keyword...\"\n      [matChipInputFor]=\"signalChipGrid\"\n      (matChipInputTokenEnd)=\"addKeyword($event)\"\n    />\n  </mat-form-field>\n</section>\n",
       styles: [".example-form-field {\n    width: 100%;\n}\n"]
     }]
   }]
@@ -914,7 +1168,7 @@ class ChipsTemplateFormExample {
     isStandalone: true,
     selector: "chips-template-form-example",
     ngImport: i0,
-    template: "<section>\n  <h4>Chips inside of a Template-driven form</h4>\n  <mat-form-field class=\"example-form-field\">\n    <mat-label>Video keywords</mat-label>\n    <mat-chip-grid #templateChipGrid aria-label=\"Enter template form keywords\" [(ngModel)]=\"keywords\">\n    @for (keyword of keywords(); track keyword) {\n      <mat-chip-row (removed)=\"removeKeyword(keyword)\">\n        {{keyword}}\n      <button matChipRemove [attr.aria-label]=\"'remove template form' + keyword\">\n        <mat-icon>cancel</mat-icon>\n      </button>\n      </mat-chip-row>\n    }\n    </mat-chip-grid>\n    <input\n      placeholder=\"New keyword...\"\n      [matChipInputFor]=\"templateChipGrid\"\n      (matChipInputTokenEnd)=\"addKeyword($event)\"\n    />\n  </mat-form-field>\n</section>\n",
+    template: "<section>\n  <h4>Chips inside of a Template-driven form</h4>\n  <mat-form-field class=\"example-form-field\">\n    <mat-label>Video keywords</mat-label>\n    <mat-chip-grid #templateChipGrid aria-label=\"Enter template form keywords\" [(ngModel)]=\"keywords\">\n    @for (keyword of keywords(); track $index) {\n      <mat-chip-row (removed)=\"removeKeyword(keyword)\">\n        {{keyword}}\n      <button matChipRemove [attr.aria-label]=\"'remove template form' + keyword\">\n        <mat-icon>cancel</mat-icon>\n      </button>\n      </mat-chip-row>\n    }\n    </mat-chip-grid>\n    <input\n      placeholder=\"New keyword...\"\n      [matChipInputFor]=\"templateChipGrid\"\n      (matChipInputTokenEnd)=\"addKeyword($event)\"\n    />\n  </mat-form-field>\n</section>\n",
     styles: [".example-form-field {\n    width: 100%;\n}\n"],
     dependencies: [{
       kind: "ngmodule",
@@ -994,7 +1248,7 @@ i0.ɵɵngDeclareClassMetadata({
     args: [{
       selector: 'chips-template-form-example',
       imports: [MatButtonModule, MatFormFieldModule, MatChipsModule, FormsModule, MatIconModule],
-      template: "<section>\n  <h4>Chips inside of a Template-driven form</h4>\n  <mat-form-field class=\"example-form-field\">\n    <mat-label>Video keywords</mat-label>\n    <mat-chip-grid #templateChipGrid aria-label=\"Enter template form keywords\" [(ngModel)]=\"keywords\">\n    @for (keyword of keywords(); track keyword) {\n      <mat-chip-row (removed)=\"removeKeyword(keyword)\">\n        {{keyword}}\n      <button matChipRemove [attr.aria-label]=\"'remove template form' + keyword\">\n        <mat-icon>cancel</mat-icon>\n      </button>\n      </mat-chip-row>\n    }\n    </mat-chip-grid>\n    <input\n      placeholder=\"New keyword...\"\n      [matChipInputFor]=\"templateChipGrid\"\n      (matChipInputTokenEnd)=\"addKeyword($event)\"\n    />\n  </mat-form-field>\n</section>\n",
+      template: "<section>\n  <h4>Chips inside of a Template-driven form</h4>\n  <mat-form-field class=\"example-form-field\">\n    <mat-label>Video keywords</mat-label>\n    <mat-chip-grid #templateChipGrid aria-label=\"Enter template form keywords\" [(ngModel)]=\"keywords\">\n    @for (keyword of keywords(); track $index) {\n      <mat-chip-row (removed)=\"removeKeyword(keyword)\">\n        {{keyword}}\n      <button matChipRemove [attr.aria-label]=\"'remove template form' + keyword\">\n        <mat-icon>cancel</mat-icon>\n      </button>\n      </mat-chip-row>\n    }\n    </mat-chip-grid>\n    <input\n      placeholder=\"New keyword...\"\n      [matChipInputFor]=\"templateChipGrid\"\n      (matChipInputTokenEnd)=\"addKeyword($event)\"\n    />\n  </mat-form-field>\n</section>\n",
       styles: [".example-form-field {\n    width: 100%;\n}\n"]
     }]
   }]
@@ -1055,5 +1309,5 @@ i0.ɵɵngDeclareClassMetadata({
   }]
 });
 
-export { ChipsAutocompleteExample, ChipsAvatarExample, ChipsDragDropExample, ChipsFormControlExample, ChipsHarnessExample, ChipsInputExample, ChipsOverviewExample, ChipsReactiveFormExample, ChipsStackedExample, ChipsTemplateFormExample };
+export { ChipsAutocompleteExample, ChipsAvatarExample, ChipsDragDropExample, ChipsFormControlExample, ChipsFormFieldExample, ChipsHarnessExample, ChipsInputExample, ChipsOverviewExample, ChipsReactiveFormExample, ChipsSignalFormExample, ChipsStackedExample, ChipsTemplateFormExample };
 //# sourceMappingURL=material-chips.mjs.map

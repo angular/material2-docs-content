@@ -1,5 +1,6 @@
 import * as i0 from '@angular/core';
 import * as _angular_forms from '@angular/forms';
+import * as _angular_forms_signals from '@angular/forms/signals';
 
 /**
  * @title Configurable checkbox
@@ -50,4 +51,20 @@ declare class CheckboxReactiveFormsExample {
     static ɵcmp: i0.ɵɵComponentDeclaration<CheckboxReactiveFormsExample, "checkbox-reactive-forms-example", never, {}, {}, never, never, true, never>;
 }
 
-export { CheckboxConfigurableExample, CheckboxHarnessExample, CheckboxOverviewExample, CheckboxReactiveFormsExample };
+/** @title Checkboxes with signal forms */
+declare class CheckboxSignalFormsExample {
+    readonly toppingsFormModel: i0.WritableSignal<{
+        pepperoni: boolean;
+        extracheese: boolean;
+        mushroom: boolean;
+    }>;
+    readonly toppingsForm: _angular_forms_signals.FieldTree<{
+        pepperoni: boolean;
+        extracheese: boolean;
+        mushroom: boolean;
+    }, string | number, "writable">;
+    static ɵfac: i0.ɵɵFactoryDeclaration<CheckboxSignalFormsExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<CheckboxSignalFormsExample, "checkbox-signal-forms-example", never, {}, {}, never, never, true, never>;
+}
+
+export { CheckboxConfigurableExample, CheckboxHarnessExample, CheckboxOverviewExample, CheckboxReactiveFormsExample, CheckboxSignalFormsExample };

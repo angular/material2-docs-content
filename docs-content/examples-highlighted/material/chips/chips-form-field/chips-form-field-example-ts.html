@@ -1,0 +1,56 @@
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">LiveAnnouncer</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/a11y&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">Component</span>, inject, signal} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {disabled, form, <span class="hljs-title class_">FormField</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/forms/signals&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatButtonModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/button&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatChipInputEvent</span>, <span class="hljs-title class_">MatChipsModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/chips&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatFormFieldModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/form-field&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatIconModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/icon&#x27;</span>;
+
+<span class="hljs-comment">/**
+ * <span class="hljs-doctag">@title</span> Chips with form field
+ */</span>
+<span class="hljs-meta">@Component</span>({
+  <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;chips-form-field-example&#x27;</span>,
+  <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;chips-form-field-example.html&#x27;</span>,
+  <span class="hljs-attr">styleUrl</span>: <span class="hljs-string">&#x27;chips-form-field-example.css&#x27;</span>,
+  <span class="hljs-attr">imports</span>: [<span class="hljs-title class_">FormField</span>, <span class="hljs-title class_">MatButtonModule</span>, <span class="hljs-title class_">MatFormFieldModule</span>, <span class="hljs-title class_">MatChipsModule</span>, <span class="hljs-title class_">MatIconModule</span>],
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">ChipsFormFieldExample</span> {
+  <span class="hljs-keyword">readonly</span> keywordsFormModel = <span class="hljs-title function_">signal</span>({
+    <span class="hljs-attr">words</span>: [<span class="hljs-string">&#x27;angular&#x27;</span>, <span class="hljs-string">&#x27;how-to&#x27;</span>, <span class="hljs-string">&#x27;tutorial&#x27;</span>, <span class="hljs-string">&#x27;accessibility&#x27;</span>],
+    <span class="hljs-attr">enabled</span>: <span class="hljs-literal">true</span>,
+  });
+
+  <span class="hljs-keyword">readonly</span> keywordsForm = <span class="hljs-title function_">form</span>(<span class="hljs-variable language_">this</span>.<span class="hljs-property">keywordsFormModel</span>, <span class="hljs-function"><span class="hljs-params">p</span> =&gt;</span> {
+    <span class="hljs-title function_">disabled</span>(p, {
+      <span class="hljs-attr">when</span>: <span class="hljs-function">(<span class="hljs-params">{valueOf}</span>) =&gt;</span> !<span class="hljs-title function_">valueOf</span>(p.<span class="hljs-property">enabled</span>),
+    });
+  });
+
+  announcer = <span class="hljs-title function_">inject</span>(<span class="hljs-title class_">LiveAnnouncer</span>);
+
+  <span class="hljs-keyword">protected</span> <span class="hljs-title function_">removeKeyword</span>(<span class="hljs-params"><span class="hljs-attr">keyword</span>: <span class="hljs-built_in">string</span></span>) {
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">keywordsFormModel</span>.<span class="hljs-title function_">update</span>(<span class="hljs-function"><span class="hljs-params">keywords</span> =&gt;</span> {
+      <span class="hljs-keyword">const</span> index = keywords.<span class="hljs-property">words</span>.<span class="hljs-title function_">indexOf</span>(keyword);
+      <span class="hljs-keyword">if</span> (index &lt; <span class="hljs-number">0</span>) {
+        <span class="hljs-keyword">return</span> keywords;
+      }
+
+      keywords.<span class="hljs-property">words</span>.<span class="hljs-title function_">splice</span>(index, <span class="hljs-number">1</span>);
+      <span class="hljs-variable language_">this</span>.<span class="hljs-property">announcer</span>.<span class="hljs-title function_">announce</span>(<span class="hljs-string">`removed <span class="hljs-subst">${keyword}</span>`</span>);
+      <span class="hljs-keyword">return</span> {...keywords};
+    });
+  }
+
+  <span class="hljs-keyword">protected</span> <span class="hljs-title function_">add</span>(<span class="hljs-attr">event</span>: <span class="hljs-title class_">MatChipInputEvent</span>): <span class="hljs-built_in">void</span> {
+    <span class="hljs-keyword">const</span> value = (event.<span class="hljs-property">value</span> || <span class="hljs-string">&#x27;&#x27;</span>).<span class="hljs-title function_">trim</span>();
+
+    <span class="hljs-comment">// Add our keyword</span>
+    <span class="hljs-keyword">if</span> (value) {
+      <span class="hljs-variable language_">this</span>.<span class="hljs-property">keywordsFormModel</span>.<span class="hljs-title function_">update</span>(<span class="hljs-function"><span class="hljs-params">keywords</span> =&gt;</span> ({...keywords, <span class="hljs-attr">words</span>: [...keywords.<span class="hljs-property">words</span>, value]}));
+    }
+
+    <span class="hljs-comment">// Clear the input value</span>
+    event.<span class="hljs-property">chipInput</span>!.<span class="hljs-title function_">clear</span>();
+  }
+}
