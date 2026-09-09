@@ -1749,9 +1749,19 @@ const EXAMPLE_COMPONENTS = {
     "primaryFile": "input-error-state-matcher-example.ts",
     "importPath": "material/input"
   },
+  "input-errors-signal-form": {
+    "packagePath": "material/input/input-errors-signal-form",
+    "title": "Input with error messages (signal form)",
+    "componentName": "InputErrorsSignalFormExample",
+    "files": ["input-errors-signal-form-example.ts", "input-errors-signal-form-example.html", "input-errors-signal-form-example.css"],
+    "selector": "input-errors-signal-form-example",
+    "additionalComponents": [],
+    "primaryFile": "input-errors-signal-form-example.ts",
+    "importPath": "material/input"
+  },
   "input-errors": {
     "packagePath": "material/input/input-errors",
-    "title": "Input with error messages",
+    "title": "Input with error messages (reactive form)",
     "componentName": "InputErrorsExample",
     "files": ["input-errors-example.ts", "input-errors-example.html", "input-errors-example.css"],
     "selector": "input-errors-example",
@@ -3911,6 +3921,8 @@ async function loadExample(id) {
     case 'input-clearable':
       return import('@angular/components-examples/material/input');
     case 'input-error-state-matcher':
+      return import('@angular/components-examples/material/input');
+    case 'input-errors-signal-form':
       return import('@angular/components-examples/material/input');
     case 'input-errors':
       return import('@angular/components-examples/material/input');

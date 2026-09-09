@@ -10,6 +10,7 @@ import * as i2 from '@angular/material/input';
 import { MatInputModule } from '@angular/material/input';
 import * as i1 from '@angular/material/form-field';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { form, required, email, FormField } from '@angular/forms/signals';
 
 class InputClearableExample {
   value = signal('Clear me', ...(ngDevMode ? [{
@@ -322,6 +323,82 @@ i0.ɵɵngDeclareClassMetadata({
       selector: 'input-errors-example',
       imports: [FormsModule, MatFormFieldModule, MatInputModule, ReactiveFormsModule],
       template: "<form class=\"example-form\">\n  <mat-form-field class=\"example-full-width\">\n    <mat-label>Email</mat-label>\n    <input type=\"email\" matInput [formControl]=\"emailFormControl\" placeholder=\"Ex. pat@example.com\">\n    @if (emailFormControl.hasError('email') && !emailFormControl.hasError('required')) {\n      <mat-error>Please enter a valid email address</mat-error>\n    }\n    @if (emailFormControl.hasError('required')) {\n      <mat-error>Email is <strong>required</strong></mat-error>\n    }\n  </mat-form-field>\n</form>\n",
+      styles: [".example-form {\n  min-width: 150px;\n  max-width: 500px;\n  width: 100%;\n}\n\n.example-full-width {\n  width: 100%;\n}\n"]
+    }]
+  }]
+});
+
+class InputErrorsSignalFormExample {
+  _emailModel = signal('', ...(ngDevMode ? [{
+    debugName: "_emailModel"
+  }] : []));
+  emailForm = form(this._emailModel, schemaPath => {
+    required(schemaPath), email(schemaPath);
+  });
+  static ɵfac = i0.ɵɵngDeclareFactory({
+    minVersion: "12.0.0",
+    version: "22.1.5",
+    ngImport: i0,
+    type: InputErrorsSignalFormExample,
+    deps: [],
+    target: i0.ɵɵFactoryTarget.Component
+  });
+  static ɵcmp = i0.ɵɵngDeclareComponent({
+    minVersion: "17.0.0",
+    version: "22.1.5",
+    type: InputErrorsSignalFormExample,
+    isStandalone: true,
+    selector: "input-errors-signal-form-example",
+    ngImport: i0,
+    template: "<form class=\"example-form\">\n  <mat-form-field class=\"example-full-width\">\n    <mat-label>Email</mat-label>\n    <input type=\"email\" matInput [formField]=\"emailForm\" placeholder=\"Ex. pat@example.com\">\n    @if (emailForm().getError('email') && !emailForm().getError('required')) {\n      <mat-error>Please enter a valid email address</mat-error>\n    }\n    @if (emailForm().getError('required')) {\n      <mat-error>Email is <strong>required</strong></mat-error>\n    }\n  </mat-form-field>\n</form>\n",
+    styles: [".example-form {\n  min-width: 150px;\n  max-width: 500px;\n  width: 100%;\n}\n\n.example-full-width {\n  width: 100%;\n}\n"],
+    dependencies: [{
+      kind: "ngmodule",
+      type: MatFormFieldModule
+    }, {
+      kind: "component",
+      type: i1.MatFormField,
+      selector: "mat-form-field",
+      inputs: ["hideRequiredMarker", "color", "floatLabel", "appearance", "subscriptSizing", "hintLabel"],
+      exportAs: ["matFormField"]
+    }, {
+      kind: "directive",
+      type: i1.MatLabel,
+      selector: "mat-label"
+    }, {
+      kind: "directive",
+      type: i1.MatError,
+      selector: "mat-error, [matError]",
+      inputs: ["id"]
+    }, {
+      kind: "ngmodule",
+      type: MatInputModule
+    }, {
+      kind: "directive",
+      type: i2.MatInput,
+      selector: "input[matInput], textarea[matInput], select[matNativeControl],      input[matNativeControl], textarea[matNativeControl]",
+      inputs: ["disabled", "id", "placeholder", "name", "required", "type", "errorStateMatcher", "aria-describedby", "value", "readonly", "disabledInteractive"],
+      exportAs: ["matInput"]
+    }, {
+      kind: "directive",
+      type: FormField,
+      selector: "[formField]",
+      inputs: ["formField"],
+      exportAs: ["formField"]
+    }]
+  });
+}
+i0.ɵɵngDeclareClassMetadata({
+  minVersion: "12.0.0",
+  version: "22.1.5",
+  ngImport: i0,
+  type: InputErrorsSignalFormExample,
+  decorators: [{
+    type: Component,
+    args: [{
+      selector: 'input-errors-signal-form-example',
+      imports: [MatFormFieldModule, MatInputModule, FormField],
+      template: "<form class=\"example-form\">\n  <mat-form-field class=\"example-full-width\">\n    <mat-label>Email</mat-label>\n    <input type=\"email\" matInput [formField]=\"emailForm\" placeholder=\"Ex. pat@example.com\">\n    @if (emailForm().getError('email') && !emailForm().getError('required')) {\n      <mat-error>Please enter a valid email address</mat-error>\n    }\n    @if (emailForm().getError('required')) {\n      <mat-error>Email is <strong>required</strong></mat-error>\n    }\n  </mat-form-field>\n</form>\n",
       styles: [".example-form {\n  min-width: 150px;\n  max-width: 500px;\n  width: 100%;\n}\n\n.example-full-width {\n  width: 100%;\n}\n"]
     }]
   }]
@@ -727,5 +804,5 @@ i0.ɵɵngDeclareClassMetadata({
   }]
 });
 
-export { InputClearableExample, InputErrorStateMatcherExample, InputErrorsExample, InputFormExample, InputHarnessExample, InputHintExample, InputOverviewExample, InputPrefixSuffixExample };
+export { InputClearableExample, InputErrorStateMatcherExample, InputErrorsExample, InputErrorsSignalFormExample, InputFormExample, InputHarnessExample, InputHintExample, InputOverviewExample, InputPrefixSuffixExample };
 //# sourceMappingURL=material-input.mjs.map
