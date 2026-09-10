@@ -18,7 +18,7 @@ class InputClearableExample {
   }] : []));
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.1.5",
+    version: "22.1.6",
     ngImport: i0,
     type: InputClearableExample,
     deps: [],
@@ -26,7 +26,7 @@ class InputClearableExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "22.1.5",
+    version: "22.1.6",
     type: InputClearableExample,
     isStandalone: true,
     selector: "input-clearable-example",
@@ -100,7 +100,7 @@ class InputClearableExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.1.5",
+  version: "22.1.6",
   ngImport: i0,
   type: InputClearableExample,
   decorators: [{
@@ -125,7 +125,7 @@ class InputErrorStateMatcherExample {
   matcher = new MyErrorStateMatcher();
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.1.5",
+    version: "22.1.6",
     ngImport: i0,
     type: InputErrorStateMatcherExample,
     deps: [],
@@ -133,7 +133,7 @@ class InputErrorStateMatcherExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "22.1.5",
+    version: "22.1.6",
     type: InputErrorStateMatcherExample,
     isStandalone: true,
     selector: "input-error-state-matcher-example",
@@ -213,7 +213,7 @@ class InputErrorStateMatcherExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.1.5",
+  version: "22.1.6",
   ngImport: i0,
   type: InputErrorStateMatcherExample,
   decorators: [{
@@ -231,7 +231,7 @@ class InputErrorsExample {
   emailFormControl = new FormControl('', [Validators.required, Validators.email]);
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.1.5",
+    version: "22.1.6",
     ngImport: i0,
     type: InputErrorsExample,
     deps: [],
@@ -239,7 +239,7 @@ class InputErrorsExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "22.1.5",
+    version: "22.1.6",
     type: InputErrorsExample,
     isStandalone: true,
     selector: "input-errors-example",
@@ -314,7 +314,7 @@ class InputErrorsExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.1.5",
+  version: "22.1.6",
   ngImport: i0,
   type: InputErrorsExample,
   decorators: [{
@@ -337,7 +337,7 @@ class InputErrorsSignalFormExample {
   });
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.1.5",
+    version: "22.1.6",
     ngImport: i0,
     type: InputErrorsSignalFormExample,
     deps: [],
@@ -345,7 +345,7 @@ class InputErrorsSignalFormExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "22.1.5",
+    version: "22.1.6",
     type: InputErrorsSignalFormExample,
     isStandalone: true,
     selector: "input-errors-signal-form-example",
@@ -390,7 +390,7 @@ class InputErrorsSignalFormExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.1.5",
+  version: "22.1.6",
   ngImport: i0,
   type: InputErrorsSignalFormExample,
   decorators: [{
@@ -407,7 +407,7 @@ i0.ɵɵngDeclareClassMetadata({
 class InputFormExample {
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.1.5",
+    version: "22.1.6",
     ngImport: i0,
     type: InputFormExample,
     deps: [],
@@ -415,7 +415,7 @@ class InputFormExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.1.5",
+    version: "22.1.6",
     type: InputFormExample,
     isStandalone: true,
     selector: "input-form-example",
@@ -472,7 +472,7 @@ class InputFormExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.1.5",
+  version: "22.1.6",
   ngImport: i0,
   type: InputFormExample,
   decorators: [{
@@ -489,7 +489,7 @@ i0.ɵɵngDeclareClassMetadata({
 class InputHintExample {
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.1.5",
+    version: "22.1.6",
     ngImport: i0,
     type: InputHintExample,
     deps: [],
@@ -497,7 +497,7 @@ class InputHintExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.1.5",
+    version: "22.1.6",
     type: InputHintExample,
     isStandalone: true,
     selector: "input-hint-example",
@@ -554,7 +554,7 @@ class InputHintExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.1.5",
+  version: "22.1.6",
   ngImport: i0,
   type: InputHintExample,
   decorators: [{
@@ -571,7 +571,7 @@ i0.ɵɵngDeclareClassMetadata({
 class InputOverviewExample {
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.1.5",
+    version: "22.1.6",
     ngImport: i0,
     type: InputOverviewExample,
     deps: [],
@@ -579,7 +579,7 @@ class InputOverviewExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.1.5",
+    version: "22.1.6",
     type: InputOverviewExample,
     isStandalone: true,
     selector: "input-overview-example",
@@ -631,7 +631,7 @@ class InputOverviewExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.1.5",
+  version: "22.1.6",
   ngImport: i0,
   type: InputOverviewExample,
   decorators: [{
@@ -648,7 +648,7 @@ i0.ɵɵngDeclareClassMetadata({
 class InputPrefixSuffixExample {
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.1.5",
+    version: "22.1.6",
     ngImport: i0,
     type: InputPrefixSuffixExample,
     deps: [],
@@ -656,7 +656,7 @@ class InputPrefixSuffixExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.1.5",
+    version: "22.1.6",
     type: InputPrefixSuffixExample,
     isStandalone: true,
     selector: "input-prefix-suffix-example",
@@ -727,7 +727,7 @@ class InputPrefixSuffixExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.1.5",
+  version: "22.1.6",
   ngImport: i0,
   type: InputPrefixSuffixExample,
   decorators: [{
@@ -750,7 +750,7 @@ class InputHarnessExample {
   }] : []));
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.1.5",
+    version: "22.1.6",
     ngImport: i0,
     type: InputHarnessExample,
     deps: [],
@@ -758,7 +758,7 @@ class InputHarnessExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.1.5",
+    version: "22.1.6",
     type: InputHarnessExample,
     isStandalone: true,
     selector: "input-harness-example",
@@ -791,7 +791,7 @@ class InputHarnessExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.1.5",
+  version: "22.1.6",
   ngImport: i0,
   type: InputHarnessExample,
   decorators: [{

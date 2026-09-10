@@ -26,7 +26,7 @@ class CheckboxConfigurableExample {
   }] : []));
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.1.5",
+    version: "22.1.6",
     ngImport: i0,
     type: CheckboxConfigurableExample,
     deps: [],
@@ -34,7 +34,7 @@ class CheckboxConfigurableExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.1.0",
-    version: "22.1.5",
+    version: "22.1.6",
     type: CheckboxConfigurableExample,
     isStandalone: true,
     selector: "checkbox-configurable-example",
@@ -136,7 +136,7 @@ class CheckboxConfigurableExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.1.5",
+  version: "22.1.6",
   ngImport: i0,
   type: CheckboxConfigurableExample,
   decorators: [{
@@ -202,7 +202,7 @@ class CheckboxHarnessExample {
   }] : []));
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.1.5",
+    version: "22.1.6",
     ngImport: i0,
     type: CheckboxHarnessExample,
     deps: [],
@@ -210,7 +210,7 @@ class CheckboxHarnessExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.1.0",
-    version: "22.1.5",
+    version: "22.1.6",
     type: CheckboxHarnessExample,
     isStandalone: true,
     selector: "checkbox-harness-example",
@@ -240,7 +240,7 @@ class CheckboxHarnessExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.1.5",
+  version: "22.1.6",
   ngImport: i0,
   type: CheckboxHarnessExample,
   decorators: [{
@@ -305,7 +305,7 @@ class CheckboxOverviewExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.1.5",
+    version: "22.1.6",
     ngImport: i0,
     type: CheckboxOverviewExample,
     deps: [],
@@ -313,7 +313,7 @@ class CheckboxOverviewExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "22.1.5",
+    version: "22.1.6",
     type: CheckboxOverviewExample,
     isStandalone: true,
     selector: "checkbox-overview-example",
@@ -338,7 +338,7 @@ class CheckboxOverviewExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.1.5",
+  version: "22.1.6",
   ngImport: i0,
   type: CheckboxOverviewExample,
   decorators: [{
@@ -361,7 +361,7 @@ class CheckboxReactiveFormsExample {
   });
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.1.5",
+    version: "22.1.6",
     ngImport: i0,
     type: CheckboxReactiveFormsExample,
     deps: [],
@@ -369,7 +369,7 @@ class CheckboxReactiveFormsExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.1.5",
+    version: "22.1.6",
     type: CheckboxReactiveFormsExample,
     isStandalone: true,
     selector: "checkbox-reactive-forms-example",
@@ -422,7 +422,7 @@ class CheckboxReactiveFormsExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.1.5",
+  version: "22.1.6",
   ngImport: i0,
   type: CheckboxReactiveFormsExample,
   decorators: [{
@@ -447,7 +447,7 @@ class CheckboxSignalFormsExample {
   toppingsForm = form(this.toppingsFormModel);
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.1.5",
+    version: "22.1.6",
     ngImport: i0,
     type: CheckboxSignalFormsExample,
     deps: [],
@@ -455,7 +455,7 @@ class CheckboxSignalFormsExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.1.5",
+    version: "22.1.6",
     type: CheckboxSignalFormsExample,
     isStandalone: true,
     selector: "checkbox-signal-forms-example",
@@ -487,7 +487,7 @@ class CheckboxSignalFormsExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.1.5",
+  version: "22.1.6",
   ngImport: i0,
   type: CheckboxSignalFormsExample,
   decorators: [{
