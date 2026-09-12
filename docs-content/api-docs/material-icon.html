@@ -1175,15 +1175,15 @@ Examples:
 content of the <code>&lt;mat-icon&gt;</code> component. If you register a custom font class, don&#39;t forget to also
 include the special class <code>mat-ligature-font</code>. It is recommended to use the attribute alternative
 to prevent the ligature text to be selectable and to appear in search engine results.
-By default, the Material icons font is used as described at
-<a href="http://google.github.io/material-design-icons/#icon-font-for-the-web">http://google.github.io/material-design-icons/#icon-font-for-the-web</a>. You can specify an
-alternate font by setting the fontSet input to either the CSS class to apply to use the
-desired font, or to an alias previously registered with MatIconRegistry.registerFontClassAlias.
-Examples:
-  <code>&lt;mat-icon fontIcon=&quot;home&quot;&gt;&lt;/mat-icon&gt;
-  &lt;mat-icon&gt;home&lt;/mat-icon&gt;
-  &lt;mat-icon fontSet=&quot;myfont&quot; fontIcon=&quot;sun&quot;&gt;&lt;/mat-icon&gt;
-  &lt;mat-icon fontSet=&quot;myfont&quot;&gt;sun&lt;/mat-icon&gt;</code></p>
+By default, the Material Icons or Material Symbols fonts are used as described at
+<a href="https://fonts.google.com/icons">https://fonts.google.com/icons</a>. You can specify an alternate font by setting the <code>fontSet</code>
+input to either the CSS class to apply to use the desired font, or to an alias previously
+registered with <code>MatIconRegistry.registerFontClassAlias</code>.
+Examples:</p>
+<pre><code class="language-html">&lt;mat-icon fontIcon=&quot;home&quot;&gt;&lt;/mat-icon&gt;
+&lt;mat-icon&gt;home&lt;/mat-icon&gt;
+&lt;mat-icon fontSet=&quot;myfont&quot; fontIcon=&quot;sun&quot;&gt;&lt;/mat-icon&gt;
+&lt;mat-icon fontSet=&quot;myfont&quot;&gt;sun&lt;/mat-icon&gt;</code></pre>
 </li>
 <li><p>Specify a font glyph to be included via CSS rules by setting the fontSet input to specify the
 font, and the fontIcon input to specify the icon. Typically the fontIcon will specify a
