@@ -355,6 +355,9 @@ example:</p>
 the default behaviour to parse dates as UTC by passing <code>useUtc: true</code> into <code>provideLuxonDateAdapter</code>:</p>
 <pre><code class="language-ts"><span class="hljs-title function_">bootstrapApplication</span>(<span class="hljs-title class_">MyApp</span>, {
   <span class="hljs-attr">providers</span>: [<span class="hljs-title function_">provideLuxonDateAdapter</span>(<span class="hljs-literal">undefined</span>, {<span class="hljs-attr">useUtc</span>: <span class="hljs-literal">true</span>})]
+});</code></pre><p>You can also change the default behaviour to parse and handle dates as any desired timeZone by passing <code>timeZone</code> into <code>provideLuxonDateAdapter</code>:</p>
+<pre><code class="language-ts"><span class="hljs-title function_">bootstrapApplication</span>(<span class="hljs-title class_">MyApp</span>, {
+  <span class="hljs-attr">providers</span>: [<span class="hljs-title function_">provideLuxonDateAdapter</span>(<span class="hljs-literal">undefined</span>, {<span class="hljs-attr">timeZone</span>: <span class="hljs-string">&#x27;UTC+2&#x27;</span>})]
 });</code></pre><p>It is also possible to create your own <code>DateAdapter</code> that works with any date format your app
 requires. This is accomplished by subclassing <code>DateAdapter</code> and providing your subclass as the
 <code>DateAdapter</code> implementation. You will also want to make sure that the <code>MAT_DATE_FORMATS</code> provided
