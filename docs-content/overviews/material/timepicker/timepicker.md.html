@@ -14,11 +14,12 @@ binding on the input.</p>
 </div><div material-docs-example="timepicker-overview"
                              file="timepicker-overview-example.html"
                              ></div><div class="docs-markdown">
-        <h3 id="timepicker-forms-integration" class="docs-header-link">
-          <span header-link="timepicker-forms-integration"></span>
-          Timepicker forms integration
+        <h3 id="use-with-angular-forms" class="docs-header-link">
+          <span header-link="use-with-angular-forms"></span>
+          Use with Angular Forms
         </h3>
-      <p>The timepicker input integrates with the <code>@angular/forms</code> module by providing itself as a
+      <p><code>matTimepicker</code> is compatible with <code>@angular/forms</code> and supports <code>FormField</code>, <code>FormsModule</code>, and <code>ReactiveFormsModule</code>.</p>
+<p>The timepicker input integrates with the <code>@angular/forms</code> module by providing itself as a
 <code>ControlValueAccessor</code> and a <code>Validator</code> (see <a href="#input-validation">Input validation</a> below for more
 information). When the user types in a new time or selects one from the dropdown, the
 time will be set on the date object which is the current value of the form control. If the form
