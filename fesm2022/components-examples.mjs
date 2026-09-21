@@ -4334,7 +4334,7 @@ class ExampleData {
   indexFilename;
   componentNames;
   constructor(example) {
-    if (!example || !EXAMPLE_COMPONENTS.hasOwnProperty(example)) {
+    if (!example || !Object.hasOwn(EXAMPLE_COMPONENTS, example)) {
       return;
     }
     const {
