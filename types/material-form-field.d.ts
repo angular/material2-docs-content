@@ -1,10 +1,10 @@
 import * as i0 from '@angular/core';
-import { OnDestroy } from '@angular/core';
-import * as _angular_material_form_field from '@angular/material/form-field';
-import { MatFormFieldControl } from '@angular/material/form-field';
+import { ElementRef } from '@angular/core';
+import * as _angular_forms_signals from '@angular/forms/signals';
+import { FormValueControl, Field } from '@angular/forms/signals';
+import { MatFormFieldControl, MatFormField } from '@angular/material/form-field';
 import * as _angular_forms from '@angular/forms';
-import { FormGroup, FormControl, ControlValueAccessor, NgControl, AbstractControl } from '@angular/forms';
-import { Subject } from 'rxjs';
+import { FormControl } from '@angular/forms';
 
 /** @title Form field appearance variants */
 declare class FormFieldAppearanceExample {
@@ -14,73 +14,65 @@ declare class FormFieldAppearanceExample {
 
 /** @title Form field with custom telephone number input control. */
 declare class FormFieldCustomControlExample {
-    readonly form: FormGroup<{
-        tel: FormControl<null>;
+    readonly formModel: i0.WritableSignal<{
+        tel: MyTel | null;
     }>;
+    readonly form: _angular_forms_signals.FieldTree<{
+        tel: MyTel | null;
+    }, string | number, "writable">;
     static ɵfac: i0.ɵɵFactoryDeclaration<FormFieldCustomControlExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<FormFieldCustomControlExample, "form-field-custom-control-example", never, {}, {}, never, never, true, never>;
 }
 /** Data structure for holding telephone number. */
 declare class MyTel {
-    area: string;
-    exchange: string;
-    subscriber: string;
+    readonly area: string;
+    readonly exchange: string;
+    readonly subscriber: string;
     constructor(area: string, exchange: string, subscriber: string);
 }
 /** Custom `MatFormFieldControl` for telephone number input. */
-declare class MyTelInput implements ControlValueAccessor, MatFormFieldControl<MyTel>, OnDestroy {
+declare class MyTelInput implements FormValueControl<MyTel | null>, MatFormFieldControl<MyTel> {
     static nextId: number;
-    readonly areaInput: i0.Signal<HTMLInputElement>;
-    readonly exchangeInput: i0.Signal<HTMLInputElement>;
-    readonly subscriberInput: i0.Signal<HTMLInputElement>;
-    ngControl: NgControl | null;
-    readonly parts: FormGroup<{
-        area: FormControl<string | null>;
-        exchange: FormControl<string | null>;
-        subscriber: FormControl<string | null>;
+    readonly ngControl: null;
+    protected readonly _formField: MatFormField | null;
+    private readonly _formFieldControl;
+    private readonly _elementRef;
+    protected readonly _areaInput: i0.Signal<ElementRef<HTMLInputElement>>;
+    protected readonly _exchangeInput: i0.Signal<ElementRef<HTMLInputElement>>;
+    protected readonly _subscriberInput: i0.Signal<ElementRef<HTMLInputElement>>;
+    private readonly _touched;
+    get ngField(): Field<MyTel> | null;
+    readonly partsModel: i0.WritableSignal<{
+        area: string;
+        exchange: string;
+        subscriber: string;
     }>;
-    readonly stateChanges: Subject<void>;
-    readonly touched: i0.WritableSignal<boolean>;
+    readonly parts: _angular_forms_signals.FieldTree<{
+        area: string;
+        exchange: string;
+        subscriber: string;
+    }, string | number, "writable">;
+    readonly value: i0.ModelSignal<MyTel | null>;
     readonly controlType = "example-tel-input";
     readonly id: string;
-    readonly _userAriaDescribedBy: i0.InputSignal<string>;
-    readonly _placeholder: i0.InputSignal<string>;
-    readonly _required: i0.InputSignalWithTransform<boolean, unknown>;
-    readonly _disabledByInput: i0.InputSignalWithTransform<boolean, unknown>;
-    readonly _value: i0.ModelSignal<MyTel | null>;
-    onChange: (_: any) => void;
-    onTouched: () => void;
-    protected readonly _formField: _angular_material_form_field.MatFormField | null;
-    private readonly _focused;
-    private readonly _disabledByCva;
-    private readonly _disabled;
-    private readonly _focusMonitor;
-    private readonly _elementRef;
-    get focused(): boolean;
-    get empty(): boolean;
-    get shouldLabelFloat(): boolean;
-    get userAriaDescribedBy(): string;
-    get placeholder(): string;
-    get required(): boolean;
-    get disabled(): boolean;
-    get value(): MyTel | null;
-    get errorState(): boolean;
+    readonly userAriaDescribedBy: i0.InputSignal<string>;
+    readonly placeholder: i0.InputSignal<string>;
+    readonly required: i0.InputSignalWithTransform<boolean, unknown>;
+    readonly disabled: i0.InputSignalWithTransform<boolean, unknown>;
+    readonly focused: i0.WritableSignal<boolean>;
+    readonly empty: i0.Signal<boolean>;
+    readonly shouldLabelFloat: i0.Signal<boolean>;
+    readonly errorState: i0.Signal<boolean>;
     constructor();
-    ngOnDestroy(): void;
     onFocusIn(): void;
     onFocusOut(event: FocusEvent): void;
-    autoFocusNext(control: AbstractControl, nextElement?: HTMLInputElement): void;
-    autoFocusPrev(control: AbstractControl, prevElement: HTMLInputElement): void;
+    autoFocusNext(control: Field<string>, nextElement?: HTMLInputElement): void;
+    autoFocusPrev(control: Field<string>, prevElement: HTMLInputElement): void;
     setDescribedByIds(ids: string[]): void;
     onContainerClick(): void;
-    writeValue(tel: MyTel | null): void;
-    registerOnChange(fn: any): void;
-    registerOnTouched(fn: any): void;
-    setDisabledState(isDisabled: boolean): void;
-    _handleInput(control: AbstractControl, nextElement?: HTMLInputElement): void;
-    private _updateValue;
+    protected _handleTyping(control: Field<string>, nextElement?: HTMLInputElement): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<MyTelInput, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<MyTelInput, "example-tel-input", never, { "_userAriaDescribedBy": { "alias": "aria-describedby"; "required": false; "isSignal": true; }; "_placeholder": { "alias": "placeholder"; "required": false; "isSignal": true; }; "_required": { "alias": "required"; "required": false; "isSignal": true; }; "_disabledByInput": { "alias": "disabled"; "required": false; "isSignal": true; }; "_value": { "alias": "value"; "required": false; "isSignal": true; }; }, { "_value": "valueChange"; }, never, never, true, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<MyTelInput, "example-tel-input", never, { "value": { "alias": "value"; "required": false; "isSignal": true; }; "userAriaDescribedBy": { "alias": "aria-describedby"; "required": false; "isSignal": true; }; "placeholder": { "alias": "placeholder"; "required": false; "isSignal": true; }; "required": { "alias": "required"; "required": false; "isSignal": true; }; "disabled": { "alias": "disabled"; "required": false; "isSignal": true; }; }, { "value": "valueChange"; }, never, never, true, never>;
 }
 
 /** @title Form field with error messages */

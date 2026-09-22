@@ -1,17 +1,17 @@
 import * as i0 from '@angular/core';
-import { Component, viewChild, inject, signal, input, booleanAttribute, model, computed, ElementRef, effect, untracked, forwardRef } from '@angular/core';
+import { Component, signal, inject, ElementRef, viewChild, model, input, booleanAttribute, computed, effect, untracked, forwardRef } from '@angular/core';
 import * as i1 from '@angular/material/form-field';
-import { MatFormFieldModule, MAT_FORM_FIELD, MatFormFieldControl } from '@angular/material/form-field';
+import { MatFormFieldModule, MatFormField, MatHint, MatLabel, MatSuffix, MAT_FORM_FIELD, MatFormFieldControl } from '@angular/material/form-field';
 import * as i3 from '@angular/material/icon';
-import { MatIconModule } from '@angular/material/icon';
+import { MatIconModule, MatIcon } from '@angular/material/icon';
 import * as i2 from '@angular/material/input';
 import { MatInputModule } from '@angular/material/input';
-import { FocusMonitor } from '@angular/cdk/a11y';
-import { AsyncPipe, JsonPipe } from '@angular/common';
+import { JsonPipe } from '@angular/common';
+import { form, required, FormField, FORM_FIELD, minLength, maxLength } from '@angular/forms/signals';
 import { takeUntilDestroyed, toSignal } from '@angular/core/rxjs-interop';
 import * as i3$1 from '@angular/forms';
-import { FormGroup, FormControl, FormsModule, ReactiveFormsModule, NgControl, FormBuilder, Validators } from '@angular/forms';
-import { Subject, merge } from 'rxjs';
+import { FormControl, Validators, FormsModule, ReactiveFormsModule, FormBuilder } from '@angular/forms';
+import { merge } from 'rxjs';
 import * as i2$1 from '@angular/material/select';
 import { MatSelectModule } from '@angular/material/select';
 import * as i2$2 from '@angular/material/checkbox';
@@ -99,8 +99,13 @@ i0.ɵɵngDeclareClassMetadata({
 });
 
 class FormFieldCustomControlExample {
-  form = new FormGroup({
-    tel: new FormControl(null)
+  formModel = signal({
+    tel: null
+  }, ...(ngDevMode ? [{
+    debugName: "formModel"
+  }] : []));
+  form = form(this.formModel, schemaPath => {
+    required(schemaPath.tel);
   });
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
@@ -117,81 +122,45 @@ class FormFieldCustomControlExample {
     isStandalone: true,
     selector: "form-field-custom-control-example",
     ngImport: i0,
-    template: "<div [formGroup]=\"form\">\n  <mat-form-field>\n    <mat-label>Phone number</mat-label>\n    <example-tel-input formControlName=\"tel\" required></example-tel-input>\n    <mat-icon matSuffix>phone</mat-icon>\n    <mat-hint>Include area code</mat-hint>\n  </mat-form-field>\n  <p>Entered value: {{form.valueChanges | async | json}}</p>\n</div>\n",
+    template: "<mat-form-field>\n  <mat-label>Phone number</mat-label>\n  <example-tel-input [formField]=\"form.tel\"></example-tel-input>\n  <mat-icon matSuffix>phone</mat-icon>\n  <mat-hint>Include area code</mat-hint>\n</mat-form-field>\n<p>Entered value: {{form.tel().value() | json}}</p>\n",
     dependencies: [{
-      kind: "ngmodule",
-      type: i0.forwardRef(() => FormsModule)
-    }, {
       kind: "directive",
-      type: i0.forwardRef(() => i3$1.NgControlStatus),
-      selector: "[formControlName],[ngModel],[formControl]"
-    }, {
-      kind: "directive",
-      type: i0.forwardRef(() => i3$1.NgControlStatusGroup),
-      selector: "[formGroupName],[formArrayName],[ngModelGroup],[formGroup],[formArray],form:not([ngNoForm]),[ngForm]"
-    }, {
-      kind: "directive",
-      type: i0.forwardRef(() => i3$1.RequiredValidator),
-      selector: ":not([type=checkbox])[required][formControlName],:not([type=checkbox])[required][formControl],:not([type=checkbox])[required][ngModel]",
-      inputs: ["required"]
-    }, {
-      kind: "ngmodule",
-      type: i0.forwardRef(() => ReactiveFormsModule)
-    }, {
-      kind: "directive",
-      type: i0.forwardRef(() => i3$1.FormGroupDirective),
-      selector: "[formGroup]",
-      inputs: ["formGroup"],
-      outputs: ["ngSubmit"],
-      exportAs: ["ngForm"]
-    }, {
-      kind: "directive",
-      type: i0.forwardRef(() => i3$1.FormControlName),
-      selector: "[formControlName]",
-      inputs: ["formControlName", "disabled", "ngModel"],
-      outputs: ["ngModelChange"]
-    }, {
-      kind: "ngmodule",
-      type: i0.forwardRef(() => MatFormFieldModule)
+      type: i0.forwardRef(() => FormField),
+      selector: "[formField]",
+      inputs: ["formField"],
+      exportAs: ["formField"]
     }, {
       kind: "component",
-      type: i0.forwardRef(() => i1.MatFormField),
+      type: i0.forwardRef(() => MatFormField),
       selector: "mat-form-field",
       inputs: ["hideRequiredMarker", "color", "floatLabel", "appearance", "subscriptSizing", "hintLabel"],
       exportAs: ["matFormField"]
     }, {
       kind: "directive",
-      type: i0.forwardRef(() => i1.MatLabel),
-      selector: "mat-label"
-    }, {
-      kind: "directive",
-      type: i0.forwardRef(() => i1.MatHint),
+      type: i0.forwardRef(() => MatHint),
       selector: "mat-hint",
       inputs: ["align", "id"]
     }, {
       kind: "directive",
-      type: i0.forwardRef(() => i1.MatSuffix),
-      selector: "[matSuffix], [matIconSuffix], [matTextSuffix]",
-      inputs: ["matTextSuffix"]
+      type: i0.forwardRef(() => MatLabel),
+      selector: "mat-label"
     }, {
       kind: "component",
       type: i0.forwardRef(() => MyTelInput),
       selector: "example-tel-input",
-      inputs: ["aria-describedby", "placeholder", "required", "disabled", "value"],
+      inputs: ["value", "aria-describedby", "placeholder", "required", "disabled"],
       outputs: ["valueChange"]
     }, {
-      kind: "ngmodule",
-      type: i0.forwardRef(() => MatIconModule)
-    }, {
       kind: "component",
-      type: i0.forwardRef(() => i3.MatIcon),
+      type: i0.forwardRef(() => MatIcon),
       selector: "mat-icon",
       inputs: ["color", "inline", "svgIcon", "fontSet", "fontIcon"],
       exportAs: ["matIcon"]
     }, {
-      kind: "pipe",
-      type: i0.forwardRef(() => AsyncPipe),
-      name: "async"
+      kind: "directive",
+      type: i0.forwardRef(() => MatSuffix),
+      selector: "[matSuffix], [matIconSuffix], [matTextSuffix]",
+      inputs: ["matTextSuffix"]
     }, {
       kind: "pipe",
       type: i0.forwardRef(() => JsonPipe),
@@ -208,8 +177,8 @@ i0.ɵɵngDeclareClassMetadata({
     type: Component,
     args: [{
       selector: 'form-field-custom-control-example',
-      imports: [FormsModule, ReactiveFormsModule, MatFormFieldModule, forwardRef(() => MyTelInput), MatIconModule, AsyncPipe, JsonPipe],
-      template: "<div [formGroup]=\"form\">\n  <mat-form-field>\n    <mat-label>Phone number</mat-label>\n    <example-tel-input formControlName=\"tel\" required></example-tel-input>\n    <mat-icon matSuffix>phone</mat-icon>\n    <mat-hint>Include area code</mat-hint>\n  </mat-form-field>\n  <p>Entered value: {{form.valueChanges | async | json}}</p>\n</div>\n"
+      imports: [FormField, MatFormField, MatHint, MatLabel, forwardRef(() => MyTelInput), MatIcon, JsonPipe, MatSuffix],
+      template: "<mat-form-field>\n  <mat-label>Phone number</mat-label>\n  <example-tel-input [formField]=\"form.tel\"></example-tel-input>\n  <mat-icon matSuffix>phone</mat-icon>\n  <mat-hint>Include area code</mat-hint>\n</mat-form-field>\n<p>Entered value: {{form.tel().value() | json}}</p>\n"
     }]
   }]
 });
@@ -225,167 +194,141 @@ class MyTel {
 }
 class MyTelInput {
   static nextId = 0;
-  areaInput = viewChild.required('area', ...(ngDevMode ? [{
-    debugName: "areaInput"
-  }] : []));
-  exchangeInput = viewChild.required('exchange', ...(ngDevMode ? [{
-    debugName: "exchangeInput"
-  }] : []));
-  subscriberInput = viewChild.required('subscriber', ...(ngDevMode ? [{
-    debugName: "subscriberInput"
-  }] : []));
-  ngControl = inject(NgControl, {
-    optional: true,
-    self: true
-  });
-  parts;
-  stateChanges = new Subject();
-  touched = signal(false, ...(ngDevMode ? [{
-    debugName: "touched"
-  }] : []));
-  controlType = 'example-tel-input';
-  id = `example-tel-input-${MyTelInput.nextId++}`;
-  _userAriaDescribedBy = input('', {
-    ...(ngDevMode ? {
-      debugName: "_userAriaDescribedBy"
-    } : {}),
-    alias: 'aria-describedby'
-  });
-  _placeholder = input('', {
-    ...(ngDevMode ? {
-      debugName: "_placeholder"
-    } : {}),
-    alias: 'placeholder'
-  });
-  _required = input(false, {
-    ...(ngDevMode ? {
-      debugName: "_required"
-    } : {}),
-    alias: 'required',
-    transform: booleanAttribute
-  });
-  _disabledByInput = input(false, {
-    ...(ngDevMode ? {
-      debugName: "_disabledByInput"
-    } : {}),
-    alias: 'disabled',
-    transform: booleanAttribute
-  });
-  _value = model(null, {
-    ...(ngDevMode ? {
-      debugName: "_value"
-    } : {}),
-    alias: 'value'
-  });
-  onChange = _ => {};
-  onTouched = () => {};
+  ngControl = null;
   _formField = inject(MAT_FORM_FIELD, {
     optional: true
   });
-  _focused = signal(false, ...(ngDevMode ? [{
-    debugName: "_focused"
-  }] : []));
-  _disabledByCva = signal(false, ...(ngDevMode ? [{
-    debugName: "_disabledByCva"
-  }] : []));
-  _disabled = computed(() => this._disabledByInput() || this._disabledByCva(), ...(ngDevMode ? [{
-    debugName: "_disabled"
-  }] : []));
-  _focusMonitor = inject(FocusMonitor);
+  _formFieldControl = inject(FORM_FIELD, {
+    optional: true,
+    self: true
+  });
   _elementRef = inject(ElementRef);
-  get focused() {
-    return this._focused();
+  _areaInput = viewChild.required('area', ...(ngDevMode ? [{
+    debugName: "_areaInput"
+  }] : []));
+  _exchangeInput = viewChild.required('exchange', ...(ngDevMode ? [{
+    debugName: "_exchangeInput"
+  }] : []));
+  _subscriberInput = viewChild.required('subscriber', ...(ngDevMode ? [{
+    debugName: "_subscriberInput"
+  }] : []));
+  _touched = signal(false, ...(ngDevMode ? [{
+    debugName: "_touched"
+  }] : []));
+  get ngField() {
+    return this._formFieldControl?.field() ?? null;
   }
-  get empty() {
+  partsModel = signal({
+    area: '',
+    exchange: '',
+    subscriber: ''
+  }, ...(ngDevMode ? [{
+    debugName: "partsModel"
+  }] : []));
+  parts = form(this.partsModel, schemaPath => {
+    required(schemaPath.area);
+    minLength(schemaPath.area, 3);
+    maxLength(schemaPath.area, 3);
+    required(schemaPath.exchange);
+    minLength(schemaPath.exchange, 3);
+    maxLength(schemaPath.exchange, 3);
+    required(schemaPath.subscriber);
+    minLength(schemaPath.subscriber, 4);
+    maxLength(schemaPath.subscriber, 4);
+  });
+  value = model(null, ...(ngDevMode ? [{
+    debugName: "value"
+  }] : []));
+  controlType = 'example-tel-input';
+  id = `example-tel-input-${MyTelInput.nextId++}`;
+  userAriaDescribedBy = input('', {
+    ...(ngDevMode ? {
+      debugName: "userAriaDescribedBy"
+    } : {}),
+    alias: 'aria-describedby'
+  });
+  placeholder = input('', ...(ngDevMode ? [{
+    debugName: "placeholder"
+  }] : []));
+  required = input(false, {
+    ...(ngDevMode ? {
+      debugName: "required"
+    } : {}),
+    transform: booleanAttribute
+  });
+  disabled = input(false, {
+    ...(ngDevMode ? {
+      debugName: "disabled"
+    } : {}),
+    transform: booleanAttribute
+  });
+  focused = signal(false, ...(ngDevMode ? [{
+    debugName: "focused"
+  }] : []));
+  empty = computed(() => {
     const {
-      value: {
+      area,
+      exchange,
+      subscriber
+    } = this.partsModel();
+    return !area && !exchange && !subscriber;
+  }, ...(ngDevMode ? [{
+    debugName: "empty"
+  }] : []));
+  shouldLabelFloat = computed(() => {
+    const focused = this.focused();
+    const empty = this.empty();
+    return focused || !empty;
+  }, ...(ngDevMode ? [{
+    debugName: "shouldLabelFloat"
+  }] : []));
+  errorState = computed(() => {
+    const partsValid = this.parts().valid();
+    const touched = this._touched();
+    return !partsValid && touched;
+  }, ...(ngDevMode ? [{
+    debugName: "errorState"
+  }] : []));
+  constructor() {
+    effect(() => {
+      const {
         area,
         exchange,
         subscriber
-      }
-    } = this.parts;
-    return !area && !exchange && !subscriber;
-  }
-  get shouldLabelFloat() {
-    return this.focused || !this.empty;
-  }
-  get userAriaDescribedBy() {
-    return this._userAriaDescribedBy();
-  }
-  get placeholder() {
-    return this._placeholder();
-  }
-  get required() {
-    return this._required();
-  }
-  get disabled() {
-    return this._disabled();
-  }
-  get value() {
-    return this._value();
-  }
-  get errorState() {
-    return this.parts.invalid && this.touched();
-  }
-  constructor() {
-    if (this.ngControl != null) {
-      this.ngControl.valueAccessor = this;
-    }
-    this.parts = inject(FormBuilder).group({
-      area: ['', [Validators.required, Validators.minLength(3), Validators.maxLength(3)]],
-      exchange: ['', [Validators.required, Validators.minLength(3), Validators.maxLength(3)]],
-      subscriber: ['', [Validators.required, Validators.minLength(4), Validators.maxLength(4)]]
+      } = this.partsModel();
+      this.value.set(this.parts().valid() ? new MyTel(area, exchange, subscriber) : null);
     });
     effect(() => {
-      this._placeholder();
-      this._required();
-      this._disabled();
-      this._focused();
-      untracked(() => this.stateChanges.next());
+      const value = this.value() || new MyTel('', '', '');
+      untracked(() => {
+        const current = this.partsModel();
+        if (current.area !== value.area || current.exchange !== value.exchange || current.subscriber !== value.subscriber) {
+          this.partsModel.set({
+            area: value.area,
+            exchange: value.exchange,
+            subscriber: value.subscriber
+          });
+        }
+      });
     });
-    effect(() => {
-      if (this._disabled()) {
-        untracked(() => this.parts.disable());
-      } else {
-        untracked(() => this.parts.enable());
-      }
-    });
-    effect(() => {
-      const value = this._value() || new MyTel('', '', '');
-      untracked(() => this.parts.setValue(value));
-    });
-    this.parts.statusChanges.pipe(takeUntilDestroyed()).subscribe(() => {
-      this.stateChanges.next();
-    });
-    this.parts.valueChanges.pipe(takeUntilDestroyed()).subscribe(value => {
-      const tel = this.parts.valid ? new MyTel(this.parts.value.area || '', this.parts.value.exchange || '', this.parts.value.subscriber || '') : null;
-      this._updateValue(tel);
-    });
-  }
-  ngOnDestroy() {
-    this.stateChanges.complete();
-    this._focusMonitor.stopMonitoring(this._elementRef);
   }
   onFocusIn() {
-    if (!this._focused()) {
-      this._focused.set(true);
-    }
+    this.focused.set(true);
   }
   onFocusOut(event) {
     if (!this._elementRef.nativeElement.contains(event.relatedTarget)) {
-      this.touched.set(true);
-      this._focused.set(false);
-      this.onTouched();
+      this._touched.set(true);
+      this.focused.set(false);
     }
   }
   autoFocusNext(control, nextElement) {
-    if (!control.errors && nextElement) {
-      this._focusMonitor.focusVia(nextElement, 'program');
+    if (control().valid() && nextElement) {
+      nextElement.focus();
     }
   }
   autoFocusPrev(control, prevElement) {
-    if (control.value.length < 1) {
-      this._focusMonitor.focusVia(prevElement, 'program');
+    if (control().value().length < 1) {
+      prevElement.focus();
     }
   }
   setDescribedByIds(ids) {
@@ -393,38 +336,16 @@ class MyTelInput {
     controlElement.setAttribute('aria-describedby', ids.join(' '));
   }
   onContainerClick() {
-    if (this.parts.controls.subscriber.valid) {
-      this._focusMonitor.focusVia(this.subscriberInput(), 'program');
-    } else if (this.parts.controls.exchange.valid) {
-      this._focusMonitor.focusVia(this.subscriberInput(), 'program');
-    } else if (this.parts.controls.area.valid) {
-      this._focusMonitor.focusVia(this.exchangeInput(), 'program');
+    if (this.parts.subscriber().valid() || this.parts.exchange().valid()) {
+      this._subscriberInput().nativeElement.focus();
+    } else if (this.parts.area().valid()) {
+      this._exchangeInput().nativeElement.focus();
     } else {
-      this._focusMonitor.focusVia(this.areaInput(), 'program');
+      this._areaInput().nativeElement.focus();
     }
   }
-  writeValue(tel) {
-    this._updateValue(tel);
-  }
-  registerOnChange(fn) {
-    this.onChange = fn;
-  }
-  registerOnTouched(fn) {
-    this.onTouched = fn;
-  }
-  setDisabledState(isDisabled) {
-    this._disabledByCva.set(isDisabled);
-  }
-  _handleInput(control, nextElement) {
+  _handleTyping(control, nextElement) {
     this.autoFocusNext(control, nextElement);
-    this.onChange(this.value);
-  }
-  _updateValue(tel) {
-    const current = this._value();
-    if (tel === current || tel?.area === current?.area && tel?.exchange === current?.exchange && tel?.subscriber === current?.subscriber) {
-      return;
-    }
-    this._value.set(tel);
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
@@ -441,48 +362,48 @@ class MyTelInput {
     isStandalone: true,
     selector: "example-tel-input",
     inputs: {
-      _userAriaDescribedBy: {
-        classPropertyName: "_userAriaDescribedBy",
+      value: {
+        classPropertyName: "value",
+        publicName: "value",
+        isSignal: true,
+        isRequired: false,
+        transformFunction: null
+      },
+      userAriaDescribedBy: {
+        classPropertyName: "userAriaDescribedBy",
         publicName: "aria-describedby",
         isSignal: true,
         isRequired: false,
         transformFunction: null
       },
-      _placeholder: {
-        classPropertyName: "_placeholder",
+      placeholder: {
+        classPropertyName: "placeholder",
         publicName: "placeholder",
         isSignal: true,
         isRequired: false,
         transformFunction: null
       },
-      _required: {
-        classPropertyName: "_required",
+      required: {
+        classPropertyName: "required",
         publicName: "required",
         isSignal: true,
         isRequired: false,
         transformFunction: null
       },
-      _disabledByInput: {
-        classPropertyName: "_disabledByInput",
+      disabled: {
+        classPropertyName: "disabled",
         publicName: "disabled",
-        isSignal: true,
-        isRequired: false,
-        transformFunction: null
-      },
-      _value: {
-        classPropertyName: "_value",
-        publicName: "value",
         isSignal: true,
         isRequired: false,
         transformFunction: null
       }
     },
     outputs: {
-      _value: "valueChange"
+      value: "valueChange"
     },
     host: {
       properties: {
-        "class.example-floating": "shouldLabelFloat",
+        "class.example-floating": "shouldLabelFloat()",
         "id": "id"
       }
     },
@@ -491,58 +412,33 @@ class MyTelInput {
       useExisting: MyTelInput
     }],
     viewQueries: [{
-      propertyName: "areaInput",
+      propertyName: "_areaInput",
       first: true,
       predicate: ["area"],
       descendants: true,
       isSignal: true
     }, {
-      propertyName: "exchangeInput",
+      propertyName: "_exchangeInput",
       first: true,
       predicate: ["exchange"],
       descendants: true,
       isSignal: true
     }, {
-      propertyName: "subscriberInput",
+      propertyName: "_subscriberInput",
       first: true,
       predicate: ["subscriber"],
       descendants: true,
       isSignal: true
     }],
     ngImport: i0,
-    template: "<div\n  role=\"group\"\n  class=\"example-tel-input-container\"\n  [formGroup]=\"parts\"\n  [attr.aria-labelledby]=\"_formField?.getLabelId()\"\n  (focusin)=\"onFocusIn()\"\n  (focusout)=\"onFocusOut($event)\"\n>\n  <input\n    class=\"example-tel-input-element\"\n    formControlName=\"area\"\n    size=\"3\"\n    maxLength=\"3\"\n    aria-label=\"Area code\"\n    (input)=\"_handleInput(parts.controls.area, exchange)\"\n    #area\n  />\n  <span class=\"example-tel-input-spacer\">&ndash;</span>\n  <input\n    class=\"example-tel-input-element\"\n    formControlName=\"exchange\"\n    maxLength=\"3\"\n    size=\"3\"\n    aria-label=\"Exchange code\"\n    (input)=\"_handleInput(parts.controls.exchange, subscriber)\"\n    (keyup.backspace)=\"autoFocusPrev(parts.controls.exchange, area)\"\n    #exchange\n  />\n  <span class=\"example-tel-input-spacer\">&ndash;</span>\n  <input\n    class=\"example-tel-input-element\"\n    formControlName=\"subscriber\"\n    maxLength=\"4\"\n    size=\"4\"\n    aria-label=\"Subscriber number\"\n    (input)=\"_handleInput(parts.controls.subscriber)\"\n    (keyup.backspace)=\"autoFocusPrev(parts.controls.subscriber, exchange)\"\n    #subscriber\n  />\n</div>\n",
+    template: "<div\n  role=\"group\"\n  class=\"example-tel-input-container\"\n  [attr.aria-labelledby]=\"_formField?.getLabelId()\"\n  (focusin)=\"onFocusIn()\"\n  (focusout)=\"onFocusOut($event)\"\n>\n  <input\n    class=\"example-tel-input-element\"\n    [formField]=\"parts.area\"\n    size=\"3\"\n    aria-label=\"Area code\"\n    (keyup)=\"_handleTyping(parts.area, exchange)\"\n    #area\n  />\n  <span class=\"example-tel-input-spacer\">&ndash;</span>\n  <input\n    class=\"example-tel-input-element\"\n    [formField]=\"parts.exchange\"\n    size=\"3\"\n    aria-label=\"Exchange code\"\n    (keyup)=\"_handleTyping(parts.exchange, subscriber)\"\n    (keyup.backspace)=\"autoFocusPrev(parts.exchange, area)\"\n    #exchange\n  />\n  <span class=\"example-tel-input-spacer\">&ndash;</span>\n  <input\n    class=\"example-tel-input-element\"\n    [formField]=\"parts.subscriber\"\n    size=\"4\"\n    aria-label=\"Subscriber number\"\n    (keyup)=\"_handleTyping(parts.subscriber)\"\n    (keyup.backspace)=\"autoFocusPrev(parts.subscriber, exchange)\"\n    #subscriber\n  />\n</div>\n",
     styles: [".example-tel-input-container {\n  display: flex;\n}\n\n.example-tel-input-element {\n  border: none;\n  background: none;\n  padding: 0;\n  outline: none;\n  font: inherit;\n  text-align: center;\n  color: currentcolor;\n}\n\n.example-tel-input-spacer {\n  opacity: 0;\n  transition: opacity 200ms;\n}\n\n:host.example-floating .example-tel-input-spacer {\n  opacity: 1;\n}\n"],
     dependencies: [{
-      kind: "ngmodule",
-      type: FormsModule
-    }, {
       kind: "directive",
-      type: i3$1.DefaultValueAccessor,
-      selector: "input:not([type=checkbox]):not([ngNoCva])[formControlName],textarea:not([ngNoCva])[formControlName],input:not([type=checkbox]):not([ngNoCva])[formControl],textarea:not([ngNoCva])[formControl],input:not([type=checkbox]):not([ngNoCva])[ngModel],textarea:not([ngNoCva])[ngModel],[ngDefaultControl]"
-    }, {
-      kind: "directive",
-      type: i3$1.NgControlStatus,
-      selector: "[formControlName],[ngModel],[formControl]"
-    }, {
-      kind: "directive",
-      type: i3$1.NgControlStatusGroup,
-      selector: "[formGroupName],[formArrayName],[ngModelGroup],[formGroup],[formArray],form:not([ngNoForm]),[ngForm]"
-    }, {
-      kind: "ngmodule",
-      type: ReactiveFormsModule
-    }, {
-      kind: "directive",
-      type: i3$1.FormGroupDirective,
-      selector: "[formGroup]",
-      inputs: ["formGroup"],
-      outputs: ["ngSubmit"],
-      exportAs: ["ngForm"]
-    }, {
-      kind: "directive",
-      type: i3$1.FormControlName,
-      selector: "[formControlName]",
-      inputs: ["formControlName", "disabled", "ngModel"],
-      outputs: ["ngModelChange"]
+      type: FormField,
+      selector: "[formField]",
+      inputs: ["formField"],
+      exportAs: ["formField"]
     }]
   });
 }
@@ -560,67 +456,35 @@ i0.ɵɵngDeclareClassMetadata({
         useExisting: MyTelInput
       }],
       host: {
-        '[class.example-floating]': 'shouldLabelFloat',
+        '[class.example-floating]': 'shouldLabelFloat()',
         '[id]': 'id'
       },
-      imports: [FormsModule, ReactiveFormsModule],
-      template: "<div\n  role=\"group\"\n  class=\"example-tel-input-container\"\n  [formGroup]=\"parts\"\n  [attr.aria-labelledby]=\"_formField?.getLabelId()\"\n  (focusin)=\"onFocusIn()\"\n  (focusout)=\"onFocusOut($event)\"\n>\n  <input\n    class=\"example-tel-input-element\"\n    formControlName=\"area\"\n    size=\"3\"\n    maxLength=\"3\"\n    aria-label=\"Area code\"\n    (input)=\"_handleInput(parts.controls.area, exchange)\"\n    #area\n  />\n  <span class=\"example-tel-input-spacer\">&ndash;</span>\n  <input\n    class=\"example-tel-input-element\"\n    formControlName=\"exchange\"\n    maxLength=\"3\"\n    size=\"3\"\n    aria-label=\"Exchange code\"\n    (input)=\"_handleInput(parts.controls.exchange, subscriber)\"\n    (keyup.backspace)=\"autoFocusPrev(parts.controls.exchange, area)\"\n    #exchange\n  />\n  <span class=\"example-tel-input-spacer\">&ndash;</span>\n  <input\n    class=\"example-tel-input-element\"\n    formControlName=\"subscriber\"\n    maxLength=\"4\"\n    size=\"4\"\n    aria-label=\"Subscriber number\"\n    (input)=\"_handleInput(parts.controls.subscriber)\"\n    (keyup.backspace)=\"autoFocusPrev(parts.controls.subscriber, exchange)\"\n    #subscriber\n  />\n</div>\n",
+      imports: [FormField],
+      template: "<div\n  role=\"group\"\n  class=\"example-tel-input-container\"\n  [attr.aria-labelledby]=\"_formField?.getLabelId()\"\n  (focusin)=\"onFocusIn()\"\n  (focusout)=\"onFocusOut($event)\"\n>\n  <input\n    class=\"example-tel-input-element\"\n    [formField]=\"parts.area\"\n    size=\"3\"\n    aria-label=\"Area code\"\n    (keyup)=\"_handleTyping(parts.area, exchange)\"\n    #area\n  />\n  <span class=\"example-tel-input-spacer\">&ndash;</span>\n  <input\n    class=\"example-tel-input-element\"\n    [formField]=\"parts.exchange\"\n    size=\"3\"\n    aria-label=\"Exchange code\"\n    (keyup)=\"_handleTyping(parts.exchange, subscriber)\"\n    (keyup.backspace)=\"autoFocusPrev(parts.exchange, area)\"\n    #exchange\n  />\n  <span class=\"example-tel-input-spacer\">&ndash;</span>\n  <input\n    class=\"example-tel-input-element\"\n    [formField]=\"parts.subscriber\"\n    size=\"4\"\n    aria-label=\"Subscriber number\"\n    (keyup)=\"_handleTyping(parts.subscriber)\"\n    (keyup.backspace)=\"autoFocusPrev(parts.subscriber, exchange)\"\n    #subscriber\n  />\n</div>\n",
       styles: [".example-tel-input-container {\n  display: flex;\n}\n\n.example-tel-input-element {\n  border: none;\n  background: none;\n  padding: 0;\n  outline: none;\n  font: inherit;\n  text-align: center;\n  color: currentcolor;\n}\n\n.example-tel-input-spacer {\n  opacity: 0;\n  transition: opacity 200ms;\n}\n\n:host.example-floating .example-tel-input-spacer {\n  opacity: 1;\n}\n"]
     }]
   }],
   ctorParameters: () => [],
   propDecorators: {
-    areaInput: [{
+    _areaInput: [{
       type: i0.ViewChild,
       args: ['area', {
         isSignal: true
       }]
     }],
-    exchangeInput: [{
+    _exchangeInput: [{
       type: i0.ViewChild,
       args: ['exchange', {
         isSignal: true
       }]
     }],
-    subscriberInput: [{
+    _subscriberInput: [{
       type: i0.ViewChild,
       args: ['subscriber', {
         isSignal: true
       }]
     }],
-    _userAriaDescribedBy: [{
-      type: i0.Input,
-      args: [{
-        isSignal: true,
-        alias: "aria-describedby",
-        required: false
-      }]
-    }],
-    _placeholder: [{
-      type: i0.Input,
-      args: [{
-        isSignal: true,
-        alias: "placeholder",
-        required: false
-      }]
-    }],
-    _required: [{
-      type: i0.Input,
-      args: [{
-        isSignal: true,
-        alias: "required",
-        required: false
-      }]
-    }],
-    _disabledByInput: [{
-      type: i0.Input,
-      args: [{
-        isSignal: true,
-        alias: "disabled",
-        required: false
-      }]
-    }],
-    _value: [{
+    value: [{
       type: i0.Input,
       args: [{
         isSignal: true,
@@ -630,6 +494,38 @@ i0.ɵɵngDeclareClassMetadata({
     }, {
       type: i0.Output,
       args: ["valueChange"]
+    }],
+    userAriaDescribedBy: [{
+      type: i0.Input,
+      args: [{
+        isSignal: true,
+        alias: "aria-describedby",
+        required: false
+      }]
+    }],
+    placeholder: [{
+      type: i0.Input,
+      args: [{
+        isSignal: true,
+        alias: "placeholder",
+        required: false
+      }]
+    }],
+    required: [{
+      type: i0.Input,
+      args: [{
+        isSignal: true,
+        alias: "required",
+        required: false
+      }]
+    }],
+    disabled: [{
+      type: i0.Input,
+      args: [{
+        isSignal: true,
+        alias: "disabled",
+        required: false
+      }]
     }]
   }
 });
