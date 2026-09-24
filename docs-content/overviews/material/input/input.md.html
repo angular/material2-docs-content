@@ -2,8 +2,8 @@
 <a href="https://material.angular.dev/components/form-field/overview"><code>&lt;mat-form-field&gt;</code></a>.</p>
 </div><div material-docs-example="input-overview"></div><div class="docs-markdown">
         <h3 id="lessinputgreater-and-lesstextareagreater-attributes" class="docs-header-link">
-          <span header-link="lessinputgreater-and-lesstextareagreater-attributes"></span>
           <code>&lt;input&gt;</code> and <code>&lt;textarea&gt;</code> attributes
+          <span header-link="lessinputgreater-and-lesstextareagreater-attributes"></span>
         </h3>
       <p>All of the attributes that can be used with <code>&lt;input&gt;</code> and <code>&lt;textarea&gt;</code> elements can be used
 on elements inside <code>&lt;mat-form-field&gt;</code> as well. This includes Angular directives such as <code>ngModel</code>
@@ -12,8 +12,8 @@ and <code>formControl</code>.</p>
 <code>matNativeControl</code>.</p>
 
         <h3 id="supported-lessinputgreater-types" class="docs-header-link">
-          <span header-link="supported-lessinputgreater-types"></span>
           Supported <code>&lt;input&gt;</code> types
+          <span header-link="supported-lessinputgreater-types"></span>
         </h3>
       <p>The following <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input">input types</a> can
 be used with <code>matNativeControl</code>:</p>
@@ -34,14 +34,14 @@ be used with <code>matNativeControl</code>:</p>
 </ul>
 
         <h3 id="use-with-angular-forms" class="docs-header-link">
-          <span header-link="use-with-angular-forms"></span>
           Use with Angular Forms
+          <span header-link="use-with-angular-forms"></span>
         </h3>
       <p><code>matInput</code> is compatible with <code>@angular/forms</code> and supports <code>FormField</code>, <code>FormsModule</code>, and <code>ReactiveFormsModule</code>.</p>
 
         <h3 id="form-field-features" class="docs-header-link">
-          <span header-link="form-field-features"></span>
           Form field features
+          <span header-link="form-field-features"></span>
         </h3>
       <p>There are a number of <code>&lt;mat-form-field&gt;</code> features that can be used with any <code>&lt;input matNativeControl&gt;</code> or
 <code>&lt;textarea matNativeControl&gt;</code>. These include error messages, hint text, prefix &amp; suffix, and theming. For
@@ -49,8 +49,8 @@ additional information about these features, see the
 <a href="https://material.angular.dev/components/form-field/overview">form field documentation</a>.</p>
 
         <h3 id="placeholder" class="docs-header-link">
-          <span header-link="placeholder"></span>
           Placeholder
+          <span header-link="placeholder"></span>
         </h3>
       <p>The placeholder is text shown when the <code>&lt;mat-form-field&gt;</code> label is floating but the input is empty.
 It is used to give the user an additional hint about what they should type in the input. The
@@ -59,8 +59,8 @@ element. In some cases that <code>&lt;mat-form-field&gt;</code> may use the plac
 <a href="https://material.angular.dev/components/form-field/overview#floating-label">form field label documentation</a>).</p>
 
         <h3 id="changing-when-error-messages-are-shown" class="docs-header-link">
-          <span header-link="changing-when-error-messages-are-shown"></span>
           Changing when error messages are shown
+          <span header-link="changing-when-error-messages-are-shown"></span>
         </h3>
       <p>The <code>&lt;mat-form-field&gt;</code> allows you to
 <a href="https://material.angular.dev/components/form-field/overview#error-messages">associate error messages</a>
@@ -88,38 +88,38 @@ globally cause input errors to show when the input is dirty and invalid.</p>
   ]
 });</code></pre>
         <h3 id="auto-resizing-lesstextareagreater-elements" class="docs-header-link">
-          <span header-link="auto-resizing-lesstextareagreater-elements"></span>
           Auto-resizing <code>&lt;textarea&gt;</code> elements
+          <span header-link="auto-resizing-lesstextareagreater-elements"></span>
         </h3>
       <p><code>&lt;textarea&gt;</code> elements can be made to automatically resize by using the
 <a href="https://material.angular.dev/cdk/text-field/overview#automatically-resizing-a-textarea"><code>cdkTextareaAutosize</code> directive</a>
 available in the CDK.</p>
 
         <h3 id="responding-to-changes-in-the-autofill-state-of-an-lessinputgreater" class="docs-header-link">
-          <span header-link="responding-to-changes-in-the-autofill-state-of-an-lessinputgreater"></span>
           Responding to changes in the autofill state of an <code>&lt;input&gt;</code>
+          <span header-link="responding-to-changes-in-the-autofill-state-of-an-lessinputgreater"></span>
         </h3>
       <p>The CDK provides
 <a href="https://material.angular.dev/cdk/text-field/overview#monitoring-the-autofill-state-of-an-input">utilities</a>
 for detecting when an input becomes autofilled and changing the appearance of the autofilled state.</p>
 
         <h3 id="accessibility" class="docs-header-link">
-          <span header-link="accessibility"></span>
           Accessibility
+          <span header-link="accessibility"></span>
         </h3>
       <p>The <code>matNativeControl</code> directive works with native <code>&lt;input&gt;</code> to provide an accessible experience.</p>
 
         <h4 id="aria-attributes" class="docs-header-link">
-          <span header-link="aria-attributes"></span>
           Aria attributes
+          <span header-link="aria-attributes"></span>
         </h4>
       <p>If the containing <code>&lt;mat-form-field&gt;</code> has a label it will automatically be used as the <code>aria-label</code>
 for the <code>&lt;input&gt;</code>. However, if there&#39;s no label specified in the form field, <code>aria-label</code>,
 <code>aria-labelledby</code> or <code>&lt;label for=...&gt;</code> should be added.</p>
 
         <h4 id="errors-and-hints" class="docs-header-link">
-          <span header-link="errors-and-hints"></span>
           Errors and hints
+          <span header-link="errors-and-hints"></span>
         </h4>
       <p>Any <code>mat-error</code> and <code>mat-hint</code> are automatically added to the input&#39;s <code>aria-describedby</code> list, and
 <code>aria-invalid</code> is automatically updated based on the input&#39;s validity state.</p>
@@ -127,13 +127,13 @@ for the <code>&lt;input&gt;</code>. However, if there&#39;s no label specified i
 icon or text such as &quot;Error:&quot; to indicate the message is an error message.</p>
 
         <h3 id="troubleshooting" class="docs-header-link">
-          <span header-link="troubleshooting"></span>
           Troubleshooting
+          <span header-link="troubleshooting"></span>
         </h3>
       
         <h4 id="error-input-type-isnt-supported-by-matinput" class="docs-header-link">
-          <span header-link="error-input-type-isnt-supported-by-matinput"></span>
           Error: Input type &quot;...&quot; isn&#39;t supported by matInput
+          <span header-link="error-input-type-isnt-supported-by-matinput"></span>
         </h4>
       <p>This error is thrown when you attempt to set an input&#39;s <code>type</code> property to a value that isn&#39;t
 supported by the <code>matInput</code> directive. If you need to use an unsupported input type with

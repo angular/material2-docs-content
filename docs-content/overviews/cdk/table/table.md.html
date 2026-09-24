@@ -9,13 +9,13 @@ interaction patterns associated with the table.</p>
 top of the CDK data-table.</p>
 </div><div material-docs-example="cdk-table-basic"></div><div class="docs-markdown">
         <h3 id="using-the-cdk-data-table" class="docs-header-link">
-          <span header-link="using-the-cdk-data-table"></span>
           Using the CDK data-table
+          <span header-link="using-the-cdk-data-table"></span>
         </h3>
       
         <h4 id="writing-your-table-template" class="docs-header-link">
-          <span header-link="writing-your-table-template"></span>
           Writing your table template
+          <span header-link="writing-your-table-template"></span>
         </h4>
       <p>The first step to writing the data-table template is to define the columns.
 A column definition is specified via an <code>&lt;ng-container&gt;</code> with the <code>cdkColumnDef</code> directive, giving
@@ -45,8 +45,8 @@ will be ignored, as the rendered content of the row comes from the cell template
 above.</p>
 
         <h5 id="example-table-with-three-columns" class="docs-header-link">
-          <span header-link="example-table-with-three-columns"></span>
           Example: table with three columns
+          <span header-link="example-table-with-three-columns"></span>
         </h5>
       <pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">table</span> <span class="hljs-attr">cdk-table</span> [<span class="hljs-attr">dataSource</span>]=<span class="hljs-string">&quot;dataSource&quot;</span>&gt;</span>
   <span class="hljs-comment">&lt;!-- User name Definition --&gt;</span>
@@ -78,8 +78,8 @@ and <code>username</code> and in that order, then the row and header definitions
 <pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">cdk-row</span> *<span class="hljs-attr">cdkRowDef</span>=<span class="hljs-string">&quot;let row; columns: [&#x27;age&#x27;, &#x27;username&#x27;]&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span></code></pre><p>Event and property bindings can be added directly to the row element.</p>
 
         <h5 id="example-table-with-event-and-class-binding" class="docs-header-link">
-          <span header-link="example-table-with-event-and-class-binding"></span>
           Example: table with event and class binding
+          <span header-link="example-table-with-event-and-class-binding"></span>
         </h5>
       <pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">cdk-header-row</span> *<span class="hljs-attr">cdkHeaderRowDef</span>=<span class="hljs-string">&quot;[&#x27;age&#x27;, &#x27;username&#x27;]&quot;</span>
     (<span class="hljs-attr">click</span>)=<span class="hljs-string">&quot;handleHeaderRowClick(row)&quot;</span>&gt;</span>
@@ -90,8 +90,8 @@ and <code>username</code> and in that order, then the row and header definitions
     (<span class="hljs-attr">click</span>)=<span class="hljs-string">&quot;handleRowClick(row)&quot;</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span></code></pre>
         <h5 id="styling-columns" class="docs-header-link">
-          <span header-link="styling-columns"></span>
           Styling columns
+          <span header-link="styling-columns"></span>
         </h5>
       <p>Each header and row cell will be provided a CSS class that includes its column. For example,
 cells that are displayed in the column <code>name</code> will be given the class <code>cdk-column-name</code>. This allows
@@ -102,8 +102,8 @@ the <code>-</code> character. For example, cells container in a column named <co
 the class <code>cdk-column--nameColumn-</code>.</p>
 
         <h4 id="connecting-the-table-to-a-data-source" class="docs-header-link">
-          <span header-link="connecting-the-table-to-a-data-source"></span>
           Connecting the table to a data source
+          <span header-link="connecting-the-table-to-a-data-source"></span>
         </h4>
       <p>Data is provided to the table through a <code>DataSource</code>. When the table receives a data source,
 it calls the DataSource&#39;s <code>connect()</code> method which returns an observable that emits an array of data.
@@ -114,8 +114,8 @@ time-based intervals, etc. Most commonly, updates will be triggered by user inte
 sorting and pagination.</p>
 
         <h5 id="fixedlayout" class="docs-header-link">
-          <span header-link="fixedlayout"></span>
           <code>fixedLayout</code>
+          <span header-link="fixedlayout"></span>
         </h5>
       <p>The CDK table measures the dimensions of sticky elements before applying the styles that make them
 &quot;stick&quot;. Because native tables derive column widths from the content within each cell, these
@@ -124,16 +124,16 @@ dimensions are re-checked when the underlying data changes.</p>
 them when calculating sticky styles. This can reduce rendering latency for large native tables.</p>
 <pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">table</span> <span class="hljs-attr">cdk-table</span> [<span class="hljs-attr">dataSource</span>]=<span class="hljs-string">&quot;dataSource&quot;</span> <span class="hljs-attr">fixedLayout</span>&gt;</span></code></pre>
         <h5 id="trackby" class="docs-header-link">
-          <span header-link="trackby"></span>
           <code>trackBy</code>
+          <span header-link="trackby"></span>
         </h5>
       <p>To improve performance, a <code>trackBy</code> function can be provided to the table similar to Angular’s
 <a href="https://angular.dev/api/common/NgForOf?tab=usage-notes"><code>ngFor</code> <code>trackBy</code></a>. This informs the
 table how to uniquely identify rows to track how the data changes with each update.</p>
 <pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">table</span> <span class="hljs-attr">cdk-table</span> [<span class="hljs-attr">dataSource</span>]=<span class="hljs-string">&quot;dataSource&quot;</span> [<span class="hljs-attr">trackBy</span>]=<span class="hljs-string">&quot;myTrackById&quot;</span>&gt;</span></code></pre>
         <h5 id="recyclerows" class="docs-header-link">
-          <span header-link="recyclerows"></span>
           <code>recycleRows</code>
+          <span header-link="recyclerows"></span>
         </h5>
       <p>By default, <code>CdkTable</code> creates and destroys an internal Angular view for each row. This allows rows
 to participate in animations and to toggle between different row templates with <code>cdkRowDefWhen</code>. If
@@ -141,8 +141,8 @@ you don&#39;t need these features, you can instruct the table to cache and recyc
 <code>recycleRows</code>.</p>
 <pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">table</span> <span class="hljs-attr">cdk-table</span> [<span class="hljs-attr">dataSource</span>]=<span class="hljs-string">&quot;dataSource&quot;</span> <span class="hljs-attr">recycleRows</span>&gt;</span></code></pre>
         <h3 id="virtual-scrolling" class="docs-header-link">
-          <span header-link="virtual-scrolling"></span>
           Virtual scrolling
+          <span header-link="virtual-scrolling"></span>
         </h3>
       <p>If you&#39;re showing a large amount of data in your table, you can use virtual scrolling to ensure a
 smooth experience for the user. To enable virtual scrolling, you have to wrap the CDK table in a
@@ -154,8 +154,8 @@ smooth experience for the user. To enable virtual scrolling, you have to wrap th
 </ul>
 </div><div material-docs-example="cdk-table-virtual-scroll"></div><div class="docs-markdown">
         <h3 id="alternate-html-to-using-native-table" class="docs-header-link">
-          <span header-link="alternate-html-to-using-native-table"></span>
           Alternate HTML to using native table
+          <span header-link="alternate-html-to-using-native-table"></span>
         </h3>
       <p>The CDK table does not require that you use a native HTML table. If you want to have full control
 over the style of the table, it may be easier to follow an alternative template approach that does

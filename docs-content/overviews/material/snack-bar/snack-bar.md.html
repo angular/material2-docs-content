@@ -1,8 +1,8 @@
 <div class="docs-markdown"><p><code>MatSnackBar</code> is a service for displaying snack-bar notifications.</p>
 </div><div material-docs-example="snack-bar-overview"></div><div class="docs-markdown">
         <h3 id="opening-a-snackbar" class="docs-header-link">
-          <span header-link="opening-a-snackbar"></span>
           Opening a snackbar
+          <span header-link="opening-a-snackbar"></span>
         </h3>
       <p>A snackbar can contain either a string message or a given component.</p>
 <pre><code class="language-ts"><span class="hljs-comment">// Simple message.</span>
@@ -28,8 +28,8 @@ snackBarRef.<span class="hljs-title function_">onAction</span>().<span class="hl
 
 snackBarRef.<span class="hljs-title function_">dismiss</span>();</code></pre>
         <h3 id="dismissal" class="docs-header-link">
-          <span header-link="dismissal"></span>
           Dismissal
+          <span header-link="dismissal"></span>
         </h3>
       <p>A snackbar can be dismissed manually by calling the <code>dismiss</code> method on the <code>MatSnackBarRef</code>
 returned from the call to <code>open</code>.</p>
@@ -40,8 +40,8 @@ message is still showing, the older message will be automatically dismissed.</p>
   <span class="hljs-attr">duration</span>: <span class="hljs-number">3000</span>
 });</code></pre>
         <h3 id="sharing-data-with-a-custom-snackbar" class="docs-header-link">
-          <span header-link="sharing-data-with-a-custom-snackbar"></span>
           Sharing data with a custom snackbar
+          <span header-link="sharing-data-with-a-custom-snackbar"></span>
         </h3>
       <p>You can share data with the custom snackbar, that you opened via the <code>openFromComponent</code> method,
 by passing it through the <code>data</code> property.</p>
@@ -59,8 +59,8 @@ by passing it through the <code>data</code> property.</p>
   data = inject&lt;<span class="hljs-built_in">string</span>&gt;(<span class="hljs-variable constant_">MAT_SNACK_BAR_DATA</span>);
 }</code></pre>
         <h3 id="annotating-custom-snackbar-content" class="docs-header-link">
-          <span header-link="annotating-custom-snackbar-content"></span>
           Annotating custom snackbar content
+          <span header-link="annotating-custom-snackbar-content"></span>
         </h3>
       <p>When opening a custom snackbar via the <code>snackBar.openFromComponent</code> method, you can use the
 following directives to annotate the content and ensure that it is styled consistently compared to
@@ -73,8 +73,8 @@ snackbars  opened via <code>snackBar.open</code>.</p>
 <p>If no annotations are used, all the content will be treated as text content.</p>
 </div><div material-docs-example="snack-bar-annotated-component"></div><div class="docs-markdown">
         <h3 id="setting-the-global-configuration-defaults" class="docs-header-link">
-          <span header-link="setting-the-global-configuration-defaults"></span>
           Setting the global configuration defaults
+          <span header-link="setting-the-global-configuration-defaults"></span>
         </h3>
       <p>If you want to override the default snack bar options, you can do so using the
 <code>MAT_SNACK_BAR_DEFAULT_OPTIONS</code> injection token.</p>
@@ -84,8 +84,8 @@ snackbars  opened via <code>snackBar.open</code>.</p>
   ]
 });</code></pre>
         <h3 id="accessibility" class="docs-header-link">
-          <span header-link="accessibility"></span>
           Accessibility
+          <span header-link="accessibility"></span>
         </h3>
       <p><code>MatSnackBar</code> announces messages via an <code>aria-live</code> region. While announcements use the <code>polite</code>
 setting by default, you can customize this by setting the <code>politeness</code> property of

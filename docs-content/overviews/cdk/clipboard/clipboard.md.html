@@ -1,15 +1,15 @@
 <div class="docs-markdown"><p>The clipboard package provides helpers for working with the system clipboard.</p>
 
         <h3 id="click-an-element-to-copy" class="docs-header-link">
-          <span header-link="click-an-element-to-copy"></span>
           Click an element to copy
+          <span header-link="click-an-element-to-copy"></span>
         </h3>
       <p>The <code>cdkCopyToClipboard</code> directive can be used to easily add copy-on-click functionality to an
 existing element. The directive selector doubles as an <code>@Input()</code> for the text to be copied.</p>
 <pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;avatar.jpg&quot;</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">&quot;Hero avatar&quot;</span> [<span class="hljs-attr">cdkCopyToClipboard</span>]=<span class="hljs-string">&quot;getShortBio()&quot;</span>&gt;</span></code></pre></div><div material-docs-example="cdk-clipboard-overview"></div><div class="docs-markdown">
         <h3 id="programmatically-copy-a-string" class="docs-header-link">
-          <span header-link="programmatically-copy-a-string"></span>
           Programmatically copy a string
+          <span header-link="programmatically-copy-a-string"></span>
         </h3>
       <p>The <code>Clipboard</code> service copies text to the user&#39;s clipboard. It has two methods: <code>copy</code> and
 <code>beginCopy</code>. For cases where you are copying a relatively small amount of text, you can call <code>copy</code>

@@ -2,8 +2,8 @@
 enhanced with Material Design styling and animations.</p>
 </div><div material-docs-example="checkbox-overview"></div><div class="docs-markdown">
         <h3 id="checkbox-label" class="docs-header-link">
-          <span header-link="checkbox-label"></span>
           Checkbox label
+          <span header-link="checkbox-label"></span>
         </h3>
       <p>The checkbox label is provided as the content to the <code>&lt;mat-checkbox&gt;</code> element. The label can be
 positioned before or after the checkbox by setting the <code>labelPosition</code> property to <code>&#39;before&#39;</code> or
@@ -14,14 +14,14 @@ positioned before or after the checkbox by setting the <code>labelPosition</code
 specify an appropriate label.</p>
 
         <h3 id="use-with-angular-forms" class="docs-header-link">
-          <span header-link="use-with-angular-forms"></span>
           Use with Angular Forms
+          <span header-link="use-with-angular-forms"></span>
         </h3>
       <p><code>&lt;mat-checkbox&gt;</code> is compatible with <code>@angular/forms</code> and supports <code>FormField</code>, <code>FormsModule</code>, and <code>ReactiveFormsModule</code>.</p>
 
         <h3 id="indeterminate-state" class="docs-header-link">
-          <span header-link="indeterminate-state"></span>
           Indeterminate state
+          <span header-link="indeterminate-state"></span>
         </h3>
       <p><code>&lt;mat-checkbox&gt;</code> supports an <code>indeterminate</code> state, similar to the native <code>&lt;input type=&quot;checkbox&quot;&gt;</code>.
 While the <code>indeterminate</code> property of the checkbox is true, it will render as indeterminate
@@ -29,8 +29,8 @@ regardless of the <code>checked</code> value. Any interaction with the checkbox 
 remove the indeterminate state.</p>
 
         <h3 id="click-action-config" class="docs-header-link">
-          <span header-link="click-action-config"></span>
           Click action config
+          <span header-link="click-action-config"></span>
         </h3>
       <p>When user clicks on the <code>mat-checkbox</code>, the default behavior is toggle <code>checked</code> value and set
 <code>indeterminate</code> to <code>false</code>. This behavior can be customized by
@@ -41,31 +41,31 @@ of <code>MAT_CHECKBOX_DEFAULT_OPTIONS</code> to the checkbox.</p>
 ]</code></pre><p>The possible values are:</p>
 
         <h4 id="noop" class="docs-header-link">
-          <span header-link="noop"></span>
           <code>noop</code>
+          <span header-link="noop"></span>
         </h4>
       <p>Do not change the <code>checked</code> value or <code>indeterminate</code> value. Developers have the power to
 implement customized click actions.</p>
 
         <h4 id="check" class="docs-header-link">
-          <span header-link="check"></span>
           <code>check</code>
+          <span header-link="check"></span>
         </h4>
       <p>Toggle <code>checked</code> value of the checkbox, ignore <code>indeterminate</code> value. If the
 checkbox is in <code>indeterminate</code> state, the checkbox will display as an <code>indeterminate</code> checkbox
 regardless the <code>checked</code> value.</p>
 
         <h4 id="check-indeterminate" class="docs-header-link">
-          <span header-link="check-indeterminate"></span>
           <code>check-indeterminate</code>
+          <span header-link="check-indeterminate"></span>
         </h4>
       <p>Default behavior of <code>mat-checkbox</code>. Always set <code>indeterminate</code> to <code>false</code>
 when user click on the <code>mat-checkbox</code>.
 This matches the behavior of native <code>&lt;input type=&quot;checkbox&quot;&gt;</code>.</p>
 
         <h3 id="accessibility" class="docs-header-link">
-          <span header-link="accessibility"></span>
           Accessibility
+          <span header-link="accessibility"></span>
         </h3>
       <p><code>MatCheckbox</code> uses an internal <code>&lt;input type=&quot;checkbox&quot;&gt;</code> to provide an accessible experience.
 This internal checkbox receives focus and is automatically labelled by the text content of the

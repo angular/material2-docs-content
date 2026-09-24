@@ -1,8 +1,8 @@
 <div class="docs-markdown"><p>The <code>overlay</code> package provides a way to open floating panels on the screen.</p>
 
         <h3 id="initial-setup" class="docs-header-link">
-          <span header-link="initial-setup"></span>
           Initial setup
+          <span header-link="initial-setup"></span>
         </h3>
       <p>The CDK overlays depend on a small set of structural styles to work correctly. If you&#39;re using
 Angular Material, these styles have been included together with the theme, otherwise if you&#39;re
@@ -10,8 +10,8 @@ using the CDK on its own, you&#39;ll have to include the styles yourself. You ca
 the prebuilt styles in your global stylesheet:</p>
 <pre><code class="language-scss"><span class="hljs-keyword">@import</span> <span class="hljs-string">&#x27;@angular/cdk/overlay-prebuilt.css&#x27;</span>;</code></pre>
         <h3 id="creating-overlays" class="docs-header-link">
-          <span header-link="creating-overlays"></span>
           Creating overlays
+          <span header-link="creating-overlays"></span>
         </h3>
       <p>Calling <code>overlay.create()</code> will return an <code>OverlayRef</code> instance. This instance is a handle for
 managing that specific overlay.</p>
@@ -21,8 +21,8 @@ See the documentation on portals for further information.</p>
 <span class="hljs-keyword">const</span> userProfilePortal = <span class="hljs-keyword">new</span> <span class="hljs-title class_">ComponentPortal</span>(<span class="hljs-title class_">UserProfile</span>);
 overlayRef.<span class="hljs-title function_">attach</span>(userProfilePortal);</code></pre>
         <h3 id="configuring-an-overlay" class="docs-header-link">
-          <span header-link="configuring-an-overlay"></span>
           Configuring an overlay
+          <span header-link="configuring-an-overlay"></span>
         </h3>
       <p>When creating an overlay, an optional configuration object can be provided.</p>
 <pre><code class="language-ts"><span class="hljs-keyword">const</span> overlayRef = overlay.<span class="hljs-title function_">create</span>({
@@ -31,8 +31,8 @@ overlayRef.<span class="hljs-title function_">attach</span>(userProfilePortal);<
 });</code></pre><p>The full set of configuration options can be found in the API documentation.</p>
 
         <h4 id="position-strategies" class="docs-header-link">
-          <span header-link="position-strategies"></span>
           Position strategies
+          <span header-link="position-strategies"></span>
         </h4>
       <p>The <code>positionStrategy</code> configuration option determines how the overlay will be positioned on-screen.
 There are two position strategies available as part of the library: <code>GlobalPositionStrategy</code> and
@@ -60,8 +60,8 @@ should be updated. A custom position strategy can additionally expose any other 
 related to the positioning of the overlay element.</p>
 
         <h4 id="scroll-strategies" class="docs-header-link">
-          <span header-link="scroll-strategies"></span>
           Scroll strategies
+          <span header-link="scroll-strategies"></span>
         </h4>
       <p>The <code>scrollStrategy</code> configuration option determines how the overlay will react to scrolling outside
 the overlay element. There are four scroll strategies available as part of the library.</p>
@@ -80,8 +80,8 @@ of when scrolling takes place. See the documentation for <code>ScrollDispatcher<
 on how scroll events are detected and dispatched.</p>
 
         <h3 id="the-overlay-container" class="docs-header-link">
-          <span header-link="the-overlay-container"></span>
           The overlay container
+          <span header-link="the-overlay-container"></span>
         </h3>
       <p>The <code>OverlayContainer</code> provides a handle to the container element in which all individual overlay
 elements are rendered. By default, the overlay container is appended directly to the document body.</p>
@@ -104,8 +104,8 @@ overlay. If you need to globally disable the popover behavior, you can provide t
   ]
 });</code></pre>
         <h4 id="popover-dom-location" class="docs-header-link">
-          <span header-link="popover-dom-location"></span>
           Popover DOM location
+          <span header-link="popover-dom-location"></span>
         </h4>
       <p>When an overlay is rendered as a native popover, it doesn&#39;t strictly need to be placed inside the
 <code>OverlayContainer</code> to escape <code>overflow: hidden</code> containers. The <code>FlexibleConnectedPositionStrategy</code>
@@ -129,8 +129,8 @@ while the browser continues to render the popover on top of everything.</p>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;menu-panel&quot;</span>&gt;</span>Menu content<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">ng-template</span>&gt;</span></code></pre>
         <h4 id="full-screen-overlays" class="docs-header-link">
-          <span header-link="full-screen-overlays"></span>
           Full-screen overlays
+          <span header-link="full-screen-overlays"></span>
         </h4>
       <p>The <code>FullscreenOverlayContainer</code> is an alternative to <code>OverlayContainer</code> that supports correct
 displaying of overlay elements in

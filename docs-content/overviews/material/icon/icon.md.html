@@ -2,16 +2,16 @@
 icon fonts and SVG icons, but not bitmap-based formats (png, jpg, etc.).</p>
 </div><div material-docs-example="icon-overview"></div><div class="docs-markdown">
         <h3 id="registering-icons" class="docs-header-link">
-          <span header-link="registering-icons"></span>
           Registering icons
+          <span header-link="registering-icons"></span>
         </h3>
       <p><code>MatIconRegistry</code> is an injectable service that allows you to associate icon names with SVG URLs,
 HTML strings and to define aliases for CSS font classes. Its methods are discussed below and listed
 in the API summary.</p>
 
         <h3 id="font-icons-with-ligatures" class="docs-header-link">
-          <span header-link="font-icons-with-ligatures"></span>
           Font icons with ligatures
+          <span header-link="font-icons-with-ligatures"></span>
         </h3>
       <p>Some fonts are designed to show icons by using
 <a href="https://en.wikipedia.org/wiki/Typographic_ligature">ligatures</a>, for example by rendering the text
@@ -27,8 +27,8 @@ previously registered with <code>MatIconRegistry.registerFontClassAlias</code>. 
 default for all your application&#39;s icons using <code>MatIconRegistry.setDefaultFontSetClass</code>.</p>
 
         <h3 id="font-icons-with-css" class="docs-header-link">
-          <span header-link="font-icons-with-css"></span>
           Font icons with CSS
+          <span header-link="font-icons-with-css"></span>
         </h3>
       <p>Fonts can also display icons by defining a CSS class for each icon glyph, which typically uses a
 <code>:before</code> selector to cause the icon to appear.
@@ -40,8 +40,8 @@ input to the class for the specific icon to show.</p>
 explicitly set by calling <code>MatIconRegistry.setDefaultFontSetClass</code>.</p>
 
         <h3 id="svg-icons" class="docs-header-link">
-          <span header-link="svg-icons"></span>
           SVG icons
+          <span header-link="svg-icons"></span>
         </h3>
       <p><code>&lt;mat-icon&gt;</code> displays SVG icons by directly inlining the SVG content into the DOM
 as a child of itself. This approach offers an advantage over an <code>&lt;img&gt;</code> tag or a CSS
@@ -61,8 +61,8 @@ means that icon URLs must have the same origin as the containing page or that th
 server must be configured to allow cross-origin requests.</p>
 
         <h4 id="named-icons" class="docs-header-link">
-          <span header-link="named-icons"></span>
           Named icons
+          <span header-link="named-icons"></span>
         </h4>
       <p>To associate a name with an icon URL, use the <code>addSvgIcon</code>, <code>addSvgIconInNamespace</code>,
 <code>addSvgIconLiteral</code> or <code>addSvgIconLiteralInNamespace</code> methods of <code>MatIconRegistry</code>. After
@@ -71,8 +71,8 @@ default namespace, use the name directly. For a non-default namespace, use the f
 <code>[namespace]:[name]</code>.</p>
 
         <h4 id="icon-sets" class="docs-header-link">
-          <span header-link="icon-sets"></span>
           Icon sets
+          <span header-link="icon-sets"></span>
         </h4>
       <p>Icon sets allow grouping multiple icons into a single SVG file. This is done by creating a single
 root <code>&lt;svg&gt;</code> tag that contains multiple nested <code>&lt;svg&gt;</code> tags in its <code>&lt;defs&gt;</code> section. Each of these
@@ -86,8 +86,8 @@ as for individually registered icons.</p>
 more than one icon set, the icon from the most recently registered set will be used.</p>
 
         <h3 id="accessibility" class="docs-header-link">
-          <span header-link="accessibility"></span>
           Accessibility
+          <span header-link="accessibility"></span>
         </h3>
       <p>Similar to an <code>&lt;img&gt;</code> element, an icon alone does not convey any useful information for a
 screen-reader user. The user of <code>&lt;mat-icon&gt;</code> must provide additional information pertaining to how
@@ -103,15 +103,15 @@ This includes using the icon in place of text inside of a larger message.</li>
 </ol>
 
         <h4 id="decorative-icons" class="docs-header-link">
-          <span header-link="decorative-icons"></span>
           Decorative icons
+          <span header-link="decorative-icons"></span>
         </h4>
       <p>When the icon is purely cosmetic and conveys no real semantic meaning, the <code>&lt;mat-icon&gt;</code> element
 is marked with <code>aria-hidden=&quot;true&quot;</code>.</p>
 
         <h4 id="interactive-icons" class="docs-header-link">
-          <span header-link="interactive-icons"></span>
           Interactive icons
+          <span header-link="interactive-icons"></span>
         </h4>
       <p>Icons alone are not interactive elements for screen-reader users; when the user would interact with
 some icon on the page, a more appropriate  element should &quot;own&quot; the interaction:</p>
@@ -122,8 +122,8 @@ direct text content, <code>aria-label</code>, or <code>aria-labelledby</code>.</
 </ul>
 
         <h4 id="indicator-icons" class="docs-header-link">
-          <span header-link="indicator-icons"></span>
           Indicator icons
+          <span header-link="indicator-icons"></span>
         </h4>
       <p>When the presence of an icon communicates some information to the user whether as an indicator or
 by being inlined into a block of text, that information must also be made available to
@@ -136,8 +136,8 @@ on-screen but still available to screen-reader users.</li>
 </ol>
 
         <h3 id="bidirectionality" class="docs-header-link">
-          <span header-link="bidirectionality"></span>
           Bidirectionality
+          <span header-link="bidirectionality"></span>
         </h3>
       <p>By default icons in an RTL layout will look exactly the same as in LTR, however certain icons have
 to be <a href="https://material.io/design/usability/bidirectionality.html">mirrored for RTL users</a>. If

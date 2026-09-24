@@ -5,8 +5,8 @@ For a Material Design styled tree, see <code>&lt;mat-tree&gt;</code> which build
 these two types of trees.</p>
 
         <h4 id="flat-tree" class="docs-header-link">
-          <span header-link="flat-tree"></span>
           Flat tree
+          <span header-link="flat-tree"></span>
         </h4>
       <p>In a flat tree, the hierarchy is flattened; nodes are not rendered inside of each other, but instead
 are rendered as siblings in sequence.</p>
@@ -19,8 +19,8 @@ are rendered as siblings in sequence.</p>
 variations, such as infinite or virtual scrolling.</p>
 
         <h4 id="nested-tree" class="docs-header-link">
-          <span header-link="nested-tree"></span>
           Nested tree
+          <span header-link="nested-tree"></span>
         </h4>
       <p>In a nested tree, children nodes are placed inside their parent node in DOM. The parent node
 contains a node outlet into which children are projected.</p>
@@ -34,13 +34,13 @@ contains a node outlet into which children are projected.</p>
 ways that would be difficult to accomplish with flat nodes.</p>
 
         <h3 id="usage" class="docs-header-link">
-          <span header-link="usage"></span>
           Usage
+          <span header-link="usage"></span>
         </h3>
       
         <h4 id="writing-your-tree-template" class="docs-header-link">
-          <span header-link="writing-your-tree-template"></span>
           Writing your tree template
+          <span header-link="writing-your-tree-template"></span>
         </h4>
       <p>In order to use the tree, you must define a tree node template. There are two types of tree nodes,
 <code>&lt;cdk-tree-node&gt;</code> for flat tree and <code>&lt;cdk-nested-tree-node&gt;</code> for nested tree. The tree node
@@ -52,8 +52,8 @@ data to be used in any bindings in the node template.</p>
   {{node.key}}: {{node.value}}
 <span class="hljs-tag">&lt;/<span class="hljs-name">cdk-tree-node</span>&gt;</span></code></pre>
         <h5 id="flat-tree-node-template" class="docs-header-link">
-          <span header-link="flat-tree-node-template"></span>
           Flat tree node template
+          <span header-link="flat-tree-node-template"></span>
         </h5>
       <p>Flat trees use the <code>level</code> of a node to both render and determine hierarchy of the nodes for screen
 readers. This may be provided either via <code>levelAccessor</code>, or will be calculated by <code>CdkTree</code> if
@@ -62,8 +62,8 @@ readers. This may be provided either via <code>levelAccessor</code>, or will be 
 based on the <code>aria-level</code> attribute.</p>
 
         <h5 id="nested-tree-node-template" class="docs-header-link">
-          <span header-link="nested-tree-node-template"></span>
           Nested tree node template
+          <span header-link="nested-tree-node-template"></span>
         </h5>
       <p>When using nested tree nodes, the node template must contain a <code>cdkTreeNodeOutlet</code>, which marks
 where the children of the node will be rendered.</p>
@@ -72,8 +72,8 @@ where the children of the node will be rendered.</p>
   <span class="hljs-tag">&lt;<span class="hljs-name">ng-container</span> <span class="hljs-attr">cdkTreeNodeOutlet</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">ng-container</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">cdk-nested-tree-node</span>&gt;</span></code></pre>
         <h4 id="adding-expandcollapse" class="docs-header-link">
-          <span header-link="adding-expandcollapse"></span>
           Adding expand/collapse
+          <span header-link="adding-expandcollapse"></span>
         </h4>
       <p>The <code>cdkTreeNodeToggle</code> directive can be used to add expand/collapse functionality for tree nodes.
 The toggle calls the expand/collapse functions in the <code>CdkTree</code> and is able to expand/collapse
@@ -87,8 +87,8 @@ activation. For icon buttons, ensure that <code>aria-label</code> is provided.</
   {{node.value}}
 <span class="hljs-tag">&lt;/<span class="hljs-name">cdk-tree-node</span>&gt;</span></code></pre>
         <h4 id="padding-flat-tree-only" class="docs-header-link">
-          <span header-link="padding-flat-tree-only"></span>
           Padding (Flat tree only)
+          <span header-link="padding-flat-tree-only"></span>
         </h4>
       <p>The <code>cdkTreeNodePadding</code> directive can be placed in a flat tree&#39;s node template to display the level
 information of a flat tree node.</p>
@@ -98,8 +98,8 @@ information of a flat tree node.</p>
 padding to be added via CSS.</p>
 
         <h4 id="conditional-template" class="docs-header-link">
-          <span header-link="conditional-template"></span>
           Conditional template
+          <span header-link="conditional-template"></span>
         </h4>
       <p>The tree may include multiple node templates, where a template is chosen
 for a particular data node via the <code>when</code> predicate of the template.</p>
@@ -110,13 +110,13 @@ for a particular data node via the <code>when</code> predicate of the template.<
   [ A special node {{node.value}} ]
 <span class="hljs-tag">&lt;/<span class="hljs-name">cdk-tree-node</span>&gt;</span></code></pre>
         <h3 id="data-source" class="docs-header-link">
-          <span header-link="data-source"></span>
           Data Source
+          <span header-link="data-source"></span>
         </h3>
       
         <h4 id="connecting-the-tree-to-a-data-source" class="docs-header-link">
-          <span header-link="connecting-the-tree-to-a-data-source"></span>
           Connecting the tree to a data source
+          <span header-link="connecting-the-tree-to-a-data-source"></span>
         </h4>
       <p>Similar to <code>cdk-table</code>, data is provided to the tree through a <code>DataSource</code>. When the tree receives
 a <code>DataSource</code> it will call its <code>connect()</code> method which returns an observable that emits an array
@@ -133,8 +133,8 @@ already provided as a nested data structure.</li>
 </ul>
 
         <h4 id="levelaccessor" class="docs-header-link">
-          <span header-link="levelaccessor"></span>
           <code>levelAccessor</code>
+          <span header-link="levelaccessor"></span>
         </h4>
       <p><code>levelAccessor</code> is a function that when provided a datum, returns the level the data sits at in the
 tree structure. If <code>levelAccessor</code> is provided, the data provided by <code>dataSource</code> should contain all
@@ -144,24 +144,24 @@ array of renderable nodes, if applicable. This can be listened to via the <code>
 on <code>cdk-tree-node</code> and <code>cdk-nested-tree-node</code>.</p>
 
         <h4 id="childrenaccessor" class="docs-header-link">
-          <span header-link="childrenaccessor"></span>
           <code>childrenAccessor</code>
+          <span header-link="childrenaccessor"></span>
         </h4>
       <p><code>childrenAccessor</code> is a function that when provided a datum, returns the children of that particular
 datum. If <code>childrenAccessor</code> is provided, the data provided by <code>dataSource</code> should <em>only</em> contain
 the root nodes of the tree.</p>
 
         <h4 id="trackby" class="docs-header-link">
-          <span header-link="trackby"></span>
           <code>trackBy</code>
+          <span header-link="trackby"></span>
         </h4>
       <p>To improve performance, a <code>trackBy</code> function can be provided to the tree similar to Angular’s
 <a href="https://angular.dev/api/common/NgForOf?tab=usage-notes"><code>ngFor</code> <code>trackBy</code></a>. This informs the
 tree how to uniquely identify nodes to track how the data changes with each update.</p>
 <pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">cdk-tree</span> [<span class="hljs-attr">dataSource</span>]=<span class="hljs-string">&quot;dataSource&quot;</span> [<span class="hljs-attr">treeControl</span>]=<span class="hljs-string">&quot;treeControl&quot;</span> [<span class="hljs-attr">trackBy</span>]=<span class="hljs-string">&quot;trackByFn&quot;</span>&gt;</span></code></pre>
         <h3 id="accessibility" class="docs-header-link">
-          <span header-link="accessibility"></span>
           Accessibility
+          <span header-link="accessibility"></span>
         </h3>
       <p>The <code>&lt;cdk-tree&gt;</code> implements the <a href="https://www.w3.org/WAI/ARIA/apg/patterns/treeview/"><code>tree</code> widget</a>,
 including keyboard navigation and appropriate roles and ARIA attributes.</p>
@@ -170,15 +170,15 @@ is required. Trees using <code>treeControl</code> do not implement the correct a
 backwards compatibility.</p>
 
         <h4 id="isexpandable" class="docs-header-link">
-          <span header-link="isexpandable"></span>
           isExpandable
+          <span header-link="isexpandable"></span>
         </h4>
       <p>In order for the tree to correctly determine whether or not a node is expandable, the <code>isExpandable</code>
 property must be set on all <code>cdk-tree-node</code> or <code>cdk-tree-nested-node</code> that are expandable.</p>
 
         <h4 id="activation-actions" class="docs-header-link">
-          <span header-link="activation-actions"></span>
           Activation actions
+          <span header-link="activation-actions"></span>
         </h4>
       <p>For trees with nodes that have actions upon activation or click, <code>&lt;cdk-tree-node&gt;</code> will emit
 <code>(activation)</code> events that can be listened to when the user activates a node via keyboard

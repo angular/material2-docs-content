@@ -1,8 +1,8 @@
 <div class="docs-markdown"><p>The <code>layout</code> package provides utilities to build responsive UIs that react to screen-size changes. </p>
 
         <h3 id="breakpointobserver" class="docs-header-link">
-          <span header-link="breakpointobserver"></span>
           BreakpointObserver
+          <span header-link="breakpointobserver"></span>
         </h3>
       <p>A layout <strong>breakpoint</strong> is viewport size threshold at which a layout shift can occur. The viewport
 size ranges between breakpoints correspond to different standard screen sizes. </p>
@@ -10,15 +10,15 @@ size ranges between breakpoints correspond to different standard screen sizes. <
 react to changes when the viewport size crosses a breakpoint.</p>
 </div><div material-docs-example="breakpoint-observer-overview"></div><div class="docs-markdown">
         <h4 id="check-the-current-viewport-size" class="docs-header-link">
-          <span header-link="check-the-current-viewport-size"></span>
           Check the current viewport size
+          <span header-link="check-the-current-viewport-size"></span>
         </h4>
       <p>You can use the <code>isMatched</code> method to evaluate one or more media queries against the current
 viewport size.</p>
 <pre><code class="language-ts"><span class="hljs-keyword">const</span> isSmallScreen = breakpointObserver.<span class="hljs-title function_">isMatched</span>(<span class="hljs-string">&#x27;(max-width: 599px)&#x27;</span>);</code></pre>
         <h4 id="react-to-changes-to-the-viewport" class="docs-header-link">
-          <span header-link="react-to-changes-to-the-viewport"></span>
           React to changes to the viewport
+          <span header-link="react-to-changes-to-the-viewport"></span>
         </h4>
       <p>You can use the <code>observe</code> method to get an observable stream that emits whenever the viewport size
 crosses a breakpoint.</p>
@@ -31,8 +31,8 @@ layoutChanges.<span class="hljs-title function_">subscribe</span>(<span class="h
   <span class="hljs-title function_">updateMyLayoutForOrientationChange</span>();
 });</code></pre>
         <h4 id="predefined-breakpoints" class="docs-header-link">
-          <span header-link="predefined-breakpoints"></span>
           Predefined breakpoints
+          <span header-link="predefined-breakpoints"></span>
         </h4>
       <p>The built-in <code>Breakpoints</code> constant offers the following predefined breakpoints for convenience,
 <a href="https://material.io/archive/guidelines/layout/responsive-ui.html">originally drawn from the Material Design
@@ -111,8 +111,8 @@ specification</a>.</p>
   }
 });</code></pre>
         <h3 id="mediamatcher" class="docs-header-link">
-          <span header-link="mediamatcher"></span>
           MediaMatcher
+          <span header-link="mediamatcher"></span>
         </h3>
       <p><code>MediaMatcher</code> is a low-level utility that wraps the native <code>matchMedia</code>. This service
 normalizes browser differences and serves as a convenient API that can be replaced with a fake in

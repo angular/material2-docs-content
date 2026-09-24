@@ -14,8 +14,8 @@ underline, floating label, and hint messages.</p>
 <p>Note: <code>&lt;mat-form-field&gt;</code> requires a child component that implements <code>MatFormFieldControl</code>. Among the chips components, only <code>&lt;mat-chip-grid&gt;</code> supports this integration.</p>
 </div><div material-docs-example="form-field-overview"></div><div class="docs-markdown">
         <h3 id="form-field-appearance-variants" class="docs-header-link">
-          <span header-link="form-field-appearance-variants"></span>
           Form field appearance variants
+          <span header-link="form-field-appearance-variants"></span>
         </h3>
       <p><code>mat-form-field</code> supports two different appearance variants which can be set via the <code>appearance</code>
 input: <code>fill</code> and <code>outline</code>. The <code>fill</code> appearance displays the form field with a filled background
@@ -30,8 +30,8 @@ appearance for your app.</p>
   ]
 });</code></pre></div><div material-docs-example="form-field-appearance"></div><div class="docs-markdown">
         <h3 id="floating-label" class="docs-header-link">
-          <span header-link="floating-label"></span>
           Floating label
+          <span header-link="floating-label"></span>
         </h3>
       <p>The floating label is a text label displayed on top of the form field control when
 the control does not contain any text or when <code>&lt;select matNativeControl&gt;</code> does not show any option
@@ -52,8 +52,8 @@ the option can be either set to <code>always</code> or <code>auto</code>.</p>
   ]
 });</code></pre>
         <h3 id="hint-labels" class="docs-header-link">
-          <span header-link="hint-labels"></span>
           Hint labels
+          <span header-link="hint-labels"></span>
         </h3>
       <p>Hint labels are additional descriptive text that appears below the form field&#39;s underline. A
 <code>&lt;mat-form-field&gt;</code> can have up to two hint labels; one start-aligned (left in an LTR language, right
@@ -66,8 +66,8 @@ via the <code>hintLabel</code> property, it will be treated as the start hint. H
 raise an error.</p>
 </div><div material-docs-example="form-field-hint"></div><div class="docs-markdown">
         <h3 id="error-messages" class="docs-header-link">
-          <span header-link="error-messages"></span>
           Error messages
+          <span header-link="error-messages"></span>
         </h3>
       <p>Error messages can be shown under the form field underline by adding <code>mat-error</code> elements inside the
 form field. Errors are hidden initially and will be displayed on invalid form fields after the user
@@ -80,8 +80,8 @@ space to display one error message at a time. Ensuring that enough space is avai
 multiple errors is up to the user.</p>
 </div><div material-docs-example="form-field-error"></div><div class="docs-markdown">
         <h3 id="prefix-and-suffix" class="docs-header-link">
-          <span header-link="prefix-and-suffix"></span>
           Prefix &amp; suffix
+          <span header-link="prefix-and-suffix"></span>
         </h3>
       <p>Custom content can be included before and after the input tag, as a prefix or suffix. It will be
 included within the visual container that wraps the form control as per the Material specification.</p>
@@ -91,8 +91,8 @@ the prefix. Similarly, adding <code>matSuffix</code> will designate it as the su
 <code>matTextSuffix</code> directives which ensure that the text is aligned with the form control.</p>
 </div><div material-docs-example="form-field-prefix-suffix"></div><div class="docs-markdown">
         <h3 id="custom-form-field-controls" class="docs-header-link">
-          <span header-link="custom-form-field-controls"></span>
           Custom form field controls
+          <span header-link="custom-form-field-controls"></span>
         </h3>
       <p>In addition to the form field controls that Angular Material provides, it is possible to create
 custom form field controls that work with <code>&lt;mat-form-field&gt;</code> in the same way. For additional
@@ -100,8 +100,8 @@ information on this see the guide on
 <a href="/guide/creating-a-custom-form-field-control">Creating Custom mat-form-field Controls</a>.</p>
 
         <h3 id="theming" class="docs-header-link">
-          <span header-link="theming"></span>
           Theming
+          <span header-link="theming"></span>
         </h3>
       <p>The color of the form-field can be changed by specifying a <code>$color-variant</code> when applying the
 <code>mat.form-field-theme</code> or <code>mat.form-field-color</code> mixins (see the
@@ -110,8 +110,8 @@ form-field uses the theme&#39;s primary palette. This can be changed to <code>&#
 <code>&#39;error&#39;</code>.</p>
 
         <h3 id="accessibility" class="docs-header-link">
-          <span header-link="accessibility"></span>
           Accessibility
+          <span header-link="accessibility"></span>
         </h3>
       <p>By itself, <code>MatFormField</code> does not apply any additional accessibility treatment to a control.
 However, several of the form field&#39;s optional features interact with the control contained within
@@ -138,20 +138,20 @@ input already conveys the full context, add <code>aria-hidden=&quot;true&quot;</
 <code>matTextSuffix</code> elements so they are skipped during swipe navigation and do not create redundant focus stops.</p>
 
         <h3 id="troubleshooting" class="docs-header-link">
-          <span header-link="troubleshooting"></span>
           Troubleshooting
+          <span header-link="troubleshooting"></span>
         </h3>
       
         <h4 id="error-a-hint-was-already-declared-for-align" class="docs-header-link">
-          <span header-link="error-a-hint-was-already-declared-for-align"></span>
           Error: A hint was already declared for align=&quot;...&quot;
+          <span header-link="error-a-hint-was-already-declared-for-align"></span>
         </h4>
       <p>This error occurs if you have added multiple hints for the same side. Keep in mind that the
 <code>hintLabel</code> property adds a hint to the start side.</p>
 
         <h4 id="error-mat-form-field-must-contain-a-matformfieldcontrol" class="docs-header-link">
-          <span header-link="error-mat-form-field-must-contain-a-matformfieldcontrol"></span>
           Error: mat-form-field must contain a MatFormFieldControl
+          <span header-link="error-mat-form-field-must-contain-a-matformfieldcontrol"></span>
         </h4>
       <p>This error occurs when you have not added a form field control to your form field. If your form
 field contains a native <code>&lt;input&gt;</code> or <code>&lt;textarea&gt;</code> element, make sure you&#39;ve added the <code>matInput</code>

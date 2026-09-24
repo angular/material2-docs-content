@@ -2,8 +2,8 @@
 services.</p>
 
         <h3 id="initial-setup" class="docs-header-link">
-          <span header-link="initial-setup"></span>
           Initial setup
+          <span header-link="initial-setup"></span>
         </h3>
       <p>The CDK dialogs depend on a small set of structural styles to work correctly. If you&#39;re using
 Angular Material, these styles have been included together with the theme, otherwise if you&#39;re
@@ -40,23 +40,23 @@ value is forwarded as the result of the <code>closed</code> Observable.</p>
   }
 }</code></pre>
         <h3 id="dialog-styling" class="docs-header-link">
-          <span header-link="dialog-styling"></span>
           Dialog styling
+          <span header-link="dialog-styling"></span>
         </h3>
       <p>The <code>Dialog</code> service includes an intentionally limited set of structural styles. You can customize
 the dialog&#39;s appearance using one of the following approaches.</p>
 
         <h4 id="panelclass-option" class="docs-header-link">
-          <span header-link="panelclass-option"></span>
           <code>panelClass</code> option
+          <span header-link="panelclass-option"></span>
         </h4>
       <p>The <code>panelClass</code> property of <code>DialogConfig</code> allows you to apply one or more CSS classes to the
 overlay element that contains the custom dialog content. Any styles targeting these CSS classes
 must be global styles.</p>
 
         <h4 id="styling-the-dialog-component" class="docs-header-link">
-          <span header-link="styling-the-dialog-component"></span>
           Styling the dialog component
+          <span header-link="styling-the-dialog-component"></span>
         </h4>
       <p>You can use the <code>styles</code> or <code>styleUrls</code> of a custom component to style the dialog content:</p>
 <pre><code class="language-ts"><span class="hljs-comment">// MyDialog is rendered via `dialog.open(MyDialog)`</span>
@@ -73,8 +73,8 @@ must be global styles.</p>
 })
 <span class="hljs-keyword">class</span> <span class="hljs-title class_">MyDialog</span> {}</code></pre></div><div material-docs-example="cdk-dialog-styling"></div><div class="docs-markdown">
         <h4 id="providing-a-custom-dialog-container" class="docs-header-link">
-          <span header-link="providing-a-custom-dialog-container"></span>
           Providing a custom dialog container
+          <span header-link="providing-a-custom-dialog-container"></span>
         </h4>
       <p>If you want more control over the dialog&#39;s behavior and styling, you can provide your own dialog
 container component using the <code>container</code> option in <code>DialogConfig</code>. This approach requires more
@@ -96,8 +96,8 @@ to inherit standard behaviors, such as accessible focus management.</p>
 })
 <span class="hljs-keyword">class</span> <span class="hljs-title class_">MyDialogContainer</span> <span class="hljs-keyword">extends</span> <span class="hljs-title class_ inherited__">CdkDialogContainer</span> {}</code></pre>
         <h3 id="specifying-global-configuration-defaults" class="docs-header-link">
-          <span header-link="specifying-global-configuration-defaults"></span>
           Specifying global configuration defaults
+          <span header-link="specifying-global-configuration-defaults"></span>
         </h3>
       <p>Default dialog options can be specified by providing an instance of <code>DialogConfig</code> for
 <code>DEFAULT_DIALOG_CONFIG</code> in your app config.</p>
@@ -115,8 +115,8 @@ per-dialog options always take precedence.</p>
 </blockquote>
 
         <h3 id="sharing-data-with-the-dialog-component" class="docs-header-link">
-          <span header-link="sharing-data-with-the-dialog-component"></span>
           Sharing data with the Dialog component.
+          <span header-link="sharing-data-with-the-dialog-component"></span>
         </h3>
       <p>You can use the <code>data</code> option to pass information to the dialog component.</p>
 <pre><code class="language-ts"><span class="hljs-keyword">const</span> dialogRef = dialog.<span class="hljs-title function_">open</span>(<span class="hljs-title class_">YourDialog</span>, {
@@ -139,8 +139,8 @@ per-dialog options always take precedence.</p>
     Hello, {{data.name}}
 <span class="hljs-tag">&lt;/<span class="hljs-name">ng-template</span>&gt;</span></code></pre></div><div material-docs-example="cdk-dialog-data"></div><div class="docs-markdown">
         <h3 id="accessibility" class="docs-header-link">
-          <span header-link="accessibility"></span>
           Accessibility
+          <span header-link="accessibility"></span>
         </h3>
       <p><code>Dialog</code> creates modal dialogs that implement the ARIA <code>role=&quot;dialog&quot;</code> pattern by default.
 You can change the dialog&#39;s role to <code>alertdialog</code> via the <code>DialogConfig</code>.</p>
@@ -149,16 +149,16 @@ You can change the dialog&#39;s role to <code>alertdialog</code> via the <code>D
 ID via the <code>ariaDescribedBy</code> property of <code>DialogConfig</code>.</p>
 
         <h4 id="keyboard-interaction" class="docs-header-link">
-          <span header-link="keyboard-interaction"></span>
           Keyboard interaction
+          <span header-link="keyboard-interaction"></span>
         </h4>
       <p>By default, the escape key closes <code>Dialog</code>. While you can disable this behavior via the
 <code>disableClose</code> property of <code>DialogConfig</code>, doing this breaks the expected interaction pattern
 for the ARIA <code>role=&quot;dialog&quot;</code> pattern.</p>
 
         <h4 id="focus-management" class="docs-header-link">
-          <span header-link="focus-management"></span>
           Focus management
+          <span header-link="focus-management"></span>
         </h4>
       <p>When opened, <code>Dialog</code> traps browser focus such that it cannot escape the root
 <code>role=&quot;dialog&quot;</code> element. By default, the first tabbable element in the dialog receives focus.
@@ -193,8 +193,8 @@ from these alternatives. Always test your application to verify the behavior tha
 your users.</p>
 
         <h4 id="focus-restoration" class="docs-header-link">
-          <span header-link="focus-restoration"></span>
           Focus restoration
+          <span header-link="focus-restoration"></span>
         </h4>
       <p>When closed, <code>Dialog</code> restores focus to the element that previously held focus when the
 dialog opened by default. You can customize the focus restoration behavior using the <code>restoreFocus</code>

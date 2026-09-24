@@ -789,9 +789,19 @@ const EXAMPLE_COMPONENTS = {
     "primaryFile": "mat-selection-list-example.ts",
     "importPath": "material-experimental/selection"
   },
+  "autocomplete-auto-active-first-option-signal-form": {
+    "packagePath": "material/autocomplete/autocomplete-auto-active-first-option-signal-form",
+    "title": "Highlight the first autocomplete option (signal forms)",
+    "componentName": "AutocompleteAutoActiveFirstOptionSignalFormExample",
+    "files": ["autocomplete-auto-active-first-option-signal-form-example.ts", "./autocomplete-auto-active-first-option-signal-form-example.html", "./autocomplete-auto-active-first-option-signal-form-example.css"],
+    "selector": "autocomplete-auto-active-first-option-signal-form-example",
+    "additionalComponents": [],
+    "primaryFile": "autocomplete-auto-active-first-option-signal-form-example.ts",
+    "importPath": "material/autocomplete"
+  },
   "autocomplete-auto-active-first-option": {
     "packagePath": "material/autocomplete/autocomplete-auto-active-first-option",
-    "title": "Highlight the first autocomplete option",
+    "title": "Highlight the first autocomplete option (reactive forms)",
     "componentName": "AutocompleteAutoActiveFirstOptionExample",
     "files": ["autocomplete-auto-active-first-option-example.ts", "autocomplete-auto-active-first-option-example.html", "autocomplete-auto-active-first-option-example.css"],
     "selector": "autocomplete-auto-active-first-option-example",
@@ -3760,6 +3770,8 @@ async function loadExample(id) {
       return import('@angular/components-examples/material-experimental/selection');
     case 'mat-selection-list':
       return import('@angular/components-examples/material-experimental/selection');
+    case 'autocomplete-auto-active-first-option-signal-form':
+      return import('@angular/components-examples/material/autocomplete');
     case 'autocomplete-auto-active-first-option':
       return import('@angular/components-examples/material/autocomplete');
     case 'autocomplete-display':

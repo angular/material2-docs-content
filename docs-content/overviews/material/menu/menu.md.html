@@ -5,8 +5,8 @@ via application of the <code>matMenuTriggerFor</code> directive:</p>
                              file="menu-overview-example.html"
                              region="mat-menu-trigger-for"></div><div class="docs-markdown">
         <h3 id="toggling-the-menu-programmatically" class="docs-header-link">
-          <span header-link="toggling-the-menu-programmatically"></span>
           Toggling the menu programmatically
+          <span header-link="toggling-the-menu-programmatically"></span>
         </h3>
       <p>The menu exposes an API to open/close programmatically. Please note that in this case, an
 <code>matMenuTriggerFor</code> directive is still necessary to attach the menu to a trigger element in the DOM.</p>
@@ -18,16 +18,16 @@ via application of the <code>matMenuTriggerFor</code> directive:</p>
   }
 }</code></pre>
         <h3 id="icons" class="docs-header-link">
-          <span header-link="icons"></span>
           Icons
+          <span header-link="icons"></span>
         </h3>
       <p>Menus support displaying <code>mat-icon</code> elements before the menu item text.</p>
 </div><div material-docs-example="menu-icons"
                              file="menu-icons-example.html"
                              ></div><div class="docs-markdown">
         <h3 id="customizing-menu-position" class="docs-header-link">
-          <span header-link="customizing-menu-position"></span>
           Customizing menu position
+          <span header-link="customizing-menu-position"></span>
         </h3>
       <p>By default, the menu will display below (y-axis), after (x-axis), without overlapping
 its trigger. The position can be changed using the <code>xPosition</code> (<code>before | after</code>) and <code>yPosition</code>
@@ -37,8 +37,8 @@ its trigger. The position can be changed using the <code>xPosition</code> (<code
                              file="menu-position-example.html"
                              region="menu-position"></div><div class="docs-markdown">
         <h3 id="nested-menu" class="docs-header-link">
-          <span header-link="nested-menu"></span>
           Nested menu
+          <span header-link="nested-menu"></span>
         </h3>
       <p>Material supports the ability for an <code>mat-menu-item</code> to open a sub-menu. To do so, you have to define
 your root menu and sub-menus, in addition to setting the <code>[matMenuTriggerFor]</code> on the <code>mat-menu-item</code>
@@ -47,8 +47,8 @@ that should trigger the sub-menu:</p>
                              file="menu-nested-example.html"
                              region="sub-menu"></div><div class="docs-markdown">
         <h3 id="context-menu" class="docs-header-link">
-          <span header-link="context-menu"></span>
           Context menu
+          <span header-link="context-menu"></span>
         </h3>
       <p>A context menu is a menu that is triggered by right-clicking in a specific area, rather than
 clicking on a trigger element. It is re-positioned if the user right-clicks somewhere else in the
@@ -60,8 +60,8 @@ right click somewhere else. You can opt into the backdrop by explicitly setting
 <code>[hasBackdrop]=&quot;true&quot;</code> on the menu.</p>
 </div><div material-docs-example="context-menu"></div><div class="docs-markdown">
         <h3 id="lazy-rendering" class="docs-header-link">
-          <span header-link="lazy-rendering"></span>
           Lazy rendering
+          <span header-link="lazy-rendering"></span>
         </h3>
       <p>By default, the menu content will be initialized even when the panel is closed. To defer
 initialization until the menu is open, the content can be provided as an <code>ng-template</code>
@@ -77,8 +77,8 @@ with the <code>matMenuContent</code> attribute:</p>
   <span class="hljs-tag">&lt;<span class="hljs-name">mat-icon</span>&gt;</span>more_vert<span class="hljs-tag">&lt;/<span class="hljs-name">mat-icon</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></code></pre>
         <h3 id="passing-in-data-to-a-menu" class="docs-header-link">
-          <span header-link="passing-in-data-to-a-menu"></span>
           Passing in data to a menu
+          <span header-link="passing-in-data-to-a-menu"></span>
         </h3>
       <p>When using lazy rendering, additional context data can be passed to the menu panel via
 the <code>matMenuTriggerData</code> input. This allows for a single menu instance to be rendered
@@ -98,8 +98,8 @@ with a different set of data, depending on the trigger that opened it:</p>
   <span class="hljs-tag">&lt;<span class="hljs-name">mat-icon</span>&gt;</span>more_vert<span class="hljs-tag">&lt;/<span class="hljs-name">mat-icon</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></code></pre>
         <h3 id="keyboard-interaction" class="docs-header-link">
-          <span header-link="keyboard-interaction"></span>
           Keyboard interaction
+          <span header-link="keyboard-interaction"></span>
         </h3>
       <table>
 <thead>
@@ -135,8 +135,8 @@ with a different set of data, depending on the trigger that opened it:</p>
 </tbody></table>
 
         <h3 id="accessibility" class="docs-header-link">
-          <span header-link="accessibility"></span>
           Accessibility
+          <span header-link="accessibility"></span>
         </h3>
       <p>Angular Material&#39;s menu component consists of two connected parts: the trigger and the pop-up menu.</p>
 <p>The menu trigger is a standard button element augmented with <code>aria-haspopup</code>, <code>aria-expanded</code>, and

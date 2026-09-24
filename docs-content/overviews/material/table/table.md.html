@@ -7,13 +7,13 @@ the table is implemented, see the
 <a href="https://material.angular.dev/guide/cdk-table">guide covering the CDK data-table</a>.</p>
 
         <h3 id="getting-started" class="docs-header-link">
-          <span header-link="getting-started"></span>
           Getting Started
+          <span header-link="getting-started"></span>
         </h3>
       </div><div material-docs-example="table-basic"></div><div class="docs-markdown">
         <h4 id="1-write-your-mat-table-and-provide-data" class="docs-header-link">
-          <span header-link="1-write-your-mat-table-and-provide-data"></span>
           1. Write your mat-table and provide data
+          <span header-link="1-write-your-mat-table-and-provide-data"></span>
         </h4>
       <p>Begin by adding the <code>&lt;table mat-table&gt;</code> component to your template and passing in data.</p>
 <p>The simplest way to provide data to the table is by passing a data array to the table&#39;s <code>dataSource</code>
@@ -28,8 +28,8 @@ the most limited. For more complex applications, using a <code>DataSource</code>
 is recommended. See the section &quot;Advanced data sources&quot; below for more information.</p>
 
         <h4 id="2-define-the-column-templates" class="docs-header-link">
-          <span header-link="2-define-the-column-templates"></span>
           2. Define the column templates
+          <span header-link="2-define-the-column-templates"></span>
         </h4>
       <p>Next, write your table&#39;s column templates.</p>
 <p>Each column definition should be given a unique name and contain the content for its header and row
@@ -50,8 +50,8 @@ table. Also, a data accessor should be provided if your data may have its proper
 since the string name will no longer match after minification.</p>
 
         <h4 id="3-define-the-row-templates" class="docs-header-link">
-          <span header-link="3-define-the-row-templates"></span>
           3. Define the row templates
+          <span header-link="3-define-the-row-templates"></span>
         </h4>
       <p>Finally, once you have defined your columns, you need to tell the table which columns will be
 rendered in the header and data rows.</p>
@@ -67,24 +67,24 @@ that was defined in your template.</p>
 include/exclude columns dynamically.</p>
 
         <h3 id="advanced-data-sources" class="docs-header-link">
-          <span header-link="advanced-data-sources"></span>
           Advanced data sources
+          <span header-link="advanced-data-sources"></span>
         </h3>
       <p>The simplest way to provide data to your table is by passing a data array. More complex use-cases
 may benefit from a more flexible approach involving an Observable stream or by encapsulating your
 data source logic into a <code>DataSource</code> class.</p>
 
         <h4 id="observable-stream-of-data-arrays" class="docs-header-link">
-          <span header-link="observable-stream-of-data-arrays"></span>
           Observable stream of data arrays
+          <span header-link="observable-stream-of-data-arrays"></span>
         </h4>
       <p>An alternative approach to providing data to the table is by passing an Observable stream that emits
 the data array to be rendered each time it is changed. The table will listen to this stream and
 automatically trigger an update to the rows each time a new data array is emitted.</p>
 
         <h4 id="datasource" class="docs-header-link">
-          <span header-link="datasource"></span>
           DataSource
+          <span header-link="datasource"></span>
         </h4>
       <p>For most real-world applications, providing the table a <code>DataSource</code> instance will be the best way to
 manage data. The <code>DataSource</code> is meant to serve as a place to encapsulate any sorting, filtering,
@@ -103,23 +103,23 @@ implemented instead (<code>MyCustomDataSource extends SomeOtherBaseClass impleme
 respect Typescript&#39;s restriction to only implement one base class.</p>
 
         <h3 id="styling-columns" class="docs-header-link">
-          <span header-link="styling-columns"></span>
           Styling Columns
+          <span header-link="styling-columns"></span>
         </h3>
       <p>Each table cell has an automatically generated class based on which column it appears in. The format for this
 generated class is <code>mat-column-NAME</code>. For example, cells in a column named &quot;symbol&quot; can be targeted with the
 selector <code>.mat-column-symbol</code>.</p>
 </div><div material-docs-example="table-column-styling"></div><div class="docs-markdown">
         <h3 id="row-templates" class="docs-header-link">
-          <span header-link="row-templates"></span>
           Row Templates
+          <span header-link="row-templates"></span>
         </h3>
       <p>Event handlers and property binding on the row templates will be applied to each row rendered by the table. For example,
 adding a <code>(click)</code> handler to the row template will cause each individual row to call the handler when clicked.</p>
 </div><div material-docs-example="table-row-binding"></div><div class="docs-markdown">
         <h3 id="features" class="docs-header-link">
-          <span header-link="features"></span>
           Features
+          <span header-link="features"></span>
         </h3>
       <p>The <code>MatTable</code> is focused on a single responsibility: efficiently render rows of data in a
 performant and accessible way.</p>
@@ -133,8 +133,8 @@ the logic of determining what rows should be rendered according to the current t
 these feature to the table, check out their respective sections below.</p>
 
         <h4 id="pagination" class="docs-header-link">
-          <span header-link="pagination"></span>
           Pagination
+          <span header-link="pagination"></span>
         </h4>
       <p>To paginate the table&#39;s data, add a <code>&lt;mat-paginator&gt;</code> after the table.</p>
 <p>If you are using the <code>MatTableDataSource</code> for your table&#39;s data source, simply provide the
@@ -149,8 +149,8 @@ option. In fact, the table can work with any custom pagination UI or strategy si
 and its interface is not tied to any one specific implementation.</p>
 </div><div material-docs-example="table-pagination"></div><div class="docs-markdown">
         <h4 id="virtual-scrolling" class="docs-header-link">
-          <span header-link="virtual-scrolling"></span>
           Virtual scrolling
+          <span header-link="virtual-scrolling"></span>
         </h4>
       <p>An alternative approach to showing a large amount of data inside a Material table is to use
 virtual scrolling which will only render the the visible rows in the DOM as the user is scrolling.</p>
@@ -163,8 +163,8 @@ element and add CSS to make the viewport scrollable.</p>
 </ul>
 </div><div material-docs-example="table-virtual-scroll"></div><div class="docs-markdown">
         <h4 id="sorting" class="docs-header-link">
-          <span header-link="sorting"></span>
           Sorting
+          <span header-link="sorting"></span>
         </h4>
       <p>To add sorting behavior to the table, add the <code>matSort</code> directive to the table and add
 <code>mat-sort-header</code> to each column header cell that should trigger sorting. Note that you have to import <code>MatSortModule</code> in order to initialize the <code>matSort</code> directive (see <a href="https://material.angular.dev/components/sort/api">API docs</a>).</p>
@@ -193,8 +193,8 @@ In fact, the table can work with any custom sorting UI or strategy since the <co
 its interface is not tied to any one specific implementation.</p>
 
         <h4 id="filtering" class="docs-header-link">
-          <span header-link="filtering"></span>
           Filtering
+          <span header-link="filtering"></span>
         </h4>
       <p>Angular Material does not provide a specific component to be used for filtering the <code>MatTable</code>
 since there is no single common approach to adding a filter UI to table data.</p>
@@ -213,24 +213,24 @@ takes a data object and filter string and returns true if the data object is con
 directive.</p>
 </div><div material-docs-example="table-filtering"></div><div class="docs-markdown">
         <h4 id="drag-and-drop" class="docs-header-link">
-          <span header-link="drag-and-drop"></span>
           Drag and drop
+          <span header-link="drag-and-drop"></span>
         </h4>
       <p>Material tables can be integrated with the <code>@angular/cdk/drag-drop</code> module to support drag&amp;drop of
 either columns or rows.</p>
 </div><div material-docs-example="table-reorderable"></div><div class="docs-markdown">
 </div><div material-docs-example="table-drag-drop"></div><div class="docs-markdown">
         <h4 id="selection" class="docs-header-link">
-          <span header-link="selection"></span>
           Selection
+          <span header-link="selection"></span>
         </h4>
       <p>Right now there is no formal support for adding a selection UI to the table, but Angular Material
 does offer the right components and pieces to set this up. The following steps are one solution but
 it is not the only way to incorporate row selection in your table.</p>
 
         <h5 id="1-add-a-selection-model" class="docs-header-link">
-          <span header-link="1-add-a-selection-model"></span>
           1. Add a selection model
+          <span header-link="1-add-a-selection-model"></span>
         </h5>
       <p>Get started by setting up a <code>SelectionModel</code> from <code>@angular/cdk/collections</code> that will maintain the
 selection state.</p>
@@ -238,8 +238,8 @@ selection state.</p>
 <span class="hljs-keyword">const</span> allowMultiSelect = <span class="hljs-literal">true</span>;
 <span class="hljs-variable language_">this</span>.<span class="hljs-property">selection</span> = <span class="hljs-keyword">new</span> <span class="hljs-title class_">SelectionModel</span>&lt;<span class="hljs-title class_">MyDataType</span>&gt;(allowMultiSelect, initialSelection);</code></pre>
         <h5 id="2-define-a-selection-column" class="docs-header-link">
-          <span header-link="2-define-a-selection-column"></span>
           2. Define a selection column
+          <span header-link="2-define-a-selection-column"></span>
         </h5>
       <p>Add a column definition for displaying the row checkboxes, including a main toggle checkbox for
 the header. The column name should be added to the list of displayed columns provided to the
@@ -259,8 +259,8 @@ header and data row.</p>
   <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">ng-container</span>&gt;</span></code></pre>
         <h5 id="3-add-event-handling-logic" class="docs-header-link">
-          <span header-link="3-add-event-handling-logic"></span>
           3. Add event handling logic
+          <span header-link="3-add-event-handling-logic"></span>
         </h5>
       <p>Implement the behavior in your component&#39;s logic to handle the header&#39;s main toggle and checking
 if all rows are selected.</p>
@@ -278,8 +278,8 @@ if all rows are selected.</p>
       <span class="hljs-variable language_">this</span>.<span class="hljs-property">dataSource</span>.<span class="hljs-property">data</span>.<span class="hljs-title function_">forEach</span>(<span class="hljs-function"><span class="hljs-params">row</span> =&gt;</span> <span class="hljs-variable language_">this</span>.<span class="hljs-property">selection</span>.<span class="hljs-title function_">select</span>(row));
 }</code></pre>
         <h5 id="4-include-overflow-styling" class="docs-header-link">
-          <span header-link="4-include-overflow-styling"></span>
           4. Include overflow styling
+          <span header-link="4-include-overflow-styling"></span>
         </h5>
       <p>Finally, adjust the styling for the select column so that its overflow is not hidden. This allows
 the ripple effect to extend beyond the cell.</p>
@@ -287,8 +287,8 @@ the ripple effect to extend beyond the cell.</p>
   <span class="hljs-attribute">overflow</span>: initial;
 }</code></pre><!--- example(table-selection) -->
         <h4 id="footer-row" class="docs-header-link">
-          <span header-link="footer-row"></span>
           Footer row
+          <span header-link="footer-row"></span>
         </h4>
       <p>A footer row can be added to the table by adding a footer row definition to the table and adding
 footer cell templates to column definitions. The footer row will be rendered after the rendered
@@ -305,8 +305,8 @@ data rows.</p>
 <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">mat-row</span> *<span class="hljs-attr">matRowDef</span>=<span class="hljs-string">&quot;let myRowData; columns: columnsToDisplay&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">mat-footer-row</span> *<span class="hljs-attr">matFooterRowDef</span>=<span class="hljs-string">&quot;columnsToDisplay&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span></code></pre><!--- example(table-footer-row) -->
         <h4 id="sticky-rows-and-columns" class="docs-header-link">
-          <span header-link="sticky-rows-and-columns"></span>
           Sticky Rows and Columns
+          <span header-link="sticky-rows-and-columns"></span>
         </h4>
       <p>By using <code>position: sticky</code> styling, the table&#39;s rows and columns can be fixed so that they do not
 leave the viewport even when scrolled. The table provides inputs that will automatically apply the
@@ -328,14 +328,14 @@ There is currently an <a href="https://developer.microsoft.com/en-us/microsoft-e
 to resolve this.</p>
 
         <h4 id="multiple-row-templates" class="docs-header-link">
-          <span header-link="multiple-row-templates"></span>
           Multiple row templates
+          <span header-link="multiple-row-templates"></span>
         </h4>
       <p>When using the <code>multiTemplateDataRows</code> directive to support multiple rows for each data object, the context of <code>*matRowDef</code> is the same except that the <code>index</code> value is replaced by <code>dataIndex</code> and <code>renderIndex</code>.</p>
 <!--- example(table-multiple-row-template) -->
         <h3 id="accessibility" class="docs-header-link">
-          <span header-link="accessibility"></span>
           Accessibility
+          <span header-link="accessibility"></span>
         </h3>
       <p>By default, <code>MatTable</code> applies <code>role=&quot;table&quot;</code>, assuming the table&#39;s contains primarily static
 content. You can change the role by explicitly setting <code>role=&quot;grid&quot;</code> or <code>role=&quot;treegrid&quot;</code> on the
@@ -346,8 +346,8 @@ focus management to the table.</p>
 table element.</p>
 
         <h3 id="tables-with-display-flex" class="docs-header-link">
-          <span header-link="tables-with-display-flex"></span>
           Tables with <code>display: flex</code>
+          <span header-link="tables-with-display-flex"></span>
         </h3>
       <p>The <code>MatTable</code> does not require that you use a native HTML table. Instead, you can use an
 alternative approach that uses <code>display: flex</code> for the table&#39;s styles.</p>
@@ -380,8 +380,8 @@ selectors. For example, <code>&lt;table mat-table&gt;</code> becomes <code>&lt;m
 or have columns that resize themselves based on their content.</p>
 
         <h3 id="tables-with-matripple" class="docs-header-link">
-          <span header-link="tables-with-matripple"></span>
           Tables with <code>MatRipple</code>
+          <span header-link="tables-with-matripple"></span>
         </h3>
       <p>By default, <code>MatTable</code> does not set up Material Design ripples for rows. A ripple effect can be
 added to table rows by using the <code>MatRipple</code> directive from <code>@angular/material/core</code>. Due to
