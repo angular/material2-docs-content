@@ -6,16 +6,16 @@ of the header, pagination controls appear to let the user scroll left and right 
 tab labels in the header.</p>
 </div><div material-docs-example="tab-group-basic"></div><div class="docs-markdown">
         <h3 id="events" class="docs-header-link">
-          <span header-link="events"></span>
           Events
+          <span header-link="events"></span>
         </h3>
       <p>The <code>selectedTabChange</code> output event is emitted when the active tab changes.</p>
 <p>The <code>focusChange</code> output event is emitted when the user puts focus on any of the tab labels in
 the header, usually through keyboard navigation.</p>
 
         <h3 id="labels" class="docs-header-link">
-          <span header-link="labels"></span>
           Labels
+          <span header-link="labels"></span>
         </h3>
       <p>If a tab&#39;s label is only text then the simple tab-group API can be used.</p>
 </div><div material-docs-example="tab-group-basic"
@@ -25,8 +25,8 @@ the header, usually through keyboard navigation.</p>
                              file="tab-group-custom-label-example.html"
                              region="label-directive"></div><div class="docs-markdown">
         <h3 id="dynamic-height" class="docs-header-link">
-          <span header-link="dynamic-height"></span>
           Dynamic Height
+          <span header-link="dynamic-height"></span>
         </h3>
       <p>By default, the tab group will not change its height to the height of the currently active tab. To
 change this, set the <code>dynamicHeight</code> input to true. The tab body will animate its height according
@@ -35,8 +35,8 @@ change this, set the <code>dynamicHeight</code> input to true. The tab body will
                              file="tab-group-dynamic-height-example.html"
                              region="dynamic-height"></div><div class="docs-markdown">
         <h3 id="tabs-and-navigation" class="docs-header-link">
-          <span header-link="tabs-and-navigation"></span>
           Tabs and navigation
+          <span header-link="tabs-and-navigation"></span>
         </h3>
       <p>While <code>&lt;mat-tab-group&gt;</code> is used to switch between views within a single route, <code>&lt;nav mat-tab-nav-bar&gt;</code>
 provides a tab-like UI for navigating between routes.</p>
@@ -48,8 +48,8 @@ uses the <code>active</code> property to determine which tab is currently active
 placed relatively close to the <code>mat-tab-nav-bar</code> (see <a href="#accessibility">Accessibility</a>).</p>
 
         <h3 id="lazy-loading" class="docs-header-link">
-          <span header-link="lazy-loading"></span>
           Lazy Loading
+          <span header-link="lazy-loading"></span>
         </h3>
       <p>By default, the tab contents are eagerly loaded. Eagerly loaded tabs
 will initialize the child components but not inject them into the DOM
@@ -63,8 +63,8 @@ with the <code>matTabContent</code> attribute.</p>
                              file="tab-group-lazy-loaded-example.html"
                              region="mat-tab-content"></div><div class="docs-markdown">
         <h3 id="label-alignment" class="docs-header-link">
-          <span header-link="label-alignment"></span>
           Label alignment
+          <span header-link="label-alignment"></span>
         </h3>
       <p>If you want to align the tab labels in the center or towards the end of the container, you can
 do so using the <code>[mat-align-tabs]</code> attribute.</p>
@@ -72,8 +72,8 @@ do so using the <code>[mat-align-tabs]</code> attribute.</p>
                              file="tab-group-align-example.html"
                              region="align-start"></div><div class="docs-markdown">
         <h3 id="controlling-the-tab-animation" class="docs-header-link">
-          <span header-link="controlling-the-tab-animation"></span>
           Controlling the tab animation
+          <span header-link="controlling-the-tab-animation"></span>
         </h3>
       <p>You can control the duration of the tabs&#39; animation using the <code>animationDuration</code> input. If you
 want to disable the animation completely, you can do so by setting the properties to <code>0ms</code>. The
@@ -82,8 +82,8 @@ duration can be configured globally using the <code>MAT_TABS_CONFIG</code> injec
                              file="tab-group-animations-example.html"
                              region="slow-animation-duration"></div><div class="docs-markdown">
         <h3 id="keeping-the-tab-content-inside-the-dom-while-its-off-screen" class="docs-header-link">
-          <span header-link="keeping-the-tab-content-inside-the-dom-while-its-off-screen"></span>
           Keeping the tab content inside the DOM while it&#39;s off-screen
+          <span header-link="keeping-the-tab-content-inside-the-dom-while-its-off-screen"></span>
         </h3>
       <p>By default the <code>&lt;mat-tab-group&gt;</code> will remove the content of off-screen tabs from the DOM until they
 come into the view. This is optimal for most cases since it keeps the DOM size smaller, but it
@@ -92,14 +92,14 @@ will be re-initialized whenever the user navigates to the tab. If you want to ke
 off-screen tabs in the DOM, you can set the <code>preserveContent</code> input to <code>true</code>.</p>
 </div><div material-docs-example="tab-group-preserve-content"></div><div class="docs-markdown">
         <h3 id="sortable-tabs" class="docs-header-link">
-          <span header-link="sortable-tabs"></span>
           Sortable tabs
+          <span header-link="sortable-tabs"></span>
         </h3>
       <p>The <code>mat-tab-group</code> component can be integrated with the <code>@angular/cdk/drag-drop</code> module.</p>
 </div><div material-docs-example="tab-group-drag-drop"></div><div class="docs-markdown">
         <h3 id="accessibility" class="docs-header-link">
-          <span header-link="accessibility"></span>
           Accessibility
+          <span header-link="accessibility"></span>
         </h3>
       <p><code>MatTabGroup</code> and <code>MatTabNavBar</code> both implement the
 <a href="https://www.w3.org/WAI/ARIA/apg/patterns/tabs/">ARIA Tabs design pattern</a>. Both components
@@ -110,16 +110,16 @@ if not immediately adjacent to the <code>&lt;nav mat-tab-nav-bar&gt;</code> comp
 reader users to identify the association.</p>
 
         <h4 id="labels" class="docs-header-link">
-          <span header-link="labels"></span>
           Labels
+          <span header-link="labels"></span>
         </h4>
       <p>Always provide an accessible label via <code>aria-label</code> or <code>aria-describedby</code> for tabs without
 descriptive text content.</p>
 <p>When using <code>MatTabNavGroup</code>, always specify a label for the <code>&lt;nav&gt;</code> element.</p>
 
         <h4 id="keyboard-interaction" class="docs-header-link">
-          <span header-link="keyboard-interaction"></span>
           Keyboard interaction
+          <span header-link="keyboard-interaction"></span>
         </h4>
       <p><code>MatTabGroup</code> and <code>MatTabNavBar</code> both implement the following keyboard interactions:</p>
 <table>

@@ -14,8 +14,8 @@ contained inside of a bottom sheet can inject the <code>MatBottomSheetRef</code>
 
 bottomSheetRef.<span class="hljs-title function_">dismiss</span>();</code></pre>
         <h3 id="sharing-data-with-the-bottom-sheet-component" class="docs-header-link">
-          <span header-link="sharing-data-with-the-bottom-sheet-component"></span>
           Sharing data with the bottom sheet component.
+          <span header-link="sharing-data-with-the-bottom-sheet-component"></span>
         </h3>
       <p>If you want to pass in some data to the bottom sheet, you can do so using the <code>data</code> property:</p>
 <pre><code class="language-ts"><span class="hljs-keyword">const</span> bottomSheetRef = bottomSheet.<span class="hljs-title function_">open</span>(<span class="hljs-title class_">HobbitSheet</span>, {
@@ -32,8 +32,8 @@ bottomSheetRef.<span class="hljs-title function_">dismiss</span>();</code></pre>
   data = inject&lt;{<span class="hljs-attr">names</span>: <span class="hljs-built_in">string</span>[]}&gt;(<span class="hljs-variable constant_">MAT_BOTTOM_SHEET_DATA</span>);
 }</code></pre>
         <h3 id="specifying-global-configuration-defaults" class="docs-header-link">
-          <span header-link="specifying-global-configuration-defaults"></span>
           Specifying global configuration defaults
+          <span header-link="specifying-global-configuration-defaults"></span>
         </h3>
       <p>Default bottom sheet options can be specified by providing an instance of <code>MatBottomSheetConfig</code>
 for <code>MAT_BOTTOM_SHEET_DEFAULT_OPTIONS</code> in your application&#39;s root module.</p>
@@ -43,24 +43,24 @@ for <code>MAT_BOTTOM_SHEET_DEFAULT_OPTIONS</code> in your application&#39;s root
   ]
 });</code></pre>
         <h3 id="accessibility" class="docs-header-link">
-          <span header-link="accessibility"></span>
           Accessibility
+          <span header-link="accessibility"></span>
         </h3>
       <p><code>MatBottomSheet</code> creates modal dialogs that implement the ARIA <code>role=&quot;dialog&quot;</code> pattern. This root
 dialog element should be given an accessible label via the <code>ariaLabel</code> property of
 <code>MatBottomSheetConfig</code>.</p>
 
         <h4 id="keyboard-interaction" class="docs-header-link">
-          <span header-link="keyboard-interaction"></span>
           Keyboard interaction
+          <span header-link="keyboard-interaction"></span>
         </h4>
       <p>By default, the escape key closes <code>MatBottomSheet</code>. While you can disable this behavior by using
 the <code>disableClose</code> property of <code>MatBottomSheetConfig</code>, doing this breaks the expected interaction
 pattern for the ARIA <code>role=&quot;dialog&quot;</code> pattern.</p>
 
         <h4 id="focus-management" class="docs-header-link">
-          <span header-link="focus-management"></span>
           Focus management
+          <span header-link="focus-management"></span>
         </h4>
       <p>When opened, <code>MatBottomSheet</code> traps browser focus such that it cannot escape the root
 <code>role=&quot;dialog&quot;</code> element. By default, the first tabbable element in the bottom sheet receives focus.
@@ -95,8 +95,8 @@ from these alternatives. Always test your application to verify the behavior tha
 your users.</p>
 
         <h4 id="focus-restoration" class="docs-header-link">
-          <span header-link="focus-restoration"></span>
           Focus restoration
+          <span header-link="focus-restoration"></span>
         </h4>
       <p>When closed, <code>MatBottomSheet</code> restores focus to the element that previously held focus when the
 bottom sheet opened. However, if that previously focused element no longer exists, you must

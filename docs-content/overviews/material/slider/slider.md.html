@@ -2,8 +2,8 @@
 similar to <code>&lt;input type=&quot;range&quot;&gt;</code>.</p>
 </div><div material-docs-example="slider-overview"></div><div class="docs-markdown">
         <h3 id="selecting-a-value" class="docs-header-link">
-          <span header-link="selecting-a-value"></span>
           Selecting a value
+          <span header-link="selecting-a-value"></span>
         </h3>
       <p>By default the minimum value of the slider is <code>0</code>, the maximum value is <code>100</code>, and the thumb moves
 in increments of <code>1</code>. These values can be changed by setting the <code>min</code>, <code>max</code>, and <code>step</code> attributes
@@ -12,8 +12,8 @@ respectively. The initial value is set to the minimum value unless otherwise spe
   <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">matSliderThumb</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;1.5&quot;</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">mat-slider</span>&gt;</span></code></pre>
         <h3 id="selecting-a-range" class="docs-header-link">
-          <span header-link="selecting-a-range"></span>
           Selecting a range
+          <span header-link="selecting-a-range"></span>
         </h3>
       <p>A <code>&lt;mat-slider&gt;</code> can be converted into a range slider by projecting both a <code>matSliderStartThumb</code> and a
 <code>matSliderEndThumb</code> into it. Each thumb has its own value, but both are still
@@ -25,14 +25,14 @@ that of the <code>matSliderStartThumb</code>, though they both may have the same
   <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">matSliderEndThumb</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">mat-slider</span>&gt;</span></code></pre></div><div material-docs-example="slider-range"></div><div class="docs-markdown">
         <h3 id="use-with-angular-forms" class="docs-header-link">
-          <span header-link="use-with-angular-forms"></span>
           Use with Angular Forms
+          <span header-link="use-with-angular-forms"></span>
         </h3>
       <p><code>&lt;mat-slider&gt;</code> is compatible with <code>@angular/forms</code> and supports <code>FormField</code>, <code>FormsModule</code>, and <code>ReactiveFormsModule</code>.</p>
 
         <h3 id="thumb-label" class="docs-header-link">
-          <span header-link="thumb-label"></span>
           Thumb label
+          <span header-link="thumb-label"></span>
         </h3>
       <p>By default, the exact selected value of a slider is not visible to the user. However, this value can
 be added to the thumb by adding the <code>discrete</code> attribute.</p>
@@ -40,16 +40,16 @@ be added to the thumb by adding the <code>discrete</code> attribute.</p>
   <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">matSliderThumb</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">mat-slider</span>&gt;</span></code></pre>
         <h3 id="formatting-the-thumb-label" class="docs-header-link">
-          <span header-link="formatting-the-thumb-label"></span>
           Formatting the thumb label
+          <span header-link="formatting-the-thumb-label"></span>
         </h3>
       <p>By default, the value in the slider&#39;s thumb label will be the same as the model value, however this
 may end up being too large to fit into the label. If you want to control the value that is being
 displayed, you can do so using the <code>displayWith</code> input.</p>
 </div><div material-docs-example="slider-formatting"></div><div class="docs-markdown">
         <h3 id="tick-marks" class="docs-header-link">
-          <span header-link="tick-marks"></span>
           Tick marks
+          <span header-link="tick-marks"></span>
         </h3>
       <p>By default, sliders do not show tick marks along the thumb track. This can be enabled using the
 <code>showTickMarks</code> attribute.</p>
@@ -57,8 +57,8 @@ displayed, you can do so using the <code>displayWith</code> input.</p>
   <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">matSliderThumb</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">mat-slider</span>&gt;</span></code></pre>
         <h3 id="keyboard-interaction" class="docs-header-link">
-          <span header-link="keyboard-interaction"></span>
           Keyboard interaction
+          <span header-link="keyboard-interaction"></span>
         </h3>
       <p>The slider has the following keyboard bindings:</p>
 <table>
@@ -103,8 +103,8 @@ displayed, you can do so using the <code>displayWith</code> input.</p>
 </tbody></table>
 
         <h3 id="accessibility" class="docs-header-link">
-          <span header-link="accessibility"></span>
           Accessibility
+          <span header-link="accessibility"></span>
         </h3>
       <p><code>MatSlider</code> uses an internal <code>&lt;input type=&quot;range&quot;&gt;</code> to provide an accessible experience. The input
 receives focus and it can be labelled using <code>aria-label</code> or <code>aria-labelledby</code>.</p>

@@ -2,8 +2,8 @@
 typing it in or by selecting it from a list of pre-defined options.</p>
 </div><div material-docs-example="timepicker-overview"></div><div class="docs-markdown">
         <h3 id="connecting-a-timepicker-to-an-input" class="docs-header-link">
-          <span header-link="connecting-a-timepicker-to-an-input"></span>
           Connecting a timepicker to an input
+          <span header-link="connecting-a-timepicker-to-an-input"></span>
         </h3>
       <p>A timepicker is composed of a text input and a dropdown menu, connected through the <code>matTimepicker</code>
 binding on the input.</p>
@@ -15,8 +15,8 @@ binding on the input.</p>
                              file="timepicker-overview-example.html"
                              ></div><div class="docs-markdown">
         <h3 id="use-with-angular-forms" class="docs-header-link">
-          <span header-link="use-with-angular-forms"></span>
           Use with Angular Forms
+          <span header-link="use-with-angular-forms"></span>
         </h3>
       <p><code>matTimepicker</code> is compatible with <code>@angular/forms</code> and supports <code>FormField</code>, <code>FormsModule</code>, and <code>ReactiveFormsModule</code>.</p>
 <p>The timepicker input integrates with the <code>@angular/forms</code> module by providing itself as a
@@ -27,8 +27,8 @@ control doesn&#39;t have a value, the timepicker will create one with today&#39;
 time.</p>
 </div><div material-docs-example="timepicker-forms"></div><div class="docs-markdown">
         <h3 id="integration-with-matdatepicker" class="docs-header-link">
-          <span header-link="integration-with-matdatepicker"></span>
           Integration with <code>MatDatepicker</code>
+          <span header-link="integration-with-matdatepicker"></span>
         </h3>
       <p>Material&#39;s datepicker and timepicker components can operate over the same value, allowing for a
 combined datetime picker to be implemented. When binding the two components to the same value, the
@@ -36,8 +36,8 @@ datepicker will set the entire date object while the timepicker will only modify
 of it.</p>
 </div><div material-docs-example="timepicker-datepicker-integration"></div><div class="docs-markdown">
         <h3 id="input-validation" class="docs-header-link">
-          <span header-link="input-validation"></span>
           Input validation
+          <span header-link="input-validation"></span>
         </h3>
       <p>The timepicker input checks that the value typed in by the user is a valid time string and
 whether it fits into the specified bounds.</p>
@@ -53,8 +53,8 @@ and 9:25 in the evening. If the value is outside of those bounds, either a <code
 <code>matTimepickerMax</code> error will be reported to the value accessor.</p>
 </div><div material-docs-example="timepicker-validation"></div><div class="docs-markdown">
         <h3 id="customizing-the-dropdown-options" class="docs-header-link">
-          <span header-link="customizing-the-dropdown-options"></span>
           Customizing the dropdown options
+          <span header-link="customizing-the-dropdown-options"></span>
         </h3>
       <p>By default the <code>mat-timepicker</code> dropdown shows options at 30 minute intervals. You can customize the
 list of options either by setting an interval or providing a custom set of options.</p>
@@ -83,15 +83,15 @@ options into <code>mat-timepicker</code> instead. Note that the options need to 
 interface.</p>
 </div><div material-docs-example="timepicker-options"></div><div class="docs-markdown">
         <h3 id="customizing-the-toggle-icon" class="docs-header-link">
-          <span header-link="customizing-the-toggle-icon"></span>
           Customizing the toggle icon
+          <span header-link="customizing-the-toggle-icon"></span>
         </h3>
       <p><code>mat-timepicker-toggle</code> renders a clock icon by default. You can customize it by projecting in an
 element with the <code>matTimepickerToggleIcon</code> attribute into the toggle:</p>
 </div><div material-docs-example="timepicker-custom-icon"></div><div class="docs-markdown">
         <h3 id="internationalization" class="docs-header-link">
-          <span header-link="internationalization"></span>
           Internationalization
+          <span header-link="internationalization"></span>
         </h3>
       <p>Internationalization of the timepicker uses the same date adapter as <code>mat-datepicker</code>. It is
 configured via three aspects:</p>
@@ -102,13 +102,13 @@ configured via three aspects:</p>
 </ol>
 
         <h4 id="setting-the-locale-code" class="docs-header-link">
-          <span header-link="setting-the-locale-code"></span>
           Setting the locale code
+          <span header-link="setting-the-locale-code"></span>
         </h4>
       <p>By default, the <code>MAT_DATE_LOCALE</code> injection token will use the existing <code>LOCALE_ID</code> locale code
 from <code>@angular/core</code>. If you want to override it, you can provide a new value for the
 <code>MAT_DATE_LOCALE</code> token:</p>
-<pre><code class="language-ts"><span class="hljs-title function_">bootstapApplication</span>(<span class="hljs-title class_">MyApp</span>, {
+<pre><code class="language-ts"><span class="hljs-title function_">bootstrapApplication</span>(<span class="hljs-title class_">MyApp</span>, {
   <span class="hljs-attr">providers</span>: [{<span class="hljs-attr">provide</span>: <span class="hljs-variable constant_">MAT_DATE_LOCALE</span>, <span class="hljs-attr">useValue</span>: <span class="hljs-string">&#x27;en-GB&#x27;</span>}],
 });</code></pre><p>It&#39;s also possible to set the locale at runtime using the <code>setLocale</code> method of the <code>DateAdapter</code>.</p>
 <p><strong>Note:</strong> if you&#39;re using the <code>provideDateFnsAdapter</code>, you have to provide the data object for your
@@ -117,8 +117,8 @@ compatible with <code>date-fns</code> to <code>MAT_DATE_FORMATS</code>. Locale d
 from <code>date-fns/locale</code>.</p>
 </div><div material-docs-example="timepicker-locale"></div><div class="docs-markdown">
         <h4 id="choosing-a-date-implementation-and-format-settings" class="docs-header-link">
-          <span header-link="choosing-a-date-implementation-and-format-settings"></span>
           Choosing a date implementation and format settings
+          <span header-link="choosing-a-date-implementation-and-format-settings"></span>
         </h4>
       <p>The timepicker is built to be implementation-agnostic and to be interoperable with
 <code>mat-datepicker</code>. This means that it can be made to work with a variety of different date
@@ -217,8 +217,8 @@ your <code>bootstrapApplication</code> format to the following:</p>
   <span class="hljs-attr">providers</span>: [<span class="hljs-title function_">provideDateFnsAdapter</span>()]
 });</code></pre>
         <h4 id="customizing-the-parse-and-display-formats" class="docs-header-link">
-          <span header-link="customizing-the-parse-and-display-formats"></span>
           Customizing the parse and display formats
+          <span header-link="customizing-the-parse-and-display-formats"></span>
         </h4>
       <p>The <code>MAT_DATE_FORMATS</code> object is a collection of formats that the timepicker uses when parsing
 and displaying date objects. These formats are passed through to the <code>DateAdapter</code> so you will want
@@ -234,8 +234,8 @@ configured if your app is using the datepicker, but for the timepicker you need 
   <span class="hljs-attr">providers</span>: [<span class="hljs-title function_">provideNativeDateAdapter</span>(<span class="hljs-variable constant_">MY_NATIVE_DATE_FORMATS</span>)],
 });</code></pre>
         <h3 id="accessibility" class="docs-header-link">
-          <span header-link="accessibility"></span>
           Accessibility
+          <span header-link="accessibility"></span>
         </h3>
       <p>The timepicker implements the <a href="https://www.w3.org/WAI/ARIA/apg/patterns/combobox/">ARIA combobox interaction pattern</a>.
 The timepicker input specifies <code>role=&quot;combobox&quot;</code> while the content of the dropdown applies
@@ -245,13 +245,13 @@ you want to customize the label, you can do so through the <code>ariaLabel</code
 on <code>mat-timepicker</code>.</p>
 
         <h3 id="troubleshooting" class="docs-header-link">
-          <span header-link="troubleshooting"></span>
           Troubleshooting
+          <span header-link="troubleshooting"></span>
         </h3>
       
         <h4 id="error-mattimepicker-no-provider-found-for-dateadaptermatdateformats" class="docs-header-link">
-          <span header-link="error-mattimepicker-no-provider-found-for-dateadaptermatdateformats"></span>
           Error: MatTimepicker: No provider found for DateAdapter/MAT_DATE_FORMATS
+          <span header-link="error-mattimepicker-no-provider-found-for-dateadaptermatdateformats"></span>
         </h4>
       <p>This error is thrown if you haven&#39;t provided all of the injectables the timepicker needs in order to
 work correctly. The easiest way to resolve this is to add <code>provideNativeDateAdapter</code> or
@@ -260,8 +260,8 @@ work correctly. The easiest way to resolve this is to add <code>provideNativeDat
 more information.</p>
 
         <h4 id="error-mattimepicker-incomplete-matdateformats-has-been-provided" class="docs-header-link">
-          <span header-link="error-mattimepicker-incomplete-matdateformats-has-been-provided"></span>
           Error: MatTimepicker: Incomplete <code>MAT_DATE_FORMATS</code> has been provided
+          <span header-link="error-mattimepicker-incomplete-matdateformats-has-been-provided"></span>
         </h4>
       <p>The timepicker needs the <code>display.timeInput</code>, <code>display.timeOptionLabel</code> and <code>parse.timeInput</code> fields
 in <code>MAT_DATE_FORMATS</code> in order to work correctly. You should update your date formats object to
@@ -269,22 +269,22 @@ include include these fields. See <a href="#customizing-the-parse-and-display-fo
 for more information.</p>
 
         <h4 id="error-cannot-specify-both-the-options-and-interval-inputs-at-the-same-time" class="docs-header-link">
-          <span header-link="error-cannot-specify-both-the-options-and-interval-inputs-at-the-same-time"></span>
           Error: Cannot specify both the <code>options</code> and <code>interval</code> inputs at the same time
+          <span header-link="error-cannot-specify-both-the-options-and-interval-inputs-at-the-same-time"></span>
         </h4>
       <p>A <code>mat-timepicker</code> cannot specifify both the <code>options</code> and <code>interval</code> inputs at the same time.
 The template should be updated to remove one of them.</p>
 
         <h4 id="error-value-of-options-input-cannot-be-an-empty-array" class="docs-header-link">
-          <span header-link="error-value-of-options-input-cannot-be-an-empty-array"></span>
           Error: Value of <code>options</code> input cannot be an empty array
+          <span header-link="error-value-of-options-input-cannot-be-an-empty-array"></span>
         </h4>
       <p>The array passed into the <code>options</code> input of <code>mat-timepicker</code> cannot be empty, because the user
 won&#39;t have any options to choose from.</p>
 
         <h4 id="error-a-mattimepicker-can-only-be-associated-with-a-single-input" class="docs-header-link">
-          <span header-link="error-a-mattimepicker-can-only-be-associated-with-a-single-input"></span>
           Error: A MatTimepicker can only be associated with a single input
+          <span header-link="error-a-mattimepicker-can-only-be-associated-with-a-single-input"></span>
         </h4>
       <p>This error is thrown if more than one <code>&lt;input&gt;</code> tries to claim ownership over the same
 <code>&lt;mat-timepicker&gt;</code> (via the <code>matTimepicker</code> attribute on the input). A timepicker can only be

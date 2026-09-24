@@ -5,8 +5,8 @@ including bidi layout support, keyboard interaction, and focus management. All d
 their associated ARIA roles to their host element.</p>
 
         <h3 id="supported-aria-roles" class="docs-header-link">
-          <span header-link="supported-aria-roles"></span>
           Supported ARIA Roles
+          <span header-link="supported-aria-roles"></span>
         </h3>
       <p>The directives in <code>@angular/cdk/listbox</code> set the appropriate roles on their host element.</p>
 <table>
@@ -27,8 +27,8 @@ their associated ARIA roles to their host element.</p>
 </tbody></table>
 
         <h3 id="css-styles-and-classes" class="docs-header-link">
-          <span header-link="css-styles-and-classes"></span>
           CSS Styles and Classes
+          <span header-link="css-styles-and-classes"></span>
         </h3>
       <p>The <code>@angular/cdk/listbox</code> is designed to be highly customizable to your needs. It therefore does not
 make any assumptions about how elements should be styled. You are expected to apply any required
@@ -120,8 +120,8 @@ The available CSS classes are listed below, by directive.</p>
 </tbody></table>
 
         <h3 id="getting-started" class="docs-header-link">
-          <span header-link="getting-started"></span>
           Getting started
+          <span header-link="getting-started"></span>
         </h3>
       <p>Import <code>CdkListbox</code> and <code>CdkOption</code> in the component where you want to create a listbox. You can
 then apply listbox directives to build your custom listbox. A typical listbox consists of the
@@ -134,8 +134,8 @@ following directives:</p>
                              file="cdk-listbox-overview-example.html"
                              region="listbox"></div><div class="docs-markdown">
         <h3 id="option-values" class="docs-header-link">
-          <span header-link="option-values"></span>
           Option values
+          <span header-link="option-values"></span>
         </h3>
       <p>Each option in a listbox is bound to the value it represents when selected, e.g.
 <code>&lt;li cdkOption=&quot;red&quot;&gt;Red&lt;/li&gt;</code>. Within a single listbox, each option must have a unique value. If 
@@ -145,8 +145,8 @@ an option is not explicitly given a value, its value is considered to be <code>&
                              file="cdk-listbox-overview-example.html"
                              region="option"></div><div class="docs-markdown">
         <h3 id="single-vs-multiple-selection" class="docs-header-link">
-          <span header-link="single-vs-multiple-selection"></span>
           Single vs multiple selection
+          <span header-link="single-vs-multiple-selection"></span>
         </h3>
       <p>Listboxes only support a single selected option at a time by default, but adding 
 <code>cdkListboxMultiple</code> will enable selecting more than one option.</p>
@@ -154,8 +154,8 @@ an option is not explicitly given a value, its value is considered to be <code>&
                              file="cdk-listbox-multiple-example.html"
                              region="listbox"></div><div class="docs-markdown">
         <h3 id="listbox-value" class="docs-header-link">
-          <span header-link="listbox-value"></span>
           Listbox value
+          <span header-link="listbox-value"></span>
         </h3>
       <p>The listbox&#39;s value is an array containing the values of the selected option(s). This is true even
 for the single selection listbox, whose value is an array containing a single element. The listbox&#39;s
@@ -170,8 +170,8 @@ objects, you should provide a custom comparison function instead. This can be se
                              file="cdk-listbox-compare-with-example.html"
                              region="listbox"></div><div class="docs-markdown">
         <h3 id="angular-forms-support" class="docs-header-link">
-          <span header-link="angular-forms-support"></span>
           Angular Forms support
+          <span header-link="angular-forms-support"></span>
         </h3>
       <p>The CDK Listbox supports both template driven forms and reactive forms.</p>
 </div><div material-docs-example="cdk-listbox-template-forms"
@@ -180,8 +180,8 @@ objects, you should provide a custom comparison function instead. This can be se
                              file="cdk-listbox-reactive-forms-example.html"
                              region="listbox"></div><div class="docs-markdown">
         <h3 id="disabling-options" class="docs-header-link">
-          <span header-link="disabling-options"></span>
           Disabling options
+          <span header-link="disabling-options"></span>
         </h3>
       <p>You can disable options for selection by setting <code>cdkOptionDisabled</code>.
 In addition, the entire listbox control can be disabled by setting <code>cdkListboxDisabled</code> on the
@@ -190,8 +190,8 @@ listbox element.</p>
                              file="cdk-listbox-disabled-example.html"
                              region="listbox"></div><div class="docs-markdown">
         <h3 id="accessibility" class="docs-header-link">
-          <span header-link="accessibility"></span>
           Accessibility
+          <span header-link="accessibility"></span>
         </h3>
       <p>The directives defined in <code>@angular/cdk/listbox</code> follow accessibility best practices as defined
 in the <a href="https://www.w3.org/WAI/ARIA/apg/patterns/listbox/" title="WAI ARIA Listbox Pattern">ARIA spec</a>. Keyboard interaction is supported as defined in the
@@ -199,16 +199,16 @@ in the <a href="https://www.w3.org/WAI/ARIA/apg/patterns/listbox/" title="WAI AR
 logic (TODO: should we make this an option?).</p>
 
         <h4 id="listbox-label" class="docs-header-link">
-          <span header-link="listbox-label"></span>
           Listbox label
+          <span header-link="listbox-label"></span>
         </h4>
       <p>Always give the listbox a meaningful label for screen readers. If your listbox has a visual label,
 you can associate it with the listbox using <code>aria-labelledby</code>, otherwise you should provide a
 screen-reader-only label with <code>aria-label</code>.</p>
 
         <h4 id="roving-tabindex-vs-active-descendant" class="docs-header-link">
-          <span header-link="roving-tabindex-vs-active-descendant"></span>
           Roving tabindex vs active descendant
+          <span header-link="roving-tabindex-vs-active-descendant"></span>
         </h4>
       <p>By default, the CDK listbox uses the <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/Keyboard-navigable_JavaScript_widgets#technique_1_roving_tabindex" title="MDN Roving Tabindex Technique">roving tabindex</a> strategy to manage focus.
 If you prefer to use the <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/Keyboard-navigable_JavaScript_widgets#technique_2_aria-activedescendant" title="MDN aria-activedescendant Technique">aria-activedescendant</a> strategy instead, set
@@ -217,8 +217,8 @@ If you prefer to use the <a href="https://developer.mozilla.org/en-US/docs/Web/A
                              file="cdk-listbox-activedescendant-example.html"
                              region="listbox"></div><div class="docs-markdown">
         <h4 id="orientation" class="docs-header-link">
-          <span header-link="orientation"></span>
           Orientation
+          <span header-link="orientation"></span>
         </h4>
       <p>Listboxes assume a vertical orientation by default, but can be customized by setting the
 <code>cdkListboxOrientation</code> input. Note that this only affects the keyboard navigation. You
@@ -227,8 +227,8 @@ will still need to adjust your CSS styles to change the visual appearance.</p>
                              file="cdk-listbox-horizontal-example.html"
                              region="listbox"></div><div class="docs-markdown">
         <h4 id="option-typeahead" class="docs-header-link">
-          <span header-link="option-typeahead"></span>
           Option typeahead
+          <span header-link="option-typeahead"></span>
         </h4>
       <p>The CDK listbox supports typeahead based on the option text. If the typeahead text for your options
 needs to be different than the display text (e.g. to exclude emoji), this can be accomplished by
@@ -237,8 +237,8 @@ setting the <code>cdkOptionTypeaheadLabel</code> on the option.</p>
                              file="cdk-listbox-custom-typeahead-example.html"
                              region="listbox"></div><div class="docs-markdown">
         <h4 id="keyboard-navigation-options" class="docs-header-link">
-          <span header-link="keyboard-navigation-options"></span>
           Keyboard navigation options
+          <span header-link="keyboard-navigation-options"></span>
         </h4>
       <p>When using keyboard navigation to navigate through the options, the navigation wraps when attempting
 to navigate past the start or end of the options. To change this, set

@@ -60,8 +60,8 @@ attribute, for example <code>matButton=&quot;outlined&quot;</code>:</p>
 </tbody></table>
 
         <h3 id="extended-fab-buttons" class="docs-header-link">
-          <span header-link="extended-fab-buttons"></span>
           Extended FAB buttons
+          <span header-link="extended-fab-buttons"></span>
         </h3>
       <p>Traditional floating action buttons (FAB) buttons are circular and only have space for a single
 icon. However, you can add the <code>extended</code> attribute to allow the fab to expand into a rounded
@@ -72,8 +72,8 @@ the <code>extended</code> attribute, mini FABs do not.</p>
   Home
 <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></code></pre>
         <h3 id="icon-positioning" class="docs-header-link">
-          <span header-link="icon-positioning"></span>
           Icon positioning
+          <span header-link="icon-positioning"></span>
         </h3>
       <p>Buttons can contain icons alongside text. By default, icons (<code>.material-icons</code>, <code>mat-icon</code>,
 <code>.material-symbols-outlined</code>, <code>.material-symbols-rounded</code>, <code>.material-symbols-sharp</code> or elements
@@ -97,8 +97,8 @@ set, add the <code>matButtonIcon</code> attribute so that the button can project
   Action
 <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></code></pre>
         <h3 id="interactive-disabled-buttons" class="docs-header-link">
-          <span header-link="interactive-disabled-buttons"></span>
           Interactive disabled buttons
+          <span header-link="interactive-disabled-buttons"></span>
         </h3>
       <p>Native disabled <code>&lt;button&gt;</code> elements cannot receive focus and do not dispatch any events. This can
 be problematic in some cases because it can prevent the app from telling the user why the button is
@@ -110,14 +110,14 @@ actions to no longer do so, for example a submit button in a form. When using th
 guard against such cases in your component.</p>
 </div><div material-docs-example="button-disabled-interactive"></div><div class="docs-markdown">
         <h3 id="buttons-with-progress-indicators" class="docs-header-link">
-          <span header-link="buttons-with-progress-indicators"></span>
           Buttons with progress indicators
+          <span header-link="buttons-with-progress-indicators"></span>
         </h3>
       <p>An element with the <code>progressIndicator</code> attribute may be projected into the button element. When the <code>showProgress</code> input is <code>true</code> this element will be shown over the content of the button and the content of the button will be made invisible.</p>
 </div><div material-docs-example="button-progress-indicator"></div><div class="docs-markdown">
         <h3 id="accessibility" class="docs-header-link">
-          <span header-link="accessibility"></span>
           Accessibility
+          <span header-link="accessibility"></span>
         </h3>
       <p>Angular Material uses native <code>&lt;button&gt;</code> and <code>&lt;a&gt;</code> elements to ensure an accessible experience by
 default. A <code>&lt;button&gt;</code> element should be used for any interaction that <em>performs an action on the
@@ -125,16 +125,16 @@ current page</em>. An <code>&lt;a&gt;</code> element should be used for any inte
 URL</em>. All standard accessibility best practices for buttons and anchors apply to <code>MatButton</code>.</p>
 
         <h4 id="capitalization" class="docs-header-link">
-          <span header-link="capitalization"></span>
           Capitalization
+          <span header-link="capitalization"></span>
         </h4>
       <p>Using ALL CAPS in the button text itself causes issues for screen-readers, which
 will read the text character-by-character. It can also cause issues for localization.
 We recommend not changing the default capitalization for the button text.</p>
 
         <h4 id="disabling-anchors" class="docs-header-link">
-          <span header-link="disabling-anchors"></span>
           Disabling anchors
+          <span header-link="disabling-anchors"></span>
         </h4>
       <p><code>MatAnchor</code> supports disabling an anchor in addition to the features provided by the native
 <code>&lt;a&gt;</code> element. When you disable an anchor, the component sets <code>aria-disabled=&quot;true&quot;</code> and
@@ -142,8 +142,8 @@ We recommend not changing the default capitalization for the button text.</p>
 with any assistive technology your application supports.</p>
 
         <h4 id="buttons-with-icons" class="docs-header-link">
-          <span header-link="buttons-with-icons"></span>
           Buttons with icons
+          <span header-link="buttons-with-icons"></span>
         </h4>
       <p>Buttons or links containing only icons (such as <code>matFab</code>, <code>matMiniFab</code>, and <code>matIconButton</code>)
 should be given a meaningful label via <code>aria-label</code> or <code>aria-labelledby</code>. <a href="https://material.angular.dev/components/icon">See the documentation
@@ -151,15 +151,15 @@ for <code>MatIcon</code></a> for more
 information on using icons in buttons. Additionally, to be fully accessible the icon should have a minimum touch-target of 48x48 to ensure that the icon is easily clickable particularly on mobile devices and small screens.</p>
 
         <h4 id="toggle-buttons" class="docs-header-link">
-          <span header-link="toggle-buttons"></span>
           Toggle buttons
+          <span header-link="toggle-buttons"></span>
         </h4>
       <p><a href="https://material.angular.dev/components/button-toggle">See the documentation for <code>MatButtonToggle</code></a>
 for information on stateful toggle buttons.</p>
 
         <h4 id="buttons-with-progress-indicators" class="docs-header-link">
-          <span header-link="buttons-with-progress-indicators"></span>
           Buttons with progress indicators
+          <span header-link="buttons-with-progress-indicators"></span>
         </h4>
       <p>The element projected using the <code>progressIndicator</code> attribute must not be interactable. When using <code>MatProgressSpinner</code> set <code>tabindex=&quot;&quot;</code> to remove the progress indicator for the tab order.</p>
 </div>

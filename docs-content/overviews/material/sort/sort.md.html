@@ -2,8 +2,8 @@
 to tabular data.</p>
 </div><div material-docs-example="sort-overview"></div><div class="docs-markdown">
         <h3 id="adding-sort-to-table-headers" class="docs-header-link">
-          <span header-link="adding-sort-to-table-headers"></span>
           Adding sort to table headers
+          <span header-link="adding-sort-to-table-headers"></span>
         </h3>
       <p>To add sorting behavior and styling to a set of table headers, add the <code>&lt;mat-sort-header&gt;</code> component
 to each header and provide an <code>id</code> that will identify it. These headers should be contained within a
@@ -14,8 +14,8 @@ parent element with the <code>matSort</code> directive, which will emit a <code>
 direction to sort (<code>asc</code> or <code>desc</code>).</p>
 
         <h4 id="changing-the-sort-order" class="docs-header-link">
-          <span header-link="changing-the-sort-order"></span>
           Changing the sort order
+          <span header-link="changing-the-sort-order"></span>
         </h4>
       <p>By default, a sort header starts its sorting at <code>asc</code> and then <code>desc</code>. Triggering the sort header
 after <code>desc</code> will remove sorting.</p>
@@ -27,29 +27,29 @@ instead.</p>
 <code>true</code> on a specific header.</p>
 
         <h4 id="disabling-sorting" class="docs-header-link">
-          <span header-link="disabling-sorting"></span>
           Disabling sorting
+          <span header-link="disabling-sorting"></span>
         </h4>
       <p>If you want to prevent the user from changing the sorting order of any column, you can use the
 <code>matSortDisabled</code> binding on the <code>mat-sort</code>, or the <code>disabled</code> on a single <code>mat-sort-header</code>.</p>
 
         <h4 id="using-sort-with-the-mat-table" class="docs-header-link">
-          <span header-link="using-sort-with-the-mat-table"></span>
           Using sort with the mat-table
+          <span header-link="using-sort-with-the-mat-table"></span>
         </h4>
       <p>When used on a <code>mat-table</code> header, it is not required to set a <code>mat-sort-header</code> id on because
 by default it will use the id of the column.</p>
 </div><div material-docs-example="table-sorting"></div><div class="docs-markdown">
         <h4 id="customizing-the-icon" class="docs-header-link">
-          <span header-link="customizing-the-icon"></span>
           Customizing the icon
+          <span header-link="customizing-the-icon"></span>
         </h4>
       <p>You can set your own icon for a <code>mat-sort-header</code> by projecting in an element with the
 <code>matSortHeaderIcon</code> attribute.</p>
 </div><div material-docs-example="sort-custom-icon"></div><div class="docs-markdown">
         <h3 id="accessibility" class="docs-header-link">
-          <span header-link="accessibility"></span>
           Accessibility
+          <span header-link="accessibility"></span>
         </h3>
       <p>When you apply <code>MatSortHeader</code> to a header cell element, the component wraps the content of the
 header cell inside a button. The text content of the header cell then becomes the accessible

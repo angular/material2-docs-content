@@ -1,8 +1,8 @@
 <div class="docs-markdown"><p>The autocomplete is a normal text input enhanced by a panel of suggested options.</p>
 
         <h3 id="simple-autocomplete" class="docs-header-link">
-          <span header-link="simple-autocomplete"></span>
           Simple autocomplete
+          <span header-link="simple-autocomplete"></span>
         </h3>
       <p>Start by creating the autocomplete panel and the options displayed inside it. Each option should be
 defined by a <code>mat-option</code> tag. Set each option&#39;s value property to whatever you&#39;d like the value
@@ -26,14 +26,14 @@ to the input&#39;s <code>matAutocomplete</code> property.</p>
                              file="autocomplete-simple-example.html"
                              region="input"></div><div class="docs-markdown">
         <h3 id="use-with-angular-forms" class="docs-header-link">
-          <span header-link="use-with-angular-forms"></span>
           Use with Angular Forms
+          <span header-link="use-with-angular-forms"></span>
         </h3>
       <p><code>matAutocomplete</code> is compatible with <code>@angular/forms</code> and supports <code>FormField</code>, <code>FormsModule</code>, and <code>ReactiveFormsModule</code>.</p>
 
         <h3 id="adding-a-custom-filter" class="docs-header-link">
-          <span header-link="adding-a-custom-filter"></span>
           Adding a custom filter
+          <span header-link="adding-a-custom-filter"></span>
         </h3>
       <p>At this point, the autocomplete panel should be toggleable on focus and options should be
 selectable. But if we want our options to filter when we type, we need to add a custom filter.</p>
@@ -50,8 +50,8 @@ filter criteria. This is especially helpful for screenreader users if you&#39;re
 filter that doesn&#39;t limit matches to the beginning of the string.</p>
 </div><div material-docs-example="autocomplete-filter"></div><div class="docs-markdown">
         <h3 id="setting-separate-control-and-display-values" class="docs-header-link">
-          <span header-link="setting-separate-control-and-display-values"></span>
           Setting separate control and display values
+          <span header-link="setting-separate-control-and-display-values"></span>
         </h3>
       <p>If you want the option&#39;s control value (what is saved in the form) to be different than the option&#39;s
 display value (what is displayed in the text field), you&#39;ll need to set the <code>displayWith</code>
@@ -61,8 +61,8 @@ data as an object, but display just one of the option&#39;s string properties.</
 desired display value. Then bind it to the autocomplete&#39;s <code>displayWith</code> property.</p>
 </div><div material-docs-example="autocomplete-display"></div><div class="docs-markdown">
         <h3 id="require-an-option-to-be-selected" class="docs-header-link">
-          <span header-link="require-an-option-to-be-selected"></span>
           Require an option to be selected
+          <span header-link="require-an-option-to-be-selected"></span>
         </h3>
       <p>By default, the autocomplete will accept the value that the user typed into the input field.
 Instead, if you want to ensure that an option from the autocomplete was selected, you can
@@ -78,8 +78,8 @@ be preserved.</li>
 injection token.</p>
 </div><div material-docs-example="autocomplete-require-selection"></div><div class="docs-markdown">
         <h3 id="automatically-highlighting-the-first-option" class="docs-header-link">
-          <span header-link="automatically-highlighting-the-first-option"></span>
           Automatically highlighting the first option
+          <span header-link="automatically-highlighting-the-first-option"></span>
         </h3>
       <p>If your use case requires for the first autocomplete option to be highlighted when the user opens
 the panel, you can do so by setting the <code>autoActiveFirstOption</code> input on the <code>mat-autocomplete</code>
@@ -87,16 +87,16 @@ component. This behavior can be configured globally using the <code>MAT_AUTOCOMP
 injection token.</p>
 </div><div material-docs-example="autocomplete-auto-active-first-option"></div><div class="docs-markdown">
         <h3 id="autocomplete-on-a-custom-input-element" class="docs-header-link">
-          <span header-link="autocomplete-on-a-custom-input-element"></span>
           Autocomplete on a custom input element
+          <span header-link="autocomplete-on-a-custom-input-element"></span>
         </h3>
       <p>While <code>mat-autocomplete</code> supports attaching itself to a <code>mat-form-field</code>, you can also set it on
 any other <code>input</code> element using the <code>matAutocomplete</code> attribute. This allows you to customize what
 the input looks like without having to bring in the extra functionality from <code>mat-form-field</code>.</p>
 </div><div material-docs-example="autocomplete-plain-input"></div><div class="docs-markdown">
         <h3 id="attaching-the-autocomplete-panel-to-a-different-element" class="docs-header-link">
-          <span header-link="attaching-the-autocomplete-panel-to-a-different-element"></span>
           Attaching the autocomplete panel to a different element
+          <span header-link="attaching-the-autocomplete-panel-to-a-different-element"></span>
         </h3>
       <p>By default the autocomplete panel will be attached to your input element, however in some cases you
 may want it to attach to a different container element. You can change the element that the
@@ -116,8 +116,8 @@ autocomplete is attached to using the <code>matAutocompleteOrigin</code> directi
   }
 <span class="hljs-tag">&lt;/<span class="hljs-name">mat-autocomplete</span>&gt;</span></code></pre>
         <h3 id="keyboard-interaction" class="docs-header-link">
-          <span header-link="keyboard-interaction"></span>
           Keyboard interaction
+          <span header-link="keyboard-interaction"></span>
         </h3>
       <table>
 <thead>
@@ -153,16 +153,16 @@ autocomplete is attached to using the <code>matAutocompleteOrigin</code> directi
 </tbody></table>
 
         <h3 id="option-groups" class="docs-header-link">
-          <span header-link="option-groups"></span>
           Option groups
+          <span header-link="option-groups"></span>
         </h3>
       <p><code>mat-option</code> can be collected into groups using the <code>mat-optgroup</code> element:</p>
 </div><div material-docs-example="autocomplete-optgroup"
                              file="autocomplete-optgroup-example.html"
                              region="mat-autocomplete"></div><div class="docs-markdown">
         <h3 id="accessibility" class="docs-header-link">
-          <span header-link="accessibility"></span>
           Accessibility
+          <span header-link="accessibility"></span>
         </h3>
       <p><code>MatAutocomplete</code> implements the ARIA combobox interaction pattern. The text input trigger specifies
 <code>role=&quot;combobox&quot;</code> while the content of the pop-up applies <code>role=&quot;listbox&quot;</code>. Because of this listbox

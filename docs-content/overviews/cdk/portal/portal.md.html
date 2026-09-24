@@ -1,8 +1,8 @@
 <div class="docs-markdown"><p>The <code>portals</code> package provides a flexible system for rendering dynamic content into an application.</p>
 
         <h3 id="portals" class="docs-header-link">
-          <span header-link="portals"></span>
           Portals
+          <span header-link="portals"></span>
         </h3>
       <p>A <code>Portal</code> is a piece of UI that can be dynamically rendered to an open slot on the page.</p>
 <p>The &quot;piece of UI&quot; can be either a <code>Component</code>, a <code>TemplateRef</code> or a DOM element and the &quot;open slot&quot; is
@@ -11,8 +11,8 @@ a <code>PortalOutlet</code>.</p>
 built upon.</p>
 </div><div material-docs-example="cdk-portal-overview"></div><div class="docs-markdown">
         <h5 id="portallesstgreater" class="docs-header-link">
-          <span header-link="portallesstgreater"></span>
           <code>Portal&lt;T&gt;</code>
+          <span header-link="portallesstgreater"></span>
         </h5>
       <table>
 <thead>
@@ -36,8 +36,8 @@ built upon.</p>
 </tbody></table>
 
         <h5 id="portaloutlet" class="docs-header-link">
-          <span header-link="portaloutlet"></span>
           <code>PortalOutlet</code>
+          <span header-link="portaloutlet"></span>
         </h5>
       <table>
 <thead>
@@ -65,13 +65,13 @@ built upon.</p>
 </tbody></table>
 
         <h4 id="portals-in-practice" class="docs-header-link">
-          <span header-link="portals-in-practice"></span>
           Portals in practice
+          <span header-link="portals-in-practice"></span>
         </h4>
       
         <h5 id="cdkportal" class="docs-header-link">
-          <span header-link="cdkportal"></span>
           <code>CdkPortal</code>
+          <span header-link="cdkportal"></span>
         </h5>
       <p>Used to get a portal from an <code>&lt;ng-template&gt;</code>. <code>CdkPortal</code> <em>is</em> a <code>Portal</code>.</p>
 <p>Usage:</p>
@@ -88,8 +88,8 @@ built upon.</p>
 <code>CdkPortal</code>.</p>
 
         <h5 id="componentportal" class="docs-header-link">
-          <span header-link="componentportal"></span>
           <code>ComponentPortal</code>
+          <span header-link="componentportal"></span>
         </h5>
       <p>Used to create a portal from a component type.</p>
 <p>Usage:</p>
@@ -97,8 +97,8 @@ built upon.</p>
   <span class="hljs-variable language_">this</span>.<span class="hljs-property">userSettingsPortal</span> = <span class="hljs-keyword">new</span> <span class="hljs-title class_">ComponentPortal</span>(<span class="hljs-title class_">UserSettingsComponent</span>);
 }</code></pre>
         <h5 id="templateportal" class="docs-header-link">
-          <span header-link="templateportal"></span>
           <code>TemplatePortal</code>
+          <span header-link="templateportal"></span>
         </h5>
       <p>You can create a <code>TemplatePortal</code> from an <code>&lt;ng-template&gt;</code>. <code>TemplatePortal</code> allows you to take Angular content within one template and render it somewhere else.</p>
 <p>Usage:</p>
@@ -111,8 +111,8 @@ built upon.</p>
   );
 }</code></pre>
         <h5 id="domportal" class="docs-header-link">
-          <span header-link="domportal"></span>
           <code>DomPortal</code>
+          <span header-link="domportal"></span>
         </h5>
       <p>You can create a <code>DomPortal</code> from any native DOM element. <code>DomPortal</code> allows you to take any arbitrary DOM content and render it somewhere else. <code>DomPortal</code> moves content <em>as is</em>, so elements with Angular features like bindings or directives may no longer update if moved via <code>DomPortal</code>.</p>
 <p>Usage:</p>
@@ -121,8 +121,8 @@ built upon.</p>
   <span class="hljs-variable language_">this</span>.<span class="hljs-property">domPortal</span> = <span class="hljs-keyword">new</span> <span class="hljs-title class_">DomPortal</span>(<span class="hljs-variable language_">this</span>.<span class="hljs-property">domPortalContent</span>);
 }</code></pre>
         <h5 id="cdkportaloutlet" class="docs-header-link">
-          <span header-link="cdkportaloutlet"></span>
           <code>CdkPortalOutlet</code>
+          <span header-link="cdkportaloutlet"></span>
         </h5>
       <p>Used to add a portal outlet to a template. <code>CdkPortalOutlet</code> <em>is</em> a <code>PortalOutlet</code>.</p>
 <p>Usage:</p>

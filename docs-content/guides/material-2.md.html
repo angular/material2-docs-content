@@ -1,7 +1,7 @@
 <div class="docs-markdown"><h1>Theming Angular Material 2</h1>
         <h2 id="what-is-theming" class="docs-header-link">
-          <span header-link="what-is-theming"></span>
           What is theming?
+          <span header-link="what-is-theming"></span>
         </h2>
       <p>Angular Material&#39;s theming system lets you customize base, color, typography, and density styles for
 components in your application. The theming system is based on Google&#39;s
@@ -15,8 +15,8 @@ see <a href="https://material.angular.dev/guide/typography">Angular Material Typ
 customizable with this system, see <a href="https://material.angular.dev/guide/theming-your-components">Theming your own components</a>.</p>
 
         <h3 id="sass" class="docs-header-link">
-          <span header-link="sass"></span>
           Sass
+          <span header-link="sass"></span>
         </h3>
       <p>Angular Material&#39;s theming APIs are built with <a href="https://sass-lang.com">Sass</a>. This document assumes
 familiarity with CSS and Sass basics, including variables, functions, and mixins.</p>
@@ -25,8 +25,8 @@ familiarity with CSS and Sass basics, including variables, functions, and mixins
 directly gives you the most control over the styles in your application.</p>
 
         <h2 id="palettes" class="docs-header-link">
-          <span header-link="palettes"></span>
           Palettes
+          <span header-link="palettes"></span>
         </h2>
       <p>A <strong>palette</strong> is a collection of colors representing a portion of color space. Each value in this
 collection is called a <strong>hue</strong>. In Material Design, each hues in a palette has an identifier number.
@@ -51,8 +51,8 @@ structure of a palette. <a href="https://m2.material.io/design/color/the-color-s
  )
 );</code></pre>
         <h3 id="create-your-own-palette" class="docs-header-link">
-          <span header-link="create-your-own-palette"></span>
           Create your own palette
+          <span header-link="create-your-own-palette"></span>
         </h3>
       <p>You can create your own palette by defining a Sass map that matches the structure described in the
 <a href="#palettes">Palettes</a> section above. The map must define hues for 50 and each hundred between 100
@@ -61,8 +61,8 @@ and 900. The map must also define a <code>contrast</code> map with contrast colo
 palette.</p>
 
         <h3 id="predefined-palettes" class="docs-header-link">
-          <span header-link="predefined-palettes"></span>
           Predefined palettes
+          <span header-link="predefined-palettes"></span>
         </h3>
       <p>Angular Material offers predefined palettes based on the 2014 version of the Material Design
 spec. See the <a href="https://material.io/archive/guidelines/style/color.html#color-color-palette">Material Design 2014 color palettes</a> for a full list.</p>
@@ -74,8 +74,8 @@ require these hues, but you can use these hues when defining a theme as describe
 
 <span class="hljs-variable">$my-palette</span>: mat.<span class="hljs-variable">$m2-indigo-palette</span>;</code></pre>
         <h2 id="themes" class="docs-header-link">
-          <span header-link="themes"></span>
           Themes
+          <span header-link="themes"></span>
         </h2>
       <p>A <strong>theme</strong> is a collection of color, typography, and density options. Each theme includes three
 palettes that determine component colors:</p>
@@ -88,15 +88,15 @@ palettes that determine component colors:</p>
 custom theme with Sass, or by importing a pre-built theme CSS file.</p>
 
         <h3 id="custom-themes-with-sass" class="docs-header-link">
-          <span header-link="custom-themes-with-sass"></span>
           Custom themes with Sass
+          <span header-link="custom-themes-with-sass"></span>
         </h3>
       <p>A <strong>theme file</strong> is a Sass file that calls Angular Material Sass mixins to output color,
 typography, and density CSS styles.</p>
 
         <h4 id="defining-a-theme" class="docs-header-link">
-          <span header-link="defining-a-theme"></span>
           Defining a theme
+          <span header-link="defining-a-theme"></span>
         </h4>
       <p>Angular Material represents a theme as a Sass map that contains your color, typography, and density
 choices, as well as some base design system settings. See
@@ -135,8 +135,8 @@ background and foreground colors used throughout the components.</p>
  density: <span class="hljs-number">0</span>,
 ));</code></pre>
         <h4 id="applying-a-theme-to-components" class="docs-header-link">
-          <span header-link="applying-a-theme-to-components"></span>
           Applying a theme to components
+          <span header-link="applying-a-theme-to-components"></span>
         </h4>
       <p>The <code>core-theme</code> Sass mixin emits prerequisite styles for common features used by multiple
 components, such as ripples. This mixin must be included once per theme.</p>
@@ -196,14 +196,14 @@ uses every single component, this will produce unnecessary CSS.</p>
 your project&#39;s <code>angular.json</code> file</a>.</p>
 
         <h4 id="theming-dimensions" class="docs-header-link">
-          <span header-link="theming-dimensions"></span>
           Theming dimensions
+          <span header-link="theming-dimensions"></span>
         </h4>
       <p>Angular Material themes are divided along four dimensions: base, color, typography, and density.</p>
 
         <h5 id="base" class="docs-header-link">
-          <span header-link="base"></span>
           Base
+          <span header-link="base"></span>
         </h5>
       <p>Common base styles for the design system. These styles don&#39;t change based on your configured
 colors, typography, or density, so they only need to be included once per application. These
@@ -212,8 +212,8 @@ mixin that can be used to include its base styles. (For example,
 <code>@include mat.checkbox-base($theme)</code>)</p>
 
         <h5 id="color" class="docs-header-link">
-          <span header-link="color"></span>
           Color
+          <span header-link="color"></span>
         </h5>
       <p>Styles related to the colors in your application. These style should be included at least once in
 your application. Depending on your needs, you may need to include these styles multiple times
@@ -222,8 +222,8 @@ All components have a color mixin that can be used to include its color styles. 
 <code>@include mat.checkbox-color($theme)</code>)</p>
 
         <h5 id="typography" class="docs-header-link">
-          <span header-link="typography"></span>
           Typography
+          <span header-link="typography"></span>
         </h5>
       <p>Styles related to the fonts used in your application, including the font family, size, weight,
 line-height, and letter-spacing. These style should be included at least once in your application.
@@ -233,8 +233,8 @@ font.) All components  have a typography mixin that can be used to include its t
 styles. (For example, <code>@include mat.checkbox-typography($theme)</code>)</p>
 
         <h5 id="density" class="docs-header-link">
-          <span header-link="density"></span>
           Density
+          <span header-link="density"></span>
         </h5>
       <p>Styles related to the size and spacing of elements in your application. These style should be
 included at least once in your application. Depending on your needs, you may need to include these
@@ -243,8 +243,8 @@ normal and compact mode). All components have a density mixin that can be used t
 density styles. (For example, <code>@include mat.checkbox-density($theme)</code>)</p>
 
         <h5 id="theme-mixin" class="docs-header-link">
-          <span header-link="theme-mixin"></span>
           Theme mixin
+          <span header-link="theme-mixin"></span>
         </h5>
       <p>All components also support a theme mixin that can be used to include the component&#39;s styles for all
 theme dimensions at once. (For example, <code>@include mat.checkbox-theme($theme)</code>).</p>
@@ -253,8 +253,8 @@ needed use the single dimension mixins to override particular aspects for parts 
 section on <a href="#multiple-themes-in-one-file">Multiple themes in one file</a>.)</p>
 
         <h3 id="using-a-pre-built-theme" class="docs-header-link">
-          <span header-link="using-a-pre-built-theme"></span>
           Using a pre-built theme
+          <span header-link="using-a-pre-built-theme"></span>
         </h3>
       <p>Angular Material includes four pre-built theme CSS files, each with different palettes selected.
 You can use one of these pre-built themes if you don&#39;t want to define a custom theme with Sass.</p>
@@ -297,16 +297,16 @@ application, <a href="https://angular.dev/reference/configs/workspace-config#sty
 file</a>.</p>
 
         <h3 id="defining-multiple-themes" class="docs-header-link">
-          <span header-link="defining-multiple-themes"></span>
           Defining multiple themes
+          <span header-link="defining-multiple-themes"></span>
         </h3>
       <p>Using the Sass API described in <a href="#defining-a-theme">Defining a theme</a>, you can also define
 <em>multiple</em> themes by repeating the API calls multiple times. You can do this either in the same
 theme file or in separate theme files.</p>
 
         <h4 id="multiple-themes-in-one-file" class="docs-header-link">
-          <span header-link="multiple-themes-in-one-file"></span>
           Multiple themes in one file
+          <span header-link="multiple-themes-in-one-file"></span>
         </h4>
       <p>Defining multiple themes in a single file allows you to support multiple themes without having to
 manage loading of multiple CSS assets. The downside, however, is that your CSS will include more
@@ -346,8 +346,8 @@ CSS rule declaration. See the <a href="https://sass-lang.com/documentation/at-ru
  <span class="hljs-keyword">@include</span> mat.button-color(<span class="hljs-variable">$light-theme</span>);
 }</code></pre>
         <h4 id="multiple-themes-across-separate-files" class="docs-header-link">
-          <span header-link="multiple-themes-across-separate-files"></span>
           Multiple themes across separate files
+          <span header-link="multiple-themes-across-separate-files"></span>
         </h4>
       <p>You can define multiple themes in separate files by creating multiple theme files per
 <a href="#defining-a-theme">Defining a theme</a>, adding each of the files to the <code>styles</code> of your
@@ -357,8 +357,8 @@ this property to <code>false</code>, your application becomes responsible for ma
 file. The approach for this loading depends on your application.</p>
 
         <h3 id="application-background-color" class="docs-header-link">
-          <span header-link="application-background-color"></span>
           Application background color
+          <span header-link="application-background-color"></span>
         </h3>
       <p>By default, Angular Material does not apply any styles to your DOM outside
 its own components. If you want to set your application&#39;s background color
@@ -370,8 +370,8 @@ to match the components&#39; theme, you can either:</p>
 </ol>
 
         <h3 id="scoping-style-customizations" class="docs-header-link">
-          <span header-link="scoping-style-customizations"></span>
           Scoping style customizations
+          <span header-link="scoping-style-customizations"></span>
         </h3>
       <p>You can use Angular Material&#39;s Sass mixins to customize component styles within a specific scope
 in your application. The CSS rule declaration in which you include a Sass mixin determines its scope.
@@ -389,8 +389,8 @@ The example below shows how to customize the color of all buttons inside element
  <span class="hljs-keyword">@include</span> mat.button-color(<span class="hljs-variable">$special-theme</span>);
 }</code></pre>
         <h2 id="customizing-density" class="docs-header-link">
-          <span header-link="customizing-density"></span>
           Customizing density
+          <span header-link="customizing-density"></span>
         </h2>
       <p>Angular Material&#39;s density customization is based on the
 <a href="https://m2.material.io/design/layout/applying-density.html">Material Design density guidelines</a>. This system defines a scale where zero
@@ -418,8 +418,8 @@ density Sass mixins.</p>
   <span class="hljs-keyword">@include</span> mat.button-density(-<span class="hljs-number">1</span>);
 }</code></pre>
         <h2 id="strong-focus-indicators" class="docs-header-link">
-          <span header-link="strong-focus-indicators"></span>
           Strong focus indicators
+          <span header-link="strong-focus-indicators"></span>
         </h2>
       <p>By default, most components indicate browser focus by changing their background color as described
 by the Material Design specification. This behavior, however, can fall short of accessibility
@@ -452,8 +452,8 @@ the custom theme API.</p>
 <span class="hljs-keyword">@include</span> mat.all-component-themes(<span class="hljs-variable">$my-theme</span>);
 <span class="hljs-keyword">@include</span> mat.strong-focus-indicators-theme(<span class="hljs-variable">$my-theme</span>);</code></pre>
         <h3 id="customizing-strong-focus-indicators" class="docs-header-link">
-          <span header-link="customizing-strong-focus-indicators"></span>
           Customizing strong focus indicators
+          <span header-link="customizing-strong-focus-indicators"></span>
         </h3>
       <p>You can pass a configuration map to <code>strong-focus-indicators</code> to customize the appearance of the
 indicators. This configuration includes <code>border-style</code>, <code>border-width</code>, and <code>border-radius</code>.</p>
@@ -483,8 +483,8 @@ of the custom theme API.</p>
 <span class="hljs-keyword">@include</span> mat.all-component-themes(<span class="hljs-variable">$my-theme</span>);
 <span class="hljs-keyword">@include</span> mat.strong-focus-indicators-theme(purple);</code></pre>
         <h2 id="theming-and-style-encapsulation" class="docs-header-link">
-          <span header-link="theming-and-style-encapsulation"></span>
           Theming and style encapsulation
+          <span header-link="theming-and-style-encapsulation"></span>
         </h2>
       <p>Angular Material assumes that, by default, all theme styles are loaded as global CSS. If you want
 to use <a href="https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_shadow_DOM">Shadow DOM</a> in your application, you must load the theme styles within each
@@ -492,8 +492,8 @@ shadow root that contains an Angular Material component. You can accomplish this
 the CSS in each shadow root, or by using <a href="https://developers.google.com/web/updates/2019/02/constructable-stylesheets">Constructable Stylesheets</a>.</p>
 
         <h2 id="user-preference-media-queries" class="docs-header-link">
-          <span header-link="user-preference-media-queries"></span>
           User preference media queries
+          <span header-link="user-preference-media-queries"></span>
         </h2>
       <p>Angular Material does not apply styles based on user preference media queries, such as
 <code>prefers-color-scheme</code> or <code>prefers-contrast</code>. Instead, Angular Material&#39;s Sass mixins give you the
@@ -501,8 +501,8 @@ flexibility to apply theme styles to based on the conditions that make the most 
 users. This may mean using media queries directly or reading a saved user preference.</p>
 
         <h2 id="style-customization-outside-the-theming-system" class="docs-header-link">
-          <span header-link="style-customization-outside-the-theming-system"></span>
           Style customization outside the theming system
+          <span header-link="style-customization-outside-the-theming-system"></span>
         </h2>
       <p>Angular Material supports customizing color, typography, and density as outlined in this document.
 Angular strongly discourages, and does not directly support, overriding component CSS outside the
@@ -510,20 +510,20 @@ theming APIs described above. Component DOM structure and CSS classes are consid
 implementation details that may change at any time.</p>
 
         <h2 id="theming-your-components" class="docs-header-link">
-          <span header-link="theming-your-components"></span>
           Theming your components
+          <span header-link="theming-your-components"></span>
         </h2>
       
         <h3 id="reading-values-from-a-theme" class="docs-header-link">
-          <span header-link="reading-values-from-a-theme"></span>
           Reading values from a theme
+          <span header-link="reading-values-from-a-theme"></span>
         </h3>
       <p>As described in this guide, a theme is a Sass map that contains style values to
 customize components. Angular Material provides APIs for reading values from this data structure.</p>
 
         <h4 id="reading-color-values" class="docs-header-link">
-          <span header-link="reading-color-values"></span>
           Reading color values
+          <span header-link="reading-color-values"></span>
         </h4>
       <p>To read color values from a theme, you can use the <code>get-theme-color</code> Sass function. This function
 supports reading colors for both the app color palettes (primary, accent, and warn), as well as the
@@ -714,8 +714,8 @@ theme, and returns either <code>light</code> or <code>dark</code>.</p>
 <span class="hljs-variable">$type</span>: mat.<span class="hljs-built_in">get-theme-type</span>(<span class="hljs-variable">$theme</span>);
 <span class="hljs-variable">$custom-background</span>: <span class="hljs-built_in">if</span>(<span class="hljs-variable">$type</span> == dark, <span class="hljs-number">#030</span>, <span class="hljs-number">#dfd</span>);</code></pre>
         <h4 id="reading-typography-values" class="docs-header-link">
-          <span header-link="reading-typography-values"></span>
           Reading typography values
+          <span header-link="reading-typography-values"></span>
         </h4>
       <p>To read typography values from a theme, you can use the <code>get-theme-typography</code> Sass function. This
 function supports reading typography properties from the typography levels defined in the theme.
@@ -790,8 +790,8 @@ you want: <code>font-family</code>, <code>font-size</code>, <code>font-weight</c
   <span class="hljs-attribute">letter-spacing</span>: mat.<span class="hljs-built_in">get-theme-typography</span>(<span class="hljs-variable">$theme</span>, body-<span class="hljs-number">1</span>, letter-spacing);
 }</code></pre>
         <h4 id="reading-density-values" class="docs-header-link">
-          <span header-link="reading-density-values"></span>
           Reading density values
+          <span header-link="reading-density-values"></span>
         </h4>
       <p>To read the density scale from a theme, you can use the <code>get-theme-density</code> Sass function. This
 function takes a theme and returns the density scale (0, -1, -2, -3, -4, or -5).</p>
@@ -800,8 +800,8 @@ function takes a theme and returns the density scale (0, -1, -2, -3, -4, or -5).
 
 <span class="hljs-variable">$density-scale</span>: mat.<span class="hljs-built_in">get-theme-density</span>(<span class="hljs-variable">$theme</span>);</code></pre>
         <h3 id="checking-what-dimensions-are-configured-for-a-theme" class="docs-header-link">
-          <span header-link="checking-what-dimensions-are-configured-for-a-theme"></span>
           Checking what dimensions are configured for a theme
+          <span header-link="checking-what-dimensions-are-configured-for-a-theme"></span>
         </h3>
       <p>Depending on how a theme was created, it may not have configuration data for all theming dimensions
 (base, color, typography, density). You can check if a theme has a configuration for a particular
@@ -814,8 +814,8 @@ dimension by calling the <code>theme-has</code> Sass function, passing the theme
 <span class="hljs-variable">$has-typography</span>: mat.<span class="hljs-built_in">theme-has</span>(<span class="hljs-variable">$theme</span>, typography);
 <span class="hljs-variable">$has-density</span>: mat.<span class="hljs-built_in">theme-has</span>(<span class="hljs-variable">$theme</span>, density);</code></pre>
         <h3 id="separating-theme-styles" class="docs-header-link">
-          <span header-link="separating-theme-styles"></span>
           Separating theme styles
+          <span header-link="separating-theme-styles"></span>
         </h3>
       <p>Angular Material components each have a Sass file that defines mixins for customizing
 that component&#39;s color and typography. For example, <code>MatButton</code> has mixins for <code>button-color</code> and
@@ -826,13 +826,13 @@ should accept an Angular Material theme, from which they can read color and typo
 can then include these mixins in your application along with Angular Material&#39;s own mixins.</p>
 
         <h2 id="customizing-typography" class="docs-header-link">
-          <span header-link="customizing-typography"></span>
           Customizing Typography
+          <span header-link="customizing-typography"></span>
         </h2>
       
         <h3 id="including-font-assets" class="docs-header-link">
-          <span header-link="including-font-assets"></span>
           Including font assets
+          <span header-link="including-font-assets"></span>
         </h3>
       <p>Angular Material&#39;s typography APIs let you specify any font-face. The default font-face value is
 configured to <a href="https://fonts.google.com/share?selection.family=Roboto:wght@300;400;500">Google&#39;s Roboto font</a> with the 300, 400, and 500 font-weight styles. To use
@@ -845,8 +845,8 @@ note that, by default, <a href="https://angular.dev/reference/configs/workspace-
 requests</a>.</p>
 
         <h3 id="typography-levels" class="docs-header-link">
-          <span header-link="typography-levels"></span>
           Typography levels
+          <span header-link="typography-levels"></span>
         </h3>
       <p>A <strong>typography level</strong> is a collection of typographic styles that corresponds to a specific
 part of an application&#39;s structure, such as a header. Each level includes styles for font family,
@@ -911,8 +911,8 @@ table below.</p>
 </tbody></table>
 
         <h4 id="define-a-level" class="docs-header-link">
-          <span header-link="define-a-level"></span>
           Define a level
+          <span header-link="define-a-level"></span>
         </h4>
       <p>You can define a typography level with the <code>m2-define-typography-level</code> Sass function. This function
 accepts, in order, CSS values for <code>font-size</code>, <code>line-height</code>, <code>font-weight</code>, <code>font-family</code>, and
@@ -927,8 +927,8 @@ accepts, in order, CSS values for <code>font-size</code>, <code>line-height</cod
   <span class="hljs-variable">$letter-spacing</span>: normal,
 );</code></pre>
         <h3 id="typography-config" class="docs-header-link">
-          <span header-link="typography-config"></span>
           Typography config
+          <span header-link="typography-config"></span>
         </h3>
       <p>A <strong>typography config</strong> is a collection of all typography levels. Angular Material represents this
 config as a Sass map. This map contains the styles for each level, keyed by name. You can create
@@ -946,8 +946,8 @@ baseline if unspecified.</p>
   // ...
 );</code></pre>
         <h4 id="typography-configs-and-theming" class="docs-header-link">
-          <span header-link="typography-configs-and-theming"></span>
           Typography configs and theming
+          <span header-link="typography-configs-and-theming"></span>
         </h4>
       <p>You can provide a typography config when defining a theme to customize typographic styles. See the [theming guide][theming-system] for details on custom themes.</p>
 <p>The following example shows a typical theme definition and a &quot;kids theme&quot; that only applies when
@@ -1001,8 +1001,8 @@ typography styles only for the button component.</p>
 <span class="hljs-comment">// Now we have sweet buttons with Comic Sans.</span>
 <span class="hljs-keyword">@include</span> mat.button-typography(<span class="hljs-variable">$kids-typography</span>);</code></pre>
         <h3 id="using-typography-styles-in-your-application" class="docs-header-link">
-          <span header-link="using-typography-styles-in-your-application"></span>
           Using typography styles in your application
+          <span header-link="using-typography-styles-in-your-application"></span>
         </h3>
       <p>In addition to styles shared between components, the <code>typography-hierarchy</code> mixin includes CSS
 classes for styling your application. These CSS classes correspond to the typography levels in your
@@ -1111,15 +1111,15 @@ typography level. The <code>.mat-h5</code> style uses the <code>body-2</code> le
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span></code></pre>
         <h4 id="reading-typography-values-from-a-config" class="docs-header-link">
-          <span header-link="reading-typography-values-from-a-config"></span>
           Reading typography values from a config
+          <span header-link="reading-typography-values-from-a-config"></span>
         </h4>
       <p>It is possible to read typography properties from a theme for use in your own components. For more
 information about this see our section on <a href="https://material.angular.dev/guide/material-2-theming#theming-your-components">Theming your own components</a>,</p>
 
         <h3 id="step-by-step-example" class="docs-header-link">
-          <span header-link="step-by-step-example"></span>
           Step-by-step example
+          <span header-link="step-by-step-example"></span>
         </h3>
       <p>To illustrate participation in Angular Material&#39;s theming system, we can look at an example of a
 custom carousel component. The carousel starts with a single file, <code>carousel.scss</code>, that contains
@@ -1136,8 +1136,8 @@ structural, color, and typography styles. This file is included in the <code>sty
   <span class="hljs-attribute">color</span>: blue;
 }</code></pre>
         <h4 id="step-1-extract-theme-based-styles-to-a-separate-file" class="docs-header-link">
-          <span header-link="step-1-extract-theme-based-styles-to-a-separate-file"></span>
           Step 1: Extract theme-based styles to a separate file
+          <span header-link="step-1-extract-theme-based-styles-to-a-separate-file"></span>
         </h4>
       <p>To change this file to participate in Angular Material&#39;s theming system, we split the styles into
 two files, with the color and typography styles moved into mixins. By convention, the new file
@@ -1166,8 +1166,8 @@ partial files.</p>
   }
 }</code></pre>
         <h4 id="step-2-use-values-from-the-theme" class="docs-header-link">
-          <span header-link="step-2-use-values-from-the-theme"></span>
           Step 2: Use values from the theme
+          <span header-link="step-2-use-values-from-the-theme"></span>
         </h4>
       <p>Now that theme theme-based styles reside in mixins, we can extract the values we need from the
 theme passed into the mixins.</p>
@@ -1190,8 +1190,8 @@ theme passed into the mixins.</p>
   }
 }</code></pre>
         <h4 id="step-3-add-a-theme-mixin" class="docs-header-link">
-          <span header-link="step-3-add-a-theme-mixin"></span>
           Step 3: Add a theme mixin
+          <span header-link="step-3-add-a-theme-mixin"></span>
         </h4>
       <p>For convenience, we can add a <code>theme</code> mixin that includes both color and typography.
 This theme mixin should only emit the styles for each color and typography, respectively, if they
@@ -1225,8 +1225,8 @@ have a config specified.</p>
   }
 }</code></pre>
         <h4 id="step-4-include-the-theme-mixin-in-your-application" class="docs-header-link">
-          <span header-link="step-4-include-the-theme-mixin-in-your-application"></span>
           Step 4: Include the theme mixin in your application
+          <span header-link="step-4-include-the-theme-mixin-in-your-application"></span>
         </h4>
       <p>Now that you&#39;ve defined the carousel component&#39;s theme mixin, you can include this mixin along with
 the other theme mixins in your application.</p>
@@ -1249,16 +1249,16 @@ the other theme mixins in your application.</p>
 <span class="hljs-keyword">@include</span> mat.all-component-themes(<span class="hljs-variable">$my-theme</span>);
 <span class="hljs-keyword">@include</span> carousel.theme(<span class="hljs-variable">$my-theme</span>);</code></pre>
         <h2 id="how-to-migrate-an-app-from-material-2-to-material-3" class="docs-header-link">
-          <span header-link="how-to-migrate-an-app-from-material-2-to-material-3"></span>
           How to migrate an app from Material 2 to Material 3
+          <span header-link="how-to-migrate-an-app-from-material-2-to-material-3"></span>
         </h2>
       <p>Angular Material does not offer an automated migration from M2 to M3 because the design of your app
 is subjective. Material Design offers general principles and constraints to guide you, but
 ultimately it is up to you to decide how to apply those in your app. That said, Angular Material&#39;s M3 themes were designed with maximum compatibility in mind.</p>
 
         <h3 id="update-your-components-that-use-angular-material-themes-to-be-compatible-with-material-3" class="docs-header-link">
-          <span header-link="update-your-components-that-use-angular-material-themes-to-be-compatible-with-material-3"></span>
           Update your components that use Angular Material themes to be compatible with Material 3
+          <span header-link="update-your-components-that-use-angular-material-themes-to-be-compatible-with-material-3"></span>
         </h3>
       <p>In order to facilitate a smooth transition from M2 to M3, it may make sense to have your components
 support both M2 and M3 themes. Once the entire app is migrated, the support for M2 themes can be
@@ -1278,8 +1278,8 @@ for how to read values from an M3 theme).</p>
   }
 }</code></pre>
         <h3 id="pass-a-new-m3-theme-in-your-global-theme-styles" class="docs-header-link">
-          <span header-link="pass-a-new-m3-theme-in-your-global-theme-styles"></span>
           Pass a new M3 theme in your global theme styles
+          <span header-link="pass-a-new-m3-theme-in-your-global-theme-styles"></span>
         </h3>
       <p>Replace your M2 theme with an M3 theme. For v19 and later, use the <code>mat.theme</code>
 mixin as described in the <a href="https://material.angular.dev/guide/theming">theming guide</a>:</p>
@@ -1296,8 +1296,8 @@ to individual component theme mixins. This approach is needed for backwards
 compatibility helpers such as <code>color-variants-backwards-compatibility</code>.</p>
 
         <h3 id="update-usages-of-apis-that-are-not-supported-for-material-3-themes" class="docs-header-link">
-          <span header-link="update-usages-of-apis-that-are-not-supported-for-material-3-themes"></span>
           Update usages of APIs that are not supported for Material 3 themes
+          <span header-link="update-usages-of-apis-that-are-not-supported-for-material-3-themes"></span>
         </h3>
       <p>Because Material 3 is implemented as an alternate theme for the same components used for Material 2,
 the APIs for both are largely the same. However, there are a few differences to be aware of:</p>
@@ -1321,8 +1321,8 @@ your app, you may need to update the class names.</li>
 </ul>
 
         <h3 id="optional-add-backwards-compatibility-styles-for-color-variants" class="docs-header-link">
-          <span header-link="optional-add-backwards-compatibility-styles-for-color-variants"></span>
           (Optional) add backwards compatibility styles for color variants
+          <span header-link="optional-add-backwards-compatibility-styles-for-color-variants"></span>
         </h3>
       <p>We recommend <em>not</em> relying on the <code>color=&quot;primary&quot;</code>, <code>color=&quot;accent&quot;</code>, or <code>color=&quot;warn&quot;</code> options
 that are offered by a number of Angular Material components for M2 themes. However, if you want to
@@ -1339,8 +1339,8 @@ to generate color variant styles for.</p>
   <span class="hljs-keyword">@include</span> mat.color-variants-backwards-compatibility(<span class="hljs-variable">$theme</span>);
 }</code></pre>
         <h3 id="optional-add-backwards-compatibility-styles-for-typography-hierarchy" class="docs-header-link">
-          <span header-link="optional-add-backwards-compatibility-styles-for-typography-hierarchy"></span>
           (Optional) add backwards compatibility styles for typography hierarchy
+          <span header-link="optional-add-backwards-compatibility-styles-for-typography-hierarchy"></span>
         </h3>
       <p>Calling the <code>typography-hierarchy</code> mixin with an M3 theme generates styles for CSS classes that
 match the names of M3 typescale names (e.g. <code>.mat-headline-large</code>) rather than ones that match M2

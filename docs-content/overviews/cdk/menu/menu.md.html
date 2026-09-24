@@ -5,8 +5,8 @@ experience, including bidi layout support, keyboard interaction, and focus manag
 directives apply their associated ARIA roles to their host element.</p>
 
         <h3 id="supported-aria-roles" class="docs-header-link">
-          <span header-link="supported-aria-roles"></span>
           Supported ARIA Roles
+          <span header-link="supported-aria-roles"></span>
         </h3>
       <p>The directives in <code>@angular/cdk/menu</code> set the appropriate roles on their host element.</p>
 <table>
@@ -47,8 +47,8 @@ directives apply their associated ARIA roles to their host element.</p>
 </tbody></table>
 
         <h3 id="css-styles-and-classes" class="docs-header-link">
-          <span header-link="css-styles-and-classes"></span>
           CSS Styles and Classes
+          <span header-link="css-styles-and-classes"></span>
         </h3>
       <p>The <code>@angular/cdk/menu</code> is designed to be highly customizable to your needs. It therefore does not
 make any assumptions about how elements should be styled. You are expected to apply any required
@@ -115,8 +115,8 @@ The available CSS classes are listed below, by directive.</p>
 </tbody></table>
 
         <h3 id="getting-started" class="docs-header-link">
-          <span header-link="getting-started"></span>
           Getting started
+          <span header-link="getting-started"></span>
         </h3>
       <p>Import <code>CdkMenu</code>, <code>CdkMenuItem</code>, and <code>CdkMenuTrigger</code> in the component where you want to create
 menus. You can then apply menu directives to build your custom menu. A typical menu consists of the following directives:</p>
@@ -130,8 +130,8 @@ menus. You can then apply menu directives to build your custom menu. A typical m
                              ></div><div class="docs-markdown"><p>Most menu interactions consist of two parts: a trigger and a menu panel.</p>
 
         <h4 id="triggers" class="docs-header-link">
-          <span header-link="triggers"></span>
           Triggers
+          <span header-link="triggers"></span>
         </h4>
       <p>You can add <code>cdkMenuTriggerFor</code> to any button to make it a trigger for the given menu, or any menu
 item to make it a trigger for a submenu. When adding this directive, be sure to pass a reference to
@@ -144,8 +144,8 @@ or keyboard.</p>
                              file="cdk-menu-menubar-example.html"
                              region="file-trigger"></div><div class="docs-markdown">
         <h4 id="menu-content" class="docs-header-link">
-          <span header-link="menu-content"></span>
           Menu content
+          <span header-link="menu-content"></span>
         </h4>
       <p>There are two types of menus:</p>
 <ul>
@@ -160,8 +160,8 @@ discussed below.</p>
 <p>Note that Angular CDK provides no styles; you must add styles as part of building your custom menu.</p>
 
         <h3 id="inline-menus" class="docs-header-link">
-          <span header-link="inline-menus"></span>
           Inline Menus
+          <span header-link="inline-menus"></span>
         </h3>
       <p>An <em>inline menu</em> is a menu that lives directly on the page rather than in a pop-up associated with a
 trigger. You can use an inline menu when you want a persistent menu interaction on a page. Menu
@@ -172,8 +172,8 @@ you want to serve as the menu content.</p>
                              file="cdk-menu-inline-example.html"
                              ></div><div class="docs-markdown">
         <h3 id="pop-up-menus" class="docs-header-link">
-          <span header-link="pop-up-menus"></span>
           Pop-up Menus
+          <span header-link="pop-up-menus"></span>
         </h3>
       <p>You can create pop-up menus using the <code>cdkMenu</code> directive as well. Add this directive to the
 element you want to serve as the content for your pop-up menu. Then wrap the content element in an
@@ -183,8 +183,8 @@ will allow the trigger to show and hide the menu content as needed.</p>
                              file="cdk-menu-standalone-menu-example.html"
                              ></div><div class="docs-markdown">
         <h3 id="menu-bars" class="docs-header-link">
-          <span header-link="menu-bars"></span>
           Menu Bars
+          <span header-link="menu-bars"></span>
         </h3>
       <p>Menu bars are a type of inline menu that you can create using the <code>cdkMenuBar</code> directive. They
 follow the <a href="https://www.w3.org/TR/wai-aria-practices-1.1/#menu" title="ARIA Menubar Pattern">ARIA menubar</a> spec and behave similarly to a desktop application menubar. Each
@@ -193,8 +193,8 @@ bar consists of at least one <code>cdkMenuItem</code> that triggers a submenu.</
                              file="cdk-menu-menubar-example.html"
                              ></div><div class="docs-markdown">
         <h3 id="context-menus" class="docs-header-link">
-          <span header-link="context-menus"></span>
           Context Menus
+          <span header-link="context-menus"></span>
         </h3>
       <p>A context menus is a type of pop-up menu that doesn&#39;t have a traditional trigger element, instead
 it is triggered when a user right-clicks within some container element. You can mark a
@@ -211,8 +211,8 @@ container element will open.</p>
 right-clicking inside &quot;Outer context menu&quot; will open up the &quot;outer&quot; menu.</p>
 
         <h3 id="menu-items" class="docs-header-link">
-          <span header-link="menu-items"></span>
           Menu Items
+          <span header-link="menu-items"></span>
         </h3>
       <p>The <code>cdkMenuItem</code> directive allows users to navigate menu items via keyboard.
 You can add a custom action to a menu item with the <code>cdkMenuItemTriggered</code> output.</p>
@@ -223,8 +223,8 @@ You can add a custom action to a menu item with the <code>cdkMenuItemTriggered</
                              file="cdk-menu-menubar-example.html"
                              region="file-trigger"></div><div class="docs-markdown">
         <h4 id="menu-item-checkboxes" class="docs-header-link">
-          <span header-link="menu-item-checkboxes"></span>
           Menu Item Checkboxes
+          <span header-link="menu-item-checkboxes"></span>
         </h4>
       <p>A <code>cdkMenuItemCheckbox</code> is a special type of menu item that behaves as a checkbox. You can use this
 type of menu item to toggle items on and off. An element with the <code>cdkMenuItemCheckbox</code> directive
@@ -236,8 +236,8 @@ don&#39;t bind the state it will reset when the menu is closed and re-opened.</p
                              file="cdk-menu-standalone-stateful-menu-example.html"
                              region="bold-item"></div><div class="docs-markdown">
         <h4 id="menu-item-radios" class="docs-header-link">
-          <span header-link="menu-item-radios"></span>
           Menu Item Radios
+          <span header-link="menu-item-radios"></span>
         </h4>
       <p>A <code>cdkMenuItemRadio</code> is a special type of menu item that behaves as a radio button. You can use this
 type of menu item for menus with exclusively selectable items. An element with the <code>cdkMenuItemRadio</code>
@@ -249,8 +249,8 @@ selection will reset when the menu is closed and reopened.</p>
                              file="cdk-menu-standalone-stateful-menu-example.html"
                              region="size-items"></div><div class="docs-markdown">
         <h4 id="groups" class="docs-header-link">
-          <span header-link="groups"></span>
           Groups
+          <span header-link="groups"></span>
         </h4>
       <p>By default <code>cdkMenu</code> acts as a group for <code>cdkMenuItemRadio</code> elements. Elements with
 <code>cdkMenuItemRadio</code> added as children of a <code>cdkMenu</code> will be logically grouped and only a single item
@@ -261,8 +261,8 @@ can have the checked state.</p>
                              file="cdk-menu-standalone-stateful-menu-example.html"
                              ></div><div class="docs-markdown">
         <h3 id="smart-menu-aim" class="docs-header-link">
-          <span header-link="smart-menu-aim"></span>
           Smart Menu Aim
+          <span header-link="smart-menu-aim"></span>
         </h3>
       <p><code>@angular/cdk/menu</code> is capable of intelligently predicting when a user intends to navigate to an
 open submenu and preventing premature closeouts. This functionality prevents users from having to
@@ -281,8 +281,8 @@ short in a sibling item after moving towards the submenu. The service is intelli
 detect this intention and will trigger the next menu.</p>
 
         <h3 id="accessibility" class="docs-header-link">
-          <span header-link="accessibility"></span>
           Accessibility
+          <span header-link="accessibility"></span>
         </h3>
       <p>The set of directives defined in <code>@angular/cdk/menu</code> follow accessibility best practices as defined
 in the <a href="https://www.w3.org/TR/wai-aria-practices-1.1/#menu" title="ARIA Menubar Pattern">ARIA spec</a>. Specifically, the menus are aware of left-to-right and right-to-left

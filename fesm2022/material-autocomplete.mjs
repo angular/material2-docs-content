@@ -1,5 +1,5 @@
 import * as i0 from '@angular/core';
-import { Component, inject, viewChild, signal } from '@angular/core';
+import { Component, signal, computed, inject, viewChild } from '@angular/core';
 import * as i3 from '@angular/forms';
 import { FormControl, FormsModule, ReactiveFormsModule, FormBuilder } from '@angular/forms';
 import { startWith, map } from 'rxjs/operators';
@@ -10,6 +10,7 @@ import * as i2 from '@angular/material/input';
 import { MatInputModule } from '@angular/material/input';
 import * as i1 from '@angular/material/form-field';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { form, FormField } from '@angular/forms/signals';
 import * as i1$1 from '@angular/material/slide-toggle';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 
@@ -144,6 +145,106 @@ i0.ɵɵngDeclareClassMetadata({
     }]
   }],
   ctorParameters: () => []
+});
+
+class AutocompleteAutoActiveFirstOptionSignalFormExample {
+  form = form(signal(''));
+  filteredOptions = computed(() => {
+    const formValue = this.form().value();
+    return this._filter(formValue);
+  }, ...(ngDevMode ? [{
+    debugName: "filteredOptions"
+  }] : []));
+  _options = ['One', 'Two', 'Three'];
+  _filter(value) {
+    const filterValue = value.toLowerCase();
+    return this._options.filter(option => option.toLowerCase().includes(filterValue));
+  }
+  static ɵfac = i0.ɵɵngDeclareFactory({
+    minVersion: "12.0.0",
+    version: "22.2.0-next.7",
+    ngImport: i0,
+    type: AutocompleteAutoActiveFirstOptionSignalFormExample,
+    deps: [],
+    target: i0.ɵɵFactoryTarget.Component
+  });
+  static ɵcmp = i0.ɵɵngDeclareComponent({
+    minVersion: "17.0.0",
+    version: "22.2.0-next.7",
+    type: AutocompleteAutoActiveFirstOptionSignalFormExample,
+    isStandalone: true,
+    selector: "autocomplete-auto-active-first-option-signal-form-example",
+    ngImport: i0,
+    template: "<form class=\"example-form\">\n  <mat-form-field class=\"example-full-width\">\n    <mat-label>Number</mat-label>\n    <input type=\"text\" \n           placeholder=\"Pick one\" \n           aria-label=\"Number\" \n           matInput \n           [formField]=\"form\"\n           [matAutocomplete]=\"auto\">\n    <mat-autocomplete autoActiveFirstOption #auto=\"matAutocomplete\">\n      @for (option of filteredOptions(); track option) {\n        <mat-option [value]=\"option\">{{option}}</mat-option>\n      }\n    </mat-autocomplete>\n  </mat-form-field>\n</form>",
+    styles: [".example-form {\n  min-width: 150px;\n  max-width: 500px;\n  width: 100%;\n}\n\n.example-full-width {\n  width: 100%;\n}\n"],
+    dependencies: [{
+      kind: "ngmodule",
+      type: MatFormFieldModule
+    }, {
+      kind: "component",
+      type: i1.MatFormField,
+      selector: "mat-form-field",
+      inputs: ["hideRequiredMarker", "color", "floatLabel", "appearance", "subscriptSizing", "hintLabel"],
+      exportAs: ["matFormField"]
+    }, {
+      kind: "directive",
+      type: i1.MatLabel,
+      selector: "mat-label"
+    }, {
+      kind: "ngmodule",
+      type: MatInputModule
+    }, {
+      kind: "directive",
+      type: i2.MatInput,
+      selector: "input[matInput], textarea[matInput], select[matNativeControl],      input[matNativeControl], textarea[matNativeControl]",
+      inputs: ["disabled", "id", "placeholder", "name", "required", "type", "errorStateMatcher", "aria-describedby", "value", "readonly", "disabledInteractive"],
+      exportAs: ["matInput"]
+    }, {
+      kind: "ngmodule",
+      type: MatAutocompleteModule
+    }, {
+      kind: "component",
+      type: i4.MatAutocomplete,
+      selector: "mat-autocomplete",
+      inputs: ["aria-label", "aria-labelledby", "displayWith", "autoActiveFirstOption", "autoSelectActiveOption", "requireSelection", "panelWidth", "disableRipple", "class", "hideSingleSelectionIndicator"],
+      outputs: ["optionSelected", "opened", "closed", "optionActivated"],
+      exportAs: ["matAutocomplete"]
+    }, {
+      kind: "component",
+      type: i4.MatOption,
+      selector: "mat-option",
+      inputs: ["value", "id", "disabled"],
+      outputs: ["onSelectionChange"],
+      exportAs: ["matOption"]
+    }, {
+      kind: "directive",
+      type: i4.MatAutocompleteTrigger,
+      selector: "input[matAutocomplete], textarea[matAutocomplete]",
+      inputs: ["matAutocomplete", "matAutocompletePosition", "matAutocompleteConnectedTo", "autocomplete", "matAutocompleteDisabled"],
+      exportAs: ["matAutocompleteTrigger"]
+    }, {
+      kind: "directive",
+      type: FormField,
+      selector: "[formField]",
+      inputs: ["formField"],
+      exportAs: ["formField"]
+    }]
+  });
+}
+i0.ɵɵngDeclareClassMetadata({
+  minVersion: "12.0.0",
+  version: "22.2.0-next.7",
+  ngImport: i0,
+  type: AutocompleteAutoActiveFirstOptionSignalFormExample,
+  decorators: [{
+    type: Component,
+    args: [{
+      selector: 'autocomplete-auto-active-first-option-signal-form-example',
+      imports: [MatFormFieldModule, MatInputModule, MatAutocompleteModule, FormField],
+      template: "<form class=\"example-form\">\n  <mat-form-field class=\"example-full-width\">\n    <mat-label>Number</mat-label>\n    <input type=\"text\" \n           placeholder=\"Pick one\" \n           aria-label=\"Number\" \n           matInput \n           [formField]=\"form\"\n           [matAutocomplete]=\"auto\">\n    <mat-autocomplete autoActiveFirstOption #auto=\"matAutocomplete\">\n      @for (option of filteredOptions(); track option) {\n        <mat-option [value]=\"option\">{{option}}</mat-option>\n      }\n    </mat-autocomplete>\n  </mat-form-field>\n</form>",
+      styles: [".example-form {\n  min-width: 150px;\n  max-width: 500px;\n  width: 100%;\n}\n\n.example-full-width {\n  width: 100%;\n}\n"]
+    }]
+  }]
 });
 
 class AutocompleteDisplayExample {
@@ -1264,5 +1365,5 @@ i0.ɵɵngDeclareClassMetadata({
   }]
 });
 
-export { AutocompleteAutoActiveFirstOptionExample, AutocompleteDisplayExample, AutocompleteFilterExample, AutocompleteHarnessExample, AutocompleteOptgroupExample, AutocompleteOverviewExample, AutocompletePlainInputExample, AutocompleteRequireSelectionExample, AutocompleteSimpleExample };
+export { AutocompleteAutoActiveFirstOptionExample, AutocompleteAutoActiveFirstOptionSignalFormExample, AutocompleteDisplayExample, AutocompleteFilterExample, AutocompleteHarnessExample, AutocompleteOptgroupExample, AutocompleteOverviewExample, AutocompletePlainInputExample, AutocompleteRequireSelectionExample, AutocompleteSimpleExample };
 //# sourceMappingURL=material-autocomplete.mjs.map

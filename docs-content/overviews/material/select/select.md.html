@@ -14,20 +14,20 @@ form-field</a> for more information.</p>
 <code>matNativeControl</code> attribute to the <code>&lt;select&gt;</code> element.</p>
 </div><div material-docs-example="select-overview"></div><div class="docs-markdown">
         <h3 id="getting-and-setting-the-select-value" class="docs-header-link">
-          <span header-link="getting-and-setting-the-select-value"></span>
           Getting and setting the select value
+          <span header-link="getting-and-setting-the-select-value"></span>
         </h3>
       
         <h4 id="2-way-binding-with-value" class="docs-header-link">
-          <span header-link="2-way-binding-with-value"></span>
           2-way binding with <code>value</code>
+          <span header-link="2-way-binding-with-value"></span>
         </h4>
       <p>The <code>&lt;mat-select&gt;</code> supports 2-way binding to the <code>value</code> property without the need for Angular
 forms.</p>
 </div><div material-docs-example="select-value-binding"></div><div class="docs-markdown">
         <h4 id="use-with-angular-forms" class="docs-header-link">
-          <span header-link="use-with-angular-forms"></span>
           Use with Angular Forms
+          <span header-link="use-with-angular-forms"></span>
         </h4>
       <p>Both <code>&lt;mat-select&gt;</code> and <code>&lt;select&gt;</code> support all of the form directives from the core <code>@angular/forms</code>. 
 Including <code>FormField</code> (signal forms), <code>FormsModule</code> (<code>NgModel</code>) and <code>ReactiveFormsModule</code> 
@@ -36,8 +36,8 @@ Including <code>FormField</code> (signal forms), <code>FormsModule</code> (<code
 <a href="https://angular.dev/api/forms/SelectControlValueAccessor#compareWith">Angular forms documentation</a>).</p>
 </div><div material-docs-example="select-form"></div><div class="docs-markdown">
         <h3 id="form-field-features" class="docs-header-link">
-          <span header-link="form-field-features"></span>
           Form field features
+          <span header-link="form-field-features"></span>
         </h3>
       <p>There are a number of <code>&lt;mat-form-field&gt;</code> features that can be used with both <code>&lt;select&gt;</code> and <code>&lt;mat-select&gt;</code>. These
 include error messages, hint text, prefix &amp; suffix, and theming. For additional information about
@@ -45,8 +45,8 @@ these features, see the
 <a href="https://material.angular.dev/components/form-field/overview">form field documentation</a>.</p>
 </div><div material-docs-example="select-hint-error"></div><div class="docs-markdown">
         <h3 id="setting-a-static-placeholder" class="docs-header-link">
-          <span header-link="setting-a-static-placeholder"></span>
           Setting a static placeholder
+          <span header-link="setting-a-static-placeholder"></span>
         </h3>
       <p>The placeholder is text shown when the <code>&lt;mat-form-field&gt;</code> label is floating but the <code>&lt;mat-select&gt;</code>
 is empty. It is used to give the user an additional hint about the value they should select. The
@@ -55,8 +55,8 @@ In some cases that <code>&lt;mat-form-field&gt;</code> may use the placeholder a
 <a href="https://material.angular.dev/components/form-field/overview#floating-label">form field label documentation</a>).</p>
 
         <h3 id="disabling-the-select-or-individual-options" class="docs-header-link">
-          <span header-link="disabling-the-select-or-individual-options"></span>
           Disabling the select or individual options
+          <span header-link="disabling-the-select-or-individual-options"></span>
         </h3>
       <p>It is possible to disable the entire select or individual options in the select by using the
 disabled property on the <code>&lt;select&gt;</code> or <code>&lt;mat-select&gt;</code> and the <code>&lt;option&gt;</code> or <code>&lt;mat-option&gt;</code> elements respectively.
@@ -65,14 +65,14 @@ This can be accomplished by creating a <code>FormControl</code> with the disable
 <code>FormControl({value: &#39;&#39;, disabled: true})</code> or using <code>FormControl.enable()</code>, <code>FormControl.disable()</code>.</p>
 </div><div material-docs-example="select-disabled"></div><div class="docs-markdown">
         <h3 id="resetting-the-select-value" class="docs-header-link">
-          <span header-link="resetting-the-select-value"></span>
           Resetting the select value
+          <span header-link="resetting-the-select-value"></span>
         </h3>
       <p>If you want one of your options to reset the select&#39;s value, you can omit specifying its value.</p>
 </div><div material-docs-example="select-reset"></div><div class="docs-markdown">
         <h3 id="allowing-nullable-options-to-be-selected" class="docs-header-link">
-          <span header-link="allowing-nullable-options-to-be-selected"></span>
           Allowing nullable options to be selected
+          <span header-link="allowing-nullable-options-to-be-selected"></span>
         </h3>
       <p>By default any options with a <code>null</code> or <code>undefined</code> value will reset the select&#39;s value. If instead
 you want the nullable options to be selectable, you can enable the <code>canSelectNullableOptions</code> input.
@@ -80,8 +80,8 @@ The default value for the input can be controlled application-wide through the <
 injection token.</p>
 </div><div material-docs-example="select-selectable-null"></div><div class="docs-markdown">
         <h3 id="creating-groups-of-options" class="docs-header-link">
-          <span header-link="creating-groups-of-options"></span>
           Creating groups of options
+          <span header-link="creating-groups-of-options"></span>
         </h3>
       <p>The <code>&lt;mat-optgroup&gt;</code> element can be used to group common options under a subheading. The name of the
 group can be set using the <code>label</code> property of <code>&lt;mat-optgroup&gt;</code>. Like individual <code>&lt;mat-option&gt;</code>
@@ -89,8 +89,8 @@ elements, an entire <code>&lt;mat-optgroup&gt;</code> can be disabled or enabled
 on the group.</p>
 </div><div material-docs-example="select-optgroup"></div><div class="docs-markdown">
         <h3 id="multiple-selection" class="docs-header-link">
-          <span header-link="multiple-selection"></span>
           Multiple selection
+          <span header-link="multiple-selection"></span>
         </h3>
       <p><code>&lt;mat-select&gt;</code> defaults to single-selection mode, but can be configured to allow multiple selection
 by setting the <code>multiple</code> property. This will allow the user to select multiple values at once. When
@@ -101,29 +101,29 @@ inside <code>&lt;mat-form-field&gt;</code>, as the inline listbox appearance is 
 Material Design components.</p>
 </div><div material-docs-example="select-multiple"></div><div class="docs-markdown">
         <h3 id="customizing-the-trigger-label" class="docs-header-link">
-          <span header-link="customizing-the-trigger-label"></span>
           Customizing the trigger label
+          <span header-link="customizing-the-trigger-label"></span>
         </h3>
       <p>If you want to display a custom trigger label inside a <code>&lt;mat-select&gt;</code>, you can use the
 <code>&lt;mat-select-trigger&gt;</code> element.</p>
 </div><div material-docs-example="select-custom-trigger"></div><div class="docs-markdown">
         <h3 id="disabling-the-ripple-effect" class="docs-header-link">
-          <span header-link="disabling-the-ripple-effect"></span>
           Disabling the ripple effect
+          <span header-link="disabling-the-ripple-effect"></span>
         </h3>
       <p>By default, when a user clicks on a <code>&lt;mat-option&gt;</code>, a ripple animation is shown. This can be disabled
 by setting the <code>disableRipple</code> property on <code>&lt;mat-select&gt;</code>.</p>
 </div><div material-docs-example="select-no-ripple"></div><div class="docs-markdown">
         <h3 id="adding-custom-styles-to-the-dropdown-panel" class="docs-header-link">
-          <span header-link="adding-custom-styles-to-the-dropdown-panel"></span>
           Adding custom styles to the dropdown panel
+          <span header-link="adding-custom-styles-to-the-dropdown-panel"></span>
         </h3>
       <p>In order to facilitate easily styling the dropdown panel, <code>&lt;mat-select&gt;</code> has a <code>panelClass</code> property
 which can be used to apply additional CSS classes to the dropdown panel.</p>
 </div><div material-docs-example="select-panel-class"></div><div class="docs-markdown">
         <h3 id="changing-when-error-messages-are-shown" class="docs-header-link">
-          <span header-link="changing-when-error-messages-are-shown"></span>
           Changing when error messages are shown
+          <span header-link="changing-when-error-messages-are-shown"></span>
         </h3>
       <p>The <code>&lt;mat-form-field&gt;</code> allows you to
 <a href="https://material.angular.dev/components/form-field/overview#error-messages">associate error messages</a>
@@ -145,8 +145,8 @@ globally cause input errors to show when the input is dirty and invalid.</p>
   ]
 });</code></pre>
         <h3 id="keyboard-interaction" class="docs-header-link">
-          <span header-link="keyboard-interaction"></span>
           Keyboard interaction
+          <span header-link="keyboard-interaction"></span>
         </h3>
       <table>
 <thead>
@@ -182,8 +182,8 @@ globally cause input errors to show when the input is dirty and invalid.</p>
 </tbody></table>
 
         <h3 id="accessibility" class="docs-header-link">
-          <span header-link="accessibility"></span>
           Accessibility
+          <span header-link="accessibility"></span>
         </h3>
       <p>When possible, prefer a native <code>&lt;select&gt;</code> element over <code>MatSelect</code>. The native control
 provides the most accessible experience across the widest range of platforms.</p>
@@ -204,13 +204,13 @@ component less accessible by making it harder or impossible for users to visuall
 items.</p>
 
         <h3 id="troubleshooting" class="docs-header-link">
-          <span header-link="troubleshooting"></span>
           Troubleshooting
+          <span header-link="troubleshooting"></span>
         </h3>
       
         <h4 id="error-cannot-change-multiple-mode-of-select-after-initialization" class="docs-header-link">
-          <span header-link="error-cannot-change-multiple-mode-of-select-after-initialization"></span>
           Error: Cannot change <code>multiple</code> mode of select after initialization
+          <span header-link="error-cannot-change-multiple-mode-of-select-after-initialization"></span>
         </h4>
       <p>This error is thrown if you attempt to bind the <code>multiple</code> property on <code>&lt;mat-select&gt;</code> to a dynamic
 value. (e.g. <code>[multiple]=&quot;isMultiple&quot;</code> where the value of <code>isMultiple</code> changes over the course of
@@ -225,16 +225,16 @@ the component&#39;s lifetime). If you need to change this dynamically, use <code
   <span class="hljs-tag">&lt;/<span class="hljs-name">mat-select</span>&gt;</span>
 }</code></pre>
         <h4 id="error-value-must-be-an-array-in-multiple-selection-mode" class="docs-header-link">
-          <span header-link="error-value-must-be-an-array-in-multiple-selection-mode"></span>
           Error: Value must be an array in multiple-selection mode
+          <span header-link="error-value-must-be-an-array-in-multiple-selection-mode"></span>
         </h4>
       <p>This error is thrown if you attempt to assign a value other than <code>null</code>, <code>undefined</code>, or an array to
 a <code>&lt;mat-select multiple&gt;</code>. For example, something like <code>mySelect.value = &#39;option1&#39;</code>. What you likely
 meant to do was <code>mySelect.value = [&#39;option1&#39;]</code>.</p>
 
         <h4 id="error-comparewith-must-be-a-function" class="docs-header-link">
-          <span header-link="error-comparewith-must-be-a-function"></span>
           Error: <code>compareWith</code> must be a function
+          <span header-link="error-comparewith-must-be-a-function"></span>
         </h4>
       <p>This error occurs if you attempt to assign something other than a function to the <code>compareWith</code>
 property. For more information on proper usage of <code>compareWith</code> see the

@@ -2,15 +2,15 @@
 application&#39;s LTR/RTL layout direction.</p>
 
         <h3 id="directionality" class="docs-header-link">
-          <span header-link="directionality"></span>
           Directionality
+          <span header-link="directionality"></span>
         </h3>
       <p>When including the CDK&#39;s <code>BidiModule</code>, components can inject <code>Directionality</code> to get the current
 text direction (RTL or LTR);</p>
 
         <h4 id="example" class="docs-header-link">
-          <span header-link="example"></span>
           Example
+          <span header-link="example"></span>
         </h4>
       <pre><code class="language-ts"><span class="hljs-meta">@Component</span>({ ... })
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">MyWidget</span> <span class="hljs-keyword">implements</span> <span class="hljs-title class_">OnDestroy</span> {
@@ -34,8 +34,8 @@ text direction (RTL or LTR);</p>
   }
 }</code></pre>
         <h3 id="the-dir-directive" class="docs-header-link">
-          <span header-link="the-dir-directive"></span>
           The <code>Dir</code> directive
+          <span header-link="the-dir-directive"></span>
         </h3>
       <p>The <code>BidiModule</code> also includes a directive that matches any elements with a <code>dir</code> attribute. This
 directive has the same API as Directionality and provides itself <em>as</em> <code>Directionality</code>. By doing
@@ -43,8 +43,8 @@ this, any component that injects <code>Directionality</code> will get the closes
 context.</p>
 
         <h3 id="interpreting-the-auto-value" class="docs-header-link">
-          <span header-link="interpreting-the-auto-value"></span>
           Interpreting the <code>auto</code> value
+          <span header-link="interpreting-the-auto-value"></span>
         </h3>
       <p>The CDK also supports the native <code>auto</code> value for the <code>dir</code> attribute, however there&#39;s a difference
 in how it is interpreted. Some parts of the CDK, like overlays and keyboard navigation, need to know

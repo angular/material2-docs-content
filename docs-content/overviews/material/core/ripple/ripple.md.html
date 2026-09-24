@@ -10,8 +10,8 @@ radiating to cover the host element. Each ripple will fade out only upon release
 and calling its <code>launch</code> method.</p>
 
         <h3 id="ripple-trigger" class="docs-header-link">
-          <span header-link="ripple-trigger"></span>
           Ripple trigger
+          <span header-link="ripple-trigger"></span>
         </h3>
       <p>By default ripples will fade in on interaction with the directive&#39;s host element.
 In some situations, developers may want to show ripples on interaction with <em>some other</em> element,
@@ -25,8 +25,8 @@ the <code>matRippleTrigger</code> option that expects a reference to an <code>HT
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> #<span class="hljs-attr">trigger</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
         <h3 id="manual-ripples" class="docs-header-link">
-          <span header-link="manual-ripples"></span>
           Manual ripples
+          <span header-link="manual-ripples"></span>
         </h3>
       <p>Ripples can be shown programmatically by getting a reference to the <code>MatRipple</code> directive.</p>
 <pre><code class="language-ts"><span class="hljs-keyword">class</span> <span class="hljs-title class_">MyComponent</span> {
@@ -54,8 +54,8 @@ the <code>RippleRef</code> (<em>useful for focus indicators</em>).</p>
 are relative to the ripple container element.</p>
 <pre><code class="language-ts"><span class="hljs-keyword">const</span> rippleRef = <span class="hljs-variable language_">this</span>.<span class="hljs-property">ripple</span>.<span class="hljs-title function_">launch</span>(<span class="hljs-number">10</span>, <span class="hljs-number">10</span>, {<span class="hljs-attr">persistent</span>: <span class="hljs-literal">true</span>});</code></pre>
         <h3 id="global-options" class="docs-header-link">
-          <span header-link="global-options"></span>
           Global options
+          <span header-link="global-options"></span>
         </h3>
       <p>Developers are able to specify options for all ripples inside of their application.</p>
 <p>The speed of the ripples can be adjusted and the ripples can be disabled globally as well.</p>
@@ -75,8 +75,8 @@ are relative to the ripple container element.</p>
 })</code></pre><p>All available global options can be seen in the <code>RippleGlobalOptions</code> interface.</p>
 
         <h3 id="disabling-animation" class="docs-header-link">
-          <span header-link="disabling-animation"></span>
           Disabling animation
+          <span header-link="disabling-animation"></span>
         </h3>
       <p>The animation of ripples can be disabled by using the <code>animation</code> global option. If the
 <code>enterDuration</code> and <code>exitDuration</code> is being set to <code>0</code>, ripples will just appear without any
@@ -94,8 +94,8 @@ those ripples for performance reasons, the duration can be set to <code>0</code>
 also means that the durations in the <code>animation</code> configuration won&#39;t be taken into account.</p>
 
         <h3 id="animation-behavior" class="docs-header-link">
-          <span header-link="animation-behavior"></span>
           Animation behavior
+          <span header-link="animation-behavior"></span>
         </h3>
       <p>There are two different animation behaviors for the fade-out of ripples shown in the Material
 Design specifications.</p>
@@ -109,8 +109,8 @@ the same for Angular Material. This behavior can be activated by specifying the
   <span class="hljs-attr">terminateOnPointerUp</span>: <span class="hljs-literal">true</span>
 };</code></pre>
         <h3 id="updating-global-options-at-runtime" class="docs-header-link">
-          <span header-link="updating-global-options-at-runtime"></span>
           Updating global options at runtime
+          <span header-link="updating-global-options-at-runtime"></span>
         </h3>
       <p>To change global ripple options at runtime, just inject the <code>MAT_RIPPLE_GLOBAL_OPTIONS</code>
 provider and update the desired options.</p>

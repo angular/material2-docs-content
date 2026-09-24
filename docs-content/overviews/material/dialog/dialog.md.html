@@ -25,8 +25,8 @@ value is forwarded as the result of the <code>afterClosed</code> Observable.</p>
   }
 }</code></pre>
         <h3 id="specifying-global-configuration-defaults" class="docs-header-link">
-          <span header-link="specifying-global-configuration-defaults"></span>
           Specifying global configuration defaults
+          <span header-link="specifying-global-configuration-defaults"></span>
         </h3>
       <p>Default dialog options can be specified by providing an instance of <code>MatDialogConfig</code> for
 <code>MAT_DIALOG_DEFAULT_OPTIONS</code> in your app config.</p>
@@ -44,8 +44,8 @@ per-dialog options always take precedence.</p>
 </blockquote>
 
         <h3 id="sharing-data-with-the-dialog-component" class="docs-header-link">
-          <span header-link="sharing-data-with-the-dialog-component"></span>
           Sharing data with the Dialog component.
+          <span header-link="sharing-data-with-the-dialog-component"></span>
         </h3>
       <p>If you want to share data with your dialog, you can use the <code>data</code>
 option to pass information to the dialog component.</p>
@@ -67,8 +67,8 @@ will be available implicitly in the template:</p>
   Hello, {{data.name}}
 <span class="hljs-tag">&lt;/<span class="hljs-name">ng-template</span>&gt;</span></code></pre></div><div material-docs-example="dialog-data"></div><div class="docs-markdown">
         <h3 id="dialog-content" class="docs-header-link">
-          <span header-link="dialog-content"></span>
           Dialog content
+          <span header-link="dialog-content"></span>
         </h3>
       <p>Several directives are available to make it easier to structure your dialog content:</p>
 <table>
@@ -106,16 +106,16 @@ will be available implicitly in the template:</p>
 <p>You can control which elements are tab stops with the <code>tabindex</code> attribute</p>
 <pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">matButton</span> <span class="hljs-attr">tabindex</span>=<span class="hljs-string">&quot;-1&quot;</span>&gt;</span>Not Tabbable<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></code></pre></div><div material-docs-example="dialog-content"></div><div class="docs-markdown">
         <h3 id="controlling-the-dialog-animation" class="docs-header-link">
-          <span header-link="controlling-the-dialog-animation"></span>
           Controlling the dialog animation
+          <span header-link="controlling-the-dialog-animation"></span>
         </h3>
       <p>You can control the duration of the dialog&#39;s enter and exit animations using the
 <code>enterAnimationDuration</code> and <code>exitAnimationDuration</code> options. If you want to disable the dialog&#39;s
 animation completely, you can do so by setting the properties to <code>0ms</code>.</p>
 </div><div material-docs-example="dialog-animations"></div><div class="docs-markdown">
         <h3 id="accessibility" class="docs-header-link">
-          <span header-link="accessibility"></span>
           Accessibility
+          <span header-link="accessibility"></span>
         </h3>
       <p><code>MatDialog</code> creates modal dialogs that implements the ARIA <code>role=&quot;dialog&quot;</code> pattern by default.
 You can change the dialog&#39;s role to <code>alertdialog</code> via <code>MatDialogConfig</code>.</p>
@@ -124,16 +124,16 @@ You can change the dialog&#39;s role to <code>alertdialog</code> via <code>MatDi
 ID via the <code>ariaDescribedBy</code> property of <code>MatDialogConfig</code>.</p>
 
         <h4 id="keyboard-interaction" class="docs-header-link">
-          <span header-link="keyboard-interaction"></span>
           Keyboard interaction
+          <span header-link="keyboard-interaction"></span>
         </h4>
       <p>By default, the escape key closes <code>MatDialog</code>. While you can disable this behavior via
 the <code>disableClose</code> property of <code>MatDialogConfig</code>, doing this breaks the expected interaction
 pattern for the ARIA <code>role=&quot;dialog&quot;</code> pattern.</p>
 
         <h4 id="focus-management" class="docs-header-link">
-          <span header-link="focus-management"></span>
           Focus management
+          <span header-link="focus-management"></span>
         </h4>
       <p>When opened, <code>MatDialog</code> traps browser focus such that it cannot escape the root
 <code>role=&quot;dialog&quot;</code> element. By default, the first tabbable element in the dialog receives focus.
@@ -168,8 +168,8 @@ from these alternatives. Always test your application to verify the behavior tha
 your users.</p>
 
         <h4 id="focus-restoration" class="docs-header-link">
-          <span header-link="focus-restoration"></span>
           Focus restoration
+          <span header-link="focus-restoration"></span>
         </h4>
       <p>When closed, <code>MatDialog</code> restores focus to the element that previously held focus when the
 dialog opened. However, if that previously focused element no longer exists, you must

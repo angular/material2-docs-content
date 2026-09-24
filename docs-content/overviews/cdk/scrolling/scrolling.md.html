@@ -1,8 +1,8 @@
 <div class="docs-markdown"><p>The <code>scrolling</code> package provides helpers for directives that react to scroll events.</p>
 
         <h3 id="cdkscrollable-and-scrolldispatcher" class="docs-header-link">
-          <span header-link="cdkscrollable-and-scrolldispatcher"></span>
           cdkScrollable and ScrollDispatcher
+          <span header-link="cdkscrollable-and-scrolldispatcher"></span>
         </h3>
       <p>The <code>cdkScrollable</code> directive and the <code>ScrollDispatcher</code> service together allow components to
 react to scrolling in any of its ancestor scrolling containers.</p>
@@ -12,15 +12,15 @@ dispatcher, then, allows components to share both event listeners and knowledge 
 scrollable containers in the application.</p>
 
         <h3 id="viewportruler" class="docs-header-link">
-          <span header-link="viewportruler"></span>
           ViewportRuler
+          <span header-link="viewportruler"></span>
         </h3>
       <p>The <code>ViewportRuler</code> is a service that can be injected and used to measure the bounds of the browser
 viewport.</p>
 
         <h3 id="virtual-scrolling" class="docs-header-link">
-          <span header-link="virtual-scrolling"></span>
           Virtual scrolling
+          <span header-link="virtual-scrolling"></span>
         </h3>
       <p>The <code>&lt;cdk-virtual-scroll-viewport&gt;</code> displays large lists of elements performantly by only
 rendering the items that fit on-screen. Loading hundreds of elements can be slow in any browser;
@@ -31,8 +31,8 @@ infinite scroll where it renders a set amount of elements and then when you hit 
 rest.</p>
 
         <h4 id="creating-items-in-the-viewport" class="docs-header-link">
-          <span header-link="creating-items-in-the-viewport"></span>
           Creating items in the viewport
+          <span header-link="creating-items-in-the-viewport"></span>
         </h4>
       <p><code>*cdkVirtualFor</code> replaces <code>*ngFor</code> inside of a <code>&lt;cdk-virtual-scroll-viewport&gt;</code>, supporting the exact
 same API as <a href="https://angular.dev/api/common/NgForOf"><code>*ngFor</code></a>. The simplest usage just specifies the
@@ -77,8 +77,8 @@ passed to the tracking function will be the index in the data source, not the in
 portion.</p>
 
         <h5 id="view-recycling" class="docs-header-link">
-          <span header-link="view-recycling"></span>
           View recycling
+          <span header-link="view-recycling"></span>
         </h5>
       <p>To improve rendering performance, <code>*cdkVirtualFor</code> caches previously created views after
 they are no longer needed. When a new view would normally be created, a cached view
@@ -87,8 +87,8 @@ property; setting this size to <code>0</code> disables caching. If your template
 memory you may wish to reduce this number to avoid spending too much memory on the template cache.</p>
 </div><div material-docs-example="cdk-virtual-scroll-template-cache"></div><div class="docs-markdown">
         <h5 id="specifying-data" class="docs-header-link">
-          <span header-link="specifying-data"></span>
           Specifying data
+          <span header-link="specifying-data"></span>
         </h5>
       <p><code>*cdkVirtualFor</code> accepts data from an <code>Array</code>, <code>Observable&lt;Array&gt;</code>, or <code>DataSource</code>. The
 <code>DataSource</code> for the virtual scroll is the same one used by the table and tree components. A
@@ -99,8 +99,8 @@ destroyed, which may be the right time to clean up any subscriptions that were r
 connect process.</p>
 </div><div material-docs-example="cdk-virtual-scroll-data-source"></div><div class="docs-markdown">
         <h4 id="scrolling-over-fixed-size-items" class="docs-header-link">
-          <span header-link="scrolling-over-fixed-size-items"></span>
           Scrolling over fixed size items
+          <span header-link="scrolling-over-fixed-size-items"></span>
         </h4>
       <p>When all items are the same fixed size, you can use the <code>FixedSizeVirtualScrollStrategy</code>. This can
 be easily added to your viewport using the <code>itemSize</code> directive. The advantage of this constraint is
@@ -122,8 +122,8 @@ autosize strategy that works on elements of differing sizes is currently being d
 <code>@angular/cdk-experimental</code>, but it is not ready for production use yet. </p>
 
         <h3 id="viewport-orientation" class="docs-header-link">
-          <span header-link="viewport-orientation"></span>
           Viewport orientation
+          <span header-link="viewport-orientation"></span>
         </h3>
       <p>The virtual-scroll viewport defaults to a vertical orientation, but can also be set to
 <code>orientation=&quot;horizontal&quot;</code>. When changing the orientation, ensure that the item are laid
@@ -132,8 +132,8 @@ out horizontally via CSS. To do this you may want to target CSS at
 content.</p>
 </div><div material-docs-example="cdk-virtual-scroll-horizontal"></div><div class="docs-markdown">
         <h3 id="elements-with-parent-tag-requirements" class="docs-header-link">
-          <span header-link="elements-with-parent-tag-requirements"></span>
           Elements with parent tag requirements
+          <span header-link="elements-with-parent-tag-requirements"></span>
         </h3>
       <p>Some HTML elements such as <code>&lt;tr&gt;</code> and <code>&lt;li&gt;</code> have limitations on the kinds of parent elements they
 can be placed inside. To enable virtual scrolling over these type of elements, place the elements in
@@ -142,8 +142,8 @@ that the parent does not introduce additional space (e.g. via <code>margin</code
 interfere with the scrolling.</p>
 </div><div material-docs-example="cdk-virtual-scroll-dl"></div><div class="docs-markdown">
         <h3 id="scrolling-strategies" class="docs-header-link">
-          <span header-link="scrolling-strategies"></span>
           Scrolling strategies
+          <span header-link="scrolling-strategies"></span>
         </h3>
       <p>In order to determine how large the overall content is and what portion of it actually needs to be
 rendered at any given time the viewport relies on a <code>VirtualScrollStrategy</code> being provided. The
@@ -153,16 +153,16 @@ custom strategy by creating a class that implements the <code>VirtualScrollStrat
 providing it as the <code>VIRTUAL_SCROLL_STRATEGY</code> on the component containing your viewport.</p>
 </div><div material-docs-example="cdk-virtual-scroll-custom-strategy"></div><div class="docs-markdown">
         <h3 id="append-only-mode" class="docs-header-link">
-          <span header-link="append-only-mode"></span>
           Append only mode
+          <span header-link="append-only-mode"></span>
         </h3>
       <p>Virtual scroll viewports that render nontrivial items may find it more performant to simply append
 to the list as the user scrolls without removing rendered views. The <code>appendOnly</code> input ensures
 views that are already rendered persist in the DOM after they scroll out of view.</p>
 </div><div material-docs-example="cdk-virtual-scroll-append-only"></div><div class="docs-markdown">
         <h3 id="separate-viewport-and-scrolling-element" class="docs-header-link">
-          <span header-link="separate-viewport-and-scrolling-element"></span>
           Separate viewport and scrolling element
+          <span header-link="separate-viewport-and-scrolling-element"></span>
         </h3>
       <p>The virtual scroll viewport itself acts as the scrolling element by default. However, there may be
 some cases where you want to have the viewport scroll one of its parent elements. For example,

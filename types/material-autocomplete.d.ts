@@ -3,9 +3,10 @@ import { FormControl } from '@angular/forms';
 import { Observable } from 'rxjs';
 import * as i0 from '@angular/core';
 import { ElementRef } from '@angular/core';
+import * as _angular_forms_signals from '@angular/forms/signals';
 
 /**
- * @title Highlight the first autocomplete option
+ * @title Highlight the first autocomplete option (reactive forms)
  */
 declare class AutocompleteAutoActiveFirstOptionExample {
     myControl: FormControl<string | null>;
@@ -15,6 +16,18 @@ declare class AutocompleteAutoActiveFirstOptionExample {
     private _filter;
     static ɵfac: i0.ɵɵFactoryDeclaration<AutocompleteAutoActiveFirstOptionExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<AutocompleteAutoActiveFirstOptionExample, "autocomplete-auto-active-first-option-example", never, {}, {}, never, never, true, never>;
+}
+
+/**
+ * @title Highlight the first autocomplete option (signal forms)
+ */
+declare class AutocompleteAutoActiveFirstOptionSignalFormExample {
+    protected form: _angular_forms_signals.FieldTree<string, string | number, "writable">;
+    protected filteredOptions: i0.Signal<string[]>;
+    private _options;
+    private _filter;
+    static ɵfac: i0.ɵɵFactoryDeclaration<AutocompleteAutoActiveFirstOptionSignalFormExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<AutocompleteAutoActiveFirstOptionSignalFormExample, "autocomplete-auto-active-first-option-signal-form-example", never, {}, {}, never, never, true, never>;
 }
 
 interface User {
@@ -134,4 +147,4 @@ declare class AutocompleteHarnessExample {
     static ɵcmp: i0.ɵɵComponentDeclaration<AutocompleteHarnessExample, "autocomplete-harness-example", never, {}, {}, never, never, true, never>;
 }
 
-export { AutocompleteAutoActiveFirstOptionExample, AutocompleteDisplayExample, AutocompleteFilterExample, AutocompleteHarnessExample, AutocompleteOptgroupExample, AutocompleteOverviewExample, AutocompletePlainInputExample, AutocompleteRequireSelectionExample, AutocompleteSimpleExample };
+export { AutocompleteAutoActiveFirstOptionExample, AutocompleteAutoActiveFirstOptionSignalFormExample, AutocompleteDisplayExample, AutocompleteFilterExample, AutocompleteHarnessExample, AutocompleteOptgroupExample, AutocompleteOverviewExample, AutocompletePlainInputExample, AutocompleteRequireSelectionExample, AutocompleteSimpleExample };
