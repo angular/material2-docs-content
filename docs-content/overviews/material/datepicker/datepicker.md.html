@@ -29,15 +29,15 @@ respectively:</p>
 <pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">mat-date-range-input</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">matStartDate</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">&quot;Start date&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">matEndDate</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">&quot;End date&quot;</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">mat-date-range-input</span>&gt;</span></code></pre><p>The <code>mat-date-range-picker</code> component acts as the pop-up panel for selecting dates. This works in
+<span class="hljs-tag">&lt;/<span class="hljs-name">mat-date-range-input</span>&gt;</span></code><button class="docs-markdown-copy-button" type="button" aria-label="Copy code" title="Copy code to the clipboard"><span class="material-symbols-outlined" aria-hidden="true">content_copy</span></button></pre><p>The <code>mat-date-range-picker</code> component acts as the pop-up panel for selecting dates. This works in
 the same way as <code>mat-datepicker</code>, but allows the user to select multiple times:</p>
-<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">mat-date-range-picker</span> #<span class="hljs-attr">picker</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">mat-date-range-picker</span>&gt;</span></code></pre><p>Connect the range picker and range input using the <code>rangePicker</code> property:</p>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">mat-date-range-picker</span> #<span class="hljs-attr">picker</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">mat-date-range-picker</span>&gt;</span></code><button class="docs-markdown-copy-button" type="button" aria-label="Copy code" title="Copy code to the clipboard"><span class="material-symbols-outlined" aria-hidden="true">content_copy</span></button></pre><p>Connect the range picker and range input using the <code>rangePicker</code> property:</p>
 <pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">mat-date-range-input</span> [<span class="hljs-attr">rangePicker</span>]=<span class="hljs-string">&quot;picker&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">matStartDate</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">&quot;Start date&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">matEndDate</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">&quot;End date&quot;</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">mat-date-range-input</span>&gt;</span>
 
-<span class="hljs-tag">&lt;<span class="hljs-name">mat-date-range-picker</span> #<span class="hljs-attr">picker</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">mat-date-range-picker</span>&gt;</span></code></pre></div><div material-docs-example="date-range-picker-overview"></div><div class="docs-markdown">
+<span class="hljs-tag">&lt;<span class="hljs-name">mat-date-range-picker</span> #<span class="hljs-attr">picker</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">mat-date-range-picker</span>&gt;</span></code><button class="docs-markdown-copy-button" type="button" aria-label="Copy code" title="Copy code to the clipboard"><span class="material-symbols-outlined" aria-hidden="true">content_copy</span></button></pre></div><div material-docs-example="date-range-picker-overview"></div><div class="docs-markdown">
         <h3 id="use-with-angular-forms" class="docs-header-link">
           Use with Angular Forms
           <span header-link="use-with-angular-forms"></span>
@@ -184,7 +184,7 @@ selected range. The comparison and overlap colors can be customized using the
 <code>datepicker-date-range-colors</code> mixin.</p>
 </div><div material-docs-example="date-range-picker-comparison"></div><div class="docs-markdown"><pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;@angular/material&#x27;</span> as mat;
 
-<span class="hljs-keyword">@include</span> mat.datepicker-date-range-colors(hotpink, teal, yellow, purple);</code></pre>
+<span class="hljs-keyword">@include</span> mat.datepicker-date-range-colors(hotpink, teal, yellow, purple);</code><button class="docs-markdown-copy-button" type="button" aria-label="Copy code" title="Copy code to the clipboard"><span class="material-symbols-outlined" aria-hidden="true">content_copy</span></button></pre>
         <h3 id="customizing-the-date-selection-logic" class="docs-header-link">
           Customizing the date selection logic
           <span header-link="customizing-the-date-selection-logic"></span>
@@ -241,7 +241,7 @@ from <code>@angular/core</code>. If you want to override it, you can provide a n
 <code>MAT_DATE_LOCALE</code> token:</p>
 <pre><code class="language-ts"><span class="hljs-title function_">bootstrapApplication</span>(<span class="hljs-title class_">MyApp</span>, {
   <span class="hljs-attr">providers</span>: [{<span class="hljs-attr">provide</span>: <span class="hljs-variable constant_">MAT_DATE_LOCALE</span>, <span class="hljs-attr">useValue</span>: <span class="hljs-string">&#x27;en-GB&#x27;</span>}],
-});</code></pre><p>It&#39;s also possible to set the locale at runtime using the <code>setLocale</code> method of the <code>DateAdapter</code>.</p>
+});</code><button class="docs-markdown-copy-button" type="button" aria-label="Copy code" title="Copy code to the clipboard"><span class="material-symbols-outlined" aria-hidden="true">content_copy</span></button></pre><p>It&#39;s also possible to set the locale at runtime using the <code>setLocale</code> method of the <code>DateAdapter</code>.</p>
 <p><strong>Note:</strong> if you&#39;re using the <code>provideDateFnsAdapter</code>, you have to provide the data object for your
 locale to <code>MAT_DATE_LOCALE</code> instead of the locale code, in addition to providing a configuration
 compatible with <code>date-fns</code> to <code>MAT_DATE_FORMATS</code>. Locale data for <code>date-fns</code> can be imported
@@ -344,21 +344,21 @@ or a custom <code>DateAdapter</code> that works with the library of your choice.
 <p>These APIs include providers for <code>DateAdapter</code> and <code>MAT_DATE_FORMATS</code>.</p>
 <pre><code class="language-ts"><span class="hljs-title function_">bootstrapApplication</span>(<span class="hljs-title class_">MyApp</span>, {
   <span class="hljs-attr">providers</span>: [<span class="hljs-title function_">provideNativeDateAdapter</span>()]
-});</code></pre><p>Because <code>DateAdapter</code> is a generic class, <code>MatDatepicker</code> and <code>MatDatepickerInput</code> also need to be
+});</code><button class="docs-markdown-copy-button" type="button" aria-label="Copy code" title="Copy code to the clipboard"><span class="material-symbols-outlined" aria-hidden="true">content_copy</span></button></pre><p>Because <code>DateAdapter</code> is a generic class, <code>MatDatepicker</code> and <code>MatDatepickerInput</code> also need to be
 made generic. When working with these classes (for example as a <code>ViewChild</code>) you should include the
 appropriate generic type that corresponds to the <code>DateAdapter</code> implementation you are using. For
 example:</p>
 <pre><code class="language-ts"><span class="hljs-meta">@Component</span>({...})
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">MyComponent</span> {
   <span class="hljs-meta">@ViewChild</span>(<span class="hljs-title class_">MatDatepicker</span>) <span class="hljs-attr">datepicker</span>: <span class="hljs-title class_">MatDatepicker</span>&lt;<span class="hljs-title class_">Date</span>&gt;;
-}</code></pre></div><div material-docs-example="datepicker-luxon"></div><div class="docs-markdown"><p>By default the <code>LuxonDateAdapter</code> creates dates in your time zone specific locale. You can change
+}</code><button class="docs-markdown-copy-button" type="button" aria-label="Copy code" title="Copy code to the clipboard"><span class="material-symbols-outlined" aria-hidden="true">content_copy</span></button></pre></div><div material-docs-example="datepicker-luxon"></div><div class="docs-markdown"><p>By default the <code>LuxonDateAdapter</code> creates dates in your time zone specific locale. You can change
 the default behaviour to parse dates as UTC by passing <code>useUtc: true</code> into <code>provideLuxonDateAdapter</code>:</p>
 <pre><code class="language-ts"><span class="hljs-title function_">bootstrapApplication</span>(<span class="hljs-title class_">MyApp</span>, {
   <span class="hljs-attr">providers</span>: [<span class="hljs-title function_">provideLuxonDateAdapter</span>(<span class="hljs-literal">undefined</span>, {<span class="hljs-attr">useUtc</span>: <span class="hljs-literal">true</span>})]
-});</code></pre><p>You can also change the default behaviour to parse and handle dates as any desired timeZone by passing <code>timeZone</code> into <code>provideLuxonDateAdapter</code>:</p>
+});</code><button class="docs-markdown-copy-button" type="button" aria-label="Copy code" title="Copy code to the clipboard"><span class="material-symbols-outlined" aria-hidden="true">content_copy</span></button></pre><p>You can also change the default behaviour to parse and handle dates as any desired timeZone by passing <code>timeZone</code> into <code>provideLuxonDateAdapter</code>:</p>
 <pre><code class="language-ts"><span class="hljs-title function_">bootstrapApplication</span>(<span class="hljs-title class_">MyApp</span>, {
   <span class="hljs-attr">providers</span>: [<span class="hljs-title function_">provideLuxonDateAdapter</span>(<span class="hljs-literal">undefined</span>, {<span class="hljs-attr">timeZone</span>: <span class="hljs-string">&#x27;UTC+2&#x27;</span>})]
-});</code></pre><p>It is also possible to create your own <code>DateAdapter</code> that works with any date format your app
+});</code><button class="docs-markdown-copy-button" type="button" aria-label="Copy code" title="Copy code to the clipboard"><span class="material-symbols-outlined" aria-hidden="true">content_copy</span></button></pre><p>It is also possible to create your own <code>DateAdapter</code> that works with any date format your app
 requires. This is accomplished by subclassing <code>DateAdapter</code> and providing your subclass as the
 <code>DateAdapter</code> implementation. You will also want to make sure that the <code>MAT_DATE_FORMATS</code> provided
 in your app are formats that can be understood by your date implementation. See
@@ -369,7 +369,7 @@ information about <code>MAT_DATE_FORMATS</code>.</p>
     {<span class="hljs-attr">provide</span>: <span class="hljs-title class_">DateAdapter</span>, <span class="hljs-attr">useClass</span>: <span class="hljs-title class_">MyDateAdapter</span>},
     {<span class="hljs-attr">provide</span>: <span class="hljs-variable constant_">MAT_DATE_FORMATS</span>, <span class="hljs-attr">useValue</span>: <span class="hljs-variable constant_">MY_DATE_FORMATS</span>},
   ]
-});</code></pre><p>If you need to work with native <code>Date</code> objects, but need custom behavior (for example custom date
+});</code><button class="docs-markdown-copy-button" type="button" aria-label="Copy code" title="Copy code to the clipboard"><span class="material-symbols-outlined" aria-hidden="true">content_copy</span></button></pre><p>If you need to work with native <code>Date</code> objects, but need custom behavior (for example custom date
 parsing), you can consider subclassing <code>NativeDateAdapter</code>.</p>
 
         <h4 id="customizing-the-parse-and-display-formats" class="docs-header-link">
@@ -384,7 +384,7 @@ sure that the format objects you&#39;re using are compatible with the <code>Date
 <code>MAT_DATE_FORMATS</code> token yourself. For example:</p>
 <pre><code class="language-ts"><span class="hljs-title function_">bootstrapApplication</span>(<span class="hljs-title class_">MyApp</span>, {
   <span class="hljs-attr">providers</span>: [<span class="hljs-title function_">provideNativeDateAdapter</span>(<span class="hljs-variable constant_">MY_NATIVE_DATE_FORMATS</span>)],
-});</code></pre></div><div material-docs-example="datepicker-formats"></div><div class="docs-markdown">
+});</code><button class="docs-markdown-copy-button" type="button" aria-label="Copy code" title="Copy code to the clipboard"><span class="material-symbols-outlined" aria-hidden="true">content_copy</span></button></pre></div><div material-docs-example="datepicker-formats"></div><div class="docs-markdown">
         <h4 id="customizing-the-calendar-header" class="docs-header-link">
           Customizing the calendar header
           <span header-link="customizing-the-calendar-header"></span>
@@ -410,7 +410,7 @@ app config.</p>
     {<span class="hljs-attr">provide</span>: <span class="hljs-title class_">MatDatepickerIntl</span>, <span class="hljs-attr">useClass</span>: <span class="hljs-title class_">MyIntl</span>},
     <span class="hljs-title function_">provideNativeDateAdapter</span>(),
   ],
-});</code></pre>
+});</code><button class="docs-markdown-copy-button" type="button" aria-label="Copy code" title="Copy code to the clipboard"><span class="material-symbols-outlined" aria-hidden="true">content_copy</span></button></pre>
         <h4 id="highlighting-specific-dates" class="docs-header-link">
           Highlighting specific dates
           <span header-link="highlighting-specific-dates"></span>
@@ -655,4 +655,4 @@ associated with a single input.</p>
 input with your datepicker, create a template reference for the datepicker and assign it to the
 <code>matDatepicker</code> attribute on the input:</p>
 <pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">input</span> [<span class="hljs-attr">matDatepicker</span>]=<span class="hljs-string">&quot;picker&quot;</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">mat-datepicker</span> #<span class="hljs-attr">picker</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">mat-datepicker</span>&gt;</span></code></pre></div>
+<span class="hljs-tag">&lt;<span class="hljs-name">mat-datepicker</span> #<span class="hljs-attr">picker</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">mat-datepicker</span>&gt;</span></code><button class="docs-markdown-copy-button" type="button" aria-label="Copy code" title="Copy code to the clipboard"><span class="material-symbols-outlined" aria-hidden="true">content_copy</span></button></pre></div>

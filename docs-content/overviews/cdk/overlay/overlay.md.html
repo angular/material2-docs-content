@@ -8,7 +8,7 @@
 Angular Material, these styles have been included together with the theme, otherwise if you&#39;re
 using the CDK on its own, you&#39;ll have to include the styles yourself. You can do so by importing
 the prebuilt styles in your global stylesheet:</p>
-<pre><code class="language-scss"><span class="hljs-keyword">@import</span> <span class="hljs-string">&#x27;@angular/cdk/overlay-prebuilt.css&#x27;</span>;</code></pre>
+<pre><code class="language-scss"><span class="hljs-keyword">@import</span> <span class="hljs-string">&#x27;@angular/cdk/overlay-prebuilt.css&#x27;</span>;</code><button class="docs-markdown-copy-button" type="button" aria-label="Copy code" title="Copy code to the clipboard"><span class="material-symbols-outlined" aria-hidden="true">content_copy</span></button></pre>
         <h3 id="creating-overlays" class="docs-header-link">
           Creating overlays
           <span header-link="creating-overlays"></span>
@@ -19,7 +19,7 @@ managing that specific overlay.</p>
 See the documentation on portals for further information.</p>
 <pre><code class="language-ts"><span class="hljs-keyword">const</span> overlayRef = overlay.<span class="hljs-title function_">create</span>();
 <span class="hljs-keyword">const</span> userProfilePortal = <span class="hljs-keyword">new</span> <span class="hljs-title class_">ComponentPortal</span>(<span class="hljs-title class_">UserProfile</span>);
-overlayRef.<span class="hljs-title function_">attach</span>(userProfilePortal);</code></pre>
+overlayRef.<span class="hljs-title function_">attach</span>(userProfilePortal);</code><button class="docs-markdown-copy-button" type="button" aria-label="Copy code" title="Copy code to the clipboard"><span class="material-symbols-outlined" aria-hidden="true">content_copy</span></button></pre>
         <h3 id="configuring-an-overlay" class="docs-header-link">
           Configuring an overlay
           <span header-link="configuring-an-overlay"></span>
@@ -28,7 +28,7 @@ overlayRef.<span class="hljs-title function_">attach</span>(userProfilePortal);<
 <pre><code class="language-ts"><span class="hljs-keyword">const</span> overlayRef = overlay.<span class="hljs-title function_">create</span>({
   <span class="hljs-attr">height</span>: <span class="hljs-string">&#x27;400px&#x27;</span>,
   <span class="hljs-attr">width</span>: <span class="hljs-string">&#x27;600px&#x27;</span>,
-});</code></pre><p>The full set of configuration options can be found in the API documentation.</p>
+});</code><button class="docs-markdown-copy-button" type="button" aria-label="Copy code" title="Copy code to the clipboard"><span class="material-symbols-outlined" aria-hidden="true">content_copy</span></button></pre><p>The full set of configuration options can be found in the API documentation.</p>
 
         <h4 id="position-strategies" class="docs-header-link">
           Position strategies
@@ -102,7 +102,7 @@ overlay. If you need to globally disable the popover behavior, you can provide t
   <span class="hljs-attr">providers</span>: [
     {<span class="hljs-attr">provide</span>: <span class="hljs-variable constant_">OVERLAY_DEFAULT_CONFIG</span>, <span class="hljs-attr">useValue</span>: {<span class="hljs-attr">usePopover</span>: <span class="hljs-literal">false</span>}}
   ]
-});</code></pre>
+});</code><button class="docs-markdown-copy-button" type="button" aria-label="Copy code" title="Copy code to the clipboard"><span class="material-symbols-outlined" aria-hidden="true">content_copy</span></button></pre>
         <h4 id="popover-dom-location" class="docs-header-link">
           Popover DOM location
           <span header-link="popover-dom-location"></span>
@@ -127,7 +127,7 @@ while the browser continues to render the popover on top of everything.</p>
              [<span class="hljs-attr">cdkConnectedOverlayOpen</span>]=<span class="hljs-string">&quot;isOpen&quot;</span>
              <span class="hljs-attr">cdkConnectedOverlayUsePopover</span>=<span class="hljs-string">&quot;inline&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;menu-panel&quot;</span>&gt;</span>Menu content<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">ng-template</span>&gt;</span></code></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ng-template</span>&gt;</span></code><button class="docs-markdown-copy-button" type="button" aria-label="Copy code" title="Copy code to the clipboard"><span class="material-symbols-outlined" aria-hidden="true">content_copy</span></button></pre>
         <h4 id="full-screen-overlays" class="docs-header-link">
           Full-screen overlays
           <span header-link="full-screen-overlays"></span>
@@ -138,4 +138,4 @@ displaying of overlay elements in
 <p><code>FullscreenOverlayContainer</code> can be enabled by providing it in your app config:</p>
 <pre><code class="language-ts"><span class="hljs-title function_">bootstrapApplication</span>(<span class="hljs-title class_">MyApp</span>, {
   <span class="hljs-attr">providers</span>: [{<span class="hljs-attr">provide</span>: <span class="hljs-title class_">OverlayContainer</span>, <span class="hljs-attr">useClass</span>: <span class="hljs-title class_">FullscreenOverlayContainer</span>}]
-});</code></pre></div>
+});</code><button class="docs-markdown-copy-button" type="button" aria-label="Copy code" title="Copy code to the clipboard"><span class="material-symbols-outlined" aria-hidden="true">content_copy</span></button></pre></div>
