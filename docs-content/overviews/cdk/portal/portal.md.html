@@ -84,7 +84,7 @@ built upon.</p>
 <span class="hljs-comment">&lt;!-- This result here is identical to the syntax above --&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">p</span> *<span class="hljs-attr">cdkPortal</span>&gt;</span>
   The content of this template is captured by the portal.
-<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></code></pre><p>A component can use <code>@ViewChild</code> or <code>@ViewChildren</code> to get a reference to a
+<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></code><button class="docs-markdown-copy-button" type="button" aria-label="Copy code" title="Copy code to the clipboard"><span class="material-symbols-outlined" aria-hidden="true">content_copy</span></button></pre><p>A component can use <code>@ViewChild</code> or <code>@ViewChildren</code> to get a reference to a
 <code>CdkPortal</code>.</p>
 
         <h5 id="componentportal" class="docs-header-link">
@@ -95,31 +95,31 @@ built upon.</p>
 <p>Usage:</p>
 <pre><code class="language-ts"><span class="hljs-title function_">ngAfterViewInit</span>(<span class="hljs-params"></span>) {
   <span class="hljs-variable language_">this</span>.<span class="hljs-property">userSettingsPortal</span> = <span class="hljs-keyword">new</span> <span class="hljs-title class_">ComponentPortal</span>(<span class="hljs-title class_">UserSettingsComponent</span>);
-}</code></pre>
+}</code><button class="docs-markdown-copy-button" type="button" aria-label="Copy code" title="Copy code to the clipboard"><span class="material-symbols-outlined" aria-hidden="true">content_copy</span></button></pre>
         <h5 id="templateportal" class="docs-header-link">
           <code>TemplatePortal</code>
           <span header-link="templateportal"></span>
         </h5>
       <p>You can create a <code>TemplatePortal</code> from an <code>&lt;ng-template&gt;</code>. <code>TemplatePortal</code> allows you to take Angular content within one template and render it somewhere else.</p>
 <p>Usage:</p>
-<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">ng-template</span> #<span class="hljs-attr">templatePortalContent</span>&gt;</span>Some content here<span class="hljs-tag">&lt;/<span class="hljs-name">ng-template</span>&gt;</span></code></pre><pre><code class="language-ts"><span class="hljs-meta">@ViewChild</span>(<span class="hljs-string">&#x27;templatePortalContent&#x27;</span>) <span class="hljs-attr">templatePortalContent</span>: <span class="hljs-title class_">TemplateRef</span>&lt;<span class="hljs-built_in">unknown</span>&gt;;
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">ng-template</span> #<span class="hljs-attr">templatePortalContent</span>&gt;</span>Some content here<span class="hljs-tag">&lt;/<span class="hljs-name">ng-template</span>&gt;</span></code><button class="docs-markdown-copy-button" type="button" aria-label="Copy code" title="Copy code to the clipboard"><span class="material-symbols-outlined" aria-hidden="true">content_copy</span></button></pre><pre><code class="language-ts"><span class="hljs-meta">@ViewChild</span>(<span class="hljs-string">&#x27;templatePortalContent&#x27;</span>) <span class="hljs-attr">templatePortalContent</span>: <span class="hljs-title class_">TemplateRef</span>&lt;<span class="hljs-built_in">unknown</span>&gt;;
 
 <span class="hljs-title function_">ngAfterViewInit</span>(<span class="hljs-params"></span>) {
   <span class="hljs-variable language_">this</span>.<span class="hljs-property">templatePortal</span> = <span class="hljs-keyword">new</span> <span class="hljs-title class_">TemplatePortal</span>(
     <span class="hljs-variable language_">this</span>.<span class="hljs-property">templatePortalContent</span>,
     <span class="hljs-variable language_">this</span>.<span class="hljs-property">_viewContainerRef</span>
   );
-}</code></pre>
+}</code><button class="docs-markdown-copy-button" type="button" aria-label="Copy code" title="Copy code to the clipboard"><span class="material-symbols-outlined" aria-hidden="true">content_copy</span></button></pre>
         <h5 id="domportal" class="docs-header-link">
           <code>DomPortal</code>
           <span header-link="domportal"></span>
         </h5>
       <p>You can create a <code>DomPortal</code> from any native DOM element. <code>DomPortal</code> allows you to take any arbitrary DOM content and render it somewhere else. <code>DomPortal</code> moves content <em>as is</em>, so elements with Angular features like bindings or directives may no longer update if moved via <code>DomPortal</code>.</p>
 <p>Usage:</p>
-<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> #<span class="hljs-attr">domPortalContent</span>&gt;</span>Some content here<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre><pre><code class="language-ts"><span class="hljs-meta">@ViewChild</span>(<span class="hljs-string">&#x27;domPortalContent&#x27;</span>) <span class="hljs-attr">domPortalContent</span>: <span class="hljs-title class_">ElementRef</span>&lt;<span class="hljs-title class_">HTMLElement</span>&gt;;
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> #<span class="hljs-attr">domPortalContent</span>&gt;</span>Some content here<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code><button class="docs-markdown-copy-button" type="button" aria-label="Copy code" title="Copy code to the clipboard"><span class="material-symbols-outlined" aria-hidden="true">content_copy</span></button></pre><pre><code class="language-ts"><span class="hljs-meta">@ViewChild</span>(<span class="hljs-string">&#x27;domPortalContent&#x27;</span>) <span class="hljs-attr">domPortalContent</span>: <span class="hljs-title class_">ElementRef</span>&lt;<span class="hljs-title class_">HTMLElement</span>&gt;;
 <span class="hljs-title function_">ngAfterViewInit</span>(<span class="hljs-params"></span>) {
   <span class="hljs-variable language_">this</span>.<span class="hljs-property">domPortal</span> = <span class="hljs-keyword">new</span> <span class="hljs-title class_">DomPortal</span>(<span class="hljs-variable language_">this</span>.<span class="hljs-property">domPortalContent</span>);
-}</code></pre>
+}</code><button class="docs-markdown-copy-button" type="button" aria-label="Copy code" title="Copy code to the clipboard"><span class="material-symbols-outlined" aria-hidden="true">content_copy</span></button></pre>
         <h5 id="cdkportaloutlet" class="docs-header-link">
           <code>CdkPortalOutlet</code>
           <span header-link="cdkportaloutlet"></span>
@@ -127,4 +127,4 @@ built upon.</p>
       <p>Used to add a portal outlet to a template. <code>CdkPortalOutlet</code> <em>is</em> a <code>PortalOutlet</code>.</p>
 <p>Usage:</p>
 <pre><code class="language-html"><span class="hljs-comment">&lt;!-- Attaches the `userSettingsPortal` from the previous example. --&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">ng-template</span> [<span class="hljs-attr">cdkPortalOutlet</span>]=<span class="hljs-string">&quot;userSettingsPortal&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">ng-template</span>&gt;</span></code></pre></div>
+<span class="hljs-tag">&lt;<span class="hljs-name">ng-template</span> [<span class="hljs-attr">cdkPortalOutlet</span>]=<span class="hljs-string">&quot;userSettingsPortal&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">ng-template</span>&gt;</span></code><button class="docs-markdown-copy-button" type="button" aria-label="Copy code" title="Copy code to the clipboard"><span class="material-symbols-outlined" aria-hidden="true">content_copy</span></button></pre></div>

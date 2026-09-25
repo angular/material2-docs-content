@@ -15,7 +15,7 @@ react to changes when the viewport size crosses a breakpoint.</p>
         </h4>
       <p>You can use the <code>isMatched</code> method to evaluate one or more media queries against the current
 viewport size.</p>
-<pre><code class="language-ts"><span class="hljs-keyword">const</span> isSmallScreen = breakpointObserver.<span class="hljs-title function_">isMatched</span>(<span class="hljs-string">&#x27;(max-width: 599px)&#x27;</span>);</code></pre>
+<pre><code class="language-ts"><span class="hljs-keyword">const</span> isSmallScreen = breakpointObserver.<span class="hljs-title function_">isMatched</span>(<span class="hljs-string">&#x27;(max-width: 599px)&#x27;</span>);</code><button class="docs-markdown-copy-button" type="button" aria-label="Copy code" title="Copy code to the clipboard"><span class="material-symbols-outlined" aria-hidden="true">content_copy</span></button></pre>
         <h4 id="react-to-changes-to-the-viewport" class="docs-header-link">
           React to changes to the viewport
           <span header-link="react-to-changes-to-the-viewport"></span>
@@ -29,7 +29,7 @@ crosses a breakpoint.</p>
 
 layoutChanges.<span class="hljs-title function_">subscribe</span>(<span class="hljs-function"><span class="hljs-params">result</span> =&gt;</span> {
   <span class="hljs-title function_">updateMyLayoutForOrientationChange</span>();
-});</code></pre>
+});</code><button class="docs-markdown-copy-button" type="button" aria-label="Copy code" title="Copy code to the clipboard"><span class="material-symbols-outlined" aria-hidden="true">content_copy</span></button></pre>
         <h4 id="predefined-breakpoints" class="docs-header-link">
           Predefined breakpoints
           <span header-link="predefined-breakpoints"></span>
@@ -109,7 +109,7 @@ specification</a>.</p>
   <span class="hljs-keyword">if</span> (result.<span class="hljs-property">matches</span>) {
     <span class="hljs-variable language_">this</span>.<span class="hljs-title function_">activateHandsetLayout</span>();
   }
-});</code></pre>
+});</code><button class="docs-markdown-copy-button" type="button" aria-label="Copy code" title="Copy code to the clipboard"><span class="material-symbols-outlined" aria-hidden="true">content_copy</span></button></pre>
         <h3 id="mediamatcher" class="docs-header-link">
           MediaMatcher
           <span header-link="mediamatcher"></span>
@@ -123,4 +123,4 @@ The <code>matchMedia</code> method can be used to get a native
 <span class="hljs-keyword">class</span> <span class="hljs-title class_">MyComponent</span> {
   <span class="hljs-keyword">private</span> mediaMatcher = <span class="hljs-title function_">inject</span>(<span class="hljs-title class_">MediaMatcher</span>);
   <span class="hljs-keyword">private</span> mediaQueryList = <span class="hljs-variable language_">this</span>.<span class="hljs-property">mediaMatcher</span>.<span class="hljs-title function_">matchMedia</span>(<span class="hljs-string">&#x27;(min-width: 1px)&#x27;</span>);
-}</code></pre></div>
+}</code><button class="docs-markdown-copy-button" type="button" aria-label="Copy code" title="Copy code to the clipboard"><span class="material-symbols-outlined" aria-hidden="true">content_copy</span></button></pre></div>

@@ -38,17 +38,17 @@ appears in light or dark mode.</p>
     <span class="hljs-attribute">typography</span>: Roboto,
     <span class="hljs-attribute">density</span>: <span class="hljs-number">0</span>
   ));
-}</code></pre><p>You can use the following styles to apply the theme’s surface background and
+}</code><button class="docs-markdown-copy-button" type="button" aria-label="Copy code" title="Copy code to the clipboard"><span class="material-symbols-outlined" aria-hidden="true">content_copy</span></button></pre><p>You can use the following styles to apply the theme’s surface background and
 on-surface text colors as a default across your application:</p>
 <pre><code class="language-scss"><span class="hljs-selector-tag">body</span> {
   <span class="hljs-attribute">background</span>: <span class="hljs-built_in">var</span>(--mat-sys-surface);
   <span class="hljs-attribute">color</span>: <span class="hljs-built_in">var</span>(--mat-sys-on-surface);
-}</code></pre><p>You can also define a convenient set of CSS utility classes that let you apply
+}</code><button class="docs-markdown-copy-button" type="button" aria-label="Copy code" title="Copy code to the clipboard"><span class="material-symbols-outlined" aria-hidden="true">content_copy</span></button></pre><p>You can also define a convenient set of CSS utility classes that let you apply
 theme styles from your component templates.</p>
 <pre><code class="language-scss"><span class="hljs-selector-tag">html</span> {
   ...
   <span class="hljs-keyword">@include</span> mat.system-classes();
-}</code></pre><pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">body</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;mat-bg-surface mat-text-on-surface&quot;</span>&gt;</span></code></pre><p>The <code>mat.theme</code> mixin will only declare CSS variables for the categories
+}</code><button class="docs-markdown-copy-button" type="button" aria-label="Copy code" title="Copy code to the clipboard"><span class="material-symbols-outlined" aria-hidden="true">content_copy</span></button></pre><pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">body</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;mat-bg-surface mat-text-on-surface&quot;</span>&gt;</span></code><button class="docs-markdown-copy-button" type="button" aria-label="Copy code" title="Copy code to the clipboard"><span class="material-symbols-outlined" aria-hidden="true">content_copy</span></button></pre><p>The <code>mat.theme</code> mixin will only declare CSS variables for the categories
 included in the input. For example, if <code>typography</code> is not defined, then
 typography CSS variables will not be included in the output.</p>
 
@@ -109,7 +109,7 @@ with a standard density setting.</p>
     <span class="hljs-attribute">typography</span>: Roboto,
     <span class="hljs-attribute">density</span>: <span class="hljs-number">0</span>
   ));
-}</code></pre>
+}</code><button class="docs-markdown-copy-button" type="button" aria-label="Copy code" title="Copy code to the clipboard"><span class="material-symbols-outlined" aria-hidden="true">content_copy</span></button></pre>
         <h3 id="typography" class="docs-header-link">
           Typography
           <span header-link="typography"></span>
@@ -155,7 +155,7 @@ violet color palette with a standard density.</p>
     ),
     <span class="hljs-attribute">density</span>: <span class="hljs-number">0</span>,
   ));
-}</code></pre>
+}</code><button class="docs-markdown-copy-button" type="button" aria-label="Copy code" title="Copy code to the clipboard"><span class="material-symbols-outlined" aria-hidden="true">content_copy</span></button></pre>
         <h3 id="density" class="docs-header-link">
           Density
           <span header-link="density"></span>
@@ -177,7 +177,7 @@ violet color palette and applies Roboto as the font-family.</p>
     <span class="hljs-attribute">typography</span>: Roboto,
     <span class="hljs-attribute">density</span>: -<span class="hljs-number">2</span>,
   ));
-}</code></pre><p>Setting the density below 0 can reduce accessibility and make navigation harder
+}</code><button class="docs-markdown-copy-button" type="button" aria-label="Copy code" title="Copy code to the clipboard"><span class="material-symbols-outlined" aria-hidden="true">content_copy</span></button></pre><p>Setting the density below 0 can reduce accessibility and make navigation harder
 for users of assistive technology.</p>
 <p>Density customizations do not affect components that appear in task-based or
 pop-up contexts, such as the date picker. The Material Design density guidance
@@ -258,7 +258,7 @@ a prebuilt theme in your application, add the chosen CSS file to the <code>style
 array of your project’s <code>angular.json</code> file:</p>
 <pre><code class="language-json"><span class="hljs-attr">&quot;styles&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span>
   <span class="hljs-string">&quot;@angular/material/prebuilt-themes/azure-blue.css&quot;</span>
-<span class="hljs-punctuation">]</span></code></pre><p>You can <a href="https://github.com/angular/components/blob/main/src/material/core/theming/prebuilt">reference the source code for these prebuilt themes</a> to see
+<span class="hljs-punctuation">]</span></code><button class="docs-markdown-copy-button" type="button" aria-label="Copy code" title="Copy code to the clipboard"><span class="material-symbols-outlined" aria-hidden="true">content_copy</span></button></pre><p>You can <a href="https://github.com/angular/components/blob/main/src/material/core/theming/prebuilt">reference the source code for these prebuilt themes</a> to see
 examples of complete theme definitions.</p>
 
         <h2 id="color-palettes" class="docs-header-link">
@@ -299,7 +299,7 @@ your application’s theme:</p>
 builds custom color palettes based on a single color input for the primary
 color, and optionally color inputs to further customize secondary, tertiary, and
 neutral palettes:</p>
-<pre><code class="language-bash">ng generate @angular/material:theme-color</code></pre>
+<pre><code class="language-bash">ng generate @angular/material:theme-color</code><button class="docs-markdown-copy-button" type="button" aria-label="Copy code" title="Copy code to the clipboard"><span class="material-symbols-outlined" aria-hidden="true">content_copy</span></button></pre>
         <h2 id="loading-fonts" class="docs-header-link">
           Loading Fonts
           <span header-link="loading-fonts"></span>
@@ -309,7 +309,7 @@ example, the following code in an application’s <code>&lt;head&gt;</code> load
 Roboto with the font weights 700, 500, and 400:</p>
 <pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">&quot;preconnect&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;https://fonts.googleapis.com&quot;</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">&quot;preconnect&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;https://fonts.gstatic.com&quot;</span> <span class="hljs-attr">crossorigin</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&amp;family=Roboto:wght@400;500;700&amp;display=swap&quot;</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">&quot;stylesheet&quot;</span>&gt;</span></code></pre><p>Learn more about using fonts with
+<span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&amp;family=Roboto:wght@400;500;700&amp;display=swap&quot;</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">&quot;stylesheet&quot;</span>&gt;</span></code><button class="docs-markdown-copy-button" type="button" aria-label="Copy code" title="Copy code to the clipboard"><span class="material-symbols-outlined" aria-hidden="true">content_copy</span></button></pre><p>Learn more about using fonts with
 <a href="https://developers.google.com/fonts/docs/getting_started">Google Fonts</a>. By
 default, projects created with the Angular CLI are
 <a href="https://angular.dev/reference/configs/workspace-config#fonts-optimization-options">configured</a>
@@ -336,7 +336,7 @@ preferences, use <code>color-scheme: light dark</code> as shown in the following
     <span class="hljs-attribute">typography</span>: Roboto,
     <span class="hljs-attribute">density</span>: <span class="hljs-number">0</span>
   ));
-}</code></pre><p>You can also use the strategy of defining <code>color-scheme</code> under a CSS selector so
+}</code><button class="docs-markdown-copy-button" type="button" aria-label="Copy code" title="Copy code to the clipboard"><span class="material-symbols-outlined" aria-hidden="true">content_copy</span></button></pre><p>You can also use the strategy of defining <code>color-scheme</code> under a CSS selector so
 that the mode depends on whether that class has been applied. In the following
 example, the application always displays the light mode theme unless the class
 “dark-mode” is added to the HTML body.</p>
@@ -353,7 +353,7 @@ example, the application always displays the light mode theme unless the class
 
 <span class="hljs-selector-tag">body</span><span class="hljs-selector-class">.dark-mode</span> {
   <span class="hljs-attribute">color-scheme</span>: dark;
-}</code></pre><p>Angular Material does not automatically apply different styles or themes based
+}</code><button class="docs-markdown-copy-button" type="button" aria-label="Copy code" title="Copy code to the clipboard"><span class="material-symbols-outlined" aria-hidden="true">content_copy</span></button></pre><p>Angular Material does not automatically apply different styles or themes based
 on user preference media queries, such as <code>color-scheme</code>, <code>prefers-color-scheme</code>
 or <code>prefers-contrast</code>. Instead, Angular Material gives you the flexibility to
 define your own queries to apply the styles that make sense for your users. This
@@ -389,7 +389,7 @@ a unique and attention-grabbing style applied:</p>
   <span class="hljs-keyword">@include</span> mat.theme((
     <span class="hljs-attribute">color</span>: mat.<span class="hljs-variable">$cyan-palette</span>,
   ));
-}</code></pre>
+}</code><button class="docs-markdown-copy-button" type="button" aria-label="Copy code" title="Copy code to the clipboard"><span class="material-symbols-outlined" aria-hidden="true">content_copy</span></button></pre>
         <h2 id="using-theme-styles" class="docs-header-link">
           Using Theme Styles
           <span header-link="using-theme-styles"></span>
@@ -409,8 +409,8 @@ information to the user:</p>
   <span class="hljs-attribute">color</span>: <span class="hljs-built_in">var</span>(--mat-sys-on-primary-container);
   <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid <span class="hljs-built_in">var</span>(--mat-sys-outline-variant);
   <span class="hljs-attribute">font</span>: <span class="hljs-built_in">var</span>(--mat-sys-body-large);
-}</code></pre><p>Alternatively, you can use utility classes to achieve the same styles:</p>
-<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;mat-bg-primary-container mat-text-on-primary-container mat-border-variant mat-font-body-lg&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre><p>See the <a href="https://material.angular.dev/guide/theming-your-components">Theming your components</a> guide for a
+}</code><button class="docs-markdown-copy-button" type="button" aria-label="Copy code" title="Copy code to the clipboard"><span class="material-symbols-outlined" aria-hidden="true">content_copy</span></button></pre><p>Alternatively, you can use utility classes to achieve the same styles:</p>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;mat-bg-primary-container mat-text-on-primary-container mat-border-variant mat-font-body-lg&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code><button class="docs-markdown-copy-button" type="button" aria-label="Copy code" title="Copy code to the clipboard"><span class="material-symbols-outlined" aria-hidden="true">content_copy</span></button></pre><p>See the <a href="https://material.angular.dev/guide/theming-your-components">Theming your components</a> guide for a
 comprehensive list of these variables and classes, including examples of where they are used, and how
 components can depend on them.</p>
 
@@ -450,7 +450,7 @@ alters the <code>primary-container</code> token to a specific shade of blue.</p>
       <span class="hljs-attribute">primary-container</span>: <span class="hljs-number">#84ffff</span>
     ));
   }
-}</code></pre><p>Alternatively, an optional override map can be provided in the <code>mat.theme</code> mixin
+}</code><button class="docs-markdown-copy-button" type="button" aria-label="Copy code" title="Copy code to the clipboard"><span class="material-symbols-outlined" aria-hidden="true">content_copy</span></button></pre><p>Alternatively, an optional override map can be provided in the <code>mat.theme</code> mixin
 to replace values applied by the mixin:</p>
 <pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;@angular/material&#x27;</span> as mat;
 
@@ -463,7 +463,7 @@ to replace values applied by the mixin:</p>
   ), <span class="hljs-variable">$overrides</span>: (
     <span class="hljs-attribute">primary-container</span>: orange,
   ));
-}</code></pre>
+}</code><button class="docs-markdown-copy-button" type="button" aria-label="Copy code" title="Copy code to the clipboard"><span class="material-symbols-outlined" aria-hidden="true">content_copy</span></button></pre>
         <h3 id="component-tokens" class="docs-header-link">
           Component Tokens
           <span header-link="component-tokens"></span>
@@ -482,7 +482,7 @@ title font size.</p>
     <span class="hljs-attribute">elevated-container-shape</span>: <span class="hljs-number">32px</span>,
     <span class="hljs-attribute">title-text-size</span>: <span class="hljs-number">2rem</span>,
   ));
-}</code></pre>
+}</code><button class="docs-markdown-copy-button" type="button" aria-label="Copy code" title="Copy code to the clipboard"><span class="material-symbols-outlined" aria-hidden="true">content_copy</span></button></pre>
         <h3 id="direct-style-overrides" class="docs-header-link">
           Direct Style Overrides
           <span header-link="direct-style-overrides"></span>
@@ -513,7 +513,7 @@ enable these strong focus indicators by calling <code>mat.strong-focus-indicator
     <span class="hljs-attribute">density</span>: <span class="hljs-number">0</span>
   ));
   <span class="hljs-keyword">@include</span> mat.strong-focus-indicators();
-}</code></pre><p>By default, the focus indicator uses the theme&#39;s secondary color, but you can customize this color
+}</code><button class="docs-markdown-copy-button" type="button" aria-label="Copy code" title="Copy code to the clipboard"><span class="material-symbols-outlined" aria-hidden="true">content_copy</span></button></pre><p>By default, the focus indicator uses the theme&#39;s secondary color, but you can customize this color
 by calling the <code>strong-focus-indicators-theme($color)</code> mixin. Additionally, you can use
 this mixin to change the color of the focus indicators in situations in which the default color
 would not contrast sufficiently with the background color.</p>
@@ -534,7 +534,7 @@ of the custom theme API.</p>
   <span class="hljs-attribute">border-style</span>: dotted,
   <span class="hljs-attribute">border-width</span>: <span class="hljs-number">4px</span>,
   <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">2px</span>,
-));</code></pre>
+));</code><button class="docs-markdown-copy-button" type="button" aria-label="Copy code" title="Copy code to the clipboard"><span class="material-symbols-outlined" aria-hidden="true">content_copy</span></button></pre>
         <h2 id="shadow-dom" class="docs-header-link">
           Shadow DOM
           <span header-link="shadow-dom"></span>

@@ -84,7 +84,7 @@ just a starting point for us to learn.)</p>
       });
     });
   }
-}</code></pre>
+}</code><button class="docs-markdown-copy-button" type="button" aria-label="Copy code" title="Copy code to the clipboard"><span class="material-symbols-outlined" aria-hidden="true">content_copy</span></button></pre>
         <h2 id="providing-our-component-as-a-matformfieldcontrol" class="docs-header-link">
           Providing our component as a MatFormFieldControl
           <span header-link="providing-our-component-as-a-matformfieldcontrol"></span>
@@ -101,7 +101,7 @@ a provider to our component so that the form field will be able to inject it as 
 })
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">MyTelInput</span> <span class="hljs-keyword">implements</span> <span class="hljs-title class_">FormValueControl</span>&lt;<span class="hljs-title class_">MyTel</span> | <span class="hljs-literal">null</span>&gt;, <span class="hljs-title class_">MatFormFieldControl</span>&lt;<span class="hljs-title class_">MyTel</span>&gt; {
   ...
-}</code></pre><p>This sets up our component, so it can work with <code>&lt;mat-form-field&gt;</code>, but now we need to implement the
+}</code><button class="docs-markdown-copy-button" type="button" aria-label="Copy code" title="Copy code to the clipboard"><span class="material-symbols-outlined" aria-hidden="true">content_copy</span></button></pre><p>This sets up our component, so it can work with <code>&lt;mat-form-field&gt;</code>, but now we need to implement the
 various methods and properties declared by the interface we just implemented. To learn more about
 the <code>MatFormFieldControl</code> interface, see the
 <a href="https://material.angular.dev/components/form-field/api">form field API documentation</a>.</p>
@@ -127,7 +127,7 @@ Since <code>&lt;mat-form-field&gt;</code> reads those signals directly, it autom
 
 <span class="hljs-title function_">ngOnDestroy</span>(<span class="hljs-params"></span>) {
   <span class="hljs-variable language_">this</span>.<span class="hljs-property">stateChanges</span>.<span class="hljs-title function_">complete</span>();
-}</code></pre>
+}</code><button class="docs-markdown-copy-button" type="button" aria-label="Copy code" title="Copy code to the clipboard"><span class="material-symbols-outlined" aria-hidden="true">content_copy</span></button></pre>
         <h4 id="id" class="docs-header-link">
           <code>id</code>
           <span header-link="id"></span>
@@ -137,18 +137,18 @@ Since <code>&lt;mat-form-field&gt;</code> reads those signals directly, it autom
 element and just generate a unique ID for it.</p>
 <pre><code class="language-ts"><span class="hljs-keyword">static</span> nextId = <span class="hljs-number">0</span>;
 
-<span class="hljs-keyword">readonly</span> id = <span class="hljs-string">`example-tel-input-<span class="hljs-subst">${MyTelInput.nextId++}</span>`</span>;</code></pre><pre><code class="language-ts"><span class="hljs-meta">@Component</span>({
+<span class="hljs-keyword">readonly</span> id = <span class="hljs-string">`example-tel-input-<span class="hljs-subst">${MyTelInput.nextId++}</span>`</span>;</code><button class="docs-markdown-copy-button" type="button" aria-label="Copy code" title="Copy code to the clipboard"><span class="material-symbols-outlined" aria-hidden="true">content_copy</span></button></pre><pre><code class="language-ts"><span class="hljs-meta">@Component</span>({
   ...
   <span class="hljs-attr">host</span>: {
     <span class="hljs-string">&#x27;[id]&#x27;</span>: <span class="hljs-string">&#x27;id&#x27;</span>,
   },
-})</code></pre>
+})</code><button class="docs-markdown-copy-button" type="button" aria-label="Copy code" title="Copy code to the clipboard"><span class="material-symbols-outlined" aria-hidden="true">content_copy</span></button></pre>
         <h4 id="placeholder" class="docs-header-link">
           <code>placeholder</code>
           <span header-link="placeholder"></span>
         </h4>
       <p>If your control accepts a placeholder, you can expose it as a signal input:</p>
-<pre><code class="language-ts"><span class="hljs-keyword">readonly</span> placeholder = input&lt;<span class="hljs-built_in">string</span>&gt;(<span class="hljs-string">&#x27;&#x27;</span>);</code></pre>
+<pre><code class="language-ts"><span class="hljs-keyword">readonly</span> placeholder = input&lt;<span class="hljs-built_in">string</span>&gt;(<span class="hljs-string">&#x27;&#x27;</span>);</code><button class="docs-markdown-copy-button" type="button" aria-label="Copy code" title="Copy code to the clipboard"><span class="material-symbols-outlined" aria-hidden="true">content_copy</span></button></pre>
         <h4 id="ngfield" class="docs-header-link">
           <code>ngField</code>
           <span header-link="ngfield"></span>
@@ -159,7 +159,7 @@ exposes the bound <code>Field</code> to the parent <code>&lt;mat-form-field&gt;<
 
 <span class="hljs-keyword">get</span> <span class="hljs-title function_">ngField</span>(): <span class="hljs-title class_">Field</span>&lt;<span class="hljs-title class_">MyTel</span>&gt; | <span class="hljs-literal">null</span> {
   <span class="hljs-keyword">return</span> (<span class="hljs-variable language_">this</span>.<span class="hljs-property">_formFieldControl</span>?.<span class="hljs-title function_">field</span>() <span class="hljs-keyword">as</span> <span class="hljs-title class_">Field</span>&lt;<span class="hljs-title class_">MyTel</span>&gt;) ?? <span class="hljs-literal">null</span>;
-}</code></pre><p><code>&lt;mat-form-field&gt;</code> will use <code>ngField</code> to read the signal form field&#39;s state (such as <code>valid</code>, <code>dirty</code>, <code>touched</code>, and <code>pending</code>)
+}</code><button class="docs-markdown-copy-button" type="button" aria-label="Copy code" title="Copy code to the clipboard"><span class="material-symbols-outlined" aria-hidden="true">content_copy</span></button></pre><p><code>&lt;mat-form-field&gt;</code> will use <code>ngField</code> to read the signal form field&#39;s state (such as <code>valid</code>, <code>dirty</code>, <code>touched</code>, and <code>pending</code>)
 and automatically synchronize the corresponding CSS classes on the <code>&lt;mat-form-field&gt;</code> host.</p>
 
         <h4 id="ngcontrol" class="docs-header-link">
@@ -168,8 +168,8 @@ and automatically synchronize the corresponding CSS classes on the <code>&lt;mat
         </h4>
       <p>This property allows the form field control to specify the <code>@angular/forms</code> control that is bound
 to this component. When your control is built for Signal Forms, you can set this to <code>null</code>:</p>
-<pre><code class="language-ts"><span class="hljs-keyword">readonly</span> ngControl = <span class="hljs-literal">null</span>;</code></pre><p>If you also want your component to support traditional Reactive or Template-driven forms (<code>formControl</code> and <code>ngModel</code>), you can implement <code>ControlValueAccessor</code> and inject <code>NgControl</code>:</p>
-<pre><code class="language-ts">ngControl = <span class="hljs-title function_">inject</span>(<span class="hljs-title class_">NgControl</span>, {<span class="hljs-attr">optional</span>: <span class="hljs-literal">true</span>, <span class="hljs-attr">self</span>: <span class="hljs-literal">true</span>});</code></pre><p>It is likely you will want to implement <code>ControlValueAccessor</code> so that your component can work with
+<pre><code class="language-ts"><span class="hljs-keyword">readonly</span> ngControl = <span class="hljs-literal">null</span>;</code><button class="docs-markdown-copy-button" type="button" aria-label="Copy code" title="Copy code to the clipboard"><span class="material-symbols-outlined" aria-hidden="true">content_copy</span></button></pre><p>If you also want your component to support traditional Reactive or Template-driven forms (<code>formControl</code> and <code>ngModel</code>), you can implement <code>ControlValueAccessor</code> and inject <code>NgControl</code>:</p>
+<pre><code class="language-ts">ngControl = <span class="hljs-title function_">inject</span>(<span class="hljs-title class_">NgControl</span>, {<span class="hljs-attr">optional</span>: <span class="hljs-literal">true</span>, <span class="hljs-attr">self</span>: <span class="hljs-literal">true</span>});</code><button class="docs-markdown-copy-button" type="button" aria-label="Copy code" title="Copy code to the clipboard"><span class="material-symbols-outlined" aria-hidden="true">content_copy</span></button></pre><p>It is likely you will want to implement <code>ControlValueAccessor</code> so that your component can work with
 <code>formControl</code> and <code>ngModel</code>. If you do implement <code>ControlValueAccessor</code> you will need to get a
 reference to the <code>NgControl</code> associated with your control and make it publicly available.</p>
 <p>Note that if your component implements <code>ControlValueAccessor</code>, it may already be set up to provide
@@ -201,7 +201,7 @@ declaration). If so, you may get a <em>cannot instantiate cyclic dependency</em>
       <span class="hljs-variable language_">this</span>.<span class="hljs-property">ngControl</span>.<span class="hljs-property">valueAccessor</span> = <span class="hljs-variable language_">this</span>;
     }
   }
-}</code></pre><p>For additional information about <code>ControlValueAccessor</code> see the <a href="https://angular.dev/api/forms/ControlValueAccessor">API docs</a>.</p>
+}</code><button class="docs-markdown-copy-button" type="button" aria-label="Copy code" title="Copy code to the clipboard"><span class="material-symbols-outlined" aria-hidden="true">content_copy</span></button></pre><p>For additional information about <code>ControlValueAccessor</code> see the <a href="https://angular.dev/api/forms/ControlValueAccessor">API docs</a>.</p>
 
         <h4 id="focused" class="docs-header-link">
           <code>focused</code>
@@ -224,7 +224,7 @@ the form field automatically reacts to focus changes without needing to emit on 
     <span class="hljs-variable language_">this</span>.<span class="hljs-property">_touched</span>.<span class="hljs-title function_">set</span>(<span class="hljs-literal">true</span>);
     <span class="hljs-variable language_">this</span>.<span class="hljs-property">focused</span>.<span class="hljs-title function_">set</span>(<span class="hljs-literal">false</span>);
   }
-}</code></pre>
+}</code><button class="docs-markdown-copy-button" type="button" aria-label="Copy code" title="Copy code to the clipboard"><span class="material-symbols-outlined" aria-hidden="true">content_copy</span></button></pre>
         <h4 id="empty" class="docs-header-link">
           <code>empty</code>
           <span header-link="empty"></span>
@@ -235,7 +235,7 @@ empty if all the parts are empty.</p>
 <pre><code class="language-ts"><span class="hljs-keyword">readonly</span> empty = <span class="hljs-title function_">computed</span>(<span class="hljs-function">() =&gt;</span> {
   <span class="hljs-keyword">const</span> {area, exchange, subscriber} = <span class="hljs-variable language_">this</span>.<span class="hljs-title function_">partsModel</span>();
   <span class="hljs-keyword">return</span> !area &amp;&amp; !exchange &amp;&amp; !subscriber;
-});</code></pre>
+});</code><button class="docs-markdown-copy-button" type="button" aria-label="Copy code" title="Copy code to the clipboard"><span class="material-symbols-outlined" aria-hidden="true">content_copy</span></button></pre>
         <h4 id="shouldlabelfloat" class="docs-header-link">
           <code>shouldLabelFloat</code>
           <span header-link="shouldlabelfloat"></span>
@@ -249,19 +249,19 @@ the <code>–</code> characters when it&#39;s not floating.</p>
   <span class="hljs-keyword">const</span> focused = <span class="hljs-variable language_">this</span>.<span class="hljs-title function_">focused</span>();
   <span class="hljs-keyword">const</span> empty = <span class="hljs-variable language_">this</span>.<span class="hljs-title function_">empty</span>();
   <span class="hljs-keyword">return</span> focused || !empty;
-});</code></pre><p>We can apply a class to the host element when the label should float:</p>
+});</code><button class="docs-markdown-copy-button" type="button" aria-label="Copy code" title="Copy code to the clipboard"><span class="material-symbols-outlined" aria-hidden="true">content_copy</span></button></pre><p>We can apply a class to the host element when the label should float:</p>
 <pre><code class="language-ts"><span class="hljs-meta">@Component</span>({
   ...
   <span class="hljs-attr">host</span>: {
     <span class="hljs-string">&#x27;[class.example-floating]&#x27;</span>: <span class="hljs-string">&#x27;shouldLabelFloat()&#x27;</span>,
   },
-})</code></pre><pre><code class="language-css"><span class="hljs-selector-class">.example-tel-input-spacer</span> {
+})</code><button class="docs-markdown-copy-button" type="button" aria-label="Copy code" title="Copy code to the clipboard"><span class="material-symbols-outlined" aria-hidden="true">content_copy</span></button></pre><pre><code class="language-css"><span class="hljs-selector-class">.example-tel-input-spacer</span> {
   <span class="hljs-attribute">opacity</span>: <span class="hljs-number">0</span>;
   <span class="hljs-attribute">transition</span>: opacity <span class="hljs-number">200ms</span>;
 }
 <span class="hljs-selector-pseudo">:host</span><span class="hljs-selector-class">.example-floating</span> <span class="hljs-selector-class">.example-tel-input-spacer</span> {
   <span class="hljs-attribute">opacity</span>: <span class="hljs-number">1</span>;
-}</code></pre>
+}</code><button class="docs-markdown-copy-button" type="button" aria-label="Copy code" title="Copy code to the clipboard"><span class="material-symbols-outlined" aria-hidden="true">content_copy</span></button></pre>
         <h4 id="required" class="docs-header-link">
           <code>required</code>
           <span header-link="required"></span>
@@ -271,7 +271,7 @@ information to add a required indicator to the placeholder.</p>
 <p><code>required</code> can be declared as either a <code>boolean</code> or a <code>Signal&lt;boolean&gt;</code>:</p>
 <pre><code class="language-ts"><span class="hljs-keyword">readonly</span> required = input&lt;<span class="hljs-built_in">boolean</span>, <span class="hljs-built_in">unknown</span>&gt;(<span class="hljs-literal">false</span>, {
   <span class="hljs-attr">transform</span>: booleanAttribute,
-});</code></pre>
+});</code><button class="docs-markdown-copy-button" type="button" aria-label="Copy code" title="Copy code to the clipboard"><span class="material-symbols-outlined" aria-hidden="true">content_copy</span></button></pre>
         <h4 id="disabled" class="docs-header-link">
           <code>disabled</code>
           <span header-link="disabled"></span>
@@ -280,7 +280,7 @@ information to add a required indicator to the placeholder.</p>
 <p><code>disabled</code> can be declared as either a <code>boolean</code> or a <code>Signal&lt;boolean&gt;</code>:</p>
 <pre><code class="language-ts"><span class="hljs-keyword">readonly</span> disabled = input&lt;<span class="hljs-built_in">boolean</span>, <span class="hljs-built_in">unknown</span>&gt;(<span class="hljs-literal">false</span>, {
   <span class="hljs-attr">transform</span>: booleanAttribute,
-});</code></pre>
+});</code><button class="docs-markdown-copy-button" type="button" aria-label="Copy code" title="Copy code to the clipboard"><span class="material-symbols-outlined" aria-hidden="true">content_copy</span></button></pre>
         <h4 id="errorstate" class="docs-header-link">
           <code>errorState</code>
           <span header-link="errorstate"></span>
@@ -295,7 +295,7 @@ signal, <code>&lt;mat-form-field&gt;</code> automatically tracks its value witho
   <span class="hljs-keyword">const</span> partsValid = <span class="hljs-variable language_">this</span>.<span class="hljs-title function_">parts</span>().<span class="hljs-title function_">valid</span>();
   <span class="hljs-keyword">const</span> touched = <span class="hljs-variable language_">this</span>.<span class="hljs-title function_">_touched</span>();
   <span class="hljs-keyword">return</span> !partsValid &amp;&amp; touched;
-});</code></pre><p>For non-signal components, you can alternatively maintain a boolean <code>errorState</code> property and
+});</code><button class="docs-markdown-copy-button" type="button" aria-label="Copy code" title="Copy code to the clipboard"><span class="material-symbols-outlined" aria-hidden="true">content_copy</span></button></pre><p>For non-signal components, you can alternatively maintain a boolean <code>errorState</code> property and
 re-evaluate it during <code>ngDoCheck()</code>:</p>
 <pre><code class="language-ts"><span class="hljs-comment">/** Whether the component is in an error state. */</span>
 <span class="hljs-attr">errorState</span>: <span class="hljs-built_in">boolean</span> = <span class="hljs-literal">false</span>;
@@ -321,7 +321,7 @@ re-evaluate it during <code>ngDoCheck()</code>:</p>
     <span class="hljs-variable language_">this</span>.<span class="hljs-property">errorState</span> = newState;
     <span class="hljs-variable language_">this</span>.<span class="hljs-property">stateChanges</span>?.<span class="hljs-title function_">next</span>();
   }
-}</code></pre><p>Keep in mind that <code>updateErrorState()</code> must have minimal logic to avoid performance issues.</p>
+}</code><button class="docs-markdown-copy-button" type="button" aria-label="Copy code" title="Copy code to the clipboard"><span class="material-symbols-outlined" aria-hidden="true">content_copy</span></button></pre><p>Keep in mind that <code>updateErrorState()</code> must have minimal logic to avoid performance issues.</p>
 
         <h4 id="controltype" class="docs-header-link">
           <code>controlType</code>
@@ -332,14 +332,14 @@ re-evaluate it during <code>ngDoCheck()</code>:</p>
 special styles to a <code>&lt;mat-form-field&gt;</code> that contains a specific type of control. In this example
 we&#39;ll use <code>example-tel-input</code> as our control type which will result in the form field adding the
 class <code>mat-form-field-type-example-tel-input</code>.</p>
-<pre><code class="language-ts">controlType = <span class="hljs-string">&#x27;example-tel-input&#x27;</span>;</code></pre>
+<pre><code class="language-ts">controlType = <span class="hljs-string">&#x27;example-tel-input&#x27;</span>;</code><button class="docs-markdown-copy-button" type="button" aria-label="Copy code" title="Copy code to the clipboard"><span class="material-symbols-outlined" aria-hidden="true">content_copy</span></button></pre>
         <h4 id="autofilled" class="docs-header-link">
           <code>autofilled</code>
           <span header-link="autofilled"></span>
         </h4>
       <p>This optional property indicates whether the control is currently autofilled by the browser.
 Like the other properties, <code>autofilled</code> can be declared as either a <code>boolean</code> or a <code>Signal&lt;boolean&gt;</code>:</p>
-<pre><code class="language-ts"><span class="hljs-keyword">readonly</span> autofilled = <span class="hljs-title function_">signal</span>(<span class="hljs-literal">false</span>);</code></pre>
+<pre><code class="language-ts"><span class="hljs-keyword">readonly</span> autofilled = <span class="hljs-title function_">signal</span>(<span class="hljs-literal">false</span>);</code><button class="docs-markdown-copy-button" type="button" aria-label="Copy code" title="Copy code to the clipboard"><span class="material-symbols-outlined" aria-hidden="true">content_copy</span></button></pre>
         <h4 id="setdescribedbyidsids-string" class="docs-header-link">
           <code>setDescribedByIds(ids: string[])</code>
           <span header-link="setdescribedbyidsids-string"></span>
@@ -355,13 +355,13 @@ element ids. Below is an example that shows how this can be achieved.</p>
 control element through the <code>aria-describedby</code> attribute. To ensure that your control does not
 accidentally override existing element ids specified by consumers of your control, create a
 <code>userAriaDescribedBy</code> property (which can be a <code>string</code> or <code>Signal&lt;string&gt;</code>):</p>
-<pre><code class="language-ts"><span class="hljs-keyword">readonly</span> userAriaDescribedBy = input&lt;<span class="hljs-built_in">string</span>&gt;(<span class="hljs-string">&#x27;&#x27;</span>, {<span class="hljs-attr">alias</span>: <span class="hljs-string">&#x27;aria-describedby&#x27;</span>});</code></pre><p>The form field will then pick up the user specified <code>aria-describedby</code> ids and merge
+<pre><code class="language-ts"><span class="hljs-keyword">readonly</span> userAriaDescribedBy = input&lt;<span class="hljs-built_in">string</span>&gt;(<span class="hljs-string">&#x27;&#x27;</span>, {<span class="hljs-attr">alias</span>: <span class="hljs-string">&#x27;aria-describedby&#x27;</span>});</code><button class="docs-markdown-copy-button" type="button" aria-label="Copy code" title="Copy code to the clipboard"><span class="material-symbols-outlined" aria-hidden="true">content_copy</span></button></pre><p>The form field will then pick up the user specified <code>aria-describedby</code> ids and merge
 them with ids for hints or errors whenever <code>setDescribedByIds</code> is invoked.</p>
 <pre><code class="language-ts"><span class="hljs-title function_">setDescribedByIds</span>(<span class="hljs-params"><span class="hljs-attr">ids</span>: <span class="hljs-built_in">string</span>[]</span>) {
   <span class="hljs-keyword">const</span> controlElement = <span class="hljs-variable language_">this</span>.<span class="hljs-property">_elementRef</span>.<span class="hljs-property">nativeElement</span>
     .<span class="hljs-title function_">querySelector</span>(<span class="hljs-string">&#x27;.example-tel-input-container&#x27;</span>)!;
   controlElement.<span class="hljs-title function_">setAttribute</span>(<span class="hljs-string">&#x27;aria-describedby&#x27;</span>, ids.<span class="hljs-title function_">join</span>(<span class="hljs-string">&#x27; &#x27;</span>));
-}</code></pre>
+}</code><button class="docs-markdown-copy-button" type="button" aria-label="Copy code" title="Copy code to the clipboard"><span class="material-symbols-outlined" aria-hidden="true">content_copy</span></button></pre>
         <h4 id="oncontainerclick" class="docs-header-link">
           <code>onContainerClick()</code>
           <span header-link="oncontainerclick"></span>
@@ -382,7 +382,7 @@ and handle that click however it wants. In our case we&#39;ll focus the first in
   } <span class="hljs-keyword">else</span> {
     <span class="hljs-variable language_">this</span>.<span class="hljs-title function_">_areaInput</span>().<span class="hljs-property">nativeElement</span>.<span class="hljs-title function_">focus</span>();
   }
-}</code></pre>
+}</code><button class="docs-markdown-copy-button" type="button" aria-label="Copy code" title="Copy code to the clipboard"><span class="material-symbols-outlined" aria-hidden="true">content_copy</span></button></pre>
         <h3 id="improving-accessibility" class="docs-header-link">
           Improving accessibility
           <span header-link="improving-accessibility"></span>
@@ -403,12 +403,12 @@ to the label element id provided by the parent <code>&lt;mat-form-field&gt;</cod
   ...
   <span class="hljs-keyword">protected</span> <span class="hljs-keyword">readonly</span> _formField = <span class="hljs-title function_">inject</span>(<span class="hljs-variable constant_">MAT_FORM_FIELD</span>, {<span class="hljs-attr">optional</span>: <span class="hljs-literal">true</span>});
   ...
-}</code></pre><pre><code class="language-html">@Component({
+}</code><button class="docs-markdown-copy-button" type="button" aria-label="Copy code" title="Copy code to the clipboard"><span class="material-symbols-outlined" aria-hidden="true">content_copy</span></button></pre><pre><code class="language-html">@Component({
   selector: &#x27;example-tel-input&#x27;,
   template: `
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;group&quot;</span>
          <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-tel-input-container&quot;</span>
-         [<span class="hljs-attr">attr.aria-labelledby</span>]=<span class="hljs-string">&quot;_formField?.getLabelId()&quot;</span>&gt;</span></code></pre>
+         [<span class="hljs-attr">attr.aria-labelledby</span>]=<span class="hljs-string">&quot;_formField?.getLabelId()&quot;</span>&gt;</span></code><button class="docs-markdown-copy-button" type="button" aria-label="Copy code" title="Copy code to the clipboard"><span class="material-symbols-outlined" aria-hidden="true">content_copy</span></button></pre>
         <h3 id="trying-it-out" class="docs-header-link">
           Trying it out
           <span header-link="trying-it-out"></span>
@@ -417,11 +417,11 @@ to the label element id provided by the parent <code>&lt;mat-form-field&gt;</cod
 do is place it inside a <code>&lt;mat-form-field&gt;</code> and bind it to a signal form field:</p>
 <pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">mat-form-field</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">example-tel-input</span> [<span class="hljs-attr">formField</span>]=<span class="hljs-string">&quot;form.tel&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">example-tel-input</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">mat-form-field</span>&gt;</span></code></pre><p>We also get all the features that come with <code>&lt;mat-form-field&gt;</code> such as floating placeholder,
+<span class="hljs-tag">&lt;/<span class="hljs-name">mat-form-field</span>&gt;</span></code><button class="docs-markdown-copy-button" type="button" aria-label="Copy code" title="Copy code to the clipboard"><span class="material-symbols-outlined" aria-hidden="true">content_copy</span></button></pre><p>We also get all the features that come with <code>&lt;mat-form-field&gt;</code> such as floating placeholder,
 prefix, suffix, hints, and errors (if we&#39;ve given the form field an <code>ngField</code> or <code>NgControl</code>
 and correctly report the error state).</p>
 <pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">mat-form-field</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">example-tel-input</span> [<span class="hljs-attr">formField</span>]=<span class="hljs-string">&quot;form.tel&quot;</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">&quot;Phone number&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">example-tel-input</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">mat-icon</span> <span class="hljs-attr">matSuffix</span>&gt;</span>phone<span class="hljs-tag">&lt;/<span class="hljs-name">mat-icon</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">mat-hint</span>&gt;</span>Include area code<span class="hljs-tag">&lt;/<span class="hljs-name">mat-hint</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">mat-form-field</span>&gt;</span></code></pre></div>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mat-form-field</span>&gt;</span></code><button class="docs-markdown-copy-button" type="button" aria-label="Copy code" title="Copy code to the clipboard"><span class="material-symbols-outlined" aria-hidden="true">content_copy</span></button></pre></div>
