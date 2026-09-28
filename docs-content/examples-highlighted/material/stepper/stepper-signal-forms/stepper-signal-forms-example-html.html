@@ -2,7 +2,7 @@
   {{!isLinear ? &#x27;Enable linear mode&#x27; : &#x27;Disable linear mode&#x27;}}
 <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
 
-<span class="hljs-tag">&lt;<span class="hljs-name">mat-stepper</span> [<span class="hljs-attr">linear</span>]=<span class="hljs-string">&quot;isLinear()&quot;</span> #<span class="hljs-attr">stepper</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">mat-stepper</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">&quot;Stepper with signal forms&quot;</span> [<span class="hljs-attr">linear</span>]=<span class="hljs-string">&quot;isLinear()&quot;</span> #<span class="hljs-attr">stepper</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">mat-step</span> [<span class="hljs-attr">stepControl</span>]=<span class="hljs-string">&quot;nameFormGroup&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">form</span> (<span class="hljs-attr">submit</span>)=<span class="hljs-string">&quot;$event.preventDefault()&quot;</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">ng-template</span> <span class="hljs-attr">matStepLabel</span>&gt;</span>Fill out your name<span class="hljs-tag">&lt;/<span class="hljs-name">ng-template</span>&gt;</span>
