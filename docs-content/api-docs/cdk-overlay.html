@@ -843,9 +843,12 @@ Overlay using a FlexibleConnectedPositionStrategy.</p>
         
 
 <tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">{ alias: &#39;cdkConnectedOverlayDisposeOnNavigation&#39;, transform: booleanAttribute }</span>)
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">{
+    alias: &#39;cdkConnectedOverlayDisposeOnNavigation&#39;,
+    transform: (value: unknown): OverlayDisposeOnNavigation =&gt; value === &#39;url-change&#39; || value === &#39;pop-state&#39; ? value : booleanAttribute(value),
+}</span>)
         </div><p class="docs-api-property-name">
-      <code>disposeOnNavigation: <code class="docs-api-property-type">boolean</code></code>
+      <code>disposeOnNavigation: <code class="docs-api-property-type">OverlayDisposeOnNavigation</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Whether the overlay should be disposed of when the user goes backwards/forwards in history.</p>
@@ -3676,12 +3679,10 @@ is passed in, the overlay will handle changes to its value automatically.</p>
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>disposeOnNavigation: <code class="docs-api-property-type">boolean</code></code>
+      <code>disposeOnNavigation: <code class="docs-api-property-type">OverlayDisposeOnNavigation</code></code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Whether the overlay should be disposed of when the user goes backwards/forwards in history.
-Note that this usually doesn&#39;t include clicking on links (unless the user is using
-the <code>HashLocationStrategy</code>).</p>
+  <td class="docs-api-property-description"><p>Whether the overlay should be disposed of when the user navigates.</p>
 </td>
 </tr>
 
@@ -4462,7 +4463,7 @@ rather than placing it inside of the overlay container.</p>
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>disposeOnNavigation: <code class="docs-api-property-type">boolean</code></code>
+      <code>disposeOnNavigation: <code class="docs-api-property-type">OverlayDisposeOnNavigation</code></code>
     </p>
   </td>
   <td class="docs-api-property-description"></td>
@@ -5811,6 +5812,28 @@ the overlay when it is rendered out as a popover.</p>
     width?: number;
     height?: number;
 });</code>
+</pre>
+</div>
+
+
+    
+      
+
+<h4 id="OverlayDisposeOnNavigation" class="docs-header-link docs-api-h4 docs-api-type-alias-name">
+  <code>OverlayDisposeOnNavigation</code>
+  <span header-link="OverlayDisposeOnNavigation"></span>
+</h4><p class="docs-api-type-alias-description"><p>Value that can be used to configure the behavior of <code>OverlayConfig.disposeOnNavigation</code>.
+The value correspond to the following:</p>
+<ul>
+<li><code>true</code> or <code>pop-state</code> - Overlay is only disposed when the back/forward browser buttons are
+pressed.</li>
+<li><code>false</code> - Overlay does nothing on navigations.</li>
+<li><code>url-change</code> - Overlay closes on any URL change. Note that this may close overlays opened
+from route resolvers immediately.</li>
+</ul>
+</p><div class="docs-markdown">
+<pre class="docs-markdown-pre">
+<code class="docs-markdown-code">type OverlayDisposeOnNavigation = boolean | 'url-change' | 'pop-state';</code>
 </pre>
 </div>
 
