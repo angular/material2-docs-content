@@ -7,7 +7,7 @@ import { MatIconModule, MatIcon } from '@angular/material/icon';
 import * as i2 from '@angular/material/input';
 import { MatInputModule } from '@angular/material/input';
 import { JsonPipe } from '@angular/common';
-import { form, required, FormField, FORM_FIELD, minLength, maxLength } from '@angular/forms/signals';
+import { form, required, FormField, FORM_FIELD, minLength, maxLength, email } from '@angular/forms/signals';
 import { takeUntilDestroyed, toSignal } from '@angular/core/rxjs-interop';
 import * as i3$1 from '@angular/forms';
 import { FormControl, Validators, FormsModule, ReactiveFormsModule, FormBuilder } from '@angular/forms';
@@ -637,6 +637,84 @@ i0.ɵɵngDeclareClassMetadata({
   ctorParameters: () => []
 });
 
+class FormFieldErrorSignalFormExample {
+  email = form(signal(''), p => {
+    required(p, {
+      message: 'You must enter a value'
+    });
+    email(p, {
+      message: 'Not a valid email'
+    });
+  });
+  static ɵfac = i0.ɵɵngDeclareFactory({
+    minVersion: "12.0.0",
+    version: "22.2.0",
+    ngImport: i0,
+    type: FormFieldErrorSignalFormExample,
+    deps: [],
+    target: i0.ɵɵFactoryTarget.Component
+  });
+  static ɵcmp = i0.ɵɵngDeclareComponent({
+    minVersion: "17.0.0",
+    version: "22.2.0",
+    type: FormFieldErrorSignalFormExample,
+    isStandalone: true,
+    selector: "form-field-error-signal-form-example",
+    ngImport: i0,
+    template: "<div class=\"example-container\">\n  <mat-form-field>\n    <mat-label>Enter your email</mat-label>\n    <input matInput placeholder=\"pat@example.com\" [formField]=\"email\" />\n    @for (error of email().errors(); track error) {\n      <mat-error>{{ error.message }}</mat-error>\n    }\n  </mat-form-field>\n</div>\n",
+    styles: [".example-container mat-form-field + mat-form-field {\n  margin-left: 8px;\n}\n"],
+    dependencies: [{
+      kind: "ngmodule",
+      type: MatFormFieldModule
+    }, {
+      kind: "component",
+      type: i1.MatFormField,
+      selector: "mat-form-field",
+      inputs: ["hideRequiredMarker", "color", "floatLabel", "appearance", "subscriptSizing", "hintLabel"],
+      exportAs: ["matFormField"]
+    }, {
+      kind: "directive",
+      type: i1.MatLabel,
+      selector: "mat-label"
+    }, {
+      kind: "directive",
+      type: i1.MatError,
+      selector: "mat-error, [matError]",
+      inputs: ["id"]
+    }, {
+      kind: "ngmodule",
+      type: MatInputModule
+    }, {
+      kind: "directive",
+      type: i2.MatInput,
+      selector: "input[matInput], textarea[matInput], select[matNativeControl],      input[matNativeControl], textarea[matNativeControl]",
+      inputs: ["disabled", "id", "placeholder", "name", "required", "type", "errorStateMatcher", "aria-describedby", "value", "readonly", "disabledInteractive"],
+      exportAs: ["matInput"]
+    }, {
+      kind: "directive",
+      type: FormField,
+      selector: "[formField]",
+      inputs: ["formField"],
+      exportAs: ["formField"]
+    }]
+  });
+}
+i0.ɵɵngDeclareClassMetadata({
+  minVersion: "12.0.0",
+  version: "22.2.0",
+  ngImport: i0,
+  type: FormFieldErrorSignalFormExample,
+  decorators: [{
+    type: Component,
+    args: [{
+      selector: 'form-field-error-signal-form-example',
+      imports: [MatFormFieldModule, MatInputModule, FormField],
+      template: "<div class=\"example-container\">\n  <mat-form-field>\n    <mat-label>Enter your email</mat-label>\n    <input matInput placeholder=\"pat@example.com\" [formField]=\"email\" />\n    @for (error of email().errors(); track error) {\n      <mat-error>{{ error.message }}</mat-error>\n    }\n  </mat-form-field>\n</div>\n",
+      styles: [".example-container mat-form-field + mat-form-field {\n  margin-left: 8px;\n}\n"]
+    }]
+  }]
+});
+
 class FormFieldHarnessExample {
   requiredControl = new FormControl('Initial value', [Validators.required]);
   static ɵfac = i0.ɵɵngDeclareFactory({
@@ -1132,5 +1210,5 @@ i0.ɵɵngDeclareClassMetadata({
   }]
 });
 
-export { FormFieldAppearanceExample, FormFieldCustomControlExample, FormFieldErrorExample, FormFieldHarnessExample, FormFieldHintExample, FormFieldLabelExample, FormFieldOverviewExample, FormFieldPrefixSuffixExample, MyTelInput };
+export { FormFieldAppearanceExample, FormFieldCustomControlExample, FormFieldErrorExample, FormFieldErrorSignalFormExample, FormFieldHarnessExample, FormFieldHintExample, FormFieldLabelExample, FormFieldOverviewExample, FormFieldPrefixSuffixExample, MyTelInput };
 //# sourceMappingURL=material-form-field.mjs.map
