@@ -75,7 +75,7 @@ declare class MyTelInput implements FormValueControl<MyTel | null>, MatFormField
     static ɵcmp: i0.ɵɵComponentDeclaration<MyTelInput, "example-tel-input", never, { "value": { "alias": "value"; "required": false; "isSignal": true; }; "userAriaDescribedBy": { "alias": "aria-describedby"; "required": false; "isSignal": true; }; "placeholder": { "alias": "placeholder"; "required": false; "isSignal": true; }; "required": { "alias": "required"; "required": false; "isSignal": true; }; "disabled": { "alias": "disabled"; "required": false; "isSignal": true; }; }, { "value": "valueChange"; }, never, never, true, never>;
 }
 
-/** @title Form field with error messages */
+/** @title Form field with error messages (reactive forms) */
 declare class FormFieldErrorExample {
     readonly email: FormControl<string | null>;
     errorMessage: i0.WritableSignal<string>;
@@ -83,6 +83,13 @@ declare class FormFieldErrorExample {
     updateErrorMessage(): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<FormFieldErrorExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<FormFieldErrorExample, "form-field-error-example", never, {}, {}, never, never, true, never>;
+}
+
+/** @title Form field with error messages (signal forms) */
+declare class FormFieldErrorSignalFormExample {
+    protected email: _angular_forms_signals.FieldTree<string, string | number, "writable">;
+    static ɵfac: i0.ɵɵFactoryDeclaration<FormFieldErrorSignalFormExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<FormFieldErrorSignalFormExample, "form-field-error-signal-form-example", never, {}, {}, never, never, true, never>;
 }
 
 /**
@@ -130,4 +137,4 @@ declare class FormFieldPrefixSuffixExample {
     static ɵcmp: i0.ɵɵComponentDeclaration<FormFieldPrefixSuffixExample, "form-field-prefix-suffix-example", never, {}, {}, never, never, true, never>;
 }
 
-export { FormFieldAppearanceExample, FormFieldCustomControlExample, FormFieldErrorExample, FormFieldHarnessExample, FormFieldHintExample, FormFieldLabelExample, FormFieldOverviewExample, FormFieldPrefixSuffixExample, MyTelInput };
+export { FormFieldAppearanceExample, FormFieldCustomControlExample, FormFieldErrorExample, FormFieldErrorSignalFormExample, FormFieldHarnessExample, FormFieldHintExample, FormFieldLabelExample, FormFieldOverviewExample, FormFieldPrefixSuffixExample, MyTelInput };

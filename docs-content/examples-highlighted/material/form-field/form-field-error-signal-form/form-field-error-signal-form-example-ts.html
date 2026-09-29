@@ -1,0 +1,18 @@
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">Component</span>, signal} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {email, form, <span class="hljs-title class_">FormField</span>, required} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/forms/signals&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatFormFieldModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/form-field&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatInputModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/input&#x27;</span>;
+
+<span class="hljs-comment">/** <span class="hljs-doctag">@title</span> Form field with error messages (signal forms) */</span>
+<span class="hljs-meta">@Component</span>({
+  <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;form-field-error-signal-form-example&#x27;</span>,
+  <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;form-field-error-signal-form-example.html&#x27;</span>,
+  <span class="hljs-attr">styleUrl</span>: <span class="hljs-string">&#x27;form-field-error-signal-form-example.css&#x27;</span>,
+  <span class="hljs-attr">imports</span>: [<span class="hljs-title class_">MatFormFieldModule</span>, <span class="hljs-title class_">MatInputModule</span>, <span class="hljs-title class_">FormField</span>],
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">FormFieldErrorSignalFormExample</span> {
+  <span class="hljs-keyword">protected</span> email = <span class="hljs-title function_">form</span>(<span class="hljs-title function_">signal</span>(<span class="hljs-string">&#x27;&#x27;</span>), <span class="hljs-function"><span class="hljs-params">p</span> =&gt;</span> {
+    <span class="hljs-title function_">required</span>(p, {<span class="hljs-attr">message</span>: <span class="hljs-string">&#x27;You must enter a value&#x27;</span>});
+    <span class="hljs-title function_">email</span>(p, {<span class="hljs-attr">message</span>: <span class="hljs-string">&#x27;Not a valid email&#x27;</span>});
+  });
+}

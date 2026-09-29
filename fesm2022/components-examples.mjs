@@ -1649,9 +1649,19 @@ const EXAMPLE_COMPONENTS = {
     "primaryFile": "form-field-custom-control-example.ts",
     "importPath": "material/form-field"
   },
+  "form-field-error-signal-form": {
+    "packagePath": "material/form-field/form-field-error-signal-form",
+    "title": "Form field with error messages (signal forms)",
+    "componentName": "FormFieldErrorSignalFormExample",
+    "files": ["form-field-error-signal-form-example.ts", "form-field-error-signal-form-example.html", "form-field-error-signal-form-example.css"],
+    "selector": "form-field-error-signal-form-example",
+    "additionalComponents": [],
+    "primaryFile": "form-field-error-signal-form-example.ts",
+    "importPath": "material/form-field"
+  },
   "form-field-error": {
     "packagePath": "material/form-field/form-field-error",
-    "title": "Form field with error messages",
+    "title": "Form field with error messages (reactive forms)",
     "componentName": "FormFieldErrorExample",
     "files": ["form-field-error-example.ts", "form-field-error-example.html", "form-field-error-example.css"],
     "selector": "form-field-error-example",
@@ -3941,6 +3951,8 @@ async function loadExample(id) {
     case 'form-field-appearance':
       return import('@angular/components-examples/material/form-field');
     case 'form-field-custom-control':
+      return import('@angular/components-examples/material/form-field');
+    case 'form-field-error-signal-form':
       return import('@angular/components-examples/material/form-field');
     case 'form-field-error':
       return import('@angular/components-examples/material/form-field');
