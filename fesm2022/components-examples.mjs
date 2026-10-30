@@ -1179,6 +1179,16 @@ const EXAMPLE_COMPONENTS = {
     "primaryFile": "chips-harness-example.ts",
     "importPath": "material/chips"
   },
+  "chips-icons": {
+    "packagePath": "material/chips/chips-icons",
+    "title": "Chips with icons",
+    "componentName": "ChipsIconsExample",
+    "files": ["chips-icons-example.ts", "chips-icons-example.html", "chips-icons-example.css"],
+    "selector": "chips-icons-example",
+    "additionalComponents": [],
+    "primaryFile": "chips-icons-example.ts",
+    "importPath": "material/chips"
+  },
   "chips-input": {
     "packagePath": "material/chips/chips-input",
     "title": "Chips with input",
@@ -3857,6 +3867,8 @@ async function loadExample(id) {
     case 'chips-form-field':
       return import('@angular/components-examples/material/chips');
     case 'chips-harness':
+      return import('@angular/components-examples/material/chips');
+    case 'chips-icons':
       return import('@angular/components-examples/material/chips');
     case 'chips-input':
       return import('@angular/components-examples/material/chips');

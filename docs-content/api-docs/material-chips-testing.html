@@ -173,6 +173,145 @@ attributes.</p>
     
       
 
+<h4 id="MatChipLeadingIconHarness" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <code>MatChipLeadingIconHarness</code>
+  
+  <span class="docs-api-class-extends-clauses">
+    <span class="docs-api-class-extends-label">extends</span>
+    <a href="cdk/testing/api#ComponentHarness" class="docs-api-class-extends-type">
+      ComponentHarness
+    </a>
+  </span>
+  
+  <span header-link="MatChipLeadingIconHarness"></span>
+</h4><p class="docs-api-class-description"><p>Harness for interacting with a standard Material chip leading icon in tests.</p>
+</p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
+  <div class="docs-api-properties-card">
+    <table class="docs-api-properties-table">
+      <tr class="docs-api-properties-header-row">
+        <th class="docs-api-properties-th">Name</th>
+        <th class="docs-api-properties-th">Description</th>
+      </tr>
+      
+        
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>static&nbsp;hostSelector: <code class="docs-api-property-type">&#39;.mat-mdc-chip-leading-icon&#39;</code></code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+      
+    </table>
+  </div>
+
+
+<h5 class="docs-api-h5 docs-api-method-header">Methods</h5>
+  
+    
+
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
+            async
+          </div>host
+          (): <code class="docs-api-method-returns-type">Promise&lt;TestElement&gt;</code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Gets a <code>Promise</code> for the <code>TestElement</code> representing the host element of the component.</p>
+
+      </td>
+    </tr><thead>
+      <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+      </tr>
+    </thead>
+    <tr>
+      <td class="docs-api-method-returns-type-cell">
+        <code class="docs-api-method-returns-type">Promise&lt;TestElement&gt;</code>
+      </td>
+      <td class="docs-api-method-returns-description-cell">
+        <p class="docs-api-method-returns-description">
+          
+        </p>
+      </td>
+    </tr></table>
+</div>
+
+
+  
+    
+
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
+            static
+          </div>with
+          (<span class="docs-api-method-parameter-name">options:
+            </span>
+            <code class="docs-api-method-parameter-type">ChipLeadingIconHarnessFilters = {}</code>): <code class="docs-api-method-returns-type">HarnessPredicate&lt;T&gt;</code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Gets a <code>HarnessPredicate</code> that can be used to search for a chip leading icon with specific
+attributes.</p>
+
+      </td>
+    </tr><thead>
+      <tr class="docs-api-method-parameters-header-row">
+        <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+      </tr>
+    </thead>
+    
+    <tr class="docs-api-method-parameter-row">
+      <td class="docs-api-method-parameter-cell">
+        <p class="docs-api-method-parameter-name">
+          options</p>
+        <code class="docs-api-method-parameter-type">ChipLeadingIconHarnessFilters = {}</code>
+      </td>
+      <td class="docs-api-method-parameter-description-cell">
+        <p class="docs-api-method-parameter-description">
+          <p>Options for filtering which input instances are considered a match.</p>
+
+        </p>
+      </td>
+    </tr>
+    <thead>
+      <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+      </tr>
+    </thead>
+    <tr>
+      <td class="docs-api-method-returns-type-cell">
+        <code class="docs-api-method-returns-type">HarnessPredicate&lt;T&gt;</code>
+      </td>
+      <td class="docs-api-method-returns-description-cell">
+        <p class="docs-api-method-returns-description">
+          <p>a <code>HarnessPredicate</code> configured with the given options.</p>
+
+        </p>
+      </td>
+    </tr></table>
+</div>
+
+
+  
+
+
+
+    
+      
+
 <h4 id="MatChipEditHarness" class="docs-header-link docs-api-h4 docs-api-class-name">
   <code>MatChipEditHarness</code>
   
@@ -919,6 +1058,63 @@ selector within the current harness&#39;s content.</p>
         <p class="docs-api-method-returns-description">
           <p>The first harness matching the given query, or null if none is found.</p>
 
+        </p>
+      </td>
+    </tr></table>
+</div>
+
+
+  
+    
+
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
+            async
+          </div>getLeadingIcon
+          (<span class="docs-api-method-parameter-name">filter:
+            </span>
+            <code class="docs-api-method-parameter-type">ChipLeadingIconHarnessFilters = {}</code>): <code class="docs-api-method-returns-type">Promise&lt;MatChipLeadingIconHarness | null&gt;</code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Gets the leading icon inside a chip.</p>
+
+      </td>
+    </tr><thead>
+      <tr class="docs-api-method-parameters-header-row">
+        <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+      </tr>
+    </thead>
+    
+    <tr class="docs-api-method-parameter-row">
+      <td class="docs-api-method-parameter-cell">
+        <p class="docs-api-method-parameter-name">
+          filter</p>
+        <code class="docs-api-method-parameter-type">ChipLeadingIconHarnessFilters = {}</code>
+      </td>
+      <td class="docs-api-method-parameter-description-cell">
+        <p class="docs-api-method-parameter-description">
+          <p>Optionally filters which leading icons are included.</p>
+
+        </p>
+      </td>
+    </tr>
+    <thead>
+      <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+      </tr>
+    </thead>
+    <tr>
+      <td class="docs-api-method-returns-type-cell">
+        <code class="docs-api-method-returns-type">Promise&lt;MatChipLeadingIconHarness | null&gt;</code>
+      </td>
+      <td class="docs-api-method-returns-description-cell">
+        <p class="docs-api-method-returns-description">
+          
         </p>
       </td>
     </tr></table>
@@ -2544,6 +2740,63 @@ selector within the current harness&#39;s content.</p>
         <p class="docs-api-method-returns-description">
           <p>The first harness matching the given query, or null if none is found.</p>
 
+        </p>
+      </td>
+    </tr></table>
+</div>
+
+
+  
+    
+
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
+            async
+          </div>getLeadingIcon
+          (<span class="docs-api-method-parameter-name">filter:
+            </span>
+            <code class="docs-api-method-parameter-type">ChipLeadingIconHarnessFilters = {}</code>): <code class="docs-api-method-returns-type">Promise&lt;MatChipLeadingIconHarness | null&gt;</code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Gets the leading icon inside a chip.</p>
+
+      </td>
+    </tr><thead>
+      <tr class="docs-api-method-parameters-header-row">
+        <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+      </tr>
+    </thead>
+    
+    <tr class="docs-api-method-parameter-row">
+      <td class="docs-api-method-parameter-cell">
+        <p class="docs-api-method-parameter-name">
+          filter</p>
+        <code class="docs-api-method-parameter-type">ChipLeadingIconHarnessFilters = {}</code>
+      </td>
+      <td class="docs-api-method-parameter-description-cell">
+        <p class="docs-api-method-parameter-description">
+          <p>Optionally filters which leading icons are included.</p>
+
+        </p>
+      </td>
+    </tr>
+    <thead>
+      <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+      </tr>
+    </thead>
+    <tr>
+      <td class="docs-api-method-returns-type-cell">
+        <code class="docs-api-method-returns-type">Promise&lt;MatChipLeadingIconHarness | null&gt;</code>
+      </td>
+      <td class="docs-api-method-returns-description-cell">
+        <p class="docs-api-method-returns-description">
+          
         </p>
       </td>
     </tr></table>
@@ -4422,6 +4675,63 @@ selector within the current harness&#39;s content.</p>
       <tr class="docs-api-method-name-row">
         <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
             async
+          </div>getLeadingIcon
+          (<span class="docs-api-method-parameter-name">filter:
+            </span>
+            <code class="docs-api-method-parameter-type">ChipLeadingIconHarnessFilters = {}</code>): <code class="docs-api-method-returns-type">Promise&lt;MatChipLeadingIconHarness | null&gt;</code>
+        </th>
+      </tr>
+    </thead><tr class="docs-api-method-description-row">
+      <td colspan="2" class="docs-api-method-description-cell">
+        <p>Gets the leading icon inside a chip.</p>
+
+      </td>
+    </tr><thead>
+      <tr class="docs-api-method-parameters-header-row">
+        <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+      </tr>
+    </thead>
+    
+    <tr class="docs-api-method-parameter-row">
+      <td class="docs-api-method-parameter-cell">
+        <p class="docs-api-method-parameter-name">
+          filter</p>
+        <code class="docs-api-method-parameter-type">ChipLeadingIconHarnessFilters = {}</code>
+      </td>
+      <td class="docs-api-method-parameter-description-cell">
+        <p class="docs-api-method-parameter-description">
+          <p>Optionally filters which leading icons are included.</p>
+
+        </p>
+      </td>
+    </tr>
+    <thead>
+      <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+      </tr>
+    </thead>
+    <tr>
+      <td class="docs-api-method-returns-type-cell">
+        <code class="docs-api-method-returns-type">Promise&lt;MatChipLeadingIconHarness | null&gt;</code>
+      </td>
+      <td class="docs-api-method-returns-description-cell">
+        <p class="docs-api-method-returns-description">
+          
+        </p>
+      </td>
+    </tr></table>
+</div>
+
+
+  
+    
+
+<div class="docs-api-method-card">
+  <table class="docs-api-method-table">
+    <thead>
+      <tr class="docs-api-method-name-row">
+        <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
+            async
           </div>getRemoveButton
           (<span class="docs-api-method-parameter-name">filter:
             </span>
@@ -5453,6 +5763,19 @@ attributes.</p>
 <h4 id="ChipAvatarHarnessFilters" class="docs-header-link docs-api-h4 docs-api-interface-name">
   <code>ChipAvatarHarnessFilters</code>
   <span header-link="ChipAvatarHarnessFilters"></span>
+</h4>
+
+
+
+
+
+
+    
+      
+
+<h4 id="ChipLeadingIconHarnessFilters" class="docs-header-link docs-api-h4 docs-api-interface-name">
+  <code>ChipLeadingIconHarnessFilters</code>
+  <span header-link="ChipLeadingIconHarnessFilters"></span>
 </h4>
 
 

@@ -1309,5 +1309,77 @@ i0.ɵɵngDeclareClassMetadata({
   }]
 });
 
-export { ChipsAutocompleteExample, ChipsAvatarExample, ChipsDragDropExample, ChipsFormControlExample, ChipsFormFieldExample, ChipsHarnessExample, ChipsInputExample, ChipsOverviewExample, ChipsReactiveFormExample, ChipsSignalFormExample, ChipsStackedExample, ChipsTemplateFormExample };
+class ChipsIconsExample {
+  static ɵfac = i0.ɵɵngDeclareFactory({
+    minVersion: "12.0.0",
+    version: "22.2.0",
+    ngImport: i0,
+    type: ChipsIconsExample,
+    deps: [],
+    target: i0.ɵɵFactoryTarget.Component
+  });
+  static ɵcmp = i0.ɵɵngDeclareComponent({
+    minVersion: "14.0.0",
+    version: "22.2.0",
+    type: ChipsIconsExample,
+    isStandalone: true,
+    selector: "chips-icons-example",
+    ngImport: i0,
+    template: "<mat-chip-set aria-label=\"Chip examples\">\n  <mat-chip>\n    <mat-icon matChipLeadingIcon>flight</mat-icon>\n    Flight\n  </mat-chip>\n  <mat-chip>\n    <mat-icon matChipLeadingIcon>hotel</mat-icon>\n    Hotel\n    <mat-icon matChipTrailingIcon>star</mat-icon>\n  </mat-chip>\n  <mat-chip>\n    <mat-icon matChipLeadingIcon>music_note</mat-icon>\n    Music\n    <button matChipRemove aria-label=\"Remove music\">\n      <mat-icon>cancel</mat-icon>\n    </button>\n  </mat-chip>\n</mat-chip-set>\n\n",
+    styles: ["\n"],
+    dependencies: [{
+      kind: "ngmodule",
+      type: MatChipsModule
+    }, {
+      kind: "component",
+      type: i2.MatChip,
+      selector: "mat-basic-chip, [mat-basic-chip], mat-chip, [mat-chip]",
+      inputs: ["role", "id", "aria-label", "aria-description", "value", "color", "removable", "highlighted", "disableRipple", "disabled"],
+      outputs: ["removed", "destroyed"],
+      exportAs: ["matChip"]
+    }, {
+      kind: "directive",
+      type: i2.MatChipLeadingIcon,
+      selector: "mat-chip-leading-icon, [matChipLeadingIcon]"
+    }, {
+      kind: "directive",
+      type: i2.MatChipRemove,
+      selector: "[matChipRemove]"
+    }, {
+      kind: "component",
+      type: i2.MatChipSet,
+      selector: "mat-chip-set",
+      inputs: ["disabled", "role", "tabIndex"]
+    }, {
+      kind: "directive",
+      type: i2.MatChipTrailingIcon,
+      selector: "mat-chip-trailing-icon, [matChipTrailingIcon]"
+    }, {
+      kind: "ngmodule",
+      type: MatIconModule
+    }, {
+      kind: "component",
+      type: i3.MatIcon,
+      selector: "mat-icon",
+      inputs: ["color", "inline", "svgIcon", "fontSet", "fontIcon"],
+      exportAs: ["matIcon"]
+    }]
+  });
+}
+i0.ɵɵngDeclareClassMetadata({
+  minVersion: "12.0.0",
+  version: "22.2.0",
+  ngImport: i0,
+  type: ChipsIconsExample,
+  decorators: [{
+    type: Component,
+    args: [{
+      selector: 'chips-icons-example',
+      imports: [MatChipsModule, MatIconModule],
+      template: "<mat-chip-set aria-label=\"Chip examples\">\n  <mat-chip>\n    <mat-icon matChipLeadingIcon>flight</mat-icon>\n    Flight\n  </mat-chip>\n  <mat-chip>\n    <mat-icon matChipLeadingIcon>hotel</mat-icon>\n    Hotel\n    <mat-icon matChipTrailingIcon>star</mat-icon>\n  </mat-chip>\n  <mat-chip>\n    <mat-icon matChipLeadingIcon>music_note</mat-icon>\n    Music\n    <button matChipRemove aria-label=\"Remove music\">\n      <mat-icon>cancel</mat-icon>\n    </button>\n  </mat-chip>\n</mat-chip-set>\n\n"
+    }]
+  }]
+});
+
+export { ChipsAutocompleteExample, ChipsAvatarExample, ChipsDragDropExample, ChipsFormControlExample, ChipsFormFieldExample, ChipsHarnessExample, ChipsIconsExample, ChipsInputExample, ChipsOverviewExample, ChipsReactiveFormExample, ChipsSignalFormExample, ChipsStackedExample, ChipsTemplateFormExample };
 //# sourceMappingURL=material-chips.mjs.map

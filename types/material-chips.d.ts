@@ -160,4 +160,12 @@ declare class ChipsAvatarExample {
     static ɵcmp: i0.ɵɵComponentDeclaration<ChipsAvatarExample, "chips-avatar-example", never, {}, {}, never, never, true, never>;
 }
 
-export { ChipsAutocompleteExample, ChipsAvatarExample, ChipsDragDropExample, ChipsFormControlExample, ChipsFormFieldExample, ChipsHarnessExample, ChipsInputExample, ChipsOverviewExample, ChipsReactiveFormExample, ChipsSignalFormExample, ChipsStackedExample, ChipsTemplateFormExample };
+/**
+ * @title Chips with icons
+ */
+declare class ChipsIconsExample {
+    static ɵfac: i0.ɵɵFactoryDeclaration<ChipsIconsExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<ChipsIconsExample, "chips-icons-example", never, {}, {}, never, never, true, never>;
+}
+
+export { ChipsAutocompleteExample, ChipsAvatarExample, ChipsDragDropExample, ChipsFormControlExample, ChipsFormFieldExample, ChipsHarnessExample, ChipsIconsExample, ChipsInputExample, ChipsOverviewExample, ChipsReactiveFormExample, ChipsSignalFormExample, ChipsStackedExample, ChipsTemplateFormExample };
