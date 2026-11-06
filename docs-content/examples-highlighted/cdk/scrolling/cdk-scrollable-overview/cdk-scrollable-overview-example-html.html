@@ -1,0 +1,11 @@
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Scrolled {{scrollOffset()}}px from the top<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-container&quot;</span> <span class="hljs-attr">cdkScrollable</span>&gt;</span>
+  @for (item of items; track item) {
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-item&quot;</span>&gt;</span>{{item}}<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  }
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> (<span class="hljs-attr">click</span>)=<span class="hljs-string">&quot;scrollToTop()&quot;</span> [<span class="hljs-attr">disabled</span>]=<span class="hljs-string">&quot;scrollOffset() === 0&quot;</span>&gt;</span>
+  Back to top
+<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>

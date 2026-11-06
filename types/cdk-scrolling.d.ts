@@ -1,6 +1,19 @@
 import * as i0 from '@angular/core';
+import { AfterViewInit } from '@angular/core';
+import { CdkScrollable } from '@angular/cdk/scrolling';
 import { DataSource, CollectionViewer } from '@angular/cdk/collections';
 import { Observable } from 'rxjs';
+
+/** @title Reacting to scroll events */
+declare class CdkScrollableOverviewExample implements AfterViewInit {
+    scrollable: i0.Signal<CdkScrollable>;
+    items: string[];
+    scrollOffset: i0.WritableSignal<number>;
+    ngAfterViewInit(): void;
+    scrollToTop(): void;
+    static ɵfac: i0.ɵɵFactoryDeclaration<CdkScrollableOverviewExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<CdkScrollableOverviewExample, "cdk-scrollable-overview-example", never, {}, {}, never, never, true, never>;
+}
 
 /** @title Virtual scroll with view recycling disabled. */
 declare class CdkVirtualScrollAppendOnlyExample {
@@ -95,4 +108,4 @@ declare class CdkVirtualScrollWindowScrollingExample {
     static ɵcmp: i0.ɵɵComponentDeclaration<CdkVirtualScrollWindowScrollingExample, "cdk-virtual-scroll-window-scrolling-example", never, { "shouldRun": { "alias": "shouldRun"; "required": false; "isSignal": true; }; }, {}, never, never, true, never>;
 }
 
-export { CdkVirtualScrollAppendOnlyExample, CdkVirtualScrollContextExample, CdkVirtualScrollCustomStrategyExample, CdkVirtualScrollDataSourceExample, CdkVirtualScrollDlExample, CdkVirtualScrollFixedBufferExample, CdkVirtualScrollHorizontalExample, CdkVirtualScrollOverviewExample, CdkVirtualScrollParentScrollingExample, CdkVirtualScrollTemplateCacheExample, CdkVirtualScrollWindowScrollingExample };
+export { CdkScrollableOverviewExample, CdkVirtualScrollAppendOnlyExample, CdkVirtualScrollContextExample, CdkVirtualScrollCustomStrategyExample, CdkVirtualScrollDataSourceExample, CdkVirtualScrollDlExample, CdkVirtualScrollFixedBufferExample, CdkVirtualScrollHorizontalExample, CdkVirtualScrollOverviewExample, CdkVirtualScrollParentScrollingExample, CdkVirtualScrollTemplateCacheExample, CdkVirtualScrollWindowScrollingExample };

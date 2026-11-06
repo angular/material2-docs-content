@@ -11,6 +11,49 @@ This marks the element as a <code>Scrollable</code> and registers it with the <c
 dispatcher, then, allows components to share both event listeners and knowledge of all of the
 scrollable containers in the application.</p>
 
+        <h4 id="reacting-to-scroll-events" class="docs-header-link">
+          Reacting to scroll events
+          <span header-link="reacting-to-scroll-events"></span>
+        </h4>
+      <p><code>CdkScrollable</code> exposes an <code>elementScrolled</code> stream that emits whenever its element is scrolled.
+Use it together with <code>measureScrollOffset</code>, which returns the scroll position relative to a given
+edge of the element, to respond to the user scrolling. The stream completes when the directive is
+destroyed.</p>
+</div><div material-docs-example="cdk-scrollable-overview"></div><div class="docs-markdown"><p>To react to scrolling in any of the scrollable containers in the application, inject the
+<code>ScrollDispatcher</code> and subscribe to <code>scrolled</code>. It emits the <code>CdkScrollable</code> that was scrolled, or
+<code>undefined</code> when the page itself is scrolled. If you only care about the containers around a
+particular element, use <code>ancestorScrolled</code> instead, which only emits for those containers and the
+page. <code>ancestorScrolled</code> looks up the containers at the time it is called, so call it in <code>ngOnInit</code>
+or later, once the containers have been registered.</p>
+<p>Both streams are throttled to one event every 20 milliseconds by default. You can change this by
+passing a different time in milliseconds. Unsubscribe once you no longer need the events, because
+the dispatcher keeps a global scroll listener as long as the stream has subscribers.</p>
+<pre><code class="language-ts"><span class="hljs-keyword">import</span> {<span class="hljs-title class_">Component</span>, <span class="hljs-title class_">DestroyRef</span>, <span class="hljs-title class_">ElementRef</span>, <span class="hljs-title class_">OnInit</span>, inject} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {takeUntilDestroyed} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core/rxjs-interop&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">ScrollDispatcher</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/scrolling&#x27;</span>;
+
+<span class="hljs-meta">@Component</span>({
+  <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;my-component&#x27;</span>,
+  <span class="hljs-attr">template</span>: <span class="hljs-string">&#x27;...&#x27;</span>,
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">MyComponent</span> <span class="hljs-keyword">implements</span> <span class="hljs-title class_">OnInit</span> {
+  <span class="hljs-keyword">private</span> _scrollDispatcher = <span class="hljs-title function_">inject</span>(<span class="hljs-title class_">ScrollDispatcher</span>);
+  <span class="hljs-keyword">private</span> _elementRef = <span class="hljs-title function_">inject</span>(<span class="hljs-title class_">ElementRef</span>);
+  <span class="hljs-keyword">private</span> _destroyRef = <span class="hljs-title function_">inject</span>(<span class="hljs-title class_">DestroyRef</span>);
+
+  <span class="hljs-title function_">ngOnInit</span>(<span class="hljs-params"></span>) {
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">_scrollDispatcher</span>
+      .<span class="hljs-title function_">ancestorScrolled</span>(<span class="hljs-variable language_">this</span>.<span class="hljs-property">_elementRef</span>)
+      .<span class="hljs-title function_">pipe</span>(<span class="hljs-title function_">takeUntilDestroyed</span>(<span class="hljs-variable language_">this</span>.<span class="hljs-property">_destroyRef</span>))
+      .<span class="hljs-title function_">subscribe</span>(<span class="hljs-function">() =&gt;</span> {
+        <span class="hljs-comment">// Respond to the scroll event.</span>
+      });
+  }
+}</code><button class="docs-markdown-copy-button" type="button" aria-label="Copy code" title="Copy code to the clipboard"><span class="material-symbols-outlined" aria-hidden="true">content_copy</span></button></pre><p>Scroll events are emitted outside of the Angular zone to avoid running change detection on every
+scroll. Updating a class property in response to a scroll event won&#39;t refresh the view on its own,
+so store the values that your template uses in signals, or call <code>ChangeDetectorRef.markForCheck</code>
+after updating them.</p>
+
         <h3 id="viewportruler" class="docs-header-link">
           ViewportRuler
           <span header-link="viewportruler"></span>
