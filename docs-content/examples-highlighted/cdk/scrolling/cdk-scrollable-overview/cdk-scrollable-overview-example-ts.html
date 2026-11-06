@@ -1,0 +1,29 @@
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">AfterViewInit</span>, <span class="hljs-title class_">Component</span>, signal, viewChild} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">CdkScrollable</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/scrolling&#x27;</span>;
+
+<span class="hljs-comment">/** <span class="hljs-doctag">@title</span> Reacting to scroll events */</span>
+<span class="hljs-meta">@Component</span>({
+  <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;cdk-scrollable-overview-example&#x27;</span>,
+  <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;cdk-scrollable-overview-example.html&#x27;</span>,
+  <span class="hljs-attr">styleUrl</span>: <span class="hljs-string">&#x27;cdk-scrollable-overview-example.css&#x27;</span>,
+  <span class="hljs-attr">imports</span>: [<span class="hljs-title class_">CdkScrollable</span>],
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">CdkScrollableOverviewExample</span> <span class="hljs-keyword">implements</span> <span class="hljs-title class_">AfterViewInit</span> {
+  scrollable = viewChild.<span class="hljs-title function_">required</span>(<span class="hljs-title class_">CdkScrollable</span>);
+  items = <span class="hljs-title class_">Array</span>.<span class="hljs-title function_">from</span>({<span class="hljs-attr">length</span>: <span class="hljs-number">50</span>}).<span class="hljs-title function_">map</span>(<span class="hljs-function">(<span class="hljs-params">_, i</span>) =&gt;</span> <span class="hljs-string">`Item #<span class="hljs-subst">${i}</span>`</span>);
+  scrollOffset = <span class="hljs-title function_">signal</span>(<span class="hljs-number">0</span>);
+
+  <span class="hljs-title function_">ngAfterViewInit</span>(<span class="hljs-params"></span>) {
+    <span class="hljs-keyword">const</span> scrollable = <span class="hljs-variable language_">this</span>.<span class="hljs-title function_">scrollable</span>();
+
+    <span class="hljs-comment">// Scroll events are emitted outside of the Angular zone. Updating a signal</span>
+    <span class="hljs-comment">// lets Angular know that the view needs to be refreshed.</span>
+    scrollable.<span class="hljs-title function_">elementScrolled</span>().<span class="hljs-title function_">subscribe</span>(<span class="hljs-function">() =&gt;</span> {
+      <span class="hljs-variable language_">this</span>.<span class="hljs-property">scrollOffset</span>.<span class="hljs-title function_">set</span>(<span class="hljs-title class_">Math</span>.<span class="hljs-title function_">round</span>(scrollable.<span class="hljs-title function_">measureScrollOffset</span>(<span class="hljs-string">&#x27;top&#x27;</span>)));
+    });
+  }
+
+  <span class="hljs-title function_">scrollToTop</span>(<span class="hljs-params"></span>) {
+    <span class="hljs-variable language_">this</span>.<span class="hljs-title function_">scrollable</span>().<span class="hljs-title function_">scrollTo</span>({<span class="hljs-attr">top</span>: <span class="hljs-number">0</span>});
+  }
+}

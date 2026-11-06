@@ -1,9 +1,85 @@
 import * as i0 from '@angular/core';
-import { Component, ViewEncapsulation, input } from '@angular/core';
+import { viewChild, signal, Component, ViewEncapsulation, input } from '@angular/core';
 import * as i1 from '@angular/cdk/scrolling';
-import { ScrollingModule, VIRTUAL_SCROLL_STRATEGY, FixedSizeVirtualScrollStrategy } from '@angular/cdk/scrolling';
+import { CdkScrollable, ScrollingModule, VIRTUAL_SCROLL_STRATEGY, FixedSizeVirtualScrollStrategy } from '@angular/cdk/scrolling';
 import { DataSource } from '@angular/cdk/collections';
 import { BehaviorSubject, Subscription } from 'rxjs';
+
+class CdkScrollableOverviewExample {
+  scrollable = viewChild.required(CdkScrollable, ...(ngDevMode ? [{
+    debugName: "scrollable"
+  }] : []));
+  items = Array.from({
+    length: 50
+  }).map((_, i) => `Item #${i}`);
+  scrollOffset = signal(0, ...(ngDevMode ? [{
+    debugName: "scrollOffset"
+  }] : []));
+  ngAfterViewInit() {
+    const scrollable = this.scrollable();
+    scrollable.elementScrolled().subscribe(() => {
+      this.scrollOffset.set(Math.round(scrollable.measureScrollOffset('top')));
+    });
+  }
+  scrollToTop() {
+    this.scrollable().scrollTo({
+      top: 0
+    });
+  }
+  static ɵfac = i0.ɵɵngDeclareFactory({
+    minVersion: "12.0.0",
+    version: "22.3.0-next.3",
+    ngImport: i0,
+    type: CdkScrollableOverviewExample,
+    deps: [],
+    target: i0.ɵɵFactoryTarget.Component
+  });
+  static ɵcmp = i0.ɵɵngDeclareComponent({
+    minVersion: "17.0.0",
+    version: "22.3.0-next.3",
+    type: CdkScrollableOverviewExample,
+    isStandalone: true,
+    selector: "cdk-scrollable-overview-example",
+    viewQueries: [{
+      propertyName: "scrollable",
+      first: true,
+      predicate: CdkScrollable,
+      descendants: true,
+      isSignal: true
+    }],
+    ngImport: i0,
+    template: "<p>Scrolled {{scrollOffset()}}px from the top</p>\n\n<div class=\"example-container\" cdkScrollable>\n  @for (item of items; track item) {\n    <div class=\"example-item\">{{item}}</div>\n  }\n</div>\n\n<button type=\"button\" (click)=\"scrollToTop()\" [disabled]=\"scrollOffset() === 0\">\n  Back to top\n</button>\n",
+    styles: [".example-container {\n  height: 200px;\n  width: 200px;\n  margin-bottom: 8px;\n  overflow: auto;\n  border: 1px solid black;\n}\n\n.example-item {\n  height: 50px;\n}\n"],
+    dependencies: [{
+      kind: "directive",
+      type: CdkScrollable,
+      selector: "[cdk-scrollable], [cdkScrollable]"
+    }]
+  });
+}
+i0.ɵɵngDeclareClassMetadata({
+  minVersion: "12.0.0",
+  version: "22.3.0-next.3",
+  ngImport: i0,
+  type: CdkScrollableOverviewExample,
+  decorators: [{
+    type: Component,
+    args: [{
+      selector: 'cdk-scrollable-overview-example',
+      imports: [CdkScrollable],
+      template: "<p>Scrolled {{scrollOffset()}}px from the top</p>\n\n<div class=\"example-container\" cdkScrollable>\n  @for (item of items; track item) {\n    <div class=\"example-item\">{{item}}</div>\n  }\n</div>\n\n<button type=\"button\" (click)=\"scrollToTop()\" [disabled]=\"scrollOffset() === 0\">\n  Back to top\n</button>\n",
+      styles: [".example-container {\n  height: 200px;\n  width: 200px;\n  margin-bottom: 8px;\n  overflow: auto;\n  border: 1px solid black;\n}\n\n.example-item {\n  height: 50px;\n}\n"]
+    }]
+  }],
+  propDecorators: {
+    scrollable: [{
+      type: i0.ViewChild,
+      args: [i0.forwardRef(() => CdkScrollable), {
+        isSignal: true
+      }]
+    }]
+  }
+});
 
 class CdkVirtualScrollAppendOnlyExample {
   items = Array.from({
@@ -878,5 +954,5 @@ i0.ɵɵngDeclareClassMetadata({
   }
 });
 
-export { CdkVirtualScrollAppendOnlyExample, CdkVirtualScrollContextExample, CdkVirtualScrollCustomStrategyExample, CdkVirtualScrollDataSourceExample, CdkVirtualScrollDlExample, CdkVirtualScrollFixedBufferExample, CdkVirtualScrollHorizontalExample, CdkVirtualScrollOverviewExample, CdkVirtualScrollParentScrollingExample, CdkVirtualScrollTemplateCacheExample, CdkVirtualScrollWindowScrollingExample };
+export { CdkScrollableOverviewExample, CdkVirtualScrollAppendOnlyExample, CdkVirtualScrollContextExample, CdkVirtualScrollCustomStrategyExample, CdkVirtualScrollDataSourceExample, CdkVirtualScrollDlExample, CdkVirtualScrollFixedBufferExample, CdkVirtualScrollHorizontalExample, CdkVirtualScrollOverviewExample, CdkVirtualScrollParentScrollingExample, CdkVirtualScrollTemplateCacheExample, CdkVirtualScrollWindowScrollingExample };
 //# sourceMappingURL=cdk-scrolling.mjs.map

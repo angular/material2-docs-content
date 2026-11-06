@@ -409,6 +409,16 @@ const EXAMPLE_COMPONENTS = {
     "primaryFile": "cdk-portal-overview-example.ts",
     "importPath": "cdk/portal"
   },
+  "cdk-scrollable-overview": {
+    "packagePath": "cdk/scrolling/cdk-scrollable-overview",
+    "title": "Reacting to scroll events",
+    "componentName": "CdkScrollableOverviewExample",
+    "files": ["cdk-scrollable-overview-example.ts", "cdk-scrollable-overview-example.html", "cdk-scrollable-overview-example.css"],
+    "selector": "cdk-scrollable-overview-example",
+    "additionalComponents": [],
+    "primaryFile": "cdk-scrollable-overview-example.ts",
+    "importPath": "cdk/scrolling"
+  },
   "cdk-virtual-scroll-append-only": {
     "packagePath": "cdk/scrolling/cdk-virtual-scroll-append-only",
     "title": "Virtual scroll with view recycling disabled.",
@@ -3714,6 +3724,8 @@ async function loadExample(id) {
       return import('@angular/components-examples/cdk/platform');
     case 'cdk-portal-overview':
       return import('@angular/components-examples/cdk/portal');
+    case 'cdk-scrollable-overview':
+      return import('@angular/components-examples/cdk/scrolling');
     case 'cdk-virtual-scroll-append-only':
       return import('@angular/components-examples/cdk/scrolling');
     case 'cdk-virtual-scroll-context':
