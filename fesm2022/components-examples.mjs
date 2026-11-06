@@ -3029,6 +3029,16 @@ const EXAMPLE_COMPONENTS = {
     "primaryFile": "table-row-context-example.ts",
     "importPath": "material/table"
   },
+  "table-rowspan": {
+    "packagePath": "material/table/table-rowspan",
+    "title": "Table with merged rows using rowspan",
+    "componentName": "TableRowspanExample",
+    "files": ["table-rowspan-example.ts", "table-rowspan-example.html", "table-rowspan-example.css"],
+    "selector": "table-rowspan-example",
+    "additionalComponents": [],
+    "primaryFile": "table-rowspan-example.ts",
+    "importPath": "material/table"
+  },
   "table-selection": {
     "packagePath": "material/table/table-selection",
     "title": "Table with selection",
@@ -4247,6 +4257,8 @@ async function loadExample(id) {
     case 'table-row-binding':
       return import('@angular/components-examples/material/table');
     case 'table-row-context':
+      return import('@angular/components-examples/material/table');
+    case 'table-rowspan':
       return import('@angular/components-examples/material/table');
     case 'table-selection':
       return import('@angular/components-examples/material/table');

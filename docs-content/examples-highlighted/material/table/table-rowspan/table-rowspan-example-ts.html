@@ -1,0 +1,66 @@
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">Component</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatTableModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/table&#x27;</span>;
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">interface</span> <span class="hljs-title class_">IsotopeData</span> {
+  <span class="hljs-attr">position</span>: <span class="hljs-built_in">number</span>;
+  <span class="hljs-attr">element</span>: <span class="hljs-built_in">string</span>;
+  <span class="hljs-attr">isotope</span>: <span class="hljs-built_in">string</span>;
+  <span class="hljs-attr">weight</span>: <span class="hljs-built_in">number</span>;
+}
+
+<span class="hljs-keyword">const</span> <span class="hljs-attr">ISOTOPE_DATA</span>: <span class="hljs-title class_">IsotopeData</span>[] = [
+  {<span class="hljs-attr">position</span>: <span class="hljs-number">1</span>, <span class="hljs-attr">element</span>: <span class="hljs-string">&#x27;Hydrogen&#x27;</span>, <span class="hljs-attr">isotope</span>: <span class="hljs-string">&#x27;Protium&#x27;</span>, <span class="hljs-attr">weight</span>: <span class="hljs-number">1.0078</span>},
+  {<span class="hljs-attr">position</span>: <span class="hljs-number">2</span>, <span class="hljs-attr">element</span>: <span class="hljs-string">&#x27;Hydrogen&#x27;</span>, <span class="hljs-attr">isotope</span>: <span class="hljs-string">&#x27;Deuterium&#x27;</span>, <span class="hljs-attr">weight</span>: <span class="hljs-number">2.0141</span>},
+  {<span class="hljs-attr">position</span>: <span class="hljs-number">3</span>, <span class="hljs-attr">element</span>: <span class="hljs-string">&#x27;Hydrogen&#x27;</span>, <span class="hljs-attr">isotope</span>: <span class="hljs-string">&#x27;Tritium&#x27;</span>, <span class="hljs-attr">weight</span>: <span class="hljs-number">3.016</span>},
+  {<span class="hljs-attr">position</span>: <span class="hljs-number">4</span>, <span class="hljs-attr">element</span>: <span class="hljs-string">&#x27;Helium&#x27;</span>, <span class="hljs-attr">isotope</span>: <span class="hljs-string">&#x27;Helium-3&#x27;</span>, <span class="hljs-attr">weight</span>: <span class="hljs-number">3.016</span>},
+  {<span class="hljs-attr">position</span>: <span class="hljs-number">5</span>, <span class="hljs-attr">element</span>: <span class="hljs-string">&#x27;Helium&#x27;</span>, <span class="hljs-attr">isotope</span>: <span class="hljs-string">&#x27;Helium-4&#x27;</span>, <span class="hljs-attr">weight</span>: <span class="hljs-number">4.0026</span>},
+];
+
+<span class="hljs-comment">/**
+ * <span class="hljs-doctag">@title</span> Table with merged rows using rowspan
+ */</span>
+<span class="hljs-meta">@Component</span>({
+  <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;table-rowspan-example&#x27;</span>,
+  <span class="hljs-attr">styleUrl</span>: <span class="hljs-string">&#x27;table-rowspan-example.css&#x27;</span>,
+  <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;table-rowspan-example.html&#x27;</span>,
+  <span class="hljs-attr">imports</span>: [<span class="hljs-title class_">MatTableModule</span>],
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">TableRowspanExample</span> {
+  <span class="hljs-attr">displayedColumns</span>: <span class="hljs-built_in">string</span>[] = [<span class="hljs-string">&#x27;element&#x27;</span>, <span class="hljs-string">&#x27;isotope&#x27;</span>, <span class="hljs-string">&#x27;weight&#x27;</span>];
+
+  <span class="hljs-attr">dataSource</span>: <span class="hljs-title class_">IsotopeData</span>[] = <span class="hljs-variable constant_">ISOTOPE_DATA</span>;
+
+  <span class="hljs-attr">spans</span>: <span class="hljs-title class_">Record</span>&lt;<span class="hljs-built_in">string</span>, <span class="hljs-built_in">number</span>&gt;[] = [];
+
+  <span class="hljs-title function_">constructor</span>(<span class="hljs-params"></span>) {
+    <span class="hljs-variable language_">this</span>.<span class="hljs-title function_">_cacheSpan</span>(<span class="hljs-string">&#x27;element&#x27;</span>, <span class="hljs-function"><span class="hljs-params">row</span> =&gt;</span> row.<span class="hljs-property">element</span>);
+  }
+
+  <span class="hljs-comment">/** Caches rowspan values for a column. */</span>
+  <span class="hljs-keyword">private</span> <span class="hljs-title function_">_cacheSpan</span>(<span class="hljs-attr">key</span>: <span class="hljs-built_in">string</span>, <span class="hljs-attr">accessor</span>: <span class="hljs-function">(<span class="hljs-params"><span class="hljs-attr">row</span>: <span class="hljs-title class_">IsotopeData</span></span>) =&gt;</span> <span class="hljs-built_in">string</span>): <span class="hljs-built_in">void</span> {
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-variable language_">this</span>.<span class="hljs-property">dataSource</span>.<span class="hljs-property">length</span>;) {
+      <span class="hljs-keyword">const</span> currentValue = <span class="hljs-title function_">accessor</span>(<span class="hljs-variable language_">this</span>.<span class="hljs-property">dataSource</span>[i]);
+      <span class="hljs-keyword">let</span> count = <span class="hljs-number">1</span>;
+
+      <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> j = i + <span class="hljs-number">1</span>; j &lt; <span class="hljs-variable language_">this</span>.<span class="hljs-property">dataSource</span>.<span class="hljs-property">length</span>; j++) {
+        <span class="hljs-keyword">if</span> (currentValue !== <span class="hljs-title function_">accessor</span>(<span class="hljs-variable language_">this</span>.<span class="hljs-property">dataSource</span>[j])) {
+          <span class="hljs-keyword">break</span>;
+        }
+
+        count++;
+      }
+
+      <span class="hljs-keyword">if</span> (!<span class="hljs-variable language_">this</span>.<span class="hljs-property">spans</span>[i]) {
+        <span class="hljs-variable language_">this</span>.<span class="hljs-property">spans</span>[i] = {};
+      }
+
+      <span class="hljs-variable language_">this</span>.<span class="hljs-property">spans</span>[i][key] = count;
+      i += count;
+    }
+  }
+
+  <span class="hljs-comment">/** Returns the rowspan for an element cell. */</span>
+  <span class="hljs-title function_">getRowSpan</span>(<span class="hljs-attr">column</span>: <span class="hljs-string">&#x27;element&#x27;</span>, <span class="hljs-attr">index</span>: <span class="hljs-built_in">number</span>): <span class="hljs-built_in">number</span> | <span class="hljs-literal">undefined</span> {
+    <span class="hljs-keyword">return</span> <span class="hljs-variable language_">this</span>.<span class="hljs-property">spans</span>[index]?.[column];
+  }
+}

@@ -86,7 +86,7 @@ class TableFlexBasicExample {
   dataSource = ELEMENT_DATA$q;
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.3.0-next.3",
+    version: "22.3.0-next.4",
     ngImport: i0,
     type: TableFlexBasicExample,
     deps: [],
@@ -94,7 +94,7 @@ class TableFlexBasicExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.3.0-next.3",
+    version: "22.3.0-next.4",
     type: TableFlexBasicExample,
     isStandalone: true,
     selector: "table-flex-basic-example",
@@ -155,7 +155,7 @@ class TableFlexBasicExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.3.0-next.3",
+  version: "22.3.0-next.4",
   ngImport: i0,
   type: TableFlexBasicExample,
   decorators: [{
@@ -225,7 +225,7 @@ class TableBasicExample {
   dataSource = ELEMENT_DATA$p;
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.3.0-next.3",
+    version: "22.3.0-next.4",
     ngImport: i0,
     type: TableBasicExample,
     deps: [],
@@ -233,7 +233,7 @@ class TableBasicExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.3.0-next.3",
+    version: "22.3.0-next.4",
     type: TableBasicExample,
     isStandalone: true,
     selector: "table-basic-example",
@@ -294,7 +294,7 @@ class TableBasicExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.3.0-next.3",
+  version: "22.3.0-next.4",
   ngImport: i0,
   type: TableBasicExample,
   decorators: [{
@@ -306,6 +306,145 @@ i0.ɵɵngDeclareClassMetadata({
       styles: ["table {\n  width: 100%;\n}\n"]
     }]
   }]
+});
+
+const ISOTOPE_DATA = [{
+  position: 1,
+  element: 'Hydrogen',
+  isotope: 'Protium',
+  weight: 1.0078
+}, {
+  position: 2,
+  element: 'Hydrogen',
+  isotope: 'Deuterium',
+  weight: 2.0141
+}, {
+  position: 3,
+  element: 'Hydrogen',
+  isotope: 'Tritium',
+  weight: 3.016
+}, {
+  position: 4,
+  element: 'Helium',
+  isotope: 'Helium-3',
+  weight: 3.016
+}, {
+  position: 5,
+  element: 'Helium',
+  isotope: 'Helium-4',
+  weight: 4.0026
+}];
+class TableRowspanExample {
+  displayedColumns = ['element', 'isotope', 'weight'];
+  dataSource = ISOTOPE_DATA;
+  spans = [];
+  constructor() {
+    this._cacheSpan('element', row => row.element);
+  }
+  _cacheSpan(key, accessor) {
+    for (let i = 0; i < this.dataSource.length;) {
+      const currentValue = accessor(this.dataSource[i]);
+      let count = 1;
+      for (let j = i + 1; j < this.dataSource.length; j++) {
+        if (currentValue !== accessor(this.dataSource[j])) {
+          break;
+        }
+        count++;
+      }
+      if (!this.spans[i]) {
+        this.spans[i] = {};
+      }
+      this.spans[i][key] = count;
+      i += count;
+    }
+  }
+  getRowSpan(column, index) {
+    return this.spans[index]?.[column];
+  }
+  static ɵfac = i0.ɵɵngDeclareFactory({
+    minVersion: "12.0.0",
+    version: "22.3.0-next.4",
+    ngImport: i0,
+    type: TableRowspanExample,
+    deps: [],
+    target: i0.ɵɵFactoryTarget.Component
+  });
+  static ɵcmp = i0.ɵɵngDeclareComponent({
+    minVersion: "14.0.0",
+    version: "22.3.0-next.4",
+    type: TableRowspanExample,
+    isStandalone: true,
+    selector: "table-rowspan-example",
+    ngImport: i0,
+    template: "<table mat-table [dataSource]=\"dataSource\" class=\"mat-elevation-z2\">\n\n  <!-- Element Column -->\n  <ng-container matColumnDef=\"element\">\n    <th mat-header-cell *matHeaderCellDef>Element</th>\n\n    <!-- Hide repeated cells and apply rowspan to the first occurrence. -->\n    <td\n      mat-cell\n      *matCellDef=\"let row; let i = index\"\n      [attr.rowspan]=\"getRowSpan('element', i)\"\n      [style.display]=\"getRowSpan('element', i) ? '' : 'none'\">\n      {{row.element}}\n    </td>\n  </ng-container>\n\n  <!-- Isotope Column -->\n  <ng-container matColumnDef=\"isotope\">\n    <th mat-header-cell *matHeaderCellDef>Isotope</th>\n\n    <td mat-cell *matCellDef=\"let row\">\n      {{row.isotope}}\n    </td>\n  </ng-container>\n\n  <!-- Weight Column -->\n  <ng-container matColumnDef=\"weight\">\n    <th mat-header-cell *matHeaderCellDef>Weight</th>\n\n    <td mat-cell *matCellDef=\"let row\">\n      {{row.weight}}\n    </td>\n  </ng-container>\n\n  <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n\n  <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n</table>\n",
+    styles: ["table {\n  width: 100%;\n}\n\nth,\ntd {\n  vertical-align: top;\n}\n"],
+    dependencies: [{
+      kind: "ngmodule",
+      type: MatTableModule
+    }, {
+      kind: "component",
+      type: i1.MatTable,
+      selector: "mat-table, table[mat-table]",
+      exportAs: ["matTable"]
+    }, {
+      kind: "directive",
+      type: i1.MatHeaderCellDef,
+      selector: "[matHeaderCellDef]"
+    }, {
+      kind: "directive",
+      type: i1.MatHeaderRowDef,
+      selector: "[matHeaderRowDef]",
+      inputs: ["matHeaderRowDef", "matHeaderRowDefSticky"]
+    }, {
+      kind: "directive",
+      type: i1.MatColumnDef,
+      selector: "[matColumnDef]",
+      inputs: ["matColumnDef"]
+    }, {
+      kind: "directive",
+      type: i1.MatCellDef,
+      selector: "[matCellDef]"
+    }, {
+      kind: "directive",
+      type: i1.MatRowDef,
+      selector: "[matRowDef]",
+      inputs: ["matRowDefColumns", "matRowDefWhen"]
+    }, {
+      kind: "directive",
+      type: i1.MatHeaderCell,
+      selector: "mat-header-cell, th[mat-header-cell]"
+    }, {
+      kind: "directive",
+      type: i1.MatCell,
+      selector: "mat-cell, td[mat-cell]"
+    }, {
+      kind: "component",
+      type: i1.MatHeaderRow,
+      selector: "mat-header-row, tr[mat-header-row]",
+      exportAs: ["matHeaderRow"]
+    }, {
+      kind: "component",
+      type: i1.MatRow,
+      selector: "mat-row, tr[mat-row]",
+      exportAs: ["matRow"]
+    }]
+  });
+}
+i0.ɵɵngDeclareClassMetadata({
+  minVersion: "12.0.0",
+  version: "22.3.0-next.4",
+  ngImport: i0,
+  type: TableRowspanExample,
+  decorators: [{
+    type: Component,
+    args: [{
+      selector: 'table-rowspan-example',
+      imports: [MatTableModule],
+      template: "<table mat-table [dataSource]=\"dataSource\" class=\"mat-elevation-z2\">\n\n  <!-- Element Column -->\n  <ng-container matColumnDef=\"element\">\n    <th mat-header-cell *matHeaderCellDef>Element</th>\n\n    <!-- Hide repeated cells and apply rowspan to the first occurrence. -->\n    <td\n      mat-cell\n      *matCellDef=\"let row; let i = index\"\n      [attr.rowspan]=\"getRowSpan('element', i)\"\n      [style.display]=\"getRowSpan('element', i) ? '' : 'none'\">\n      {{row.element}}\n    </td>\n  </ng-container>\n\n  <!-- Isotope Column -->\n  <ng-container matColumnDef=\"isotope\">\n    <th mat-header-cell *matHeaderCellDef>Isotope</th>\n\n    <td mat-cell *matCellDef=\"let row\">\n      {{row.isotope}}\n    </td>\n  </ng-container>\n\n  <!-- Weight Column -->\n  <ng-container matColumnDef=\"weight\">\n    <th mat-header-cell *matHeaderCellDef>Weight</th>\n\n    <td mat-cell *matCellDef=\"let row\">\n      {{row.weight}}\n    </td>\n  </ng-container>\n\n  <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n\n  <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n</table>\n",
+      styles: ["table {\n  width: 100%;\n}\n\nth,\ntd {\n  vertical-align: top;\n}\n"]
+    }]
+  }],
+  ctorParameters: () => []
 });
 
 const ELEMENT_DATA$o = [{
@@ -384,7 +523,7 @@ class TableDynamicColumnsExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.3.0-next.3",
+    version: "22.3.0-next.4",
     ngImport: i0,
     type: TableDynamicColumnsExample,
     deps: [],
@@ -392,7 +531,7 @@ class TableDynamicColumnsExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "22.3.0-next.3",
+    version: "22.3.0-next.4",
     type: TableDynamicColumnsExample,
     isStandalone: true,
     selector: "table-dynamic-columns-example",
@@ -462,7 +601,7 @@ class TableDynamicColumnsExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.3.0-next.3",
+  version: "22.3.0-next.4",
   ngImport: i0,
   type: TableDynamicColumnsExample,
   decorators: [{
@@ -489,7 +628,7 @@ class TableExpandableRowsExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.3.0-next.3",
+    version: "22.3.0-next.4",
     ngImport: i0,
     type: TableExpandableRowsExample,
     deps: [],
@@ -497,7 +636,7 @@ class TableExpandableRowsExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "22.3.0-next.3",
+    version: "22.3.0-next.4",
     type: TableExpandableRowsExample,
     isStandalone: true,
     selector: "table-expandable-rows-example",
@@ -575,7 +714,7 @@ class TableExpandableRowsExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.3.0-next.3",
+  version: "22.3.0-next.4",
   ngImport: i0,
   type: TableExpandableRowsExample,
   decorators: [{
@@ -728,7 +867,7 @@ class TableFilteringExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.3.0-next.3",
+    version: "22.3.0-next.4",
     ngImport: i0,
     type: TableFilteringExample,
     deps: [],
@@ -736,7 +875,7 @@ class TableFilteringExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.3.0-next.3",
+    version: "22.3.0-next.4",
     type: TableFilteringExample,
     isStandalone: true,
     selector: "table-filtering-example",
@@ -823,7 +962,7 @@ class TableFilteringExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.3.0-next.3",
+  version: "22.3.0-next.4",
   ngImport: i0,
   type: TableFilteringExample,
   decorators: [{
@@ -863,7 +1002,7 @@ class TableFooterRowExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.3.0-next.3",
+    version: "22.3.0-next.4",
     ngImport: i0,
     type: TableFooterRowExample,
     deps: [],
@@ -871,7 +1010,7 @@ class TableFooterRowExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.3.0-next.3",
+    version: "22.3.0-next.4",
     type: TableFooterRowExample,
     isStandalone: true,
     selector: "table-footer-row-example",
@@ -954,7 +1093,7 @@ class TableFooterRowExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.3.0-next.3",
+  version: "22.3.0-next.4",
   ngImport: i0,
   type: TableFooterRowExample,
   decorators: [{
@@ -1039,7 +1178,7 @@ class TableHttpExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.3.0-next.3",
+    version: "22.3.0-next.4",
     ngImport: i0,
     type: TableHttpExample,
     deps: [],
@@ -1047,7 +1186,7 @@ class TableHttpExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "22.3.0-next.3",
+    version: "22.3.0-next.4",
     type: TableHttpExample,
     isStandalone: true,
     selector: "table-http-example",
@@ -1160,7 +1299,7 @@ class TableHttpExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.3.0-next.3",
+  version: "22.3.0-next.4",
   ngImport: i0,
   type: TableHttpExample,
   decorators: [{
@@ -1214,7 +1353,7 @@ class TableMultipleHeaderFooterExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.3.0-next.3",
+    version: "22.3.0-next.4",
     ngImport: i0,
     type: TableMultipleHeaderFooterExample,
     deps: [],
@@ -1222,7 +1361,7 @@ class TableMultipleHeaderFooterExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.3.0-next.3",
+    version: "22.3.0-next.4",
     type: TableMultipleHeaderFooterExample,
     isStandalone: true,
     selector: "table-multiple-header-footer-example",
@@ -1305,7 +1444,7 @@ class TableMultipleHeaderFooterExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.3.0-next.3",
+  version: "22.3.0-next.4",
   ngImport: i0,
   type: TableMultipleHeaderFooterExample,
   decorators: [{
@@ -1324,7 +1463,7 @@ class TableMultipleRowTemplateExample {
   dataSource = new MatTableDataSource(ELEMENT_DATA$l);
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.3.0-next.3",
+    version: "22.3.0-next.4",
     ngImport: i0,
     type: TableMultipleRowTemplateExample,
     deps: [],
@@ -1332,7 +1471,7 @@ class TableMultipleRowTemplateExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.3.0-next.3",
+    version: "22.3.0-next.4",
     type: TableMultipleRowTemplateExample,
     isStandalone: true,
     selector: "table-multiple-row-template-example",
@@ -1393,7 +1532,7 @@ class TableMultipleRowTemplateExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.3.0-next.3",
+  version: "22.3.0-next.4",
   ngImport: i0,
   type: TableMultipleRowTemplateExample,
   decorators: [{
@@ -1534,7 +1673,7 @@ class TableOverviewExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.3.0-next.3",
+    version: "22.3.0-next.4",
     ngImport: i0,
     type: TableOverviewExample,
     deps: [],
@@ -1542,7 +1681,7 @@ class TableOverviewExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.3.0-next.3",
+    version: "22.3.0-next.4",
     type: TableOverviewExample,
     isStandalone: true,
     selector: "table-overview-example",
@@ -1666,7 +1805,7 @@ class TableOverviewExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.3.0-next.3",
+  version: "22.3.0-next.4",
   ngImport: i0,
   type: TableOverviewExample,
   decorators: [{
@@ -1709,7 +1848,7 @@ class TablePaginationExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.3.0-next.3",
+    version: "22.3.0-next.4",
     ngImport: i0,
     type: TablePaginationExample,
     deps: [],
@@ -1717,7 +1856,7 @@ class TablePaginationExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.3.0-next.3",
+    version: "22.3.0-next.4",
     type: TablePaginationExample,
     isStandalone: true,
     selector: "table-pagination-example",
@@ -1794,7 +1933,7 @@ class TablePaginationExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.3.0-next.3",
+  version: "22.3.0-next.4",
   ngImport: i0,
   type: TablePaginationExample,
   decorators: [{
@@ -1920,7 +2059,7 @@ class TableRowContextExample {
   data = ['one', 'two', 'three', 'four', 'five'];
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.3.0-next.3",
+    version: "22.3.0-next.4",
     ngImport: i0,
     type: TableRowContextExample,
     deps: [],
@@ -1928,7 +2067,7 @@ class TableRowContextExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.3.0-next.3",
+    version: "22.3.0-next.4",
     type: TableRowContextExample,
     isStandalone: true,
     selector: "table-row-context-example",
@@ -1989,7 +2128,7 @@ class TableRowContextExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.3.0-next.3",
+  version: "22.3.0-next.4",
   ngImport: i0,
   type: TableRowContextExample,
   decorators: [{
@@ -2078,7 +2217,7 @@ class TableSelectionExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.3.0-next.3",
+    version: "22.3.0-next.4",
     ngImport: i0,
     type: TableSelectionExample,
     deps: [],
@@ -2086,7 +2225,7 @@ class TableSelectionExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.3.0-next.3",
+    version: "22.3.0-next.4",
     type: TableSelectionExample,
     isStandalone: true,
     selector: "table-selection-example",
@@ -2157,7 +2296,7 @@ class TableSelectionExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.3.0-next.3",
+  version: "22.3.0-next.4",
   ngImport: i0,
   type: TableSelectionExample,
   decorators: [{
@@ -2239,7 +2378,7 @@ class TableSortingExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.3.0-next.3",
+    version: "22.3.0-next.4",
     ngImport: i0,
     type: TableSortingExample,
     deps: [],
@@ -2247,7 +2386,7 @@ class TableSortingExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.3.0-next.3",
+    version: "22.3.0-next.4",
     type: TableSortingExample,
     isStandalone: true,
     selector: "table-sorting-example",
@@ -2330,7 +2469,7 @@ class TableSortingExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.3.0-next.3",
+  version: "22.3.0-next.4",
   ngImport: i0,
   type: TableSortingExample,
   decorators: [{
@@ -2355,7 +2494,7 @@ class TableStickyColumnsExample {
   dataSource = ELEMENT_DATA$h;
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.3.0-next.3",
+    version: "22.3.0-next.4",
     ngImport: i0,
     type: TableStickyColumnsExample,
     deps: [],
@@ -2363,7 +2502,7 @@ class TableStickyColumnsExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.3.0-next.3",
+    version: "22.3.0-next.4",
     type: TableStickyColumnsExample,
     isStandalone: true,
     selector: "table-sticky-columns-example",
@@ -2433,7 +2572,7 @@ class TableStickyColumnsExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.3.0-next.3",
+  version: "22.3.0-next.4",
   ngImport: i0,
   type: TableStickyColumnsExample,
   decorators: [{
@@ -2515,7 +2654,7 @@ class TableStickyComplexFlexExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.3.0-next.3",
+    version: "22.3.0-next.4",
     ngImport: i0,
     type: TableStickyComplexFlexExample,
     deps: [],
@@ -2523,7 +2662,7 @@ class TableStickyComplexFlexExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "22.3.0-next.3",
+    version: "22.3.0-next.4",
     type: TableStickyComplexFlexExample,
     isStandalone: true,
     selector: "table-sticky-complex-flex-example",
@@ -2628,7 +2767,7 @@ class TableStickyComplexFlexExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.3.0-next.3",
+  version: "22.3.0-next.4",
   ngImport: i0,
   type: TableStickyComplexFlexExample,
   decorators: [{
@@ -2711,7 +2850,7 @@ class TableStickyComplexExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.3.0-next.3",
+    version: "22.3.0-next.4",
     ngImport: i0,
     type: TableStickyComplexExample,
     deps: [],
@@ -2719,7 +2858,7 @@ class TableStickyComplexExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "22.3.0-next.3",
+    version: "22.3.0-next.4",
     type: TableStickyComplexExample,
     isStandalone: true,
     selector: "table-sticky-complex-example",
@@ -2824,7 +2963,7 @@ class TableStickyComplexExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.3.0-next.3",
+  version: "22.3.0-next.4",
   ngImport: i0,
   type: TableStickyComplexExample,
   decorators: [{
@@ -2916,7 +3055,7 @@ class TableStickyFooterExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.3.0-next.3",
+    version: "22.3.0-next.4",
     ngImport: i0,
     type: TableStickyFooterExample,
     deps: [],
@@ -2924,7 +3063,7 @@ class TableStickyFooterExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.3.0-next.3",
+    version: "22.3.0-next.4",
     type: TableStickyFooterExample,
     isStandalone: true,
     selector: "table-sticky-footer-example",
@@ -3007,7 +3146,7 @@ class TableStickyFooterExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.3.0-next.3",
+  version: "22.3.0-next.4",
   ngImport: i0,
   type: TableStickyFooterExample,
   decorators: [{
@@ -3026,7 +3165,7 @@ class TableStickyHeaderExample {
   dataSource = ELEMENT_DATA$e;
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.3.0-next.3",
+    version: "22.3.0-next.4",
     ngImport: i0,
     type: TableStickyHeaderExample,
     deps: [],
@@ -3034,7 +3173,7 @@ class TableStickyHeaderExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.3.0-next.3",
+    version: "22.3.0-next.4",
     type: TableStickyHeaderExample,
     isStandalone: true,
     selector: "table-sticky-header-example",
@@ -3095,7 +3234,7 @@ class TableStickyHeaderExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.3.0-next.3",
+  version: "22.3.0-next.4",
   ngImport: i0,
   type: TableStickyHeaderExample,
   decorators: [{
@@ -3222,7 +3361,7 @@ class TableTextColumnAdvancedExample {
   };
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.3.0-next.3",
+    version: "22.3.0-next.4",
     ngImport: i0,
     type: TableTextColumnAdvancedExample,
     deps: [],
@@ -3230,7 +3369,7 @@ class TableTextColumnAdvancedExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.3.0-next.3",
+    version: "22.3.0-next.4",
     type: TableTextColumnAdvancedExample,
     isStandalone: true,
     selector: "table-text-column-advanced-example",
@@ -3274,7 +3413,7 @@ class TableTextColumnAdvancedExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.3.0-next.3",
+  version: "22.3.0-next.4",
   ngImport: i0,
   type: TableTextColumnAdvancedExample,
   decorators: [{
@@ -3344,7 +3483,7 @@ class TableTextColumnExample {
   dataSource = ELEMENT_DATA$c;
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.3.0-next.3",
+    version: "22.3.0-next.4",
     ngImport: i0,
     type: TableTextColumnExample,
     deps: [],
@@ -3352,7 +3491,7 @@ class TableTextColumnExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.3.0-next.3",
+    version: "22.3.0-next.4",
     type: TableTextColumnExample,
     isStandalone: true,
     selector: "table-text-column-example",
@@ -3396,7 +3535,7 @@ class TableTextColumnExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.3.0-next.3",
+  version: "22.3.0-next.4",
   ngImport: i0,
   type: TableTextColumnExample,
   decorators: [{
@@ -3476,7 +3615,7 @@ class TableWrappedExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.3.0-next.3",
+    version: "22.3.0-next.4",
     ngImport: i0,
     type: TableWrappedExample,
     deps: [],
@@ -3484,7 +3623,7 @@ class TableWrappedExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.3.0-next.3",
+    version: "22.3.0-next.4",
     type: TableWrappedExample,
     isStandalone: true,
     selector: "table-wrapped-example",
@@ -3574,7 +3713,7 @@ class TableWrappedExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.3.0-next.3",
+  version: "22.3.0-next.4",
   ngImport: i0,
   type: TableWrappedExample,
   decorators: [{
@@ -3613,7 +3752,7 @@ class WrapperTable {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.3.0-next.3",
+    version: "22.3.0-next.4",
     ngImport: i0,
     type: WrapperTable,
     deps: [],
@@ -3621,7 +3760,7 @@ class WrapperTable {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.1.0",
-    version: "22.3.0-next.3",
+    version: "22.3.0-next.4",
     type: WrapperTable,
     isStandalone: true,
     selector: "wrapper-table",
@@ -3709,7 +3848,7 @@ class WrapperTable {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.3.0-next.3",
+  version: "22.3.0-next.4",
   ngImport: i0,
   type: WrapperTable,
   decorators: [{
@@ -3771,7 +3910,7 @@ class TableReorderableExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.3.0-next.3",
+    version: "22.3.0-next.4",
     ngImport: i0,
     type: TableReorderableExample,
     deps: [],
@@ -3779,7 +3918,7 @@ class TableReorderableExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.3.0-next.3",
+    version: "22.3.0-next.4",
     type: TableReorderableExample,
     isStandalone: true,
     selector: "table-reorderable-example",
@@ -3854,7 +3993,7 @@ class TableReorderableExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.3.0-next.3",
+  version: "22.3.0-next.4",
   ngImport: i0,
   type: TableReorderableExample,
   decorators: [{
@@ -3975,7 +4114,7 @@ class TableRecycleRowsExample {
   dataSource = ELEMENT_DATA$9;
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.3.0-next.3",
+    version: "22.3.0-next.4",
     ngImport: i0,
     type: TableRecycleRowsExample,
     deps: [],
@@ -3983,7 +4122,7 @@ class TableRecycleRowsExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.3.0-next.3",
+    version: "22.3.0-next.4",
     type: TableRecycleRowsExample,
     isStandalone: true,
     selector: "table-recycle-rows-example",
@@ -4048,7 +4187,7 @@ class TableRecycleRowsExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.3.0-next.3",
+  version: "22.3.0-next.4",
   ngImport: i0,
   type: TableRecycleRowsExample,
   decorators: [{
@@ -4117,7 +4256,7 @@ class TableHarnessExample {
   }];
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.3.0-next.3",
+    version: "22.3.0-next.4",
     ngImport: i0,
     type: TableHarnessExample,
     deps: [],
@@ -4125,7 +4264,7 @@ class TableHarnessExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.3.0-next.3",
+    version: "22.3.0-next.4",
     type: TableHarnessExample,
     isStandalone: true,
     selector: "table-harness-example",
@@ -4203,7 +4342,7 @@ class TableHarnessExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.3.0-next.3",
+  version: "22.3.0-next.4",
   ngImport: i0,
   type: TableHarnessExample,
   decorators: [{
@@ -4242,7 +4381,7 @@ class TableWithRipplesExample {
   dataSource = ELEMENT_DATA$8;
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.3.0-next.3",
+    version: "22.3.0-next.4",
     ngImport: i0,
     type: TableWithRipplesExample,
     deps: [],
@@ -4250,7 +4389,7 @@ class TableWithRipplesExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.3.0-next.3",
+    version: "22.3.0-next.4",
     type: TableWithRipplesExample,
     isStandalone: true,
     selector: "table-with-ripples-example",
@@ -4319,7 +4458,7 @@ class TableWithRipplesExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.3.0-next.3",
+  version: "22.3.0-next.4",
   ngImport: i0,
   type: TableWithRipplesExample,
   decorators: [{
@@ -4388,7 +4527,7 @@ class TableColumnStylingExample {
   dataSource = ELEMENT_DATA$7;
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.3.0-next.3",
+    version: "22.3.0-next.4",
     ngImport: i0,
     type: TableColumnStylingExample,
     deps: [],
@@ -4396,7 +4535,7 @@ class TableColumnStylingExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.3.0-next.3",
+    version: "22.3.0-next.4",
     type: TableColumnStylingExample,
     isStandalone: true,
     selector: "table-column-styling-example",
@@ -4457,7 +4596,7 @@ class TableColumnStylingExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.3.0-next.3",
+  version: "22.3.0-next.4",
   ngImport: i0,
   type: TableColumnStylingExample,
   decorators: [{
@@ -4528,7 +4667,7 @@ class TableRowBindingExample {
   clickedRows = new Set();
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.3.0-next.3",
+    version: "22.3.0-next.4",
     ngImport: i0,
     type: TableRowBindingExample,
     deps: [],
@@ -4536,7 +4675,7 @@ class TableRowBindingExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "22.3.0-next.3",
+    version: "22.3.0-next.4",
     type: TableRowBindingExample,
     isStandalone: true,
     selector: "table-row-binding-example",
@@ -4597,7 +4736,7 @@ class TableRowBindingExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.3.0-next.3",
+  version: "22.3.0-next.4",
   ngImport: i0,
   type: TableRowBindingExample,
   decorators: [{
@@ -4677,7 +4816,7 @@ class TableDynamicArrayDataExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.3.0-next.3",
+    version: "22.3.0-next.4",
     ngImport: i0,
     type: TableDynamicArrayDataExample,
     deps: [],
@@ -4685,7 +4824,7 @@ class TableDynamicArrayDataExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.3.0-next.3",
+    version: "22.3.0-next.4",
     type: TableDynamicArrayDataExample,
     isStandalone: true,
     selector: "table-dynamic-array-data-example",
@@ -4761,7 +4900,7 @@ class TableDynamicArrayDataExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.3.0-next.3",
+  version: "22.3.0-next.4",
   ngImport: i0,
   type: TableDynamicArrayDataExample,
   decorators: [{
@@ -4847,7 +4986,7 @@ class TableDynamicObservableDataExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.3.0-next.3",
+    version: "22.3.0-next.4",
     ngImport: i0,
     type: TableDynamicObservableDataExample,
     deps: [],
@@ -4855,7 +4994,7 @@ class TableDynamicObservableDataExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.3.0-next.3",
+    version: "22.3.0-next.4",
     type: TableDynamicObservableDataExample,
     isStandalone: true,
     selector: "table-dynamic-observable-data-example",
@@ -4925,7 +5064,7 @@ class TableDynamicObservableDataExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.3.0-next.3",
+  version: "22.3.0-next.4",
   ngImport: i0,
   type: TableDynamicObservableDataExample,
   decorators: [{
@@ -5026,7 +5165,7 @@ class TableGeneratedColumnsExample {
   displayedColumns = this.columns.map(c => c.columnDef);
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.3.0-next.3",
+    version: "22.3.0-next.4",
     ngImport: i0,
     type: TableGeneratedColumnsExample,
     deps: [],
@@ -5034,7 +5173,7 @@ class TableGeneratedColumnsExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "22.3.0-next.3",
+    version: "22.3.0-next.4",
     type: TableGeneratedColumnsExample,
     isStandalone: true,
     selector: "table-generated-columns-example",
@@ -5095,7 +5234,7 @@ class TableGeneratedColumnsExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.3.0-next.3",
+  version: "22.3.0-next.4",
   ngImport: i0,
   type: TableGeneratedColumnsExample,
   decorators: [{
@@ -5165,7 +5304,7 @@ class TableFlexLargeRowExample {
   dataSource = ELEMENT_DATA$2;
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.3.0-next.3",
+    version: "22.3.0-next.4",
     ngImport: i0,
     type: TableFlexLargeRowExample,
     deps: [],
@@ -5173,7 +5312,7 @@ class TableFlexLargeRowExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.3.0-next.3",
+    version: "22.3.0-next.4",
     type: TableFlexLargeRowExample,
     isStandalone: true,
     selector: "table-flex-large-row-example",
@@ -5234,7 +5373,7 @@ class TableFlexLargeRowExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.3.0-next.3",
+  version: "22.3.0-next.4",
   ngImport: i0,
   type: TableFlexLargeRowExample,
   decorators: [{
@@ -5314,7 +5453,7 @@ class TableVirtualScrollExample {
   trackBy = (index, el) => el.position;
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.3.0-next.3",
+    version: "22.3.0-next.4",
     ngImport: i0,
     type: TableVirtualScrollExample,
     deps: [],
@@ -5322,7 +5461,7 @@ class TableVirtualScrollExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.3.0-next.3",
+    version: "22.3.0-next.4",
     type: TableVirtualScrollExample,
     isStandalone: true,
     selector: "table-virtual-scroll-example",
@@ -5401,7 +5540,7 @@ class TableVirtualScrollExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.3.0-next.3",
+  version: "22.3.0-next.4",
   ngImport: i0,
   type: TableVirtualScrollExample,
   decorators: [{
@@ -5487,7 +5626,7 @@ class TableDragDropExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.3.0-next.3",
+    version: "22.3.0-next.4",
     ngImport: i0,
     type: TableDragDropExample,
     deps: [],
@@ -5495,7 +5634,7 @@ class TableDragDropExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.3.0-next.3",
+    version: "22.3.0-next.4",
     type: TableDragDropExample,
     isStandalone: true,
     selector: "table-drag-drop-example",
@@ -5586,7 +5725,7 @@ class TableDragDropExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.3.0-next.3",
+  version: "22.3.0-next.4",
   ngImport: i0,
   type: TableDragDropExample,
   decorators: [{
@@ -5608,5 +5747,5 @@ i0.ɵɵngDeclareClassMetadata({
   }
 });
 
-export { TableBasicExample, TableColumnStylingExample, TableDragDropExample, TableDynamicArrayDataExample, TableDynamicColumnsExample, TableDynamicObservableDataExample, TableExpandableRowsExample, TableFilteringExample, TableFlexBasicExample, TableFlexLargeRowExample, TableFooterRowExample, TableGeneratedColumnsExample, TableHarnessExample, TableHttpExample, TableMultipleHeaderFooterExample, TableMultipleRowTemplateExample, TableOverviewExample, TablePaginationExample, TableRecycleRowsExample, TableReorderableExample, TableRowBindingExample, TableRowContextExample, TableSelectionExample, TableSortingExample, TableStickyColumnsExample, TableStickyComplexExample, TableStickyComplexFlexExample, TableStickyFooterExample, TableStickyHeaderExample, TableTextColumnAdvancedExample, TableTextColumnExample, TableVirtualScrollExample, TableWithRipplesExample, TableWrappedExample, WrapperTable };
+export { TableBasicExample, TableColumnStylingExample, TableDragDropExample, TableDynamicArrayDataExample, TableDynamicColumnsExample, TableDynamicObservableDataExample, TableExpandableRowsExample, TableFilteringExample, TableFlexBasicExample, TableFlexLargeRowExample, TableFooterRowExample, TableGeneratedColumnsExample, TableHarnessExample, TableHttpExample, TableMultipleHeaderFooterExample, TableMultipleRowTemplateExample, TableOverviewExample, TablePaginationExample, TableRecycleRowsExample, TableReorderableExample, TableRowBindingExample, TableRowContextExample, TableRowspanExample, TableSelectionExample, TableSortingExample, TableStickyColumnsExample, TableStickyComplexExample, TableStickyComplexFlexExample, TableStickyFooterExample, TableStickyHeaderExample, TableTextColumnAdvancedExample, TableTextColumnExample, TableVirtualScrollExample, TableWithRipplesExample, TableWrappedExample, WrapperTable };
 //# sourceMappingURL=material-table.mjs.map
