@@ -308,6 +308,145 @@ i0.ɵɵngDeclareClassMetadata({
   }]
 });
 
+const ISOTOPE_DATA = [{
+  position: 1,
+  element: 'Hydrogen',
+  isotope: 'Protium',
+  weight: 1.0078
+}, {
+  position: 2,
+  element: 'Hydrogen',
+  isotope: 'Deuterium',
+  weight: 2.0141
+}, {
+  position: 3,
+  element: 'Hydrogen',
+  isotope: 'Tritium',
+  weight: 3.016
+}, {
+  position: 4,
+  element: 'Helium',
+  isotope: 'Helium-3',
+  weight: 3.016
+}, {
+  position: 5,
+  element: 'Helium',
+  isotope: 'Helium-4',
+  weight: 4.0026
+}];
+class TableRowspanExample {
+  displayedColumns = ['element', 'isotope', 'weight'];
+  dataSource = ISOTOPE_DATA;
+  spans = [];
+  constructor() {
+    this._cacheSpan('element', row => row.element);
+  }
+  _cacheSpan(key, accessor) {
+    for (let i = 0; i < this.dataSource.length;) {
+      const currentValue = accessor(this.dataSource[i]);
+      let count = 1;
+      for (let j = i + 1; j < this.dataSource.length; j++) {
+        if (currentValue !== accessor(this.dataSource[j])) {
+          break;
+        }
+        count++;
+      }
+      if (!this.spans[i]) {
+        this.spans[i] = {};
+      }
+      this.spans[i][key] = count;
+      i += count;
+    }
+  }
+  getRowSpan(column, index) {
+    return this.spans[index]?.[column];
+  }
+  static ɵfac = i0.ɵɵngDeclareFactory({
+    minVersion: "12.0.0",
+    version: "22.2.4",
+    ngImport: i0,
+    type: TableRowspanExample,
+    deps: [],
+    target: i0.ɵɵFactoryTarget.Component
+  });
+  static ɵcmp = i0.ɵɵngDeclareComponent({
+    minVersion: "14.0.0",
+    version: "22.2.4",
+    type: TableRowspanExample,
+    isStandalone: true,
+    selector: "table-rowspan-example",
+    ngImport: i0,
+    template: "<table mat-table [dataSource]=\"dataSource\" class=\"mat-elevation-z2\">\n\n  <!-- Element Column -->\n  <ng-container matColumnDef=\"element\">\n    <th mat-header-cell *matHeaderCellDef>Element</th>\n\n    <!-- Hide repeated cells and apply rowspan to the first occurrence. -->\n    <td\n      mat-cell\n      *matCellDef=\"let row; let i = index\"\n      [attr.rowspan]=\"getRowSpan('element', i)\"\n      [style.display]=\"getRowSpan('element', i) ? '' : 'none'\">\n      {{row.element}}\n    </td>\n  </ng-container>\n\n  <!-- Isotope Column -->\n  <ng-container matColumnDef=\"isotope\">\n    <th mat-header-cell *matHeaderCellDef>Isotope</th>\n\n    <td mat-cell *matCellDef=\"let row\">\n      {{row.isotope}}\n    </td>\n  </ng-container>\n\n  <!-- Weight Column -->\n  <ng-container matColumnDef=\"weight\">\n    <th mat-header-cell *matHeaderCellDef>Weight</th>\n\n    <td mat-cell *matCellDef=\"let row\">\n      {{row.weight}}\n    </td>\n  </ng-container>\n\n  <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n\n  <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n</table>\n",
+    styles: ["table {\n  width: 100%;\n}\n\nth,\ntd {\n  vertical-align: top;\n}\n"],
+    dependencies: [{
+      kind: "ngmodule",
+      type: MatTableModule
+    }, {
+      kind: "component",
+      type: i1.MatTable,
+      selector: "mat-table, table[mat-table]",
+      exportAs: ["matTable"]
+    }, {
+      kind: "directive",
+      type: i1.MatHeaderCellDef,
+      selector: "[matHeaderCellDef]"
+    }, {
+      kind: "directive",
+      type: i1.MatHeaderRowDef,
+      selector: "[matHeaderRowDef]",
+      inputs: ["matHeaderRowDef", "matHeaderRowDefSticky"]
+    }, {
+      kind: "directive",
+      type: i1.MatColumnDef,
+      selector: "[matColumnDef]",
+      inputs: ["matColumnDef"]
+    }, {
+      kind: "directive",
+      type: i1.MatCellDef,
+      selector: "[matCellDef]"
+    }, {
+      kind: "directive",
+      type: i1.MatRowDef,
+      selector: "[matRowDef]",
+      inputs: ["matRowDefColumns", "matRowDefWhen"]
+    }, {
+      kind: "directive",
+      type: i1.MatHeaderCell,
+      selector: "mat-header-cell, th[mat-header-cell]"
+    }, {
+      kind: "directive",
+      type: i1.MatCell,
+      selector: "mat-cell, td[mat-cell]"
+    }, {
+      kind: "component",
+      type: i1.MatHeaderRow,
+      selector: "mat-header-row, tr[mat-header-row]",
+      exportAs: ["matHeaderRow"]
+    }, {
+      kind: "component",
+      type: i1.MatRow,
+      selector: "mat-row, tr[mat-row]",
+      exportAs: ["matRow"]
+    }]
+  });
+}
+i0.ɵɵngDeclareClassMetadata({
+  minVersion: "12.0.0",
+  version: "22.2.4",
+  ngImport: i0,
+  type: TableRowspanExample,
+  decorators: [{
+    type: Component,
+    args: [{
+      selector: 'table-rowspan-example',
+      imports: [MatTableModule],
+      template: "<table mat-table [dataSource]=\"dataSource\" class=\"mat-elevation-z2\">\n\n  <!-- Element Column -->\n  <ng-container matColumnDef=\"element\">\n    <th mat-header-cell *matHeaderCellDef>Element</th>\n\n    <!-- Hide repeated cells and apply rowspan to the first occurrence. -->\n    <td\n      mat-cell\n      *matCellDef=\"let row; let i = index\"\n      [attr.rowspan]=\"getRowSpan('element', i)\"\n      [style.display]=\"getRowSpan('element', i) ? '' : 'none'\">\n      {{row.element}}\n    </td>\n  </ng-container>\n\n  <!-- Isotope Column -->\n  <ng-container matColumnDef=\"isotope\">\n    <th mat-header-cell *matHeaderCellDef>Isotope</th>\n\n    <td mat-cell *matCellDef=\"let row\">\n      {{row.isotope}}\n    </td>\n  </ng-container>\n\n  <!-- Weight Column -->\n  <ng-container matColumnDef=\"weight\">\n    <th mat-header-cell *matHeaderCellDef>Weight</th>\n\n    <td mat-cell *matCellDef=\"let row\">\n      {{row.weight}}\n    </td>\n  </ng-container>\n\n  <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n\n  <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n</table>\n",
+      styles: ["table {\n  width: 100%;\n}\n\nth,\ntd {\n  vertical-align: top;\n}\n"]
+    }]
+  }],
+  ctorParameters: () => []
+});
+
 const ELEMENT_DATA$o = [{
   position: 1,
   name: 'Hydrogen',
@@ -5608,5 +5747,5 @@ i0.ɵɵngDeclareClassMetadata({
   }
 });
 
-export { TableBasicExample, TableColumnStylingExample, TableDragDropExample, TableDynamicArrayDataExample, TableDynamicColumnsExample, TableDynamicObservableDataExample, TableExpandableRowsExample, TableFilteringExample, TableFlexBasicExample, TableFlexLargeRowExample, TableFooterRowExample, TableGeneratedColumnsExample, TableHarnessExample, TableHttpExample, TableMultipleHeaderFooterExample, TableMultipleRowTemplateExample, TableOverviewExample, TablePaginationExample, TableRecycleRowsExample, TableReorderableExample, TableRowBindingExample, TableRowContextExample, TableSelectionExample, TableSortingExample, TableStickyColumnsExample, TableStickyComplexExample, TableStickyComplexFlexExample, TableStickyFooterExample, TableStickyHeaderExample, TableTextColumnAdvancedExample, TableTextColumnExample, TableVirtualScrollExample, TableWithRipplesExample, TableWrappedExample, WrapperTable };
+export { TableBasicExample, TableColumnStylingExample, TableDragDropExample, TableDynamicArrayDataExample, TableDynamicColumnsExample, TableDynamicObservableDataExample, TableExpandableRowsExample, TableFilteringExample, TableFlexBasicExample, TableFlexLargeRowExample, TableFooterRowExample, TableGeneratedColumnsExample, TableHarnessExample, TableHttpExample, TableMultipleHeaderFooterExample, TableMultipleRowTemplateExample, TableOverviewExample, TablePaginationExample, TableRecycleRowsExample, TableReorderableExample, TableRowBindingExample, TableRowContextExample, TableRowspanExample, TableSelectionExample, TableSortingExample, TableStickyColumnsExample, TableStickyComplexExample, TableStickyComplexFlexExample, TableStickyFooterExample, TableStickyHeaderExample, TableTextColumnAdvancedExample, TableTextColumnExample, TableVirtualScrollExample, TableWithRipplesExample, TableWrappedExample, WrapperTable };
 //# sourceMappingURL=material-table.mjs.map

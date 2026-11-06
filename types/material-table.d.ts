@@ -42,6 +42,28 @@ declare class TableBasicExample {
     static ɵcmp: i0.ɵɵComponentDeclaration<TableBasicExample, "table-basic-example", never, {}, {}, never, never, true, never>;
 }
 
+interface IsotopeData {
+    position: number;
+    element: string;
+    isotope: string;
+    weight: number;
+}
+/**
+ * @title Table with merged rows using rowspan
+ */
+declare class TableRowspanExample {
+    displayedColumns: string[];
+    dataSource: IsotopeData[];
+    spans: Record<string, number>[];
+    constructor();
+    /** Caches rowspan values for a column. */
+    private _cacheSpan;
+    /** Returns the rowspan for an element cell. */
+    getRowSpan(column: 'element', index: number): number | undefined;
+    static ɵfac: i0.ɵɵFactoryDeclaration<TableRowspanExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TableRowspanExample, "table-rowspan-example", never, {}, {}, never, never, true, never>;
+}
+
 interface PeriodicElement$n {
     name: string;
     position: number;
@@ -646,4 +668,4 @@ declare class TableDragDropExample {
     static ɵcmp: i0.ɵɵComponentDeclaration<TableDragDropExample, "table-drag-drop-example", never, {}, {}, never, never, true, never>;
 }
 
-export { TableBasicExample, TableColumnStylingExample, TableDragDropExample, TableDynamicArrayDataExample, TableDynamicColumnsExample, TableDynamicObservableDataExample, TableExpandableRowsExample, TableFilteringExample, TableFlexBasicExample, TableFlexLargeRowExample, TableFooterRowExample, TableGeneratedColumnsExample, TableHarnessExample, TableHttpExample, TableMultipleHeaderFooterExample, TableMultipleRowTemplateExample, TableOverviewExample, TablePaginationExample, TableRecycleRowsExample, TableReorderableExample, TableRowBindingExample, TableRowContextExample, TableSelectionExample, TableSortingExample, TableStickyColumnsExample, TableStickyComplexExample, TableStickyComplexFlexExample, TableStickyFooterExample, TableStickyHeaderExample, TableTextColumnAdvancedExample, TableTextColumnExample, TableVirtualScrollExample, TableWithRipplesExample, TableWrappedExample, WrapperTable };
+export { TableBasicExample, TableColumnStylingExample, TableDragDropExample, TableDynamicArrayDataExample, TableDynamicColumnsExample, TableDynamicObservableDataExample, TableExpandableRowsExample, TableFilteringExample, TableFlexBasicExample, TableFlexLargeRowExample, TableFooterRowExample, TableGeneratedColumnsExample, TableHarnessExample, TableHttpExample, TableMultipleHeaderFooterExample, TableMultipleRowTemplateExample, TableOverviewExample, TablePaginationExample, TableRecycleRowsExample, TableReorderableExample, TableRowBindingExample, TableRowContextExample, TableRowspanExample, TableSelectionExample, TableSortingExample, TableStickyColumnsExample, TableStickyComplexExample, TableStickyComplexFlexExample, TableStickyFooterExample, TableStickyHeaderExample, TableTextColumnAdvancedExample, TableTextColumnExample, TableVirtualScrollExample, TableWithRipplesExample, TableWrappedExample, WrapperTable };
