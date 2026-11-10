@@ -1,13 +1,23 @@
 import { FormControl, FormGroupDirective, NgForm, FormGroup } from '@angular/forms';
 import * as i0 from '@angular/core';
+import * as _angular_forms_signals from '@angular/forms/signals';
+import { Field } from '@angular/forms/signals';
 import { ErrorStateMatcher } from '@angular/material/core';
 
 /** @title Select with custom trigger text */
 declare class SelectCustomTriggerExample {
-    toppings: FormControl<string | null>;
+    toppings: FormControl<string[] | null>;
     toppingList: string[];
     static ɵfac: i0.ɵɵFactoryDeclaration<SelectCustomTriggerExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<SelectCustomTriggerExample, "select-custom-trigger-example", never, {}, {}, never, never, true, never>;
+}
+
+/** @title Select with custom trigger text (signal forms) */
+declare class SelectCustomTriggerSignalFormExample {
+    protected toppingsField: _angular_forms_signals.FieldTree<string[], string | number, "writable">;
+    protected toppingList: readonly ["Extra cheese", "Mushroom", "Onion", "Pepperoni", "Sausage", "Tomato"];
+    static ɵfac: i0.ɵɵFactoryDeclaration<SelectCustomTriggerSignalFormExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<SelectCustomTriggerSignalFormExample, "select-custom-trigger-signal-form-example", never, {}, {}, never, never, true, never>;
 }
 
 /** @title Disabled select */
@@ -17,18 +27,63 @@ declare class SelectDisabledExample {
     static ɵcmp: i0.ɵɵComponentDeclaration<SelectDisabledExample, "select-disabled-example", never, {}, {}, never, never, true, never>;
 }
 
+/** @title Disabled select (signal forms) */
+declare class SelectDisabledSignalFormExample {
+    protected form: _angular_forms_signals.FieldTree<{
+        option: string;
+        vehicle: string;
+        disableField: boolean;
+    }, string | number, "writable">;
+    static ɵfac: i0.ɵɵFactoryDeclaration<SelectDisabledSignalFormExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<SelectDisabledSignalFormExample, "select-disabled-signal-form-example", never, {}, {}, never, never, true, never>;
+}
+
 /** Error when invalid control is dirty, touched, or submitted. */
-declare class MyErrorStateMatcher implements ErrorStateMatcher {
+declare class MyErrorStateMatcher$1 implements ErrorStateMatcher {
     isErrorState(control: FormControl | null, form: FormGroupDirective | NgForm | null): boolean;
 }
 /** @title Select with a custom ErrorStateMatcher */
 declare class SelectErrorStateMatcherExample {
-    selected: FormControl<string | null>;
     selectFormControl: FormControl<string | null>;
     nativeSelectFormControl: FormControl<string | null>;
-    matcher: MyErrorStateMatcher;
+    matcher: MyErrorStateMatcher$1;
     static ɵfac: i0.ɵɵFactoryDeclaration<SelectErrorStateMatcherExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<SelectErrorStateMatcherExample, "select-error-state-matcher-example", never, {}, {}, never, never, true, never>;
+}
+
+/** Error when invalid control is dirty, touched, or submitted. */
+declare class MyErrorStateMatcher implements ErrorStateMatcher {
+    isErrorState(): boolean;
+    isSignalErrorState(field: Field<unknown> | null): boolean;
+}
+/** @title Select with a custom ErrorStateMatcher (signal forms) */
+declare class SelectErrorStateMatcherSignalFormExample {
+    private _validPattern;
+    protected selectFormField: _angular_forms_signals.FieldTree<string, string | number, "writable">;
+    protected nativeSelectFormField: _angular_forms_signals.FieldTree<string, string | number, "writable">;
+    protected matcher: MyErrorStateMatcher;
+    static ɵfac: i0.ɵɵFactoryDeclaration<SelectErrorStateMatcherSignalFormExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<SelectErrorStateMatcherSignalFormExample, "select-error-state-matcher-signal-form-example", never, {}, {}, never, never, true, never>;
+}
+
+interface Food$4 {
+    value: string;
+    viewValue: string;
+}
+interface Car$3 {
+    value: string;
+    viewValue: string;
+}
+/**
+ * @title Select in a form (template-driven forms)
+ */
+declare class SelectFormExample {
+    selectedValue: i0.WritableSignal<string>;
+    selectedCar: i0.WritableSignal<string>;
+    foods: Food$4[];
+    cars: Car$3[];
+    static ɵfac: i0.ɵɵFactoryDeclaration<SelectFormExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<SelectFormExample, "select-form-example", never, {}, {}, never, never, true, never>;
 }
 
 interface Food$3 {
@@ -40,42 +95,67 @@ interface Car$2 {
     viewValue: string;
 }
 /**
- * @title Select in a form
+ * @title Select in a form (signal forms)
  */
-declare class SelectFormExample {
-    selectedValue: i0.WritableSignal<string>;
-    selectedCar: i0.WritableSignal<string>;
-    foods: Food$3[];
-    cars: Car$2[];
-    static ɵfac: i0.ɵɵFactoryDeclaration<SelectFormExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<SelectFormExample, "select-form-example", never, {}, {}, never, never, true, never>;
+declare class SelectFormSignalFormExample {
+    protected selectedValue: _angular_forms_signals.FieldTree<string, string | number, "writable">;
+    protected selectedCar: _angular_forms_signals.FieldTree<string, string | number, "writable">;
+    protected foods: Food$3[];
+    protected cars: Car$2[];
+    static ɵfac: i0.ɵɵFactoryDeclaration<SelectFormSignalFormExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<SelectFormSignalFormExample, "select-form-signal-form-example", never, {}, {}, never, never, true, never>;
 }
 
-interface Animal {
+interface Animal$1 {
     name: string;
     sound: string;
 }
 /** @title Select with form field features */
 declare class SelectHintErrorExample {
-    animalControl: FormControl<Animal | null>;
+    animalControl: FormControl<Animal$1 | null>;
     selectFormControl: FormControl<string | null>;
-    animals: Animal[];
+    animals: Animal$1[];
     static ɵfac: i0.ɵɵFactoryDeclaration<SelectHintErrorExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<SelectHintErrorExample, "select-hint-error-example", never, {}, {}, never, never, true, never>;
 }
 
 /** @title Select with multiple selection */
 declare class SelectMultipleExample {
-    toppings: FormControl<string | null>;
+    toppings: FormControl<string[] | null>;
     toppingList: string[];
     static ɵfac: i0.ɵɵFactoryDeclaration<SelectMultipleExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<SelectMultipleExample, "select-multiple-example", never, {}, {}, never, never, true, never>;
+}
+
+/** @title Select with multiple selection (signal forms) */
+declare class SelectMultipleSignalFormExample {
+    toppings: _angular_forms_signals.FieldTree<string[], string | number, "writable">;
+    toppingList: readonly ["Extra cheese", "Mushroom", "Onion", "Pepperoni", "Sausage", "Tomato"];
+    static ɵfac: i0.ɵɵFactoryDeclaration<SelectMultipleSignalFormExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<SelectMultipleSignalFormExample, "select-multiple-signal-form-example", never, {}, {}, never, never, true, never>;
 }
 
 /** @title Select with no option ripple */
 declare class SelectNoRippleExample {
     static ɵfac: i0.ɵɵFactoryDeclaration<SelectNoRippleExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<SelectNoRippleExample, "select-no-ripple-example", never, {}, {}, never, never, true, never>;
+}
+
+interface Pokemon$1 {
+    value: string;
+    viewValue: string;
+}
+interface PokemonGroup$1 {
+    disabled?: boolean;
+    name: string;
+    pokemon: Pokemon$1[];
+}
+/** @title Select with option groups */
+declare class SelectOptgroupExample {
+    pokemonControl: FormControl<string | null>;
+    pokemonGroups: PokemonGroup$1[];
+    static ɵfac: i0.ɵɵFactoryDeclaration<SelectOptgroupExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<SelectOptgroupExample, "select-optgroup-example", never, {}, {}, never, never, true, never>;
 }
 
 interface Pokemon {
@@ -87,12 +167,12 @@ interface PokemonGroup {
     name: string;
     pokemon: Pokemon[];
 }
-/** @title Select with option groups */
-declare class SelectOptgroupExample {
-    pokemonControl: FormControl<string | null>;
-    pokemonGroups: PokemonGroup[];
-    static ɵfac: i0.ɵɵFactoryDeclaration<SelectOptgroupExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<SelectOptgroupExample, "select-optgroup-example", never, {}, {}, never, never, true, never>;
+/** @title Select with option groups (signal forms) */
+declare class SelectOptgroupSignalFormExample {
+    protected pokemonField: _angular_forms_signals.FieldTree<string, string | number, "writable">;
+    protected pokemonGroups: PokemonGroup[];
+    static ɵfac: i0.ɵɵFactoryDeclaration<SelectOptgroupSignalFormExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<SelectOptgroupSignalFormExample, "select-optgroup-signal-form-example", never, {}, {}, never, never, true, never>;
 }
 
 interface Food$2 {
@@ -115,6 +195,15 @@ declare class SelectPanelClassExample {
     panelColor: FormControl<string | null>;
     static ɵfac: i0.ɵɵFactoryDeclaration<SelectPanelClassExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<SelectPanelClassExample, "select-panel-class-example", never, {}, {}, never, never, true, never>;
+}
+
+/**
+ * @title Select with custom panel styling (signal forms)
+ */
+declare class SelectPanelClassSignalFormExample {
+    protected panelColor: _angular_forms_signals.FieldTree<string, string | number, "writable">;
+    static ɵfac: i0.ɵɵFactoryDeclaration<SelectPanelClassSignalFormExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<SelectPanelClassSignalFormExample, "select-panel-class-signal-form-example", never, {}, {}, never, never, true, never>;
 }
 
 /** @title Select with reset option */
@@ -190,6 +279,41 @@ declare class SelectSelectableNullExample {
     static ɵcmp: i0.ɵɵComponentDeclaration<SelectSelectableNullExample, "select-selectable-null-example", never, {}, {}, never, never, true, never>;
 }
 
+/** @title Select with selectable null options (signal forms) */
+declare class SelectSelectableNullSignalFormExample {
+    private _model;
+    protected myNullableForm: _angular_forms_signals.FieldTree<number | null, string | number, "writable">;
+    protected options: readonly [{
+        readonly label: "None";
+        readonly value: null;
+    }, {
+        readonly label: "One";
+        readonly value: 1;
+    }, {
+        readonly label: "Two";
+        readonly value: 2;
+    }, {
+        readonly label: "Three";
+        readonly value: 3;
+    }];
+    static ɵfac: i0.ɵɵFactoryDeclaration<SelectSelectableNullSignalFormExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<SelectSelectableNullSignalFormExample, "select-selectable-null-signal-form-example", never, {}, {}, never, never, true, never>;
+}
+
+interface Animal {
+    name: string;
+    sound: string;
+}
+/** @title Select with form field features (signal forms) */
+declare class SelectHintErrorSignalFormExample {
+    protected animalControl: _angular_forms_signals.FieldTree<string, string | number, "writable">;
+    protected selectFormControl: _angular_forms_signals.FieldTree<string, string | number, "writable">;
+    protected animalSound: i0.Signal<string | undefined>;
+    protected animals: Animal[];
+    static ɵfac: i0.ɵɵFactoryDeclaration<SelectHintErrorSignalFormExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<SelectHintErrorSignalFormExample, "select-hint-error-signal-form-example", never, {}, {}, never, never, true, never>;
+}
+
 /**
  * @title Testing with MatSelectHarness
  */
@@ -202,4 +326,4 @@ declare class SelectHarnessExample {
     static ɵcmp: i0.ɵɵComponentDeclaration<SelectHarnessExample, "select-harness-example", never, {}, {}, never, never, true, never>;
 }
 
-export { SelectCustomTriggerExample, SelectDisabledExample, SelectErrorStateMatcherExample, SelectFormExample, SelectHarnessExample, SelectHintErrorExample, SelectInitialValueExample, SelectMultipleExample, SelectNoRippleExample, SelectOptgroupExample, SelectOverviewExample, SelectPanelClassExample, SelectReactiveFormExample, SelectResetExample, SelectSelectableNullExample, SelectValueBindingExample };
+export { SelectCustomTriggerExample, SelectCustomTriggerSignalFormExample, SelectDisabledExample, SelectDisabledSignalFormExample, SelectErrorStateMatcherExample, SelectErrorStateMatcherSignalFormExample, SelectFormExample, SelectFormSignalFormExample, SelectHarnessExample, SelectHintErrorExample, SelectHintErrorSignalFormExample, SelectInitialValueExample, SelectMultipleExample, SelectMultipleSignalFormExample, SelectNoRippleExample, SelectOptgroupExample, SelectOptgroupSignalFormExample, SelectOverviewExample, SelectPanelClassExample, SelectPanelClassSignalFormExample, SelectReactiveFormExample, SelectResetExample, SelectSelectableNullExample, SelectSelectableNullSignalFormExample, SelectValueBindingExample };

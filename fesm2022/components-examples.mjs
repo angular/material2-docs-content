@@ -2199,6 +2199,16 @@ const EXAMPLE_COMPONENTS = {
     "primaryFile": "radio-overview-example.ts",
     "importPath": "material/radio"
   },
+  "select-custom-trigger-signal-form": {
+    "packagePath": "material/select/select-custom-trigger-signal-form",
+    "title": "Select with custom trigger text (signal forms)",
+    "componentName": "SelectCustomTriggerSignalFormExample",
+    "files": ["select-custom-trigger-signal-form-example.ts", "select-custom-trigger-signal-form-example.html", "select-custom-trigger-signal-form-example.css"],
+    "selector": "select-custom-trigger-signal-form-example",
+    "additionalComponents": [],
+    "primaryFile": "select-custom-trigger-signal-form-example.ts",
+    "importPath": "material/select"
+  },
   "select-custom-trigger": {
     "packagePath": "material/select/select-custom-trigger",
     "title": "Select with custom trigger text",
@@ -2207,6 +2217,16 @@ const EXAMPLE_COMPONENTS = {
     "selector": "select-custom-trigger-example",
     "additionalComponents": [],
     "primaryFile": "select-custom-trigger-example.ts",
+    "importPath": "material/select"
+  },
+  "select-disabled-signal-form": {
+    "packagePath": "material/select/select-disabled-signal-form",
+    "title": "Disabled select (signal forms)",
+    "componentName": "SelectDisabledSignalFormExample",
+    "files": ["select-disabled-signal-form-example.ts", "select-disabled-signal-form-example.html"],
+    "selector": "select-disabled-signal-form-example",
+    "additionalComponents": [],
+    "primaryFile": "select-disabled-signal-form-example.ts",
     "importPath": "material/select"
   },
   "select-disabled": {
@@ -2219,6 +2239,16 @@ const EXAMPLE_COMPONENTS = {
     "primaryFile": "select-disabled-example.ts",
     "importPath": "material/select"
   },
+  "select-error-state-matcher-signal-form": {
+    "packagePath": "material/select/select-error-state-matcher-signal-form",
+    "title": "Select with a custom ErrorStateMatcher (signal forms)",
+    "componentName": "SelectErrorStateMatcherSignalFormExample",
+    "files": ["select-error-state-matcher-signal-form-example.ts", "select-error-state-matcher-signal-form-example.html"],
+    "selector": "select-error-state-matcher-signal-form-example",
+    "additionalComponents": [],
+    "primaryFile": "select-error-state-matcher-signal-form-example.ts",
+    "importPath": "material/select"
+  },
   "select-error-state-matcher": {
     "packagePath": "material/select/select-error-state-matcher",
     "title": "Select with a custom ErrorStateMatcher",
@@ -2229,9 +2259,19 @@ const EXAMPLE_COMPONENTS = {
     "primaryFile": "select-error-state-matcher-example.ts",
     "importPath": "material/select"
   },
+  "select-form-signal-form": {
+    "packagePath": "material/select/select-form-signal-form",
+    "title": "Select in a form (signal forms)",
+    "componentName": "SelectFormSignalFormExample",
+    "files": ["select-form-signal-form-example.ts", "select-form-signal-form-example.html"],
+    "selector": "select-form-signal-form-example",
+    "additionalComponents": [],
+    "primaryFile": "select-form-signal-form-example.ts",
+    "importPath": "material/select"
+  },
   "select-form": {
     "packagePath": "material/select/select-form",
-    "title": "Select in a form",
+    "title": "Select in a form (template-driven forms)",
     "componentName": "SelectFormExample",
     "files": ["select-form-example.ts", "select-form-example.html"],
     "selector": "select-form-example",
@@ -2247,6 +2287,16 @@ const EXAMPLE_COMPONENTS = {
     "selector": "select-harness-example",
     "additionalComponents": [],
     "primaryFile": "select-harness-example.ts",
+    "importPath": "material/select"
+  },
+  "select-hint-error-signal-form": {
+    "packagePath": "material/select/select-hint-error-signal-form",
+    "title": "Select with form field features (signal forms)",
+    "componentName": "SelectHintErrorSignalFormExample",
+    "files": ["select-hint-error-signal-form-example.ts", "select-hint-error-signal-form-example.html"],
+    "selector": "select-hint-error-signal-form-example",
+    "additionalComponents": [],
+    "primaryFile": "select-hint-error-signal-form-example.ts",
     "importPath": "material/select"
   },
   "select-hint-error": {
@@ -2269,6 +2319,16 @@ const EXAMPLE_COMPONENTS = {
     "primaryFile": "select-initial-value-example.ts",
     "importPath": "material/select"
   },
+  "select-multiple-signal-form": {
+    "packagePath": "material/select/select-multiple-signal-form",
+    "title": "Select with multiple selection (signal forms)",
+    "componentName": "SelectMultipleSignalFormExample",
+    "files": ["select-multiple-signal-form-example.ts", "select-multiple-signal-form-example.html"],
+    "selector": "select-multiple-signal-form-example",
+    "additionalComponents": [],
+    "primaryFile": "select-multiple-signal-form-example.ts",
+    "importPath": "material/select"
+  },
   "select-multiple": {
     "packagePath": "material/select/select-multiple",
     "title": "Select with multiple selection",
@@ -2289,6 +2349,16 @@ const EXAMPLE_COMPONENTS = {
     "primaryFile": "select-no-ripple-example.ts",
     "importPath": "material/select"
   },
+  "select-optgroup-signal-form": {
+    "packagePath": "material/select/select-optgroup-signal-form",
+    "title": "Select with option groups (signal forms)",
+    "componentName": "SelectOptgroupSignalFormExample",
+    "files": ["select-optgroup-signal-form-example.ts", "select-optgroup-signal-form-example.html"],
+    "selector": "select-optgroup-signal-form-example",
+    "additionalComponents": [],
+    "primaryFile": "select-optgroup-signal-form-example.ts",
+    "importPath": "material/select"
+  },
   "select-optgroup": {
     "packagePath": "material/select/select-optgroup",
     "title": "Select with option groups",
@@ -2307,6 +2377,16 @@ const EXAMPLE_COMPONENTS = {
     "selector": "select-overview-example",
     "additionalComponents": [],
     "primaryFile": "select-overview-example.ts",
+    "importPath": "material/select"
+  },
+  "select-panel-class-signal-form": {
+    "packagePath": "material/select/select-panel-class-signal-form",
+    "title": "Select with custom panel styling (signal forms)",
+    "componentName": "SelectPanelClassSignalFormExample",
+    "files": ["select-panel-class-signal-form-example.ts", "select-panel-class-signal-form-example.html", "select-panel-class-signal-form-example.css"],
+    "selector": "select-panel-class-signal-form-example",
+    "additionalComponents": [],
+    "primaryFile": "select-panel-class-signal-form-example.ts",
     "importPath": "material/select"
   },
   "select-panel-class": {
@@ -2337,6 +2417,16 @@ const EXAMPLE_COMPONENTS = {
     "selector": "select-reset-example",
     "additionalComponents": [],
     "primaryFile": "select-reset-example.ts",
+    "importPath": "material/select"
+  },
+  "select-selectable-null-signal-form": {
+    "packagePath": "material/select/select-selectable-null-signal-form",
+    "title": "Select with selectable null options (signal forms)",
+    "componentName": "SelectSelectableNullSignalFormExample",
+    "files": ["select-selectable-null-signal-form-example.ts", "select-selectable-null-signal-form-example.html"],
+    "selector": "select-selectable-null-signal-form-example",
+    "additionalComponents": [],
+    "primaryFile": "select-selectable-null-signal-form-example.ts",
     "importPath": "material/select"
   },
   "select-selectable-null": {
@@ -4082,33 +4172,51 @@ async function loadExample(id) {
       return import('@angular/components-examples/material/radio');
     case 'radio-overview':
       return import('@angular/components-examples/material/radio');
+    case 'select-custom-trigger-signal-form':
+      return import('@angular/components-examples/material/select');
     case 'select-custom-trigger':
+      return import('@angular/components-examples/material/select');
+    case 'select-disabled-signal-form':
       return import('@angular/components-examples/material/select');
     case 'select-disabled':
       return import('@angular/components-examples/material/select');
+    case 'select-error-state-matcher-signal-form':
+      return import('@angular/components-examples/material/select');
     case 'select-error-state-matcher':
+      return import('@angular/components-examples/material/select');
+    case 'select-form-signal-form':
       return import('@angular/components-examples/material/select');
     case 'select-form':
       return import('@angular/components-examples/material/select');
     case 'select-harness':
       return import('@angular/components-examples/material/select');
+    case 'select-hint-error-signal-form':
+      return import('@angular/components-examples/material/select');
     case 'select-hint-error':
       return import('@angular/components-examples/material/select');
     case 'select-initial-value':
+      return import('@angular/components-examples/material/select');
+    case 'select-multiple-signal-form':
       return import('@angular/components-examples/material/select');
     case 'select-multiple':
       return import('@angular/components-examples/material/select');
     case 'select-no-ripple':
       return import('@angular/components-examples/material/select');
+    case 'select-optgroup-signal-form':
+      return import('@angular/components-examples/material/select');
     case 'select-optgroup':
       return import('@angular/components-examples/material/select');
     case 'select-overview':
+      return import('@angular/components-examples/material/select');
+    case 'select-panel-class-signal-form':
       return import('@angular/components-examples/material/select');
     case 'select-panel-class':
       return import('@angular/components-examples/material/select');
     case 'select-reactive-form':
       return import('@angular/components-examples/material/select');
     case 'select-reset':
+      return import('@angular/components-examples/material/select');
+    case 'select-selectable-null-signal-form':
       return import('@angular/components-examples/material/select');
     case 'select-selectable-null':
       return import('@angular/components-examples/material/select');

@@ -1,0 +1,19 @@
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">Component</span>, signal} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {disabled, form, <span class="hljs-title class_">FormField</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/forms/signals&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatInputModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/input&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatSelectModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/select&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatFormFieldModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/form-field&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatCheckboxModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/checkbox&#x27;</span>;
+
+<span class="hljs-comment">/** <span class="hljs-doctag">@title</span> Disabled select (signal forms) */</span>
+<span class="hljs-meta">@Component</span>({
+  <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;select-disabled-signal-form-example&#x27;</span>,
+  <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;select-disabled-signal-form-example.html&#x27;</span>,
+  <span class="hljs-attr">imports</span>: [<span class="hljs-title class_">MatCheckboxModule</span>, <span class="hljs-title class_">FormField</span>, <span class="hljs-title class_">MatFormFieldModule</span>, <span class="hljs-title class_">MatSelectModule</span>, <span class="hljs-title class_">MatInputModule</span>],
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">SelectDisabledSignalFormExample</span> {
+  <span class="hljs-keyword">protected</span> form = <span class="hljs-title function_">form</span>(<span class="hljs-title function_">signal</span>({<span class="hljs-attr">option</span>: <span class="hljs-string">&#x27;&#x27;</span>, <span class="hljs-attr">vehicle</span>: <span class="hljs-string">&#x27;&#x27;</span>, <span class="hljs-attr">disableField</span>: <span class="hljs-literal">false</span>}), <span class="hljs-function"><span class="hljs-params">p</span> =&gt;</span> {
+    <span class="hljs-title function_">disabled</span>(p.<span class="hljs-property">option</span>, {<span class="hljs-attr">when</span>: <span class="hljs-function">(<span class="hljs-params">{valueOf}</span>) =&gt;</span> <span class="hljs-title function_">valueOf</span>(p.<span class="hljs-property">disableField</span>)});
+    <span class="hljs-title function_">disabled</span>(p.<span class="hljs-property">vehicle</span>, {<span class="hljs-attr">when</span>: <span class="hljs-function">(<span class="hljs-params">{valueOf}</span>) =&gt;</span> <span class="hljs-title function_">valueOf</span>(p.<span class="hljs-property">disableField</span>)});
+  });
+}

@@ -1,0 +1,40 @@
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">Component</span>, signal} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatInputModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/input&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatSelectModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/select&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatFormFieldModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/form-field&#x27;</span>;
+<span class="hljs-keyword">import</span> {form, <span class="hljs-title class_">FormField</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/forms/signals&#x27;</span>;
+
+<span class="hljs-keyword">interface</span> <span class="hljs-title class_">Food</span> {
+  <span class="hljs-attr">value</span>: <span class="hljs-built_in">string</span>;
+  <span class="hljs-attr">viewValue</span>: <span class="hljs-built_in">string</span>;
+}
+
+<span class="hljs-keyword">interface</span> <span class="hljs-title class_">Car</span> {
+  <span class="hljs-attr">value</span>: <span class="hljs-built_in">string</span>;
+  <span class="hljs-attr">viewValue</span>: <span class="hljs-built_in">string</span>;
+}
+
+<span class="hljs-comment">/**
+ * <span class="hljs-doctag">@title</span> Select in a form (signal forms)
+ */</span>
+<span class="hljs-meta">@Component</span>({
+  <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;select-form-signal-form-example&#x27;</span>,
+  <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;select-form-signal-form-example.html&#x27;</span>,
+  <span class="hljs-attr">imports</span>: [<span class="hljs-title class_">FormField</span>, <span class="hljs-title class_">MatFormFieldModule</span>, <span class="hljs-title class_">MatSelectModule</span>, <span class="hljs-title class_">MatInputModule</span>],
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">SelectFormSignalFormExample</span> {
+  <span class="hljs-keyword">protected</span> selectedValue = <span class="hljs-title function_">form</span>(<span class="hljs-title function_">signal</span>(<span class="hljs-string">&#x27;&#x27;</span>));
+  <span class="hljs-keyword">protected</span> selectedCar = <span class="hljs-title function_">form</span>(<span class="hljs-title function_">signal</span>(<span class="hljs-string">&#x27;&#x27;</span>));
+
+  <span class="hljs-keyword">protected</span> <span class="hljs-attr">foods</span>: <span class="hljs-title class_">Food</span>[] = [
+    {<span class="hljs-attr">value</span>: <span class="hljs-string">&#x27;steak-0&#x27;</span>, <span class="hljs-attr">viewValue</span>: <span class="hljs-string">&#x27;Steak&#x27;</span>},
+    {<span class="hljs-attr">value</span>: <span class="hljs-string">&#x27;pizza-1&#x27;</span>, <span class="hljs-attr">viewValue</span>: <span class="hljs-string">&#x27;Pizza&#x27;</span>},
+    {<span class="hljs-attr">value</span>: <span class="hljs-string">&#x27;tacos-2&#x27;</span>, <span class="hljs-attr">viewValue</span>: <span class="hljs-string">&#x27;Tacos&#x27;</span>},
+  ];
+
+  <span class="hljs-keyword">protected</span> <span class="hljs-attr">cars</span>: <span class="hljs-title class_">Car</span>[] = [
+    {<span class="hljs-attr">value</span>: <span class="hljs-string">&#x27;volvo&#x27;</span>, <span class="hljs-attr">viewValue</span>: <span class="hljs-string">&#x27;Volvo&#x27;</span>},
+    {<span class="hljs-attr">value</span>: <span class="hljs-string">&#x27;saab&#x27;</span>, <span class="hljs-attr">viewValue</span>: <span class="hljs-string">&#x27;Saab&#x27;</span>},
+    {<span class="hljs-attr">value</span>: <span class="hljs-string">&#x27;mercedes&#x27;</span>, <span class="hljs-attr">viewValue</span>: <span class="hljs-string">&#x27;Mercedes&#x27;</span>},
+  ];
+}
