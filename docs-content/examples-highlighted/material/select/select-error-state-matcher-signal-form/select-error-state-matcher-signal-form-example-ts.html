@@ -1,0 +1,39 @@
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">Component</span>, signal} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">ErrorStateMatcher</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatInputModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/input&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatSelectModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/select&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatFormFieldModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/form-field&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">Field</span>, form, <span class="hljs-title class_">FormField</span>, pattern, required} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/forms/signals&#x27;</span>;
+
+<span class="hljs-comment">/** Error when invalid control is dirty, touched, or submitted. */</span>
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">MyErrorStateMatcher</span> <span class="hljs-keyword">implements</span> <span class="hljs-title class_">ErrorStateMatcher</span> {
+  <span class="hljs-title function_">isErrorState</span>(<span class="hljs-params"></span>) {
+    <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
+  }
+  <span class="hljs-title function_">isSignalErrorState</span>(<span class="hljs-attr">field</span>: <span class="hljs-title class_">Field</span>&lt;<span class="hljs-built_in">unknown</span>&gt; | <span class="hljs-literal">null</span>): <span class="hljs-built_in">boolean</span> {
+    <span class="hljs-keyword">const</span> isSubmitting = (field &amp;&amp; <span class="hljs-title function_">field</span>().<span class="hljs-title function_">submitting</span>()) ?? <span class="hljs-literal">false</span>;
+    <span class="hljs-keyword">return</span> !!(field &amp;&amp; <span class="hljs-title function_">field</span>().<span class="hljs-title function_">invalid</span>() &amp;&amp; (<span class="hljs-title function_">field</span>().<span class="hljs-title function_">dirty</span>() || <span class="hljs-title function_">field</span>().<span class="hljs-title function_">touched</span>() || isSubmitting));
+  }
+}
+
+<span class="hljs-comment">/** <span class="hljs-doctag">@title</span> Select with a custom ErrorStateMatcher (signal forms) */</span>
+<span class="hljs-meta">@Component</span>({
+  <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;select-error-state-matcher-signal-form-example&#x27;</span>,
+  <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;select-error-state-matcher-signal-form-example.html&#x27;</span>,
+  <span class="hljs-attr">imports</span>: [<span class="hljs-title class_">MatFormFieldModule</span>, <span class="hljs-title class_">MatSelectModule</span>, <span class="hljs-title class_">FormField</span>, <span class="hljs-title class_">MatInputModule</span>],
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">SelectErrorStateMatcherSignalFormExample</span> {
+  <span class="hljs-keyword">private</span> _validPattern = <span class="hljs-regexp">/^valid$/</span>;
+
+  <span class="hljs-keyword">protected</span> selectFormField = <span class="hljs-title function_">form</span>(<span class="hljs-title function_">signal</span>(<span class="hljs-string">&#x27;valid&#x27;</span>), <span class="hljs-function"><span class="hljs-params">p</span> =&gt;</span> {
+    <span class="hljs-title function_">required</span>(p);
+    <span class="hljs-title function_">pattern</span>(p, <span class="hljs-variable language_">this</span>.<span class="hljs-property">_validPattern</span>);
+  });
+
+  <span class="hljs-keyword">protected</span> nativeSelectFormField = <span class="hljs-title function_">form</span>(<span class="hljs-title function_">signal</span>(<span class="hljs-string">&#x27;valid&#x27;</span>), <span class="hljs-function"><span class="hljs-params">p</span> =&gt;</span> {
+    <span class="hljs-title function_">required</span>(p);
+    <span class="hljs-title function_">pattern</span>(p, <span class="hljs-variable language_">this</span>.<span class="hljs-property">_validPattern</span>);
+  });
+
+  <span class="hljs-keyword">protected</span> matcher = <span class="hljs-keyword">new</span> <span class="hljs-title class_">MyErrorStateMatcher</span>();
+}

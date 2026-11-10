@@ -1,0 +1,17 @@
+<span class="hljs-tag">&lt;<span class="hljs-name">mat-form-field</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-label</span>&gt;</span>Toppings<span class="hljs-tag">&lt;/<span class="hljs-name">mat-label</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-select</span> [<span class="hljs-attr">formField</span>]=<span class="hljs-string">&quot;toppingsField&quot;</span> <span class="hljs-attr">multiple</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mat-select-trigger</span>&gt;</span>
+      @let toppings = toppingsField().value();
+      {{toppings[0] || &#x27;&#x27;}}
+      @if (toppings.length &gt; 1) {
+        <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-additional-selection&quot;</span>&gt;</span>
+          (+{{toppings.length - 1}} {{toppings.length === 2 ? &#x27;other&#x27; : &#x27;others&#x27;}})
+        <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+      }
+    <span class="hljs-tag">&lt;/<span class="hljs-name">mat-select-trigger</span>&gt;</span>
+    @for (topping of toppingList; track topping) {
+      <span class="hljs-tag">&lt;<span class="hljs-name">mat-option</span> [<span class="hljs-attr">value</span>]=<span class="hljs-string">&quot;topping&quot;</span>&gt;</span>{{topping}}<span class="hljs-tag">&lt;/<span class="hljs-name">mat-option</span>&gt;</span>
+    }
+  <span class="hljs-tag">&lt;/<span class="hljs-name">mat-select</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mat-form-field</span>&gt;</span>

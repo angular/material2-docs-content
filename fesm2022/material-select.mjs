@@ -1,18 +1,19 @@
 import * as i0 from '@angular/core';
-import { Component, signal, ViewEncapsulation } from '@angular/core';
+import { Component, signal, ViewEncapsulation, computed } from '@angular/core';
 import * as i3 from '@angular/forms';
 import { FormControl, FormsModule, ReactiveFormsModule, Validators, FormGroup } from '@angular/forms';
 import * as i2 from '@angular/material/select';
 import { MatSelectModule } from '@angular/material/select';
 import * as i1 from '@angular/material/form-field';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { form, FormField, disabled, required, pattern } from '@angular/forms/signals';
 import * as i2$2 from '@angular/material/input';
 import { MatInputModule } from '@angular/material/input';
 import * as i2$1 from '@angular/material/checkbox';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 
 class SelectCustomTriggerExample {
-  toppings = new FormControl('');
+  toppings = new FormControl([]);
   toppingList = ['Extra cheese', 'Mushroom', 'Onion', 'Pepperoni', 'Sausage', 'Tomato'];
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
@@ -96,6 +97,85 @@ i0.ɵɵngDeclareClassMetadata({
       selector: 'select-custom-trigger-example',
       imports: [MatFormFieldModule, MatSelectModule, FormsModule, ReactiveFormsModule],
       template: "<mat-form-field>\n  <mat-label>Toppings</mat-label>\n  <mat-select [formControl]=\"toppings\" multiple>\n    <mat-select-trigger>\n      {{toppings.value?.[0] || ''}}\n      @if ((toppings.value?.length || 0) > 1) {\n        <span class=\"example-additional-selection\">\n          (+{{(toppings.value?.length || 0) - 1}} {{toppings.value?.length === 2 ? 'other' : 'others'}})\n        </span>\n      }\n    </mat-select-trigger>\n    @for (topping of toppingList; track topping) {\n  <mat-option [value]=\"topping\">{{topping}}</mat-option>\n}\n  </mat-select>\n</mat-form-field>\n",
+      styles: [".example-additional-selection {\n  opacity: 0.75;\n  font-size: 0.75em;\n  line-height: 1;\n}\n"]
+    }]
+  }]
+});
+
+class SelectCustomTriggerSignalFormExample {
+  toppingsField = form(signal([]));
+  toppingList = ['Extra cheese', 'Mushroom', 'Onion', 'Pepperoni', 'Sausage', 'Tomato'];
+  static ɵfac = i0.ɵɵngDeclareFactory({
+    minVersion: "12.0.0",
+    version: "22.3.0-next.4",
+    ngImport: i0,
+    type: SelectCustomTriggerSignalFormExample,
+    deps: [],
+    target: i0.ɵɵFactoryTarget.Component
+  });
+  static ɵcmp = i0.ɵɵngDeclareComponent({
+    minVersion: "17.0.0",
+    version: "22.3.0-next.4",
+    type: SelectCustomTriggerSignalFormExample,
+    isStandalone: true,
+    selector: "select-custom-trigger-signal-form-example",
+    ngImport: i0,
+    template: "<mat-form-field>\n  <mat-label>Toppings</mat-label>\n  <mat-select [formField]=\"toppingsField\" multiple>\n    <mat-select-trigger>\n      @let toppings = toppingsField().value();\n      {{toppings[0] || ''}}\n      @if (toppings.length > 1) {\n        <span class=\"example-additional-selection\">\n          (+{{toppings.length - 1}} {{toppings.length === 2 ? 'other' : 'others'}})\n        </span>\n      }\n    </mat-select-trigger>\n    @for (topping of toppingList; track topping) {\n      <mat-option [value]=\"topping\">{{topping}}</mat-option>\n    }\n  </mat-select>\n</mat-form-field>\n",
+    styles: [".example-additional-selection {\n  opacity: 0.75;\n  font-size: 0.75em;\n  line-height: 1;\n}\n"],
+    dependencies: [{
+      kind: "ngmodule",
+      type: MatFormFieldModule
+    }, {
+      kind: "component",
+      type: i1.MatFormField,
+      selector: "mat-form-field",
+      inputs: ["hideRequiredMarker", "color", "floatLabel", "appearance", "subscriptSizing", "hintLabel"],
+      exportAs: ["matFormField"]
+    }, {
+      kind: "directive",
+      type: i1.MatLabel,
+      selector: "mat-label"
+    }, {
+      kind: "ngmodule",
+      type: MatSelectModule
+    }, {
+      kind: "component",
+      type: i2.MatSelect,
+      selector: "mat-select",
+      inputs: ["aria-describedby", "panelClass", "disabled", "disableRipple", "tabIndex", "hideSingleSelectionIndicator", "placeholder", "required", "multiple", "disableOptionCentering", "compareWith", "value", "aria-label", "aria-labelledby", "errorStateMatcher", "typeaheadDebounceInterval", "sortComparator", "id", "panelWidth", "canSelectNullableOptions"],
+      outputs: ["openedChange", "opened", "closed", "selectionChange", "valueChange"],
+      exportAs: ["matSelect"]
+    }, {
+      kind: "directive",
+      type: i2.MatSelectTrigger,
+      selector: "mat-select-trigger"
+    }, {
+      kind: "component",
+      type: i2.MatOption,
+      selector: "mat-option",
+      inputs: ["value", "id", "disabled"],
+      outputs: ["onSelectionChange"],
+      exportAs: ["matOption"]
+    }, {
+      kind: "directive",
+      type: FormField,
+      selector: "[formField]",
+      inputs: ["formField"],
+      exportAs: ["formField"]
+    }]
+  });
+}
+i0.ɵɵngDeclareClassMetadata({
+  minVersion: "12.0.0",
+  version: "22.3.0-next.4",
+  ngImport: i0,
+  type: SelectCustomTriggerSignalFormExample,
+  decorators: [{
+    type: Component,
+    args: [{
+      selector: 'select-custom-trigger-signal-form-example',
+      imports: [MatFormFieldModule, MatSelectModule, FormField],
+      template: "<mat-form-field>\n  <mat-label>Toppings</mat-label>\n  <mat-select [formField]=\"toppingsField\" multiple>\n    <mat-select-trigger>\n      @let toppings = toppingsField().value();\n      {{toppings[0] || ''}}\n      @if (toppings.length > 1) {\n        <span class=\"example-additional-selection\">\n          (+{{toppings.length - 1}} {{toppings.length === 2 ? 'other' : 'others'}})\n        </span>\n      }\n    </mat-select-trigger>\n    @for (topping of toppingList; track topping) {\n      <mat-option [value]=\"topping\">{{topping}}</mat-option>\n    }\n  </mat-select>\n</mat-form-field>\n",
       styles: [".example-additional-selection {\n  opacity: 0.75;\n  font-size: 0.75em;\n  line-height: 1;\n}\n"]
     }]
   }]
@@ -213,17 +293,122 @@ i0.ɵɵngDeclareClassMetadata({
   }]
 });
 
-class MyErrorStateMatcher {
+class SelectDisabledSignalFormExample {
+  form = form(signal({
+    option: '',
+    vehicle: '',
+    disableField: false
+  }), p => {
+    disabled(p.option, {
+      when: ({
+        valueOf
+      }) => valueOf(p.disableField)
+    });
+    disabled(p.vehicle, {
+      when: ({
+        valueOf
+      }) => valueOf(p.disableField)
+    });
+  });
+  static ɵfac = i0.ɵɵngDeclareFactory({
+    minVersion: "12.0.0",
+    version: "22.3.0-next.4",
+    ngImport: i0,
+    type: SelectDisabledSignalFormExample,
+    deps: [],
+    target: i0.ɵɵFactoryTarget.Component
+  });
+  static ɵcmp = i0.ɵɵngDeclareComponent({
+    minVersion: "14.0.0",
+    version: "22.3.0-next.4",
+    type: SelectDisabledSignalFormExample,
+    isStandalone: true,
+    selector: "select-disabled-signal-form-example",
+    ngImport: i0,
+    template: "<p>\n  <mat-checkbox [formField]=\"form.disableField\">Disable select</mat-checkbox>\n</p>\n\n<h4>mat-select</h4>\n<mat-form-field>\n  <mat-label>Choose an option</mat-label>\n  <mat-select [formField]=\"form.option\">\n    <mat-option value=\"option1\">Option 1</mat-option>\n    <mat-option value=\"option2\" disabled>Option 2 (disabled)</mat-option>\n    <mat-option value=\"option3\">Option 3</mat-option>\n  </mat-select>\n</mat-form-field>\n\n<h4>native html select</h4>\n<mat-form-field>\n  <mat-label>Choose an option</mat-label>\n  <select matNativeControl [formField]=\"form.vehicle\">\n    <option value=\"\" selected></option>\n    <option value=\"volvo\">Volvo</option>\n    <option value=\"saab\" disabled>Saab</option>\n    <option value=\"mercedes\">Mercedes</option>\n    <option value=\"audi\">Audi</option>\n  </select>\n</mat-form-field>\n\n",
+    dependencies: [{
+      kind: "ngmodule",
+      type: MatCheckboxModule
+    }, {
+      kind: "component",
+      type: i2$1.MatCheckbox,
+      selector: "mat-checkbox",
+      inputs: ["aria-label", "aria-labelledby", "aria-describedby", "aria-expanded", "aria-controls", "aria-owns", "id", "required", "labelPosition", "name", "value", "disableRipple", "tabIndex", "color", "disabledInteractive", "checked", "disabled", "indeterminate"],
+      outputs: ["change", "indeterminateChange"],
+      exportAs: ["matCheckbox"]
+    }, {
+      kind: "directive",
+      type: FormField,
+      selector: "[formField]",
+      inputs: ["formField"],
+      exportAs: ["formField"]
+    }, {
+      kind: "ngmodule",
+      type: MatFormFieldModule
+    }, {
+      kind: "component",
+      type: i1.MatFormField,
+      selector: "mat-form-field",
+      inputs: ["hideRequiredMarker", "color", "floatLabel", "appearance", "subscriptSizing", "hintLabel"],
+      exportAs: ["matFormField"]
+    }, {
+      kind: "directive",
+      type: i1.MatLabel,
+      selector: "mat-label"
+    }, {
+      kind: "ngmodule",
+      type: MatSelectModule
+    }, {
+      kind: "component",
+      type: i2.MatSelect,
+      selector: "mat-select",
+      inputs: ["aria-describedby", "panelClass", "disabled", "disableRipple", "tabIndex", "hideSingleSelectionIndicator", "placeholder", "required", "multiple", "disableOptionCentering", "compareWith", "value", "aria-label", "aria-labelledby", "errorStateMatcher", "typeaheadDebounceInterval", "sortComparator", "id", "panelWidth", "canSelectNullableOptions"],
+      outputs: ["openedChange", "opened", "closed", "selectionChange", "valueChange"],
+      exportAs: ["matSelect"]
+    }, {
+      kind: "component",
+      type: i2.MatOption,
+      selector: "mat-option",
+      inputs: ["value", "id", "disabled"],
+      outputs: ["onSelectionChange"],
+      exportAs: ["matOption"]
+    }, {
+      kind: "ngmodule",
+      type: MatInputModule
+    }, {
+      kind: "directive",
+      type: i2$2.MatInput,
+      selector: "input[matInput], textarea[matInput], select[matNativeControl],      input[matNativeControl], textarea[matNativeControl]",
+      inputs: ["disabled", "id", "placeholder", "name", "required", "type", "errorStateMatcher", "aria-describedby", "value", "readonly", "disabledInteractive"],
+      exportAs: ["matInput"]
+    }]
+  });
+}
+i0.ɵɵngDeclareClassMetadata({
+  minVersion: "12.0.0",
+  version: "22.3.0-next.4",
+  ngImport: i0,
+  type: SelectDisabledSignalFormExample,
+  decorators: [{
+    type: Component,
+    args: [{
+      selector: 'select-disabled-signal-form-example',
+      imports: [MatCheckboxModule, FormField, MatFormFieldModule, MatSelectModule, MatInputModule],
+      template: "<p>\n  <mat-checkbox [formField]=\"form.disableField\">Disable select</mat-checkbox>\n</p>\n\n<h4>mat-select</h4>\n<mat-form-field>\n  <mat-label>Choose an option</mat-label>\n  <mat-select [formField]=\"form.option\">\n    <mat-option value=\"option1\">Option 1</mat-option>\n    <mat-option value=\"option2\" disabled>Option 2 (disabled)</mat-option>\n    <mat-option value=\"option3\">Option 3</mat-option>\n  </mat-select>\n</mat-form-field>\n\n<h4>native html select</h4>\n<mat-form-field>\n  <mat-label>Choose an option</mat-label>\n  <select matNativeControl [formField]=\"form.vehicle\">\n    <option value=\"\" selected></option>\n    <option value=\"volvo\">Volvo</option>\n    <option value=\"saab\" disabled>Saab</option>\n    <option value=\"mercedes\">Mercedes</option>\n    <option value=\"audi\">Audi</option>\n  </select>\n</mat-form-field>\n\n"
+    }]
+  }]
+});
+
+let MyErrorStateMatcher$1 = class MyErrorStateMatcher {
   isErrorState(control, form) {
     const isSubmitted = form && form.submitted;
     return !!(control && control.invalid && (control.dirty || control.touched || isSubmitted));
   }
-}
+};
 class SelectErrorStateMatcherExample {
-  selected = new FormControl('valid', [Validators.required, Validators.pattern('valid')]);
   selectFormControl = new FormControl('valid', [Validators.required, Validators.pattern('valid')]);
   nativeSelectFormControl = new FormControl('valid', [Validators.required, Validators.pattern('valid')]);
-  matcher = new MyErrorStateMatcher();
+  matcher = new MyErrorStateMatcher$1();
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
     version: "22.3.0-next.4",
@@ -239,7 +424,7 @@ class SelectErrorStateMatcherExample {
     isStandalone: true,
     selector: "select-error-state-matcher-example",
     ngImport: i0,
-    template: "<h4>mat-select</h4>\n<mat-form-field>\n  <mat-label>Choose one</mat-label>\n  <mat-select [formControl]=\"selected\" [errorStateMatcher]=\"matcher\">\n    <mat-option>Clear</mat-option>\n    <mat-option value=\"valid\">Valid option</mat-option>\n    <mat-option value=\"invalid\">Invalid option</mat-option>\n  </mat-select>\n  <mat-hint>Errors appear instantly!</mat-hint>\n  @if (selected.hasError('required')) {\n    <mat-error>You must make a selection</mat-error>\n  }\n  @if (selected.hasError('pattern') && !selected.hasError('required')) {\n    <mat-error>Your selection is invalid</mat-error>\n  }\n</mat-form-field>\n\n<h4>native html select</h4>\n<mat-form-field class=\"demo-full-width\">\n  <mat-label>Choose one</mat-label>\n  <select matNativeControl [formControl]=\"nativeSelectFormControl\" [errorStateMatcher]=\"matcher\">\n    <option value=\"\"></option>\n    <option value=\"valid\" selected>Valid option</option>\n    <option value=\"invalid\">Invalid option</option>\n  </select>\n  @if (nativeSelectFormControl.hasError('required')) {\n    <mat-error>You must make a selection</mat-error>\n  }\n  @if (nativeSelectFormControl.hasError('pattern') && !nativeSelectFormControl.hasError('required')) {\n    <mat-error>Your selection is invalid</mat-error>\n  }\n</mat-form-field>\n",
+    template: "<h4>mat-select</h4>\n<mat-form-field>\n  <mat-label>Choose one</mat-label>\n  <mat-select [formControl]=\"selectFormControl\" [errorStateMatcher]=\"matcher\">\n    <mat-option>Clear</mat-option>\n    <mat-option value=\"valid\">Valid option</mat-option>\n    <mat-option value=\"invalid\">Invalid option</mat-option>\n  </mat-select>\n  <mat-hint>Errors appear instantly!</mat-hint>\n  @if (selectFormControl.hasError('required')) {\n    <mat-error>You must make a selection</mat-error>\n  }\n  @if (selectFormControl.hasError('pattern') && !selectFormControl.hasError('required')) {\n    <mat-error>Your selection is invalid</mat-error>\n  }\n</mat-form-field>\n\n<h4>native html select</h4>\n<mat-form-field class=\"demo-full-width\">\n  <mat-label>Choose one</mat-label>\n  <select matNativeControl [formControl]=\"nativeSelectFormControl\" [errorStateMatcher]=\"matcher\">\n    <option value=\"\"></option>\n    <option value=\"valid\">Valid option</option>\n    <option value=\"invalid\">Invalid option</option>\n  </select>\n  @if (nativeSelectFormControl.hasError('required')) {\n    <mat-error>You must make a selection</mat-error>\n  }\n  @if (nativeSelectFormControl.hasError('pattern') && !nativeSelectFormControl.hasError('required')) {\n    <mat-error>Your selection is invalid</mat-error>\n  }\n</mat-form-field>\n",
     dependencies: [{
       kind: "ngmodule",
       type: MatFormFieldModule
@@ -334,7 +519,116 @@ i0.ɵɵngDeclareClassMetadata({
     args: [{
       selector: 'select-error-state-matcher-example',
       imports: [MatFormFieldModule, MatSelectModule, FormsModule, ReactiveFormsModule, MatInputModule],
-      template: "<h4>mat-select</h4>\n<mat-form-field>\n  <mat-label>Choose one</mat-label>\n  <mat-select [formControl]=\"selected\" [errorStateMatcher]=\"matcher\">\n    <mat-option>Clear</mat-option>\n    <mat-option value=\"valid\">Valid option</mat-option>\n    <mat-option value=\"invalid\">Invalid option</mat-option>\n  </mat-select>\n  <mat-hint>Errors appear instantly!</mat-hint>\n  @if (selected.hasError('required')) {\n    <mat-error>You must make a selection</mat-error>\n  }\n  @if (selected.hasError('pattern') && !selected.hasError('required')) {\n    <mat-error>Your selection is invalid</mat-error>\n  }\n</mat-form-field>\n\n<h4>native html select</h4>\n<mat-form-field class=\"demo-full-width\">\n  <mat-label>Choose one</mat-label>\n  <select matNativeControl [formControl]=\"nativeSelectFormControl\" [errorStateMatcher]=\"matcher\">\n    <option value=\"\"></option>\n    <option value=\"valid\" selected>Valid option</option>\n    <option value=\"invalid\">Invalid option</option>\n  </select>\n  @if (nativeSelectFormControl.hasError('required')) {\n    <mat-error>You must make a selection</mat-error>\n  }\n  @if (nativeSelectFormControl.hasError('pattern') && !nativeSelectFormControl.hasError('required')) {\n    <mat-error>Your selection is invalid</mat-error>\n  }\n</mat-form-field>\n"
+      template: "<h4>mat-select</h4>\n<mat-form-field>\n  <mat-label>Choose one</mat-label>\n  <mat-select [formControl]=\"selectFormControl\" [errorStateMatcher]=\"matcher\">\n    <mat-option>Clear</mat-option>\n    <mat-option value=\"valid\">Valid option</mat-option>\n    <mat-option value=\"invalid\">Invalid option</mat-option>\n  </mat-select>\n  <mat-hint>Errors appear instantly!</mat-hint>\n  @if (selectFormControl.hasError('required')) {\n    <mat-error>You must make a selection</mat-error>\n  }\n  @if (selectFormControl.hasError('pattern') && !selectFormControl.hasError('required')) {\n    <mat-error>Your selection is invalid</mat-error>\n  }\n</mat-form-field>\n\n<h4>native html select</h4>\n<mat-form-field class=\"demo-full-width\">\n  <mat-label>Choose one</mat-label>\n  <select matNativeControl [formControl]=\"nativeSelectFormControl\" [errorStateMatcher]=\"matcher\">\n    <option value=\"\"></option>\n    <option value=\"valid\">Valid option</option>\n    <option value=\"invalid\">Invalid option</option>\n  </select>\n  @if (nativeSelectFormControl.hasError('required')) {\n    <mat-error>You must make a selection</mat-error>\n  }\n  @if (nativeSelectFormControl.hasError('pattern') && !nativeSelectFormControl.hasError('required')) {\n    <mat-error>Your selection is invalid</mat-error>\n  }\n</mat-form-field>\n"
+    }]
+  }]
+});
+
+class MyErrorStateMatcher {
+  isErrorState() {
+    return false;
+  }
+  isSignalErrorState(field) {
+    const isSubmitting = (field && field().submitting()) ?? false;
+    return !!(field && field().invalid() && (field().dirty() || field().touched() || isSubmitting));
+  }
+}
+class SelectErrorStateMatcherSignalFormExample {
+  _validPattern = /^valid$/;
+  selectFormField = form(signal('valid'), p => {
+    required(p);
+    pattern(p, this._validPattern);
+  });
+  nativeSelectFormField = form(signal('valid'), p => {
+    required(p);
+    pattern(p, this._validPattern);
+  });
+  matcher = new MyErrorStateMatcher();
+  static ɵfac = i0.ɵɵngDeclareFactory({
+    minVersion: "12.0.0",
+    version: "22.3.0-next.4",
+    ngImport: i0,
+    type: SelectErrorStateMatcherSignalFormExample,
+    deps: [],
+    target: i0.ɵɵFactoryTarget.Component
+  });
+  static ɵcmp = i0.ɵɵngDeclareComponent({
+    minVersion: "17.0.0",
+    version: "22.3.0-next.4",
+    type: SelectErrorStateMatcherSignalFormExample,
+    isStandalone: true,
+    selector: "select-error-state-matcher-signal-form-example",
+    ngImport: i0,
+    template: "<h4>mat-select</h4>\n<mat-form-field>\n  <mat-label>Choose one</mat-label>\n  <mat-select [formField]=\"selectFormField\" [errorStateMatcher]=\"matcher\">\n    <mat-option>Clear</mat-option>\n    <mat-option value=\"valid\">Valid option</mat-option>\n    <mat-option value=\"invalid\">Invalid option</mat-option>\n  </mat-select>\n  <mat-hint>Errors appear instantly!</mat-hint>\n  @if (selectFormField().getError('required')) {\n    <mat-error>You must make a selection</mat-error>\n  }\n  @if (selectFormField().getError('pattern') && !selectFormField().getError('required')) {\n    <mat-error>Your selection is invalid</mat-error>\n  }\n</mat-form-field>\n\n<h4>native html select</h4>\n<mat-form-field class=\"demo-full-width\">\n  <mat-label>Choose one</mat-label>\n  <select matNativeControl [formField]=\"nativeSelectFormField\" [errorStateMatcher]=\"matcher\">\n    <option value=\"\"></option>\n    <option value=\"valid\">Valid option</option>\n    <option value=\"invalid\">Invalid option</option>\n  </select>\n  @if (nativeSelectFormField().getError('required')) {\n    <mat-error>You must make a selection</mat-error>\n  }\n  @if (nativeSelectFormField().getError('pattern') && !nativeSelectFormField().getError('required')) {\n    <mat-error>Your selection is invalid</mat-error>\n  }\n</mat-form-field>\n",
+    dependencies: [{
+      kind: "ngmodule",
+      type: MatFormFieldModule
+    }, {
+      kind: "component",
+      type: i1.MatFormField,
+      selector: "mat-form-field",
+      inputs: ["hideRequiredMarker", "color", "floatLabel", "appearance", "subscriptSizing", "hintLabel"],
+      exportAs: ["matFormField"]
+    }, {
+      kind: "directive",
+      type: i1.MatLabel,
+      selector: "mat-label"
+    }, {
+      kind: "directive",
+      type: i1.MatHint,
+      selector: "mat-hint",
+      inputs: ["align", "id"]
+    }, {
+      kind: "directive",
+      type: i1.MatError,
+      selector: "mat-error, [matError]",
+      inputs: ["id"]
+    }, {
+      kind: "ngmodule",
+      type: MatSelectModule
+    }, {
+      kind: "component",
+      type: i2.MatSelect,
+      selector: "mat-select",
+      inputs: ["aria-describedby", "panelClass", "disabled", "disableRipple", "tabIndex", "hideSingleSelectionIndicator", "placeholder", "required", "multiple", "disableOptionCentering", "compareWith", "value", "aria-label", "aria-labelledby", "errorStateMatcher", "typeaheadDebounceInterval", "sortComparator", "id", "panelWidth", "canSelectNullableOptions"],
+      outputs: ["openedChange", "opened", "closed", "selectionChange", "valueChange"],
+      exportAs: ["matSelect"]
+    }, {
+      kind: "component",
+      type: i2.MatOption,
+      selector: "mat-option",
+      inputs: ["value", "id", "disabled"],
+      outputs: ["onSelectionChange"],
+      exportAs: ["matOption"]
+    }, {
+      kind: "directive",
+      type: FormField,
+      selector: "[formField]",
+      inputs: ["formField"],
+      exportAs: ["formField"]
+    }, {
+      kind: "ngmodule",
+      type: MatInputModule
+    }, {
+      kind: "directive",
+      type: i2$2.MatInput,
+      selector: "input[matInput], textarea[matInput], select[matNativeControl],      input[matNativeControl], textarea[matNativeControl]",
+      inputs: ["disabled", "id", "placeholder", "name", "required", "type", "errorStateMatcher", "aria-describedby", "value", "readonly", "disabledInteractive"],
+      exportAs: ["matInput"]
+    }]
+  });
+}
+i0.ɵɵngDeclareClassMetadata({
+  minVersion: "12.0.0",
+  version: "22.3.0-next.4",
+  ngImport: i0,
+  type: SelectErrorStateMatcherSignalFormExample,
+  decorators: [{
+    type: Component,
+    args: [{
+      selector: 'select-error-state-matcher-signal-form-example',
+      imports: [MatFormFieldModule, MatSelectModule, FormField, MatInputModule],
+      template: "<h4>mat-select</h4>\n<mat-form-field>\n  <mat-label>Choose one</mat-label>\n  <mat-select [formField]=\"selectFormField\" [errorStateMatcher]=\"matcher\">\n    <mat-option>Clear</mat-option>\n    <mat-option value=\"valid\">Valid option</mat-option>\n    <mat-option value=\"invalid\">Invalid option</mat-option>\n  </mat-select>\n  <mat-hint>Errors appear instantly!</mat-hint>\n  @if (selectFormField().getError('required')) {\n    <mat-error>You must make a selection</mat-error>\n  }\n  @if (selectFormField().getError('pattern') && !selectFormField().getError('required')) {\n    <mat-error>Your selection is invalid</mat-error>\n  }\n</mat-form-field>\n\n<h4>native html select</h4>\n<mat-form-field class=\"demo-full-width\">\n  <mat-label>Choose one</mat-label>\n  <select matNativeControl [formField]=\"nativeSelectFormField\" [errorStateMatcher]=\"matcher\">\n    <option value=\"\"></option>\n    <option value=\"valid\">Valid option</option>\n    <option value=\"invalid\">Invalid option</option>\n  </select>\n  @if (nativeSelectFormField().getError('required')) {\n    <mat-error>You must make a selection</mat-error>\n  }\n  @if (nativeSelectFormField().getError('pattern') && !nativeSelectFormField().getError('required')) {\n    <mat-error>Your selection is invalid</mat-error>\n  }\n</mat-form-field>\n"
     }]
   }]
 });
@@ -483,6 +777,108 @@ i0.ɵɵngDeclareClassMetadata({
   }]
 });
 
+class SelectFormSignalFormExample {
+  selectedValue = form(signal(''));
+  selectedCar = form(signal(''));
+  foods = [{
+    value: 'steak-0',
+    viewValue: 'Steak'
+  }, {
+    value: 'pizza-1',
+    viewValue: 'Pizza'
+  }, {
+    value: 'tacos-2',
+    viewValue: 'Tacos'
+  }];
+  cars = [{
+    value: 'volvo',
+    viewValue: 'Volvo'
+  }, {
+    value: 'saab',
+    viewValue: 'Saab'
+  }, {
+    value: 'mercedes',
+    viewValue: 'Mercedes'
+  }];
+  static ɵfac = i0.ɵɵngDeclareFactory({
+    minVersion: "12.0.0",
+    version: "22.3.0-next.4",
+    ngImport: i0,
+    type: SelectFormSignalFormExample,
+    deps: [],
+    target: i0.ɵɵFactoryTarget.Component
+  });
+  static ɵcmp = i0.ɵɵngDeclareComponent({
+    minVersion: "17.0.0",
+    version: "22.3.0-next.4",
+    type: SelectFormSignalFormExample,
+    isStandalone: true,
+    selector: "select-form-signal-form-example",
+    ngImport: i0,
+    template: "<form>\n  <h4>mat-select</h4>\n  <mat-form-field>\n    <mat-label>Favorite food</mat-label>\n    <mat-select [formField]=\"selectedValue\">\n      @for (food of foods; track food) {\n        <mat-option [value]=\"food.value\">{{food.viewValue}}</mat-option>\n      }\n    </mat-select>\n  </mat-form-field>\n  <p> Selected food: {{selectedValue().value()}} </p>\n  <h4>native html select</h4>\n  <mat-form-field>\n    <mat-label>Favorite car</mat-label>\n    <select matNativeControl [formField]=\"selectedCar\">\n      <option value=\"\" selected></option>\n      @for (car of cars; track car) {\n        <option [value]=\"car.value\">{{car.viewValue}}</option>\n      }\n    </select>\n  </mat-form-field>\n  <p> Selected car: {{selectedCar().value()}} </p>\n</form>\n",
+    dependencies: [{
+      kind: "directive",
+      type: FormField,
+      selector: "[formField]",
+      inputs: ["formField"],
+      exportAs: ["formField"]
+    }, {
+      kind: "ngmodule",
+      type: MatFormFieldModule
+    }, {
+      kind: "component",
+      type: i1.MatFormField,
+      selector: "mat-form-field",
+      inputs: ["hideRequiredMarker", "color", "floatLabel", "appearance", "subscriptSizing", "hintLabel"],
+      exportAs: ["matFormField"]
+    }, {
+      kind: "directive",
+      type: i1.MatLabel,
+      selector: "mat-label"
+    }, {
+      kind: "ngmodule",
+      type: MatSelectModule
+    }, {
+      kind: "component",
+      type: i2.MatSelect,
+      selector: "mat-select",
+      inputs: ["aria-describedby", "panelClass", "disabled", "disableRipple", "tabIndex", "hideSingleSelectionIndicator", "placeholder", "required", "multiple", "disableOptionCentering", "compareWith", "value", "aria-label", "aria-labelledby", "errorStateMatcher", "typeaheadDebounceInterval", "sortComparator", "id", "panelWidth", "canSelectNullableOptions"],
+      outputs: ["openedChange", "opened", "closed", "selectionChange", "valueChange"],
+      exportAs: ["matSelect"]
+    }, {
+      kind: "component",
+      type: i2.MatOption,
+      selector: "mat-option",
+      inputs: ["value", "id", "disabled"],
+      outputs: ["onSelectionChange"],
+      exportAs: ["matOption"]
+    }, {
+      kind: "ngmodule",
+      type: MatInputModule
+    }, {
+      kind: "directive",
+      type: i2$2.MatInput,
+      selector: "input[matInput], textarea[matInput], select[matNativeControl],      input[matNativeControl], textarea[matNativeControl]",
+      inputs: ["disabled", "id", "placeholder", "name", "required", "type", "errorStateMatcher", "aria-describedby", "value", "readonly", "disabledInteractive"],
+      exportAs: ["matInput"]
+    }]
+  });
+}
+i0.ɵɵngDeclareClassMetadata({
+  minVersion: "12.0.0",
+  version: "22.3.0-next.4",
+  ngImport: i0,
+  type: SelectFormSignalFormExample,
+  decorators: [{
+    type: Component,
+    args: [{
+      selector: 'select-form-signal-form-example',
+      imports: [FormField, MatFormFieldModule, MatSelectModule, MatInputModule],
+      template: "<form>\n  <h4>mat-select</h4>\n  <mat-form-field>\n    <mat-label>Favorite food</mat-label>\n    <mat-select [formField]=\"selectedValue\">\n      @for (food of foods; track food) {\n        <mat-option [value]=\"food.value\">{{food.viewValue}}</mat-option>\n      }\n    </mat-select>\n  </mat-form-field>\n  <p> Selected food: {{selectedValue().value()}} </p>\n  <h4>native html select</h4>\n  <mat-form-field>\n    <mat-label>Favorite car</mat-label>\n    <select matNativeControl [formField]=\"selectedCar\">\n      <option value=\"\" selected></option>\n      @for (car of cars; track car) {\n        <option [value]=\"car.value\">{{car.viewValue}}</option>\n      }\n    </select>\n  </mat-form-field>\n  <p> Selected car: {{selectedCar().value()}} </p>\n</form>\n"
+    }]
+  }]
+});
+
 class SelectHintErrorExample {
   animalControl = new FormControl(null, Validators.required);
   selectFormControl = new FormControl('', Validators.required);
@@ -620,7 +1016,7 @@ i0.ɵɵngDeclareClassMetadata({
 });
 
 class SelectMultipleExample {
-  toppings = new FormControl('');
+  toppings = new FormControl([]);
   toppingList = ['Extra cheese', 'Mushroom', 'Onion', 'Pepperoni', 'Sausage', 'Tomato'];
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
@@ -699,6 +1095,79 @@ i0.ɵɵngDeclareClassMetadata({
       selector: 'select-multiple-example',
       imports: [MatFormFieldModule, MatSelectModule, FormsModule, ReactiveFormsModule],
       template: "<mat-form-field>\n  <mat-label>Toppings</mat-label>\n  <mat-select [formControl]=\"toppings\" multiple>\n    @for (topping of toppingList; track topping) {\n      <mat-option [value]=\"topping\">{{topping}}</mat-option>\n    }\n  </mat-select>\n</mat-form-field>\n"
+    }]
+  }]
+});
+
+class SelectMultipleSignalFormExample {
+  toppings = form(signal([]));
+  toppingList = ['Extra cheese', 'Mushroom', 'Onion', 'Pepperoni', 'Sausage', 'Tomato'];
+  static ɵfac = i0.ɵɵngDeclareFactory({
+    minVersion: "12.0.0",
+    version: "22.3.0-next.4",
+    ngImport: i0,
+    type: SelectMultipleSignalFormExample,
+    deps: [],
+    target: i0.ɵɵFactoryTarget.Component
+  });
+  static ɵcmp = i0.ɵɵngDeclareComponent({
+    minVersion: "17.0.0",
+    version: "22.3.0-next.4",
+    type: SelectMultipleSignalFormExample,
+    isStandalone: true,
+    selector: "select-multiple-signal-form-example",
+    ngImport: i0,
+    template: "<mat-form-field>\n  <mat-label>Toppings</mat-label>\n  <mat-select [formField]=\"toppings\" multiple>\n    @for (topping of toppingList; track topping) {\n      <mat-option [value]=\"topping\">{{topping}}</mat-option>\n    }\n  </mat-select>\n</mat-form-field>\n",
+    dependencies: [{
+      kind: "ngmodule",
+      type: MatFormFieldModule
+    }, {
+      kind: "component",
+      type: i1.MatFormField,
+      selector: "mat-form-field",
+      inputs: ["hideRequiredMarker", "color", "floatLabel", "appearance", "subscriptSizing", "hintLabel"],
+      exportAs: ["matFormField"]
+    }, {
+      kind: "directive",
+      type: i1.MatLabel,
+      selector: "mat-label"
+    }, {
+      kind: "ngmodule",
+      type: MatSelectModule
+    }, {
+      kind: "component",
+      type: i2.MatSelect,
+      selector: "mat-select",
+      inputs: ["aria-describedby", "panelClass", "disabled", "disableRipple", "tabIndex", "hideSingleSelectionIndicator", "placeholder", "required", "multiple", "disableOptionCentering", "compareWith", "value", "aria-label", "aria-labelledby", "errorStateMatcher", "typeaheadDebounceInterval", "sortComparator", "id", "panelWidth", "canSelectNullableOptions"],
+      outputs: ["openedChange", "opened", "closed", "selectionChange", "valueChange"],
+      exportAs: ["matSelect"]
+    }, {
+      kind: "component",
+      type: i2.MatOption,
+      selector: "mat-option",
+      inputs: ["value", "id", "disabled"],
+      outputs: ["onSelectionChange"],
+      exportAs: ["matOption"]
+    }, {
+      kind: "directive",
+      type: FormField,
+      selector: "[formField]",
+      inputs: ["formField"],
+      exportAs: ["formField"]
+    }]
+  });
+}
+i0.ɵɵngDeclareClassMetadata({
+  minVersion: "12.0.0",
+  version: "22.3.0-next.4",
+  ngImport: i0,
+  type: SelectMultipleSignalFormExample,
+  decorators: [{
+    type: Component,
+    args: [{
+      selector: 'select-multiple-signal-form-example',
+      imports: [MatFormFieldModule, MatSelectModule, FormField],
+      template: "<mat-form-field>\n  <mat-label>Toppings</mat-label>\n  <mat-select [formField]=\"toppings\" multiple>\n    @for (topping of toppingList; track topping) {\n      <mat-option [value]=\"topping\">{{topping}}</mat-option>\n    }\n  </mat-select>\n</mat-form-field>\n"
     }]
   }]
 });
@@ -923,6 +1392,140 @@ i0.ɵɵngDeclareClassMetadata({
   }]
 });
 
+class SelectOptgroupSignalFormExample {
+  pokemonField = form(signal(''));
+  pokemonGroups = [{
+    name: 'Grass',
+    pokemon: [{
+      value: 'bulbasaur-0',
+      viewValue: 'Bulbasaur'
+    }, {
+      value: 'oddish-1',
+      viewValue: 'Oddish'
+    }, {
+      value: 'bellsprout-2',
+      viewValue: 'Bellsprout'
+    }]
+  }, {
+    name: 'Water',
+    pokemon: [{
+      value: 'squirtle-3',
+      viewValue: 'Squirtle'
+    }, {
+      value: 'psyduck-4',
+      viewValue: 'Psyduck'
+    }, {
+      value: 'horsea-5',
+      viewValue: 'Horsea'
+    }]
+  }, {
+    name: 'Fire',
+    disabled: true,
+    pokemon: [{
+      value: 'charmander-6',
+      viewValue: 'Charmander'
+    }, {
+      value: 'vulpix-7',
+      viewValue: 'Vulpix'
+    }, {
+      value: 'flareon-8',
+      viewValue: 'Flareon'
+    }]
+  }, {
+    name: 'Psychic',
+    pokemon: [{
+      value: 'mew-9',
+      viewValue: 'Mew'
+    }, {
+      value: 'mewtwo-10',
+      viewValue: 'Mewtwo'
+    }]
+  }];
+  static ɵfac = i0.ɵɵngDeclareFactory({
+    minVersion: "12.0.0",
+    version: "22.3.0-next.4",
+    ngImport: i0,
+    type: SelectOptgroupSignalFormExample,
+    deps: [],
+    target: i0.ɵɵFactoryTarget.Component
+  });
+  static ɵcmp = i0.ɵɵngDeclareComponent({
+    minVersion: "17.0.0",
+    version: "22.3.0-next.4",
+    type: SelectOptgroupSignalFormExample,
+    isStandalone: true,
+    selector: "select-optgroup-signal-form-example",
+    ngImport: i0,
+    template: "<h4>mat-select</h4>\n<mat-form-field>\n  <mat-label>Pokemon</mat-label>\n  <mat-select [formField]=\"pokemonField\">\n    <mat-option>-- None --</mat-option>\n    @for (group of pokemonGroups; track group) {\n      <mat-optgroup [label]=\"group.name\"\n                    [disabled]=\"group.disabled\">\n        @for (pokemon of group.pokemon; track pokemon) {\n          <mat-option [value]=\"pokemon.value\">{{pokemon.viewValue}}</mat-option>\n        }\n      </mat-optgroup>\n    }\n  </mat-select>\n</mat-form-field>\n\n<h4>native html select</h4>\n<mat-form-field>\n  <mat-label>Cars</mat-label>\n  <select matNativeControl>\n    <optgroup label=\"Swedish Cars\">\n      <option value=\"volvo\">volvo</option>\n      <option value=\"saab\">Saab</option>\n    </optgroup>\n    <optgroup label=\"German Cars\">\n      <option value=\"mercedes\">Mercedes</option>\n      <option value=\"audi\">Audi</option>\n    </optgroup>\n  </select>\n</mat-form-field>\n",
+    dependencies: [{
+      kind: "ngmodule",
+      type: MatFormFieldModule
+    }, {
+      kind: "component",
+      type: i1.MatFormField,
+      selector: "mat-form-field",
+      inputs: ["hideRequiredMarker", "color", "floatLabel", "appearance", "subscriptSizing", "hintLabel"],
+      exportAs: ["matFormField"]
+    }, {
+      kind: "directive",
+      type: i1.MatLabel,
+      selector: "mat-label"
+    }, {
+      kind: "ngmodule",
+      type: MatSelectModule
+    }, {
+      kind: "component",
+      type: i2.MatSelect,
+      selector: "mat-select",
+      inputs: ["aria-describedby", "panelClass", "disabled", "disableRipple", "tabIndex", "hideSingleSelectionIndicator", "placeholder", "required", "multiple", "disableOptionCentering", "compareWith", "value", "aria-label", "aria-labelledby", "errorStateMatcher", "typeaheadDebounceInterval", "sortComparator", "id", "panelWidth", "canSelectNullableOptions"],
+      outputs: ["openedChange", "opened", "closed", "selectionChange", "valueChange"],
+      exportAs: ["matSelect"]
+    }, {
+      kind: "component",
+      type: i2.MatOption,
+      selector: "mat-option",
+      inputs: ["value", "id", "disabled"],
+      outputs: ["onSelectionChange"],
+      exportAs: ["matOption"]
+    }, {
+      kind: "component",
+      type: i2.MatOptgroup,
+      selector: "mat-optgroup",
+      inputs: ["label", "disabled"],
+      exportAs: ["matOptgroup"]
+    }, {
+      kind: "ngmodule",
+      type: MatInputModule
+    }, {
+      kind: "directive",
+      type: i2$2.MatInput,
+      selector: "input[matInput], textarea[matInput], select[matNativeControl],      input[matNativeControl], textarea[matNativeControl]",
+      inputs: ["disabled", "id", "placeholder", "name", "required", "type", "errorStateMatcher", "aria-describedby", "value", "readonly", "disabledInteractive"],
+      exportAs: ["matInput"]
+    }, {
+      kind: "directive",
+      type: FormField,
+      selector: "[formField]",
+      inputs: ["formField"],
+      exportAs: ["formField"]
+    }]
+  });
+}
+i0.ɵɵngDeclareClassMetadata({
+  minVersion: "12.0.0",
+  version: "22.3.0-next.4",
+  ngImport: i0,
+  type: SelectOptgroupSignalFormExample,
+  decorators: [{
+    type: Component,
+    args: [{
+      selector: 'select-optgroup-signal-form-example',
+      imports: [MatFormFieldModule, MatSelectModule, MatInputModule, FormField],
+      template: "<h4>mat-select</h4>\n<mat-form-field>\n  <mat-label>Pokemon</mat-label>\n  <mat-select [formField]=\"pokemonField\">\n    <mat-option>-- None --</mat-option>\n    @for (group of pokemonGroups; track group) {\n      <mat-optgroup [label]=\"group.name\"\n                    [disabled]=\"group.disabled\">\n        @for (pokemon of group.pokemon; track pokemon) {\n          <mat-option [value]=\"pokemon.value\">{{pokemon.viewValue}}</mat-option>\n        }\n      </mat-optgroup>\n    }\n  </mat-select>\n</mat-form-field>\n\n<h4>native html select</h4>\n<mat-form-field>\n  <mat-label>Cars</mat-label>\n  <select matNativeControl>\n    <optgroup label=\"Swedish Cars\">\n      <option value=\"volvo\">volvo</option>\n      <option value=\"saab\">Saab</option>\n    </optgroup>\n    <optgroup label=\"German Cars\">\n      <option value=\"mercedes\">Mercedes</option>\n      <option value=\"audi\">Audi</option>\n    </optgroup>\n  </select>\n</mat-form-field>\n"
+    }]
+  }]
+});
+
 class SelectOverviewExample {
   foods = [{
     value: 'steak-0',
@@ -1102,6 +1705,82 @@ i0.ɵɵngDeclareClassMetadata({
       encapsulation: ViewEncapsulation.None,
       imports: [MatFormFieldModule, MatSelectModule, FormsModule, ReactiveFormsModule],
       template: "<mat-form-field>\n  <mat-label>Panel color</mat-label>\n  <mat-select [formControl]=\"panelColor\"\n              panelClass=\"example-panel-{{panelColor.value}}\">\n    <mat-option value=\"red\">Red</mat-option>\n    <mat-option value=\"green\">Green</mat-option>\n    <mat-option value=\"blue\">Blue</mat-option>\n  </mat-select>\n</mat-form-field>\n",
+      styles: [".example-panel-red.mat-mdc-select-panel {\n  background: rgba(255, 0, 0, 0.5);\n}\n\n.example-panel-green.mat-mdc-select-panel {\n  background: rgba(0, 255, 0, 0.5);\n}\n\n.example-panel-blue.mat-mdc-select-panel {\n  background: rgba(0, 0, 255, 0.5);\n}\n"]
+    }]
+  }]
+});
+
+class SelectPanelClassSignalFormExample {
+  panelColor = form(signal('red'));
+  static ɵfac = i0.ɵɵngDeclareFactory({
+    minVersion: "12.0.0",
+    version: "22.3.0-next.4",
+    ngImport: i0,
+    type: SelectPanelClassSignalFormExample,
+    deps: [],
+    target: i0.ɵɵFactoryTarget.Component
+  });
+  static ɵcmp = i0.ɵɵngDeclareComponent({
+    minVersion: "14.0.0",
+    version: "22.3.0-next.4",
+    type: SelectPanelClassSignalFormExample,
+    isStandalone: true,
+    selector: "select-panel-class-signal-form-example",
+    ngImport: i0,
+    template: "<mat-form-field>\n  <mat-label>Panel color</mat-label>\n  <mat-select [formField]=\"panelColor\"\n              panelClass=\"example-panel-{{panelColor().value()}}\">\n    <mat-option value=\"red\">Red</mat-option>\n    <mat-option value=\"green\">Green</mat-option>\n    <mat-option value=\"blue\">Blue</mat-option>\n  </mat-select>\n</mat-form-field>\n",
+    styles: [".example-panel-red.mat-mdc-select-panel {\n  background: rgba(255, 0, 0, 0.5);\n}\n\n.example-panel-green.mat-mdc-select-panel {\n  background: rgba(0, 255, 0, 0.5);\n}\n\n.example-panel-blue.mat-mdc-select-panel {\n  background: rgba(0, 0, 255, 0.5);\n}\n"],
+    dependencies: [{
+      kind: "ngmodule",
+      type: MatFormFieldModule
+    }, {
+      kind: "component",
+      type: i1.MatFormField,
+      selector: "mat-form-field",
+      inputs: ["hideRequiredMarker", "color", "floatLabel", "appearance", "subscriptSizing", "hintLabel"],
+      exportAs: ["matFormField"]
+    }, {
+      kind: "directive",
+      type: i1.MatLabel,
+      selector: "mat-label"
+    }, {
+      kind: "ngmodule",
+      type: MatSelectModule
+    }, {
+      kind: "component",
+      type: i2.MatSelect,
+      selector: "mat-select",
+      inputs: ["aria-describedby", "panelClass", "disabled", "disableRipple", "tabIndex", "hideSingleSelectionIndicator", "placeholder", "required", "multiple", "disableOptionCentering", "compareWith", "value", "aria-label", "aria-labelledby", "errorStateMatcher", "typeaheadDebounceInterval", "sortComparator", "id", "panelWidth", "canSelectNullableOptions"],
+      outputs: ["openedChange", "opened", "closed", "selectionChange", "valueChange"],
+      exportAs: ["matSelect"]
+    }, {
+      kind: "component",
+      type: i2.MatOption,
+      selector: "mat-option",
+      inputs: ["value", "id", "disabled"],
+      outputs: ["onSelectionChange"],
+      exportAs: ["matOption"]
+    }, {
+      kind: "directive",
+      type: FormField,
+      selector: "[formField]",
+      inputs: ["formField"],
+      exportAs: ["formField"]
+    }],
+    encapsulation: i0.ViewEncapsulation.None
+  });
+}
+i0.ɵɵngDeclareClassMetadata({
+  minVersion: "12.0.0",
+  version: "22.3.0-next.4",
+  ngImport: i0,
+  type: SelectPanelClassSignalFormExample,
+  decorators: [{
+    type: Component,
+    args: [{
+      selector: 'select-panel-class-signal-form-example',
+      encapsulation: ViewEncapsulation.None,
+      imports: [MatFormFieldModule, MatSelectModule, FormField],
+      template: "<mat-form-field>\n  <mat-label>Panel color</mat-label>\n  <mat-select [formField]=\"panelColor\"\n              panelClass=\"example-panel-{{panelColor().value()}}\">\n    <mat-option value=\"red\">Red</mat-option>\n    <mat-option value=\"green\">Green</mat-option>\n    <mat-option value=\"blue\">Blue</mat-option>\n  </mat-select>\n</mat-form-field>\n",
       styles: [".example-panel-red.mat-mdc-select-panel {\n  background: rgba(255, 0, 0, 0.5);\n}\n\n.example-panel-green.mat-mdc-select-panel {\n  background: rgba(0, 255, 0, 0.5);\n}\n\n.example-panel-blue.mat-mdc-select-panel {\n  background: rgba(0, 0, 255, 0.5);\n}\n"]
     }]
   }]
@@ -1624,6 +2303,209 @@ i0.ɵɵngDeclareClassMetadata({
   }]
 });
 
+class SelectSelectableNullSignalFormExample {
+  _model = signal(null, ...(ngDevMode ? [{
+    debugName: "_model"
+  }] : []));
+  myNullableForm = form(this._model);
+  options = [{
+    label: 'None',
+    value: null
+  }, {
+    label: 'One',
+    value: 1
+  }, {
+    label: 'Two',
+    value: 2
+  }, {
+    label: 'Three',
+    value: 3
+  }];
+  static ɵfac = i0.ɵɵngDeclareFactory({
+    minVersion: "12.0.0",
+    version: "22.3.0-next.4",
+    ngImport: i0,
+    type: SelectSelectableNullSignalFormExample,
+    deps: [],
+    target: i0.ɵɵFactoryTarget.Component
+  });
+  static ɵcmp = i0.ɵɵngDeclareComponent({
+    minVersion: "17.0.0",
+    version: "22.3.0-next.4",
+    type: SelectSelectableNullSignalFormExample,
+    isStandalone: true,
+    selector: "select-selectable-null-signal-form-example",
+    ngImport: i0,
+    template: "<h4>mat-select allowing selection of nullable options</h4>\n<mat-form-field>\n  <mat-label>State</mat-label>\n  <mat-select [formField]=\"myNullableForm\" canSelectNullableOptions>\n    @for (option of options; track option) {\n      <mat-option [value]=\"option.value\">{{option.label}}</mat-option>\n    }\n  </mat-select>\n</mat-form-field>\n\n<h4>mat-select with default configuration</h4>\n<mat-form-field>\n  <mat-label>State</mat-label>\n  <mat-select [formField]=\"myNullableForm\">\n    @for (option of options; track option) {\n      <mat-option [value]=\"option.value\">{{option.label}}</mat-option>\n    }\n  </mat-select>\n</mat-form-field>\n",
+    dependencies: [{
+      kind: "ngmodule",
+      type: MatFormFieldModule
+    }, {
+      kind: "component",
+      type: i1.MatFormField,
+      selector: "mat-form-field",
+      inputs: ["hideRequiredMarker", "color", "floatLabel", "appearance", "subscriptSizing", "hintLabel"],
+      exportAs: ["matFormField"]
+    }, {
+      kind: "directive",
+      type: i1.MatLabel,
+      selector: "mat-label"
+    }, {
+      kind: "ngmodule",
+      type: MatSelectModule
+    }, {
+      kind: "component",
+      type: i2.MatSelect,
+      selector: "mat-select",
+      inputs: ["aria-describedby", "panelClass", "disabled", "disableRipple", "tabIndex", "hideSingleSelectionIndicator", "placeholder", "required", "multiple", "disableOptionCentering", "compareWith", "value", "aria-label", "aria-labelledby", "errorStateMatcher", "typeaheadDebounceInterval", "sortComparator", "id", "panelWidth", "canSelectNullableOptions"],
+      outputs: ["openedChange", "opened", "closed", "selectionChange", "valueChange"],
+      exportAs: ["matSelect"]
+    }, {
+      kind: "component",
+      type: i2.MatOption,
+      selector: "mat-option",
+      inputs: ["value", "id", "disabled"],
+      outputs: ["onSelectionChange"],
+      exportAs: ["matOption"]
+    }, {
+      kind: "ngmodule",
+      type: MatInputModule
+    }, {
+      kind: "directive",
+      type: FormField,
+      selector: "[formField]",
+      inputs: ["formField"],
+      exportAs: ["formField"]
+    }]
+  });
+}
+i0.ɵɵngDeclareClassMetadata({
+  minVersion: "12.0.0",
+  version: "22.3.0-next.4",
+  ngImport: i0,
+  type: SelectSelectableNullSignalFormExample,
+  decorators: [{
+    type: Component,
+    args: [{
+      selector: 'select-selectable-null-signal-form-example',
+      imports: [MatFormFieldModule, MatSelectModule, MatInputModule, FormField],
+      template: "<h4>mat-select allowing selection of nullable options</h4>\n<mat-form-field>\n  <mat-label>State</mat-label>\n  <mat-select [formField]=\"myNullableForm\" canSelectNullableOptions>\n    @for (option of options; track option) {\n      <mat-option [value]=\"option.value\">{{option.label}}</mat-option>\n    }\n  </mat-select>\n</mat-form-field>\n\n<h4>mat-select with default configuration</h4>\n<mat-form-field>\n  <mat-label>State</mat-label>\n  <mat-select [formField]=\"myNullableForm\">\n    @for (option of options; track option) {\n      <mat-option [value]=\"option.value\">{{option.label}}</mat-option>\n    }\n  </mat-select>\n</mat-form-field>\n"
+    }]
+  }]
+});
+
+class SelectHintErrorSignalFormExample {
+  animalControl = form(signal(''), p => {
+    required(p);
+  });
+  selectFormControl = form(signal(''), p => {
+    required(p);
+  });
+  animalSound = computed(() => this.animals.find(a => a.name === this.animalControl().value())?.sound, ...(ngDevMode ? [{
+    debugName: "animalSound"
+  }] : []));
+  animals = [{
+    name: 'Dog',
+    sound: 'Woof!'
+  }, {
+    name: 'Cat',
+    sound: 'Meow!'
+  }, {
+    name: 'Cow',
+    sound: 'Moo!'
+  }, {
+    name: 'Fox',
+    sound: 'Wa-pa-pa-pa-pa-pa-pow!'
+  }];
+  static ɵfac = i0.ɵɵngDeclareFactory({
+    minVersion: "12.0.0",
+    version: "22.3.0-next.4",
+    ngImport: i0,
+    type: SelectHintErrorSignalFormExample,
+    deps: [],
+    target: i0.ɵɵFactoryTarget.Component
+  });
+  static ɵcmp = i0.ɵɵngDeclareComponent({
+    minVersion: "17.0.0",
+    version: "22.3.0-next.4",
+    type: SelectHintErrorSignalFormExample,
+    isStandalone: true,
+    selector: "select-hint-error-signal-form-example",
+    ngImport: i0,
+    template: "<h4>mat select</h4>\n<mat-form-field>\n  <mat-label>Favorite animal</mat-label>\n  <mat-select [formField]=\"animalControl\">\n    <mat-option>--</mat-option>\n    @for (animal of animals; track animal) {\n      <mat-option [value]=\"animal.name\">{{animal.name}}</mat-option>\n    }\n  </mat-select>\n  @if (animalControl().getError('required')) {\n    <mat-error>Please choose an animal</mat-error>\n  }\n  @if (animalSound(); as animalSound) {\n    <mat-hint>{{animalSound}}</mat-hint>\n  }\n</mat-form-field>\n\n<h4>native html select</h4>\n<mat-form-field>\n  <mat-label>Select your car (required)</mat-label>\n  <select matNativeControl  [formField]=\"selectFormControl\">\n    <option label=\"--select something --\"></option>\n    <option value=\"saab\">Saab</option>\n    <option value=\"mercedes\">Mercedes</option>\n    <option value=\"audi\">Audi</option>\n  </select>\n  @if (selectFormControl().getError('required')) {\n    <mat-error>This field is required</mat-error>\n  }\n  <mat-hint>You can pick up your favorite car here</mat-hint>\n</mat-form-field>\n\n",
+    dependencies: [{
+      kind: "ngmodule",
+      type: MatFormFieldModule
+    }, {
+      kind: "component",
+      type: i1.MatFormField,
+      selector: "mat-form-field",
+      inputs: ["hideRequiredMarker", "color", "floatLabel", "appearance", "subscriptSizing", "hintLabel"],
+      exportAs: ["matFormField"]
+    }, {
+      kind: "directive",
+      type: i1.MatLabel,
+      selector: "mat-label"
+    }, {
+      kind: "directive",
+      type: i1.MatHint,
+      selector: "mat-hint",
+      inputs: ["align", "id"]
+    }, {
+      kind: "directive",
+      type: i1.MatError,
+      selector: "mat-error, [matError]",
+      inputs: ["id"]
+    }, {
+      kind: "ngmodule",
+      type: MatSelectModule
+    }, {
+      kind: "component",
+      type: i2.MatSelect,
+      selector: "mat-select",
+      inputs: ["aria-describedby", "panelClass", "disabled", "disableRipple", "tabIndex", "hideSingleSelectionIndicator", "placeholder", "required", "multiple", "disableOptionCentering", "compareWith", "value", "aria-label", "aria-labelledby", "errorStateMatcher", "typeaheadDebounceInterval", "sortComparator", "id", "panelWidth", "canSelectNullableOptions"],
+      outputs: ["openedChange", "opened", "closed", "selectionChange", "valueChange"],
+      exportAs: ["matSelect"]
+    }, {
+      kind: "component",
+      type: i2.MatOption,
+      selector: "mat-option",
+      inputs: ["value", "id", "disabled"],
+      outputs: ["onSelectionChange"],
+      exportAs: ["matOption"]
+    }, {
+      kind: "directive",
+      type: FormField,
+      selector: "[formField]",
+      inputs: ["formField"],
+      exportAs: ["formField"]
+    }, {
+      kind: "ngmodule",
+      type: MatInputModule
+    }, {
+      kind: "directive",
+      type: i2$2.MatInput,
+      selector: "input[matInput], textarea[matInput], select[matNativeControl],      input[matNativeControl], textarea[matNativeControl]",
+      inputs: ["disabled", "id", "placeholder", "name", "required", "type", "errorStateMatcher", "aria-describedby", "value", "readonly", "disabledInteractive"],
+      exportAs: ["matInput"]
+    }]
+  });
+}
+i0.ɵɵngDeclareClassMetadata({
+  minVersion: "12.0.0",
+  version: "22.3.0-next.4",
+  ngImport: i0,
+  type: SelectHintErrorSignalFormExample,
+  decorators: [{
+    type: Component,
+    args: [{
+      selector: 'select-hint-error-signal-form-example',
+      imports: [MatFormFieldModule, MatSelectModule, FormField, MatInputModule],
+      template: "<h4>mat select</h4>\n<mat-form-field>\n  <mat-label>Favorite animal</mat-label>\n  <mat-select [formField]=\"animalControl\">\n    <mat-option>--</mat-option>\n    @for (animal of animals; track animal) {\n      <mat-option [value]=\"animal.name\">{{animal.name}}</mat-option>\n    }\n  </mat-select>\n  @if (animalControl().getError('required')) {\n    <mat-error>Please choose an animal</mat-error>\n  }\n  @if (animalSound(); as animalSound) {\n    <mat-hint>{{animalSound}}</mat-hint>\n  }\n</mat-form-field>\n\n<h4>native html select</h4>\n<mat-form-field>\n  <mat-label>Select your car (required)</mat-label>\n  <select matNativeControl  [formField]=\"selectFormControl\">\n    <option label=\"--select something --\"></option>\n    <option value=\"saab\">Saab</option>\n    <option value=\"mercedes\">Mercedes</option>\n    <option value=\"audi\">Audi</option>\n  </select>\n  @if (selectFormControl().getError('required')) {\n    <mat-error>This field is required</mat-error>\n  }\n  <mat-hint>You can pick up your favorite car here</mat-hint>\n</mat-form-field>\n\n"
+    }]
+  }]
+});
+
 class SelectHarnessExample {
   foods = [{
     value: 'steak-0',
@@ -1699,5 +2581,5 @@ i0.ɵɵngDeclareClassMetadata({
   }]
 });
 
-export { SelectCustomTriggerExample, SelectDisabledExample, SelectErrorStateMatcherExample, SelectFormExample, SelectHarnessExample, SelectHintErrorExample, SelectInitialValueExample, SelectMultipleExample, SelectNoRippleExample, SelectOptgroupExample, SelectOverviewExample, SelectPanelClassExample, SelectReactiveFormExample, SelectResetExample, SelectSelectableNullExample, SelectValueBindingExample };
+export { SelectCustomTriggerExample, SelectCustomTriggerSignalFormExample, SelectDisabledExample, SelectDisabledSignalFormExample, SelectErrorStateMatcherExample, SelectErrorStateMatcherSignalFormExample, SelectFormExample, SelectFormSignalFormExample, SelectHarnessExample, SelectHintErrorExample, SelectHintErrorSignalFormExample, SelectInitialValueExample, SelectMultipleExample, SelectMultipleSignalFormExample, SelectNoRippleExample, SelectOptgroupExample, SelectOptgroupSignalFormExample, SelectOverviewExample, SelectPanelClassExample, SelectPanelClassSignalFormExample, SelectReactiveFormExample, SelectResetExample, SelectSelectableNullExample, SelectSelectableNullSignalFormExample, SelectValueBindingExample };
 //# sourceMappingURL=material-select.mjs.map

@@ -1,0 +1,32 @@
+<span class="hljs-tag">&lt;<span class="hljs-name">h4</span>&gt;</span>mat select<span class="hljs-tag">&lt;/<span class="hljs-name">h4</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">mat-form-field</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-label</span>&gt;</span>Favorite animal<span class="hljs-tag">&lt;/<span class="hljs-name">mat-label</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-select</span> [<span class="hljs-attr">formField</span>]=<span class="hljs-string">&quot;animalControl&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mat-option</span>&gt;</span>--<span class="hljs-tag">&lt;/<span class="hljs-name">mat-option</span>&gt;</span>
+    @for (animal of animals; track animal) {
+      <span class="hljs-tag">&lt;<span class="hljs-name">mat-option</span> [<span class="hljs-attr">value</span>]=<span class="hljs-string">&quot;animal.name&quot;</span>&gt;</span>{{animal.name}}<span class="hljs-tag">&lt;/<span class="hljs-name">mat-option</span>&gt;</span>
+    }
+  <span class="hljs-tag">&lt;/<span class="hljs-name">mat-select</span>&gt;</span>
+  @if (animalControl().getError(&#x27;required&#x27;)) {
+    <span class="hljs-tag">&lt;<span class="hljs-name">mat-error</span>&gt;</span>Please choose an animal<span class="hljs-tag">&lt;/<span class="hljs-name">mat-error</span>&gt;</span>
+  }
+  @if (animalSound(); as animalSound) {
+    <span class="hljs-tag">&lt;<span class="hljs-name">mat-hint</span>&gt;</span>{{animalSound}}<span class="hljs-tag">&lt;/<span class="hljs-name">mat-hint</span>&gt;</span>
+  }
+<span class="hljs-tag">&lt;/<span class="hljs-name">mat-form-field</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">h4</span>&gt;</span>native html select<span class="hljs-tag">&lt;/<span class="hljs-name">h4</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">mat-form-field</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-label</span>&gt;</span>Select your car (required)<span class="hljs-tag">&lt;/<span class="hljs-name">mat-label</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">select</span> <span class="hljs-attr">matNativeControl</span>  [<span class="hljs-attr">formField</span>]=<span class="hljs-string">&quot;selectFormControl&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">label</span>=<span class="hljs-string">&quot;--select something --&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;saab&quot;</span>&gt;</span>Saab<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;mercedes&quot;</span>&gt;</span>Mercedes<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;audi&quot;</span>&gt;</span>Audi<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">select</span>&gt;</span>
+  @if (selectFormControl().getError(&#x27;required&#x27;)) {
+    <span class="hljs-tag">&lt;<span class="hljs-name">mat-error</span>&gt;</span>This field is required<span class="hljs-tag">&lt;/<span class="hljs-name">mat-error</span>&gt;</span>
+  }
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-hint</span>&gt;</span>You can pick up your favorite car here<span class="hljs-tag">&lt;/<span class="hljs-name">mat-hint</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mat-form-field</span>&gt;</span>
+
