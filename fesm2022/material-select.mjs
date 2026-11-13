@@ -17,7 +17,7 @@ class SelectCustomTriggerExample {
   toppingList = ['Extra cheese', 'Mushroom', 'Onion', 'Pepperoni', 'Sausage', 'Tomato'];
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.3.0-next.4",
+    version: "22.3.0-rc.0",
     ngImport: i0,
     type: SelectCustomTriggerExample,
     deps: [],
@@ -25,7 +25,7 @@ class SelectCustomTriggerExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "22.3.0-next.4",
+    version: "22.3.0-rc.0",
     type: SelectCustomTriggerExample,
     isStandalone: true,
     selector: "select-custom-trigger-example",
@@ -88,7 +88,7 @@ class SelectCustomTriggerExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.3.0-next.4",
+  version: "22.3.0-rc.0",
   ngImport: i0,
   type: SelectCustomTriggerExample,
   decorators: [{
@@ -107,7 +107,7 @@ class SelectCustomTriggerSignalFormExample {
   toppingList = ['Extra cheese', 'Mushroom', 'Onion', 'Pepperoni', 'Sausage', 'Tomato'];
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.3.0-next.4",
+    version: "22.3.0-rc.0",
     ngImport: i0,
     type: SelectCustomTriggerSignalFormExample,
     deps: [],
@@ -115,7 +115,7 @@ class SelectCustomTriggerSignalFormExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "22.3.0-next.4",
+    version: "22.3.0-rc.0",
     type: SelectCustomTriggerSignalFormExample,
     isStandalone: true,
     selector: "select-custom-trigger-signal-form-example",
@@ -167,7 +167,7 @@ class SelectCustomTriggerSignalFormExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.3.0-next.4",
+  version: "22.3.0-rc.0",
   ngImport: i0,
   type: SelectCustomTriggerSignalFormExample,
   decorators: [{
@@ -185,7 +185,7 @@ class SelectDisabledExample {
   disableSelect = new FormControl(false);
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.3.0-next.4",
+    version: "22.3.0-rc.0",
     ngImport: i0,
     type: SelectDisabledExample,
     deps: [],
@@ -193,7 +193,7 @@ class SelectDisabledExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.3.0-next.4",
+    version: "22.3.0-rc.0",
     type: SelectDisabledExample,
     isStandalone: true,
     selector: "select-disabled-example",
@@ -280,7 +280,7 @@ class SelectDisabledExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.3.0-next.4",
+  version: "22.3.0-rc.0",
   ngImport: i0,
   type: SelectDisabledExample,
   decorators: [{
@@ -312,7 +312,7 @@ class SelectDisabledSignalFormExample {
   });
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.3.0-next.4",
+    version: "22.3.0-rc.0",
     ngImport: i0,
     type: SelectDisabledSignalFormExample,
     deps: [],
@@ -320,7 +320,7 @@ class SelectDisabledSignalFormExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.3.0-next.4",
+    version: "22.3.0-rc.0",
     type: SelectDisabledSignalFormExample,
     isStandalone: true,
     selector: "select-disabled-signal-form-example",
@@ -386,7 +386,7 @@ class SelectDisabledSignalFormExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.3.0-next.4",
+  version: "22.3.0-rc.0",
   ngImport: i0,
   type: SelectDisabledSignalFormExample,
   decorators: [{
@@ -411,7 +411,7 @@ class SelectErrorStateMatcherExample {
   matcher = new MyErrorStateMatcher$1();
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.3.0-next.4",
+    version: "22.3.0-rc.0",
     ngImport: i0,
     type: SelectErrorStateMatcherExample,
     deps: [],
@@ -419,7 +419,7 @@ class SelectErrorStateMatcherExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "22.3.0-next.4",
+    version: "22.3.0-rc.0",
     type: SelectErrorStateMatcherExample,
     isStandalone: true,
     selector: "select-error-state-matcher-example",
@@ -511,7 +511,7 @@ class SelectErrorStateMatcherExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.3.0-next.4",
+  version: "22.3.0-rc.0",
   ngImport: i0,
   type: SelectErrorStateMatcherExample,
   decorators: [{
@@ -546,7 +546,7 @@ class SelectErrorStateMatcherSignalFormExample {
   matcher = new MyErrorStateMatcher();
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.3.0-next.4",
+    version: "22.3.0-rc.0",
     ngImport: i0,
     type: SelectErrorStateMatcherSignalFormExample,
     deps: [],
@@ -554,7 +554,7 @@ class SelectErrorStateMatcherSignalFormExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "22.3.0-next.4",
+    version: "22.3.0-rc.0",
     type: SelectErrorStateMatcherSignalFormExample,
     isStandalone: true,
     selector: "select-error-state-matcher-signal-form-example",
@@ -620,7 +620,7 @@ class SelectErrorStateMatcherSignalFormExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.3.0-next.4",
+  version: "22.3.0-rc.0",
   ngImport: i0,
   type: SelectErrorStateMatcherSignalFormExample,
   decorators: [{
@@ -662,7 +662,7 @@ class SelectFormExample {
   }];
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.3.0-next.4",
+    version: "22.3.0-rc.0",
     ngImport: i0,
     type: SelectFormExample,
     deps: [],
@@ -670,7 +670,7 @@ class SelectFormExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "22.3.0-next.4",
+    version: "22.3.0-rc.0",
     type: SelectFormExample,
     isStandalone: true,
     selector: "select-form-example",
@@ -764,7 +764,7 @@ class SelectFormExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.3.0-next.4",
+  version: "22.3.0-rc.0",
   ngImport: i0,
   type: SelectFormExample,
   decorators: [{
@@ -802,7 +802,7 @@ class SelectFormSignalFormExample {
   }];
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.3.0-next.4",
+    version: "22.3.0-rc.0",
     ngImport: i0,
     type: SelectFormSignalFormExample,
     deps: [],
@@ -810,7 +810,7 @@ class SelectFormSignalFormExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "22.3.0-next.4",
+    version: "22.3.0-rc.0",
     type: SelectFormSignalFormExample,
     isStandalone: true,
     selector: "select-form-signal-form-example",
@@ -866,7 +866,7 @@ class SelectFormSignalFormExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.3.0-next.4",
+  version: "22.3.0-rc.0",
   ngImport: i0,
   type: SelectFormSignalFormExample,
   decorators: [{
@@ -897,7 +897,7 @@ class SelectHintErrorExample {
   }];
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.3.0-next.4",
+    version: "22.3.0-rc.0",
     ngImport: i0,
     type: SelectHintErrorExample,
     deps: [],
@@ -905,7 +905,7 @@ class SelectHintErrorExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "22.3.0-next.4",
+    version: "22.3.0-rc.0",
     type: SelectHintErrorExample,
     isStandalone: true,
     selector: "select-hint-error-example",
@@ -1002,7 +1002,7 @@ class SelectHintErrorExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.3.0-next.4",
+  version: "22.3.0-rc.0",
   ngImport: i0,
   type: SelectHintErrorExample,
   decorators: [{
@@ -1020,7 +1020,7 @@ class SelectMultipleExample {
   toppingList = ['Extra cheese', 'Mushroom', 'Onion', 'Pepperoni', 'Sausage', 'Tomato'];
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.3.0-next.4",
+    version: "22.3.0-rc.0",
     ngImport: i0,
     type: SelectMultipleExample,
     deps: [],
@@ -1028,7 +1028,7 @@ class SelectMultipleExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "22.3.0-next.4",
+    version: "22.3.0-rc.0",
     type: SelectMultipleExample,
     isStandalone: true,
     selector: "select-multiple-example",
@@ -1086,7 +1086,7 @@ class SelectMultipleExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.3.0-next.4",
+  version: "22.3.0-rc.0",
   ngImport: i0,
   type: SelectMultipleExample,
   decorators: [{
@@ -1104,7 +1104,7 @@ class SelectMultipleSignalFormExample {
   toppingList = ['Extra cheese', 'Mushroom', 'Onion', 'Pepperoni', 'Sausage', 'Tomato'];
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.3.0-next.4",
+    version: "22.3.0-rc.0",
     ngImport: i0,
     type: SelectMultipleSignalFormExample,
     deps: [],
@@ -1112,7 +1112,7 @@ class SelectMultipleSignalFormExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "22.3.0-next.4",
+    version: "22.3.0-rc.0",
     type: SelectMultipleSignalFormExample,
     isStandalone: true,
     selector: "select-multiple-signal-form-example",
@@ -1159,7 +1159,7 @@ class SelectMultipleSignalFormExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.3.0-next.4",
+  version: "22.3.0-rc.0",
   ngImport: i0,
   type: SelectMultipleSignalFormExample,
   decorators: [{
@@ -1175,7 +1175,7 @@ i0.ɵɵngDeclareClassMetadata({
 class SelectNoRippleExample {
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.3.0-next.4",
+    version: "22.3.0-rc.0",
     ngImport: i0,
     type: SelectNoRippleExample,
     deps: [],
@@ -1183,7 +1183,7 @@ class SelectNoRippleExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.3.0-next.4",
+    version: "22.3.0-rc.0",
     type: SelectNoRippleExample,
     isStandalone: true,
     selector: "select-no-ripple-example",
@@ -1224,7 +1224,7 @@ class SelectNoRippleExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.3.0-next.4",
+  version: "22.3.0-rc.0",
   ngImport: i0,
   type: SelectNoRippleExample,
   decorators: [{
@@ -1288,7 +1288,7 @@ class SelectOptgroupExample {
   }];
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.3.0-next.4",
+    version: "22.3.0-rc.0",
     ngImport: i0,
     type: SelectOptgroupExample,
     deps: [],
@@ -1296,7 +1296,7 @@ class SelectOptgroupExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "22.3.0-next.4",
+    version: "22.3.0-rc.0",
     type: SelectOptgroupExample,
     isStandalone: true,
     selector: "select-optgroup-example",
@@ -1379,7 +1379,7 @@ class SelectOptgroupExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.3.0-next.4",
+  version: "22.3.0-rc.0",
   ngImport: i0,
   type: SelectOptgroupExample,
   decorators: [{
@@ -1443,7 +1443,7 @@ class SelectOptgroupSignalFormExample {
   }];
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.3.0-next.4",
+    version: "22.3.0-rc.0",
     ngImport: i0,
     type: SelectOptgroupSignalFormExample,
     deps: [],
@@ -1451,7 +1451,7 @@ class SelectOptgroupSignalFormExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "22.3.0-next.4",
+    version: "22.3.0-rc.0",
     type: SelectOptgroupSignalFormExample,
     isStandalone: true,
     selector: "select-optgroup-signal-form-example",
@@ -1513,7 +1513,7 @@ class SelectOptgroupSignalFormExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.3.0-next.4",
+  version: "22.3.0-rc.0",
   ngImport: i0,
   type: SelectOptgroupSignalFormExample,
   decorators: [{
@@ -1539,7 +1539,7 @@ class SelectOverviewExample {
   }];
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.3.0-next.4",
+    version: "22.3.0-rc.0",
     ngImport: i0,
     type: SelectOverviewExample,
     deps: [],
@@ -1547,7 +1547,7 @@ class SelectOverviewExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "22.3.0-next.4",
+    version: "22.3.0-rc.0",
     type: SelectOverviewExample,
     isStandalone: true,
     selector: "select-overview-example",
@@ -1610,7 +1610,7 @@ class SelectOverviewExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.3.0-next.4",
+  version: "22.3.0-rc.0",
   ngImport: i0,
   type: SelectOverviewExample,
   decorators: [{
@@ -1627,7 +1627,7 @@ class SelectPanelClassExample {
   panelColor = new FormControl('red');
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.3.0-next.4",
+    version: "22.3.0-rc.0",
     ngImport: i0,
     type: SelectPanelClassExample,
     deps: [],
@@ -1635,7 +1635,7 @@ class SelectPanelClassExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.3.0-next.4",
+    version: "22.3.0-rc.0",
     type: SelectPanelClassExample,
     isStandalone: true,
     selector: "select-panel-class-example",
@@ -1695,7 +1695,7 @@ class SelectPanelClassExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.3.0-next.4",
+  version: "22.3.0-rc.0",
   ngImport: i0,
   type: SelectPanelClassExample,
   decorators: [{
@@ -1714,7 +1714,7 @@ class SelectPanelClassSignalFormExample {
   panelColor = form(signal('red'));
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.3.0-next.4",
+    version: "22.3.0-rc.0",
     ngImport: i0,
     type: SelectPanelClassSignalFormExample,
     deps: [],
@@ -1722,7 +1722,7 @@ class SelectPanelClassSignalFormExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.3.0-next.4",
+    version: "22.3.0-rc.0",
     type: SelectPanelClassSignalFormExample,
     isStandalone: true,
     selector: "select-panel-class-signal-form-example",
@@ -1771,7 +1771,7 @@ class SelectPanelClassSignalFormExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.3.0-next.4",
+  version: "22.3.0-rc.0",
   ngImport: i0,
   type: SelectPanelClassSignalFormExample,
   decorators: [{
@@ -1790,7 +1790,7 @@ class SelectResetExample {
   states = ['Alabama', 'Alaska', 'Arizona', 'Arkansas', 'California', 'Colorado', 'Connecticut', 'Delaware', 'Florida', 'Georgia', 'Hawaii', 'Idaho', 'Illinois', 'Indiana', 'Iowa', 'Kansas', 'Kentucky', 'Louisiana', 'Maine', 'Maryland', 'Massachusetts', 'Michigan', 'Minnesota', 'Mississippi', 'Missouri', 'Montana', 'Nebraska', 'Nevada', 'New Hampshire', 'New Jersey', 'New Mexico', 'New York', 'North Carolina', 'North Dakota', 'Ohio', 'Oklahoma', 'Oregon', 'Pennsylvania', 'Rhode Island', 'South Carolina', 'South Dakota', 'Tennessee', 'Texas', 'Utah', 'Vermont', 'Virginia', 'Washington', 'West Virginia', 'Wisconsin', 'Wyoming'];
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.3.0-next.4",
+    version: "22.3.0-rc.0",
     ngImport: i0,
     type: SelectResetExample,
     deps: [],
@@ -1798,7 +1798,7 @@ class SelectResetExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "22.3.0-next.4",
+    version: "22.3.0-rc.0",
     type: SelectResetExample,
     isStandalone: true,
     selector: "select-reset-example",
@@ -1861,7 +1861,7 @@ class SelectResetExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.3.0-next.4",
+  version: "22.3.0-rc.0",
   ngImport: i0,
   type: SelectResetExample,
   decorators: [{
@@ -1880,7 +1880,7 @@ class SelectValueBindingExample {
   }] : []));
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.3.0-next.4",
+    version: "22.3.0-rc.0",
     ngImport: i0,
     type: SelectValueBindingExample,
     deps: [],
@@ -1888,7 +1888,7 @@ class SelectValueBindingExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "14.0.0",
-    version: "22.3.0-next.4",
+    version: "22.3.0-rc.0",
     type: SelectValueBindingExample,
     isStandalone: true,
     selector: "select-value-binding-example",
@@ -1929,7 +1929,7 @@ class SelectValueBindingExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.3.0-next.4",
+  version: "22.3.0-rc.0",
   ngImport: i0,
   type: SelectValueBindingExample,
   decorators: [{
@@ -1971,7 +1971,7 @@ class SelectReactiveFormExample {
   });
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.3.0-next.4",
+    version: "22.3.0-rc.0",
     ngImport: i0,
     type: SelectReactiveFormExample,
     deps: [],
@@ -1979,7 +1979,7 @@ class SelectReactiveFormExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "22.3.0-next.4",
+    version: "22.3.0-rc.0",
     type: SelectReactiveFormExample,
     isStandalone: true,
     selector: "select-reactive-form-example",
@@ -2076,7 +2076,7 @@ class SelectReactiveFormExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.3.0-next.4",
+  version: "22.3.0-rc.0",
   ngImport: i0,
   type: SelectReactiveFormExample,
   decorators: [{
@@ -2121,7 +2121,7 @@ class SelectInitialValueExample {
   }
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.3.0-next.4",
+    version: "22.3.0-rc.0",
     ngImport: i0,
     type: SelectInitialValueExample,
     deps: [],
@@ -2129,7 +2129,7 @@ class SelectInitialValueExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "22.3.0-next.4",
+    version: "22.3.0-rc.0",
     type: SelectInitialValueExample,
     isStandalone: true,
     selector: "select-initial-value-example",
@@ -2192,7 +2192,7 @@ class SelectInitialValueExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.3.0-next.4",
+  version: "22.3.0-rc.0",
   ngImport: i0,
   type: SelectInitialValueExample,
   decorators: [{
@@ -2224,7 +2224,7 @@ class SelectSelectableNullExample {
   }];
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.3.0-next.4",
+    version: "22.3.0-rc.0",
     ngImport: i0,
     type: SelectSelectableNullExample,
     deps: [],
@@ -2232,7 +2232,7 @@ class SelectSelectableNullExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "22.3.0-next.4",
+    version: "22.3.0-rc.0",
     type: SelectSelectableNullExample,
     isStandalone: true,
     selector: "select-selectable-null-example",
@@ -2290,7 +2290,7 @@ class SelectSelectableNullExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.3.0-next.4",
+  version: "22.3.0-rc.0",
   ngImport: i0,
   type: SelectSelectableNullExample,
   decorators: [{
@@ -2323,7 +2323,7 @@ class SelectSelectableNullSignalFormExample {
   }];
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.3.0-next.4",
+    version: "22.3.0-rc.0",
     ngImport: i0,
     type: SelectSelectableNullSignalFormExample,
     deps: [],
@@ -2331,7 +2331,7 @@ class SelectSelectableNullSignalFormExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "22.3.0-next.4",
+    version: "22.3.0-rc.0",
     type: SelectSelectableNullSignalFormExample,
     isStandalone: true,
     selector: "select-selectable-null-signal-form-example",
@@ -2381,7 +2381,7 @@ class SelectSelectableNullSignalFormExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.3.0-next.4",
+  version: "22.3.0-rc.0",
   ngImport: i0,
   type: SelectSelectableNullSignalFormExample,
   decorators: [{
@@ -2419,7 +2419,7 @@ class SelectHintErrorSignalFormExample {
   }];
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.3.0-next.4",
+    version: "22.3.0-rc.0",
     ngImport: i0,
     type: SelectHintErrorSignalFormExample,
     deps: [],
@@ -2427,7 +2427,7 @@ class SelectHintErrorSignalFormExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "22.3.0-next.4",
+    version: "22.3.0-rc.0",
     type: SelectHintErrorSignalFormExample,
     isStandalone: true,
     selector: "select-hint-error-signal-form-example",
@@ -2493,7 +2493,7 @@ class SelectHintErrorSignalFormExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.3.0-next.4",
+  version: "22.3.0-rc.0",
   ngImport: i0,
   type: SelectHintErrorSignalFormExample,
   decorators: [{
@@ -2519,7 +2519,7 @@ class SelectHarnessExample {
   }];
   static ɵfac = i0.ɵɵngDeclareFactory({
     minVersion: "12.0.0",
-    version: "22.3.0-next.4",
+    version: "22.3.0-rc.0",
     ngImport: i0,
     type: SelectHarnessExample,
     deps: [],
@@ -2527,7 +2527,7 @@ class SelectHarnessExample {
   });
   static ɵcmp = i0.ɵɵngDeclareComponent({
     minVersion: "17.0.0",
-    version: "22.3.0-next.4",
+    version: "22.3.0-rc.0",
     type: SelectHarnessExample,
     isStandalone: true,
     selector: "select-harness-example",
@@ -2568,7 +2568,7 @@ class SelectHarnessExample {
 }
 i0.ɵɵngDeclareClassMetadata({
   minVersion: "12.0.0",
-  version: "22.3.0-next.4",
+  version: "22.3.0-rc.0",
   ngImport: i0,
   type: SelectHarnessExample,
   decorators: [{
